@@ -321,6 +321,10 @@ void swPrintInstructions(swInstructions* Instructions, QPrinter* Printer)
 
 	QGraphicsScene Scene;
 	QPainter Painter(Printer);
+
+	// smooth like the page view
+
+	Painter.setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform | QPainter::TextAntialiasing);
 	bool FirstPage = true;
 
 	for (int DocCopy = 0; DocCopy < DocCopies; DocCopy++)

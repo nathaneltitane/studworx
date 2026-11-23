@@ -289,6 +289,7 @@ void swMainWindow::UpdateViewOrientation(const swCamera* Camera)
 
 	mStatusViewText = Text;
 	UpdateStatusSegments();
+	emit ViewOrientationChanged();
 }
 
 void swMainWindow::UpdateSteps(bool Clear, bool UpdateItems)

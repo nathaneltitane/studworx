@@ -308,23 +308,22 @@ swInstructionsPropertiesWidget::swInstructionsPropertiesWidget(QWidget* Parent, 
 	connect(ResetAction, &QAction::triggered, mInstructions, &swInstructions::ResetProperties);
 
 	// scroll tall sections
-	QScrollArea* ScrollArea = new QScrollArea(CentralWidget);
-	ScrollArea->setWidgetResizable(true);
-	ScrollArea->setFrameShape(QFrame::NoFrame);
-	Layout->addWidget(ScrollArea);
+	mScrollArea = new QScrollArea(CentralWidget);
+	mScrollArea->setWidgetResizable(true);
+	mScrollArea->setFrameShape(QFrame::NoFrame);
+	mScrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+	mScrollArea->setProperty("swKeepWidth", true);
+	Layout->addWidget(mScrollArea);
 
-	QWidget* CategoriesWidget = new QWidget(ScrollArea);
+	QWidget* CategoriesWidget = new QWidget(mScrollArea);
 	mCategoriesLayout = new QVBoxLayout(CategoriesWidget);
 	mCategoriesLayout->setContentsMargins(0, 0, 0, 0);
-	ScrollArea->setWidget(CategoriesWidget);
+	mScrollArea->setWidget(CategoriesWidget);
 
 	CreateWidgets();
+	FitWidth();
 	SetBoxElement(mBoxElement);
 	mCategoriesLayout->addStretch(1);
-
-	// fit the panel to its widest row
-	ScrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-	ScrollArea->setMinimumWidth(CategoriesWidget->minimumSizeHint().width() + ScrollArea->verticalScrollBar()->sizeHint().width());
 
 	connect(mInstructions, &swInstructions::StepSettingsChanged, this, &swInstructionsPropertiesWidget::UpdateEditors);
 	connect(mInstructions, &swInstructions::UnitsChanged, this, &swInstructionsPropertiesWidget::UpdateEditors);
@@ -436,6 +435,10 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddEditorRow(CategoryIndex::Document, swInstructionsPropertyType::ModelProjection);
 
 	AddRow(CategoryIndex::Document, {
+		CreateToggleEditor(swInstructionsPropertyType::LockHomeView, tr("Lock to Home View"), tr("Show every model from the home view instead of the model view, a step with its own step view keeps it."))
+	});
+
+	AddRow(CategoryIndex::Document, {
 		CreateToggleEditor(swInstructionsPropertyType::FadePreviousSteps, tr("Fade Previous Steps"), tr("Tint the parts added in earlier steps with the fade color."))
 	});
 
@@ -451,11 +454,15 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	CreateLengthEditor(swInstructionsPropertyType::HighlightWidth, tr("Highlight Width"), tr("Thickness of the outline around the parts added in each step."), 1, 72, 0.05);
 	AddEditorRow(CategoryIndex::Document, swInstructionsPropertyType::HighlightWidth);
 
-	AddCategory(CategoryIndex::Cover, tr("Cover Pages"), tr("<p><b>Cover Pages</b></p><p>The front cover shows the model title, its author and the finished model. The title comes from the model description, or its name when there is none, the author from the model properties. The back cover closes the instructions and starts blank. Right click a cover to add an image, like a logo.</p>"));
+	AddCategory(CategoryIndex::Cover, tr("Cover Pages"), tr("<p><b>Cover Pages</b></p><p>The front cover shows the model title, its author and the finished model. The title comes from the model description, or its name when there is none, the author from the model properties. The final model page shows the finished model after the last step. The back cover closes the instructions and starts blank. Right click a cover to add an image, like a logo.</p>"));
 
 	AddRow(CategoryIndex::Cover, {
 		CreateToggleEditor(swInstructionsPropertyType::ShowCoverPage, tr("Show Front Cover"), tr("Start the instructions with a page showing the model title and the finished model.")),
 		CreateToggleEditor(swInstructionsPropertyType::ShowBackCover, tr("Show Back Cover"), tr("End the instructions with a back cover, blank until you add images."))
+	});
+
+	AddRow(CategoryIndex::Cover, {
+		CreateToggleEditor(swInstructionsPropertyType::ShowFinalModelPage, tr("Show Final Model Page"), tr("Close the steps with a page showing the finished model on its own."))
 	});
 
 	AddRow(CategoryIndex::Cover, {
@@ -473,6 +480,15 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleFont);
 	CreateColorEditor(swInstructionsPropertyType::CoverTitleColor, tr("Cover Title Color"), tr("Color of the model title."));
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleColor);
+	CreateChoiceEditor(swInstructionsPropertyType::CoverTitleAlignment, tr("Cover Title Alignment"), tr("Line up the model title left, centered or right inside its box."), { tr("Left"), tr("Center"), tr("Right") });
+	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleAlignment);
+	CreateChoiceEditor(swInstructionsPropertyType::CoverTitleVerticalAlignment, tr("Cover Title Vertical Alignment"), tr("Line up the model title at the top, middle or bottom of a box with Edit Size."), { tr("Top"), tr("Middle"), tr("Bottom") });
+	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleVerticalAlignment);
+	AddRow(CategoryIndex::Cover, {
+		CreateToggleEditor(swInstructionsPropertyType::ShowCoverTitle, tr("Show Title"), tr("Show the model title on the cover.")),
+		CreateToggleEditor(swInstructionsPropertyType::ShowCoverImage, tr("Show Model Image"), tr("Show the finished model on the cover, unchecked leaves room for your own image."))
+	});
+
 	AddRow(CategoryIndex::Cover, {
 		CreateToggleEditor(swInstructionsPropertyType::ShowCoverAuthor, tr("Show Author"), tr("Show the model author on the cover.")),
 		CreateToggleEditor(swInstructionsPropertyType::ShowCoverPartCount, tr("Show Part Count"), tr("Show the number of parts of the whole model on the cover."))
@@ -486,6 +502,10 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorFont);
 	CreateColorEditor(swInstructionsPropertyType::CoverAuthorColor, tr("Cover Author Color"), tr("Color of the model author."));
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorColor);
+	CreateChoiceEditor(swInstructionsPropertyType::CoverAuthorAlignment, tr("Cover Author Alignment"), tr("Line up the model author left, centered or right inside its box."), { tr("Left"), tr("Center"), tr("Right") });
+	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorAlignment);
+	CreateChoiceEditor(swInstructionsPropertyType::CoverAuthorVerticalAlignment, tr("Cover Author Vertical Alignment"), tr("Line up the model author at the top, middle or bottom of a box with Edit Size."), { tr("Top"), tr("Middle"), tr("Bottom") });
+	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorVerticalAlignment);
 
 	CreateTextEditor(swInstructionsPropertyType::PartCountText, tr("Part Count Text"), tr("Text of the part counts, %1 stands for the number of parts, empty for the default text."), false);
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::PartCountText);
@@ -495,6 +515,10 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::PartCountFont);
 	CreateColorEditor(swInstructionsPropertyType::PartCountColor, tr("Part Count Color"), tr("Color of the part count on the cover and the bill of materials."));
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::PartCountColor);
+	CreateChoiceEditor(swInstructionsPropertyType::PartCountAlignment, tr("Part Count Alignment"), tr("Line up the part count on the cover and the bill of materials left, centered or right inside its box."), { tr("Left"), tr("Center"), tr("Right") });
+	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::PartCountAlignment);
+	CreateChoiceEditor(swInstructionsPropertyType::PartCountVerticalAlignment, tr("Part Count Vertical Alignment"), tr("Line up the part count on the cover and the bill of materials at the top, middle or bottom of a box with Edit Size."), { tr("Top"), tr("Middle"), tr("Bottom") });
+	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::PartCountVerticalAlignment);
 
 	AddCategory(CategoryIndex::Page, tr("Page"), tr("<p><b>Page</b></p><p>The background and the number of the step and blank pages. The background applies to all these pages, or only to the current page when it has its own, the cover and the bill of materials have their own backgrounds. The cover and blank pages are not numbered unless all pages are. Drag the number or use the Placement panel to move it on all pages.</p>"));
 
@@ -502,6 +526,8 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::PageBackgroundColor);
 	CreateColorEditor(swInstructionsPropertyType::SubmodelBackgroundColor, tr("Submodel Background"), tr("Color filling the whole page of submodel steps, margins included."));
 	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::SubmodelBackgroundColor);
+	CreateColorEditor(swInstructionsPropertyType::BlankPageBackgroundColor, tr("Blank Page Background"), tr("Color filling the whole of every blank page, margins included."));
+	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::BlankPageBackgroundColor);
 
 	// background for all or current page
 	mBackgroundPageButton = new QToolButton(this);
@@ -541,6 +567,10 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::PageNumberFont);
 	CreateColorEditor(swInstructionsPropertyType::PageNumberColor, tr("Page Number Color"), tr("Color of the page numbers."));
 	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::PageNumberColor);
+	CreateChoiceEditor(swInstructionsPropertyType::PageNumberAlignment, tr("Page Number Alignment"), tr("Line up the page numbers left, centered or right inside its box."), { tr("Left"), tr("Center"), tr("Right") });
+	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::PageNumberAlignment);
+	CreateChoiceEditor(swInstructionsPropertyType::PageNumberVerticalAlignment, tr("Page Number Vertical Alignment"), tr("Line up the page numbers at the top, middle or bottom of a box with Edit Size."), { tr("Top"), tr("Middle"), tr("Bottom") });
+	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::PageNumberVerticalAlignment);
 
 	AddRow(CategoryIndex::Page, {
 		CreateToggleEditor(swInstructionsPropertyType::ShowPagePartCount, tr("Show Part Count"), tr("Show the number of new parts of the steps on each step page."))
@@ -555,77 +585,98 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		CreateToggleEditor(swInstructionsPropertyType::ShowSubmodelPreview, tr("Show Submodel Preview"), tr("Show the finished submodel with its part count on the first page of each submodel."))
 	});
 
-	AddCategory(CategoryIndex::Bands, tr("Bands"), tr("<p><b>Bands</b></p><p>Strips along the paper edges of the step and blank pages. Right click a band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. A band can reserve its space so the page content stays clear of it.</p>"));
+	AddCategory(CategoryIndex::Header, tr("Header"), tr("<p><b>Header</b></p><p>A strip along the top paper edge of the step and blank pages. Right click the band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. The band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group.</p>"));
+	AddCategory(CategoryIndex::Footer, tr("Footer"), tr("<p><b>Footer</b></p><p>A strip along the bottom paper edge of the step and blank pages. Right click the band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. The band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group.</p>"));
+	AddCategory(CategoryIndex::LeftBand, tr("Left Band"), tr("<p><b>Left Band</b></p><p>A strip along the left paper edge of the step and blank pages. Right click a band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. A band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group.</p>"));
+	AddCategory(CategoryIndex::RightBand, tr("Right Band"), tr("<p><b>Right Band</b></p><p>A strip along the right paper edge of the step and blank pages. Right click the band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. The band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group.</p>"));
 
 	const QString BandNames[4] = { tr("Header"), tr("Footer"), tr("Left"), tr("Right") };
-	const swInstructionsPropertyType BandTypes[4][4] = {
-		{ swInstructionsPropertyType::ShowHeaderBand, swInstructionsPropertyType::HeaderBandSize, swInstructionsPropertyType::HeaderBandColor, swInstructionsPropertyType::HeaderBandReserve },
-		{ swInstructionsPropertyType::ShowFooterBand, swInstructionsPropertyType::FooterBandSize, swInstructionsPropertyType::FooterBandColor, swInstructionsPropertyType::FooterBandReserve },
-		{ swInstructionsPropertyType::ShowLeftBand, swInstructionsPropertyType::LeftBandSize, swInstructionsPropertyType::LeftBandColor, swInstructionsPropertyType::LeftBandReserve },
-		{ swInstructionsPropertyType::ShowRightBand, swInstructionsPropertyType::RightBandSize, swInstructionsPropertyType::RightBandColor, swInstructionsPropertyType::RightBandReserve }
-	};
 
 	for (int BandIndex = 0; BandIndex < 4; BandIndex++)
 	{
+		const CategoryIndex Category = static_cast<CategoryIndex>(static_cast<int>(CategoryIndex::Header) + BandIndex);
 		const QString& BandName = BandNames[BandIndex];
+		const auto BandType = [BandIndex](int Kind) { return static_cast<swInstructionsPropertyType>(static_cast<int>(swInstructionsPropertyType::ShowHeaderBand) + Kind * 4 + BandIndex); };
 
-		AddRow(CategoryIndex::Bands, {
-			CreateToggleEditor(BandTypes[BandIndex][0], tr("Show %1 Band").arg(BandName), tr("Show the %1 band on the step and blank pages.").arg(BandName.toLower()))
+		AddRow(Category, {
+			CreateToggleEditor(BandType(0), tr("Show %1 Band").arg(BandName), tr("Show the %1 band on the step and blank pages.").arg(BandName.toLower()))
 		});
 
-		CreateLengthEditor(BandTypes[BandIndex][1], tr("%1 Size").arg(BandName), tr("Thickness of the %1 band from the paper edge.").arg(BandName.toLower()), 1, 576, 0.5);
-		AddEditorRow(CategoryIndex::Bands, BandTypes[BandIndex][1]);
-		CreateColorEditor(BandTypes[BandIndex][2], tr("%1 Color").arg(BandName), tr("Color filling the %1 band, transparent shows the page.").arg(BandName.toLower()));
-		AddEditorRow(CategoryIndex::Bands, BandTypes[BandIndex][2]);
+		CreateLengthEditor(BandType(1), tr("%1 Size").arg(BandName), tr("Thickness of the %1 band from the paper edge.").arg(BandName.toLower()), 1, 576, 0.5);
+		AddEditorRow(Category, BandType(1));
 
-		AddRow(CategoryIndex::Bands, {
-			CreateToggleEditor(BandTypes[BandIndex][3], tr("Reserve %1 Space").arg(BandName), tr("Keep the page content clear of the %1 band, unchecked lets the content run under it.").arg(BandName.toLower()))
+		AddRow(Category, {
+			CreateToggleEditor(BandType(3), tr("Reserve %1 Space").arg(BandName), tr("Keep the page content clear of the %1 band, unchecked lets the content run under it.").arg(BandName.toLower()))
 		});
+
+		// band for all or current page
+		const int Section = BandIndex;
+		const auto SectionTypes = [BandType, BandIndex]()
+		{
+			std::vector<swInstructionsPropertyType> Types;
+
+			for (int Kind = 0; Kind < 4; Kind++)
+				Types.push_back(BandType(Kind));
+
+			// the band box follows its page scope
+			const swInstructionsBoxTypes BoxTypes = swGetBoxTypes(static_cast<swInstructionsBoxElement>(static_cast<int>(swInstructionsBoxElement::HeaderBand) + BandIndex));
+
+			for (swInstructionsPropertyType Type : { BoxTypes.Margin, BoxTypes.Padding, BoxTypes.BorderWidth, BoxTypes.CornerRadius, BoxTypes.BorderColor })
+				Types.push_back(Type);
+
+			return Types;
+		};
+
+		QToolButton* PageButton = new QToolButton(this);
+		PageButton->setText(BandIndex < 2 ? tr("%1 on This Page Only").arg(BandName) : tr("%1 Band on This Page Only").arg(BandName));
+		PageButton->setCheckable(true);
+		PageButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
+		PageButton->setToolTip(tr("Keep this band on this page only and clear it from the other pages, unchecked it follows all pages."));
+		PageButton->setWhatsThis(PageButton->toolTip());
+		PageButton->setAccessibleName(PageButton->text());
+		swSetupPanelButton(PageButton);
+		mBandsPageButtons[Section] = PageButton;
+
+		connect(PageButton, &QToolButton::toggled, this, [this, SectionTypes](bool PageOnly)
+		{
+			// one redraw for all band properties
+			{
+				const QSignalBlocker Blocker(mInstructions);
+				const std::vector<swInstructionsPropertyType> Types = SectionTypes();
+
+				for (swInstructionsPropertyType Type : Types)
+					mInstructions->SetPageScope(mPageIndex, Type, PageOnly);
+
+				// the other pages lose this band
+				if (PageOnly)
+					mInstructions->SetDefaultBool(Types[0], false);
+			}
+
+			emit mInstructions->PageLayoutChanged();
+		});
+
+		AddRow(Category, { PageButton });
+
+		QToolButton* ApplyAllButton = CreateApplyAllButton(tr("Use this band of this page on every page."));
+		mBandsApplyAllButtons[Section] = ApplyAllButton;
+
+		connect(ApplyAllButton, &QToolButton::clicked, this, [this, SectionTypes]()
+		{
+			// one redraw for all band properties
+			{
+				const QSignalBlocker Blocker(mInstructions);
+
+				for (swInstructionsPropertyType Type : SectionTypes())
+					mInstructions->ApplyPageToAllPages(mPageIndex, Type);
+			}
+
+			emit mInstructions->PageLayoutChanged();
+		});
+
+		AddRow(Category, { ApplyAllButton });
 	}
 
-	// bands for all or current page
-	mBandsPageButton = new QToolButton(this);
-	mBandsPageButton->setText(tr("Bands on This Page Only"));
-	mBandsPageButton->setCheckable(true);
-	mBandsPageButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
-	mBandsPageButton->setToolTip(tr("Give this page its own bands, unchecked it follows all pages."));
-	mBandsPageButton->setWhatsThis(mBandsPageButton->toolTip());
-	mBandsPageButton->setAccessibleName(mBandsPageButton->text());
-	swSetupPanelButton(mBandsPageButton);
-
-	connect(mBandsPageButton, &QToolButton::toggled, this, [this](bool PageOnly)
-	{
-		// one redraw for all band properties
-		{
-			const QSignalBlocker Blocker(mInstructions);
-
-			for (int Type = static_cast<int>(swInstructionsPropertyType::ShowHeaderBand); Type <= static_cast<int>(swInstructionsPropertyType::RightBandReserve); Type++)
-				mInstructions->SetPageScope(mPageIndex, static_cast<swInstructionsPropertyType>(Type), PageOnly);
-		}
-
-		emit mInstructions->PageLayoutChanged();
-	});
-
-	AddRow(CategoryIndex::Bands, { mBandsPageButton });
-
-	mBandsApplyAllButton = CreateApplyAllButton(tr("Use the bands of this page on every page."));
-
-	connect(mBandsApplyAllButton, &QToolButton::clicked, this, [this]()
-	{
-		// one redraw for all band properties
-		{
-			const QSignalBlocker Blocker(mInstructions);
-
-			for (int Type = static_cast<int>(swInstructionsPropertyType::ShowHeaderBand); Type <= static_cast<int>(swInstructionsPropertyType::RightBandReserve); Type++)
-				mInstructions->ApplyPageToAllPages(mPageIndex, static_cast<swInstructionsPropertyType>(Type));
-		}
-
-		emit mInstructions->PageLayoutChanged();
-	});
-
-	AddRow(CategoryIndex::Bands, { mBandsApplyAllButton });
-
-	AddCategory(CategoryIndex::Watermark, tr("Watermark"), tr("<p><b>Watermark</b></p><p>Text or an image behind the page content, right click the page to add one. The opacity sets how strongly it shows.</p>"));
+	AddCategory(CategoryIndex::Watermark, tr("Watermark"), tr("<p><b>Watermark</b></p><p>Text or an image behind the page content, right click the page to add one. The opacity sets how strongly it shows, its box, border and background are set in the Box group.</p>"));
 
 	CreatePercentEditor(swInstructionsPropertyType::WatermarkOpacity, tr("Watermark Opacity"), tr("How strongly the watermark shows, 100 percent is solid."), 1, 100);
 	AddEditorRow(CategoryIndex::Watermark, swInstructionsPropertyType::WatermarkOpacity);
@@ -677,8 +728,12 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsTitleFont);
 	CreateColorEditor(swInstructionsPropertyType::BillOfMaterialsTitleColor, tr("BOM Title Color"), tr("Color of the Parts List title above the bill of materials."));
 	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsTitleColor);
+	CreateChoiceEditor(swInstructionsPropertyType::BillOfMaterialsTitleAlignment, tr("BOM Title Alignment"), tr("Line up the Parts List title left, centered or right inside its box."), { tr("Left"), tr("Center"), tr("Right") });
+	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsTitleAlignment);
+	CreateChoiceEditor(swInstructionsPropertyType::BillOfMaterialsTitleVerticalAlignment, tr("BOM Title Vertical Alignment"), tr("Line up the Parts List title at the top, middle or bottom of a box with Edit Size."), { tr("Top"), tr("Middle"), tr("Bottom") });
+	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsTitleVerticalAlignment);
 
-	AddCategory(CategoryIndex::PageLayout, tr("Steps per Page"), tr("<p><b>Steps per Page</b></p><p>The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model, and Main Page Color gives a submodel's finished model the main page color. The final model border frames that area and its margin keeps it away from the steps and page margins.</p>"));
+	AddCategory(CategoryIndex::PageLayout, tr("Steps per Page"), tr("<p><b>Steps per Page</b></p><p>The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model. The final model has its own box, with margin, padding, border, corner radius and background, set in the Box group.</p>"));
 
 	std::vector<QWidget*> PresetButtons;
 
@@ -752,23 +807,6 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 
 	connect(mFinalModelButton, &QToolButton::toggled, this, [this]()
 	{
-		mFinalModelColorButton->setEnabled(mFinalModelButton->isEnabled() && mFinalModelButton->isChecked());
-
-		mInstructions->SetPageSettings(mPageIndex, GetPageLayoutSettings());
-	});
-
-	// the finished model keeps the main page color
-
-	mFinalModelColorButton = new QToolButton(this);
-	mFinalModelColorButton->setText(tr("Main Page Color"));
-	mFinalModelColorButton->setToolTip(tr("Put the finished model of a submodel on the main page color."));
-	mFinalModelColorButton->setWhatsThis(mFinalModelColorButton->toolTip());
-	mFinalModelColorButton->setCheckable(true);
-	mFinalModelColorButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
-	swSetupPanelButton(mFinalModelColorButton);
-
-	connect(mFinalModelColorButton, &QToolButton::toggled, this, [this]()
-	{
 		mInstructions->SetPageSettings(mPageIndex, GetPageLayoutSettings());
 	});
 
@@ -782,16 +820,10 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddLabeledRow(CategoryIndex::PageLayout, tr("Rows"), mRowsSpinBox);
 	AddLabeledRow(CategoryIndex::PageLayout, tr("Columns"), mColumnsSpinBox);
 	AddLabeledRow(CategoryIndex::PageLayout, tr("Step Flow"), mStepFlowComboBox);
-	AddRow(CategoryIndex::PageLayout, { mFinalModelButton, mFinalModelColorButton });
-	CreateLengthEditor(swInstructionsPropertyType::FinalModelBorderWidth, tr("Final Border"), tr("Width of the frame around the final model area, 0 draws none."), 0, 72, 0.1);
-	AddEditorRow(CategoryIndex::PageLayout, swInstructionsPropertyType::FinalModelBorderWidth);
-	CreateColorEditor(swInstructionsPropertyType::FinalModelBorderColor, tr("Final Border Color"), tr("Color of the frame around the final model area."));
-	AddEditorRow(CategoryIndex::PageLayout, swInstructionsPropertyType::FinalModelBorderColor);
-	CreateLengthEditor(swInstructionsPropertyType::FinalModelMargin, tr("Final Margin"), tr("Space between the final model area and the steps and page margins around it."), 0, 144, 0.25);
-	AddEditorRow(CategoryIndex::PageLayout, swInstructionsPropertyType::FinalModelMargin);
+	AddRow(CategoryIndex::PageLayout, { mFinalModelButton });
 	AddRow(CategoryIndex::PageLayout, { ApplyAllButton });
 
-	AddCategory(CategoryIndex::Step, tr("Step Number"), tr("<p><b>Step Number</b></p><p>The step number and the area behind each step. The bill of materials shows a Parts List title in its place.</p>"));
+	AddCategory(CategoryIndex::Step, tr("Step Number"), tr("<p><b>Step Number</b></p><p>The step number and the area of each step, which has its own box in the Box group. The bill of materials shows a Parts List title in its place.</p>"));
 
 	AddRow(CategoryIndex::Step, {
 		CreateToggleEditor(swInstructionsPropertyType::ShowStepNumber, tr("Show Step Number"), tr("Show the number of each step in its top left corner, and the Parts List title of the bill of materials."))
@@ -801,8 +833,10 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddEditorRow(CategoryIndex::Step, swInstructionsPropertyType::StepNumberFont);
 	CreateColorEditor(swInstructionsPropertyType::StepNumberColor, tr("Step Number Color"), tr("Color of the step numbers."));
 	AddEditorRow(CategoryIndex::Step, swInstructionsPropertyType::StepNumberColor);
-	CreateColorEditor(swInstructionsPropertyType::StepBackgroundColor, tr("Step Background"), tr("Color filling the area of each step, transparent shows the page background."));
-	AddEditorRow(CategoryIndex::Step, swInstructionsPropertyType::StepBackgroundColor);
+	CreateChoiceEditor(swInstructionsPropertyType::StepNumberAlignment, tr("Step Number Alignment"), tr("Line up the step numbers left, centered or right inside its box."), { tr("Left"), tr("Center"), tr("Right") });
+	AddEditorRow(CategoryIndex::Step, swInstructionsPropertyType::StepNumberAlignment);
+	CreateChoiceEditor(swInstructionsPropertyType::StepNumberVerticalAlignment, tr("Step Number Vertical Alignment"), tr("Line up the step numbers at the top, middle or bottom of a box with Edit Size."), { tr("Top"), tr("Middle"), tr("Bottom") });
+	AddEditorRow(CategoryIndex::Step, swInstructionsPropertyType::StepNumberVerticalAlignment);
 
 	AddCategory(CategoryIndex::PartsList, tr("Parts List"), tr("<p><b>Parts List</b></p><p>The list of parts added in each step. The bill of materials uses the same settings.</p>"));
 
@@ -880,12 +914,98 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddEditorRow(CategoryIndex::Notice, swInstructionsPropertyType::NoticeFont);
 	CreateColorEditor(swInstructionsPropertyType::NoticeTextColor, tr("Notice Text Color"), tr("Color of the notice text."));
 	AddEditorRow(CategoryIndex::Notice, swInstructionsPropertyType::NoticeTextColor);
+	CreateChoiceEditor(swInstructionsPropertyType::NoticeAlignment, tr("Notice Alignment"), tr("Line up notice text left, centered or right, a notice can keep its own from its Align menu."), { tr("Left"), tr("Center"), tr("Right") });
+	AddEditorRow(CategoryIndex::Notice, swInstructionsPropertyType::NoticeAlignment);
+	CreateChoiceEditor(swInstructionsPropertyType::NoticeVerticalAlignment, tr("Notice Vertical Alignment"), tr("Line up notice text at the top, middle or bottom of a box with Edit Size."), { tr("Top"), tr("Middle"), tr("Bottom") });
+	AddEditorRow(CategoryIndex::Notice, swInstructionsPropertyType::NoticeVerticalAlignment);
 
-	AddCategory(CategoryIndex::Box, tr("Box"), tr("<p><b>Box</b></p><p>The space and border around each element. The margin keeps other elements away, the padding keeps the border away from the content and the background fills all of it, margin and padding included. Pointers leave the border. The step and cover models also set their size here. Choose the element to edit, selecting an element on the page chooses it.</p>"));
+	// the selected notice box, live with edit size
+	const QString SizeNames[2] = { tr("Notice Width"), tr("Notice Height") };
+
+	for (int Axis = 0; Axis < 2; Axis++)
+	{
+		QDoubleSpinBox* SpinBox = new swInstructionsLengthSpinBox(this);
+		SpinBox->setToolTip(tr("Size of the selected notice box, check Edit Size in its right click menu to change it."));
+		SpinBox->setWhatsThis(SpinBox->toolTip());
+		SpinBox->setAccessibleName(SizeNames[Axis]);
+		SpinBox->setKeyboardTracking(false);
+		swSetupPanelSpinBox(SpinBox);
+		mNoticeSizeSpinBoxes[Axis] = SpinBox;
+		mNoticeSizeLabels[Axis] = AddLabeledRow(CategoryIndex::Notice, SizeNames[Axis], SpinBox);
+
+		// unit button before the input
+		swInstructionsUnitButton* UnitButton = new swInstructionsUnitButton(SpinBox->parentWidget(), SizeNames[Axis]);
+		static_cast<QHBoxLayout*>(SpinBox->parentWidget()->layout())->insertWidget(1, UnitButton);
+		mNoticeSizeUnitButtons[Axis] = UnitButton;
+		connect(UnitButton, &swInstructionsUnitButton::UnitsChanged, this, &swInstructionsPropertiesWidget::UpdateNoticeSize);
+
+		connect(SpinBox, qOverload<double>(&QDoubleSpinBox::valueChanged), this, [this, Axis](double Value)
+		{
+			if (!mNoticeKey)
+				return;
+
+			QSizeF Size = mInstructions->GetElementSize(*mNoticeKey);
+
+			if (!Size.isValid())
+				return;
+
+			const qreal Length = Value * swGetPageUnitScale(mNoticeSizeUnitButtons[Axis]->GetUnits(mInstructions));
+
+			if (Axis == 0)
+				Size.setWidth(Length);
+			else
+				Size.setHeight(Length);
+
+			mInstructions->SetElementSize(*mNoticeKey, Size);
+		});
+	}
+
+	AddCategory(CategoryIndex::Image, tr("Image"), tr("<p><b>Image</b></p><p>A picture of your own on a page, such as a logo. Right-click the page and choose Add Image to place one. Check Edit Size in its right click menu to change its size here, the height follows the width to keep its shape.</p>"));
+
+	// the selected image, live with edit size
+	const QString ImageSizeNames[2] = { tr("Image Width"), tr("Image Height") };
+
+	for (int Axis = 0; Axis < 2; Axis++)
+	{
+		QDoubleSpinBox* SpinBox = new swInstructionsLengthSpinBox(this);
+		SpinBox->setToolTip(tr("Size of the selected image, check Edit Size in its right click menu to change it, the other side follows to keep its shape."));
+		SpinBox->setWhatsThis(SpinBox->toolTip());
+		SpinBox->setAccessibleName(ImageSizeNames[Axis]);
+		SpinBox->setKeyboardTracking(false);
+		swSetupPanelSpinBox(SpinBox);
+		mImageSizeSpinBoxes[Axis] = SpinBox;
+		mImageSizeLabels[Axis] = AddLabeledRow(CategoryIndex::Image, ImageSizeNames[Axis], SpinBox);
+
+		// unit button before the input
+		swInstructionsUnitButton* UnitButton = new swInstructionsUnitButton(SpinBox->parentWidget(), ImageSizeNames[Axis]);
+		static_cast<QHBoxLayout*>(SpinBox->parentWidget()->layout())->insertWidget(1, UnitButton);
+		mImageSizeUnitButtons[Axis] = UnitButton;
+		connect(UnitButton, &swInstructionsUnitButton::UnitsChanged, this, &swInstructionsPropertiesWidget::UpdateImageSize);
+
+		connect(SpinBox, qOverload<double>(&QDoubleSpinBox::valueChanged), this, [this, Axis](double Value)
+		{
+			const swInstructionsImage* Image = mImageKey ? mInstructions->FindImage(static_cast<int>(std::get<2>(*mImageKey))) : nullptr;
+
+			if (!Image || !mInstructions->GetElementSize(*mImageKey).isValid())
+				return;
+
+			// width drives, height keeps the shape
+			const qreal Length = Value * swGetPageUnitScale(mImageSizeUnitButtons[Axis]->GetUnits(mInstructions));
+			const qreal PageWidth = mInstructions->mPageSetup.Width;
+			const qreal Width = qBound(PageWidth / 100.0, Axis == 0 ? Length : Length / mImageAspect, PageWidth * 5.0);
+			const swInstructionsElementKey Key = *mImageKey;
+			swInstructionsImage Changed = *Image;
+			Changed.Size = Width * 100.0 / PageWidth;
+			mInstructions->SetImage(Changed);
+			mInstructions->SetElementSize(Key, QSizeF(Width, Width * mImageAspect));
+		});
+	}
+
+	AddCategory(CategoryIndex::Box, tr("Box"), tr("<p><b>Box</b></p><p>The space and border around each element. The margin keeps other elements away outside the border, the padding keeps the border away from the content and the background fills inside the border. The final model, step areas, bands and watermark are boxes too. Pointers leave the border. The step and cover models also set their size here, fitted to their box until a size is set. Choose the element to edit, selecting an element on the page chooses it.</p>"));
 
 	// choices follow the box elements
 	mBoxElementComboBox = new QComboBox(this);
-	mBoxElementComboBox->addItems({ tr("Step Model"), tr("Step Number"), tr("Parts List"), tr("Page Number"), tr("Cover Title"), tr("Cover Author"), tr("Cover Model"), tr("Notice"), tr("Part Count"), tr("Submodel Preview") });
+	mBoxElementComboBox->addItems({ tr("Step Model"), tr("Step Number"), tr("Parts List"), tr("Page Number"), tr("Cover Title"), tr("Cover Author"), tr("Cover Model"), tr("Notice"), tr("Part Count"), tr("Submodel Preview"), tr("Image"), tr("Parts List Quantity"), tr("Final Model"), tr("Step Area"), tr("Header"), tr("Footer"), tr("Left Band"), tr("Right Band"), tr("Watermark") });
 	mBoxElementComboBox->setToolTip(tr("Choose the element whose box is edited, the parts list box is also the bill of materials box."));
 	mBoxElementComboBox->setWhatsThis(mBoxElementComboBox->toolTip());
 	mBoxElementComboBox->setAccessibleName(tr("Element"));
@@ -903,12 +1023,35 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		const swInstructionsBoxTypes BoxTypes = swGetBoxTypes(static_cast<swInstructionsBoxElement>(ElementIndex));
 		std::vector<QWidget*>& Rows = mBoxRows[ElementIndex];
 
-		// model sizes lead their boxes
+		// model sizes lead their boxes, fitted until set
+
+		auto AddModelSizeRows = [this, &Rows](swInstructionsPropertyType Type, const QString& ToolTip)
+		{
+			QDoubleSpinBox* SpinBox = CreateLengthEditor(Type, tr("Model Size"), ToolTip, 0, 2880, 1.0);
+			SpinBox->setSpecialValueText(tr("Fit"));
+			Rows.push_back(AddEditorRow(CategoryIndex::Box, Type)->parentWidget());
+
+			QToolButton* FitButton = new QToolButton(this);
+			FitButton->setText(tr("Fit Model to Box"));
+			FitButton->setCheckable(true);
+			FitButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
+			FitButton->setToolTip(tr("Size the model to fill its box, uncheck to set its size."));
+			FitButton->setWhatsThis(FitButton->toolTip());
+			FitButton->setAccessibleName(FitButton->text());
+			swSetupPanelButton(FitButton);
+			mEditors[static_cast<int>(Type)].FitButton = FitButton;
+
+			connect(FitButton, &QToolButton::toggled, this, [this, Type](bool Fit)
+			{
+				SetIntValue(Type, Fit ? 0 : qRound(GetEditorMaximum(mEditors[static_cast<int>(Type)]) / 2.0));
+			});
+
+			Rows.push_back(AddRow(CategoryIndex::Box, { FitButton }));
+		};
 
 		if (ElementIndex == static_cast<int>(swInstructionsBoxElement::StepImage))
 		{
-			CreatePercentEditor(swInstructionsPropertyType::StepImageSize, tr("Model Size"), tr("Size of the step model, 100 percent fills its space, larger sizes are trimmed to it."), 10, 200);
-			Rows.push_back(AddEditorRow(CategoryIndex::Box, swInstructionsPropertyType::StepImageSize)->parentWidget());
+			AddModelSizeRows(swInstructionsPropertyType::StepImageSize, tr("Longest side of the step model, larger sizes are trimmed to its space."));
 
 			mModelSizePageButton = new QToolButton(this);
 			mModelSizePageButton->setText(tr("Model Size on This Page Only"));
@@ -937,16 +1080,14 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		}
 		else if (ElementIndex == static_cast<int>(swInstructionsBoxElement::SubmodelPreview))
 		{
-			CreatePercentEditor(swInstructionsPropertyType::SubmodelPreviewSize, tr("Model Size"), tr("Size of the submodel preview, 100 percent fills a quarter of the page, larger sizes are trimmed to it."), 10, 200);
-			Rows.push_back(AddEditorRow(CategoryIndex::Box, swInstructionsPropertyType::SubmodelPreviewSize)->parentWidget());
+			AddModelSizeRows(swInstructionsPropertyType::SubmodelPreviewSize, tr("Longest side of the submodel preview, larger sizes are trimmed to a quarter of the page."));
 		}
 		else if (ElementIndex == static_cast<int>(swInstructionsBoxElement::CoverImage))
 		{
-			CreatePercentEditor(swInstructionsPropertyType::CoverImageSize, tr("Model Size"), tr("Size of the cover model, 100 percent fills its space, larger sizes are trimmed to it."), 10, 200);
-			Rows.push_back(AddEditorRow(CategoryIndex::Box, swInstructionsPropertyType::CoverImageSize)->parentWidget());
+			AddModelSizeRows(swInstructionsPropertyType::CoverImageSize, tr("Longest side of the cover model, larger sizes are trimmed to its space."));
 		}
 
-		CreateLengthEditor(BoxTypes.Margin, tr("Margin"), tr("Space outside the border, filled with the background."), 0, 288, 0.5);
+		CreateLengthEditor(BoxTypes.Margin, tr("Margin"), tr("Space outside the border."), 0, 288, 0.5);
 		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.Margin)->parentWidget());
 		CreateLengthEditor(BoxTypes.Padding, tr("Padding"), tr("Space between the border and the content, filled with the background."), 0, 288, 0.5);
 		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.Padding)->parentWidget());
@@ -963,9 +1104,9 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddCategory(CategoryIndex::Pointer, tr("Pointer"), tr("<p><b>Pointer</b></p><p>A pointer leaves the border of an element to point at a part, a step or a notice. Right-click an element and choose Add Pointer, then drag its tip onto a part of a step model, another element or any point of the page, the tip follows what it points at. Right-click a pointer to choose the anchor it leaves from, or its own style and tip.</p>"));
 
 	// choices follow pointer styles and tips
-	CreateChoiceEditor(swInstructionsPropertyType::PointerStyle, tr("Pointer Style"), tr("Draw pointers as a line or as a callout wedge narrowing to the tip."), { tr("Line"), tr("Callout Wedge") });
+	CreateChoiceEditor(swInstructionsPropertyType::PointerStyle, tr("Pointer Style"), tr("Draw pointers as a line, an L shape with one bend, a Z shape with two bends, a U shape going around or a callout wedge narrowing to the tip."), { tr("Line"), tr("L Shape"), tr("Z Shape"), tr("U Shape"), tr("Callout Wedge") }, { 0, 2, 3, 4, 1 });
 	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerStyle);
-	CreateChoiceEditor(swInstructionsPropertyType::PointerTip, tr("Pointer Tip"), tr("End line pointers with an arrow or a dot, callout wedges have no tip."), { tr("Arrow"), tr("Dot") });
+	CreateChoiceEditor(swInstructionsPropertyType::PointerTip, tr("Pointer Tip"), tr("End line pointers with an arrow, a dot or a hollow dot, callout wedges have no tip."), { tr("Arrow"), tr("Dot"), tr("Hollow Dot") });
 	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerTip);
 	CreateColorEditor(swInstructionsPropertyType::PointerColor, tr("Pointer Color"), tr("Color of the pointers."));
 	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerColor);
@@ -975,6 +1116,8 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerWidth);
 	CreateLengthEditor(swInstructionsPropertyType::PointerTipSize, tr("Tip Size"), tr("Size of the arrows and dots, and width of the wedges at the element, never less than three times the pointer width."), 0, 288, 0.5)->setSpecialValueText(tr("Automatic"));
 	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerTipSize);
+	CreateLengthEditor(swInstructionsPropertyType::PointerBendRadius, tr("Bend Radius"), tr("Roundness of the L, Z and U shape bends, 0 keeps them sharp."), 0, 72, 0.5);
+	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerBendRadius);
 
 	// labels share one width
 	int LabelWidth = 0;
@@ -1067,6 +1210,12 @@ QLabel* swInstructionsPropertiesWidget::AddEditorRow(CategoryIndex Index, swInst
 		RowLayout->insertWidget(1, Editors.UnitButton);
 	}
 
+	if (Editors.SymbolButton)
+	{
+		Editors.SymbolButton->setParent(Row);
+		RowLayout->insertWidget(1, Editors.SymbolButton);
+	}
+
 	return Editors.Label;
 }
 
@@ -1143,14 +1292,24 @@ QDoubleSpinBox* swInstructionsPropertiesWidget::CreateLengthEditor(swInstruction
 
 QSpinBox* swInstructionsPropertiesWidget::CreatePercentEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip, int Minimum, int Maximum)
 {
-	QSpinBox* SpinBox = new QSpinBox(this);
+	swRangeSpinBox* SpinBox = new swRangeSpinBox(this);
 	RegisterEditor(Type, EditorType::Percent, SpinBox, Name, ToolTip);
 
 	SpinBox->setRange(Minimum, Maximum);
 	SpinBox->setSingleStep(5);
-	SpinBox->setSuffix(QLatin1String(" %"));
+	SpinBox->SetReference();
 	SpinBox->setKeyboardTracking(false);
 	swSetupPanelSpinBox(SpinBox);
+
+	// percent sign beside like units
+	QToolButton* SymbolButton = new QToolButton(this);
+	SymbolButton->setText(QStringLiteral("%"));
+	SymbolButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
+	SymbolButton->setFocusPolicy(Qt::NoFocus);
+	SymbolButton->setAttribute(Qt::WA_TransparentForMouseEvents);
+	swSetupPanelButton(SymbolButton);
+	SymbolButton->setFixedWidth(SymbolButton->height());
+	mEditors[static_cast<int>(Type)].SymbolButton = SymbolButton;
 
 	connect(SpinBox, qOverload<int>(&QSpinBox::valueChanged), this, [this, Type](int Value)
 	{
@@ -1160,18 +1319,21 @@ QSpinBox* swInstructionsPropertiesWidget::CreatePercentEditor(swInstructionsProp
 	return SpinBox;
 }
 
-QComboBox* swInstructionsPropertiesWidget::CreateChoiceEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip, const QStringList& Choices)
+QComboBox* swInstructionsPropertiesWidget::CreateChoiceEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip, const QStringList& Choices, const QList<int>& Values)
 {
 	QComboBox* ComboBox = new QComboBox(this);
 	RegisterEditor(Type, EditorType::Choice, ComboBox, Name, ToolTip);
 
-	// choices in property value order
-	ComboBox->addItems(Choices);
+	// choices in property value order unless values are given
+	for (int Index = 0; Index < Choices.size(); Index++)
+		ComboBox->addItem(Choices[Index], Index < Values.size() ? Values[Index] : Index);
+
 	swSetupPanelEdit(ComboBox);
 
-	connect(ComboBox, qOverload<int>(&QComboBox::currentIndexChanged), this, [this, Type](int Index)
+	connect(ComboBox, qOverload<int>(&QComboBox::currentIndexChanged), this, [this, Type, ComboBox](int Index)
 	{
-		mInstructions->SetDefaultInt(Type, Index);
+		if (Index >= 0)
+			mInstructions->SetDefaultInt(Type, ComboBox->itemData(Index).toInt());
 	});
 
 	return ComboBox;
@@ -1359,8 +1521,36 @@ void swInstructionsPropertiesWidget::AddOptionsAction(QAction* Action)
 
 void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 {
+	// remember the notice for its size
+	mNoticeKey.reset();
+	mNoticeItemSize = QSizeF();
+	swInstructionsElementKey NoticeKey;
+
+	if (dynamic_cast<swInstructionsNoticeItem*>(FocusItem) && swGetElementKey(FocusItem, NoticeKey))
+	{
+		mNoticeKey = NoticeKey;
+		mNoticeItemSize = FocusItem->boundingRect().size();
+	}
+
+	UpdateNoticeSize();
+
+	// remember the image and its shape
+	mImageKey.reset();
+	swInstructionsElementKey ImageKey;
+
+	if (dynamic_cast<swInstructionsImageItem*>(FocusItem) && swGetElementKey(FocusItem, ImageKey))
+	{
+		mImageKey = ImageKey;
+		const QSizeF ItemSize = FocusItem->boundingRect().size();
+		mImageAspect = ItemSize.width() > 0.0 ? ItemSize.height() / ItemSize.width() : 1.0;
+	}
+
+	UpdateImageSize();
+
 	// quantities edit their parts list
-	if (FocusItem && dynamic_cast<swInstructionsPartsListCountItem*>(FocusItem))
+	const bool QuantityFocus = FocusItem && dynamic_cast<swInstructionsPartsListCountItem*>(FocusItem);
+
+	if (QuantityFocus)
 		FocusItem = FocusItem->parentItem();
 
 	// keep item kind and step only
@@ -1417,6 +1607,9 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 	else if (FocusItem && FocusItem->data(SW_BAND_DATA).isValid())
 		Focus = FocusType::Bands;
 
+	// each band side opens its group
+	swInstructionsImagePages BandPages = FocusItem && FocusItem->data(SW_BAND_DATA).isValid() ? static_cast<swInstructionsImagePages>(FocusItem->data(SW_BAND_DATA).toInt()) : swInstructionsImagePages::Header;
+
 	// band and watermark content opens their group
 	swInstructionsElementKey Key;
 
@@ -1430,7 +1623,10 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 		if (Pages == swInstructionsImagePages::Watermark)
 			Focus = Notice ? FocusType::WatermarkNotice : FocusType::Watermark;
 		else if (Pages >= swInstructionsImagePages::Header)
+		{
 			Focus = FocusType::BandContent;
+			BandPages = Pages;
+		}
 		else if (Image && Pages == swInstructionsImagePages::None)
 			Focus = FocusType::PageImage;
 	}
@@ -1456,7 +1652,7 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 
 	case FocusType::PartsList:
 	case FocusType::BillOfMaterials:
-		SetBoxElement(swInstructionsBoxElement::PartsList);
+		SetBoxElement(QuantityFocus ? swInstructionsBoxElement::PartsListQuantity : swInstructionsBoxElement::PartsList);
 		break;
 
 	case FocusType::PageNumber:
@@ -1486,20 +1682,36 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 		break;
 
 	case FocusType::Notice:
-	case FocusType::WatermarkNotice:
 		SetBoxElement(swInstructionsBoxElement::Notice);
+		break;
+
+	case FocusType::WatermarkNotice:
+		SetBoxElement(swInstructionsBoxElement::Watermark);
 		break;
 
 	case FocusType::BandContent:
 		if (dynamic_cast<swInstructionsNoticeItem*>(FocusItem))
 			SetBoxElement(swInstructionsBoxElement::Notice);
+		else if (dynamic_cast<swInstructionsImageItem*>(FocusItem))
+			SetBoxElement(swInstructionsBoxElement::Image);
+		break;
+
+	case FocusType::Watermark:
+		if (dynamic_cast<swInstructionsImageItem*>(FocusItem))
+			SetBoxElement(swInstructionsBoxElement::Watermark);
+		break;
+
+	case FocusType::Image:
+	case FocusType::PageImage:
+		if (dynamic_cast<swInstructionsImageItem*>(FocusItem))
+			SetBoxElement(swInstructionsBoxElement::Image);
+		break;
+
+	case FocusType::Bands:
+		SetBoxElement(static_cast<swInstructionsBoxElement>(static_cast<int>(swInstructionsBoxElement::HeaderBand) + static_cast<int>(BandPages) - static_cast<int>(swInstructionsImagePages::Header)));
 		break;
 
 	case FocusType::Pointer:
-	case FocusType::Bands:
-	case FocusType::Watermark:
-	case FocusType::Image:
-	case FocusType::PageImage:
 	case FocusType::None:
 		break;
 	}
@@ -1554,33 +1766,26 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 			break;
 
 		case FocusType::Bands:
-			Open = CategoryIndex::Bands;
-			OpenAlso = Open;
+			Open = BandPages == swInstructionsImagePages::Left ? CategoryIndex::LeftBand : BandPages == swInstructionsImagePages::Right ? CategoryIndex::RightBand : BandPages == swInstructionsImagePages::Footer ? CategoryIndex::Footer : CategoryIndex::Header;
+			OpenAlso = CategoryIndex::Box;
 			break;
 
 		case FocusType::BandContent:
-			Open = CategoryIndex::Bands;
-			OpenAlso = dynamic_cast<swInstructionsNoticeItem*>(FocusItem) ? CategoryIndex::Notice : CategoryIndex::Bands;
+			Open = BandPages == swInstructionsImagePages::Left ? CategoryIndex::LeftBand : BandPages == swInstructionsImagePages::Right ? CategoryIndex::RightBand : BandPages == swInstructionsImagePages::Footer ? CategoryIndex::Footer : CategoryIndex::Header;
+			OpenAlso = dynamic_cast<swInstructionsNoticeItem*>(FocusItem) ? CategoryIndex::Notice : dynamic_cast<swInstructionsImageItem*>(FocusItem) ? CategoryIndex::Image : Open;
 			break;
 
 		case FocusType::Watermark:
 			Open = CategoryIndex::Watermark;
-			OpenAlso = Open;
 			break;
 
 		case FocusType::WatermarkNotice:
 			Open = CategoryIndex::Watermark;
-			OpenAlso = CategoryIndex::Notice;
 			break;
 
 		case FocusType::Image:
-			Open = CategoryIndex::Cover;
-			OpenAlso = Open;
-			break;
-
 		case FocusType::PageImage:
-			Open = CategoryIndex::Page;
-			OpenAlso = Open;
+			Open = CategoryIndex::Image;
 			break;
 
 		case FocusType::StepImage:
@@ -1597,6 +1802,53 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 	mStep = Step;
 
 	UpdateWidget();
+}
+
+void swInstructionsPropertiesWidget::PageClicked(swInstructionsPageType PageType, std::optional<swInstructionsPageObject> Object)
+{
+	// a blank spot opens its page groups
+
+	CategoryIndex Open = CategoryIndex::Page;
+	CategoryIndex OpenAlso = CategoryIndex::Page;
+
+	switch (PageType)
+	{
+	case swInstructionsPageType::Steps:
+		OpenAlso = CategoryIndex::PageLayout;
+		break;
+
+	case swInstructionsPageType::Cover:
+	case swInstructionsPageType::BackCover:
+		Open = CategoryIndex::Cover;
+		break;
+
+	case swInstructionsPageType::BillOfMaterials:
+		Open = CategoryIndex::BillOfMaterials;
+		break;
+
+	case swInstructionsPageType::Blank:
+		break;
+	}
+
+	// plain objects open their own group
+
+	if (Object == swInstructionsPageObject::Divider)
+		Open = OpenAlso = CategoryIndex::Divider;
+	else if (Object == swInstructionsPageObject::StepArea)
+	{
+		Open = CategoryIndex::Step;
+		OpenAlso = CategoryIndex::Box;
+		SetBoxElement(swInstructionsBoxElement::StepArea);
+	}
+	else if (Object == swInstructionsPageObject::FinalModel)
+	{
+		Open = CategoryIndex::PageLayout;
+		OpenAlso = CategoryIndex::Box;
+		SetBoxElement(swInstructionsBoxElement::FinalModel);
+	}
+
+	for (int Index = 0; Index < static_cast<int>(CategoryIndex::Count); Index++)
+		mCategoryWidgets[Index].Button->SetExpanded(Index == static_cast<int>(Open) || Index == static_cast<int>(OpenAlso));
 }
 
 void swInstructionsPropertiesWidget::SetBoxElement(swInstructionsBoxElement Element)
@@ -1624,9 +1876,58 @@ void swInstructionsPropertiesWidget::SetCurrentPage(int PageIndex)
 	UpdateCategories();
 }
 
+// use to show the selected notice size
+void swInstructionsPropertiesWidget::UpdateNoticeSize()
+{
+	const QSizeF SetSize = mNoticeKey ? mInstructions->GetElementSize(*mNoticeKey) : QSizeF();
+	const QSizeF Size = SetSize.isValid() ? SetSize : mNoticeItemSize;
+	const qreal Lengths[2] = { Size.width(), Size.height() };
+	const qreal PageLengths[2] = { mInstructions->mPageSetup.Width, mInstructions->mPageSetup.Height };
+
+	for (int Axis = 0; Axis < 2; Axis++)
+	{
+		QDoubleSpinBox* SpinBox = mNoticeSizeSpinBoxes[Axis];
+		const QSignalBlocker Blocker(SpinBox);
+		const swInstructionsPageUnits Units = mNoticeSizeUnitButtons[Axis]->GetUnits(mInstructions);
+		mNoticeSizeUnitButtons[Axis]->UpdateUnits(mInstructions);
+		swSetupLengthSpinBox(SpinBox, Units, 1.0, PageLengths[Axis] * 5.0);
+		SpinBox->setValue(qMax(0.0, Lengths[Axis]) / swGetPageUnitScale(Units));
+
+		// automatic sizes show greyed
+		SpinBox->setEnabled(SetSize.isValid());
+		mNoticeSizeLabels[Axis]->setEnabled(SetSize.isValid());
+	}
+}
+
+// use to show the selected image size
+void swInstructionsPropertiesWidget::UpdateImageSize()
+{
+	const swInstructionsImage* Image = mImageKey ? mInstructions->FindImage(static_cast<int>(std::get<2>(*mImageKey))) : nullptr;
+	const bool Edited = Image && mInstructions->GetElementSize(*mImageKey).isValid();
+	const qreal PageWidth = mInstructions->mPageSetup.Width;
+	const qreal Width = PageWidth * (Image ? Image->Size : swInstructionsImage().Size) / 100.0;
+	const qreal Lengths[2] = { Width, Width * mImageAspect };
+
+	for (int Axis = 0; Axis < 2; Axis++)
+	{
+		QDoubleSpinBox* SpinBox = mImageSizeSpinBoxes[Axis];
+		const QSignalBlocker Blocker(SpinBox);
+		const swInstructionsPageUnits Units = mImageSizeUnitButtons[Axis]->GetUnits(mInstructions);
+		mImageSizeUnitButtons[Axis]->UpdateUnits(mInstructions);
+		swSetupLengthSpinBox(SpinBox, Units, 1.0, PageWidth * 5.0 * (Axis == 0 ? 1.0 : mImageAspect));
+		SpinBox->setValue(Lengths[Axis] / swGetPageUnitScale(Units));
+
+		// default sizes show greyed
+		SpinBox->setEnabled(Edited);
+		mImageSizeLabels[Axis]->setEnabled(Edited);
+	}
+}
+
 void swInstructionsPropertiesWidget::UpdateWidget()
 {
 	UpdateEditors();
+	UpdateNoticeSize();
+	UpdateImageSize();
 	UpdatePageLayout();
 	UpdateCategories();
 }
@@ -1663,6 +1964,18 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 
 				if (qRound(SpinBox->value() * swGetPageUnitScale(Units)) != GetIntValue(Type))
 					SpinBox->setValue(Value);
+
+				// fitted models grey their size
+
+				if (Editor.FitButton)
+				{
+					const bool Fit = GetIntValue(Type) == 0;
+					const QSignalBlocker FitBlocker(Editor.FitButton);
+					Editor.FitButton->setChecked(Fit);
+					SpinBox->setEnabled(!Fit);
+					Editor.Label->setEnabled(!Fit);
+					Editor.UnitButton->setEnabled(!Fit && !mInstructions->GetDocumentUnits());
+				}
 			}
 			break;
 
@@ -1671,7 +1984,10 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 			break;
 
 		case EditorType::Choice:
-			qobject_cast<QComboBox*>(Editor.Widget)->setCurrentIndex(mInstructions->GetIntProperty(Type, mModel, mStep));
+			{
+				QComboBox* ComboBox = qobject_cast<QComboBox*>(Editor.Widget);
+				ComboBox->setCurrentIndex(ComboBox->findData(mInstructions->GetIntProperty(Type, mModel, mStep)));
+			}
 			break;
 
 		case EditorType::Color:
@@ -1746,6 +2062,9 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 
 		if (Editors.BrowseButton)
 			Editors.BrowseButton->setEnabled(Enabled);
+
+		if (Editors.SymbolButton)
+			Editors.SymbolButton->setEnabled(WidgetEnabled);
 	};
 
 	const bool ShowStepNumber = GetBool(swInstructionsPropertyType::ShowStepNumber);
@@ -1755,12 +2074,20 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	SetEnabled(swInstructionsPropertyType::PointerTip, mInstructions->GetIntProperty(swInstructionsPropertyType::PointerStyle, mModel, mStep) != static_cast<int>(swInstructionsPointerStyle::Wedge));
 	const bool ShowCoverPage = GetBool(swInstructionsPropertyType::ShowCoverPage);
 
-	SetEnabled(swInstructionsPropertyType::CoverTitleFont, ShowCoverPage);
-	SetEnabled(swInstructionsPropertyType::CoverTitleColor, ShowCoverPage);
+	const bool ShowCoverTitle = ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverTitle);
+
+	SetEnabled(swInstructionsPropertyType::ShowCoverTitle, ShowCoverPage);
+	SetEnabled(swInstructionsPropertyType::ShowCoverImage, ShowCoverPage);
+	SetEnabled(swInstructionsPropertyType::CoverTitleFont, ShowCoverTitle);
+	SetEnabled(swInstructionsPropertyType::CoverTitleColor, ShowCoverTitle);
+	SetEnabled(swInstructionsPropertyType::CoverTitleAlignment, ShowCoverTitle);
+	SetEnabled(swInstructionsPropertyType::CoverTitleVerticalAlignment, ShowCoverTitle);
 	SetEnabled(swInstructionsPropertyType::CoverAuthorFont, ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
 	SetEnabled(swInstructionsPropertyType::CoverAuthorColor, ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
-	SetEnabled(swInstructionsPropertyType::CoverTitleText, ShowCoverPage);
-	SetEnabled(swInstructionsPropertyType::CoverTitleFile, ShowCoverPage);
+	SetEnabled(swInstructionsPropertyType::CoverAuthorAlignment, ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
+	SetEnabled(swInstructionsPropertyType::CoverAuthorVerticalAlignment, ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
+	SetEnabled(swInstructionsPropertyType::CoverTitleText, ShowCoverTitle);
+	SetEnabled(swInstructionsPropertyType::CoverTitleFile, ShowCoverTitle);
 	SetEnabled(swInstructionsPropertyType::CoverAuthorText, ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
 	SetEnabled(swInstructionsPropertyType::CoverAuthorFile, ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
 	SetEnabled(swInstructionsPropertyType::ShowCoverAuthor, ShowCoverPage);
@@ -1779,6 +2106,8 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	SetEnabled(swInstructionsPropertyType::PartCountFile, ShowPartCount || ShowPageCount || GetBool(swInstructionsPropertyType::ShowSubmodelPreview));
 	SetEnabled(swInstructionsPropertyType::PartCountFont, ShowPartCount);
 	SetEnabled(swInstructionsPropertyType::PartCountColor, ShowPartCount);
+	SetEnabled(swInstructionsPropertyType::PartCountAlignment, ShowPartCount);
+	SetEnabled(swInstructionsPropertyType::PartCountVerticalAlignment, ShowPartCount);
 	SetEnabled(swInstructionsPropertyType::PagePartCountFont, ShowPageCount || GetBool(swInstructionsPropertyType::ShowSubmodelPreview));
 	SetEnabled(swInstructionsPropertyType::PagePartCountColor, ShowPageCount || GetBool(swInstructionsPropertyType::ShowSubmodelPreview));
 
@@ -1787,10 +2116,14 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsBackgroundColor, ShowBillOfMaterials);
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleFont, ShowBillOfMaterials && ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleColor, ShowBillOfMaterials && ShowStepNumber);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleAlignment, ShowBillOfMaterials && ShowStepNumber);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleVerticalAlignment, ShowBillOfMaterials && ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleText, ShowBillOfMaterials && ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleFile, ShowBillOfMaterials && ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::StepNumberFont, ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::StepNumberColor, ShowStepNumber);
+	SetEnabled(swInstructionsPropertyType::StepNumberAlignment, ShowStepNumber);
+	SetEnabled(swInstructionsPropertyType::StepNumberVerticalAlignment, ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::PLIFont, true);
 
 	// rows on horizontal edges, columns vertical
@@ -1809,6 +2142,8 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	SetEnabled(swInstructionsPropertyType::PageNumberFormat, ShowPageNumber);
 	SetEnabled(swInstructionsPropertyType::PageNumberFont, ShowPageNumber);
 	SetEnabled(swInstructionsPropertyType::PageNumberColor, ShowPageNumber);
+	SetEnabled(swInstructionsPropertyType::PageNumberAlignment, ShowPageNumber);
+	SetEnabled(swInstructionsPropertyType::PageNumberVerticalAlignment, ShowPageNumber);
 	SetEnabled(swInstructionsPropertyType::StepDividerWidth, ShowStepDividers);
 	SetEnabled(swInstructionsPropertyType::StepDividerMargin, ShowStepDividers);
 	SetEnabled(swInstructionsPropertyType::StepDividerPadding, ShowStepDividers);
@@ -1834,15 +2169,58 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	mBackgroundPageButton->setChecked(mInstructions->HasPageProperty(mPageIndex, swInstructionsPropertyType::PageBackgroundColor));
 
 	const bool BandsPage = PageType == swInstructionsPageType::Steps || PageType == swInstructionsPageType::Blank;
-	QSignalBlocker BandsBlocker(mBandsPageButton);
 
-	mBandsPageButton->setEnabled(BandsPage);
-	mBandsApplyAllButton->setEnabled(BandsPage);
-	mBandsPageButton->setChecked(mInstructions->HasPageProperty(mPageIndex, swInstructionsPropertyType::ShowHeaderBand));
+	const swInstructionsPropertyType SectionShow[4] = { swInstructionsPropertyType::ShowHeaderBand, swInstructionsPropertyType::ShowFooterBand, swInstructionsPropertyType::ShowLeftBand, swInstructionsPropertyType::ShowRightBand };
+
+	for (int Section = 0; Section < 4; Section++)
+	{
+		QSignalBlocker BandsBlocker(mBandsPageButtons[Section]);
+
+		// hidden bands grey their settings
+
+		const bool ShowBand = mInstructions->GetPageBoolProperty(mPageIndex, SectionShow[Section]);
+		const bool PageOnly = mInstructions->HasPageProperty(mPageIndex, SectionShow[Section]);
+
+		// the color moved to the box group
+		for (int Kind = 1; Kind < 4; Kind += 2)
+			SetEnabled(static_cast<swInstructionsPropertyType>(static_cast<int>(SectionShow[0]) + Kind * 4 + Section), ShowBand);
+
+		mBandsPageButtons[Section]->setEnabled(BandsPage && (ShowBand || PageOnly));
+		mBandsApplyAllButtons[Section]->setEnabled(BandsPage);
+		mBandsPageButtons[Section]->setChecked(PageOnly);
+	}
 
 	QSignalBlocker WatermarkBlocker(mWatermarkPageButton);
 
 	mWatermarkPageButton->setChecked(mInstructions->HasPageProperty(mPageIndex, swInstructionsPropertyType::ShowWatermark));
+
+	FitWidth();
+}
+
+void swInstructionsPropertiesWidget::FitWidth()
+{
+	// spin boxes take their widest value first
+	ensurePolished();
+
+	for (QAbstractSpinBox* SpinBox : mScrollArea->widget()->findChildren<QAbstractSpinBox*>())
+		swUpdatePanelSpinBoxWidth(SpinBox);
+
+	// widest row of every section, shown or folded
+	int Width = 0;
+
+	for (const CategoryWidgets& Category : mCategoryWidgets)
+	{
+		Width = qMax(Width, Category.Button->minimumSizeHint().width());
+
+		for (const QWidget* Row : Category.Rows->findChildren<QWidget*>(QString(), Qt::FindDirectChildrenOnly))
+			Width = qMax(Width, Row->minimumSizeHint().width());
+	}
+
+	// only grows so opening sections never shifts the page
+	const int PanelWidth = Width + mScrollArea->verticalScrollBar()->sizeHint().width() + 2 * mScrollArea->frameWidth();
+
+	if (PanelWidth > mScrollArea->minimumWidth())
+		mScrollArea->setFixedWidth(PanelWidth);
 }
 
 swInstructionsPageUnits swInstructionsPropertiesWidget::GetEditorUnits(swInstructionsPropertyType Type) const
@@ -1912,13 +2290,11 @@ void swInstructionsPropertiesWidget::UpdatePageLayout()
 	QSignalBlocker ColumnsBlocker(mColumnsSpinBox);
 	QSignalBlocker FlowBlocker(mStepFlowComboBox);
 	QSignalBlocker FinalModelBlocker(mFinalModelButton);
-	QSignalBlocker FinalModelColorBlocker(mFinalModelColorButton);
 
 	mRowsSpinBox->setValue(PageSettings.Rows);
 	mColumnsSpinBox->setValue(PageSettings.Columns);
 	mStepFlowComboBox->setCurrentIndex(static_cast<int>(PageSettings.Direction));
 	mFinalModelButton->setChecked(PageSettings.FinalModel);
-	mFinalModelColorButton->setChecked(PageSettings.FinalModelColor);
 
 	// only pages ending a model have room for it
 	bool HasLastStep = false;
@@ -1935,7 +2311,6 @@ void swInstructionsPropertiesWidget::UpdatePageLayout()
 	}
 
 	mFinalModelButton->setEnabled(HasLastStep);
-	mFinalModelColorButton->setEnabled(HasLastStep && PageSettings.FinalModel);
 
 	// check the matching preset
 	for (int Preset = 0; Preset < static_cast<int>(mDividerPresetButtons.size()); Preset++)
@@ -1950,7 +2325,6 @@ swInstructionsPageSettings swInstructionsPropertiesWidget::GetPageLayoutSettings
 	PageSettings.Columns = mColumnsSpinBox->value();
 	PageSettings.Direction = static_cast<swInstructionsDirection>(mStepFlowComboBox->currentIndex());
 	PageSettings.FinalModel = mFinalModelButton->isChecked();
-	PageSettings.FinalModelColor = mFinalModelColorButton->isChecked();
 
 	return PageSettings;
 }

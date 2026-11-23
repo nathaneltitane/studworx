@@ -372,3 +372,47 @@ void swTests::HTMLExportUsesModelFolder()
 	QVERIFY2(BuiltInPage.contains("\t\t\t/* page navigation, on the right by default */\n\n\t\t\tnav {"), BuiltInPage.constData());
 	QVERIFY2(BuiltInPage.contains("<NAV CLASS="), BuiltInPage.constData());
 }
+
+void swTests::InstructionsExportPDF()
+{
+	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
+	const QString Binary = Environment.value("SW_TEST_BINARY");
+
+	if (Binary.isEmpty())
+		QSKIP("SW_TEST_BINARY is not set");
+
+	QTemporaryDir Folder;
+	QVERIFY(Folder.isValid());
+
+	QFile Model(Folder.filePath("brick.ldr"));
+	QVERIFY(Model.open(QIODevice::WriteOnly));
+	Model.write("0 Test\r\n1 4 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n");
+	Model.close();
+
+	QProcessEnvironment ExportEnvironment = Environment;
+	ExportEnvironment.insert("XDG_CONFIG_HOME", Folder.filePath("config"));
+	ExportEnvironment.insert("XDG_DATA_HOME", Folder.filePath("data"));
+	ExportEnvironment.insert("XDG_CACHE_HOME", Folder.filePath("cache"));
+
+	if (Environment.value("SW_TEST_NATIVE_DISPLAY") != QLatin1String("1"))
+		ExportEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
+
+	// without a name it lands beside the model
+
+	QProcess Export;
+	Export.setProcessEnvironment(ExportEnvironment);
+	Export.setProcessChannelMode(QProcess::MergedChannels);
+	Export.start(Binary, { Model.fileName(), "--export-pdf" });
+	QVERIFY2(Export.waitForFinished(120000), "the pdf was not saved");
+	QVERIFY2(Export.exitCode() == 0, Export.readAll().constData());
+
+	QFile Document(Folder.filePath("brick.pdf"));
+	QVERIFY(Document.open(QIODevice::ReadOnly));
+	const QByteArray Content = Document.readAll();
+	QVERIFY(Content.startsWith("%PDF"));
+
+	// one sheet per instruction page
+
+	const QRegularExpressionMatch Match = QRegularExpression("/Count\\s+(\\d+)").match(QString::fromLatin1(Content.constData(), Content.size()));
+	QVERIFY2(Match.hasMatch() && Match.captured(1).toInt() > 1, Content.left(400).constData());
+}

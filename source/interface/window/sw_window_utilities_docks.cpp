@@ -4,7 +4,8 @@
 // use to fit a scroll area to its rows
 static void swFitScrollAreaWidth(QScrollArea* ScrollArea)
 {
-	if (ScrollArea->widget())
+	// panels sizing themselves opt out
+	if (ScrollArea->widget() && !ScrollArea->property("swKeepWidth").toBool())
 		ScrollArea->setMinimumWidth(ScrollArea->widget()->minimumSizeHint().width() + ScrollArea->verticalScrollBar()->sizeHint().width() + 2 * ScrollArea->frameWidth());
 }
 

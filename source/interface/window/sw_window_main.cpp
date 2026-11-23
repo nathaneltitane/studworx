@@ -33,6 +33,7 @@
 #include "sw_widget_preview.h"
 #include "sw_model_history.h"
 #include "sw_widget_spinner.h"
+#include "sw_widget_spin_box.h"
 #include <QPrintPreviewDialog>
 
 #if SW_ENABLE_GAMEPAD
@@ -1353,14 +1354,36 @@ void swMainWindow::SetAngleSnapIndex(int Index)
 
 void swMainWindow::SetCustomAngleSnap()
 {
-	bool Ok = false;
-	const double Angle = QInputDialog::getDouble(this, tr("Custom Rotation Snap"), tr("Snap angle in degrees"), mAngleSnapCustom, 0.01, 360.0, 2, &Ok);
+	// the house box selects and clamps
+	QDialog Dialog(this);
+	Dialog.setWindowTitle(tr("Custom Rotation Snap"));
+	swSetInputPrompt(&Dialog);
 
-	if (!Ok)
+	swRangeDoubleSpinBox* SpinBox = new swRangeDoubleSpinBox(&Dialog);
+	SpinBox->setDecimals(2);
+	SpinBox->setRange(0.01, 360.0);
+	SpinBox->setValue(mAngleSnapCustom);
+	SpinBox->SetReference();
+	SpinBox->setAccessibleName(tr("Snap Angle"));
+
+	QDialogButtonBox* ButtonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &Dialog);
+	connect(ButtonBox, &QDialogButtonBox::accepted, &Dialog, &QDialog::accept);
+	connect(ButtonBox, &QDialogButtonBox::rejected, &Dialog, &QDialog::reject);
+
+	QFormLayout* FormLayout = new QFormLayout(&Dialog);
+	FormLayout->addRow(tr("Snap angle in degrees"), SpinBox);
+	swAddSpinBoxUnit(SpinBox, QStringLiteral("\u00b0"));
+	FormLayout->addRow(ButtonBox);
+	SpinBox->setFocus();
+
+	if (Dialog.exec() != QDialog::Accepted)
 	{
 		UpdateSnap();
 		return;
 	}
+
+	SpinBox->interpretText();
+	const double Angle = SpinBox->value();
 
 	// keep at most two decimals
 	mAngleSnapCustom = static_cast<float>(qRound(Angle * 100.0) / 100.0);

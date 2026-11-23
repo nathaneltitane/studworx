@@ -262,7 +262,7 @@ static std::vector<swInstructionsPropertyType> swGetHTMLOverrideColorTypes(int R
 
 	// some rows also color the submodel pages, the author and the parts list title
 	if (Row < static_cast<int>(std::size(RowTypes)) && RowTypes[Row] == swInstructionsPropertyType::PageBackgroundColor)
-		return { RowTypes[Row], swInstructionsPropertyType::SubmodelBackgroundColor };
+		return { RowTypes[Row], swInstructionsPropertyType::SubmodelBackgroundColor, swInstructionsPropertyType::BlankPageBackgroundColor };
 
 	if (Row < static_cast<int>(std::size(RowTypes)) && RowTypes[Row] == swInstructionsPropertyType::CoverTitleColor)
 		return { RowTypes[Row], swInstructionsPropertyType::CoverAuthorColor, swInstructionsPropertyType::PartCountColor };
@@ -278,7 +278,8 @@ static std::vector<swInstructionsPropertyType> swGetHTMLOverrideColorTypes(int R
 
 	std::vector<swInstructionsPropertyType> BoxColorTypes;
 
-	for (int Element = 0; Element < static_cast<int>(swInstructionsBoxElement::Count); Element++)
+	// page boxes have their own rows
+	for (int Element = 0; Element < static_cast<int>(swInstructionsBoxElement::FinalModel); Element++)
 	{
 		const swInstructionsBoxTypes BoxTypes = swGetBoxTypes(static_cast<swInstructionsBoxElement>(Element));
 		BoxColorTypes.push_back(Row == static_cast<int>(std::size(RowTypes)) ? BoxTypes.BorderColor : BoxTypes.BackgroundColor);

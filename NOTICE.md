@@ -3,8 +3,41 @@
   <details open>
   <summary>2026-11-23</summary>
 
+  - Instructions: the final model, step areas, bands and watermark are boxes with margin, padding, border, corner radius and background like every other element
   - Instructions: bands now start at the paper edge, not inside the page margins
   - Instructions: Reserve Space only moves the page content when a band reaches past the margin
+  - Instructions: the model keeps its own page size, margins and units, opening it no longer brings back the default paper
+  - Instructions: Header and Footer, Left Band and Right Band each have their own properties, clicking a band opens its group
+  - Instructions: On This Page Only keeps a band on the current page and clears it from the other pages
+  - Instructions: Delete hides a selected title, cover image, part count, step number, parts list or page number and resets its position
+  - Instructions: Show Title and Show Model Image turn the cover title and the finished model on and off
+  - Instructions: images grow to 500 percent of the page width and can run past the paper edge
+  - Instructions: pointers can be a line, an L, Z or U shape with rounded bends, or a callout wedge, end in an arrow, a dot or a hollow dot, and their bend and reach are dragged on the page
+  - Instructions: titles, part counts, step and page numbers and notices line up left, centered or right and top, middle or bottom in a box sized with Edit Size
+  - Instructions: Show Final Model Page closes the main model steps with a page showing the finished model, on by default
+  - Instructions: the Pages panel names each page after its submodel and marks the assembly pages
+  - Instructions: arrow keys move the selection by one grid division, Shift by a whole grid unit, and Reset Position puts a dragged element back on its placement
+  - Instructions: a click only selects, an element moves and the pointer changes only once the mouse moves with the button held
+  - Instructions: the Properties panel keeps one width, selecting an element no longer shifts or resizes the page
+  - Instructions: boxes with a background color no longer show a faint line around the parts list or where they overlap
+  - Preferences: units like px, s, studs and plates sit in a label beside their field, like the page units
+  - Instructions: Blank Page Background colors every blank page, the inserted ones and those after the cover and before the bill of materials
+  - Instructions: the parts list quantities have their own box, margin, padding, border, corners and background, and stay selected when placed
+  - Instructions: band settings grey out while the band is hidden
+  - Instructions: the parts list thumbnail fill is one shared fill out to the border, following rounded corners
+  - Instructions: box backgrounds fill inside the border with the margin left clear outside, the same for every element
+  - Instructions: Model Size is a length in page units, greyed while Fit Model to Box is on
+  - Instructions: every element takes clicks and selection only on what it draws, and clicking a divider, a step area or the final model frame opens its properties
+  - Instructions: dividers, pointer lines and the final model frame snap to whole screen pixels like box borders, so equal widths draw equal
+  - Steps: Add Step View saves the view turned with the view cube into the current step as a ROTSTEP line, absolute, relative or default as picked beside it, absolute by default
+  - Steps panel: a step view row always shows its angles and mode, and an end line reads View: 0, 0, 0 relative [default]
+  - Steps: step views taken from the model view are no longer mirrored, the saved angles turn back to exactly the view shown, relative ones included
+  - Preferences: End Step Views, on by default, saves an end line in the next step whenever a step view is saved, so a view turns only its own step, and removing the step view removes that end line too
+  - Step view dialog: Absolute, Relative or Default, absolute angles from the world zero (the front view) or relative angles from the home view, filled in from the model view and free to change, Default ends a carried view like MLCAD ROTSTEP END; older added step views still load and stay as they are
+  - Instructions: Lock to Home View draws every model from the home view, a step view still wins, and pages redraw as soon as the model view turns
+  - Instructions: clicking a blank spot of a page opens the properties of that page, the cover, step, bill of materials or blank page settings
+  - Instructions: a scaled up cover image no longer covers the cover texts
+  - Command line: --export-pdf prints the instruction pages to a PDF file on the page setup paper
 
   </details>
 
@@ -143,8 +176,8 @@
   - Translations: Traditional Chinese uses Taiwan words, like 匯入 and 匯出 for import and export
   - Instructions: Step Flow in Steps per Page fills pages row by row or column by column, picked by you instead of by the page shape
   - Instructions: on pages with empty cells the last step stretches to fill them, and the step dividers follow the cells
-  - Instructions: Show Final Model puts the finished model in the room left after a model's last step, with Main Page Color to give a submodel's finished model the main page color
-  - Instructions: when the last page is full, the finished model goes on a new page, and Show Final Model and Main Page Color are greyed out on pages without a model's last step
+  - Instructions: Show Final Model puts the finished model in the room left after a model's last step, with the final model box background to color it
+  - Instructions: when the last page is full, the finished model goes on a new page, and Show Final Model is greyed out on pages without a model's last step
   - Instructions: Apply to All Pages on a submodel page keeps the main Page Background instead of resetting it
   - Instructions: Cover Title, Cover Author and BOM Title take your own text, or a text file that wins over it, and notices take a text file too
   - Instructions: the Editor panel stays folded when collapsed or dragged down, instead of growing back by a line

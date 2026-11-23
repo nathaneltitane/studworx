@@ -2,6 +2,7 @@
 
 #include "sw_instructions.h"
 
+class swRangeSpinBox;
 class swInstructionsUnitButton;
 
 // Selection anchors follow the anchor enum.
@@ -21,6 +22,7 @@ public:
 signals:
 	void AlignSelection(int Placement, bool LastSelection);
 	void PlaceElement(int Placement);
+	void NudgeSelection(int DirectionX, int DirectionY, bool FullUnit);
 
 protected:
 	void AnchorClicked(int Anchor);
@@ -50,6 +52,7 @@ protected:
 	QButtonGroup* mAnchorGroup = nullptr;
 	QWidget* mGridWidget = nullptr;
 	std::array<QToolButton*, SW_PLACEMENT_COUNT> mPlacementButtons = {};
+	std::array<QToolButton*, 8> mNudgeButtons = {};
 };
 
 class swInstructionsGridWidget : public QDockWidget
@@ -71,7 +74,7 @@ protected:
 	QDoubleSpinBox* mGridSizeSpinBox = nullptr;
 	swInstructionsUnitButton* mGridSizeUnitButton = nullptr;
 	QComboBox* mGridScopeComboBox = nullptr;
-	QSpinBox* mGridDivisionsSpinBox = nullptr;
+	swRangeSpinBox* mGridDivisionsSpinBox = nullptr;
 	QToolButton* mPrimaryColorButton = nullptr;
 	QToolButton* mSecondaryColorButton = nullptr;
 	QToolButton* mMarginColorButton = nullptr;

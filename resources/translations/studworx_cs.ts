@@ -1061,572 +1061,577 @@
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1816"/>
+        <source>View.StepView.Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1825"/>
         <source>View.StepView.Remove</source>
         <translation>Zobrazit.Pohled kroku.Odebrat</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1825"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1834"/>
         <source>View.StepView.ToggleFollow</source>
         <translation>Zobrazit.Pohled kroku.Přepnout sledování</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1834"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1843"/>
         <source>View.NormalToFace</source>
         <translation>Zobrazit.Kolmo k ploše</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1843"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1852"/>
         <source>View.Cutaway.Cube</source>
         <translation>Zobrazit.Řez.Krychle</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1852"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1861"/>
         <source>View.Cutaway.Sphere</source>
         <translation>Zobrazit.Řez.Koule</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1861"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1870"/>
         <source>View.Cutaway.Cylinder</source>
         <translation>Zobrazit.Řez.Válec</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1870"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1879"/>
         <source>View.Cutaway.Grow</source>
         <translation>Zobrazit.Řez.Zvětšit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1879"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1888"/>
         <source>View.Cutaway.Shrink</source>
         <translation>Zobrazit.Řez.Zmenšit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1888"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1897"/>
         <source>View.Cutaway.PushIn</source>
         <translation>Zobrazit.Řez.Zatlačit dovnitř</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1897"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1906"/>
         <source>View.Cutaway.PullOut</source>
         <translation>Zobrazit.Řez.Vytáhnout ven</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1906"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1915"/>
         <source>View.Cutaway.ShadeColor</source>
         <translation>Zobrazit.Řez.Barva stínování</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1915"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1924"/>
         <source>View.Cutaway.Remove</source>
         <translation>Zobrazit.Řez.Odebrat</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1924"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1933"/>
         <source>View.Grid.ToggleAll</source>
         <translation>Zobrazit.Mřížka.Přepnout vše</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1933"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1942"/>
         <source>View.Grid.ToggleHeightXZ</source>
         <translation>Zobrazit.Mřížka.Přepnout výškovou mřížku XZ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1942"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1951"/>
         <source>View.Grid.ToggleHeightYZ</source>
         <translation>Zobrazit.Mřížka.Přepnout výškovou mřížku YZ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1951"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1960"/>
         <source>View.Grid.ToggleHeightBehindModel</source>
         <translation>Zobrazit.Mřížka.Přepnout výškové mřížky za modelem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1960"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1969"/>
         <source>View.Grid.ToggleAxisX</source>
         <translation>Zobrazit.Mřížka.Přepnout osu X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1969"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1978"/>
         <source>View.Grid.ToggleAxisY</source>
         <translation>Zobrazit.Mřížka.Přepnout osu Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1978"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1987"/>
         <source>View.Grid.ToggleAxisZ</source>
         <translation>Zobrazit.Mřížka.Přepnout osu Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1987"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1996"/>
         <source>View.Terminal.ToggleFollowModel</source>
         <translation>Zobrazit.Terminál.Přepnout sledování modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1996"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2005"/>
         <source>View.Terminal.GoToModelFolder</source>
         <translation>Zobrazit.Terminál.Přejít do složky modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2005"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2014"/>
         <source>View.Terminal.OpenModelFolder</source>
         <translation>Zobrazit.Terminál.Otevřít složku modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2014"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2023"/>
         <source>View.Colors.ToggleSolid</source>
         <translation>Zobrazit.Barvy.Přepnout plné</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2023"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2032"/>
         <source>View.Colors.ToggleTranslucent</source>
         <translation>Zobrazit.Barvy.Přepnout průsvitné</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2032"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2041"/>
         <source>View.Colors.ToggleSpecial</source>
         <translation>Zobrazit.Barvy.Přepnout zvláštní</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2041"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2050"/>
         <source>Part.InsertColor.Current</source>
         <translation>Díl.Barva vložení.Aktuální</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2050"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2059"/>
         <source>Part.InsertColor.Selected</source>
         <translation>Díl.Barva vložení.Vybraná</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2059"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2068"/>
         <source>Part.InsertColor.LastInserted</source>
         <translation>Díl.Barva vložení.Naposledy vložená</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2068"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2077"/>
         <source>View.Parts.ToggleLockColor</source>
         <translation>Zobrazit.Části.Přepnout zámek barvy</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2077"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2086"/>
         <source>File.ToggleOpenMostRecent</source>
         <translation>Soubor.Přepnout otevření nejnovějšího</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2086"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2095"/>
         <source>File.ToggleRestoreTabLayout</source>
         <translation>Soubor.Přepnout obnovení rozložení záložek</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2095"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2104"/>
         <source>Edit.ToggleFixedDirectionKeys</source>
         <translation>Upravit.Přepnout pevné směrové klávesy</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2104"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2113"/>
         <source>View.ToggleMeshLOD</source>
         <translation>Zobrazit.Přepnout úroveň detailu sítě</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2113"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2122"/>
         <source>View.ToggleHighlightNewParts</source>
         <translation>Zobrazit.Přepnout zvýraznění nových dílů</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2122"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2131"/>
         <source>View.ToggleFadeOnEdit</source>
         <translation>Zobrazit.Přepnout zeslabení při úpravě</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2131"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2140"/>
         <source>View.ToggleFadeOnJointSet</source>
         <translation>Zobrazit.Přepnout zeslabení při nastavení kloubu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2140"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2149"/>
         <source>View.ToggleFadeOnJointMove</source>
         <translation>Zobrazit.Přepnout zeslabení při pohybu kloubu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2149"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2158"/>
         <source>View.ToggleHoverOutline</source>
         <translation>Zobrazit.Přepnout obrys při najetí</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2157"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2166"/>
         <source>View.ToggleConnectionPoints</source>
         <translation>Zobrazit.Přepnout spojovací body</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2166"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2175"/>
         <source>View.Grid.ToggleStuds</source>
         <translation>Zobrazit.Mřížka.Přepnout výstupky</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2175"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2184"/>
         <source>View.Grid.ToggleLines</source>
         <translation>Zobrazit.Mřížka.Přepnout čáry</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2184"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2193"/>
         <source>View.ToggleAutomateEdgeColor</source>
         <translation>Zobrazit.Přepnout automatickou barvu hran</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2193"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2202"/>
         <source>View.HighlightStyle.Outline</source>
         <translation>Zobrazit.Styl zvýraznění.Obrys</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2202"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2211"/>
         <source>View.HighlightStyle.TintAndEdges</source>
         <translation>Zobrazit.Styl zvýraznění.Odstín a hrany</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2211"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2220"/>
         <source>View.HighlightStyle.IncreaseOutlineWidth</source>
         <translation>Zobrazit.Styl zvýraznění.Zvětšit šířku obrysu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2220"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2229"/>
         <source>View.HighlightStyle.DecreaseOutlineWidth</source>
         <translation>Zobrazit.Styl zvýraznění.Zmenšit šířku obrysu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2229"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2238"/>
         <source>View.StudStyle.Plain</source>
         <translation>Zobrazit.Styl výstupků.Prostý</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2238"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2247"/>
         <source>View.StudStyle.ThinLinesLogo</source>
         <translation>Zobrazit.Styl výstupků.Tenké čáry s logem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2247"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2256"/>
         <source>View.StudStyle.OutlineLogo</source>
         <translation>Zobrazit.Styl výstupků.Obrys s logem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2256"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2265"/>
         <source>View.StudStyle.SharpTopLogo</source>
         <translation>Zobrazit.Styl výstupků.Ostrý vrch s logem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2265"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2274"/>
         <source>View.StudStyle.RoundedTopLogo</source>
         <translation>Zobrazit.Styl výstupků.Zaoblený vrch s logem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2274"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2283"/>
         <source>View.StudStyle.FlattenedLogo</source>
         <translation>Zobrazit.Styl výstupků.Zploštělé s logem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2283"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2292"/>
         <source>View.StudStyle.HighContrast</source>
         <translation>Zobrazit.Styl výstupků.Vysoký kontrast</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2292"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2301"/>
         <source>View.StudStyle.HighContrastLogo</source>
         <translation>Zobrazit.Styl výstupků.Vysoký kontrast s logem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2301"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2310"/>
         <source>View.ToggleEdgeLines</source>
         <translation>Zobrazit.Přepnout čáry hran</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2310"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2319"/>
         <source>View.ToggleConditionalLines</source>
         <translation>Zobrazit.Přepnout podmíněné čáry</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2319"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2328"/>
         <source>View.Preview.ToggleSyncRendering</source>
         <translation>Zobrazit.Náhled.Přepnout synchronní vykreslování</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2328"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2337"/>
         <source>View.Preview.Shade.Wireframe</source>
         <translation>Zobrazit.Náhled.Stín.Drátový model</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2337"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2346"/>
         <source>View.Preview.Shade.Flat</source>
         <translation>Zobrazit.Náhled.Stín.Plochý</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2346"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2355"/>
         <source>View.Preview.Shade.DefaultLights</source>
         <translation>Zobrazit.Náhled.Stín.Výchozí osvětlení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2355"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2364"/>
         <source>View.Preview.ToggleEdgeLines</source>
         <translation>Zobrazit.Náhled.Přepnout čáry hran</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2364"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2373"/>
         <source>View.Preview.ToggleConditionalLines</source>
         <translation>Zobrazit.Náhled.Přepnout podmíněné čáry</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2373"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2382"/>
         <source>View.Parts.ToggleSyncRendering</source>
         <translation>Zobrazit.Části.Přepnout synchronní vykreslování</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2382"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2391"/>
         <source>View.Parts.Shade.Wireframe</source>
         <translation>Zobrazit.Části.Stín.Drátový model</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2391"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2400"/>
         <source>View.Parts.Shade.Flat</source>
         <translation>Zobrazit.Části.Stín.Plochý</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2400"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2409"/>
         <source>View.Parts.Shade.DefaultLights</source>
         <translation>Zobrazit.Části.Stín.Výchozí osvětlení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2409"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2418"/>
         <source>View.Parts.ToggleEdgeLines</source>
         <translation>Zobrazit.Části.Přepnout čáry hran</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2418"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2427"/>
         <source>View.Parts.ToggleConditionalLines</source>
         <translation>Zobrazit.Části.Přepnout podmíněné čáry</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2427"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2436"/>
         <source>View.MinifigureBuilder.ToggleSyncRendering</source>
         <translation>Zobrazit.Tvůrce minifigurek.Přepnout synchronní vykreslování</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2436"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2445"/>
         <source>View.MinifigureBuilder.Shade.Wireframe</source>
         <translation>Zobrazit.Tvůrce minifigurek.Stín.Drátový model</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2445"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2454"/>
         <source>View.MinifigureBuilder.Shade.Flat</source>
         <translation>Zobrazit.Tvůrce minifigurek.Stín.Plochý</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2454"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2463"/>
         <source>View.MinifigureBuilder.Shade.DefaultLights</source>
         <translation>Zobrazit.Tvůrce minifigurek.Stín.Výchozí osvětlení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2463"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2472"/>
         <source>View.MinifigureBuilder.ToggleEdgeLines</source>
         <translation>Zobrazit.Tvůrce minifigurek.Přepnout čáry hran</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2472"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2481"/>
         <source>View.MinifigureBuilder.ToggleConditionalLines</source>
         <translation>Zobrazit.Tvůrce minifigurek.Přepnout podmíněné čáry</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2481"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2490"/>
         <source>View.Parts.ToggleSnapToTiles</source>
         <translation>Zobrazit.Části.Přepnout přichycení k dlaždicím</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2490"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2499"/>
         <source>View.Preview.ToggleViewCube</source>
         <translation>Zobrazit.Náhled.Přepnout krychli pohledu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2499"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2508"/>
         <source>View.Preview.ToggleAxisIcon</source>
         <translation>Zobrazit.Náhled.Přepnout ikonu os</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2508"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2517"/>
         <source>File.ToggleLoadPartsBeforeShowing</source>
         <translation>Soubor.Přepnout načtení dílů před zobrazením</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2517"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2526"/>
         <source>View.Preview.ToggleKeepSelection</source>
         <translation>Zobrazit.Náhled.Přepnout zachování výběru</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2526"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2535"/>
         <source>Part.Insert</source>
         <translatorcomment>TODO - kousek, kus, část</translatorcomment>
         <translation>Díl.Vložit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2535"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2544"/>
         <source>Part.ToggleFirstPartAtOrigin</source>
         <translation>Díl.Přepnout první díl do počátku</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2544"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2553"/>
         <source>Part.Delete</source>
         <translation>Díl.Odstranit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2553"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2562"/>
         <source>Part.Duplicate</source>
         <translation>Díl.Duplikovat</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2562"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2571"/>
         <source>Part.PaintSelected</source>
         <translation>Díl.Obarvit vybrané</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2571"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2580"/>
         <source>Part.SetJoint</source>
         <translation>Díl.Nastavit kloub</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2580"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2589"/>
         <source>Part.JointMove</source>
         <translation>Díl.Posunout kloub</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2589"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2598"/>
         <source>Part.JointRotate</source>
         <translation>Díl.Otočit kloub</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2598"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2607"/>
         <source>Part.JointMode</source>
         <translation>Díl.Režim kloubu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2607"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2616"/>
         <source>Part.JointModeEnd</source>
         <translation>Díl.Ukončit režim kloubu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2616"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2625"/>
         <source>Part.ResetPivotPoint</source>
         <translation>Díl.Vynulovat bod otáčení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2625"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2634"/>
         <source>Part.RemoveKeyFrames</source>
         <translation>Díl.Odebrat klíčové snímky</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2634"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2643"/>
         <source>Part.ControlPoint.Insert</source>
         <translation>Díl.Kontrolní bod.Vložit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2643"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2652"/>
         <source>Part.ControlPoint.Remove</source>
         <translation>Díl.Kontrolní bod.Odebrat</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2652"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2661"/>
         <source>Part.ControlPoint.Tangent</source>
         <translation>Díl.Kontrolní bod.Zamknout tečnu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2661"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2670"/>
         <source>Part.ControlPoint.AlignTangent</source>
         <translation>Díl.Kontrolní bod.Zarovnat k tečně</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2670"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2679"/>
         <source>Part.ControlPoint.AlignX</source>
         <translation>Díl.Kontrolní bod.Zarovnat k ose X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2679"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2688"/>
         <source>Part.ControlPoint.AlignY</source>
         <translation>Díl.Kontrolní bod.Zarovnat k ose Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2688"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2697"/>
         <source>Part.ControlPoint.AlignZ</source>
         <translation>Díl.Kontrolní bod.Zarovnat k ose Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2697"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2706"/>
         <source>Part.TrainTrack.FocusNext</source>
         <translation>Díl.Vlaková kolej.Zaměřit další</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2706"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2715"/>
         <source>Part.TrainTrack.FocusPrevious</source>
         <translation>Díl.Vlaková kolej.Zaměřit předchozí</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2715"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2724"/>
         <source>Part.TrainTrack.Rotate</source>
         <translation>Díl.Vlaková kolej.Otočit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2724"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2733"/>
         <source>Part.Move.PlusX</source>
         <translation>Díl.Posuny.PlusX</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2733"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2742"/>
         <source>Part.Move.MinusX</source>
         <translation>Díl.Posuny.MinusX</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2742"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2751"/>
         <source>Part.Move.PlusY</source>
         <translation>Díl.Posuny.PlusY</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2751"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2760"/>
         <source>Part.Move.MinusY</source>
         <translation>Díl.Posuny.MinusY</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2760"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2769"/>
         <source>Part.Move.PlusZ</source>
         <translation>Díl.Posuny.PlusZ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2769"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2778"/>
         <source>Part.Move.MinusZ</source>
         <translation>Díl.Posuny.MinusZ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2778"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2787"/>
         <source>Part.Rotate.PlusX</source>
         <translation>Díl.Otočení.PlusX</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2787"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2796"/>
         <source>Part.Rotate.MinusX</source>
         <translation>Díl.Otočení.MinusX</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2796"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2805"/>
         <source>Part.Rotate.PlusY</source>
         <translation>Díl.Otočení.PlusY</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2805"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2814"/>
         <source>Part.Rotate.MinusY</source>
         <translation>Díl.Otočení.MinusY</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2814"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2823"/>
         <source>Part.Rotate.PlusZ</source>
         <translation>Díl.Otočení.PlusZ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2823"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2832"/>
         <source>Part.Rotate.MinusZ</source>
         <translation>Díl.Otočení.MinusZ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2832"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2841"/>
         <source>Part.MinifigureBuilder</source>
         <translation>Díl.Tvůrce minifigurek</translation>
     </message>
@@ -1635,322 +1640,322 @@
         <translation type="vanished">Dílek.Průvodce Minifig</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2841"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2850"/>
         <source>Part.Array</source>
         <translation>Díl.Pole</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2850"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2859"/>
         <source>Part.ViewSelectedModel</source>
         <translation>Díl.Zobrazit vybraný model</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2859"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2868"/>
         <source>Part.MoveSelectionToModel</source>
         <translation>Díl.Přesunout výběr do modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2868"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2877"/>
         <source>Part.InlineSelectedModels</source>
         <translation>Díl.Rozbalit vybrané modely</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2877"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2886"/>
         <source>Part.FlattenModel</source>
         <translation>Díl.Zploštit model</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2886"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2895"/>
         <source>Part.EditSelectedSubmodel</source>
         <translation>Díl.Upravit vybraný podmodel</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2895"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2904"/>
         <source>Part.EditEndSubmodel</source>
         <translation>Díl.Upravit koncový podmodel</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2904"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2913"/>
         <source>Part.Group</source>
         <translation>Díl.Seskupit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2913"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2922"/>
         <source>Part.Ungroup</source>
         <translation>Díl.Zrušit seskupení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2922"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2931"/>
         <source>Part.GroupAdd</source>
         <translation>Díl.Přidat skupinu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2931"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2940"/>
         <source>Part.GroupRemove</source>
         <translation>Díl.Odebrat ze skupiny</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2940"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2949"/>
         <source>Part.GroupEdit</source>
         <translation>Díl.Upravit skupinu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2949"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2958"/>
         <source>Part.HideSelected</source>
         <translation>Díl.Skrýt vybrané</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2958"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2967"/>
         <source>Part.HideUnselected</source>
         <translation>Díl.Skrýt nevybrané</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2967"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2976"/>
         <source>Part.UnhideSelected</source>
         <translation>Díl.Zobrazit vybrané</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2976"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2985"/>
         <source>Part.UnhideAll</source>
         <translation>Díl.Zobrazit vše</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2985"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2994"/>
         <source>Part.ShowEarlier</source>
         <translation>Díl.Zobrazit dříve</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2994"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3003"/>
         <source>Part.ShowLater</source>
         <translation>Díl.Zobrazit později</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3003"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3012"/>
         <source>Model.New</source>
         <translation>Model.Nový</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3012"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3021"/>
         <source>Model.Properties</source>
         <translation>Model.Vlastnosti</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3021"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3030"/>
         <source>Model.List</source>
         <translation>Model.Seznam</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3030"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3039"/>
         <source>Model.Model01</source>
         <translation>Model.Model01</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3039"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3048"/>
         <source>Model.Model02</source>
         <translation>Model.Model02</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3048"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3057"/>
         <source>Model.Model03</source>
         <translation>Model.Model03</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3057"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3066"/>
         <source>Model.Model04</source>
         <translation>Model.Model04</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3066"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3075"/>
         <source>Model.Model05</source>
         <translation>Model.Model05</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3075"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3084"/>
         <source>Model.Model06</source>
         <translation>Model.Model06</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3084"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3093"/>
         <source>Model.Model07</source>
         <translation>Model.Model07</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3093"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3102"/>
         <source>Model.Model08</source>
         <translation>Model.Model08</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3102"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3111"/>
         <source>Model.Model09</source>
         <translation>Model.Model09</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3111"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3120"/>
         <source>Model.Model10</source>
         <translation>Model.Model10</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3120"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3129"/>
         <source>Model.Model11</source>
         <translation>Model.Model11</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3129"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3138"/>
         <source>Model.Model12</source>
         <translation>Model.Model12</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3138"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3147"/>
         <source>Model.Model13</source>
         <translation>Model.Model13</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3147"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3156"/>
         <source>Model.Model14</source>
         <translation>Model.Model14</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3156"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3165"/>
         <source>Model.Model15</source>
         <translation>Model.Model15</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3165"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3174"/>
         <source>Model.Model16</source>
         <translation>Model.Model16</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3174"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3183"/>
         <source>Model.Model17</source>
         <translation>Model.Model17</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3183"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3192"/>
         <source>Model.Model18</source>
         <translation>Model.Model18</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3192"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3201"/>
         <source>Model.Model19</source>
         <translation>Model.Model19</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3201"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3210"/>
         <source>Model.Model20</source>
         <translation>Model.Model20</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3210"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3219"/>
         <source>Model.Model21</source>
         <translation>Model.Model21</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3219"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3228"/>
         <source>Model.Model22</source>
         <translation>Model.Model22</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3228"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3237"/>
         <source>Model.Model23</source>
         <translation>Model.Model23</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3237"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3246"/>
         <source>Model.Model24</source>
         <translation>Model.Model24</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3246"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3255"/>
         <source>Model.Model25</source>
         <translation>Model.Model25</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3255"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3264"/>
         <source>Model.Model26</source>
         <translation>Model.Model26</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3264"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3273"/>
         <source>Model.Model27</source>
         <translation>Model.Model27</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3273"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3282"/>
         <source>Model.Model28</source>
         <translation>Model.Model28</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3282"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3291"/>
         <source>Model.Model29</source>
         <translation>Model.Model29</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3291"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3300"/>
         <source>Model.Model30</source>
         <translation>Model.Model30</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3300"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3309"/>
         <source>Model.Model31</source>
         <translation>Model.Model31</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3309"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3318"/>
         <source>Model.Model32</source>
         <translation>Model.Model32</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3318"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3327"/>
         <source>Model.Model33</source>
         <translation>Model.Model33</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3327"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3336"/>
         <source>Model.Model34</source>
         <translation>Model.Model34</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3336"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3345"/>
         <source>Model.Model35</source>
         <translation>Model.Model35</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3345"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3354"/>
         <source>Model.Model36</source>
         <translation>Model.Model36</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3354"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3363"/>
         <source>Model.Model37</source>
         <translation>Model.Model37</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3363"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3372"/>
         <source>Model.Model38</source>
         <translation>Model.Model38</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3372"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3381"/>
         <source>Model.Model39</source>
         <translation>Model.Model39</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3381"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3390"/>
         <source>Model.Model40</source>
         <translation>Model.Model40</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3390"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3399"/>
         <source>Help.WhatsThis</source>
         <translation>Nápověda.Co je toto</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3399"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3408"/>
         <source>Help.HomePage</source>
         <translation>Nápověda.Domovská stránka</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3408"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3417"/>
         <source>Help.BugReport</source>
         <translation>Nápověda.Nahlásit chyby</translation>
     </message>
@@ -1959,7 +1964,7 @@
         <translation type="vanished">Nápověda.Aktualizace</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3417"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3426"/>
         <source>Help.About</source>
         <translation>Nápověda.O aplikaci</translation>
     </message>
@@ -2118,97 +2123,97 @@
 <context>
     <name>ContextMenu</name>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3519"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3528"/>
         <source>Submodel</source>
         <translation>Podmodel</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3520"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3529"/>
         <source>Control Points</source>
         <translation>Kontrolní body</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3521"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3530"/>
         <source>Align to Axis</source>
         <translation>Zarovnat k ose</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3522"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3531"/>
         <source>View</source>
         <translation>Zobrazit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3554"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3563"/>
         <source>Import</source>
         <translation>Importovat</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3555"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3564"/>
         <source>Export</source>
         <translation>Exportovat</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3556"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3565"/>
         <source>Render</source>
         <translation>Vykreslit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3557"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3566"/>
         <source>Selection Mode</source>
         <translation>Režim výběru</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3558"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3567"/>
         <source>Transform</source>
         <translation>Transformace</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3559"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3568"/>
         <source>Tools</source>
         <translation>Nástroje</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3560"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3569"/>
         <source>Toolbars</source>
         <translation>Panely nástrojů</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3561"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3570"/>
         <source>Viewpoint</source>
         <translation>Pohled</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3562"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3571"/>
         <source>Cutaway</source>
         <translation>Řez</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3563"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3572"/>
         <source>Camera</source>
         <translation>Kamera</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3564"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3573"/>
         <source>Projection</source>
         <translation>Projekce</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3565"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3574"/>
         <source>Shading</source>
         <translation>Stínování</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3566"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3575"/>
         <source>Joint</source>
         <translation>Kloub</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3567"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3576"/>
         <source>Group</source>
         <translation>Skupina</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3568"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3577"/>
         <source>Visibility</source>
         <translation>Viditelnost</translation>
     </message>
@@ -3246,176 +3251,181 @@
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1817"/>
+        <source>Add Step View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1826"/>
         <source>Remove Step View</source>
         <translation>Odebrat pohled kroku</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1826"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1835"/>
         <source>Follow Step Views</source>
         <translation>Sledovat pohledy kroků</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1835"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1844"/>
         <source>Normal to Face</source>
         <translation>Kolmo k ploše</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1844"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1853"/>
         <source>&amp;Cube</source>
         <translation>&amp;Krychle</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1853"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1862"/>
         <source>&amp;Sphere</source>
         <translation>&amp;Koule</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1862"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1871"/>
         <source>C&amp;ylinder</source>
         <translation>&amp;Válec</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1871"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1880"/>
         <source>&amp;Grow</source>
         <translation>&amp;Zvětšit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1880"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1889"/>
         <source>S&amp;hrink</source>
         <translation>Zme&amp;nšit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1889"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1898"/>
         <source>Push &amp;In</source>
         <translation>Zatlačit &amp;dovnitř</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1898"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1907"/>
         <source>Pull &amp;Out</source>
         <translation>Vytáhnout &amp;ven</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1907"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1916"/>
         <source>Sh&amp;ade Color...</source>
         <translation>Barva stí&amp;nování...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1916"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1925"/>
         <source>&amp;Remove</source>
         <translation>&amp;Odebrat</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1925"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1934"/>
         <source>All Grids</source>
         <translation>Všechny mřížky</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1934"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1943"/>
         <source>XZ Height Grid</source>
         <translation>Výšková mřížka XZ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1943"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1952"/>
         <source>YZ Height Grid</source>
         <translation>Výšková mřížka YZ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1952"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1961"/>
         <source>Height Grids Behind Model</source>
         <translation>Výškové mřížky za modelem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1961"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1970"/>
         <source>X Axis Line</source>
         <translation>Čára osy X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1970"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1979"/>
         <source>Y Axis Line</source>
         <translation>Čára osy Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1979"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1988"/>
         <source>Z Axis Line</source>
         <translation>Čára osy Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1988"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1997"/>
         <source>Follow Model Folder</source>
         <translation>Sledovat složku modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1997"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2006"/>
         <source>Go to Model Folder</source>
         <translation>Přejít do složky modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2006"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2015"/>
         <source>Open Model Folder</source>
         <translation>Otevřít složku modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2015"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2024"/>
         <source>Solid Colors</source>
         <translation>Plné barvy</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2024"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2033"/>
         <source>Translucent Colors</source>
         <translation>Průsvitné barvy</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2033"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2042"/>
         <source>Special Colors</source>
         <translation>Zvláštní barvy</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2105"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2114"/>
         <source>Mesh Detail Control</source>
         <translation>Řízení detailu sítě</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2123"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2132"/>
         <source>Fade on Edit</source>
         <translation>Zeslabit při úpravě</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2132"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2141"/>
         <source>Fade on Joint Set</source>
         <translation>Zeslabit při nastavení kloubu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2141"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2150"/>
         <source>Fade on Joint Move and Rotate</source>
         <translation>Zeslabit při pohybu a otáčení kloubu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2851"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2860"/>
         <source>Open Selected Submodel</source>
         <translation>Otevřít vybraný podmodel</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2860"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2869"/>
         <source>Move to New Submodel...</source>
         <translation>Přesunout do nového podmodelu...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2869"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2878"/>
         <source>Inline Selected Submodels</source>
         <translation>Rozbalit vybrané podmodely</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2878"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2887"/>
         <source>Flatten Submodels</source>
         <translation>Zploštit podmodely</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2896"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2905"/>
         <source>Exit Mode</source>
         <translation>Ukončit režim</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2069"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2078"/>
         <source>Lock Parts Color</source>
         <translation>Zamknout barvu dílů</translation>
     </message>
@@ -3639,17 +3649,17 @@
         <translation>Zamknout rozhraní</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2078"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2087"/>
         <source>Open Most Recent File on Startup</source>
         <translation>Otevírat nejnovější soubor při spuštění</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2087"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2096"/>
         <source>Restore Tab Layout</source>
         <translation>Obnovit rozvržení záložek</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2096"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2105"/>
         <source>Fixed Direction Keys</source>
         <translation>Klávesy pevného směru</translation>
     </message>
@@ -3658,97 +3668,97 @@
         <translation type="obsolete">Síť LOD</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2114"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2123"/>
         <source>Highlight New Parts</source>
         <translation>Zvýraznit nové díly</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2150"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2159"/>
         <source>Submodel Hover Outline</source>
         <translation>Obrys podmodelu při najetí</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2158"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2167"/>
         <source>Connection Points</source>
         <translation>Spojovací body</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2167"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2176"/>
         <source>Grid Studs</source>
         <translation>Výstupky mřížky</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2176"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2185"/>
         <source>Grid Lines</source>
         <translation>Čáry mřížky</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2239"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2248"/>
         <source>Thin-Line Logo Studs</source>
         <translation>Výstupky s logem z tenkých čar</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2293"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2302"/>
         <source>High Contrast Logo Studs</source>
         <translation>Výstupky s logem s vysokým kontrastem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2518"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2527"/>
         <source>Keep Last Selection</source>
         <translation>Zachovat poslední výběr</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2527"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2536"/>
         <source>&amp;Insert Part</source>
         <translation>&amp;Vložit díl</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2572"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2581"/>
         <source>&amp;Set Joint</source>
         <translation>&amp;Nastavit kloub</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2581"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2590"/>
         <source>&amp;Move Joint</source>
         <translation>&amp;Posunout kloub</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2590"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2599"/>
         <source>&amp;Rotate Joint</source>
         <translation>&amp;Otočit kloub</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2599"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2608"/>
         <source>Joint &amp;Mode</source>
         <translation>Režim &amp;kloubu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2608"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2617"/>
         <source>&amp;End Joint Mode</source>
         <translation>&amp;Ukončit režim kloubu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2653"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2662"/>
         <source>Clamp Tangent</source>
         <translation>Zamknout tečnu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2662"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2671"/>
         <source>Align to Tangent</source>
         <translation>Zarovnat k tečně</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2671"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2680"/>
         <source>X Axis</source>
         <translation>Osa X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2680"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2689"/>
         <source>Y Axis</source>
         <translation>Osa Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2689"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2698"/>
         <source>Z Axis</source>
         <translation>Osa Z</translation>
     </message>
@@ -3757,227 +3767,227 @@
         <translation type="vanished">Ukončit režim</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3013"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3022"/>
         <source>Proper&amp;ties...</source>
         <translation>Vlast&amp;nosti...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3031"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3040"/>
         <source>Submodel 1</source>
         <translation>Podmodel 1</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3040"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3049"/>
         <source>Submodel 2</source>
         <translation>Podmodel 2</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3049"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3058"/>
         <source>Submodel 3</source>
         <translation>Podmodel 3</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3058"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3067"/>
         <source>Submodel 4</source>
         <translation>Podmodel 4</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3067"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3076"/>
         <source>Submodel 5</source>
         <translation>Podmodel 5</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3076"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3085"/>
         <source>Submodel 6</source>
         <translation>Podmodel 6</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3085"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3094"/>
         <source>Submodel 7</source>
         <translation>Podmodel 7</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3094"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3103"/>
         <source>Submodel 8</source>
         <translation>Podmodel 8</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3103"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3112"/>
         <source>Submodel 9</source>
         <translation>Podmodel 9</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3112"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3121"/>
         <source>Submodel 10</source>
         <translation>Podmodel 10</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3121"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3130"/>
         <source>Submodel 11</source>
         <translation>Podmodel 11</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3130"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3139"/>
         <source>Submodel 12</source>
         <translation>Podmodel 12</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3139"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3148"/>
         <source>Submodel 13</source>
         <translation>Podmodel 13</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3148"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3157"/>
         <source>Submodel 14</source>
         <translation>Podmodel 14</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3157"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3166"/>
         <source>Submodel 15</source>
         <translation>Podmodel 15</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3166"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3175"/>
         <source>Submodel 16</source>
         <translation>Podmodel 16</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3175"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3184"/>
         <source>Submodel 17</source>
         <translation>Podmodel 17</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3184"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3193"/>
         <source>Submodel 18</source>
         <translation>Podmodel 18</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3193"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3202"/>
         <source>Submodel 19</source>
         <translation>Podmodel 19</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3202"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3211"/>
         <source>Submodel 20</source>
         <translation>Podmodel 20</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3211"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3220"/>
         <source>Submodel 21</source>
         <translation>Podmodel 21</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3220"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3229"/>
         <source>Submodel 22</source>
         <translation>Podmodel 22</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3229"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3238"/>
         <source>Submodel 23</source>
         <translation>Podmodel 23</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3238"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3247"/>
         <source>Submodel 24</source>
         <translation>Podmodel 24</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3247"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3256"/>
         <source>Submodel 25</source>
         <translation>Podmodel 25</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3256"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3265"/>
         <source>Submodel 26</source>
         <translation>Podmodel 26</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3265"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3274"/>
         <source>Submodel 27</source>
         <translation>Podmodel 27</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3274"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3283"/>
         <source>Submodel 28</source>
         <translation>Podmodel 28</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3283"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3292"/>
         <source>Submodel 29</source>
         <translation>Podmodel 29</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3292"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3301"/>
         <source>Submodel 30</source>
         <translation>Podmodel 30</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3301"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3310"/>
         <source>Submodel 31</source>
         <translation>Podmodel 31</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3310"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3319"/>
         <source>Submodel 32</source>
         <translation>Podmodel 32</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3319"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3328"/>
         <source>Submodel 33</source>
         <translation>Podmodel 33</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3328"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3337"/>
         <source>Submodel 34</source>
         <translation>Podmodel 34</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3337"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3346"/>
         <source>Submodel 35</source>
         <translation>Podmodel 35</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3346"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3355"/>
         <source>Submodel 36</source>
         <translation>Podmodel 36</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3355"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3364"/>
         <source>Submodel 37</source>
         <translation>Podmodel 37</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3364"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3373"/>
         <source>Submodel 38</source>
         <translation>Podmodel 38</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3373"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3382"/>
         <source>Submodel 39</source>
         <translation>Podmodel 39</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3382"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3391"/>
         <source>Submodel 40</source>
         <translation>Podmodel 40</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3391"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3400"/>
         <source>&amp;What&apos;s This?</source>
         <translation>&amp;Co je toto?</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3400"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3409"/>
         <source>&amp;Home Page</source>
         <translation>&amp;Domovská stránka</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3409"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3418"/>
         <source>Report a &amp;Bug</source>
         <translation>Nahlásit &amp;chybu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2185"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2194"/>
         <source>Automate Edge Color</source>
         <translation>Automatická barva hran</translation>
     </message>
@@ -3993,7 +4003,7 @@
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1449"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3445"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3454"/>
         <source>Delete Step</source>
         <translation>Odstranit krok</translation>
     </message>
@@ -4003,187 +4013,187 @@
         <translation>Panel kroků</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2042"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2051"/>
         <source>Current Color</source>
         <translation>Aktuální barva</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2051"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2060"/>
         <source>Selected Part Color</source>
         <translation>Barva vybraného dílu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2060"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2069"/>
         <source>Last Inserted Part Color</source>
         <translation>Barva naposledy vloženého dílu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2194"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2203"/>
         <source>Outline Highlight</source>
         <translation>Zvýraznění obrysem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2203"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2212"/>
         <source>Tint and Edges Highlight</source>
         <translation>Zvýraznění odstínem a hranami</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2212"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2221"/>
         <source>Increase Outline Width</source>
         <translation>Zvětšit šířku obrysu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2221"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2230"/>
         <source>Decrease Outline Width</source>
         <translation>Zmenšit šířku obrysu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2230"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2239"/>
         <source>Plain Studs</source>
         <translation>Prosté výstupky</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2248"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2257"/>
         <source>Outline Logo Studs</source>
         <translation>Výstupky s logem s obrysem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2257"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2266"/>
         <source>Sharp Top Logo Studs</source>
         <translation>Výstupky s logem s ostrým vrchem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2266"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2275"/>
         <source>Rounded Top Logo Studs</source>
         <translation>Výstupky s logem se zaobleným vrchem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2275"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2284"/>
         <source>Flattened Logo Studs</source>
         <translation>Výstupky se zploštěným logem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2284"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2293"/>
         <source>High Contrast Studs</source>
         <translation>Výstupky s vysokým kontrastem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2302"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2311"/>
         <source>Edge Lines</source>
         <translation>Čáry hran</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2311"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2320"/>
         <source>Conditional Lines</source>
         <translation>Podmíněné čáry</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2320"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2329"/>
         <source>Preview Uses Model View Settings</source>
         <translation>Náhled používá nastavení pohledu modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2329"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2338"/>
         <source>Preview Wireframe</source>
         <translation>Drátový model náhledu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2338"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2347"/>
         <source>Preview Flat Shading</source>
         <translation>Ploché stínování náhledu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2347"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2356"/>
         <source>Preview Default Lights</source>
         <translation>Výchozí osvětlení náhledu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2356"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2365"/>
         <source>Preview Edge Lines</source>
         <translation>Čáry hran náhledu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2365"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2374"/>
         <source>Preview Conditional Lines</source>
         <translation>Podmíněné čáry náhledu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2374"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2383"/>
         <source>Parts Use Model View Settings</source>
         <translation>Díly používají nastavení pohledu modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2383"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2392"/>
         <source>Parts Wireframe</source>
         <translation>Drátový model dílů</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2392"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2401"/>
         <source>Parts Flat Shading</source>
         <translation>Ploché stínování dílů</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2401"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2410"/>
         <source>Parts Default Lights</source>
         <translation>Výchozí osvětlení dílů</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2410"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2419"/>
         <source>Parts Edge Lines</source>
         <translation>Čáry hran dílů</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2419"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2428"/>
         <source>Parts Conditional Lines</source>
         <translation>Podmíněné čáry dílů</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2428"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2437"/>
         <source>Minifigure Builder Uses Model View Settings</source>
         <translation>Tvůrce minifigurek používá nastavení pohledu modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2437"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2446"/>
         <source>Minifigure Builder Wireframe</source>
         <translation>Drátový model tvůrce minifigurek</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2446"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2455"/>
         <source>Minifigure Builder Flat Shading</source>
         <translation>Ploché stínování tvůrce minifigurek</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2455"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2464"/>
         <source>Minifigure Builder Default Lights</source>
         <translation>Výchozí osvětlení tvůrce minifigurek</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2464"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2473"/>
         <source>Minifigure Builder Edge Lines</source>
         <translation>Čáry hran tvůrce minifigurek</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2473"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2482"/>
         <source>Minifigure Builder Conditional Lines</source>
         <translation>Podmíněné čáry tvůrce minifigurek</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2482"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2491"/>
         <source>Snap Panel Width to Tiles</source>
         <translation>Přichytit šířku panelu k dlaždicím</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2491"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2500"/>
         <source>Preview View Cube</source>
         <translation>Krychle pohledu v náhledu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2500"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2509"/>
         <source>Preview Axis Icon</source>
         <translation>Ikona os v náhledu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2509"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2518"/>
         <source>Load All Parts Before Showing</source>
         <translation>Načíst všechny díly před zobrazením</translation>
     </message>
@@ -4192,37 +4202,37 @@
         <translation type="vanished">Vlož&amp;it</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2536"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2545"/>
         <source>Insert First Part at Origin</source>
         <translation>Vložit první díl do počátku</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2545"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2554"/>
         <source>&amp;Delete</source>
         <translation>&amp;Odstranit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2554"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2563"/>
         <source>&amp;Duplicate</source>
         <translation>&amp;Duplikovat</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2563"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2572"/>
         <source>&amp;Paint Selected</source>
         <translation>&amp;Obarvit vybrané</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2617"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2626"/>
         <source>Reset &amp;Pivot Point</source>
         <translation>Vynulovat &amp;bod otáčení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2626"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2635"/>
         <source>Remove &amp;Keyframes</source>
         <translation>Odebrat &amp;klíčové snímky</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2833"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2842"/>
         <source>&amp;Minifigure Builder</source>
         <translation>&amp;Tvůrce minifigurek</translation>
     </message>
@@ -4231,87 +4241,87 @@
         <translation type="vanished">Odstranit &amp;klíčové snímky</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2635"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2644"/>
         <source>Insert Control Point</source>
         <translation>Vložit kontrolní bod</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2644"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2653"/>
         <source>Remove Control Point</source>
         <translation>Odebrat kontrolní bod</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2698"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2707"/>
         <source>Focus Next Connection</source>
         <translation>Zaostřit další spojení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2707"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2716"/>
         <source>Focus Previous Connection</source>
         <translation>Zaostřit předchozí spojení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2716"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2725"/>
         <source>Rotate Train Track</source>
         <translation>Otočit vlakovou trať</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2725"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2734"/>
         <source>Move +X</source>
         <translation>Přesunout +X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2734"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2743"/>
         <source>Move -X</source>
         <translation>Přesunout -X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2743"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2752"/>
         <source>Move +Y</source>
         <translation>Přesunout +Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2752"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2761"/>
         <source>Move -Y</source>
         <translation>Přesunout -Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2761"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2770"/>
         <source>Move +Z</source>
         <translation>Přesunout +Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2770"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2779"/>
         <source>Move -Z</source>
         <translation>Přesunout -Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2779"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2788"/>
         <source>Rotate +X</source>
         <translation>Otočit +X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2788"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2797"/>
         <source>Rotate -X</source>
         <translation>Otočit -X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2797"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2806"/>
         <source>Rotate +Y</source>
         <translation>Otočit +Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2806"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2815"/>
         <source>Rotate -Y</source>
         <translation>Otočit -Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2815"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2824"/>
         <source>Rotate +Z</source>
         <translation>Otočit +Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2824"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2833"/>
         <source>Rotate -Z</source>
         <translation>Otočit -Z</translation>
     </message>
@@ -4320,7 +4330,7 @@
         <translation type="vanished">Průvodce &amp;Minifig...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2842"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2851"/>
         <source>A&amp;rray...</source>
         <translation>Po&amp;le...</translation>
     </message>
@@ -4337,7 +4347,7 @@
         <translation type="vanished">Vložit vybrané modely</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2887"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2896"/>
         <source>Edit Selected Submodel</source>
         <translation>Upravit vybraný podmodel</translation>
     </message>
@@ -4346,63 +4356,63 @@
         <translation type="vanished">Ukončit úpravy podmodelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2905"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2914"/>
         <source>&amp;Group...</source>
         <translatorcomment>TODO - možná seskupit</translatorcomment>
         <translation>&amp;Seskupit...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2914"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2923"/>
         <source>&amp;Ungroup</source>
         <translation>&amp;Zrušit seskupení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2923"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2932"/>
         <source>&amp;Add to Group</source>
         <translation>&amp;Přidat do skupiny</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2932"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2941"/>
         <source>Re&amp;move from Group</source>
         <translation>&amp;Odebrat ze skupiny</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2941"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2950"/>
         <source>&amp;Edit Groups...</source>
         <translation>&amp;Upravit skupiny...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2950"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2959"/>
         <source>&amp;Hide Selected</source>
         <translation>&amp;Skrýt vybrané</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2959"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2968"/>
         <source>Hide &amp;Unselected</source>
         <translation>Skrýt &amp;nevybrané</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2968"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2977"/>
         <source>&amp;Unhide Selected</source>
         <translation>&amp;Zobrazit vybrané</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2977"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2986"/>
         <source>U&amp;nhide All</source>
         <translation>Zobrazit &amp;vše</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2986"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2995"/>
         <source>Show Earlier</source>
         <translation>Zobrazit dříve</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2995"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3004"/>
         <source>Show Later</source>
         <translation>Zobrazit později</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3004"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3013"/>
         <source>New Submodel...</source>
         <translation>Nový podmodel...</translation>
     </message>
@@ -4411,7 +4421,7 @@
         <translation type="vanished">Vlastno&amp;sti...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3022"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3031"/>
         <source>Submodels...</source>
         <translation>Podmodely...</translation>
     </message>
@@ -4594,37 +4604,37 @@
         <translation type="vanished">Zkontrolovat akt&amp;ualizace...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3418"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3427"/>
         <source>&amp;About...</source>
         <translation>&amp;O aplikaci...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3427"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3436"/>
         <source>Insert Step Before</source>
         <translation>Vložit krok před</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3436"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3445"/>
         <source>Insert Step After</source>
         <translation>Vložit krok za</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3454"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3463"/>
         <source>Move Selection Here</source>
         <translation>Přesunout výběr sem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3463"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3472"/>
         <source>Move Selection Before</source>
         <translation>Přesunout výběr před</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3472"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3481"/>
         <source>Move Selection After</source>
         <translation>Přesunout výběr za</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3481"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3490"/>
         <source>Set Current Step</source>
         <translation>Nastavit aktuální krok</translation>
     </message>
@@ -4632,61 +4642,61 @@
 <context>
     <name>Mouse</name>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3492"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3501"/>
         <source>NewPart</source>
         <translatorcomment>TODO</translatorcomment>
         <translation>Nový díl</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3493"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3502"/>
         <source>NewPointLight</source>
         <translatorcomment>TODO</translatorcomment>
         <translation>Nové bodové světlo</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3494"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3503"/>
         <source>NewSpotLight</source>
         <translatorcomment>TODO</translatorcomment>
         <translation>Nový zdroj osvětlení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3495"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3504"/>
         <source>NewDirectionalLight</source>
         <translation>Nové směrové světlo</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3496"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3505"/>
         <source>NewAreaLight</source>
         <translation>Nové plošné světlo</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3497"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3506"/>
         <source>NewCamera</source>
         <translatorcomment>TODO</translatorcomment>
         <translation>Nová kamera</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3498"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3507"/>
         <source>Select</source>
         <translation>Vybrat</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3499"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3508"/>
         <source>Move</source>
         <translation>Přesunout</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3500"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3509"/>
         <source>Rotate</source>
         <translation>Otočit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3501"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3510"/>
         <source>Erase</source>
         <translation>Mazání</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3503"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3512"/>
         <source>Joints</source>
         <translation>Klouby</translation>
     </message>
@@ -4695,38 +4705,38 @@
         <translation type="vanished">Odstranit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3502"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3511"/>
         <source>Paint</source>
         <translation>Malování</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3504"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3513"/>
         <source>ColorPicker</source>
         <translation>Výběr barvy</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3505"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3514"/>
         <source>Zoom</source>
         <translatorcomment>Lupa</translatorcomment>
         <translation>Zvětšit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3506"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3515"/>
         <source>Pan</source>
         <translation>Posouvat</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3507"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3516"/>
         <source>Orbit</source>
         <translation>Otáčení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3508"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3517"/>
         <source>Roll</source>
         <translation>Přetočení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3509"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3518"/>
         <source>ZoomRegion</source>
         <translatorcomment>TODO</translatorcomment>
         <translation>Oblast zvětšení</translation>
@@ -5029,13 +5039,13 @@ Formát souboru není rozpoznán.</translation>
     <message>
         <location filename="../../source/core/sw_project_export.cpp" line="24"/>
         <location filename="../../source/core/sw_project_export.cpp" line="40"/>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="481"/>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="566"/>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="615"/>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="652"/>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="674"/>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="710"/>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="743"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="482"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="567"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="616"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="653"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="675"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="711"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="744"/>
         <location filename="../../source/core/sw_project_file.cpp" line="558"/>
         <location filename="../../source/core/sw_project_file.cpp" line="574"/>
         <location filename="../../source/core/sw_project_file.cpp" line="585"/>
@@ -5078,85 +5088,85 @@ Formát souboru není rozpoznán.</translation>
         <translation>Soubory CSV (*.csv);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="434"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="435"/>
         <source>Could not create folder &apos;%1&apos;.</source>
         <translation>Nelze vytvořit složku &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="506"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="507"/>
         <source>Created by %1</source>
         <translation>Vytvořeno aplikací %1</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="570"/>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="656"/>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="747"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="571"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="657"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="748"/>
         <source>Instructions for %1</source>
         <translation>Pokyny pro %1</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="617"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="618"/>
         <source>Page %1</source>
         <translation>Stránka %1</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="625"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="626"/>
         <source>First Page</source>
         <translation>První stránka</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="625"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="626"/>
         <source>Previous Page</source>
         <translation>Předchozí stránka</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="625"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="626"/>
         <source>Next Page</source>
         <translation>Další stránka</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="625"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="626"/>
         <source>Last Page</source>
         <translation>Poslední stránka</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="659"/>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="679"/>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="765"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="660"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="680"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="766"/>
         <source>Step %1</source>
         <translation>Krok %1</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="662"/>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="699"/>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="768"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="663"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="700"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="769"/>
         <source>Parts Used</source>
         <translation>Použité díly</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="678"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="679"/>
         <source>%1 - Step %2</source>
         <translation>%1 - Krok %2</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="691"/>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="722"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="692"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="723"/>
         <source>Previous</source>
         <translation>Předchozí</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="694"/>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="725"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="695"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="726"/>
         <source>Index</source>
         <translation>Rejstřík</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="697"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="698"/>
         <source>Next</source>
         <translation>Další</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export_html.cpp" line="714"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="715"/>
         <source>Parts used by %1</source>
         <translation>Díly použité v %1</translation>
     </message>
@@ -5249,22 +5259,22 @@ Formát souboru není rozpoznán.</translation>
 <context>
     <name>QDockWidget</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="669"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="670"/>
         <source>Float</source>
         <translation>Oddělit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="673"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="674"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="713"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="714"/>
         <source>Expand</source>
         <translation>Rozbalit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="713"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="714"/>
         <source>Collapse</source>
         <translation>Sbalit</translation>
     </message>
@@ -6451,7 +6461,7 @@ Formát souboru není rozpoznán.</translation>
         <translation>%1 selhalo: %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="650"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="751"/>
         <source>Create Parts List</source>
         <translation>Vytvořit seznam dílů</translation>
     </message>
@@ -7226,13 +7236,13 @@ Formát souboru není rozpoznán.</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1432"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3428"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3437"/>
         <source>Insert a new step before the current step</source>
         <translation>Vložit nový krok před aktuální krok</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1441"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3437"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3446"/>
         <source>Insert a new step after the current step</source>
         <translation>Vložit nový krok za aktuální krok</translation>
     </message>
@@ -7444,251 +7454,256 @@ Formát souboru není rozpoznán.</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1818"/>
+        <source>Save the current view as the view of the current step</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1827"/>
         <source>Remove the view rotation of the current step</source>
         <translation>Odstranit otočení pohledu aktuálního kroku</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1827"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1836"/>
         <source>Toggle turning the view to each step&apos;s view rotation when changing steps</source>
         <translation>Přepnout otáčení pohledu podle otočení pohledu každého kroku při změně kroků</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1836"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1845"/>
         <source>Click a face to align the view straight on to it</source>
         <translation>Kliknutím na plochu zarovnáte pohled přímo na ni</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1845"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1854"/>
         <source>Click a face to cut away a cube of the model around it</source>
         <translation>Kliknutím na plochu vyřežete kolem ní z modelu krychli</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1854"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1863"/>
         <source>Click a face to cut away a sphere of the model around it</source>
         <translation>Kliknutím na plochu vyřežete kolem ní z modelu kouli</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1863"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1872"/>
         <source>Click a face to drill a cylinder into the model through it</source>
         <translation>Kliknutím na plochu vyvrtáte skrz ni do modelu válec</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1872"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1881"/>
         <source>Make the cutaway larger</source>
         <translation>Zvětšit řez</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1881"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1890"/>
         <source>Make the cutaway smaller</source>
         <translation>Zmenšit řez</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1890"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1899"/>
         <source>Move the cutaway one plate deeper into the model</source>
         <translation>Posunout řez o jednu desku hlouběji do modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1899"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1908"/>
         <source>Move the cutaway one plate back out of the model</source>
         <translation>Posunout řez o jednu desku zpět z modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1908"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1917"/>
         <source>Choose the light shade on the cutaway faces</source>
         <translation>Vybrat světlý odstín na plochách řezu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1917"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1926"/>
         <source>Show the whole model again, or press Esc with nothing selected</source>
         <translation>Znovu zobrazit celý model, nebo stisknout Esc, když není nic vybráno</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1926"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1935"/>
         <source>Turn the base, XZ and YZ height grids on or off together</source>
         <translation>Zapnout nebo vypnout základní mřížku a výškové mřížky XZ a YZ najednou</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1935"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1944"/>
         <source>Toggle the vertical XZ height grid</source>
         <translation>Přepnout svislou výškovou mřížku XZ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1944"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1953"/>
         <source>Toggle the vertical YZ height grid</source>
         <translation>Přepnout svislou výškovou mřížku YZ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1953"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1962"/>
         <source>Toggle drawing the height grids behind the model instead of through the origin axes</source>
         <translation>Přepnout kreslení výškových mřížek za modelem místo skrz osy počátku</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1962"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1971"/>
         <source>Toggle the x axis line on the grid origin</source>
         <translation>Přepnout čáru osy X v počátku mřížky</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1971"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1980"/>
         <source>Toggle the y axis line on the grid origin</source>
         <translation>Přepnout čáru osy Y v počátku mřížky</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1980"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1989"/>
         <source>Toggle the z axis line on the grid origin and the height grids</source>
         <translation>Přepnout čáru osy Z v počátku mřížky a ve výškových mřížkách</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1989"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1998"/>
         <source>Toggle changing the terminal to the folder of each model that is opened</source>
         <translation>Přepnout změnu terminálu do složky každého otevřeného modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1998"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2007"/>
         <source>Change the terminal to the folder of the current model</source>
         <translation>Změnit terminál na složku aktuálního modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2007"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2016"/>
         <source>Open the model folder</source>
         <translation>Otevřít složku modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2016"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2025"/>
         <source>Expand or collapse the solid colors</source>
         <translation>Rozbalit nebo sbalit plné barvy</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2025"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2034"/>
         <source>Expand or collapse the translucent colors</source>
         <translation>Rozbalit nebo sbalit průsvitné barvy</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2034"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2043"/>
         <source>Expand or collapse the special colors</source>
         <translation>Rozbalit nebo sbalit zvláštní barvy</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2043"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2052"/>
         <source>Insert new parts with the current color</source>
         <translation>Vkládat nové díly s aktuální barvou</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2052"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2061"/>
         <source>Insert new parts with the color of the selected part</source>
         <translation>Vkládat nové díly s barvou vybraného dílu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2061"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2070"/>
         <source>Insert new parts with the color of the last inserted part</source>
         <translation>Vkládat nové díly s barvou naposledy vloženého dílu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2070"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2079"/>
         <source>Toggle keeping the parts list in a fixed color instead of following the insert color</source>
         <translation>Přepnout ponechání seznamu dílů v pevné barvě místo sledování barvy vkládání</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2079"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2088"/>
         <source>Toggle opening the most recently used file when StudWorx starts</source>
         <translation>Přepnout otevření naposledy použitého souboru při spuštění StudWorxu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2088"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2097"/>
         <source>Toggle restoring saved model tabs and view layouts when opening a model</source>
         <translation>Přepnout obnovení uložených záložek modelu a rozložení pohledů při otevření modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2097"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2106"/>
         <source>Toggle moving parts along fixed model axes instead of view-relative directions</source>
         <translation>Přepnout pohyb dílů podél pevných os modelu místo směrů vztažených k pohledu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2106"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2115"/>
         <source>Toggle using simpler meshes for distant parts</source>
         <translation>Přepnout použití jednodušších sítí pro vzdálené díly</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2115"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2124"/>
         <source>Toggle highlighting parts added in the current step</source>
         <translation>Přepnout zvýraznění dílů přidaných v aktuálním kroku</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2124"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2133"/>
         <source>Toggle tinting the rest of the model while editing a submodel in place</source>
         <translation>Přepnout odstínění zbytku modelu při úpravě podmodelu na místě</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2133"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2142"/>
         <source>Toggle tinting all but the selected submodel while setting a joint</source>
         <translation>Přepnout odstínění všeho kromě vybraného podmodelu při nastavování kloubu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2142"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2151"/>
         <source>Toggle tinting all but the selected submodel while moving or rotating a joint</source>
         <translation>Přepnout odstínění všeho kromě vybraného podmodelu při pohybu nebo otáčení kloubu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2151"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2160"/>
         <source>Toggle outlining the innermost submodel under the pointer</source>
         <translation>Přepnout obrys nejvnitřnějšího podmodelu pod ukazatelem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2159"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2168"/>
         <source>Toggle marking the connection points near the pointer</source>
         <translation>Přepnout označení bodů spojení poblíž ukazatele</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2168"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2177"/>
         <source>Toggle drawing studs on the base grid</source>
         <translation>Přepnout kreslení výstupků na základní mřížce</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2177"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2186"/>
         <source>Toggle drawing lines on the base grid</source>
         <translation>Přepnout kreslení čar na základní mřížce</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2186"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2195"/>
         <source>Toggle automatically computing part edge colors</source>
         <translation>Přepnout automatický výpočet barev hran dílů</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2195"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2204"/>
         <source>Highlight selected and new parts with outlines</source>
         <translation>Zvýraznit vybrané a nové díly obrysy</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2204"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2213"/>
         <source>Highlight selected and new parts with tinted faces and colored edges</source>
         <translation>Zvýraznit vybrané a nové díly odstíněnými plochami a barevnými hranami</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2213"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2222"/>
         <source>Make the selection outline thicker</source>
         <translation>Zesílit obrys výběru</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2222"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2231"/>
         <source>Make the selection outline thinner</source>
         <translation>Ztenčit obrys výběru</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2231"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2240"/>
         <source>Draw studs with the plain style</source>
         <translation>Kreslit výstupky v prostém stylu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2546"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2555"/>
         <source>Delete what is selected where you work</source>
         <translation>Smazat, co je vybráno tam, kde pracujete</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2573"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2582"/>
         <source>Click a connection of the selected submodel to make it a joint</source>
         <translation>Kliknutím na spojení vybraného podmodelu z něj vytvoříte kloub</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3482"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3491"/>
         <source>View the model at this step</source>
         <translation>Zobrazit model v tomto kroku</translation>
     </message>
@@ -7697,7 +7712,7 @@ Formát souboru není rozpoznán.</translation>
         <translation type="vanished">Přejít do režimu kloubu vybraného podmodelu, nebo ho opustit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2609"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2618"/>
         <source>Leave joint mode and go back to where it started</source>
         <translation>Opustit režim kloubu a vrátit se tam, kde začal</translation>
     </message>
@@ -7706,17 +7721,17 @@ Formát souboru není rozpoznán.</translation>
         <translation type="vanished">Ukončí nejvnitřnější režim, jednu vrstvu na stisk</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3401"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3410"/>
         <source>Open the StudWorx home page in your default web browser</source>
         <translation>Otevřít domovskou stránku StudWorxu ve výchozím webovém prohlížeči</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3410"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3419"/>
         <source>Open the StudWorx bug report form in your default web browser</source>
         <translation>Otevřít formulář pro nahlášení chyby StudWorxu ve výchozím webovém prohlížeči</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2249"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2258"/>
         <source>Draw studs with the outline logo style</source>
         <translation>Kreslit výstupky ve stylu s logem s obrysem</translation>
     </message>
@@ -7736,77 +7751,77 @@ Formát souboru není rozpoznán.</translation>
         <translation>Přepnout panel Klouby</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2258"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2267"/>
         <source>Draw studs with the sharp top logo style</source>
         <translation>Kreslit výstupky ve stylu s logem s ostrým vrchem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2267"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2276"/>
         <source>Draw studs with the rounded top logo style</source>
         <translation>Kreslit výstupky ve stylu s logem se zaobleným vrchem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2276"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2285"/>
         <source>Draw studs with the flattened logo style</source>
         <translation>Kreslit výstupky ve stylu se zploštěným logem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2285"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2294"/>
         <source>Draw studs with the high contrast style</source>
         <translation>Kreslit výstupky ve stylu s vysokým kontrastem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2303"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2312"/>
         <source>Toggle edge lines in model views</source>
         <translation>Přepnout čáry hran v pohledech modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2312"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2321"/>
         <source>Toggle conditional lines in model views</source>
         <translation>Přepnout podmíněné čáry v pohledech modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2321"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2330"/>
         <source>Toggle using the model view rendering settings for the preview</source>
         <translation>Přepnout použití nastavení vykreslování pohledu modelu pro náhled</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2330"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2339"/>
         <source>Display the preview as wireframe</source>
         <translation>Zobrazit náhled jako drátový model</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2339"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2348"/>
         <source>Display the preview without any shading or lights</source>
         <translation>Zobrazit náhled bez stínování a osvětlení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2348"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2357"/>
         <source>Display the preview with the default lights</source>
         <translation>Zobrazit náhled s výchozím osvětlením</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2357"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2366"/>
         <source>Toggle edge lines in the preview</source>
         <translation>Přepnout čáry hran v náhledu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2366"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2375"/>
         <source>Toggle conditional lines in the preview</source>
         <translation>Přepnout podmíněné čáry v náhledu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2492"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2501"/>
         <source>Toggle the view cube in the preview</source>
         <translation>Přepnout krychli pohledu v náhledu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2501"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2510"/>
         <source>Toggle the axis icon in the preview</source>
         <translation>Přepnout ikonu os v náhledu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2375"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2384"/>
         <source>Toggle using the model view rendering settings for the parts list</source>
         <translation>Přepnout použití nastavení vykreslení pohledu modelu pro seznam dílů</translation>
     </message>
@@ -7862,7 +7877,7 @@ Formát souboru není rozpoznán.</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1450"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3446"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3455"/>
         <source>Delete the current step</source>
         <translation>Odstranit aktuální krok</translation>
     </message>
@@ -7951,92 +7966,92 @@ Formát souboru není rozpoznán.</translation>
         <translation>Přepnout režim celé obrazovky</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2240"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2249"/>
         <source>Draw studs with the thin-line logo style</source>
         <translation>Kreslit výstupky se stylem loga tenkou čarou</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2294"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2303"/>
         <source>Draw studs with the high contrast logo style</source>
         <translation>Kreslit výstupky se stylem loga s vysokým kontrastem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2384"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2393"/>
         <source>Display the parts list as wireframe</source>
         <translation>Zobrazit seznam dílů jako drátový model</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2393"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2402"/>
         <source>Display the parts list without any shading or lights</source>
         <translation>Zobrazit seznam dílů bez stínování a osvětlení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2402"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2411"/>
         <source>Display the parts list with the default lights</source>
         <translation>Zobrazit seznam dílů s výchozím osvětlením</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2411"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2420"/>
         <source>Toggle edge lines in the parts list</source>
         <translation>Přepnout zobrazení hran v seznamu dílů</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2420"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2429"/>
         <source>Toggle conditional lines in the parts list</source>
         <translation>Přepnout zobrazení podmíněných čar v seznamu dílů</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2429"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2438"/>
         <source>Toggle using the model view rendering settings in the minifigure builder preview</source>
         <translation>Přepnout použití nastavení vykreslení pohledu modelu v náhledu Tvůrce minifigurek</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2438"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2447"/>
         <source>Display the minifigure builder preview as a wireframe</source>
         <translation>Zobrazit náhled Tvůrce minifigurek jako drátový model</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2447"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2456"/>
         <source>Display the minifigure builder preview with flat shading</source>
         <translation>Zobrazit náhled Tvůrce minifigurek s plochým stínováním</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2456"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2465"/>
         <source>Display the minifigure builder preview with the default lights</source>
         <translation>Zobrazit náhled Tvůrce minifigurek s výchozím osvětlením</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2465"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2474"/>
         <source>Toggle edge lines in the minifigure builder preview</source>
         <translation>Přepnout zobrazení hran v náhledu Tvůrce minifigurek</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2474"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2483"/>
         <source>Toggle conditional lines in the minifigure builder preview</source>
         <translation>Přepnout zobrazení podmíněných čar v náhledu Tvůrce minifigurek</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2483"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2492"/>
         <source>Toggle snapping the parts panel width to whole thumbnail tiles and the categories to the longest name</source>
         <translation>Přepnout přichytávání šířky panelu dílů k celým dlaždicím náhledů a kategorií k nejdelšímu názvu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2510"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2519"/>
         <source>Toggle waiting for every part to load before showing a model</source>
         <translation>Přepnout čekání na načtení všech dílů před zobrazením modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2519"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2528"/>
         <source>Keep showing the last selected part after the selection is cleared</source>
         <translation>Nadále zobrazovat naposledy vybraný díl po zrušení výběru</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2528"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2537"/>
         <source>Add a new part to the model</source>
         <translation>Přidat nový díl do modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2537"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2546"/>
         <source>Toggle placing the first part of an empty model at 0, 0, 0</source>
         <translation>Přepnout umístění prvního dílu prázdného modelu na 0, 0, 0</translation>
     </message>
@@ -8045,93 +8060,93 @@ Formát souboru není rozpoznán.</translation>
         <translation type="vanished">Odstranit vybrané objekty</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2555"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2564"/>
         <source>Create a copy of the selected parts</source>
         <translation>Vytvořit kopii vybraných dílů</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2564"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2573"/>
         <source>Change the color of the selected parts</source>
         <translation>Změnit barvu vybraných dílů</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2582"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2591"/>
         <source>Move the selected submodel with the gizmo on its picked joint</source>
         <translation>Přesunout vybraný podmodel pomocí manipulátoru na vybraném kloubu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2591"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2600"/>
         <source>Rotate the selected submodel around its picked joint instead of the pivot point</source>
         <translation>Otáčet vybraný podmodel kolem vybraného kloubu místo kolem bodu otáčení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2600"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2609"/>
         <source>Go into joint mode on the selected submodel</source>
         <translation>Přejde do režimu kloubu vybraného podmodelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2618"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2627"/>
         <source>Reset the pivot point of the selected parts to their origin</source>
         <translatorcomment>TODO - původ, zdroj, počátek, vznik</translatorcomment>
         <translation>Vynulovat bod otáčení vybraných dílů na jejich počátek</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2627"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2636"/>
         <source>Remove all keyframes from the selected parts</source>
         <translation>Odstranit všechny klíčové snímky vybraných dílů</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2654"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2663"/>
         <source>Turn the selected control point along the path, or release it to rotate it freely</source>
         <translation>Otáčet vybraný kontrolní bod podél dráhy, nebo ho uvolnit pro volné otáčení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2663"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2672"/>
         <source>Turn the selected control point along the path once and keep it released</source>
         <translation>Jednou otočit vybraný kontrolní bod podél dráhy a ponechat ho uvolněný</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2672"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2681"/>
         <source>Turn the selected control point along the X axis</source>
         <translation>Otáčet vybraný kontrolní bod podél osy X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2681"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2690"/>
         <source>Turn the selected control point along the Y axis</source>
         <translation>Otáčet vybraný kontrolní bod podél osy Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2690"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2699"/>
         <source>Turn the selected control point along the Z axis</source>
         <translation>Otáčet vybraný kontrolní bod podél osy Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2834"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2843"/>
         <source>Show the Minifigure Builder panel to build a minifigure and add it to the model</source>
         <translation>Zobrazit panel Tvůrce minifigurek pro sestavení minifigurky a její přidání do modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2852"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2861"/>
         <source>Open the submodel referenced by the selected part in a new tab</source>
         <translation>Otevřít podmodel, na který odkazuje vybraný díl, v nové záložce</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2861"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2870"/>
         <source>Move the selected parts to a new submodel and replace them with a reference to it</source>
         <translation>Přesunout vybrané díly do nového podmodelu a nahradit je odkazem na něj</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2870"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2879"/>
         <source>Insert the contents of the selected submodels into the current model</source>
         <translation>Vložit obsah vybraných podmodelů do aktuálního modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2879"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2888"/>
         <source>Replace every submodel, and the submodels inside it, with its parts in one step</source>
         <translation>Nahradit každý podmodel a podmodely v něm jeho díly na jeden krok</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2897"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2906"/>
         <source>Exit the innermost mode, one layer per press</source>
         <translation>Ukončí nejvnitřnější režim, jednu vrstvu na stisk</translation>
     </message>
@@ -8140,63 +8155,63 @@ Formát souboru není rozpoznán.</translation>
         <translation type="vanished">Odstraňte všechny klíčové snímky z vybraných dílků</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2636"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2645"/>
         <source>Insert a new control point</source>
         <translation>Vložit nový kontrolní bod</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2645"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2654"/>
         <source>Remove the selected control point</source>
         <translation>Odstranit vybraný kontrolní bod</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2699"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2708"/>
         <source>Focus the next connection of the currently selected track</source>
         <translation>Zaostřit další spojení aktuálně vybrané kolejnice</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2708"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2717"/>
         <source>Focus the previous connection of the currently selected track</source>
         <translation>Zaostřit předchozí spojení aktuálně vybrané kolejnice</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2717"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2726"/>
         <source>Rotate the focused train track around its last connection</source>
         <translation>Otočit zaostřenou vlakovou kolejnici kolem jejího posledního spojení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2726"/>
         <location filename="../../source/application/sw_commands.cpp" line="2735"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2744"/>
         <source>Move selected objects along the X axis</source>
         <translation>Přesunout vybrané objekty podél osy X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2744"/>
         <location filename="../../source/application/sw_commands.cpp" line="2753"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2762"/>
         <source>Move selected objects along the Y axis</source>
         <translation>Přesunout vybrané objekty podél osy Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2762"/>
         <location filename="../../source/application/sw_commands.cpp" line="2771"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2780"/>
         <source>Move selected objects along the Z axis</source>
         <translation>Přesunout vybrané objekty podél osy Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2780"/>
         <location filename="../../source/application/sw_commands.cpp" line="2789"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2798"/>
         <source>Rotate selected objects around the X axis</source>
         <translation>Otočit vybrané objekty kolem osy X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2798"/>
         <location filename="../../source/application/sw_commands.cpp" line="2807"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2816"/>
         <source>Rotate selected objects around the Y axis</source>
         <translation>Otočit vybrané objekty kolem osy Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2816"/>
         <location filename="../../source/application/sw_commands.cpp" line="2825"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2834"/>
         <source>Rotate selected objects around the Z axis</source>
         <translation>Otočit vybrané objekty kolem osy Z</translation>
     </message>
@@ -8217,7 +8232,7 @@ Formát souboru není rozpoznán.</translation>
         <translation type="vanished">Přidat k modelu nový minifig</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2843"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2852"/>
         <source>Make copies of the selected parts</source>
         <translation>Vytvořit kopie vybraných dílů</translation>
     </message>
@@ -8235,7 +8250,7 @@ Formát souboru není rozpoznán.</translation>
         <translation type="vanished">Vložte obsah vybraných referencí modelu do aktuálního modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2888"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2897"/>
         <source>Edit the currently selected submodel in-place</source>
         <translatorcomment>TODO - in-place -&gt; vložený, na místě, v místě</translatorcomment>
         <translation>Upravit aktuálně vybraný podmodel na místě</translation>
@@ -8245,77 +8260,76 @@ Formát souboru není rozpoznán.</translation>
         <translation type="vanished">Ukončit úpravu podmodelu na místě</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2906"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2915"/>
         <source>Group selected parts together</source>
         <translation>Seskupit vybrané díly dohromady</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2915"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2924"/>
         <source>Ungroup selected group</source>
         <translation>Zrušit seskupení vybrané skupiny</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2924"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2933"/>
         <source>Add focused part to selected group</source>
         <translation>Přidat aktivní díl do vybrané skupiny</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2933"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2942"/>
         <source>Remove focused part from group</source>
         <translation>Odebrat aktivní díl ze skupiny</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2942"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2951"/>
         <source>Edit groups</source>
         <translation>Upravit skupiny</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2951"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2960"/>
         <source>Hide selected objects</source>
         <translation>Skrýt vybrané objekty</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2960"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2969"/>
         <source>Hide objects that are not selected</source>
         <translation>Skrýt objekty, které nejsou vybrány</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2969"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2978"/>
         <source>Show hidden objects that are selected</source>
         <translation>Zobrazit skryté vybrané objekty</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2978"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2987"/>
         <source>Show all hidden objects</source>
         <translation>Zobrazit všechny skryté objekty</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2987"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2996"/>
         <source>Show selected parts one step earlier</source>
         <translation>Zobrazit vybrané díly o krok dříve</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2996"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3005"/>
         <source>Show selected parts one step later</source>
         <translation>Zobrazit vybrané díly o krok později</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3005"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3014"/>
         <source>Create a new submodel</source>
         <translation>Vytvořit nový podmodel</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3014"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3023"/>
         <source>Display the properties of the current submodel</source>
         <translation>Zobrazit vlastnosti aktuálního podmodelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3023"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3032"/>
         <source>Show a list of all submodels</source>
         <translation>Zobrazit seznam všech podmodelů</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3032"/>
         <location filename="../../source/application/sw_commands.cpp" line="3041"/>
         <location filename="../../source/application/sw_commands.cpp" line="3050"/>
         <location filename="../../source/application/sw_commands.cpp" line="3059"/>
@@ -8355,11 +8369,12 @@ Formát souboru není rozpoznán.</translation>
         <location filename="../../source/application/sw_commands.cpp" line="3365"/>
         <location filename="../../source/application/sw_commands.cpp" line="3374"/>
         <location filename="../../source/application/sw_commands.cpp" line="3383"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3392"/>
         <source>Switch to this submodel</source>
         <translation>Přepnout na tento podmodel</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3392"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3401"/>
         <source>Click a control to read its contextual help</source>
         <translation>Kliknutím na ovládací prvek si můžete přečíst jeho kontextovou nápovědu</translation>
     </message>
@@ -8376,22 +8391,22 @@ Formát souboru není rozpoznán.</translation>
         <translation type="vanished">Zkontrolovat, zda nebyla vydána novější verze StudWorxu nebo knihovny součástí</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3419"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3428"/>
         <source>Display program version number and system information</source>
         <translation>Zobrazit verzi programu a systémové informace</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3455"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3464"/>
         <source>Move the selected parts into this step</source>
         <translation>Přesunout vybrané díly do tohoto kroku</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3464"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3473"/>
         <source>Move the selected parts into a new step before this</source>
         <translation>Přesunout vybrané díly do nového kroku před tímto</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3473"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3482"/>
         <source>Move the selected parts into a new step after this</source>
         <translation>Přesunout vybrané díly do nového kroku za tímto</translation>
     </message>
@@ -8917,17 +8932,22 @@ Formát souboru není rozpoznán.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje panel Klíčové snímky, graf animačních klíčů objektů po krocích.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1819"/>
+        <source>&lt;p&gt;&lt;b&gt;Add Step View&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the model with the view cube, then save that view in the current step, written as an MLCad ROTSTEP line.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2610"/>
         <source>&lt;p&gt;&lt;b&gt;Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel, or, with none picked, an overview of every joint in the model: click a ring or an outlined part to open its joint. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or the overview. With Select Joints by Submodel on, clicking anywhere on a jointed submodel in the overview opens its nearest joint. Ctrl+Shift+W or Esc leaves it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Režim kloubu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pracuje s kloubem vybraného podmodelu, stejně jako kliknutí na něj v panelu Klouby. Je-li vybrán díl uvnitř podmodelu s kloubem, přejde nahoru k tomuto podmodelu. Není-li nic vybráno, otevře kloub zvolený v panelu Klouby, nebo, není-li žádný zvolen, přehled všech kloubů modelu: kliknutím na kroužek nebo obrysový díl otevřete jeho kloub. Předvolba Začátek režimu kloubu určuje, který kloub se otevře: první, naposledy použitý, nebo přehled. Se zapnutou volbou Vybírat klouby podle podmodelu otevře kliknutí kamkoli na podmodel s kloubem v přehledu jeho nejbližší kloub. Ctrl+Shift+W nebo Esc jej opustí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3429"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3438"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Step Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step before this step in the Steps panel.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vložit krok před&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá prázdný krok před tento krok v panelu Kroky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3438"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3447"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Step After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step after this step in the Steps panel.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vložit krok za&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá prázdný krok za tento krok v panelu Kroky.&lt;/p&gt;</translation>
     </message>
@@ -8940,7 +8960,7 @@ Formát souboru není rozpoznán.</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Režim kloubu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pracuje s kloubem vybraného podmodelu, stejně jako kliknutí na něj v panelu Klouby. Je-li vybrán díl uvnitř podmodelu s kloubem, přejde nahoru k tomuto podmodelu. Není-li nic vybráno, otevře kloub zvolený v panelu Klouby. Předvolba Začátek režimu kloubu určuje, který kloub se otevře: první, naposledy použitý, nebo přehled kroužků k výběru. Ctrl+Shift+W nebo Esc jej opustí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2898"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2907"/>
         <source>&lt;p&gt;&lt;b&gt;Exit Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Exits one mode per press, innermost first: a face or cutaway pick, joint mode, the cutaway, then in-place submodel editing one level up. The selection stays as it is.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Ukončit režim&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Každým stiskem ukončí jeden režim, nejvnitřnější první: výběr plochy nebo řezu, režim kloubu, řez, pak úpravy podmodelu na místě o úroveň výš. Výběr zůstane, jak je.&lt;/p&gt;</translation>
     </message>
@@ -9142,32 +9162,32 @@ Formát souboru není rozpoznán.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Pohled kroku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Nastaví otočení pohledu aktuálního kroku, uložené jako MLCad ROTSTEP.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1819"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1828"/>
         <source>&lt;p&gt;&lt;b&gt;Remove Step View&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Clear the view rotation of the current step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Odebrat pohled kroku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zruší otočení pohledu aktuálního kroku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1828"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1837"/>
         <source>&lt;p&gt;&lt;b&gt;Follow Step Views&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the view to each step&apos;s view rotation when the step changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Sledovat pohledy kroků&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Při změně kroku otočí pohled podle otočení pohledu každého kroku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1873"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1882"/>
         <source>&lt;p&gt;&lt;b&gt;Grow&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Make the cutaway larger.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zvětšit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zvětší řez.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1882"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1891"/>
         <source>&lt;p&gt;&lt;b&gt;Shrink&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Make the cutaway smaller.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zmenšit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zmenší řez.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1891"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1900"/>
         <source>&lt;p&gt;&lt;b&gt;Push In&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the cutaway one plate deeper into the model.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zatlačit dovnitř&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Posune řez o jednu desku hlouběji do modelu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1900"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1909"/>
         <source>&lt;p&gt;&lt;b&gt;Pull Out&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the cutaway one plate back out of the model.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vytáhnout ven&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Posune řez o jednu desku zpět z modelu.&lt;/p&gt;</translation>
     </message>
@@ -9176,17 +9196,17 @@ Formát souboru není rozpoznán.</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Barva stínu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zvolte světlý odstín vykreslený na řezných plochách.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1918"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1927"/>
         <source>&lt;p&gt;&lt;b&gt;Remove&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the cutaway and show the whole model again. Esc with nothing selected does the same.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Odebrat&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odebere řez a znovu zobrazí celý model. Totéž dělá Esc bez výběru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1963"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1972"/>
         <source>&lt;p&gt;&lt;b&gt;X Axis Line&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the X axis line through the grid origin.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Čára osy X&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje čáru osy X procházející počátkem mřížky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1972"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1981"/>
         <source>&lt;p&gt;&lt;b&gt;Y Axis Line&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Y axis line through the grid origin.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Čára osy Y&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje čáru osy Y procházející počátkem mřížky.&lt;/p&gt;</translation>
     </message>
@@ -9195,62 +9215,62 @@ Formát souboru není rozpoznán.</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Čára osy Z&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje čáru osy Z procházející počátkem mřížky a výškovými mřížkami.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1990"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1999"/>
         <source>&lt;p&gt;&lt;b&gt;Follow Model Folder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the terminal to the folder of each model you open.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Sledovat složku modelu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přepne terminál do složky každého otevřeného modelu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1999"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2008"/>
         <source>&lt;p&gt;&lt;b&gt;Go to Model Folder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the terminal to the folder of the current model.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přejít do složky modelu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přepne terminál do složky aktuálního modelu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2017"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2026"/>
         <source>&lt;p&gt;&lt;b&gt;Solid Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Expand or collapse the solid colors in the Colors panel.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Plné barvy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Rozbalí nebo sbalí plné barvy v panelu Barvy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2026"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2035"/>
         <source>&lt;p&gt;&lt;b&gt;Translucent Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Expand or collapse the translucent colors in the Colors panel.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Průsvitné barvy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Rozbalí nebo sbalí průsvitné barvy v panelu Barvy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2035"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2044"/>
         <source>&lt;p&gt;&lt;b&gt;Special Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Expand or collapse the special colors in the Colors panel.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zvláštní barvy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Rozbalí nebo sbalí zvláštní barvy v panelu Barvy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2044"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2053"/>
         <source>&lt;p&gt;&lt;b&gt;Current Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Insert new parts in the color chosen in the Colors panel.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Aktuální barva&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vkládá nové díly v barvě zvolené v panelu Barvy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2053"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2062"/>
         <source>&lt;p&gt;&lt;b&gt;Selected Part Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Insert new parts in the color of the selected part.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Barva vybraného dílu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vkládá nové díly v barvě vybraného dílu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2062"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2071"/>
         <source>&lt;p&gt;&lt;b&gt;Last Inserted Part Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Insert new parts in the color of the last part inserted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Barva naposledy vloženého dílu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vkládá nové díly v barvě naposledy vloženého dílu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2071"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2080"/>
         <source>&lt;p&gt;&lt;b&gt;Lock Parts Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep the Parts panel thumbnails in one color instead of following the insert color.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zamknout barvu dílů&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ponechá náhledy v panelu Části v jedné barvě místo sledování barvy vkládání.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2080"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2089"/>
         <source>&lt;p&gt;&lt;b&gt;Open Most Recent File on Startup&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reopen the last model you worked on each time StudWorx starts.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Při spuštění otevřít poslední soubor&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Při každém spuštění StudWorx znovu otevře model, na kterém jste naposledy pracovali.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2089"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2098"/>
         <source>&lt;p&gt;&lt;b&gt;Restore Tab Layout&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Bring back the saved model tabs and view splits of a model when it opens.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Obnovit rozvržení záložek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Při otevření modelu obnoví uložené záložky modelu a rozdělení pohledů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2098"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2107"/>
         <source>&lt;p&gt;&lt;b&gt;Fixed Direction Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep the arrow keys on the model axes instead of following the direction of the view.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Pevné směry šipek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ponechá šipky na osách modelu místo sledování směru pohledu.&lt;/p&gt;</translation>
     </message>
@@ -9259,22 +9279,22 @@ Formát souboru není rozpoznán.</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;LOD sítě&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykresluje vzdálené díly jednodušší sítí (úroveň detailu) od vzdálenosti nastavené v Předvolbách, aby velké modely zůstaly plynulé.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2134"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2143"/>
         <source>&lt;p&gt;&lt;b&gt;Fade on Joint Set&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Tint all but the selected submodel with the chosen color while setting a joint or in joint mode.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zeslabit při nastavení kloubu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Při nastavování kloubu nebo v režimu kloubů obarví vše kromě vybraného podmodelu zvolenou barvou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2152"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2161"/>
         <source>&lt;p&gt;&lt;b&gt;Submodel Hover Outline&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Outline the innermost submodel under the pointer with the hover outline color, or the submodel a joint would go on while setting a joint.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Obrys podmodelu při najetí&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Obtáhne nejvnitřnější podmodel pod ukazatelem barvou obrysu při najetí, nebo při nastavování kloubu podmodel, na který by kloub přišel.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2169"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2178"/>
         <source>&lt;p&gt;&lt;b&gt;Grid Studs&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the studs of the base grid.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Výstupky mřížky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje výstupky základní mřížky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2178"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2187"/>
         <source>&lt;p&gt;&lt;b&gt;Grid Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the lines of the base grid.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Čáry mřížky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje čáry základní mřížky.&lt;/p&gt;</translation>
     </message>
@@ -9283,32 +9303,31 @@ Formát souboru není rozpoznán.</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Čáry počátku mřížky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje čáry počátku základní mřížky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2187"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2196"/>
         <source>&lt;p&gt;&lt;b&gt;Automate Edge Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Compute edge colors from each part color, with the edge contrast, saturation and light to dark settings in Preferences.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Automatická barva hran&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vypočítá barvy hran z barvy každého dílu s nastavením kontrastu hran, sytosti a světlé až tmavé v Předvolbách.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2196"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2205"/>
         <source>&lt;p&gt;&lt;b&gt;Outline Highlight&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mark selected and new parts with an outline.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zvýraznění obrysem&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Označí vybrané a nové díly obrysem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2205"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2214"/>
         <source>&lt;p&gt;&lt;b&gt;Tint and Edges Highlight&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mark selected and new parts with tinted faces and colored edges.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zvýraznění odstínem a hranami&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Označí vybrané a nové díly obarvenými plochami a barevnými hranami.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2214"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2223"/>
         <source>&lt;p&gt;&lt;b&gt;Increase Outline Width&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Make the selection outline thicker.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zvětšit šířku obrysu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zesílí obrys výběru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2223"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2232"/>
         <source>&lt;p&gt;&lt;b&gt;Decrease Outline Width&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Make the selection outline thinner.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zmenšit šířku obrysu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ztenčí obrys výběru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2232"/>
         <location filename="../../source/application/sw_commands.cpp" line="2241"/>
         <location filename="../../source/application/sw_commands.cpp" line="2250"/>
         <location filename="../../source/application/sw_commands.cpp" line="2259"/>
@@ -9316,126 +9335,127 @@ Formát souboru není rozpoznán.</translation>
         <location filename="../../source/application/sw_commands.cpp" line="2277"/>
         <location filename="../../source/application/sw_commands.cpp" line="2286"/>
         <location filename="../../source/application/sw_commands.cpp" line="2295"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2304"/>
         <source>&lt;p&gt;&lt;b&gt;Stud Style&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw studs in this style: plain, with one of the logo styles, or in high contrast.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Styl výstupků&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslí výstupky v tomto stylu: prosté, s jedním ze stylů loga nebo s vysokým kontrastem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2304"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2313"/>
         <source>&lt;p&gt;&lt;b&gt;Edge Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the edge lines of parts in the model view.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Čáry hran&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje čáry hran dílů v pohledu na model.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2313"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2322"/>
         <source>&lt;p&gt;&lt;b&gt;Conditional Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the conditional lines that outline curved surfaces in the model view.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Podmíněné čáry&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje podmíněné čáry, které obrysují zakřivené povrchy v pohledu na model.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2322"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2331"/>
         <source>&lt;p&gt;&lt;b&gt;Preview Uses Model View Settings&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the preview with the rendering settings of the model view instead of its own.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Náhled používá nastavení pohledu na model&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslí náhled s nastavením vykreslování pohledu na model místo vlastního.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2331"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2340"/>
         <source>&lt;p&gt;&lt;b&gt;Preview Wireframe&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the preview as lines only, without faces.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Drátový model náhledu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslí náhled jen čarami, bez ploch.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2340"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2349"/>
         <source>&lt;p&gt;&lt;b&gt;Preview Flat Shading&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the preview in plain colors, without shading or lights.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Ploché stínování náhledu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslí náhled prostými barvami, bez stínování a světel.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2349"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2358"/>
         <source>&lt;p&gt;&lt;b&gt;Preview Default Lights&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Light the preview with the built-in lights.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Výchozí osvětlení náhledu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Osvětlí náhled vestavěným osvětlením.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2358"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2367"/>
         <source>&lt;p&gt;&lt;b&gt;Preview Edge Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide edge lines in the preview.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Čáry hran náhledu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje čáry hran v náhledu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2367"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2376"/>
         <source>&lt;p&gt;&lt;b&gt;Preview Conditional Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide conditional lines in the preview.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Podmíněné čáry náhledu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje podmíněné čáry v náhledu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2376"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2385"/>
         <source>&lt;p&gt;&lt;b&gt;Parts Use Model View Settings&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the parts list with the rendering settings of the model view instead of its own.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Díly používají nastavení pohledu na model&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslí seznam dílů s nastavením vykreslování pohledu na model místo vlastního.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2385"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2394"/>
         <source>&lt;p&gt;&lt;b&gt;Parts Wireframe&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the parts list as lines only, without faces.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Drátový model dílů&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslí seznam dílů jen čarami, bez ploch.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2394"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2403"/>
         <source>&lt;p&gt;&lt;b&gt;Parts Flat Shading&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the parts list in plain colors, without shading or lights.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Ploché stínování dílů&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslí seznam dílů prostými barvami, bez stínování a světel.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2403"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2412"/>
         <source>&lt;p&gt;&lt;b&gt;Parts Default Lights&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Light the parts list with the built-in lights.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Výchozí osvětlení dílů&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Osvětlí seznam dílů vestavěným osvětlením.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2412"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2421"/>
         <source>&lt;p&gt;&lt;b&gt;Parts Edge Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide edge lines in the parts list.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Čáry hran dílů&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje čáry hran v seznamu dílů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2421"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2430"/>
         <source>&lt;p&gt;&lt;b&gt;Parts Conditional Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide conditional lines in the parts list.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Podmíněné čáry dílů&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje podmíněné čáry v seznamu dílů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2430"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2439"/>
         <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Uses Model View Settings&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the Minifigure Builder preview with the rendering settings of the model view instead of its own.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Tvůrce minifigurek používá nastavení pohledu na model&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslí náhled Tvůrce minifigurek s nastavením vykreslování pohledu na model místo vlastního.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2439"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2448"/>
         <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Wireframe&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the Minifigure Builder preview as lines only, without faces.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Drátový model Tvůrce minifigurek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslí náhled Tvůrce minifigurek jen čarami, bez ploch.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2448"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2457"/>
         <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Flat Shading&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the Minifigure Builder preview in plain colors, without shading or lights.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Ploché stínování Tvůrce minifigurek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslí náhled Tvůrce minifigurek prostými barvami, bez stínování a světel.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2457"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2466"/>
         <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Default Lights&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Light the Minifigure Builder preview with the built-in lights.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Výchozí osvětlení Tvůrce minifigurek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Osvětlí náhled Tvůrce minifigurek vestavěným osvětlením.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2466"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2475"/>
         <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Edge Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide edge lines in the Minifigure Builder preview.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Čáry hran Tvůrce minifigurek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje čáry hran v náhledu Tvůrce minifigurek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2475"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2484"/>
         <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Conditional Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide conditional lines in the Minifigure Builder preview.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Podmíněné čáry Tvůrce minifigurek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje podmíněné čáry v náhledu Tvůrce minifigurek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2484"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2493"/>
         <source>&lt;p&gt;&lt;b&gt;Snap Panel Width to Tiles&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Snap the Parts panel width to whole thumbnail tiles, and the categories to the longest name.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přichytit šířku panelu k dlaždicím&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přichytí šířku panelu Části k celým dlaždicím náhledů a kategorie k nejdelšímu názvu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2493"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2502"/>
         <source>&lt;p&gt;&lt;b&gt;Preview View Cube&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the view cube in the preview.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Krychle pohledu v náhledu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje krychli pohledu v náhledu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2502"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2511"/>
         <source>&lt;p&gt;&lt;b&gt;Preview Axis Icon&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the axis icon in the preview.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Ikona os v náhledu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje ikonu os v náhledu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2511"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2520"/>
         <source>&lt;p&gt;&lt;b&gt;Load All Parts Before Showing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wait until every part of a model has loaded before showing it, instead of showing parts as they load.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Načíst všechny díly před zobrazením&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Počká, až se načtou všechny díly modelu, než jej zobrazí, místo zobrazování dílů průběžně při načítání.&lt;/p&gt;</translation>
     </message>
@@ -9444,17 +9464,17 @@ Formát souboru není rozpoznán.</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Čtvercové zobrazení&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ponechá náhled čtvercový, v poměru 1:1.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2520"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2529"/>
         <source>&lt;p&gt;&lt;b&gt;Keep Last Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep showing the last selected part in the preview after the selection is cleared.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Ponechat poslední výběr&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Po zrušení výběru dál zobrazuje v náhledu naposledy vybraný díl.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2529"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2538"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Part&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add the part chosen in the Parts panel to the model, next to the part that has focus or the last part added.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vložit díl&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá díl zvolený v panelu Části do modelu, vedle dílu, který má fokus, nebo naposledy přidaného dílu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2538"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2547"/>
         <source>&lt;p&gt;&lt;b&gt;Insert First Part at Origin&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Place the first part of an empty model at 0, 0, 0.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vložit první díl do počátku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Umístí první díl prázdného modelu na 0, 0, 0.&lt;/p&gt;</translation>
     </message>
@@ -9463,17 +9483,17 @@ Formát souboru není rozpoznán.</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Odstranit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odebere vybrané objekty z modelu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2556"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2565"/>
         <source>&lt;p&gt;&lt;b&gt;Duplicate&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add a copy of each selected part in the same place, with copies of their groups, and select the copies.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Duplikovat&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá kopii každého vybraného dílu na stejné místo, s kopiemi jejich skupin, a vybere kopie.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2565"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2574"/>
         <source>&lt;p&gt;&lt;b&gt;Paint Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Change the selected parts to the color chosen in the Colors panel.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Obarvit vybrané&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Změní vybrané díly na barvu zvolenou v panelu Barvy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2574"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2583"/>
         <source>&lt;p&gt;&lt;b&gt;Set Joint&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select one submodel, choose Part &amp;gt; Joint &amp;gt; Set Joint, also in the right-click menu of the model view, then click one of its connections with the Set Joint pointer, which outlines the part under it in red. The click sets the joint and goes back to the Select tool in joint mode on the new joint. Set Joint again at another connection adds a joint, and Set Joint at a joint already there resets it. A round connection makes a hinge on its axis and a sphere makes a ball. A part without shadow data gets a hinge on its origin. The joint shows in the Joints panel and setting it can be undone.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Nastavit kloub&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte jeden podmodel, zvolte Díl &amp;gt; Kloub &amp;gt; Nastavit kloub, také v místní nabídce pohledu na model, a pak ukazatelem Nastavit kloub klikněte na jedno z jeho spojení; díl pod ukazatelem se obtáhne červeně. Kliknutí nastaví kloub a v režimu kloubů se vrátí k nástroji Výběr na novém kloubu. Další Nastavit kloub na jiném spojení přidá kloub a Nastavit kloub na existujícím kloubu jej obnoví. Kruhové spojení vytvoří závěs na své ose a koule vytvoří kulový kloub. Díl bez stínových dat dostane závěs na svém počátku. Kloub se zobrazí v panelu Klouby a jeho nastavení lze vrátit zpět.&lt;/p&gt;</translation>
     </message>
@@ -9482,12 +9502,12 @@ Formát souboru není rozpoznán.</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Režim kloubu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pracuje s kloubem vybraného podmodelu, stejně jako kliknutí na něj v panelu Klouby. Je-li vybrán díl uvnitř podmodelu s kloubem, přejde nahoru k tomuto podmodelu. Není-li nic vybráno, otevře kloub zvolený v panelu Klouby. Dalším stiskem režim kloubu opustíte.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2610"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2619"/>
         <source>&lt;p&gt;&lt;b&gt;End Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Leaves joint mode and goes back to the model you were in before, the same as the way back on the bar over the view.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Ukončit režim kloubu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Opustí režim kloubu a vrátí se k modelu, ve kterém jste byli předtím, stejně jako cesta zpět na liště nad pohledem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2889"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2898"/>
         <source>&lt;p&gt;&lt;b&gt;Edit Selected Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit the selected submodel in place, inside its parent. A path bar shows where you are.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Upravit vybraný podmodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Upraví vybraný podmodel přímo na místě, uvnitř jeho nadřazeného modelu. Lišta cesty ukazuje, kde se nacházíte.&lt;/p&gt;</translation>
     </message>
@@ -9496,77 +9516,76 @@ Formát souboru není rozpoznán.</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Ukončit úpravu podmodelu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Opustí úpravy na místě a vrátí se k nadřazenému modelu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2907"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2916"/>
         <source>&lt;p&gt;&lt;b&gt;Group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Group the selected parts under a unique name, so they select and move as one.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Seskupit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seskupí vybrané díly pod jedinečným názvem, takže se vybírají a posouvají jako jeden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2916"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2925"/>
         <source>&lt;p&gt;&lt;b&gt;Ungroup&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected group, keeping its parts.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zrušit seskupení&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odebere vybranou skupinu, díly zachová.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2925"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2934"/>
         <source>&lt;p&gt;&lt;b&gt;Add to Group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add the part that has focus to the selected group.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přidat do skupiny&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá díl, který má fokus, do vybrané skupiny.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2934"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2943"/>
         <source>&lt;p&gt;&lt;b&gt;Remove from Group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Take the part that has focus out of its group.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Odebrat ze skupiny&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyjme díl, který má fokus, z jeho skupiny.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2943"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2952"/>
         <source>&lt;p&gt;&lt;b&gt;Edit Groups&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create, rename and nest groups and drag parts between them in a tree of parts and groups.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Upravit skupiny&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vytváří, přejmenovává a vnořuje skupiny a přetahuje díly mezi nimi ve stromu dílů a skupin.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2952"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2961"/>
         <source>&lt;p&gt;&lt;b&gt;Hide Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Hide the selected objects.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Skrýt vybrané&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Skryje vybrané objekty.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2961"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2970"/>
         <source>&lt;p&gt;&lt;b&gt;Hide Unselected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Hide every object that is not selected.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Skrýt nevybrané&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Skryje každý objekt, který není vybraný.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2970"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2979"/>
         <source>&lt;p&gt;&lt;b&gt;Unhide Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the selected hidden objects again.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zobrazit vybrané&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Znovu zobrazí vybrané skryté objekty.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2979"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2988"/>
         <source>&lt;p&gt;&lt;b&gt;Unhide All&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show every hidden object again.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zobrazit vše&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Znovu zobrazí každý skrytý objekt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2988"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2997"/>
         <source>&lt;p&gt;&lt;b&gt;Show Earlier&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts one step earlier.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zobrazit dříve&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Posune vybrané díly o jeden krok dříve.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2997"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3006"/>
         <source>&lt;p&gt;&lt;b&gt;Show Later&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts one step later.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zobrazit později&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Posune vybrané díly o jeden krok později.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3006"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3015"/>
         <source>&lt;p&gt;&lt;b&gt;New Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add a new, empty submodel to the file and switch to it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Nový podmodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá do souboru nový prázdný podmodel a přepne na něj.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3015"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3024"/>
         <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit the name, author, description and comments of the current submodel, and see its parts, counts, size and weight, with BrickLink and CSV export.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vlastnosti&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Upravuje název, autora, popis a komentáře aktuálního podmodelu a ukazuje jeho díly, počty, velikost a hmotnost, s exportem do BrickLink a CSV.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3024"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3033"/>
         <source>&lt;p&gt;&lt;b&gt;Submodels&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create, rename, duplicate, delete, reorder and export the submodels of the file, and set the active one.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Podmodely&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vytváří, přejmenovává, duplikuje, odstraňuje, řadí a exportuje podmodely souboru a nastavuje aktivní.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3033"/>
         <location filename="../../source/application/sw_commands.cpp" line="3042"/>
         <location filename="../../source/application/sw_commands.cpp" line="3051"/>
         <location filename="../../source/application/sw_commands.cpp" line="3060"/>
@@ -9606,26 +9625,27 @@ Formát souboru není rozpoznán.</translation>
         <location filename="../../source/application/sw_commands.cpp" line="3366"/>
         <location filename="../../source/application/sw_commands.cpp" line="3375"/>
         <location filename="../../source/application/sw_commands.cpp" line="3384"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3393"/>
         <source>&lt;p&gt;&lt;b&gt;Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Switch to this submodel. The Models menu lists up to forty submodels of the file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Podmodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přepne na tento podmodel. Nabídka Modely uvádí až čtyřicet podmodelů souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3393"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3402"/>
         <source>&lt;p&gt;&lt;b&gt;What&apos;s This?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Click any control after this to read what it does. F1 explains the focused control.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Co je to?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Klikněte na libovolný ovládací prvek a přečtěte si, co dělá. F1 vysvětlí ovládací prvek s fokusem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3402"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3411"/>
         <source>&lt;p&gt;&lt;b&gt;Home Page&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the StudWorx repository on GitHub in your web browser.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Domovská stránka&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Otevře repozitář StudWorx na GitHubu ve webovém prohlížeči.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3411"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3420"/>
         <source>&lt;p&gt;&lt;b&gt;Report a Bug&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the StudWorx issues on GitHub in your web browser to report a problem.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Nahlásit chybu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Otevře problémy StudWorx na GitHubu ve webovém prohlížeči, abyste mohli nahlásit potíž.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3420"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3429"/>
         <source>&lt;p&gt;&lt;b&gt;About&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the StudWorx version, a link to its home page, and system information to copy into a bug report.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;O programu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí verzi StudWorx, odkaz na domovskou stránku a informace o systému ke zkopírování do hlášení chyby.&lt;/p&gt;</translation>
     </message>
@@ -9638,27 +9658,27 @@ Formát souboru není rozpoznán.</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Vložit krok za&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá prázdný krok za tento krok na časové ose.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3447"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3456"/>
         <source>&lt;p&gt;&lt;b&gt;Delete Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove this step. Its parts join the step before it and later steps move one step earlier.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Odstranit krok&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odebere tento krok. Jeho díly se připojí k předchozímu kroku a pozdější kroky se posunou o jeden krok dříve.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3456"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3465"/>
         <source>&lt;p&gt;&lt;b&gt;Move Selection Here&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into this step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přesunout výběr sem&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přesune vybrané díly do tohoto kroku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3465"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3474"/>
         <source>&lt;p&gt;&lt;b&gt;Move Selection Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into a new step before this one.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přesunout výběr před&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přesune vybrané díly do nového kroku před tímto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3474"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3483"/>
         <source>&lt;p&gt;&lt;b&gt;Move Selection After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into a new step after this one.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přesunout výběr za&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přesune vybrané díly do nového kroku za tímto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3483"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3492"/>
         <source>&lt;p&gt;&lt;b&gt;Set Current Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the model at this step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Nastavit aktuální krok&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí model v tomto kroku.&lt;/p&gt;</translation>
     </message>
@@ -9765,47 +9785,47 @@ Formát souboru není rozpoznán.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Zeslabit předchozí kroky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Obarví díly z předchozích kroků stavby zvolenou barvou zeslabení, aby díly aktuálního kroku vynikly.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1909"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1918"/>
         <source>&lt;p&gt;&lt;b&gt;Shade Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the color and alpha of the light shade drawn on the cut faces, also set as Cutaway Shade in Preferences, Interface.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Barva stínu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zvolí barvu a průhlednost světlého stínu kresleného na řezných stěnách, nastavitelného také jako Stín řezu v Předvolbách, Rozhraní.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2107"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2116"/>
         <source>&lt;p&gt;&lt;b&gt;Mesh Detail Control&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw distant parts with simpler meshes, from the Mesh Level of Detail distance set in Preferences, so large models stay smooth.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Řízení detailu sítě&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykresluje vzdálené díly jednoduššími sítěmi, od vzdálenosti Úroveň detailu sítě nastavené v Předvolbách, aby velké modely zůstaly plynulé.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2116"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2125"/>
         <source>&lt;p&gt;&lt;b&gt;Highlight New Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Highlight the parts added in the current building step with the chosen highlight color.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zvýraznit nové díly&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zvýrazní díly přidané v aktuálním kroku stavby zvolenou barvou zvýraznění.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2125"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2134"/>
         <source>&lt;p&gt;&lt;b&gt;Fade on Edit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Tint the rest of the model with the chosen color while editing a submodel in place. When off, the rest of the model stays in its own colors, slightly translucent.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zeslabit při úpravě&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Při úpravě podmodelu na místě obarví zbytek modelu zvolenou barvou. Když je vypnuto, zbytek modelu zůstane ve svých barvách, mírně průsvitný.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2143"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2152"/>
         <source>&lt;p&gt;&lt;b&gt;Fade on Joint Move and Rotate&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep the joint fade while moving or rotating a joint. Leave it off to check parts for collisions in their own colors.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zeslabit při pohybu a otáčení kloubu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zachová zeslabení kloubu při pohybu nebo otáčení kloubu. Nechte vypnuté, chcete-li kontrolovat kolize dílů v jejich vlastních barvách.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2160"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2169"/>
         <source>&lt;p&gt;&lt;b&gt;Connection Points&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mark the studs, tubes, axle holes, clips and other connection points of the hovered part within a 2x2 stud area of the pointer, when Part Connections is on in the preferences. Filled marks are male points, hollow marks are female points, and only the points facing the camera show.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Spojovací body&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Označí výstupky, trubky, otvory pro osy, spony a další spojovací body dílu pod ukazatelem v oblasti 2x2 výstupků kolem ukazatele, když jsou v předvolbách zapnuta Spojení dílů. Plné značky jsou vnější body, prázdné značky jsou vnitřní body a zobrazují se jen body natočené ke kameře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2547"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2556"/>
         <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Removes only what is selected, picked by where you work: the joint in the Joints panel, the step in the Steps panel, the picked keys in the Keyframes panel, or the selected keys at the current step when none are picked, and the selected pointers, notices or blank page in the instructions. In the view it removes a focused control point alone, otherwise the selected objects. With nothing selected it does nothing.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Smazat&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odstraní jen to, co je vybráno, podle toho, kde pracujete: kloub v panelu Klouby, krok v panelu Kroky, zvolené klíče v panelu Klíčové snímky, nebo když žádné zvolené nejsou, klíče vybraných objektů v aktuálním kroku, a vybrané ukazatele, poznámky nebo prázdnou stránku v návodu. V pohledu odstraní samotný zaměřený řídicí bod, jinak vybrané objekty. Když není nic vybráno, neudělá nic.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2583"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2592"/>
         <source>&lt;p&gt;&lt;b&gt;Joint Move&lt;/b&gt;&lt;/p&gt;&lt;p&gt;With one submodel with a joint selected, switches to the Move tool with the gizmo on the pivot of the picked joint, outlined by a red hexagon. Selecting something else goes back to the pivot point.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Pohyb kloubu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Když je vybrán jeden podmodel s kloubem, přepne na nástroj Přesun s manipulátorem na bodu otáčení zvoleného kloubu, obtaženým červeným šestiúhelníkem. Výběr něčeho jiného vrátí zpět na bod otáčení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2592"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
         <source>&lt;p&gt;&lt;b&gt;Joint Rotate&lt;/b&gt;&lt;/p&gt;&lt;p&gt;With one submodel with a joint selected, switches to the Rotate tool with the gizmo on the pivot of the picked joint, outlined in red, and the rotate keys and the Rotate tool turn the joint around its own pivot and axis. A hinge only turns about its axis. Selecting something else goes back to the pivot point. Use Joint Rotation in the preferences does this whenever a selected submodel has a joint.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Otáčení kloubu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Když je vybrán jeden podmodel s kloubem, přepne na nástroj Otáčení s manipulátorem na bodu otáčení zvoleného kloubu, obtaženým červeně, a klávesy otáčení a nástroj Otáčení otáčejí kloub kolem jeho vlastního bodu otáčení a osy. Závěs se otáčí jen kolem své osy. Výběr něčeho jiného vrátí zpět na bod otáčení. Volba Použít otáčení kloubu v předvolbách to dělá vždy, když vybraný podmodel má kloub.&lt;/p&gt;</translation>
     </message>
@@ -9814,112 +9834,112 @@ Formát souboru není rozpoznán.</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Režim kloubu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pracuje s kloubem vybraného podmodelu, stejně jako kliknutí na něj v panelu Klouby. Je-li vybrán díl uvnitř podmodelu s kloubem, přejde nahoru k tomuto podmodelu. Není-li nic vybráno, otevře kloub zvolený v panelu Klouby. Předvolba Začátek režimu kloubu určuje, který kloub se otevře: první, naposledy použitý, nebo přehled kroužků k výběru. Dalším stiskem režim kloubu opustíte.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2619"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2628"/>
         <source>&lt;p&gt;&lt;b&gt;Reset Pivot Point&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Put the pivot point of each selected part back at its origin.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Obnovit bod otáčení&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vrátí bod otáčení každého vybraného dílu do jeho počátku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2628"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2637"/>
         <source>&lt;p&gt;&lt;b&gt;Remove Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove every animation key from the selected parts, lights and cameras.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Odebrat klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odebere každý animační klíč vybraným dílům, světlům a kamerám.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2637"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2646"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Control Point&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add a control point to the selected flexible part, where it bends.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vložit řídicí bod&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá vybranému ohebnému dílu řídicí bod v místě, kde se ohýbá.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2646"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2655"/>
         <source>&lt;p&gt;&lt;b&gt;Remove Control Point&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected control point of a flexible part.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Odebrat řídicí bod&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odebere vybraný řídicí bod ohebného dílu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2655"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2664"/>
         <source>&lt;p&gt;&lt;b&gt;Clamp Tangent&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Hold the selected control point along the path, or release it to rotate freely.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zafixovat tečnu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drží vybraný řídicí bod podél dráhy, nebo jej uvolní k volné rotaci.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2664"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2673"/>
         <source>&lt;p&gt;&lt;b&gt;Align to Tangent&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the path once and keep it released.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zarovnat k tečně&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Jednou otočí vybraný řídicí bod podél dráhy a ponechá jej uvolněný.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2673"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2682"/>
         <source>&lt;p&gt;&lt;b&gt;X Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the X axis.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Osa X&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Otočí vybraný řídicí bod podél osy X.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2682"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2691"/>
         <source>&lt;p&gt;&lt;b&gt;Y Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the Y axis.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Osa Y&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Otočí vybraný řídicí bod podél osy Y.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2691"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2700"/>
         <source>&lt;p&gt;&lt;b&gt;Z Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the Z axis.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Osa Z&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Otočí vybraný řídicí bod podél osy Z.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2700"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2709"/>
         <source>&lt;p&gt;&lt;b&gt;Focus Next Connection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the focus to the next connection of the selected track, where the next part joins.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Fokus na další spojení&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přesune fokus na další spojení vybrané koleje, kde se připojuje další díl.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2709"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2718"/>
         <source>&lt;p&gt;&lt;b&gt;Focus Previous Connection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the focus to the previous connection of the selected track, where the next part joins.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Fokus na předchozí spojení&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přesune fokus na předchozí spojení vybrané koleje, kde se připojuje další díl.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2718"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2727"/>
         <source>&lt;p&gt;&lt;b&gt;Rotate Train Track&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the focused track part to its next connection.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Otočit kolej vlaku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Otočí kolejový díl s fokusem na jeho další spojení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2727"/>
         <location filename="../../source/application/sw_commands.cpp" line="2736"/>
         <location filename="../../source/application/sw_commands.cpp" line="2745"/>
         <location filename="../../source/application/sw_commands.cpp" line="2754"/>
         <location filename="../../source/application/sw_commands.cpp" line="2763"/>
         <location filename="../../source/application/sw_commands.cpp" line="2772"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2781"/>
         <source>&lt;p&gt;&lt;b&gt;Move Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected objects one move snap step along this axis.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Posunout výběr&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Posune vybrané objekty o jeden krok přichytávání pohybu podél této osy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2781"/>
         <location filename="../../source/application/sw_commands.cpp" line="2790"/>
         <location filename="../../source/application/sw_commands.cpp" line="2799"/>
         <location filename="../../source/application/sw_commands.cpp" line="2808"/>
         <location filename="../../source/application/sw_commands.cpp" line="2817"/>
         <location filename="../../source/application/sw_commands.cpp" line="2826"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2835"/>
         <source>&lt;p&gt;&lt;b&gt;Rotate Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Rotate the selected objects one rotation snap step around this axis.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Otočit výběr&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Otočí vybrané objekty o jeden krok přichytávání otáčení kolem této osy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2835"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2844"/>
         <source>&lt;p&gt;&lt;b&gt;Minifigure Builder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the Minifigure Builder panel to build a minifigure from templates and add it to the model.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Tvůrce minifigurek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí panel Tvůrce minifigurek pro sestavení minifigurky ze šablon a její přidání do modelu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2844"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2853"/>
         <source>&lt;p&gt;&lt;b&gt;Array&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Repeat the selection along one, two or three axes, with a count, offset and rotation for each.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Pole&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zopakuje výběr podél jedné, dvou nebo tří os, s počtem, posunem a rotací pro každou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2853"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2862"/>
         <source>&lt;p&gt;&lt;b&gt;Open Selected Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the submodel used by the selected part in its own tab, to edit it on its own.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Otevřít vybraný podmodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Otevře podmodel používaný vybraným dílem na vlastní záložce, aby jej bylo možné upravit samostatně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2862"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2871"/>
         <source>&lt;p&gt;&lt;b&gt;Move to New Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into a new submodel and put one reference to it in their place.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přesunout do nového podmodelu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přesune vybrané díly do nového podmodelu a na jejich místo vloží jeden odkaz na něj.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2871"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2880"/>
         <source>&lt;p&gt;&lt;b&gt;Inline Selected Submodels&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace each selected submodel with its parts, in place.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Rozbalit vybrané podmodely&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Nahradí každý vybraný podmodel jeho díly, na místě.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2880"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2889"/>
         <source>&lt;p&gt;&lt;b&gt;Flatten Submodels&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace every submodel in the current model, and every submodel inside those, with its parts in one undo step. Each part keeps its place and color, and the groups inside the submodels are not kept.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zploštit podmodely&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Nahradí každý podmodel v aktuálním modelu i každý podmodel uvnitř nich jejich díly jedním krokem zpět. Každý díl si ponechá své místo a barvu a skupiny uvnitř podmodelů se nezachovají.&lt;/p&gt;</translation>
     </message>
@@ -9982,52 +10002,52 @@ Formát souboru není rozpoznán.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Základní mřížka&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje základní mřížku. Výškové mřížky mají vlastní přepínače.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1837"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1846"/>
         <source>&lt;p&gt;&lt;b&gt;Normal to Face&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Click a face of any part, including parts inside submodels, to point the camera straight at it. The model is not changed. Press Esc to cancel.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Kolmo ke stěně&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kliknutím na stěnu libovolného dílu, včetně dílů uvnitř podmodelů, namíříte kameru přímo na ni. Model se nezmění. Zrušíte klávesou Esc.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1846"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1855"/>
         <source>&lt;p&gt;&lt;b&gt;Cube Cutaway&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Click a face of any part to hide everything inside a cube centered on it, so you can see inside the model. Clicking empty space centers the cube on the view target. The model is not changed. Press Esc to cancel.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Krychlový řez&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kliknutím na stěnu libovolného dílu skryjete vše uvnitř krychle se středem na ní, abyste viděli dovnitř modelu. Kliknutí do prázdna umístí střed krychle na cíl pohledu. Model se nezmění. Zrušíte klávesou Esc.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1855"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1864"/>
         <source>&lt;p&gt;&lt;b&gt;Sphere Cutaway&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Click a face of any part to hide everything inside a sphere centered on it, so you can see inside the model. Clicking empty space centers the sphere on the view target. The model is not changed. Press Esc to cancel.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Kulový řez&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kliknutím na stěnu libovolného dílu skryjete vše uvnitř koule se středem na ní, abyste viděli dovnitř modelu. Kliknutí do prázdna umístí střed koule na cíl pohledu. Model se nezmění. Zrušíte klávesou Esc.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1864"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1873"/>
         <source>&lt;p&gt;&lt;b&gt;Cylinder Cutaway&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Click a face of any part to hide everything inside a cylinder centered on it, its axis running straight through the face, so you can see inside the model. Clicking empty space centers the cylinder on the view target. The model is not changed. Press Esc to cancel.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Válcový řez&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kliknutím na stěnu libovolného dílu skryjete vše uvnitř válce se středem na ní, jehož osa prochází přímo stěnou, abyste viděli dovnitř modelu. Kliknutí do prázdna umístí střed válce na cíl pohledu. Model se nezmění. Zrušíte klávesou Esc.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1927"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1936"/>
         <source>&lt;p&gt;&lt;b&gt;All Grids&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the base grid and both height grids on together, or off when they are all on. The axis lines are not changed.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Všechny mřížky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zapne základní mřížku a obě výškové mřížky společně, nebo je vypne, když jsou všechny zapnuté. Čáry os se nezmění.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1936"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1945"/>
         <source>&lt;p&gt;&lt;b&gt;XZ Height Grid&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the vertical XZ height grid sized around the model.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Výšková mřížka XZ&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje svislou výškovou mřížku XZ upravenou podle velikosti modelu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1945"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1954"/>
         <source>&lt;p&gt;&lt;b&gt;YZ Height Grid&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the vertical YZ height grid sized around the model.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Výšková mřížka YZ&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje svislou výškovou mřížku YZ upravenou podle velikosti modelu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1954"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1963"/>
         <source>&lt;p&gt;&lt;b&gt;Height Grids Behind Model&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the height grids behind the model instead of through the origin axes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Výškové mřížky za modelem&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslí výškové mřížky za modelem místo skrz osy počátku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1981"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1990"/>
         <source>&lt;p&gt;&lt;b&gt;Z Axis Line&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Z axis line through the grid origin or along the height grids, reaching below the base grid only when parts go below it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Čára osy Z&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje čáru osy Z procházející počátkem mřížky nebo podél výškových mřížek; pod základní mřížku sahá, jen když jsou díly pod ní.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2008"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2017"/>
         <source>&lt;p&gt;&lt;b&gt;Open Model Folder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the folder of the current model in the file manager. The button is unavailable until the model is saved to a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Otevřít složku modelu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Otevře složku aktuálního modelu ve správci souborů. Tlačítko je nedostupné, dokud model není uložen do souboru.&lt;/p&gt;</translation>
     </message>
@@ -10258,7 +10278,7 @@ Vykreslení POV-Ray může používat knihovnu dílů LGEO od Lutze Uhlmanna.</t
         <translation>Soubor &apos;%1&apos; není čitelný.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="579"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="584"/>
         <source>
 Library:
 </source>
@@ -10267,14 +10287,14 @@ Knihovna:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="580"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="585"/>
         <source>  -l, --library &lt;path&gt;: Set the Parts Library location to path.
 </source>
         <translation>  -l, --library &lt;path&gt;: Nastaví umístění knihovny dílů na path.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="583"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="588"/>
         <source>
 Pictures:
 </source>
@@ -10283,14 +10303,14 @@ Obrázky:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="584"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="589"/>
         <source>  -i, --image [outfile.ext]: Save a picture in the format specified by ext and exit.
 </source>
         <translation>  -i, --image [outfile.ext]: Uloží obrázek ve formátu určeném příponou ext a skončí.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="591"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="596"/>
         <source>
 Camera:
 </source>
@@ -10299,28 +10319,28 @@ Kamera:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="597"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="602"/>
         <source>  --projection &lt;perspective|orthographic&gt;: Render images with a perspective or an orthographic projection.
 </source>
         <translation>  --projection &lt;perspective|orthographic&gt;: Vykreslí obrázky s perspektivní nebo pravoúhlou projekcí.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="598"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="603"/>
         <source>  --field-of-view &lt;degrees&gt;: Set the vertical field of view used to render images (&lt; 180).
 </source>
         <translation>  --field-of-view &lt;degrees&gt;: Nastaví svislé zorné pole použité k vykreslení obrázků (&lt; 180).
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="599"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="604"/>
         <source>  --clip-planes &lt;near&gt; &lt;far&gt;: Set the near and far clipping planes used to render images (1 &lt;= &lt;near&gt; &lt; &lt;far&gt;).
 </source>
         <translation>  --clip-planes &lt;near&gt; &lt;far&gt;: Nastaví blízkou a vzdálenou ořezovou rovinu použitou k vykreslení obrázků (1 &lt;= &lt;near&gt; &lt; &lt;far&gt;).
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="600"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="605"/>
         <source>
 Rendering:
 </source>
@@ -10329,35 +10349,35 @@ Vykreslování:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="601"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="606"/>
         <source>  --shading &lt;mode&gt;: Select shading mode for rendering (default, flat, wireframe, full).
 </source>
         <translation>  --shading &lt;mode&gt;: Vyberte režim stínování pro vykreslování (default, flat, wireframe, full).
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="602"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="607"/>
         <source>  --lighting &lt;style&gt;: Select the lighting style of the default shading (studio, standard, matte, toon).
 </source>
         <translation>  --lighting &lt;style&gt;: Zvolí styl osvětlení výchozího stínování (studio, standard, matte, toon).
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="604"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="609"/>
         <source>  --antialiasing-samples &lt;samples&gt;: Anti-aliasing sample size (1, 2, 4, or 8).
 </source>
         <translation>  --antialiasing-samples &lt;samples&gt;: Velikost vzorku vyhlazování (1, 2, 4 nebo 8).
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="607"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="612"/>
         <source>  --fade-color &lt;#AARRGGBB&gt;: Rendering color for prior step parts.
 </source>
         <translation>  --fade-color &lt;#AARRGGBB&gt;: Barva vykreslení dílů předchozích kroků.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="611"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="616"/>
         <source>
 Studs and Edges:
 </source>
@@ -10366,84 +10386,84 @@ Výstupky a hrany:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="613"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="618"/>
         <source>  --stud-cylinder-color &lt;#AARRGGBB&gt;: High contrast stud cylinder color.
 </source>
         <translation>  --stud-cylinder-color &lt;#AARRGGBB&gt;: Barva válce výstupku s vysokým kontrastem.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="614"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="619"/>
         <source>  --no-stud-cylinder-color: Disable high contrast stud cylinder color.
 </source>
         <translation>  --no-stud-cylinder-color: Vypne barvu válce výstupku s vysokým kontrastem.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="615"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="620"/>
         <source>  --edge-color &lt;#AARRGGBB&gt;: High contrast edge color.
 </source>
         <translation>  --edge-color &lt;#AARRGGBB&gt;: Barva hran s vysokým kontrastem.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="616"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="621"/>
         <source>  --no-edge-color: Disable high contrast edge color.
 </source>
         <translation>  --no-edge-color: Vypne barvu hran s vysokým kontrastem.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="617"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="622"/>
         <source>  --edge-color-black &lt;#AARRGGBB&gt;: High contrast edge color for black parts.
 </source>
         <translation>  --edge-color-black &lt;#AARRGGBB&gt;: Barva hran s vysokým kontrastem pro černé díly.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="618"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="623"/>
         <source>  --no-edge-color-black: Disable high contrast edge color for black parts.
 </source>
         <translation>  --no-edge-color-black: Vypne barvu hran s vysokým kontrastem pro černé díly.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="619"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="624"/>
         <source>  --edge-color-dark &lt;#AARRGGBB&gt;: High contrast edge color for dark color parts.
 </source>
         <translation>  --edge-color-dark &lt;#AARRGGBB&gt;: Barva hran s vysokým kontrastem pro díly tmavých barev.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="620"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="625"/>
         <source>  --no-edge-color-dark: Disable high contrast edge color for dark color parts.
 </source>
         <translation>  --no-edge-color-dark: Vypne barvu hran s vysokým kontrastem pro díly tmavých barev.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="621"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="626"/>
         <source>  --edge-color-automatic: Enable automatically adjusted edge colors.
 </source>
         <translation>  --edge-color-automatic: Zapne automaticky upravované barvy hran.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="622"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="627"/>
         <source>  --edge-contrast &lt;contrast&gt;: Edge color contrast of automatic edge colors, between 0.0 and 1.0.
 </source>
         <translation>  --edge-contrast &lt;contrast&gt;: Kontrast barev hran u automatických barev hran, mezi 0.0 a 1.0.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="623"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="628"/>
         <source>  --edge-light-dark &lt;value&gt;: Light/Dark color value of automatic edge colors, between 0.0 and 1.0.
 </source>
         <translation>  --edge-light-dark &lt;value&gt;: Hodnota světlé/tmavé u automatických barev hran, mezi 0.0 a 1.0.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="624"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="629"/>
         <source>
 Export:
 </source>
@@ -10452,49 +10472,55 @@ Export:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="625"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="630"/>
         <source>  --flatten &lt;outfile.ldr&gt;: Replace every submodel at all depths with its parts and save the model, before any other export.
 </source>
         <translation>  --flatten &lt;outfile.ldr&gt;: Nahradí každý podmodel v jakékoli hloubce jeho díly a uloží model, před jakýmkoli dalším exportem.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="626"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="631"/>
         <source>  --undo &lt;outfile.ldr&gt;: Undo every command line edit and save the model, to check that undo restores it.
 </source>
         <translation>  --undo &lt;outfile.ldr&gt;: Vrátí zpět každou úpravu z příkazového řádku a uloží model, aby se ověřilo, že zpět jej obnoví.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="634"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="639"/>
         <source>  --bricklink-condition &lt;any|new|used&gt;: Condition wanted in BrickLink exports.
 </source>
         <translation>  --bricklink-condition &lt;any|new|used&gt;: Požadovaný stav v exportech BrickLink.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="635"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="640"/>
         <source>  --bricklink-wanted-list &lt;id|url&gt;: BrickLink wanted list the exported parts are added to, by number or by the address of its page.
 </source>
         <translation>  --bricklink-wanted-list &lt;id|url&gt;: Seznam přání BrickLink, do kterého se přidají exportované díly, podle čísla nebo adresy jeho stránky.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="636"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="641"/>
         <source>  --bricklink-notify: Ask BrickLink to notify new listings of the exported parts.
 </source>
         <translation>  --bricklink-notify: Požádá BrickLink o upozornění na nové nabídky exportovaných dílů.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="637"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="642"/>
         <source>  --bricklink-exceptions &lt;file&gt;: Comma or tab separated file of parts and the BrickLink numbers that replace their mapping in BrickLink exports.
 </source>
         <translation>  --bricklink-exceptions &lt;file&gt;: Soubor oddělený čárkami nebo tabulátory s díly a čísly BrickLink, které nahradí jejich mapování v exportech BrickLink.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="641"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="644"/>
+        <source>  --export-pdf [outfile.pdf]: Print the instruction pages to a PDF file on the page setup paper.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="647"/>
         <source>
 Settings:
 </source>
@@ -10503,7 +10529,7 @@ Nastavení:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="650"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="656"/>
         <source>
 Information:
 </source>
@@ -10512,89 +10538,89 @@ Informace:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="665"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="671"/>
         <source>High contrast stud and edge color settings are ignored when --edge-color-automatic is set.
 </source>
         <translation>Nastavení barev výstupků a hran s vysokým kontrastem se ignorují, když je nastaveno --edge-color-automatic.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="714"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="720"/>
         <source>--projection is ignored when --camera is set.
 </source>
         <translation>--projection se ignoruje, když je nastaveno --camera.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="216"/>
+        <location filename="../../source/application/sw_application.cpp" line="217"/>
         <source>Could not load settings file &apos;%1&apos;.
 </source>
         <translation>Nelze načíst soubor nastavení &apos;%1&apos;.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="232"/>
+        <location filename="../../source/application/sw_application.cpp" line="233"/>
         <source>Could not load keyboard shortcuts file &apos;%1&apos;.
 </source>
         <translation>Nelze načíst soubor klávesových zkratek &apos;%1&apos;.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="240"/>
+        <location filename="../../source/application/sw_application.cpp" line="241"/>
         <source>Could not load mouse shortcuts file &apos;%1&apos;.
 </source>
         <translation>Nelze načíst soubor zkratek myši &apos;%1&apos;.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="250"/>
+        <location filename="../../source/application/sw_application.cpp" line="251"/>
         <source>Could not load categories file &apos;%1&apos;.
 </source>
         <translation>Nelze načíst soubor kategorií &apos;%1&apos;.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="272"/>
+        <location filename="../../source/application/sw_application.cpp" line="273"/>
         <source>Could not save settings file &apos;%1&apos;.
 </source>
         <translation>Nelze uložit soubor nastavení &apos;%1&apos;.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="280"/>
+        <location filename="../../source/application/sw_application.cpp" line="281"/>
         <source>Could not save keyboard shortcuts file &apos;%1&apos;.
 </source>
         <translation>Nelze uložit soubor klávesových zkratek &apos;%1&apos;.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="288"/>
+        <location filename="../../source/application/sw_application.cpp" line="289"/>
         <source>Could not save mouse shortcuts file &apos;%1&apos;.
 </source>
         <translation>Nelze uložit soubor zkratek myši &apos;%1&apos;.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="296"/>
+        <location filename="../../source/application/sw_application.cpp" line="297"/>
         <source>Could not save categories file &apos;%1&apos;.
 </source>
         <translation>Nelze uložit soubor kategorií &apos;%1&apos;.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="408"/>
-        <location filename="../../source/application/sw_application.cpp" line="1234"/>
+        <location filename="../../source/application/sw_application.cpp" line="409"/>
+        <location filename="../../source/application/sw_application.cpp" line="1267"/>
         <source>Could not open the unofficial library archive &apos;%1&apos;.</source>
         <translation>Nelze otevřít archiv neoficiální knihovny &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="427"/>
-        <location filename="../../source/application/sw_application.cpp" line="1241"/>
+        <location filename="../../source/application/sw_application.cpp" line="428"/>
+        <location filename="../../source/application/sw_application.cpp" line="1274"/>
         <source>Could not find a shadow library in &apos;%1&apos;.</source>
         <translation>V &apos;%1&apos; nelze najít knihovnu stínů.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="612"/>
+        <location filename="../../source/application/sw_application.cpp" line="613"/>
         <source>The file &apos;%1&apos; has no parts to render.</source>
         <translation>Soubor &apos;%1&apos; neobsahuje žádné díly k vykreslení.</translation>
     </message>
@@ -10611,49 +10637,49 @@ Informace:
         <translation>Neplatné hodnoty parametrů zadané pro možnost &apos;%1&apos;: požadavky jsou: 1 &lt;= &lt;near&gt; &lt; &lt;far&gt;.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="632"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="637"/>
         <source>  --export-csv [outfile.csv]: Export the list of parts used in CSV format.
 </source>
         <translation>  --export-csv [outfile.csv]: Exportuje seznam použitých dílů ve formátu CSV.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="633"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="638"/>
         <source>  --export-bricklink [outfile.xml]: Export the list of parts used as a BrickLink XML wanted list, translated through the BrickLink mapping file set in the preferences.
 </source>
         <translation>  --export-bricklink [outfile.xml]: Exportuje seznam použitých dílů jako seznam přání BrickLink ve formátu XML, přeložený podle souboru mapování BrickLink nastaveného v předvolbách.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="638"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="643"/>
         <source>  --export-html [folder]: Create HTML instructions in a folder named after the model inside the folder.
 </source>
         <translation>  --export-html [folder]: Vytvoří pokyny HTML ve složce pojmenované podle modelu uvnitř složky.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="639"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="645"/>
         <source>  --export-povray [outfile.pov]: Export the model to POV-Ray format.
 </source>
         <translation>  --export-povray [outfile.pov]: Exportuje model do formátu POV-Ray.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="640"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="646"/>
         <source>  --render-povray [outfile.png]: Render the model with POV-Ray using the POV-Ray window settings, the picture width and height, and the transparent background.
 </source>
         <translation>  --render-povray [outfile.png]: Vykreslí model pomocí POV-Ray s nastavením okna POV-Ray, šířkou a výškou obrázku a průhledným pozadím.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="681"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="687"/>
         <source>High contrast stud style is required for the &apos;%1&apos; option but is not enabled.
 </source>
         <translation>Pro možnost &apos;%1&apos; je vyžadován styl čepů s vysokým kontrastem, ale není povolen.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="670"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="676"/>
         <source>Automate edge color is required for the &apos;%1&apos; option but is not enabled.
 </source>
         <translation>Automatizace barvy okrajů je vyžadována pro možnost &apos;%1&apos;, ale není povolena.</translation>
@@ -10690,7 +10716,7 @@ Download the official library (about 140 MB) from library.ldraw.org into &apos;%
 Stáhnout oficiální knihovnu (asi 140 MB) z library.ldraw.org do &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1230"/>
+        <location filename="../../source/application/sw_application.cpp" line="1263"/>
         <location filename="../../source/application/sw_application_library.cpp" line="102"/>
         <location filename="../../source/application/sw_application_library.cpp" line="118"/>
         <source>Could not open the parts library &apos;%1&apos;.</source>
@@ -10736,20 +10762,20 @@ Stáhněte ji z %1 a při příštím spuštění StudWorx ji nastavte v Předvo
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="572"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="577"/>
         <source>StudWorx Version %1
 </source>
         <translation>StudWorx verze %1
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="573"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="578"/>
         <source>Compiled %1
 </source>
         <translation>Zkompilováno %1</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="578"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="583"/>
         <source>Usage: studworx [options] [file]
 </source>
         <translation>Použití: studworx [možnosti] [soubor]</translation>
@@ -10767,14 +10793,14 @@ Stáhněte ji z %1 a při příštím spuštění StudWorx ji nastavte v Předvo
         <translation type="obsolete">  -l, --libpath &lt;path&gt;: Nastavte umístění knihovny dílků na cestu.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="581"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="586"/>
         <source>  --unofficial-library &lt;path&gt;: Set the Unofficial Parts Library archive to path.
 </source>
         <translation>  --unofficial-library &lt;path&gt;: Nastaví archiv neoficiální knihovny dílů na path.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="582"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="587"/>
         <source>  --shadow-library &lt;path&gt;: Set the LDCad Shadow Library location to path.
 </source>
         <translation>  --shadow-library &lt;path&gt;: Nastaví umístění knihovny stínů LDCad na path.
@@ -10787,7 +10813,7 @@ Stáhněte ji z %1 a při příštím spuštění StudWorx ji nastavte v Předvo
         <translation type="obsolete">  -i, --image &lt;outfile.ext&gt;: Uložte obrázek ve formátu určeném ext a ukončete.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="585"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="590"/>
         <source>  -w, --width &lt;width&gt;: Set the picture width.
 </source>
         <translation>  -w, --width &lt;width&gt;: Nastavte šířku obrázku.</translation>
@@ -10799,38 +10825,38 @@ Stáhněte ji z %1 a při příštím spuštění StudWorx ji nastavte v Předvo
         <translation type="obsolete">  -h, --height &lt;height&gt;: Nastavte výšku obrázku.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="587"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="592"/>
         <source>  -f, --from &lt;step&gt;: Set the first step to save pictures.
 </source>
         <translation>  -f, --from &lt;step&gt;: Nastavte první krok pro uložení obrázků.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="588"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="593"/>
         <source>  -t, --to &lt;step&gt;: Set the last step to save pictures.
 </source>
         <translation>  -t, --to &lt;step&gt;: Nastavte poslední krok pro uložení obrázků.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="589"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="594"/>
         <source>  -s, --submodel &lt;submodel&gt;: Set the active submodel.
 </source>
         <translation>  -s, --submodel &lt;submodel&gt;: Nastavte aktivní podmodel.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="594"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="599"/>
         <source>  --camera-angles &lt;latitude&gt; &lt;longitude&gt;: Set the camera angles in degrees around the model.
 </source>
         <translation>  --camera-angles &lt;latitude&gt; &lt;longitude&gt;: Nastavte úhly kamery ve stupních kolem modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="595"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="600"/>
         <source>  --camera-position &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: Set the camera position, target and up vector.
 </source>
         <translation>  --camera-position &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: Nastavte polohu kamery, cíl a vektor nahoru.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="596"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="601"/>
         <source>  --camera-position-ldraw &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: Set the camera position, target and up vector using LDraw coordinates.
 </source>
         <translation>  --camera-position-ldraw &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: Nastavte polohu kamery, cíl a vektor pomocí LDraw souřadnic.</translation>
@@ -10861,28 +10887,28 @@ Stáhněte ji z %1 a při příštím spuštění StudWorx ji nastavte v Předvo
         <translation type="obsolete">  --zplanes &lt;near&gt; &lt;far&gt;: Nastavte blízké a vzdálené ořezové roviny používané k vykreslování obrázků (1 &lt;= &lt;near&gt; &lt; &lt;far&gt;).</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="605"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="610"/>
         <source>  --fade-steps: Render parts from prior steps faded.
 </source>
         <translation>  --fade-steps: Vykreslit díly z předchozích kroků zeslabené.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="606"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="611"/>
         <source>  --no-fade-steps: Do not render parts from prior steps faded.
 </source>
         <translation>  --no-fade-steps: Nevykreslovat díly z předchozích kroků zeslabené.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="608"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="613"/>
         <source>  --highlight: Highlight parts in the steps they appear.
 </source>
         <translation>  --highlight: Zvýraznit díly v krocích, ve kterých se objevují.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="609"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="614"/>
         <source>  --no-highlight: Do not highlight parts in the steps they appear.
 </source>
         <translation>  --no-highlight: Nezvýrazňovat díly v krocích, ve kterých se objevují.
@@ -10895,7 +10921,7 @@ Stáhněte ji z %1 a při příštím spuštění StudWorx ji nastavte v Předvo
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="603"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="608"/>
         <source>  --line-width &lt;width&gt;: Set the width of the edge lines.
 </source>
         <translation>  --line-width &lt;width&gt;: Nastavte šířku okrajových čar.</translation>
@@ -10987,63 +11013,63 @@ Stáhněte ji z %1 a při příštím spuštění StudWorx ji nastavte v Předvo
         <translation type="obsolete">  -html, --export-html &lt;folder&gt;: Vytvořte HTML stránku pro model.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="642"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="648"/>
         <source>  --import-settings &lt;infile.ini&gt;: Import the application settings and exit.
 </source>
         <translation>  --import-settings &lt;infile.ini&gt;: Importuje nastavení programu a skončí.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="643"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="649"/>
         <source>  --export-settings &lt;outfile.ini&gt;: Export the application settings and exit.
 </source>
         <translation>  --export-settings &lt;outfile.ini&gt;: Exportuje nastavení programu a skončí.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="644"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="650"/>
         <source>  --import-keyboard-shortcuts &lt;infile.txt&gt;: Import the keyboard shortcuts and exit.
 </source>
         <translation>  --import-keyboard-shortcuts &lt;infile.txt&gt;: Importuje klávesové zkratky a skončí.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="645"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="651"/>
         <source>  --export-keyboard-shortcuts &lt;outfile.txt&gt;: Export the keyboard shortcuts and exit.
 </source>
         <translation>  --export-keyboard-shortcuts &lt;outfile.txt&gt;: Exportuje klávesové zkratky a skončí.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="646"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="652"/>
         <source>  --import-mouse-shortcuts &lt;infile.txt&gt;: Import the mouse shortcuts and exit.
 </source>
         <translation>  --import-mouse-shortcuts &lt;infile.txt&gt;: Importuje zkratky myši a skončí.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="647"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="653"/>
         <source>  --export-mouse-shortcuts &lt;outfile.txt&gt;: Export the mouse shortcuts and exit.
 </source>
         <translation>  --export-mouse-shortcuts &lt;outfile.txt&gt;: Exportuje zkratky myši a skončí.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="648"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="654"/>
         <source>  --import-categories &lt;infile.txt&gt;: Import the part categories and exit.
 </source>
         <translation>  --import-categories &lt;infile.txt&gt;: Importuje kategorie dílů a skončí.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="649"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="655"/>
         <source>  --export-categories &lt;outfile.txt&gt;: Export the part categories and exit.
 </source>
         <translation>  --export-categories &lt;outfile.txt&gt;: Exportuje kategorie dílů a skončí.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="651"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="657"/>
         <source>  -v, --version: Output version information and exit.
 </source>
         <translation>  -v, --version: Vypsat informace o verzi a skončit.
@@ -11056,7 +11082,7 @@ Stáhněte ji z %1 a při příštím spuštění StudWorx ji nastavte v Předvo
         <translation type="obsolete">  -?, --help: Zobrazte tuto zprávu nápovědy a ukončete ji.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="658"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="664"/>
         <source>Unknown option: &apos;%1&apos;.
 </source>
         <translation>Neznámá možnost: &apos;%1&apos;.</translation>
@@ -11068,7 +11094,7 @@ Stáhněte ji z %1 a při příštím spuštění StudWorx ji nastavte v Předvo
         <translation type="obsolete">Nastavení barvy kolíků a okrajů s vysokým kontrastem jsou ignorována, když je nastaveno -aec nebo --automate-edge-color.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="711"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="717"/>
         <source>--viewpoint is ignored when --camera is set.
 </source>
         <translation>--viewpoint je ignorováno, když je nastaveno --camera.</translation>
@@ -11080,49 +11106,49 @@ Stáhněte ji z %1 a při příštím spuštění StudWorx ji nastavte v Předvo
         <translation type="obsolete">--orthographic je ignorováno, když je nastaveno --camera.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="717"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="723"/>
         <source>--camera-angles is ignored when --camera is set.
 </source>
         <translation>--camera-angles je ignorováno, když je nastaveno --camera.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="720"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="726"/>
         <source>--camera-position is ignored when --camera is set.
 </source>
         <translation>--camera-position je ignorováno, když je nastaveno --camera.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="725"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="731"/>
         <source>--camera-angles is ignored when --viewpoint is set.
 </source>
         <translation>--camera-angles je ignorováno, když je nastaveno --viewpoint.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="728"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="734"/>
         <source>--camera-position is ignored when --viewpoint is set.
 </source>
         <translation>--camera-position je ignorováno, když je nastaveno --viewpoint.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="733"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="739"/>
         <source>--camera-position is ignored when --camera-angles is set.
 </source>
         <translation>--camera-position je ignorováno, když je nastaveno --camera-angles.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="740"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="746"/>
         <source>No file name specified.
 </source>
         <translation>Nebyl zadán žádný název souboru.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="350"/>
-        <location filename="../../source/application/sw_application.cpp" line="1018"/>
+        <location filename="../../source/application/sw_application.cpp" line="351"/>
+        <location filename="../../source/application/sw_application.cpp" line="1051"/>
         <source>Initialize Renderer</source>
         <translation>Inicializovat vykreslovač</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="398"/>
+        <location filename="../../source/application/sw_application.cpp" line="399"/>
         <source>StudWorx could not find an LDraw parts library.
 
 Download one from %1 and pass it with --library.</source>
@@ -11131,52 +11157,64 @@ Download one from %1 and pass it with --library.</source>
 Stáhněte ji z %1 a předejte ji pomocí --library.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="566"/>
+        <location filename="../../source/application/sw_application.cpp" line="567"/>
         <source>--transparent is ignored for &apos;%1&apos; files: only PNG and GIF files keep transparency.
 </source>
         <translation>--transparent se u souborů &apos;%1&apos; ignoruje: průhlednost zachovávají jen soubory PNG a GIF.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="700"/>
+        <location filename="../../source/application/sw_application.cpp" line="701"/>
         <source>Could not create a temporary folder for the POV-Ray scene.
 </source>
         <translation>Nelze vytvořit dočasnou složku pro scénu POV-Ray.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="752"/>
+        <location filename="../../source/application/sw_application.cpp" line="753"/>
         <source>Could not render &apos;%1&apos; with POV-Ray:
 </source>
         <translation>Nelze vykreslit &apos;%1&apos; pomocí POV-Ray:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="966"/>
+        <location filename="../../source/application/sw_application.cpp" line="967"/>
         <source>Saved 1 lot to &apos;%1&apos;.
 </source>
         <translation>Uložena 1 položka do &apos;%1&apos;.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="966"/>
+        <location filename="../../source/application/sw_application.cpp" line="967"/>
         <source>Saved %1 lots to &apos;%2&apos;.
 </source>
         <translation>Uloženo %1 položek do &apos;%2&apos;.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1249"/>
+        <location filename="../../source/application/sw_application.cpp" line="1022"/>
+        <source>Failed to save &apos;%1&apos;.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1026"/>
+        <source>--export-pdf needs printing support.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1282"/>
         <source>The new language and antialiasing settings apply the next time you start StudWorx.</source>
         <translation>Nastavení nového jazyka a vyhlazování se projeví při příštím spuštění StudWorx.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1251"/>
+        <location filename="../../source/application/sw_application.cpp" line="1284"/>
         <source>The new language applies the next time you start StudWorx.</source>
         <translation>Nový jazyk se projeví při příštím spuštění StudWorx.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1253"/>
+        <location filename="../../source/application/sw_application.cpp" line="1286"/>
         <source>The new antialiasing setting applies the next time you start StudWorx.</source>
         <translation>Nové nastavení vyhlazování se projeví při příštím spuštění StudWorx.</translation>
     </message>
@@ -11197,9 +11235,9 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
 Informace o tom, jak stáhnout a nainstalovat knihovnu, naleznete na adrese https://github.com/nathaneltitane/studworx.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1249"/>
-        <location filename="../../source/application/sw_application.cpp" line="1251"/>
-        <location filename="../../source/application/sw_application.cpp" line="1253"/>
+        <location filename="../../source/application/sw_application.cpp" line="1282"/>
+        <location filename="../../source/application/sw_application.cpp" line="1284"/>
+        <location filename="../../source/application/sw_application.cpp" line="1286"/>
         <source>Preferences</source>
         <translation>Předvolby</translation>
     </message>
@@ -11208,13 +11246,13 @@ Informace o tom, jak stáhnout a nainstalovat knihovnu, naleznete na adrese http
         <translation type="vanished">StudWorx</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="592"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="597"/>
         <source>  -c, --camera &lt;camera name&gt;: Set the active camera.
 </source>
         <translation>  -c, --camera &lt;camera name&gt;: Nastavte aktivní kameru.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="593"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="598"/>
         <source>  --viewpoint &lt;viewpoint&gt;: Set the view to one of the preset viewpoints (front, back, left, right, top, bottom, home).
 </source>
         <translation>  --viewpoint &lt;viewpoint&gt;: Nastavte pohled na jeden z přednastavených úhlů pohledu (front, back, left, right, top, bottom, home).
@@ -11227,7 +11265,7 @@ Informace o tom, jak stáhnout a nainstalovat knihovnu, naleznete na adrese http
         <translation type="obsolete">  --fade-steps-color &lt;#AARRGGBB&gt;: Barva vykreslování pro dílky z předchozího kroku.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="610"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="615"/>
         <source>  --highlight-color &lt;#AARRGGBB&gt;: Rendering color for highlighted parts.
 </source>
         <translation>  --highlight-color &lt;#AARRGGBB&gt;: Barva vykreslení pro zvýrazněné díly.
@@ -11265,16 +11303,16 @@ Informace o tom, jak stáhnout a nainstalovat knihovnu, naleznete na adrese http
         <translation type="obsolete">  -ldv, --light-dark-value &lt;value&gt;: Hodnota barvy světlé/tmavé mezi 0,0 a 1,0.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="336"/>
+        <location filename="../../source/application/sw_application.cpp" line="337"/>
         <source>Command line image export is not supported on iOS.
 </source>
         <translation>Export obrázků z příkazového řádku není v systému iOS podporován.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1205"/>
-        <location filename="../../source/application/sw_application.cpp" line="1222"/>
-        <location filename="../../source/application/sw_application.cpp" line="1230"/>
-        <location filename="../../source/application/sw_application.cpp" line="1234"/>
+        <location filename="../../source/application/sw_application.cpp" line="1238"/>
+        <location filename="../../source/application/sw_application.cpp" line="1255"/>
+        <location filename="../../source/application/sw_application.cpp" line="1263"/>
+        <location filename="../../source/application/sw_application.cpp" line="1267"/>
         <location filename="../../source/application/sw_application_library.cpp" line="97"/>
         <location filename="../../source/application/sw_application_library.cpp" line="102"/>
         <location filename="../../source/application/sw_application_library.cpp" line="118"/>
@@ -11288,114 +11326,115 @@ Informace o tom, jak stáhnout a nainstalovat knihovnu, naleznete na adrese http
         <translation>Archivy knihovny dílů (*.zip);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="586"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="591"/>
         <source>  --height &lt;height&gt;: Set the picture height.
 </source>
         <translation>  --height &lt;height&gt;: Nastaví výšku obrázku.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="590"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="595"/>
         <source>  --transparent: Render images with a transparent background (PNG and GIF only).
 </source>
         <translation>  --transparent: Vykreslí obrázky s průhledným pozadím (jen PNG a GIF).
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="612"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="617"/>
         <source>  --stud-style &lt;id&gt;: Set the stud style (0=Plain, 1=Thin-Line Logo, 2=Outline Logo, 3=Sharp Top Logo, 4=Rounded Top Logo, 5=Flattened Logo, 6=High Contrast, 7=High Contrast Logo).
 </source>
         <translation>  --stud-style &lt;id&gt;: Nastaví styl výstupků (0=Prosté, 1=Logo tenkou čarou, 2=Logo obrysem, 3=Logo s ostrým vrškem, 4=Logo se zaobleným vrškem, 5=Zploštělé logo, 6=Vysoký kontrast, 7=Logo s vysokým kontrastem).
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="627"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="632"/>
         <source>  --export-wavefront [outfile.obj]: Export the model to Wavefront OBJ format.
 </source>
         <translation>  --export-wavefront [outfile.obj]: Exportuje model do formátu Wavefront OBJ.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="628"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="633"/>
         <source>  --export-3ds [outfile.3ds]: Export the model to 3D Studio 3DS format.
 </source>
         <translation>  --export-3ds [outfile.3ds]: Exportuje model do formátu 3D Studio 3DS.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="629"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="634"/>
         <source>  --export-collada [outfile.dae]: Export the model to COLLADA DAE format.
 </source>
         <translation>  --export-collada [outfile.dae]: Exportuje model do formátu COLLADA DAE.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="630"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="635"/>
         <source>  --export-kmz [outfile.kmz]: Export the model to KMZ format.
 </source>
         <translation>  --export-kmz [outfile.kmz]: Exportuje model do formátu KMZ.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="631"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="636"/>
         <source>  --kmz-geometry &lt;all|visible&gt;: Keep every part, or flatten to the visible surfaces with one mesh per color, in KMZ exports.
 </source>
         <translation>  --kmz-geometry &lt;all|visible&gt;: V exportech KMZ zachová každý díl, nebo zploští na viditelné povrchy s jednou sítí na barvu.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application_command_line.cpp" line="652"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="658"/>
         <source>  -h, --help: Display this help message and exit.
 </source>
         <translation>  -h, --help: Zobrazí tuto nápovědu a skončí.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="419"/>
+        <location filename="../../source/application/sw_application.cpp" line="420"/>
         <source>The %1 file &apos;%2&apos; was not found, using the bundled copy.</source>
         <translation>Soubor %1 &apos;%2&apos; nebyl nalezen, použije se přibalená kopie.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="479"/>
+        <location filename="../../source/application/sw_application.cpp" line="480"/>
         <source>Error: model &apos;%1&apos; does not exist.
 </source>
         <translation>Chyba: model &apos;%1&apos; neexistuje.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="530"/>
-        <location filename="../../source/application/sw_application.cpp" line="545"/>
-        <location filename="../../source/application/sw_application.cpp" line="628"/>
-        <location filename="../../source/application/sw_application.cpp" line="662"/>
-        <location filename="../../source/application/sw_application.cpp" line="759"/>
-        <location filename="../../source/application/sw_application.cpp" line="788"/>
-        <location filename="../../source/application/sw_application.cpp" line="822"/>
-        <location filename="../../source/application/sw_application.cpp" line="856"/>
-        <location filename="../../source/application/sw_application.cpp" line="893"/>
-        <location filename="../../source/application/sw_application.cpp" line="927"/>
-        <location filename="../../source/application/sw_application.cpp" line="987"/>
+        <location filename="../../source/application/sw_application.cpp" line="531"/>
+        <location filename="../../source/application/sw_application.cpp" line="546"/>
+        <location filename="../../source/application/sw_application.cpp" line="629"/>
+        <location filename="../../source/application/sw_application.cpp" line="663"/>
+        <location filename="../../source/application/sw_application.cpp" line="760"/>
+        <location filename="../../source/application/sw_application.cpp" line="789"/>
+        <location filename="../../source/application/sw_application.cpp" line="823"/>
+        <location filename="../../source/application/sw_application.cpp" line="857"/>
+        <location filename="../../source/application/sw_application.cpp" line="894"/>
+        <location filename="../../source/application/sw_application.cpp" line="928"/>
+        <location filename="../../source/application/sw_application.cpp" line="988"/>
+        <location filename="../../source/application/sw_application.cpp" line="1018"/>
         <source>Saved &apos;%1&apos;.
 </source>
         <translation>Uloženo &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="695"/>
+        <location filename="../../source/application/sw_application.cpp" line="696"/>
         <source>LGEO parts need the standard POV-Ray include files such as colors.inc, which POV-Ray %1 could not find.
 </source>
         <translation>Díly LGEO potřebují standardní soubory include POV-Ray, například colors.inc, které POV-Ray %1 nenašel.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1205"/>
+        <location filename="../../source/application/sw_application.cpp" line="1238"/>
         <source>Could not reload the parts library &apos;%1&apos;.</source>
         <translation>Nelze znovu načíst knihovnu dílů &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1222"/>
+        <location filename="../../source/application/sw_application.cpp" line="1255"/>
         <source>Could not find a default parts library. &apos;%1&apos; stays in use until StudWorx starts again and offers to download one.</source>
         <translation>Nelze najít výchozí knihovnu dílů. &apos;%1&apos; zůstane používána, dokud se StudWorx znovu nespustí a nenabídne její stažení.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1241"/>
+        <location filename="../../source/application/sw_application.cpp" line="1274"/>
         <source>Load Part Connections</source>
         <translation>Načíst spojení dílů</translation>
     </message>
@@ -13573,7 +13612,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
     <name>swExplodeWidget</name>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_explode.ui"/>
-        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="34"/>
+        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="35"/>
         <source>Explode</source>
         <translation>Rozložit</translation>
     </message>
@@ -13687,62 +13726,62 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Zobrazit čáry</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="39"/>
+        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="40"/>
         <source>Collapse</source>
         <translation>Sbalit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="40"/>
+        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="41"/>
         <source>Put the exploded parts back</source>
         <translation>Vrátit rozložené díly zpět</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="44"/>
+        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="45"/>
         <source>Save Copy...</source>
         <translation>Uložit kopii...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="45"/>
+        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="46"/>
         <source>Save the exploded model to a separate file</source>
         <translation>Uložit rozložený model do samostatného souboru</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="35"/>
+        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="36"/>
         <source>Flatten the submodels and spread the parts away from the anchor</source>
         <translation>Zploštit podmodely a rozestoupit díly od kotvy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="36"/>
+        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="37"/>
         <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spread the parts on screen away from the anchor with the settings above. Submodels, and the submodels inside them, flatten into their parts first, so everything spreads in one undo step. While they are spread, changing a setting spreads them again. It is greyed out while every spread is 1.0, which leaves the parts in place.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Rozložit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Rozestoupí díly na obrazovce od kotvy podle nastavení výše. Podmodely a podmodely v nich se nejprve zploští na jednotlivé díly, takže se vše rozestoupí v jednom kroku zpět. Dokud jsou díly rozestoupeny, změna nastavení je rozestoupí znovu. Je zašedlé, dokud je každý rozestup 1,0, což nechává díly na místě.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="41"/>
+        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="42"/>
         <source>&lt;p&gt;&lt;b&gt;Collapse&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Put the exploded parts back where they were and the flattened submodels back together, like Undo. Any edit to the model puts the parts back too and keeps the submodels flattened.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Sbalit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vrátí rozložené díly tam, kde byly, a zploštěné podmodely zpět dohromady, stejně jako Zpět. Jakákoli úprava modelu také vrátí díly na místo a podmodely ponechá zploštěné.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="46"/>
+        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="47"/>
         <source>&lt;p&gt;&lt;b&gt;Save Copy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Explode the parts and save the whole project to a separate file, named after the open file with -exploded before the extension. The open file keeps its name, Collapse puts its submodels back, and the copy cannot replace it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Uložit kopii&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Rozloží díly a uloží celý projekt do samostatného souboru pojmenovaného podle otevřeného souboru s -exploded před příponou. Otevřený soubor si ponechá svůj název, Sbalit vrátí jeho podmodely zpět a kopie jej nemůže nahradit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="96"/>
+        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="97"/>
         <source>Focused Part: %1</source>
         <translation>Aktivní díl: %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="96"/>
+        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="97"/>
         <source>First Selected: %1</source>
         <translation>První vybraný: %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="96"/>
+        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="97"/>
         <source>Last Selected: %1</source>
         <translation>Poslední vybraný: %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="114"/>
+        <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="115"/>
         <source>No part is selected</source>
         <translation>Není vybrán žádný díl</translation>
     </message>
@@ -14564,7 +14603,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="124"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="349"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="357"/>
         <source>Next Step</source>
         <translation>Další krok</translation>
     </message>
@@ -14650,155 +14689,176 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="204"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="216"/>
+        <source>px</source>
+        <translation type="unfinished">px</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="206"/>
         <source>&amp;Height</source>
         <translation>&amp;Výška</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="218"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="222"/>
         <source>&amp;Landscape</source>
         <translation>Na ší&amp;řku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="220"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="224"/>
         <source>Make the image wider than it is tall.</source>
         <translation>Udělat obrázek širší, než je vysoký.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="225"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="229"/>
         <source>&amp;Portrait</source>
         <translation>Na &amp;výšku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="227"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="231"/>
         <source>Make the image taller than it is wide.</source>
         <translation>Udělat obrázek vyšší, než je široký.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="243"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="300"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="247"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="306"/>
         <source>Steps</source>
         <translation>Kroky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="244"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="248"/>
         <source>&lt;p&gt;&lt;b&gt;Steps&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose Current Step, All Steps, or Range. The range fields are used only for Range. Both ends are included, and they may be equal to save just one step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Kroky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte Aktuální krok, Všechny kroky nebo Rozsah. Pole rozsahu se používají jen pro Rozsah. Oba konce jsou zahrnuty a mohou být stejné, aby se uložil jen jeden krok.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="249"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="253"/>
         <source>&amp;Current Step</source>
         <translation>&amp;Aktuální krok</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="254"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="258"/>
         <source>&amp;All Steps</source>
         <translation>Vš&amp;echny kroky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="259"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="263"/>
         <source>&amp;Range</source>
         <translation>&amp;Rozsah</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="260"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="264"/>
         <source>Save the steps between the first and last step, including both.</source>
         <translation>Uložit kroky mezi prvním a posledním krokem včetně obou.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="270"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="275"/>
         <source>First step to save.</source>
         <translation>První krok k uložení.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="278"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="284"/>
         <source>Last step to save.</source>
         <translation>Poslední krok k uložení.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="298"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="304"/>
         <source>Turn the model, play the steps one per frame or play the saved poses of the main model.</source>
         <translation>Otáčet model, přehrát kroky po jednom na snímek, nebo přehrát uložené pózy hlavního modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="299"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="305"/>
         <source>Turntable</source>
         <translation>Otáčecí stůl</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="425"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="380"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="953"/>
+        <source>turns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="418"/>
+        <source>fps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="432"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="943"/>
+        <source>s</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="438"/>
         <source>Time one loop takes to play, from the frames, frame rate and hold.</source>
         <translation>Doba přehrání jedné smyčky, podle snímků, snímkové frekvence a prodlevy.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="430"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="443"/>
         <source>&lt;p&gt;&lt;b&gt;Framing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Current View saves exactly what the view shows. Fit Model aims at the model and moves the camera back until every part fits inside the image at every turntable angle and every pose, so animations turn in place without zooming and Joints animations hold still. Fit Each Step fits every step on its own parts. Fitted stills are centered on the model.&lt;/p&gt;&lt;p&gt;Center sets the point the turntable turns around and the camera aims at. World Origin is the 0, 0, 0 point of the scene, Model Origin is the middle of the model base and Model Center is the middle of the model.&lt;/p&gt;&lt;p&gt;Margin keeps empty space around the model. Bounds measures the fit on the whole model, so every step lines up, or only on the steps being saved.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Záběr&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Aktuální pohled uloží přesně to, co pohled ukazuje. Přizpůsobit modelu zaměří model a odsune kameru, dokud se každý díl vejde do obrázku při každém úhlu otáčecího stolu a v každé pozici, takže se animace otáčejí na místě bez přibližování a animace Kloubů zůstávají klidné. Přizpůsobit každému kroku přizpůsobí každý krok jeho vlastním dílům. Přizpůsobené snímky jsou vystředěny na model.&lt;/p&gt;&lt;p&gt;Střed nastavuje bod, kolem kterého se otáčecí stůl otáčí a na který kamera míří. Počátek světa je bod 0, 0, 0 scény, Počátek modelu je střed základny modelu a Střed modelu je střed modelu.&lt;/p&gt;&lt;p&gt;Okraj ponechává prázdné místo kolem modelu. Hranice měří přizpůsobení na celém modelu, takže všechny kroky lícují, nebo jen na ukládaných krocích.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="290"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="296"/>
         <source>Animated &amp;GIF</source>
         <translation>Animovaný &amp;GIF</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="306"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="312"/>
         <source>A&amp;xis</source>
         <translation>&amp;Osa</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="310"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="316"/>
         <source>Axis the model turns around.</source>
         <translation>Osa, kolem které se model otáčí.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="318"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="324"/>
         <source>&amp;Full Turn</source>
         <translation>&amp;Plná otáčka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="319"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="325"/>
         <source>Turn the model once all the way around.</source>
         <translation>Otočit model jednou dokola.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="323"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="329"/>
         <source>A&amp;ngle</source>
         <translation>Ú&amp;hel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="324"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="330"/>
         <source>Swing the model between two angles and back.</source>
         <translation>Kývat modelem mezi dvěma úhly a zpět.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="335"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="341"/>
         <source>First angle, measured from the current view.</source>
         <translation>První úhel, měřený od aktuálního pohledu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="336"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="342"/>
         <source>First Angle</source>
         <translation>První úhel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="344"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="351"/>
         <source>Last angle, measured from the current view.</source>
         <translation>Poslední úhel, měřený od aktuálního pohledu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="345"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="352"/>
         <source>Last Angle</source>
         <translation>Poslední úhel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="384"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="394"/>
         <source>Fra&amp;mes</source>
         <translation>Sním&amp;ky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="415"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="928"/>
         <source> s</source>
-        <translation> s</translation>
+        <translation type="vanished"> s</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="141"/>
@@ -14811,273 +14871,276 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Uloží obrázek do zvoleného souboru.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="284"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="290"/>
         <source>Animation</source>
         <translation>Animace</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="285"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="291"/>
         <source>&lt;p&gt;&lt;b&gt;Animation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Animated GIF saves an animation that loops forever.&lt;/p&gt;&lt;p&gt;Turntable turns the model around one axis through the Framing center, starting from the current view. Full Turn makes seamless revolutions. Angle swings between two angles from the current view and back again. Turns sets how many revolutions or swings make up the loop, so complex builds can be shown from every side more than once.&lt;/p&gt;&lt;p&gt;Next Step moves through the steps chosen in the Steps group while the model turns, one step every few turns or seconds. The loop ends on the last step and starts again.&lt;/p&gt;&lt;p&gt;Steps plays the chosen steps one per frame, for short animated instructions.&lt;/p&gt;&lt;p&gt;Joints blends through the poses of the main model saved in the Poses panel, in order and back to the first. Frames sets how many images go between two poses.&lt;/p&gt;&lt;p&gt;Frames sets how many images make up one turn and Frame Rate how many play each second. Hold Last keeps the finished model on screen before a loop through the steps restarts. Duration shows how long one loop plays.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Animace&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Animovaný GIF uloží animaci, která se opakuje donekonečna.&lt;/p&gt;&lt;p&gt;Otáčecí stůl otáčí model kolem jedné osy přes střed Záběru, počínaje aktuálním pohledem. Plná otáčka vytvoří plynulé otáčky. Úhel se kývá mezi dvěma úhly od aktuálního pohledu a zpět. Otáčky určují, kolik otáček nebo kyvů tvoří smyčku, takže složité stavby lze ukázat ze všech stran víckrát.&lt;/p&gt;&lt;p&gt;Další krok prochází kroky zvolené ve skupině Kroky, zatímco se model otáčí, jeden krok za několik otáček nebo sekund. Smyčka končí posledním krokem a začíná znovu.&lt;/p&gt;&lt;p&gt;Kroky přehrává zvolené kroky po jednom na snímek, pro krátké animované návody.&lt;/p&gt;&lt;p&gt;Klouby prolíná pózy hlavního modelu uložené v panelu Pózy, v pořadí a zpět k první. Snímky určují, kolik obrázků je mezi dvěma pózami.&lt;/p&gt;&lt;p&gt;Snímky určují, kolik obrázků tvoří jednu otáčku, a Snímková frekvence, kolik se jich přehraje za sekundu. Podržet poslední ponechá hotový model na obrazovce před novým spuštěním smyčky kroků. Doba ukazuje, jak dlouho se jedna smyčka přehrává.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="291"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="297"/>
         <source>Save a looping GIF of the model turning or of the steps.</source>
         <translation>Uložit opakující se GIF otáčejícího se modelu nebo kroků.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="294"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="300"/>
         <source>Motion</source>
         <translation>Pohyb</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="301"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="307"/>
         <source>Joints</source>
         <translation>Klouby</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="356"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="364"/>
         <source>Move to the next step while the model turns.</source>
         <translation>Přejít na další krok, zatímco se model otáčí.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="357"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="365"/>
         <source>Off</source>
         <translation>Vypnuto</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="358"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="366"/>
         <source>Turns</source>
         <translation>Otáčky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="359"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="367"/>
         <source>Seconds</source>
         <translation>Sekundy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="369"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="377"/>
         <source>Next Step Interval</source>
         <translation>Interval dalšího kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="373"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="382"/>
         <source>T&amp;urns</source>
         <translation>Otáč&amp;ky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="380"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="390"/>
         <source>Number of revolutions or swings in one loop (1 to 10).</source>
         <translation>Počet otáček nebo kyvů v jedné smyčce (1 až 10).</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="395"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="406"/>
         <source>Frame Rate</source>
         <translation>Snímková frekvence</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="402"/>
         <source> fps</source>
-        <translation> sn/s</translation>
+        <translation type="vanished"> sn/s</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="404"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="415"/>
         <source>Frames shown each second (0.5 to 50).</source>
         <translation>Snímků zobrazených za sekundu (0,5 až 50).</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="408"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="420"/>
         <source>Hol&amp;d Last</source>
         <translation>Podržet &amp;poslední</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="417"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="429"/>
         <source>Seconds the last step stays on screen before the loop restarts (0 to 10).</source>
         <translation>Sekundy, po které poslední krok zůstane na obrazovce před novým spuštěním smyčky (0 až 10).</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="421"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="434"/>
         <source>Duration</source>
         <translation>Doba</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="429"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="442"/>
         <source>Framing</source>
         <translation>Záběr</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="435"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="448"/>
         <source>Fram&amp;ing</source>
         <translation>&amp;Záběr</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="439"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="452"/>
         <source>How the camera frames the model.</source>
         <translation>Jak kamera zabírá model.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="440"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="453"/>
         <source>Current View</source>
         <translation>Aktuální pohled</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="441"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="454"/>
         <source>Fit Model</source>
         <translation>Přizpůsobit modelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="442"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="455"/>
         <source>Fit Each Step</source>
         <translation>Přizpůsobit každému kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="447"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="460"/>
         <source>C&amp;enter</source>
         <translation>S&amp;třed</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="451"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="464"/>
         <source>Point the camera aims at and the turntable turns around.</source>
         <translation>Bod, na který kamera míří a kolem kterého se otáčecí stůl otáčí.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="452"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="465"/>
         <source>World Origin</source>
         <translation>Počátek světa</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="453"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="466"/>
         <source>Model Origin</source>
         <translation>Počátek modelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="454"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="467"/>
         <source>Model Center</source>
         <translation>Střed modelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="459"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="472"/>
         <source>Margin</source>
         <translation>Okraj</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="464"/>
         <source> %</source>
-        <translation> %</translation>
+        <translation type="vanished"> %</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="466"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="479"/>
         <source>Empty space around the model, in percent of the image (0 to 50).</source>
         <translation>Prázdné místo kolem modelu v procentech obrázku (0 až 50).</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="470"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="482"/>
+        <source>%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="484"/>
         <source>&amp;Bounds</source>
         <translation>&amp;Hranice</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="474"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="488"/>
         <source>Parts the fit and center are measured on.</source>
         <translation>Díly, na nichž se měří přizpůsobení a střed.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="475"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="489"/>
         <source>Whole Model</source>
         <translation>Celý model</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="476"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="490"/>
         <source>Shown Steps</source>
         <translation>Zobrazené kroky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="482"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="496"/>
         <source>Background</source>
         <translation>Pozadí</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="483"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="497"/>
         <source>&lt;p&gt;&lt;b&gt;Background&lt;/b&gt;&lt;/p&gt;&lt;p&gt;View Color fills the background with the view background. Transparent leaves it empty so the model can be placed over other images.&lt;/p&gt;&lt;p&gt;Only PNG and GIF files keep transparency. GIF edges are hard, without smoothing.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Pozadí&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Barva pohledu vyplní pozadí pozadím pohledu. Průhledné ho nechá prázdné, takže model lze umístit přes jiné obrázky.&lt;/p&gt;&lt;p&gt;Průhlednost zachovávají jen soubory PNG a GIF. Okraje GIF jsou ostré, bez vyhlazení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="488"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="502"/>
         <source>&amp;View Color</source>
         <translation>&amp;Barva pohledu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="503"/>
         <source>Fill the background with the view background.</source>
         <translation>Vyplnit pozadí pozadím pohledu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="494"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="508"/>
         <source>&amp;Transparent</source>
         <translation>&amp;Průhledné</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="702"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="716"/>
         <source>Supported Image Files (*.bmp *.png *.jpg *.gif);;BMP Files (*.bmp);;PNG Files (*.png);;JPEG Files (*.jpg);;Animated GIF Files (*.gif);;All Files (*)</source>
         <translation>Podporované soubory obrázků (*.bmp *.png *.jpg *.gif);;Soubory BMP (*.bmp);;Soubory PNG (*.png);;Soubory JPEG (*.jpg);;Soubory animovaného GIF (*.gif);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="880"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="894"/>
         <source>Leave the background transparent.</source>
         <translation>Nechat pozadí průhledné.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="882"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="896"/>
         <source>Transparent backgrounds need a PNG or GIF file.</source>
         <translation>Průhledná pozadí vyžadují soubor PNG nebo GIF.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="930"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="945"/>
         <source>Seconds each step shows (0.1 to 60).</source>
         <translation>Sekundy, po které se každý krok zobrazuje (0,1 až 60).</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="939"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="955"/>
         <source>Turns each step shows (1 to 10).</source>
         <translation>Otáčky, po které se každý krok zobrazuje (1 až 10).</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="955"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="972"/>
         <source>Steps play one per frame, set by the Steps group.</source>
         <translation>Kroky se přehrávají po jednom na snímek, podle skupiny Kroky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="961"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="979"/>
         <source>Number of images in one turn (2 to 360).</source>
         <translation>Počet obrázků v jedné otáčce (2 až 360).</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="961"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="979"/>
         <source>Number of images between two poses (2 to 360).</source>
         <translation>Počet obrázků mezi dvěma pózami (2 až 360).</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="985"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1005"/>
         <source>%1 s</source>
         <translation>%1 s</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1077"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1157"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1097"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1177"/>
         <source>Step %1 of %2</source>
         <translation>Krok %1 z %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1087"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1107"/>
         <source>%1 frames</source>
         <translation>%1 snímků</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1179"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1199"/>
         <source>Pause the animation.</source>
         <translation>Pozastavit animaci.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1187"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1207"/>
         <source>Play the animation.</source>
         <translation>Přehrát animaci.</translation>
     </message>
@@ -15099,7 +15162,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Šířka:</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="200"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="201"/>
         <source>Width of the saved image, in pixels (1 to 32768).</source>
         <translation>Šířka uloženého obrázku v pixelech (1 až 32768).</translation>
     </message>
@@ -15108,7 +15171,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Výška:</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="210"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="213"/>
         <source>Height of the saved image, in pixels (1 to 32768).</source>
         <translation>Výška uloženého obrázku v pixelech (1 až 32768).</translation>
     </message>
@@ -15122,7 +15185,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Krokový rozsah</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="255"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="259"/>
         <source>Save an image for every step in the active model.</source>
         <translation>Uložte obrázek pro každý krok v aktivním modelu.</translation>
     </message>
@@ -15131,7 +15194,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Všechny kroky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="250"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="254"/>
         <source>Save only the current step.</source>
         <translation>Uložte pouze aktuální krok.</translation>
     </message>
@@ -15158,7 +15221,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">První krok k uložení, když je vybrána možnost Vlastní rozsah.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="271"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="276"/>
         <source>First Step</source>
         <translation>První krok</translation>
     </message>
@@ -15172,7 +15235,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">Poslední krok k uložení, když je vybrána možnost Vlastní rozsah.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="279"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="285"/>
         <source>Last Step</source>
         <translation>Poslední krok</translation>
     </message>
@@ -15181,7 +15244,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Chyba</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="681"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="695"/>
         <source>Output file cannot be empty.</source>
         <oldsource>Output File cannot be empty.</oldsource>
         <translation>Výstupní soubor nesmí být prázdný.</translation>
@@ -15207,7 +15270,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Poslední krok musí být větší než první krok.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="702"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="716"/>
         <source>Save Image File</source>
         <translation>Uložit soubor obrázku</translation>
     </message>
@@ -15271,7 +15334,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
 <context>
     <name>swInstructionsDialog</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="19"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="20"/>
         <source>Instructions</source>
         <translation>Pokyny</translation>
     </message>
@@ -15291,27 +15354,27 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Tisknou se stránky...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="113"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="115"/>
         <source>Show or hide the Print panel to print the instruction pages</source>
         <translation>Zobrazit nebo skrýt panel Tisk pro tisk stránek s pokyny</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="116"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="118"/>
         <source>Export HTML</source>
         <translation>Export HTML</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="117"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="119"/>
         <source>Export the instruction pages as HTML pages and images</source>
         <translation>Exportovat stránky s pokyny jako stránky HTML a obrázky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="127"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="142"/>
         <source>Ctrl+Shift+E</source>
         <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="129"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="144"/>
         <source>Show or hide the Editor panel to inspect and edit the text of the model file</source>
         <translation>Zobrazit nebo skrýt panel Editor pro kontrolu a úpravu textu souboru modelu</translation>
     </message>
@@ -15320,12 +15383,12 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">%1 - Obálka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="222"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="237"/>
         <source>%1 - Bill of Materials</source>
         <translation>%1 - Soupis materiálu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="226"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="241"/>
         <source>%1 - Blank</source>
         <translation>%1 - Prázdná</translation>
     </message>
@@ -15334,52 +15397,52 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Lišta stránek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přejděte na první, předchozí, další nebo poslední stránku, nebo rovnou na obálku či soupis materiálu, které jsou zašedlé, dokud jsou tyto stránky vypnuté. Stránka kroku vloží prázdný krok před aktuální stránku, Prázdná stránka vloží před ni prázdnou stránku a Odebrat stránku odebere prázdnou stránku nebo stránku prázdných kroků. Políčko vpravo ukazuje aktuální stránku, zadáním čísla na ni přejdete. Zkratky První, Předchozí, Další a Poslední z časové osy listují stránkami také, dokud má fokus stránka nebo panel Stránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="398"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="468"/>
         <source>&lt;p&gt;&lt;b&gt;Page Bar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The First, Previous, Next and Last step shortcuts turn the pages too while the page or the Pages panel has focus.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Lišta stránek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přejděte na první, předchozí, další nebo poslední stránku, nebo rovnou na obálku či soupis materiálu, které jsou zašedlé, dokud jsou tyto stránky vypnuté. Stránka kroku vloží prázdný krok před aktuální stránku, Prázdná stránka vloží před ni prázdnou stránku a Odebrat stránku odebere prázdnou stránku nebo stránku prázdných kroků. Políčko vpravo ukazuje aktuální stránku, zadáním čísla na ni přejdete. Zkratky První, Předchozí, Další a Poslední pro kroky listují stránkami také, dokud má fokus stránka nebo panel Stránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="478"/>
         <source>&lt;p&gt;&lt;b&gt;Undo and Redo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Undo takes back your last change to the instructions, Redo puts it back. Quick changes to the same setting count as one change. The main window Undo and Redo shortcuts work here too.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zpět a Znovu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zpět vrátí vaši poslední změnu v pokynech, Znovu ji obnoví. Rychlé změny téhož nastavení se počítají jako jedna změna. Zkratky Zpět a Znovu z hlavního okna fungují i zde.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="410"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="480"/>
         <source>&amp;Undo</source>
         <translation>&amp;Zpět</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="410"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="480"/>
         <source>Take back the last change to the instructions</source>
         <translation>Vrátit poslední změnu v pokynech</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="412"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="482"/>
         <source>Re&amp;do</source>
         <translation>Znov&amp;u</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="412"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="482"/>
         <source>Put back the last change that was taken back</source>
         <translation>Obnovit poslední vrácenou změnu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="424"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="494"/>
         <source>&amp;First</source>
         <translation>&amp;První</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="424"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="494"/>
         <source>Go to the first page</source>
         <translation>Přejít na první stránku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="425"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="495"/>
         <source>&amp;Previous</source>
         <translation>&amp;Předchozí</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="425"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="495"/>
         <source>Go to the previous page</source>
         <translation>Přejít na předchozí stránku</translation>
     </message>
@@ -15392,97 +15455,107 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Přejít na stránku obálky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="218"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="233"/>
         <source>%1 - Front Cover</source>
         <translation>%1 - Přední obálka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="230"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="245"/>
         <source>%1 - Back Cover</source>
         <translation>%1 - Zadní obálka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="426"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="299"/>
+        <source>%1 - Assembly - %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="301"/>
+        <source>%1 - %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="496"/>
         <source>Fr&amp;ont Cover</source>
         <translation>&amp;Přední obálka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="426"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="496"/>
         <source>Go to the front cover</source>
         <translation>Přejít na přední obálku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="427"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="497"/>
         <source>&amp;Step Page</source>
         <translation>&amp;Stránka kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="427"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="497"/>
         <source>Insert an empty step before the current page</source>
         <translation>Vložit prázdný krok před aktuální stránku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="428"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="498"/>
         <source>Bl&amp;ank Page</source>
         <translation>Prázd&amp;ná stránka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="428"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="498"/>
         <source>Insert a blank page before the current page</source>
         <translation>Vložit prázdnou stránku před aktuální stránku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="429"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="499"/>
         <source>&amp;Remove Page</source>
         <translation>&amp;Odebrat stránku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="429"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="499"/>
         <source>Remove the current page when it is blank or holds only empty steps</source>
         <translation>Odebrat aktuální stránku, pokud je prázdná nebo obsahuje jen prázdné kroky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="430"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="500"/>
         <source>&amp;Bill of Materials</source>
         <translation>&amp;Soupis materiálu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="430"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="500"/>
         <source>Go to the bill of materials page</source>
         <translation>Přejít na stránku soupisu materiálu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="431"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="501"/>
         <source>Bac&amp;k Cover</source>
         <translation>&amp;Zadní obálka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="431"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="501"/>
         <source>Go to the back cover</source>
         <translation>Přejít na zadní obálku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="432"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="502"/>
         <source>&amp;Next</source>
         <translation>&amp;Další</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="432"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="502"/>
         <source>Go to the next page</source>
         <translation>Přejít na další stránku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="433"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="503"/>
         <source>&amp;Last</source>
         <translation>Po&amp;slední</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="433"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="503"/>
         <source>Go to the last page</source>
         <translation>Přejít na poslední stránku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="439"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="509"/>
         <source>Current page out of all pages, type a number to go there</source>
         <translation>Aktuální stránka z celkového počtu stránek, zadáním čísla na ni přejdete</translation>
     </message>
@@ -15502,63 +15575,63 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">Horizontální</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="213"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="228"/>
         <source>Page %1</source>
         <translation>Stránka %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="537"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="613"/>
         <source>Parts List</source>
         <translation>Seznam dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="555"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="623"/>
         <source>%1 / %2</source>
         <translation>%1 / %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="684"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="793"/>
         <source>Add Notice</source>
         <translation>Přidat upozornění</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="684"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="793"/>
         <source>Edit Notice</source>
         <translation>Upravit upozornění</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="687"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="796"/>
         <source>Notice &amp;Text</source>
         <translation>&amp;Text upozornění</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="693"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="802"/>
         <source>Text &amp;File</source>
         <translation>Textový &amp;soubor</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="696"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="805"/>
         <source>Text file used instead of the typed text, relative to the model file.</source>
         <translation>Textový soubor použitý místo zadaného textu, relativně k souboru modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="711"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="820"/>
         <source>Choose the text file.</source>
         <translation>Vybrat textový soubor.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="701"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="725"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="810"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="834"/>
         <source>Choose Text File</source>
         <translation>Vybrat textový soubor</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="711"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="820"/>
         <source>Remove the text file and go back to the typed text.</source>
         <translation>Odebrat textový soubor a vrátit se k zadanému textu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="725"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="834"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation>Textové soubory (*.txt);;Všechny soubory (*)</translation>
     </message>
@@ -15567,7 +15640,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Text upozornění</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_instructions.cpp" line="1434"/>
+        <location filename="../../source/transput/sw_instructions.cpp" line="1554"/>
         <source>%1 PIECES</source>
         <translation>%1 DÍLŮ</translation>
     </message>
@@ -15577,7 +15650,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="273"/>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="292"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="474"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="468"/>
         <source>Editor</source>
         <translation>Editor</translation>
     </message>
@@ -15607,7 +15680,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Zahodit úpravy a znovu zobrazit text modelu.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="474"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="468"/>
         <source>The text was not applied. %n line(s) are not valid LDraw syntax:</source>
         <translation>
             <numerusform>Text nebyl použit. %n řádek není platná syntaxe LDraw:</numerusform>
@@ -15637,17 +15710,16 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Text souboru modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="302"/>
         <source>Save</source>
-        <translation>Uložit</translation>
+        <translation type="vanished">Uložit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="454"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="448"/>
         <source>Line %1: %2</source>
         <translation>Řádek %1: %2</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="471"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="465"/>
         <source>And %n more.</source>
         <translation>
             <numerusform>A ještě %n.</numerusform>
@@ -15659,122 +15731,122 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
 <context>
     <name>swInstructionsGridWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="563"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="617"/>
         <source>Grid</source>
         <translation>Mřížka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="564"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="618"/>
         <source>&lt;p&gt;&lt;b&gt;Grid&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The page grid helps aligning dragged elements, it is never printed. Show it on screen, snap dragged elements to it or to the anchors of the other elements, choose its area, the size of its main unit and the fractions it is split into, and the colors of its lines and of the margins.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Mřížka&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mřížka stránky pomáhá zarovnávat přetahované prvky, nikdy se netiskne. Zobrazte ji na obrazovce, přichytávejte k ní přetahované prvky nebo ke kotvám ostatních prvků, zvolte její oblast, velikost hlavní jednotky a zlomky, na které se dělí, a barvy jejích čar a okrajů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="584"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="638"/>
         <source>Show Grid</source>
         <translation>Zobrazit mřížku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="584"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="638"/>
         <source>Draw the page grid on screen, it is never printed.</source>
         <translation>Vykreslit mřížku stránky na obrazovce, nikdy se netiskne.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="585"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="639"/>
         <source>Snap to Grid</source>
         <translation>Přichytit k mřížce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="593"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="598"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="647"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="652"/>
         <source>Snap to Anchors</source>
         <translation>Přichytit ke kotvám</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="585"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="639"/>
         <source>Snap dragged elements to the page grid, this turns Snap to Anchors off.</source>
         <translation>Přichytit přetahované prvky k mřížce stránky, tím se vypne Přichytit ke kotvám.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="596"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="650"/>
         <source>Snap dragged elements to the anchors of the page area and the other elements, this turns Snap to Grid off.</source>
         <translation>Přichytit přetahované prvky ke kotvám oblasti stránky a ostatních prvků, tím se vypne Přichytit k mřížce.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="597"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="651"/>
         <source>&lt;p&gt;&lt;b&gt;Snap to Anchors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;While an element is dragged, its corners, edge centers and center snap to those of the page area and of the other elements when they come within a few pixels, on each axis separately. Snap to Anchors and Snap to Grid exclude each other, turning one on turns the other off. Show Element Anchors in the Properties options shows the anchors.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přichytit ke kotvám&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Při přetahování prvku se jeho rohy, středy hran a střed přichytí k těm z oblasti stránky a ostatních prvků, když se dostanou na pár pixelů, v každé ose zvlášť. Přichytit ke kotvám a Přichytit k mřížce se vzájemně vylučují, zapnutím jednoho se druhé vypne. Zobrazit kotvy prvků ve volbách Vlastností kotvy zobrazí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="608"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="616"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="662"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="670"/>
         <source>Grid Area</source>
         <translation>Oblast mřížky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="612"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="666"/>
         <source>Within Margins</source>
         <translation>V okrajích</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="613"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="667"/>
         <source>Full Page</source>
         <translation>Celá stránka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="614"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="668"/>
         <source>Choose whether the grid covers the area inside the margins or the full page.</source>
         <translation>Zvolte, zda mřížka pokrývá oblast uvnitř okrajů, nebo celou stránku.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="626"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="629"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="635"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="680"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="683"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="689"/>
         <source>Grid Size</source>
         <translation>Velikost mřížky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="633"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="687"/>
         <source>Main unit of the grid drawn with the primary color, in the margin units of the page setup.</source>
         <translation>Hlavní jednotka mřížky kreslená primární barvou, v jednotkách okrajů nastavení stránky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="645"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="653"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="699"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="708"/>
         <source>Divisions</source>
         <translation>Dělení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="651"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="706"/>
         <source>Split each grid unit into fractions drawn with the secondary color, dragged elements snap to the fractions.</source>
         <translation>Rozdělit každou jednotku mřížky na zlomky kreslené sekundární barvou, přetahované prvky se přichytávají ke zlomkům.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="685"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="740"/>
         <source>Primary Color</source>
         <translation>Primární barva</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="685"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="740"/>
         <source>Color of the grid lines at every grid unit.</source>
         <translation>Barva čar mřížky na každé jednotce mřížky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="686"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="741"/>
         <source>Secondary Color</source>
         <translation>Sekundární barva</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="686"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="741"/>
         <source>Color of the grid lines at the fractions of a grid unit.</source>
         <translation>Barva čar mřížky na zlomcích jednotky mřížky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="687"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="742"/>
         <source>Margin Color</source>
         <translation>Barva okrajů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="687"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="742"/>
         <source>Color of the dashed outline of the page margins.</source>
         <translation>Barva čárkovaného obrysu okrajů stránky.</translation>
     </message>
@@ -15782,8 +15854,8 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
 <context>
     <name>swInstructionsPageListWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2857"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2867"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4077"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4087"/>
         <source>Pages</source>
         <translation>Stránky</translation>
     </message>
@@ -15792,32 +15864,32 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Stránky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte stránku, aby se zobrazila. Kliknutím pravým tlačítkem na stránku vložíte nebo odeberete prázdné stránky kolem ní.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2809"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4029"/>
         <source>Lock Page: keep every element where it is and refuse removal</source>
         <translation>Zamknout stránku: ponechat každý prvek na místě a zakázat odebrání</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2810"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4030"/>
         <source>Freeze Page: keep the page settings when changes are made for all pages</source>
         <translation>Zmrazit stránku: ponechat nastavení stránky při změnách pro všechny stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2858"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4078"/>
         <source>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a page to show it. Right-click a page to insert or remove blank pages around it.&lt;/p&gt;&lt;p&gt;Click the lock beside a page to keep its elements where they are. A locked page can&apos;t be removed.&lt;/p&gt;&lt;p&gt;Click the snowflake to freeze a page. It keeps its own copy of the settings, so changes for all pages skip it. Unfreeze it to follow the other pages again.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Stránky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte stránku, aby se zobrazila. Kliknutím pravým tlačítkem na stránku vložíte nebo odeberete prázdné stránky kolem ní.&lt;/p&gt;&lt;p&gt;Klepněte na zámek vedle stránky, aby její prvky zůstaly na místě. Zamčenou stránku nelze odebrat.&lt;/p&gt;&lt;p&gt;Klepněte na vločku pro zmrazení stránky. Stránka si ponechá vlastní kopii nastavení, takže ji změny pro všechny stránky vynechají. Po rozmrazení bude opět následovat ostatní stránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2888"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4108"/>
         <source>Insert Blank Page Before</source>
         <translation>Vložit prázdnou stránku před</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2896"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4116"/>
         <source>Insert Blank Page After</source>
         <translation>Vložit prázdnou stránku za</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2904"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4124"/>
         <source>Remove Blank Page</source>
         <translation>Odebrat prázdnou stránku</translation>
     </message>
@@ -15830,182 +15902,283 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
 <context>
     <name>swInstructionsPageWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1206"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1730"/>
         <source>Units of the rulers, the page units or the document units when they are in use.</source>
         <translation>Jednotky pravítek, jednotky stránky nebo jednotky dokumentu, jsou-li používány.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2082"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2977"/>
         <source>Anchor</source>
         <translation>Kotva</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2083"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2978"/>
         <source>Top Left</source>
         <translation>Vlevo nahoře</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2083"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2978"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3209"/>
         <source>Top</source>
         <translation>Nahoře</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2083"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2978"/>
         <source>Top Right</source>
         <translation>Vpravo nahoře</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2083"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2978"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3209"/>
         <source>Right</source>
         <translation>Vpravo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2083"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2978"/>
         <source>Bottom Right</source>
         <translation>Vpravo dole</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2083"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2978"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3209"/>
         <source>Bottom</source>
         <translation>Dole</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2083"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2978"/>
         <source>Bottom Left</source>
         <translation>Vlevo dole</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2083"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2978"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3209"/>
         <source>Left</source>
         <translation>Vlevo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2088"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2983"/>
         <source>Automatic</source>
         <translation>Automaticky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2112"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3009"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3198"/>
         <source>Default</source>
         <translation>Výchozí</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2129"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3026"/>
         <source>Style</source>
         <translation>Styl</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2129"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3026"/>
         <source>Line</source>
         <translation>Čára</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2129"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3026"/>
         <source>Callout Wedge</source>
         <translation>Klínový odkaz</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2134"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3026"/>
+        <source>L Shape</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3026"/>
+        <source>Z Shape</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3026"/>
+        <source>U Shape</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3031"/>
         <source>Tip</source>
         <translation>Hrot</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2134"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3031"/>
         <source>Dot</source>
         <translation>Tečka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2134"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3031"/>
         <source>Arrow</source>
         <translation>Šipka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2144"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3031"/>
+        <source>Hollow Dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3041"/>
+        <source>Reset Bend</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3052"/>
         <source>Remove Pointer</source>
         <translation>Odebrat ukazatel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2151"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3062"/>
         <source>Add Notice...</source>
         <translation>Přidat upozornění...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2169"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3074"/>
+        <source>Add Watermark Text...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3102"/>
+        <source>Add Watermark Image...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3126"/>
         <source>Add Pointer</source>
         <translation>Přidat ukazatel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2181"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3137"/>
+        <source>Remove Element</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3160"/>
+        <source>This Page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3161"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3239"/>
+        <source>Header Band</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3162"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3240"/>
+        <source>Footer Band</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3163"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3241"/>
+        <source>Left Band</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3164"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3242"/>
+        <source>Right Band</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3165"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3243"/>
+        <source>Watermark</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3192"/>
+        <source>Align</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3209"/>
+        <source>Center</source>
+        <translation type="unfinished">Střed</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3209"/>
+        <source>Middle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3272"/>
         <source>Edit Notice...</source>
         <translation>Upravit upozornění...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2191"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3296"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3322"/>
+        <source>Edit Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3137"/>
         <source>Remove Notice</source>
         <translation>Odebrat upozornění</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2199"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3085"/>
         <source>Images (*.png *.jpg *.jpeg *.svg *.bmp *.gif *.webp);;All Files (*)</source>
         <translation>Obrázky (*.png *.jpg *.jpeg *.svg *.bmp *.gif *.webp);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2205"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3089"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3102"/>
         <source>Add Image...</source>
         <translation>Přidat obrázek...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2207"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3091"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3104"/>
         <source>Add Image</source>
         <translation>Přidat obrázek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2220"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3285"/>
         <source>Change Image...</source>
         <translation>Změnit obrázek...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2222"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3287"/>
         <source>Change Image</source>
         <translation>Změnit obrázek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2230"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3154"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3232"/>
         <source>Show On</source>
         <translation>Zobrazit na</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2234"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3236"/>
         <source>Front Cover</source>
         <translation>Přední obálka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2235"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3237"/>
         <source>Back Cover</source>
         <translation>Zadní obálka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2236"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3238"/>
         <source>Both Covers</source>
         <translation>Obě obálky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2256"/>
         <source>Size...</source>
-        <translation>Velikost...</translation>
+        <translation type="vanished">Velikost...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2259"/>
         <source>Image Size</source>
-        <translation>Velikost obrázku</translation>
+        <translation type="vanished">Velikost obrázku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2259"/>
         <source>Width in percent of the page width:</source>
-        <translation>Šířka v procentech šířky stránky:</translation>
+        <translation type="vanished">Šířka v procentech šířky stránky:</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2267"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3137"/>
         <source>Remove Image</source>
         <translation>Odebrat obrázek</translation>
     </message>
@@ -16069,6 +16242,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="22"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="166"/>
         <source>Left</source>
         <translation>Vlevo</translation>
     </message>
@@ -16079,6 +16253,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="24"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="167"/>
         <source>Right</source>
         <translation>Vpravo</translation>
     </message>
@@ -16152,12 +16327,12 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Vztaženo k</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="135"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="134"/>
         <source>Place the element: %1.</source>
         <translation>Umístit prvek: %1.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="102"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="111"/>
         <source>Reset Position</source>
         <translation>Obnovit polohu</translation>
     </message>
@@ -16167,29 +16342,29 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>&lt;p&gt;&lt;b&gt;Umístění&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte prvek na stránce, abyste jej umístili, přesunuli nebo zamkli. Vybraný prvek stránky umístěte do předdefinované oblasti: model kroku, číslo kroku, seznam dílů, model obálky, název obálky, autor obálky, počty dílů, náhled podmodelu nebo soupis materiálu. Prvky kroku se umísťují do části stránky, kterou jejich krok získá z rozdělení, nebo mimo druhý prvek kroku. Umístění platí pro všechny stránky.&lt;/p&gt;&lt;p&gt;Počet v náhledu podmodelu a množství v seznamu dílů jsou kolem svého obrázku: vnitřní tlačítka je umístí na něj, vnější vedle něj.&lt;/p&gt;&lt;p&gt;Každý prvek lze také přetáhnout na stránce, zachová si vzdálenost od svého umístění. Zamknutý prvek si zachová pozici bez ohledu na umístění a nepřetahuje se.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="104"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="113"/>
         <source>Move the dragged element back onto its placement.</source>
         <translation>Vrátit přetažený prvek zpět na jeho umístění.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="112"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="100"/>
         <source>Lock Position</source>
         <translation>Zamknout polohu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="115"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="103"/>
         <source>Keep the element where it is, placements and dragging no longer move it.</source>
         <translation>Ponechat prvek, kde je, umístění a přetahování jím už nehýbou.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="69"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="452"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="504"/>
         <source>Step Number</source>
         <translation>Číslo kroku</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="70"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="456"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="508"/>
         <source>Parts List</source>
         <translation>Seznam dílů</translation>
     </message>
@@ -16209,77 +16384,117 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Umístit prvek k objektu %1.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="139"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="138"/>
         <source>Cover texts, part counts, the submodel preview and page numbers go against the paper edge, past the margins, where many printers cannot print.</source>
         <translation>Texty obálky, počty dílů, náhled podmodelu a čísla stránek jsou u hrany papíru, za okraji stránky, kam mnoho tiskáren netiskne.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="410"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="163"/>
+        <source>Up Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="164"/>
+        <source>Up</source>
+        <translation type="unfinished">Nahoru</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="165"/>
+        <source>Up Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="168"/>
+        <source>Down Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="169"/>
+        <source>Down</source>
+        <translation type="unfinished">Dolů</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="170"/>
+        <source>Down Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="183"/>
+        <source>Move the selection %1 by one grid division, Shift moves a whole grid unit, past the paper edge if needed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="185"/>
+        <source>Move %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="461"/>
         <source>%1 Elements Selected</source>
         <translation>Vybrané prvky: %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="460"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="512"/>
         <source>Cover Title</source>
         <translation>Název na obálce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="464"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="516"/>
         <source>Cover Author</source>
         <translation>Autor na obálce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="468"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="520"/>
         <source>Bill of Materials</source>
         <translation>Soupis materiálu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="472"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="524"/>
         <source>Step Model</source>
         <translation>Model kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="476"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="528"/>
         <source>Cover Model</source>
         <translation>Model obálky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="480"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="532"/>
         <source>Page Number</source>
         <translation>Číslo stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="487"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="539"/>
         <source>Part Count</source>
         <translation>Počet dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="491"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="543"/>
         <source>Submodel Preview</source>
         <translation>Náhled podmodelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="495"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="547"/>
         <source>Quantity</source>
         <translation>Množství</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="499"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="551"/>
         <source>Notice</source>
         <translation>Upozornění</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="503"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="555"/>
         <source>Image</source>
         <translation>Obrázek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="507"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="559"/>
         <source>Pointer</source>
         <translation>Ukazatel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="511"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="563"/>
         <source>No Element Selected</source>
         <translation>Není vybrán žádný prvek</translation>
     </message>
@@ -16464,7 +16679,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">Všechny kroky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1087"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1346"/>
         <source>Apply to All Pages</source>
         <translation>Použít na všechny stránky</translation>
     </message>
@@ -16699,87 +16914,87 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Obnovit výchozí vzhled pokynů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="413"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="412"/>
         <source>Full Page</source>
         <translation>Celá stránka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="413"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="412"/>
         <source>Give the page a single step, without dividers.</source>
         <translation>Dát stránce jediný krok, bez oddělovačů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="414"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="413"/>
         <source>Horizontal Halves</source>
         <translation>Vodorovné poloviny</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="414"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="413"/>
         <source>Split the page in two rows with a horizontal divider.</source>
         <translation>Rozdělit stránku na dva řádky vodorovným oddělovačem.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="415"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="414"/>
         <source>Horizontal Thirds</source>
         <translation>Vodorovné třetiny</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="415"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="414"/>
         <source>Split the page in three rows with horizontal dividers.</source>
         <translation>Rozdělit stránku na tři řádky vodorovnými oddělovači.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="416"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="415"/>
         <source>Horizontal Quarters</source>
         <translation>Vodorovné čtvrtiny</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="416"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="415"/>
         <source>Split the page in four rows with horizontal dividers.</source>
         <translation>Rozdělit stránku na čtyři řádky vodorovnými oddělovači.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="417"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="416"/>
         <source>Vertical Halves</source>
         <translation>Svislé poloviny</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="417"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="416"/>
         <source>Split the page in two columns with a vertical divider.</source>
         <translation>Rozdělit stránku na dva sloupce svislým oddělovačem.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="418"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="417"/>
         <source>Vertical Thirds</source>
         <translation>Svislé třetiny</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="418"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="417"/>
         <source>Split the page in three columns with vertical dividers.</source>
         <translation>Rozdělit stránku na tři sloupce svislými oddělovači.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="419"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="418"/>
         <source>Vertical Quarters</source>
         <translation>Svislé čtvrtiny</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="419"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="418"/>
         <source>Split the page in four columns with vertical dividers.</source>
         <translation>Rozdělit stránku na čtyři sloupce svislými oddělovači.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="420"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="419"/>
         <source>Quarters</source>
         <translation>Čtvrtiny</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="420"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="419"/>
         <source>Split the page in two rows and two columns with dividers both ways.</source>
         <translation>Rozdělit stránku na dva řádky a dva sloupce oddělovači v obou směrech.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="425"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="424"/>
         <source>Document</source>
         <translation>Dokument</translation>
     </message>
@@ -16788,7 +17003,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Dokument&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Jedno písmo pro veškerý text pokynů a projekci modelů kroků a obálky. Nastavení pokynů, upozornění a ukazatele se ukládají do souboru modelu, nastavení stránky a mřížka do předvoleb.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="428"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="427"/>
         <source>Use Document Font</source>
         <translation>Použít písmo dokumentu</translation>
     </message>
@@ -16797,7 +17012,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Použít jedno písmo pro veškerý text v pokynech.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="432"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="431"/>
         <source>Document Font</source>
         <translation>Písmo dokumentu</translation>
     </message>
@@ -16806,37 +17021,37 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Písmo veškerého textu, dokud se používá písmo dokumentu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="435"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="434"/>
         <source>Model Projection</source>
         <translation>Projekce modelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="435"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="434"/>
         <source>Show the step and cover models in perspective or orthographic, whatever the model view shows.</source>
         <translation>Zobrazit modely kroků a obálky perspektivně nebo pravoúhle, bez ohledu na pohled modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="435"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="434"/>
         <source>Perspective</source>
         <translation>Perspektivní</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="435"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="434"/>
         <source>Orthographic</source>
         <translation>Pravoúhlá</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="449"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="452"/>
         <source>Color and opacity of the outline around the parts added in each step.</source>
         <translation>Barva a krytí obrysu kolem dílů přidaných v každém kroku.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="451"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="454"/>
         <source>Highlight Width</source>
         <translation>Šířka zvýraznění</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="451"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="454"/>
         <source>Thickness of the outline around the parts added in each step.</source>
         <translation>Tloušťka obrysu kolem dílů přidaných v každém kroku.</translation>
     </message>
@@ -16853,37 +17068,37 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Zobrazit obálku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="457"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="460"/>
         <source>Start the instructions with a page showing the model title and the finished model.</source>
         <translation>Začít pokyny stránkou s názvem modelu a hotovým modelem.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="468"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="475"/>
         <source>Title on the cover, empty for the model description or name.</source>
         <translation>Název na obálce, prázdné pro popis nebo název modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="470"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="477"/>
         <source>Cover Title File</source>
         <translation>Soubor názvu obálky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="470"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="477"/>
         <source>Text file holding the cover title, used instead of the typed title, relative to the model file.</source>
         <translation>Textový soubor s názvem obálky, použitý místo zadaného názvu, relativně k souboru modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="477"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="493"/>
         <source>Show Author</source>
         <translation>Zobrazit autora</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="477"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="493"/>
         <source>Show the model author on the cover.</source>
         <translation>Zobrazit autora modelu na obálce.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="462"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="469"/>
         <source>Blank Page After Cover</source>
         <translation>Prázdná stránka za obálkou</translation>
     </message>
@@ -16893,219 +17108,435 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>&lt;p&gt;&lt;b&gt;Vlastnosti&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Upravte, jak stránky s pokyny vypadají. Každá sekce začíná sbalená, vyberte prvek na stránce, abyste otevřeli jeho sekci a sbalili ostatní. Kliknutím pravým tlačítkem na stránku přidáte upozornění a ukazatele. Změny platí pro všechny stránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="425"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="424"/>
         <source>&lt;p&gt;&lt;b&gt;Document&lt;/b&gt;&lt;/p&gt;&lt;p&gt;One typeface and one font size for all text of the instructions, each usable on its own, and the projection of the step and cover models. The instructions settings, notices and pointers are saved in the model file, the page setup and grid in the preferences.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Dokument&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Jedno písmo a jedna velikost písma pro veškerý text pokynů, každé použitelné samostatně, a projekce modelů kroků a obálky. Nastavení pokynů, upozornění a ukazatele se ukládají do souboru modelu, nastavení stránky a mřížka do předvoleb.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="428"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="427"/>
         <source>Use the document typeface for all text in the instructions, each text keeps its size.</source>
         <translation>Použít písmo dokumentu pro veškerý text pokynů, každý text si ponechá svou velikost.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="429"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="428"/>
         <source>Use Document Font Size</source>
         <translation>Použít velikost písma dokumentu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="429"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="428"/>
         <source>Use the document font size for all text in the instructions, each text keeps its typeface.</source>
         <translation>Použít velikost písma dokumentu pro veškerý text pokynů, každý text si ponechá své písmo.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="432"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="431"/>
         <source>Typeface and size of all text while the document font or its size is used.</source>
         <translation>Písmo a velikost veškerého textu, když se používá písmo dokumentu nebo jeho velikost.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="454"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="457"/>
         <source>Cover Pages</source>
         <translation>Obálky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="454"/>
         <source>&lt;p&gt;&lt;b&gt;Cover Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The front cover shows the model title, its author and the finished model. The title comes from the model description, or its name when there is none, the author from the model properties. The back cover closes the instructions and starts blank. Right click a cover to add an image, like a logo.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Obálky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přední obálka zobrazuje název modelu, jeho autora a hotový model. Název pochází z popisu modelu, nebo z jeho jména, pokud popis chybí, autor z vlastností modelu. Zadní obálka uzavírá návod a začíná prázdná. Kliknutím pravým tlačítkem na obálku přidáte obrázek, například logo.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Obálky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přední obálka zobrazuje název modelu, jeho autora a hotový model. Název pochází z popisu modelu, nebo z jeho jména, pokud popis chybí, autor z vlastností modelu. Zadní obálka uzavírá návod a začíná prázdná. Kliknutím pravým tlačítkem na obálku přidáte obrázek, například logo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="457"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="460"/>
         <source>Show Front Cover</source>
         <translation>Zobrazit přední obálku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="458"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="461"/>
         <source>Show Back Cover</source>
         <translation>Zobrazit zadní obálku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="458"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="461"/>
         <source>End the instructions with a back cover, blank until you add images.</source>
         <translation>Ukončit návod zadní obálkou, prázdnou, dokud nepřidáte obrázky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="462"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="465"/>
+        <source>Show Final Model Page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="465"/>
+        <source>Close the steps with a page showing the finished model on its own.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="469"/>
         <source>Follow the cover with a blank page, like the inside of a printed cover.</source>
         <translation>Za obálku zařadit prázdnou stránku, jako vnitřek tištěné obálky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="465"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="472"/>
         <source>Cover Background</source>
         <translation>Pozadí obálky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="465"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="472"/>
         <source>Color filling the whole cover page, margins included.</source>
         <translation>Barva vyplňující celou stránku obálky včetně okrajů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="472"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="479"/>
         <source>Cover Title Font</source>
         <translation>Písmo názvu na obálce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="474"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="481"/>
         <source>Cover Title Color</source>
         <translation>Barva názvu na obálce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="478"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="546"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="569"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="483"/>
+        <source>Cover Title Alignment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="483"/>
+        <source>Line up the model title left, centered or right inside its box.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="485"/>
+        <source>Cover Title Vertical Alignment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="485"/>
+        <source>Line up the model title at the top, middle or bottom of a box with Edit Size.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="488"/>
+        <source>Show Title</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="488"/>
+        <source>Show the model title on the cover.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="489"/>
+        <source>Show Model Image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="489"/>
+        <source>Show the finished model on the cover, unchecked leaves room for your own image.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="494"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="576"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="714"/>
         <source>Show Part Count</source>
         <translation>Zobrazit počet dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="478"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="494"/>
         <source>Show the number of parts of the whole model on the cover.</source>
         <translation>Zobrazit počet dílů celého modelu na obálce.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="481"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="497"/>
         <source>Author on the cover, empty for the model author.</source>
         <translation>Autor na obálce, prázdné pro autora modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="483"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="499"/>
         <source>Cover Author File</source>
         <translation>Soubor autora obálky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="483"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="499"/>
         <source>Text file holding the cover author, used instead of the typed author, relative to the model file.</source>
         <translation>Textový soubor s autorem obálky, použitý místo zadaného autora, relativně k souboru modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="490"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="505"/>
+        <source>Cover Author Alignment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="505"/>
+        <source>Line up the model author left, centered or right inside its box.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="507"/>
+        <source>Cover Author Vertical Alignment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="507"/>
+        <source>Line up the model author at the top, middle or bottom of a box with Edit Size.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="510"/>
         <source>Part Count Text</source>
         <translation>Text počtu dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="490"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="510"/>
         <source>Text of the part counts, %1 stands for the number of parts, empty for the default text.</source>
         <translation>Text počtů dílů, %1 zastupuje počet dílů, prázdné pro výchozí text.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="492"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="512"/>
         <source>Part Count File</source>
         <translation>Soubor počtu dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="492"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="512"/>
         <source>Text file holding the part count text, used instead of the typed text, relative to the model file.</source>
         <translation>Textový soubor s textem počtu dílů, použije se místo zadaného textu, relativně k souboru modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="494"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="514"/>
         <source>Part Count Font</source>
         <translation>Písmo počtu dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="496"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="516"/>
         <source>Part Count Color</source>
         <translation>Barva počtu dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="496"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="516"/>
         <source>Color of the part count on the cover and the bill of materials.</source>
         <translation>Barva počtu dílů na obálce a v soupisu materiálu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="499"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="518"/>
+        <source>Part Count Alignment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="518"/>
+        <source>Line up the part count on the cover and the bill of materials left, centered or right inside its box.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="520"/>
+        <source>Part Count Vertical Alignment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="520"/>
+        <source>Line up the part count on the cover and the bill of materials at the top, middle or bottom of a box with Edit Size.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="523"/>
         <source>&lt;p&gt;&lt;b&gt;Page&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The background and the number of the step and blank pages. The background applies to all these pages, or only to the current page when it has its own, the cover and the bill of materials have their own backgrounds. The cover and blank pages are not numbered unless all pages are. Drag the number or use the Placement panel to move it on all pages.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Stránka&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pozadí a číslo stránek kroků a prázdných stránek. Pozadí platí pro všechny tyto stránky, nebo jen pro aktuální stránku, pokud má vlastní, obálka a soupis materiálu mají vlastní pozadí. Obálka a prázdné stránky se nečíslují, pokud nejsou číslovány všechny stránky. Přetažením čísla nebo panelem Umístění ho přesunete na všech stránkách.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="558"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="529"/>
+        <source>Blank Page Background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="529"/>
+        <source>Color filling the whole of every blank page, margins included.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="570"/>
+        <source>Page Number Alignment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="570"/>
+        <source>Line up the page numbers left, centered or right inside its box.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="572"/>
+        <source>Page Number Vertical Alignment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="572"/>
+        <source>Line up the page numbers at the top, middle or bottom of a box with Edit Size.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="588"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="593"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="589"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="593"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
+        <source>Footer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="590"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
+        <source>Left Band</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="591"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
+        <source>Right Band</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="602"/>
+        <source>Show %1 Band</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="602"/>
+        <source>Show the %1 band on the step and blank pages.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="605"/>
+        <source>Thickness of the %1 band from the paper edge.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="609"/>
+        <source>Reserve %1 Space</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="609"/>
+        <source>Keep the page content clear of the %1 band, unchecked lets the content run under it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="631"/>
+        <source>%1 on This Page Only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="631"/>
+        <source>%1 Band on This Page Only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="634"/>
+        <source>Keep this band on this page only and clear it from the other pages, unchecked it follows all pages.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="660"/>
+        <source>Use this band of this page on every page.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="679"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
+        <source>Watermark</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="681"/>
+        <source>Watermark Opacity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="681"/>
+        <source>How strongly the watermark shows, 100 percent is solid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="685"/>
+        <source>Hide Watermark on This Page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="688"/>
+        <source>Hide the watermark on this page only.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="703"/>
         <source>Bill of Materials</source>
         <translation>Soupis materiálu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="561"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="706"/>
         <source>Show Bill of Materials</source>
         <translation>Zobrazit soupis materiálu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="561"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="706"/>
         <source>End the instructions with a page listing every part of the model.</source>
         <translation>Ukončit pokyny stránkou se seznamem všech dílů modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="573"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="718"/>
         <source>Blank Page Before Bill of Materials</source>
         <translation>Prázdná stránka před soupisem materiálu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="573"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="718"/>
         <source>Precede the bill of materials with a blank page.</source>
         <translation>Před soupis materiálu zařadit prázdnou stránku.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="576"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="721"/>
         <source>Color filling the whole bill of materials page, margins included.</source>
         <translation>Barva vyplňující celou stránku soupisu materiálu včetně okrajů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="578"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="723"/>
         <source>BOM Title</source>
         <translation>Název kusovníku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="578"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="723"/>
         <source>Title above the bill of materials, empty for Parts List.</source>
         <translation>Název nad kusovníkem, prázdné pro Seznam dílů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="580"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="725"/>
         <source>BOM Title File</source>
         <translation>Soubor názvu kusovníku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="580"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="725"/>
         <source>Text file holding the bill of materials title, used instead of the typed title, relative to the model file.</source>
         <translation>Textový soubor s názvem kusovníku, použitý místo zadaného názvu, relativně k souboru modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="501"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="525"/>
         <source>Color filling the whole page of main model steps, margins included.</source>
         <translation>Barva vyplňující celou stránku kroků hlavního modelu včetně okrajů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="503"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="527"/>
         <source>Submodel Background</source>
         <translation>Pozadí podmodelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="503"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="527"/>
         <source>Color filling the whole page of submodel steps, margins included.</source>
         <translation>Barva vyplňující celou stránku kroků podmodelu včetně okrajů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="523"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="549"/>
         <source>Use the background of this page on every page.</source>
         <translation>Použít pozadí této stránky na každé stránce.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="587"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="736"/>
         <source>Steps per Page</source>
         <translation>Kroky na stránku</translation>
     </message>
@@ -17114,26 +17545,26 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Kroky na stránku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Řádky a sloupce kroků na aktuální stránce, další stránky na ni navazují. Předvolby dělí stránku na poloviny, třetiny nebo čtvrtiny a zobrazují oddělovače kroků. Tok kroků vyplňuje stránku po řádcích nebo po sloupcích a poslední krok se roztáhne do prázdných buněk. Zobrazit hotový model umístí hotový model do volného místa za posledním krokem modelu. Barva hlavní stránky dá hotovému modelu podmodelu barvu hlavní stránky. Oddělovače jsou čáry mezi sousedními kroky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="632"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="688"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="725"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="781"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="820"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="853"/>
         <source>Rows</source>
         <translation>Řádky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="632"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="781"/>
         <source>Number of step rows on this page.</source>
         <translation>Počet řádků kroků na této stránce.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="633"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="689"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="725"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="782"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="821"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="853"/>
         <source>Columns</source>
         <translation>Sloupce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="633"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="782"/>
         <source>Number of step columns on this page.</source>
         <translation>Počet sloupců kroků na této stránce.</translation>
     </message>
@@ -17142,7 +17573,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Použít tento počet řádků a sloupců na každé stránce.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="499"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="523"/>
         <source>Page</source>
         <translation>Stránka</translation>
     </message>
@@ -17151,7 +17582,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Vlastnosti&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Upravte, jak stránky s pokyny vypadají. Pokud není na stránce nic vybráno, zobrazí se všechny sekce, vyberte prvek, abyste zobrazili jen jeho nastavení a rámeček. Kliknutím pravým tlačítkem na stránku přidáte upozornění a ukazatele. Změny platí pro všechny stránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="576"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="721"/>
         <source>BOM Background</source>
         <translation>Pozadí soupisu materiálu</translation>
     </message>
@@ -17160,17 +17591,17 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Stránka&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pozadí stránek kroků a prázdných stránek. Platí pro všechny tyto stránky, nebo jen pro aktuální stránku, pokud má vlastní. Obálka a soupis materiálu mají vlastní pozadí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="501"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="525"/>
         <source>Page Background</source>
         <translation>Pozadí stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="508"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="534"/>
         <source>Background on This Page Only</source>
         <translation>Pozadí pouze na této stránce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="511"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="537"/>
         <source>Give this page its own background, unchecked it follows all pages.</source>
         <translation>Dát této stránce vlastní pozadí, nezaškrtnuto sleduje všechny stránky.</translation>
     </message>
@@ -17179,78 +17610,78 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Kroky na stránku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Řádky a sloupce kroků na aktuální stránce, další stránky na ni navazují. Předvolby dělí stránku na poloviny, třetiny nebo čtvrtiny a zobrazují oddělovače kroků. Kroky vyplňují stránky na šířku po řádcích a stránky na výšku po sloupcích, podle orientace zvolené v Nastavení stránky. Oddělovače jsou čáry mezi sousedními kroky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="765"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="893"/>
         <source>Show Step Dividers</source>
         <translation>Zobrazit oddělovače kroků</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="765"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="893"/>
         <source>Draw lines between neighboring steps.</source>
         <translation>Kreslit čáry mezi sousedními kroky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="766"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="894"/>
         <source>Rounded Ends</source>
         <translation>Zaoblené konce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="766"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="894"/>
         <source>Round the line ends, off draws flat ends.</source>
         <translation>Zaoblit konce čar, jinak jsou rovné.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="770"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="898"/>
         <source>Draw the lines between steps above and below each other.</source>
         <translation>Kreslit čáry mezi kroky nad sebou.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="771"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="899"/>
         <source>Draw the lines between steps side by side.</source>
         <translation>Kreslit čáry mezi kroky vedle sebe.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="774"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="902"/>
         <source>Divider Color</source>
         <translation>Barva oddělovače</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="774"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="902"/>
         <source>Color of the lines between steps.</source>
         <translation>Barva čar mezi kroky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="776"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="904"/>
         <source>Divider Width</source>
         <translation>Šířka oddělovače</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="776"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="904"/>
         <source>Width of the lines between steps.</source>
         <translation>Šířka čar mezi kroky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="778"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="906"/>
         <source>Divider Margin</source>
         <translation>Okraj oddělovače</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="778"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="906"/>
         <source>Space between the line ends and the page margins.</source>
         <translation>Mezera mezi konci čar a okraji stránky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="780"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="908"/>
         <source>Divider Padding</source>
         <translation>Odsazení oddělovače</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="780"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="908"/>
         <source>Space between the lines and the steps on each side.</source>
         <translation>Mezera mezi čarami a kroky na každé straně.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="538"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="810"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="564"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
         <source>Page Number</source>
         <translation>Číslo stránky</translation>
     </message>
@@ -17259,464 +17690,709 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Číslo stránky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Číslo každé stránky, obálka a prázdné stránky se nečíslují, pokud nejsou číslovány všechny stránky. Přetažením nebo panelem Umístění ho přesunete na všech stránkách.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="533"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="559"/>
         <source>Show Page Number</source>
         <translation>Zobrazit číslo stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="533"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="559"/>
         <source>Show the number of each page except the cover and blank pages.</source>
         <translation>Zobrazit číslo každé stránky kromě obálky a prázdných stránek.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="534"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="560"/>
         <source>Number All Pages</source>
         <translation>Číslovat všechny stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="534"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="560"/>
         <source>Number every page, the cover and blank pages included.</source>
         <translation>Číslovat každou stránku, včetně obálky a prázdných stránek.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="538"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="564"/>
         <source>Page Number Format</source>
         <translation>Formát čísla stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="538"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="564"/>
         <source>Show the page number alone or with the page count.</source>
         <translation>Zobrazit číslo stránky samotné nebo s počtem stránek.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="538"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="564"/>
         <source>Page Number / Page Count</source>
         <translation>Číslo stránky / počet stránek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="540"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="566"/>
         <source>Page Number Font</source>
         <translation>Písmo čísla stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="540"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="566"/>
         <source>Font of the page numbers.</source>
         <translation>Písmo čísel stránek.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="542"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="568"/>
         <source>Page Number Color</source>
         <translation>Barva čísla stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="542"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="568"/>
         <source>Color of the page numbers.</source>
         <translation>Barva čísel stránek.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="546"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="576"/>
         <source>Show the number of new parts of the steps on each step page.</source>
         <translation>Zobrazit počet nových dílů kroků na každé stránce kroků.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="549"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="579"/>
         <source>Page Part Count Font</source>
         <translation>Písmo počtu dílů na stránce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="549"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="579"/>
         <source>Font of the part counts of the step pages and submodel previews.</source>
         <translation>Písmo počtů dílů na stránkách kroků a v náhledech podmodelů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="551"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="581"/>
         <source>Page Part Count Color</source>
         <translation>Barva počtu dílů na stránce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="551"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="581"/>
         <source>Color of the part counts of the step pages and submodel previews.</source>
         <translation>Barva počtů dílů na stránkách kroků a v náhledech podmodelů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="555"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="585"/>
         <source>Show Submodel Preview</source>
         <translation>Zobrazit náhled podmodelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="555"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="585"/>
         <source>Show the finished submodel with its part count on the first page of each submodel.</source>
         <translation>Zobrazit hotový podmodel s jeho počtem dílů na první stránce každého podmodelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="565"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="588"/>
+        <source>&lt;p&gt;&lt;b&gt;Header&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A strip along the top paper edge of the step and blank pages. Right click the band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. The band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="589"/>
+        <source>&lt;p&gt;&lt;b&gt;Footer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A strip along the bottom paper edge of the step and blank pages. Right click the band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. The band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="590"/>
+        <source>&lt;p&gt;&lt;b&gt;Left Band&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A strip along the left paper edge of the step and blank pages. Right click a band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. A band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="591"/>
+        <source>&lt;p&gt;&lt;b&gt;Right Band&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A strip along the right paper edge of the step and blank pages. Right click the band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. The band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="679"/>
+        <source>&lt;p&gt;&lt;b&gt;Watermark&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Text or an image behind the page content, right click the page to add one. The opacity sets how strongly it shows, its box, border and background are set in the Box group.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="710"/>
         <source>Show Part IDs</source>
         <translation>Zobrazit čísla dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="565"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="710"/>
         <source>Print the part number under each part of the bill of materials, for easy reference.</source>
         <translation>Vytiskne číslo dílu pod každý díl v soupisu materiálu pro snadnou orientaci.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="569"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="714"/>
         <source>Show the number of parts of the whole model under the title.</source>
         <translation>Zobrazit počet dílů celého modelu pod názvem.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="700"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="810"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="731"/>
+        <source>BOM Title Alignment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="731"/>
+        <source>Line up the Parts List title left, centered or right inside its box.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
+        <source>BOM Title Vertical Alignment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
+        <source>Line up the Parts List title at the top, middle or bottom of a box with Edit Size.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="736"/>
+        <source>&lt;p&gt;&lt;b&gt;Steps per Page&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model. The final model has its own box, with margin, padding, border, corner radius and background, set in the Box group.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="826"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
         <source>Step Number</source>
         <translation>Číslo kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="703"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="826"/>
+        <source>&lt;p&gt;&lt;b&gt;Step Number&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The step number and the area of each step, which has its own box in the Box group. The bill of materials shows a Parts List title in its place.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="829"/>
         <source>Show Step Number</source>
         <translation>Zobrazit číslo kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="706"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="832"/>
         <source>Step Number Font</source>
         <translation>Písmo čísla kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="706"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="832"/>
         <source>Font of the step numbers.</source>
         <translation>Písmo čísel kroků.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="708"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="834"/>
         <source>Step Number Color</source>
         <translation>Barva čísla kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="708"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="834"/>
         <source>Color of the step numbers.</source>
         <translation>Barva čísel kroků.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="710"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="836"/>
+        <source>Step Number Alignment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="836"/>
+        <source>Line up the step numbers left, centered or right inside its box.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="838"/>
+        <source>Step Number Vertical Alignment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="838"/>
+        <source>Line up the step numbers at the top, middle or bottom of a box with Edit Size.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Step Background</source>
-        <translation>Pozadí kroku</translation>
+        <translation type="vanished">Pozadí kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="710"/>
         <source>Color filling the area of each step, transparent shows the page background.</source>
-        <translation>Barva vyplňující plochu každého kroku, průhledná ukáže pozadí stránky.</translation>
+        <translation type="vanished">Barva vyplňující plochu každého kroku, průhledná ukáže pozadí stránky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="713"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="841"/>
         <source>&lt;p&gt;&lt;b&gt;Parts List&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The list of parts added in each step. The bill of materials uses the same settings.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Seznam dílů&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seznam dílů přidaných v každém kroku. Soupis materiálu používá stejná nastavení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="716"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="844"/>
         <source>Show Parts List</source>
         <translation>Zobrazit seznam dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="716"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="844"/>
         <source>Show the parts added in each step next to its number.</source>
         <translation>Zobrazit díly přidané v každém kroku vedle jeho čísla.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="717"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="845"/>
         <source>Show Part Counts</source>
         <translation>Zobrazit počty dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="717"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="845"/>
         <source>Show how many of each part are needed.</source>
         <translation>Zobrazit, kolik kusů každého dílu je potřeba.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="721"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="849"/>
         <source>Parts List Order</source>
         <translation>Pořadí seznamu dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="721"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="849"/>
         <source>Order of the parts in the list.</source>
         <translation>Pořadí dílů v seznamu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="721"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="849"/>
         <source>Sort by Color</source>
         <translation>Řadit podle barvy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="721"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="849"/>
         <source>Sort by Name</source>
         <translation>Řadit podle názvu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="721"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="849"/>
         <source>Sort by Part ID</source>
         <translation>Řadit podle ID dílu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="725"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="853"/>
         <source>Parts List Layout</source>
         <translation>Rozvržení seznamu dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="725"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="853"/>
         <source>Line the parts up in rows or in columns.</source>
         <translation>Seřadit díly do řádků nebo do sloupců.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="727"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="855"/>
         <source>Line Reference</source>
         <translation>Referenční čára</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="727"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="855"/>
         <source>Thumbnail edge the parts line up on.</source>
         <translation>Okraj náhledu, na který se díly zarovnávají.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="727"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1633"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="485"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="507"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="520"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="572"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="838"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="855"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="919"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="2132"/>
         <source>Top</source>
         <translation>Nahoře</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="727"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1633"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="485"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="507"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="520"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="572"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="838"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="855"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="919"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="2132"/>
         <source>Middle</source>
         <translation>Uprostřed</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="727"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1633"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="485"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="507"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="520"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="572"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="838"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="855"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="919"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="2132"/>
         <source>Bottom</source>
         <translation>Dole</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="729"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="857"/>
         <source>Parts List Font</source>
         <translation>Písmo seznamu dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="729"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="857"/>
         <source>Font of the part counts.</source>
         <translation>Písmo počtů dílů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="731"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="859"/>
         <source>Parts List Text Color</source>
         <translation>Barva textu seznamu dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="731"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="859"/>
         <source>Color of the part counts.</source>
         <translation>Barva počtů dílů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="752"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="880"/>
         <source>Use the thumbnail size and background of this page on every page.</source>
         <translation>Použít velikost a pozadí náhledů této stránky na každé stránce.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="795"/>
         <source>End line pointers with an arrow or a dot, callout wedges have no tip.</source>
-        <translation>Zakončit čárové ukazatele šipkou nebo tečkou, klínové odkazy nemají hrot.</translation>
+        <translation type="vanished">Zakončit čárové ukazatele šipkou nebo tečkou, klínové odkazy nemají hrot.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="795"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1109"/>
         <source>Arrow</source>
         <translation>Šipka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="801"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1115"/>
         <source>Width of the pointer lines, Border follows the border of the element.</source>
         <translation>Šířka čar ukazatelů, Ohraničení sleduje ohraničení prvku.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="801"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1115"/>
         <source>Border</source>
         <translation>Ohraničení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="803"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1127"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1117"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1386"/>
         <source>Automatic</source>
         <translation>Automaticky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="806"/>
         <source>&lt;p&gt;&lt;b&gt;Box&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The space and border around each element. The margin keeps other elements away, the padding keeps the border away from the content and the background fills all of it, margin and padding included. Pointers leave the border. The step and cover models also set their size here. Choose the element to edit, selecting an element on the page chooses it.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Rámeček&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Prostor a ohraničení kolem každého prvku. Okraj drží ostatní prvky stranou, odsazení drží ohraničení dál od obsahu a pozadí vyplňuje vše, včetně okraje a odsazení. Ukazatele vycházejí z ohraničení. Modely kroku a obálky zde také nastavují svou velikost. Zvolte prvek k úpravě, výběr prvku na stránce jej zvolí.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Rámeček&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Prostor a ohraničení kolem každého prvku. Okraj drží ostatní prvky stranou, odsazení drží ohraničení dál od obsahu a pozadí vyplňuje vše, včetně okraje a odsazení. Ukazatele vycházejí z ohraničení. Modely kroku a obálky zde také nastavují svou velikost. Zvolte prvek k úpravě, výběr prvku na stránce jej zvolí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="810"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="457"/>
+        <source>&lt;p&gt;&lt;b&gt;Cover Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The front cover shows the model title, its author and the finished model. The title comes from the model description, or its name when there is none, the author from the model properties. The final model page shows the finished model after the last step. The back cover closes the instructions and starts blank. Right click a cover to add an image, like a logo.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="917"/>
+        <source>Notice Alignment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="917"/>
+        <source>Line up notice text left, centered or right, a notice can keep its own from its Align menu.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="919"/>
+        <source>Notice Vertical Alignment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="919"/>
+        <source>Line up notice text at the top, middle or bottom of a box with Edit Size.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="923"/>
+        <source>Notice Width</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="923"/>
+        <source>Notice Height</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="928"/>
+        <source>Size of the selected notice box, check Edit Size in its right click menu to change it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="963"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
+        <source>Image</source>
+        <translation type="unfinished">Obrázek</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="963"/>
+        <source>&lt;p&gt;&lt;b&gt;Image&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A picture of your own on a page, such as a logo. Right-click the page and choose Add Image to place one. Check Edit Size in its right click menu to change its size here, the height follows the width to keep its shape.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="966"/>
+        <source>Image Width</source>
+        <translation type="unfinished">Šířka obrázku</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="966"/>
+        <source>Image Height</source>
+        <translation type="unfinished">Výška obrázku</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="971"/>
+        <source>Size of the selected image, check Edit Size in its right click menu to change it, the other side follows to keep its shape.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1004"/>
+        <source>&lt;p&gt;&lt;b&gt;Box&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The space and border around each element. The margin keeps other elements away outside the border, the padding keeps the border away from the content and the background fills inside the border. The final model, step areas, bands and watermark are boxes too. Pointers leave the border. The step and cover models also set their size here, fitted to their box until a size is set. Choose the element to edit, selecting an element on the page chooses it.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
         <source>Part Count</source>
         <translation>Počet dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="810"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
         <source>Submodel Preview</source>
         <translation>Náhled podmodelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="832"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="862"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="867"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
+        <source>Parts List Quantity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
+        <source>Final Model</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
+        <source>Step Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1030"/>
         <source>Model Size</source>
         <translation>Velikost modelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="832"/>
         <source>Size of the step model, 100 percent fills its space, larger sizes are trimmed to it.</source>
-        <translation>Velikost modelu kroku, 100 procent vyplní jeho prostor, větší velikosti se do něj oříznou.</translation>
+        <translation type="vanished">Velikost modelu kroku, 100 procent vyplní jeho prostor, větší velikosti se do něj oříznou.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="836"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1057"/>
         <source>Model Size on This Page Only</source>
         <translation>Velikost modelu pouze na této stránce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="839"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1060"/>
         <source>Give this page its own model size, unchecked it follows all pages.</source>
         <translation>Dát této stránce vlastní velikost modelu, nezaškrtnuté se řídí všemi stránkami.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="851"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1072"/>
         <source>Use the model size of this page on every page.</source>
         <translation>Použít velikost modelu této stránky na všech stránkách.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="862"/>
         <source>Size of the submodel preview, 100 percent fills a quarter of the page, larger sizes are trimmed to it.</source>
-        <translation>Velikost náhledu podmodelu, 100 procent vyplní čtvrtinu stránky, větší velikosti se oříznou.</translation>
+        <translation type="vanished">Velikost náhledu podmodelu, 100 procent vyplní čtvrtinu stránky, větší velikosti se oříznou.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="867"/>
         <source>Size of the cover model, 100 percent fills its space, larger sizes are trimmed to it.</source>
-        <translation>Velikost modelu obálky, 100 procent vyplní jeho prostor, větší velikosti se do něj oříznou.</translation>
+        <translation type="vanished">Velikost modelu obálky, 100 procent vyplní jeho prostor, větší velikosti se do něj oříznou.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="875"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1094"/>
         <source>Border Width</source>
         <translation>Šířka ohraničení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="877"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1096"/>
         <source>Corner Radius</source>
         <translation>Poloměr rohů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="877"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1096"/>
         <source>Roundness of the box corners, 0 keeps them square.</source>
         <translation>Zaoblení rohů rámečku, 0 je nechá hranaté.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1118"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1107"/>
+        <source>Draw pointers as a line, an L shape with one bend, a Z shape with two bends, a U shape going around or a callout wedge narrowing to the tip.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1107"/>
+        <source>L Shape</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1107"/>
+        <source>Z Shape</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1107"/>
+        <source>U Shape</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1109"/>
+        <source>End line pointers with an arrow, a dot or a hollow dot, callout wedges have no tip.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1109"/>
+        <source>Hollow Dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1119"/>
+        <source>Bend Radius</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1119"/>
+        <source>Roundness of the L, Z and U shape bends, 0 keeps them sharp.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1377"/>
         <source>Remove the text file and go back to the typed or automatic text.</source>
         <translation>Odebrat textový soubor a vrátit se k zadanému nebo automatickému textu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1127"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1386"/>
         <source>No File</source>
         <translation>Žádný soubor</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1118"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1377"/>
         <source>Choose the text file.</source>
         <translation>Vybrat textový soubor.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="587"/>
         <source>&lt;p&gt;&lt;b&gt;Steps per Page&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model, and Main Page Color gives a submodel&apos;s finished model the main page color. The final model border frames that area and its margin keeps it away from the steps and page margins.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Kroky na stránku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Řádky a sloupce kroků na aktuální stránce, další stránky na ni navazují. Předvolby dělí stránku na poloviny, třetiny nebo čtvrtiny a zobrazují oddělovače kroků. Tok kroků plní stránku po řádcích nebo po sloupcích a poslední krok se roztáhne do prázdných buněk. Zobrazit hotový model umístí hotový model do místa po posledním kroku modelu a Barva hlavní stránky dá hotovému modelu podmodelu barvu hlavní stránky. Rámeček hotového modelu tuto oblast ohraničuje a jeho okraj ji drží dál od kroků a okrajů stránky.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Kroky na stránku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Řádky a sloupce kroků na aktuální stránce, další stránky na ni navazují. Předvolby dělí stránku na poloviny, třetiny nebo čtvrtiny a zobrazují oddělovače kroků. Tok kroků plní stránku po řádcích nebo po sloupcích a poslední krok se roztáhne do prázdných buněk. Zobrazit hotový model umístí hotový model do místa po posledním kroku modelu a Barva hlavní stránky dá hotovému modelu podmodelu barvu hlavní stránky. Rámeček hotového modelu tuto oblast ohraničuje a jeho okraj ji drží dál od kroků a okrajů stránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1141"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1400"/>
         <source>Choose %1</source>
         <translation>Vybrat %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1158"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1417"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation>Textové soubory (*.txt);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1633"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="483"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="505"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="518"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="570"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="593"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="731"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="836"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="917"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="2132"/>
         <source>Left</source>
         <translation>Vlevo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1633"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="483"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="505"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="518"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="570"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="731"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="836"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="917"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="2132"/>
         <source>Center</source>
         <translation>Střed</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1633"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="483"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="505"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="518"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="570"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="593"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="731"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="836"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="917"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="2132"/>
         <source>Right</source>
         <translation>Vpravo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="861"/>
         <source>Thumbnail Size</source>
         <translation>Velikost náhledu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="472"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="479"/>
         <source>Font of the model title.</source>
         <translation>Písmo názvu modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="485"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="501"/>
         <source>Cover Author Font</source>
         <translation>Písmo autora na obálce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="485"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="501"/>
         <source>Font of the model author.</source>
         <translation>Písmo autora modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="474"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="481"/>
         <source>Color of the model title.</source>
         <translation>Barva názvu modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="487"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="438"/>
+        <source>Lock to Home View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="438"/>
+        <source>Show every model from the home view instead of the model view, a step with its own step view keeps it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="503"/>
         <source>Cover Author Color</source>
         <translation>Barva autora na obálce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="487"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="503"/>
         <source>Color of the model author.</source>
         <translation>Barva autora modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="494"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="514"/>
         <source>Font of the part count on the cover and the bill of materials, where it takes the size of the Parts List title.</source>
         <translation>Písmo počtu dílů na obálce a v soupisu materiálu, kde přebírá velikost názvu seznamu dílů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="558"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="703"/>
         <source>&lt;p&gt;&lt;b&gt;Bill of Materials&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The last page, listing every part of the model. It uses the Parts List settings, under a Parts List title in its own font and color, with the box of the step numbers.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Soupis materiálu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Poslední stránka, která uvádí každý díl modelu. Používá nastavení Seznamu dílů, pod nadpisem Seznam dílů s vlastním písmem a barvou, s rámečkem čísel kroků.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="582"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="727"/>
         <source>BOM Title Font</source>
         <translation>Písmo nadpisu soupisu materiálu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="582"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="727"/>
         <source>Font of the Parts List title above the bill of materials.</source>
         <translation>Písmo nadpisu Seznam dílů nad soupisem materiálu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="584"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="729"/>
         <source>BOM Title Color</source>
         <translation>Barva nadpisu soupisu materiálu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="584"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="729"/>
         <source>Color of the Parts List title above the bill of materials.</source>
         <translation>Barva nadpisu Seznam dílů nad soupisem materiálu.</translation>
     </message>
@@ -17725,85 +18401,77 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Kroky na stránku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Řádky a sloupce kroků na aktuální stránce, další stránky na ni navazují. Předvolby dělí stránku na poloviny, třetiny nebo čtvrtiny a zobrazují oddělovače kroků. Tok kroků vyplňuje stránku po řádcích nebo po sloupcích a poslední krok se roztáhne do prázdných buněk. Zobrazit hotový model umístí hotový model do volného místa za posledním krokem modelu. Oddělovače jsou čáry mezi sousedními kroky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="638"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="770"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="787"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="898"/>
         <source>Horizontal</source>
         <translation>Vodorovně</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="638"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="771"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="787"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="899"/>
         <source>Vertical</source>
         <translation>Svisle</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="639"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="788"/>
         <source>Fill this page with steps row by row, or column by column.</source>
         <translation>Vyplnit tuto stránku kroky po řádcích, nebo po sloupcích.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="641"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="690"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="790"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="822"/>
         <source>Step Flow</source>
         <translation>Tok kroků</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="652"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="801"/>
         <source>Show Final Model</source>
         <translation>Zobrazit hotový model</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="653"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="802"/>
         <source>Show the finished model in the room left on the page after the last step of a model.</source>
         <translation>Zobrazit hotový model ve volném místě stránky za posledním krokem modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="669"/>
         <source>Main Page Color</source>
-        <translation>Barva hlavní stránky</translation>
+        <translation type="vanished">Barva hlavní stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="670"/>
         <source>Put the finished model of a submodel on the main page color.</source>
-        <translation>Umístit hotový model podmodelu na barvu hlavní stránky.</translation>
+        <translation type="vanished">Umístit hotový model podmodelu na barvu hlavní stránky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="681"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="813"/>
         <source>Use this page layout on every page.</source>
         <translation>Použít toto rozvržení na všech stránkách.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="692"/>
         <source>Final Border</source>
-        <translation>Konečný rámeček</translation>
+        <translation type="vanished">Konečný rámeček</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="692"/>
         <source>Width of the frame around the final model area, 0 draws none.</source>
-        <translation>Šířka rámečku kolem oblasti hotového modelu, 0 žádný nekreslí.</translation>
+        <translation type="vanished">Šířka rámečku kolem oblasti hotového modelu, 0 žádný nekreslí.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="694"/>
         <source>Final Border Color</source>
-        <translation>Barva konečného rámečku</translation>
+        <translation type="vanished">Barva konečného rámečku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="694"/>
         <source>Color of the frame around the final model area.</source>
-        <translation>Barva rámečku kolem oblasti hotového modelu.</translation>
+        <translation type="vanished">Barva rámečku kolem oblasti hotového modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="696"/>
         <source>Final Margin</source>
-        <translation>Konečný okraj</translation>
+        <translation type="vanished">Konečný okraj</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="696"/>
         <source>Space between the final model area and the steps and page margins around it.</source>
-        <translation>Mezera mezi oblastí hotového modelu a kroky a okraji stránky kolem ní.</translation>
+        <translation type="vanished">Mezera mezi oblastí hotového modelu a kroky a okraji stránky kolem ní.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="890"/>
         <source>Divider</source>
         <translation>Oddělovač</translation>
     </message>
@@ -17812,138 +18480,171 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Oddělovač&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Čáry mezi sousedními kroky. Okraj drží konce čar dál od okrajů stránky, odsazení drží kroky dál od čar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="700"/>
         <source>&lt;p&gt;&lt;b&gt;Step Number&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The step number and the area behind each step. The bill of materials shows a Parts List title in its place.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Číslo kroku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Číslo kroku a plocha za každým krokem. Soupis materiálu na jeho místě zobrazuje nadpis Seznam dílů.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Číslo kroku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Číslo kroku a plocha za každým krokem. Soupis materiálu na jeho místě zobrazuje nadpis Seznam dílů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="703"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="829"/>
         <source>Show the number of each step in its top left corner, and the Parts List title of the bill of materials.</source>
         <translation>Zobrazit číslo každého kroku v jeho levém horním rohu a nadpis Seznam dílů soupisu materiálu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="861"/>
         <source>Size each part is drawn at, larger thumbnails show larger parts.</source>
         <translation>Velikost, ve které se každý díl kreslí, větší náhledy ukazují větší díly.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="735"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="863"/>
         <source>Thumbnail Background</source>
         <translation>Pozadí náhledu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="735"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="863"/>
         <source>Color behind each part and its count, transparent draws none.</source>
         <translation>Barva za každým dílem a jeho počtem, průhledná nekreslí nic.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="740"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="868"/>
         <source>Thumbnails on This Page Only</source>
         <translation>Náhledy pouze na této stránce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="871"/>
         <source>Give this page its own thumbnail size and background, unchecked it follows all pages.</source>
         <translation>Dát této stránce vlastní velikost a pozadí náhledů, nezaškrtnuto sleduje všechny stránky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="783"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="810"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="911"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
         <source>Notice</source>
         <translation>Upozornění</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="783"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="911"/>
         <source>&lt;p&gt;&lt;b&gt;Notice&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Free text written on a page to point out something. Right-click the page and choose Add Notice to write one, double-click it to edit its text. Drag it, lock it in place or give it pointers like any other element.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Upozornění&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Volný text napsaný na stránce, aby na něco upozornil. Kliknutím pravým tlačítkem na stránku a volbou Přidat upozornění jej napíšete, dvojitým kliknutím upravíte jeho text. Přetáhněte jej, zamkněte na místě nebo mu dejte ukazatele jako každému jinému prvku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="785"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="913"/>
         <source>Notice Font</source>
         <translation>Písmo upozornění</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="785"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="913"/>
         <source>Font of the notices.</source>
         <translation>Písmo upozornění.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="787"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="915"/>
         <source>Notice Text Color</source>
         <translation>Barva textu upozornění</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="787"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="915"/>
         <source>Color of the notice text.</source>
         <translation>Barva textu upozornění.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="790"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1031"/>
+        <source>Fit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1035"/>
+        <source>Fit Model to Box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1038"/>
+        <source>Size the model to fill its box, uncheck to set its size.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1054"/>
+        <source>Longest side of the step model, larger sizes are trimmed to its space.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1083"/>
+        <source>Longest side of the submodel preview, larger sizes are trimmed to a quarter of the page.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1087"/>
+        <source>Longest side of the cover model, larger sizes are trimmed to its space.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1090"/>
+        <source>Space outside the border.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1104"/>
         <source>Pointer</source>
         <translation>Ukazatel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="790"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1104"/>
         <source>&lt;p&gt;&lt;b&gt;Pointer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A pointer leaves the border of an element to point at a part, a step or a notice. Right-click an element and choose Add Pointer, then drag its tip onto a part of a step model, another element or any point of the page, the tip follows what it points at. Right-click a pointer to choose the anchor it leaves from, or its own style and tip.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Ukazatel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ukazatel vychází z ohraničení prvku a ukazuje na díl, krok nebo upozornění. Klikněte pravým tlačítkem na prvek a zvolte Přidat ukazatel, pak přetáhněte jeho hrot na díl modelu kroku, jiný prvek nebo libovolný bod stránky, hrot sleduje to, na co ukazuje. Kliknutím pravým tlačítkem na ukazatel zvolíte kotvu, ze které vychází, nebo jeho vlastní styl a hrot.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="793"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1107"/>
         <source>Pointer Style</source>
         <translation>Styl ukazatele</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="793"/>
         <source>Draw pointers as a line or as a callout wedge narrowing to the tip.</source>
-        <translation>Kreslit ukazatele jako čáru nebo jako klínový odkaz zužující se k hrotu.</translation>
+        <translation type="vanished">Kreslit ukazatele jako čáru nebo jako klínový odkaz zužující se k hrotu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="793"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1107"/>
         <source>Line</source>
         <translation>Čára</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="793"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1107"/>
         <source>Callout Wedge</source>
         <translation>Klínový odkaz</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="795"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1109"/>
         <source>Pointer Tip</source>
         <translation>Hrot ukazatele</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="795"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1109"/>
         <source>Dot</source>
         <translation>Tečka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="797"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1111"/>
         <source>Pointer Color</source>
         <translation>Barva ukazatele</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="797"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1111"/>
         <source>Color of the pointers.</source>
         <translation>Barva ukazatelů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="801"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1115"/>
         <source>Pointer Width</source>
         <translation>Šířka ukazatele</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="803"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1117"/>
         <source>Tip Size</source>
         <translation>Velikost hrotu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="803"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1117"/>
         <source>Size of the arrows and dots, and width of the wedges at the element, never less than three times the pointer width.</source>
         <translation>Velikost šipek a teček a šířka klínů u prvku, nikdy menší než trojnásobek šířky ukazatele.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="806"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1004"/>
         <source>Box</source>
         <translation>Rámeček</translation>
     </message>
@@ -17952,19 +18653,19 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Rámeček&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Prostor a ohraničení kolem každého prvku. Okraj drží ostatní prvky stranou, odsazení drží ohraničení dál od obsahu a pozadí vyplňuje vše, včetně okraje a odsazení. Ukazatele vycházejí z ohraničení. Zvolte prvek k úpravě, výběr prvku na stránce jej zvolí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="810"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
         <source>Step Model</source>
         <translation>Model kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="468"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="810"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="475"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
         <source>Cover Title</source>
         <translation>Název na obálce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="481"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="810"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="497"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
         <source>Cover Author</source>
         <translation>Autor na obálce</translation>
     </message>
@@ -17973,83 +18674,83 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Kroky na stránku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Řádky a sloupce kroků na aktuální stránce, další stránky na ni navazují. Předvolby dělí stránku na poloviny, třetiny nebo čtvrtiny a zobrazují oddělovače kroků. Tok kroků plní stránku po řádcích nebo po sloupcích a poslední krok se roztáhne do prázdných buněk. Zobrazit hotový model umístí hotový model do místa po posledním kroku modelu a Barva hlavní stránky dá hotovému modelu podmodelu barvu hlavní stránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="890"/>
         <source>&lt;p&gt;&lt;b&gt;Divider&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The lines between neighboring steps. Horizontal and Vertical hide the lines in one direction, for example where page colors already split the page. The margin keeps the line ends away from the page margins, the padding keeps the steps away from the lines.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Oddělovač&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Čáry mezi sousedními kroky. Vodorovně a Svisle skryjí čáry v jednom směru, například tam, kde stránku už dělí barvy stránky. Okraj drží konce čar dál od okrajů stránky, odsazení drží kroky dál od čar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="810"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
         <source>Cover Model</source>
         <translation>Model obálky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="811"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1009"/>
         <source>Choose the element whose box is edited, the parts list box is also the bill of materials box.</source>
         <translation>Zvolte prvek, jehož rámeček se upravuje, rámeček seznamu dílů je zároveň rámečkem soupisu materiálu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="813"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="815"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1011"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1013"/>
         <source>Element</source>
         <translation>Prvek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="871"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1090"/>
         <source>Margin</source>
         <translation>Okraj</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="871"/>
         <source>Space outside the border, filled with the background.</source>
-        <translation>Prostor vně ohraničení, vyplněný pozadím.</translation>
+        <translation type="vanished">Prostor vně ohraničení, vyplněný pozadím.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="873"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1092"/>
         <source>Padding</source>
         <translation>Odsazení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="873"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1092"/>
         <source>Space between the border and the content, filled with the background.</source>
         <translation>Prostor mezi ohraničením a obsahem, vyplněný pozadím.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="875"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1094"/>
         <source>Width of the line around the element, 0 draws no line.</source>
         <translation>Šířka čáry kolem prvku, 0 nekreslí žádnou čáru.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="879"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1098"/>
         <source>Border Color</source>
         <translation>Barva ohraničení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="879"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1098"/>
         <source>Color of the line around the element.</source>
         <translation>Barva čáry kolem prvku.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="881"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1100"/>
         <source>Background</source>
         <translation>Pozadí</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="881"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1100"/>
         <source>Color filling the whole element, margin and padding included, transparent shows what lies behind.</source>
         <translation>Barva vyplňující celý prvek, včetně okraje a odsazení, průhledná ukáže, co leží za ním.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="901"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1138"/>
         <source>Expand or collapse the %1 properties.</source>
         <translation>Rozbalte nebo sbalte vlastnosti %1.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1182"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1441"/>
         <source>Size of the font in the page units.</source>
         <translation>Velikost písma v jednotkách stránky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1184"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="605"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1443"/>
         <source>%1 Size</source>
         <translation>Velikost: %1</translation>
     </message>
@@ -18059,8 +18760,8 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Průhledné</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="713"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="810"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="841"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1008"/>
         <source>Parts List</source>
         <translation>Seznam dílů</translation>
     </message>
@@ -18080,37 +18781,37 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">Vlastnosti seznamu dílků</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="439"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="442"/>
         <source>Fade Previous Steps</source>
         <translation>Zeslabit předchozí kroky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="439"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="442"/>
         <source>Tint the parts added in earlier steps with the fade color.</source>
         <translation>Obarvit díly přidané v dřívějších krocích barvou zeslabení.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="442"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="445"/>
         <source>Fade Color</source>
         <translation>Barva zeslabení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="442"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="445"/>
         <source>Color tinting the parts added in earlier steps, kept between 85 and 95 percent opaque.</source>
         <translation>Barva, kterou se obarví díly přidané v dřívějších krocích, udržovaná mezi 85 a 95 procenty krytí.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="446"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="449"/>
         <source>Highlight New Parts</source>
         <translation>Zvýraznit nové díly</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="446"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="449"/>
         <source>Outline the parts added in each step with the highlight color.</source>
         <translation>Obtáhnout díly přidané v každém kroku barvou zvýraznění.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="449"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="452"/>
         <source>Highlight Color</source>
         <translation>Barva zvýraznění</translation>
     </message>
@@ -18122,22 +18823,22 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
 <context>
     <name>swInstructionsRulerWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2557"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3777"/>
         <source>Horizontal Ruler</source>
         <translation>Vodorovné pravítko</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2558"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3778"/>
         <source>Horizontal position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Vodorovná poloha na stránce v jednotkách stránky, šipka sleduje ukazatel.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2562"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3782"/>
         <source>Vertical Ruler</source>
         <translation>Svislé pravítko</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2563"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3783"/>
         <source>Vertical position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Svislá poloha na stránce v jednotkách stránky, šipka sleduje ukazatel.</translation>
     </message>
@@ -18612,26 +19313,26 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="153"/>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="231"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="232"/>
         <source>Open Model</source>
         <translation>Otevřít model</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="154"/>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="416"/>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="439"/>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="448"/>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="456"/>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="472"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="417"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="440"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="449"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="457"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="473"/>
         <source>Save Model</source>
         <translation>Uložit model</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="326"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="634"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="642"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1003"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="635"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="643"/>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1004"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1005"/>
         <source>Transform</source>
         <translation>Transformace</translation>
     </message>
@@ -18646,7 +19347,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&amp;Pohledy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="371"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="372"/>
         <source>Projection</source>
         <translation>Projekce</translation>
     </message>
@@ -18655,23 +19356,23 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Stínov&amp;ání</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="389"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="721"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="390"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="722"/>
         <source>Tools</source>
         <translation>Nástroje</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="412"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="413"/>
         <source>&amp;File</source>
         <translation>&amp;Soubor</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="422"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="423"/>
         <source>&amp;Import</source>
         <translation>&amp;Importovat</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="426"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="427"/>
         <source>&amp;Export</source>
         <translation>&amp;Exportovat</translation>
     </message>
@@ -18681,12 +19382,12 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">Vyk&amp;reslit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="458"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="459"/>
         <source>&amp;Edit</source>
         <translation>&amp;Upravit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="484"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="485"/>
         <source>&amp;View</source>
         <translatorcomment>TODO - Zobrazit, pohled,</translatorcomment>
         <translation>&amp;Zobrazit</translation>
@@ -18696,12 +19397,12 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Kro&amp;k</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="485"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="486"/>
         <source>T&amp;oolbars</source>
         <translation>Panely nástr&amp;ojů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="521"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="522"/>
         <source>&amp;Part</source>
         <translatorcomment>TODO - dílek, kus</translatorcomment>
         <translation>&amp;Díl</translation>
@@ -18711,44 +19412,44 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Pod&amp;model</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="593"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="594"/>
         <source>&amp;Help</source>
         <translation>&amp;Nápověda</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="622"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="627"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="623"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="628"/>
         <source>Selection Mode</source>
         <translation>Režim výběru</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="628"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="629"/>
         <source>Change selection mode</source>
         <translation>Změna režimu výběru</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="629"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="630"/>
         <source>Choose which related parts are included when selecting a part.</source>
         <translation>Při výběru dílu zvolte, které související díly jsou zahrnuty.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="643"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="644"/>
         <source>Transform Options</source>
         <translation>Možnosti transformace</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="644"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="645"/>
         <source>Choose coordinate axes and whether selected parts rotate together.</source>
         <translation>Vyberte souřadnicové osy a zda se vybrané díly otáčejí společně.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="649"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="650"/>
         <source>Snap XY</source>
         <translatorcomment>TODO - Přichytit, Lusknutí, Přichycení</translatorcomment>
         <translation>Přichycení XY</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="653"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="654"/>
         <source>Snap Z</source>
         <translation>Přichycení Z</translation>
     </message>
@@ -18757,19 +19458,19 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Nabídka přichycení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="657"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="666"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="658"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="667"/>
         <source>Movement Snap</source>
         <translatorcomment>TODO - pohyb, přesun</translatorcomment>
         <translation>Přichycení přesunu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="667"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="668"/>
         <source>Snap translations to fixed intervals</source>
         <translation>Přichytit přesuny po pevných intervalech</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="668"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="669"/>
         <source>Choose movement snapping intervals for XY and Z.</source>
         <translation>Vyberte intervaly přichycení pohybu pro XY a Z.</translation>
     </message>
@@ -18778,23 +19479,23 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Nabídka úhlů přichycení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="673"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="681"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="674"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="682"/>
         <source>Rotation Snap</source>
         <translation>Přichycení otáčení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="682"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="683"/>
         <source>Snap rotations to fixed intervals</source>
         <translation>Přichytit otáčení po pevných intervalech</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="683"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="684"/>
         <source>Choose the rotation snapping interval.</source>
         <translation>Vyberte interval přichycení otáčení.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="688"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="689"/>
         <source>Standard</source>
         <translation>Standard</translation>
     </message>
@@ -18809,7 +19510,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Panel nástrojů Čas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Tlačítka se šipkami se pohybují po krocích stavby, takže můžete zkontrolovat, jak je model sestaven. Nemění krok přiřazený dílu; použijte k tomu časovou osu. Přidat klávesy řídí, zda úpravy vytvoří animační klávesy v aktuálním kroku, což umožňuje, aby se vlastnosti, jako je poloha, mezi jednotlivými kroky měnily.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="708"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="709"/>
         <source>Time</source>
         <translation>Čas</translation>
     </message>
@@ -18819,17 +19520,17 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>&amp;Pohledy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="354"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="355"/>
         <source>&amp;Cutaway</source>
         <translation>&amp;Řez</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="378"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="379"/>
         <source>&amp;Shading</source>
         <translation>Stínov&amp;ání</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="445"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="446"/>
         <source>Ren&amp;der</source>
         <translation>&amp;Vykreslit</translation>
     </message>
@@ -18838,89 +19539,115 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&amp;Nalézt</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="531"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="532"/>
         <source>&amp;Joint</source>
         <translation>&amp;Kloub</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="546"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="547"/>
         <source>&amp;Group</source>
         <translation>&amp;Skupina</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="553"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="554"/>
         <source>&amp;Visibility</source>
         <translation>&amp;Viditelnost</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="560"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="561"/>
         <source>&amp;Steps</source>
         <translation>&amp;Kroky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="630"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="631"/>
         <source>&lt;p&gt;&lt;b&gt;Selection Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the rule applied when you pick a part in the model view. Single selects that part; the other modes include matching part types, matching colors, or both. For example, color selection lets you pick matching red parts without selecting each one separately.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Režim výběru&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte pravidlo, které se použije při výběru dílu v zobrazení modelu. Jeden výběr vybere pouze ten díl; ostatní režimy zahrnují shodné typy dílů, shodné barvy nebo obojí. Například výběr barev vám umožňuje vybrat odpovídající červené díly, aniž byste museli vybírat každý zvlášť.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="645"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="646"/>
         <source>&lt;p&gt;&lt;b&gt;Transform Options&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the axes and pivot used for interactive transforms. Relative Transforms uses the focused object&apos;s orientation, so movement along X follows that object&apos;s local X axis. Absolute Transforms uses the model axes. Rotate Together rotates the selection around a shared pivot; Rotate Separately rotates each part around its own origin.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Možnosti transformace&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte osy a bod otáčení použité pro interaktivní transformace. Relativní transformace používá orientaci zaostřeného objektu, takže pohyb podél X sleduje lokální osu X tohoto objektu. Absolutní transformace používá osy modelu. Otočit společně otočí výběr kolem sdíleného bodu otáčení; Otočit samostatně otočí každý díl kolem jeho vlastního počátku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="669"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="670"/>
         <source>&lt;p&gt;&lt;b&gt;Movement Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose how far objects move in each snapped increment. XY controls movement across the base plane; Z controls vertical movement, so they can use different intervals. Turn snapping off for free placement, then enable it again when you need consistent spacing.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přichycení pohybu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zvolte, jak daleko se objekty posunou v jednotlivých krocích přichycení. XY řídí pohyb po základní rovině; Z řídí svislý pohyb, takže mohou používat různé intervaly. Vypněte přichycení pro volné umístění a znovu je zapněte, až budete potřebovat stejné rozestupy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="684"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="685"/>
         <source>&lt;p&gt;&lt;b&gt;Rotation Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose an angle increment for interactive rotation. For example, a 90-degree increment is useful for quarter turns, while smaller increments allow finer alignment. Turn snapping off for free rotation without fixed angle increments.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přichycení otáčení&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zvolte přírůstek úhlu pro interaktivní otáčení. Například 90stupňový přírůstek je užitečný pro čtvrtotáčky, zatímco menší přírůstky umožňují jemnější zarovnání. Vypněte přichycení pro volné otáčení bez pevných přírůstků úhlu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="690"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="691"/>
         <source>&lt;p&gt;&lt;b&gt;Standard Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use file controls to create, open, and save models, and Undo or Redo to navigate edit history. Before moving or rotating objects, choose the selection rule, coordinate reference, and snapping increments from the four drop-down controls. Help &gt; &quot;What&apos;s This?&quot; explains individual controls.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Standardní panel nástrojů&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pomocí ovládacích prvků souboru vytvářejte, otevírejte a ukládejte modely a pomocí Zpět nebo Znovu procházejte historii úprav. Před přesouváním nebo otáčením objektů zvolte pravidlo výběru, souřadnicový základ a přichytávací kroky ze čtyř rozbalovacích ovládacích prvků. Nápověda &gt; &quot;Co je toto?&quot; vysvětluje jednotlivé ovládací prvky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="710"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="711"/>
         <source>&lt;p&gt;&lt;b&gt;Time Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Steps panel for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Panel nástrojů Čas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Tlačítka se šipkami procházejí kroky stavby, abyste mohli zkontrolovat, jak se model sestavuje. Nemění krok přiřazený dílu, k tomu slouží panel Kroky. Přehrát projde kroky modelu a ukáže pohyb podle klíčů a při dalším použití pozastaví, Zastavit se vrátí na krok, ze kterého přehrávání začalo. Nastavit klíče a Odebrat klíče přidávají nebo odebírají klíče vybraných objektů v aktuálním kroku, jako kosočtverce panelu Klíčové snímky. Přidat klíče určuje, zda úpravy vytvářejí animační klíče v aktuálním kroku, což umožňuje, aby se vlastnosti, například poloha, mezi kroky lišily.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="723"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="724"/>
         <source>&lt;p&gt;&lt;b&gt;Tools Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a tool, then use it in the model view. Insertion tools create parts, lights, or cameras. Editing tools select, transform, remove, or recolor objects. Navigation tools change the viewpoint without changing model geometry. Mouse assignments can be customized in Preferences.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Panel nástrojů Nástroje&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte nástroj a poté jej použijte v zobrazení modelu. Nástroje pro vkládání vytvářejí díly, světla nebo kamery. Nástroje pro úpravy vybírají, transformují, odebírají nebo přebarvují objekty. Navigační nástroje mění pohled bez změny geometrie modelu. Přiřazení myši lze upravit v Předvolbách.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="765"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="766"/>
         <source>Parts</source>
         <translation>Díly</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="768"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="769"/>
         <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a category or palette and filter its parts. Selecting a part prepares it for insertion; drag it into the model view to place it. Double-click a part to open its preview. Options controls filtering, thumbnails, and list display.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Díly&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte kategorii nebo paletu a filtrujte její díly. Výběr dílu jej připraví na vložení; přetažením do pohledu modelu jej umístěte. Poklepáním na díl otevřete jeho náhled. Možnosti řídí filtrování, miniatury a zobrazení seznamu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="778"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="779"/>
         <source>Colors</source>
         <translation>Barvy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="780"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="781"/>
         <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.&lt;/p&gt;&lt;p&gt;Docked at the top or bottom, the swatches line up in one row; scroll the wheel or use the arrows at its ends to move along it, or double-click an arrow to jump to that end.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Barvy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Z vzorků vyberte aktuální barvu LDraw. Tato barva se použije při vkládání nebo malování dílů. Chcete-li přebarvit vybrané díly, použijte tlačítko barvy nad vzorky. Najetím na vzorek zobrazíte jeho název a kód barvy.&lt;/p&gt;&lt;p&gt;Při ukotvení nahoře nebo dole se vzorky řadí do jedné řady; kolečkem myši nebo šipkami na jejích koncích se po ní posouváte, nebo dvojitým kliknutím na šipku skočíte na její konec.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1093"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1094"/>
         <source>Steps</source>
         <translation>Kroky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1095"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1096"/>
+        <source>&lt;p&gt;&lt;b&gt;Steps&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands. Turn the model with the view cube and press Add Step View to save that view in the current step.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1112"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="260"/>
+        <source>Relative</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1112"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="260"/>
+        <source>Default</source>
+        <translation type="unfinished">Výchozí</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1113"/>
+        <source>How Add Step View saves the view: absolute angles from the world zero (the front view), relative angles from the home view, or default to go back to the home view for this and the next steps.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1116"/>
+        <source>Add Step View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>&lt;p&gt;&lt;b&gt;Steps&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Kroky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte krok, aby se stal aktuálním, nebo vyberte řádky dílů, abyste tyto díly vybrali v modelu. Přetahujte díly mezi kroky nebo je měňte v pořadí v rámci kroku. Řádky Klíče uvádějí objekty s animačními klíči v kroku a dvojité kliknutí vybere tento objekt tam a zobrazí panel Klíčové snímky. Kliknutím pravým tlačítkem zobrazíte příkazy pro vložení, odebrání, přesun a viditelnost kroků.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Kroky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte krok, aby se stal aktuálním, nebo vyberte řádky dílů, abyste tyto díly vybrali v modelu. Přetahujte díly mezi kroky nebo je měňte v pořadí v rámci kroku. Řádky Klíče uvádějí objekty s animačními klíči v kroku a dvojité kliknutí vybere tento objekt tam a zobrazí panel Klíčové snímky. Kliknutím pravým tlačítkem zobrazíte příkazy pro vložení, odebrání, přesun a viditelnost kroků.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.&lt;/p&gt;</source>
@@ -18928,52 +19655,52 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Barvy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zvolte aktuální barvu LDraw ze vzorníku. Tato barva se používá při vkládání nebo malování dílů. Chcete-li vybrané díly přebarvit, použijte barevné tlačítko nad vzorníkem. Umístěním ukazatele myši na vzorek zobrazíte jeho název a kód barvy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="796"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="797"/>
         <source>Apply the current color to selected parts.</source>
         <translation>Aplikujte aktuální barvu na vybrané díly.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="797"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="798"/>
         <source>Change Selection Color</source>
         <translation>Změnit barvu výběru</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="798"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="799"/>
         <source>&lt;p&gt;&lt;b&gt;Change Selection Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Apply the current color to selected parts. Choosing a swatch sets the current color; this button applies that color to the selection.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Změnit barvu výběru&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Použít aktuální barvu na vybrané díly. Výběrem políčka nastavíte aktuální barvu; toto tlačítko použije tuto barvu na výběr.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="820"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="821"/>
         <source>Scroll the swatches left. Double-click to jump to the first one.</source>
         <translation>Posunout vzorky doleva. Dvojitým kliknutím skočíte na první.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="820"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="821"/>
         <source>Scroll the swatches right. Double-click to jump to the last one.</source>
         <translation>Posunout vzorky doprava. Dvojitým kliknutím skočíte na poslední.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="850"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="851"/>
         <source>LDraw Colors</source>
         <translation>Barvy LDraw</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="979"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="980"/>
         <source>Properties</source>
         <translation>Vlastnosti</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="981"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="982"/>
         <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit properties of the focused object or selection. Available fields depend on whether you select parts, a camera, or a light. Expand a section to see its fields. Keyframe controls mark properties at the current building step.&lt;/p&gt;&lt;p&gt;The transform fields at the bottom apply an X/Y/Z translation or rotation using the chosen transform mode. Press Enter to apply the values.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vlastnosti&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Upravte vlastnosti zaostřeného objektu nebo výběru. Dostupná pole závisí na tom, zda vyberete díly, kameru nebo světlo. Rozbalením sekce zobrazíte její pole. Ovládací prvky klíčového snímku označují vlastnosti v aktuálním kroku sestavení.&lt;/p&gt;&lt;p&gt;Pole transformace ve spodní části použijí posun nebo otočení X/Y/Z pomocí zvoleného režimu transformace. Hodnoty použijete stisknutím klávesy Enter.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1034"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1035"/>
         <source>Choose absolute or relative translation or rotation.</source>
         <translation>Vyberte absolutní nebo relativní posunutí nebo otočení.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1035"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1036"/>
         <source>&lt;p&gt;&lt;b&gt;Apply Transform&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the translation or rotation mode, enter X/Y/Z values, and press Enter to apply them. Translation values use LDraw units; rotation values use degrees.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Použít transformaci&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte režim posunu nebo otočení, zadejte hodnoty X/Y/Z a stisknutím klávesy Enter je použijte. Hodnoty posunu používají jednotky LDraw; hodnoty otočení používají stupně.&lt;/p&gt;</translation>
     </message>
@@ -18982,7 +19709,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Časová osa&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte krok, aby se stal aktuálním, nebo vyberte řádky dílů, abyste tyto díly vybrali v modelu. Přetahujte díly mezi kroky nebo je měňte v pořadí v rámci kroku. Řádky Klíče uvádějí objekty s animačními klíči v kroku a dvojité kliknutí vybere tento objekt tam a zobrazí panel Klíčové snímky. Kliknutím pravým tlačítkem zobrazíte příkazy pro vložení, odebrání, přesun a viditelnost kroků.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1132"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1149"/>
         <source>Explode</source>
         <translation>Rozložit</translation>
     </message>
@@ -18991,7 +19718,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Rozložit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odsune každý další viditelný díl, nebo jen vybrané, od kotvy o procento vzdálenosti v X, Y a Z. Každý díl vyjede podél spojení, které jej drží. Sbalit nebo Zpět vrátí díly na místo a Uložit kopii uloží rozložený model do samostatného souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1145"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1162"/>
         <source>Joints</source>
         <translation>Klouby</translation>
     </message>
@@ -19000,7 +19727,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Klouby&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kloub vybraný na vybraném podmodelu s jeho osou a strom každého modelu s klouby, jeho podmodelů s klouby a jejich kloubů. Vyberte kloub pro posun nebo otočení a smažte jej pro návrat do klidové polohy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1154"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1171"/>
         <source>Poses</source>
         <translation>Pózy</translation>
     </message>
@@ -19009,7 +19736,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Pózy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pózy modelu vybraného v panelu Klouby. Uložte úhly kloubů jako pojmenovanou pózu, pak ji vyvolejte, přejmenujte nebo smažte. Pózy se ukládají s modelem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1163"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1180"/>
         <source>Keyframes</source>
         <translation>Klíčové snímky</translation>
     </message>
@@ -19018,7 +19745,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Časová osa v plné šířce s animačními klíči vybraných nebo všech objektů, jeden sloupec na krok. Přidávejte nebo odebírejte klíče v aktuálním kroku a přehráváním kroků sledujte klíčovaný pohyb.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1013"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1014"/>
         <source>Transform X</source>
         <translation>Transformace X</translation>
     </message>
@@ -19038,7 +19765,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Otevřít složku modelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="577"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="578"/>
         <source>&amp;Models</source>
         <translation>&amp;Modely</translation>
     </message>
@@ -19047,52 +19774,52 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Panel nástrojů Čas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Tlačítka se šipkami procházejí kroky stavby, abyste mohli zkontrolovat, jak se model sestavuje. Nemění krok přiřazený dílu, k tomu slouží Časová osa. Přehrát projde kroky modelu a ukáže pohyb podle klíčů a při dalším použití pozastaví, Zastavit se vrátí na krok, ze kterého přehrávání začalo. Nastavit klíče a Odebrat klíče přidávají nebo odebírají klíče vybraných objektů v aktuálním kroku, jako kosočtverce panelu Klíčové snímky. Přidat klíče určuje, zda úpravy vytvářejí animační klíče v aktuálním kroku, což umožňuje, aby se vlastnosti, například poloha, mezi kroky lišily.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="808"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="809"/>
         <source>Choose how inserted parts are colored.</source>
         <translation>Zvolte, jak se barví vkládané díly.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="808"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="809"/>
         <source>Color Options</source>
         <translation>Volby barev</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="821"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="822"/>
         <source>Scroll Colors Left</source>
         <translation>Posunout barvy doleva</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="821"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="822"/>
         <source>Scroll Colors Right</source>
         <translation>Posunout barvy doprava</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1002"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1003"/>
         <source>T</source>
         <translation>T</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1014"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1015"/>
         <source>Enter the X translation in LDraw units or rotation in degrees.</source>
         <translation>Zadejte posunutí X v jednotkách LDraw nebo otočení ve stupních.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1019"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1020"/>
         <source>Transform Y</source>
         <translation>Transformace Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1020"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1021"/>
         <source>Enter the Y translation in LDraw units or rotation in degrees.</source>
         <translation>Zadejte posun Y v jednotkách LDraw nebo otočení ve stupních.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1025"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1026"/>
         <source>Transform Z</source>
         <translation>Transformace Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1026"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1027"/>
         <source>Enter the Z translation in LDraw units or rotation in degrees.</source>
         <translation>Zadejte posun Z v jednotkách LDraw nebo otočení ve stupních.</translation>
     </message>
@@ -19106,23 +19833,23 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Časová osa&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte krok, aby byl aktuální, nebo vyberte řádky dílů a vyberte tyto díly v modelu. Přetahujte kousky mezi kroky nebo v rámci kroku změňte jejich pořadí. Kliknutím pravým tlačítkem myši zobrazíte příkazy pro vkládání, odebírání, pohyb a viditelnost.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1114"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1131"/>
         <source>Minifigure Builder</source>
         <translation>Tvůrce minifigurek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="119"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="120"/>
         <source>Terminal</source>
         <translation>Terminál</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="121"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="122"/>
         <source>&lt;p&gt;&lt;b&gt;Terminal&lt;/b&gt;&lt;/p&gt;&lt;p&gt;An embedded Konsole terminal that starts in the folder of the current model.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Terminál&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vestavěný terminál Konsole, který se spustí ve složce aktuálního modelu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="196"/>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="197"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="198"/>
         <source>Preview</source>
         <translation>Náhled</translation>
     </message>
@@ -19132,33 +19859,33 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Náhled&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zkontrolujte díl, aniž byste jej umístili do modelu. Dvojitým kliknutím na díl v doku Parts zobrazíte jeho náhled. Uzamknout náhled zachová aktuální náhled, když se změní výběr zdroje; odemkněte jej a povolte aktualizace.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1215"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1232"/>
         <source>Asset loading failed</source>
         <translation>Načtení zdroje se nezdařilo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="568"/>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="664"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="569"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="665"/>
         <source>Could not load part.</source>
         <translation>Díl se nepodařilo načíst.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="590"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="591"/>
         <source>Could not generate geometry.</source>
         <translation>Nelze vygenerovat geometrii.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="604"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="605"/>
         <source>Regenerating synthesized part geometry.</source>
         <translation>Obnovení geometrie syntetizovaného dílu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="606"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="607"/>
         <source>Loading model parts (%1 / %2).</source>
         <translation>Načítání dílů modelu (%1 / %2).</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="613"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="614"/>
         <source>The model could not be fully loaded. Some parts may be missing.
 
 %1</source>
@@ -19170,7 +19897,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="848"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="849"/>
         <source>Close Other Tabs</source>
         <translation>Zavřít ostatní záložky</translation>
     </message>
@@ -19191,12 +19918,12 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Model má neuložené změny. Chcete je zahodit a znovu načíst &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1159"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1160"/>
         <source>Save Image</source>
         <translation>Uložit obrázek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1171"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1172"/>
         <source>Select Objects</source>
         <translation>Vybrat objekty</translation>
     </message>
@@ -19206,408 +19933,412 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Pohled kroku %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="258"/>
         <source>No view change</source>
-        <translation>Beze změny pohledu</translation>
+        <translation type="vanished">Beze změny pohledu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="258"/>
         <source>Relative to the default view</source>
-        <translation>Vzhledem k výchozímu pohledu</translation>
+        <translation type="vanished">Vzhledem k výchozímu pohledu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="258"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1112"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="260"/>
         <source>Absolute</source>
         <translation>Absolutně</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="258"/>
         <source>Added to the previous view</source>
-        <translation>Přidáno k předchozímu pohledu</translation>
+        <translation type="vanished">Přidáno k předchozímu pohledu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="258"/>
         <source>Back to the default view</source>
-        <translation>Zpět na výchozí pohled</translation>
+        <translation type="vanished">Zpět na výchozí pohled</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="259"/>
         <source>How this step turns the view, saved as an MLCAD ROTSTEP line ending the step.</source>
-        <translation>Jak tento krok otáčí pohled, uloženo jako řádek MLCAD ROTSTEP ukončující krok.</translation>
+        <translation type="vanished">Jak tento krok otáčí pohled, uloženo jako řádek MLCAD ROTSTEP ukončující krok.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="274"/>
         <source>Use Current View</source>
-        <translation>Použít aktuální pohled</translation>
+        <translation type="vanished">Použít aktuální pohled</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="275"/>
         <source>Fill in the absolute rotation that matches the current view.</source>
-        <translation>Vyplnit absolutní otočení odpovídající aktuálnímu pohledu.</translation>
+        <translation type="vanished">Vyplnit absolutní otočení odpovídající aktuálnímu pohledu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="461"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="479"/>
         <source>Use Model View Settings</source>
         <translation>Použít nastavení pohledu na model</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="463"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="481"/>
         <source>Shading</source>
         <translation>Stínování</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="467"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="485"/>
         <source>Wireframe</source>
         <translation>Drátový model</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="466"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="484"/>
         <source>Flat Shading</source>
         <translation>Ploché stínování</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="465"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="261"/>
+        <source>How this step turns the view, saved as an MLCAD ROTSTEP line ending the step: absolute angles from the world zero (the front view) or relative angles from the home view, filled in from the model view, or default to go back to the home view for this and the next steps.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="483"/>
         <source>Default Lights</source>
         <translation>Výchozí osvětlení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="471"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="489"/>
         <source>Standard Lighting</source>
         <translation>Standardní osvětlení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="471"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="489"/>
         <source>Studio Lighting</source>
         <translation>Studiové osvětlení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="471"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="489"/>
         <source>Matte Lighting</source>
         <translation>Matné osvětlení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="471"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="489"/>
         <source>Toon Lighting</source>
         <translation>Kreslené osvětlení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="480"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="498"/>
         <source>Edge Lines</source>
         <translation>Čáry hran</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="481"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="499"/>
         <source>Conditional Lines</source>
         <translation>Podmíněné čáry</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="491"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="509"/>
         <source>Steps and Highlighting</source>
         <translation>Kroky a zvýraznění</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="492"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="510"/>
         <source>Highlight New Parts</source>
         <translation>Zvýraznit nové díly</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="494"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="512"/>
         <source>Fade on Edit</source>
         <translation>Zeslabit při úpravě</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="495"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="513"/>
         <source>Fade on Joint Set</source>
         <translation>Zeslabit při nastavení kloubu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="498"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="516"/>
         <source>Fade on Joint Move and Rotate</source>
         <translation>Zeslabit při pohybu a otáčení kloubu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="499"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="517"/>
         <source>Submodel Hover Outline</source>
         <translation>Obrys podmodelu při najetí</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="517"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="535"/>
         <source>Connection Points</source>
         <translation>Spojovací body</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="501"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="519"/>
         <source>Grid</source>
         <translation>Mřížka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="502"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="520"/>
         <source>All Grids</source>
         <translation>Všechny mřížky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="516"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="534"/>
         <source>Part Connections</source>
         <translation>Spojení dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="522"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="540"/>
         <source>View Cube</source>
         <translation>Krychle pohledu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="523"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="541"/>
         <source>Axis Icon</source>
         <translation>Ikona osy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="528"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="546"/>
         <source>Mesh Detail Control</source>
         <translation>Řízení detailu sítě</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="830"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="848"/>
         <source>Close this model tab.</source>
         <translation>Zavřít záložku tohoto modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="831"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="849"/>
         <source>Close Model Tab</source>
         <translation>Zavřít záložku modelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="832"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="850"/>
         <source>&lt;p&gt;&lt;b&gt;Close Model Tab&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Close this tab. The model stays in the file; open it again from the Models menu.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zavřít záložku modelu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zavře tuto záložku. Model zůstane v souboru; otevřete jej znovu z nabídky Modely.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="504"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="522"/>
         <source>Base Grid</source>
         <translation>Základní mřížka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="505"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="523"/>
         <source>XZ Height Grid</source>
         <translation>Výšková mřížka XZ</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="506"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="524"/>
         <source>YZ Height Grid</source>
         <translation>Výšková mřížka YZ</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="507"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="525"/>
         <source>Height Grids Behind Model</source>
         <translation>Výškové mřížky za modelem</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="509"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="527"/>
         <source>X Axis Line</source>
         <translation>Čára osy X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="510"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="528"/>
         <source>Y Axis Line</source>
         <translation>Čára osy Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="511"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="529"/>
         <source>Z Axis Line</source>
         <translation>Čára osy Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="493"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="511"/>
         <source>Fade Previous Steps</source>
         <translation>Zeslabit předchozí kroky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="260"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="262"/>
         <source>Rotation</source>
         <translation>Rotace</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="263"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="265"/>
         <source>X</source>
         <translation>X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="263"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="265"/>
         <source>Y</source>
         <translation>Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="263"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="265"/>
         <source>Z</source>
         <translation>Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="270"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="274"/>
         <source>°</source>
         <translation>°</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="518"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="536"/>
         <source>Insert First Part at Origin</source>
         <translation>Vložit první díl do počátku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="199"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="200"/>
         <source>&lt;p&gt;&lt;b&gt;Preview&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Inspect a part or model without placing it in the model. Double-click a part in the Parts dock to preview it. Lock Preview keeps the current preview when the source selection changes; unlock it to allow updates.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Náhled&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Prohlédněte si díl nebo model, aniž byste jej vložili do modelu. Dvojitým kliknutím na díl v panelu Díly zobrazíte náhled. Zamknutí náhledu ponechá aktuální náhled, když se změní zdrojový výběr; odemkněte jej, aby se mohl aktualizovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="661"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="662"/>
         <source>Found through BrickLink number %1</source>
         <translation>Nalezeno podle čísla BrickLink %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="669"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="670"/>
         <source>Marked as an alias in the parts library.</source>
         <translation>Označeno jako alias v knihovně dílů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="670"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="671"/>
         <source>The part the alias stands for</source>
         <translation>Díl, který alias zastupuje</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="675"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="676"/>
         <source>Marked as moved in the parts library.</source>
         <translation>Označeno jako přesunuté v knihovně dílů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="676"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="677"/>
         <source>The part it moved to</source>
         <translation>Díl, na který byl přesunut</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="960"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="961"/>
         <source>Export POV-Ray</source>
         <translation>Exportovat POV-Ray</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1045"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1046"/>
         <source>Print</source>
         <translation>Tisk</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1045"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1046"/>
         <source>Could not start the print job.</source>
         <translation>Tiskovou úlohu se nepodařilo spustit.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1078"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1079"/>
         <source>Preview...</source>
         <translation>Náhled...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1308"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1309"/>
         <source>Insert Color</source>
         <translation>Barva vkládání</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1310"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1311"/>
         <source>Current Color</source>
         <translation>Aktuální barva</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1311"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1312"/>
         <source>Selected Part Color</source>
         <translation>Barva vybraného dílu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1312"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1313"/>
         <source>Last Inserted Part Color</source>
         <translation>Barva naposledy vloženého dílu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1314"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1315"/>
         <source>Lock Parts Color</source>
         <translation>Zamknout barvu dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1357"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1359"/>
         <source>Custom Rotation Snap</source>
         <translation>Vlastní přichycení otáčení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1357"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1367"/>
+        <source>Snap Angle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1374"/>
         <source>Snap angle in degrees</source>
         <translation>Úhel přichycení ve stupních</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1369"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1392"/>
         <source>Custom (%1 Degrees)...</source>
         <translation>Vlastní (%1 stupňů)...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="235"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="236"/>
         <source>Part</source>
         <translation>Díl</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="237"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="238"/>
         <source>Camera</source>
         <translation>Kamera</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="239"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="240"/>
         <source>Light</source>
         <translation>Světlo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="241"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="242"/>
         <source>Origin</source>
         <translation>Počátek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="243"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="244"/>
         <source>%1 X: %2 Y: %3 Z: %4</source>
         <translation>%1 X: %2 Y: %3 Z: %4</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="372"/>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="376"/>
         <source>free</source>
         <translation>volně</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="372"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
         <source>%1, %2</source>
         <translation>%1, %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
         <source>relative</source>
         <translation>relativní</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
         <source>absolute</source>
         <translation>absolutní</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="376"/>
         <source>%1 deg.</source>
         <translation>%1 °</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="377"/>
         <source>separately</source>
         <translation>odděleně</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="377"/>
         <source>together</source>
         <translation>společně</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="377"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="379"/>
         <source>Move: %1 - Axes: %2 - Rotate: %3 / %4</source>
         <translation>Posun: %1 - Osy: %2 - Otáčení: %3 / %4</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="379"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="381"/>
         <source>Movement snap, rotation snap, transform axes and rotation pivot. Change them with the last buttons of the standard toolbar.</source>
         <translation>Přichytávání posunu, přichytávání otáčení, osy transformace a střed otáčení. Změníte je posledními tlačítky standardního panelu nástrojů.</translation>
     </message>
@@ -19658,7 +20389,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Výběr nelze vložit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="1026"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="1040"/>
         <source>No joint here</source>
         <translation>Zde není žádný kloub</translation>
     </message>
@@ -19678,7 +20409,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">Model nelze vložit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="502"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="516"/>
         <source>Select Cutaway Shade Color</source>
         <translation>Vybrat barvu stínu řezu</translation>
     </message>
@@ -19698,7 +20429,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Soubor byl změněn</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="952"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="953"/>
         <source>Export HTML</source>
         <translation>Export HTML</translation>
     </message>
@@ -19708,7 +20439,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">POV-Ray Export</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1171"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1172"/>
         <source>Nothing to select.</source>
         <translation>Nic na výběr.</translation>
     </message>
@@ -19717,7 +20448,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">%1 (ID: %2)</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="172"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="173"/>
         <source>%n objects selected</source>
         <translation>
             <numerusform>%n vybraný objekt</numerusform>
@@ -19730,12 +20461,12 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished"> - %1 (ID: %2)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="202"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="203"/>
         <source> in group &apos;%1&apos;</source>
         <translation> ve skupině &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="327"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="329"/>
         <source>Step %1</source>
         <translation>Krok %1</translation>
     </message>
@@ -19744,22 +20475,22 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished"> M: %1 %2 R: %3 </translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="406"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="408"/>
         <source>&amp;Undo %1</source>
         <translation>&amp;Zpět %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="411"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="413"/>
         <source>&amp;Undo</source>
         <translation>&amp;Zpět</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="417"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="419"/>
         <source>&amp;Redo %1</source>
         <translation>&amp;Znovu %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="422"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="424"/>
         <source>&amp;Redo</source>
         <translation>&amp;Znovu</translation>
     </message>
@@ -19783,12 +20514,12 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Podporované soubory (*.lcd *.ldr *.dat *.mpd);;všechny soubory (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="287"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="288"/>
         <source>Migrate Model</source>
         <translation>Migrovat model</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="287"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="288"/>
         <source>&apos;%1&apos; uses LeoCAD meta commands. Do you want to migrate it to StudWorx meta commands?</source>
         <translation>&apos;%1&apos; používá metapříkazy LeoCAD. Chcete jej migrovat na metapříkazy StudWorx?</translation>
     </message>
@@ -19798,43 +20529,43 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Upravit text modelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="316"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="317"/>
         <source>LDraw Models (*.ldr *.mpd *.dat);;LeoCAD Models (*.lcd);;All Files (*)</source>
         <translation>Modely LDraw (*.ldr *.mpd *.dat);;Modely LeoCAD (*.lcd);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="288"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="289"/>
         <source>A migrated model is saved with StudWorx meta commands. LeoCAD then ignores its cameras, lights, groups and part settings. A model kept as it is stays readable in LeoCAD.</source>
         <translation>Migrovaný model se uloží s metapříkazy StudWorx. LeoCAD pak ignoruje jeho kamery, světla, skupiny a nastavení dílů. Model ponechaný beze změny zůstane čitelný v programu LeoCAD.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="231"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="232"/>
         <source>LDraw Models (*.ldr *.mpd *.dat);;LeoCAD Models (*.lcd);;LEGO® Digital Designer Models (*.lxf *.lxfml);;All Files (*)</source>
         <translation>Modely LDraw (*.ldr *.mpd *.dat);;Modely LeoCAD (*.lcd);;Modely LEGO® Digital Designer (*.lxf *.lxfml);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="289"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="290"/>
         <source>Migrate</source>
         <translation>Migrovat</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="290"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="291"/>
         <source>Keep</source>
         <translation>Ponechat</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="292"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="293"/>
         <source>Remember this choice</source>
         <translation>Zapamatovat si tuto volbu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="316"/>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="351"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="317"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="352"/>
         <source>Merge Model</source>
         <translation>Sloučit model</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="361"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="362"/>
         <source>LEGO® Digital Designer Models (*.lxf *.lxfml);;All Files (*)</source>
         <translation>Modely LEGO® Digital Designer (*.lxf *.lxfml);;Všechny soubory (*)</translation>
     </message>
@@ -19885,32 +20616,32 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete"> M: %1 %2 R: %3  {1 %2 ?} {3 %4 ?}</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="347"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="348"/>
         <source>Cannot Merge Model</source>
         <translation>Model nelze sloučit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="361"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="362"/>
         <source>Import LEGO® Digital Designer Model</source>
         <translation>Importovat model LEGO® Digital Designer</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="414"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="415"/>
         <source>LDraw Models (*.mpd);;All Files (*)</source>
         <translation>Modely LDraw (*.mpd);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="414"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="415"/>
         <source>LDraw Models (*.ldr *.dat *.mpd);;All Files (*)</source>
         <translation>Modely LDraw (*.ldr *.dat *.mpd);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="437"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="438"/>
         <source>&apos;%1&apos; already exists. Replace it?</source>
         <translation>&apos;%1&apos; již existuje. Nahradit jej?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="448"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="449"/>
         <source>Saving files in LCD format is no longer supported. Please use the LDR or MPD formats instead.</source>
         <oldsource>Saving files in LCD format is no longer supported, please use the LDR or MPD formats instead.</oldsource>
         <translation>Ukládání souborů ve formátu LCD již není podporováno, místo toho použijte formáty LDR nebo MPD.</translation>
@@ -19921,7 +20652,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">Uložit projekt</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="472"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="473"/>
         <source>Save changes to &apos;%1&apos;?</source>
         <translation>Chcete uložit změny v &apos;%1&apos;?</translation>
     </message>
@@ -20008,7 +20739,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>8K</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="351"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="352"/>
         <source>Merged %n submodels.</source>
         <translation>
             <numerusform>Sloučen %n podmodel.</numerusform>
@@ -20017,69 +20748,69 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         </translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="284"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="285"/>
         <source>View: %1 deg. Lat. / %2 deg. Lon. / %3</source>
         <translation>Pohled: %1 st. š. / %2 st. d. / %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="283"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="284"/>
         <source>Perspective</source>
         <translation>Perspektivní</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="166"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="167"/>
         <source>%1 - ID: %2 - Weight: %3</source>
         <translation>%1 - ID: %2 - Hmotnost: %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="166"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="191"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="198"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="167"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="192"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="199"/>
         <source>N/A</source>
         <translation>N/D</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="194"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="195"/>
         <source>%1 g Total</source>
         <translation>%1 g celkem</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="196"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="197"/>
         <source>%1 g</source>
         <translation>%1 g</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="198"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="199"/>
         <source> - %1 - ID: %2 - Weight: %3</source>
         <translation> - %1 - ID: %2 - Hmotnost: %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="283"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="284"/>
         <source>Orthographic</source>
         <translation>Pravoúhlá</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1239"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1256"/>
         <source>Selection</source>
         <translation>Výběr</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1240"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1257"/>
         <source>View Orientation</source>
         <translation>Orientace pohledu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1241"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1258"/>
         <source>Position</source>
         <translation>Pozice</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1242"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1259"/>
         <source>Snap and Transform</source>
         <translation>Přichycení a transformace</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1243"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1260"/>
         <source>Step</source>
         <translation>Krok</translation>
     </message>
@@ -20157,7 +20888,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Šablony&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Načtěte uloženou konfiguraci dílů, barev a úhlů nebo uložte aktuální konfiguraci pod názvem. Výběr jiné šablony nahradí aktuální konfiguraci náhledu.&lt;/p&gt;&lt;p&gt;Změny náhledu se neuloží jako šablona, ​​dokud nepoužijete možnost Uložit. Operace se šablonami jsou zachovány, když se průvodce zavře, včetně po zrušení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="150"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="155"/>
         <source>Templates</source>
         <translation>Šablony</translation>
     </message>
@@ -20232,179 +20963,179 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Exportovat...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Hat</source>
         <translation>Čepice</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Hat Accessory</source>
         <translation>Příslušenství čepice</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Head</source>
         <translation>Hlava</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Neck</source>
         <translation>Krk</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Torso</source>
         <translation>Trup</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Hip</source>
         <translation>Boky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Hip Accessory</source>
         <translation>Příslušenství boků</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Left Arm</source>
         <translation>Levá paže</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Right Arm</source>
         <translation>Pravá paže</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Left Hand</source>
         <translation>Levá ruka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Right Hand</source>
         <translation>Pravá ruka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="37"/>
         <source>Left Hand Accessory</source>
         <translation>Příslušenství pro levou ruku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="37"/>
         <source>Right Hand Accessory</source>
         <translation>Příslušenství pro pravou ruku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="37"/>
         <source>Left Leg</source>
         <translation>Levá noha</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="37"/>
         <source>Right Leg</source>
         <translation>Pravá noha</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="37"/>
         <source>Left Leg Accessory</source>
         <translation>Příslušenství pro levou nohu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="37"/>
         <source>Right Leg Accessory</source>
         <translation>Příslušenství k pravé noze</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="53"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="54"/>
         <source>%1 part</source>
         <translation>%1 díl</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="54"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="55"/>
         <source>&lt;p&gt;&lt;b&gt;Choose Part&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a part for this section of the minifigure. Select None to omit it, the selector then shows the name of the section. The preview updates when you select a different part.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vybrat díl&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte díl pro tuto část minifigurky. Volbou Žádné jej vynecháte, výběr pak zobrazí název části. Náhled se aktualizuje při výběru jiného dílu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="129"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="134"/>
         <source>Minifigure Builder Preview</source>
         <translation>Náhled tvůrce minifigurek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="131"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="136"/>
         <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Preview&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Check the assembled minifigure as you change parts, colors, or angles. Choose Add to Model to add it to the current model.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Náhled tvůrce minifigurek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kontrolujte složenou minifigurku při změně dílů, barev nebo úhlů. Volbou Přidat do modelu ji přidáte do aktuálního modelu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="165"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="170"/>
         <source>Randomize</source>
         <translation>Náhodně</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="167"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="172"/>
         <source>Build a random minifigure from the library parts</source>
         <translation>Sestavit náhodnou minifigurku z dílů knihovny</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="168"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="173"/>
         <source>&lt;p&gt;&lt;b&gt;Randomize&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Build a random minifigure from the parts in the current library, with random colors. Choose it again for another one, or save the result as a template.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Náhodně&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Sestaví náhodnou minifigurku z dílů v aktuální knihovně s náhodnými barvami. Znovu ji zvolte pro další nebo výsledek uložte jako šablonu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="173"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="178"/>
         <source>Add to Model</source>
         <translation>Přidat do modelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="174"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="179"/>
         <source>Add this minifigure to the current model</source>
         <translation>Přidat tuto minifigurku do aktuálního modelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="193"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="198"/>
         <source>Configure the minifigure builder preview rendering.</source>
         <translation>Nastavení vykreslování náhledu tvůrce minifigurek.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="194"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="199"/>
         <source>Minifigure Builder Preview Options</source>
         <translation>Možnosti náhledu tvůrce minifigurek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="337"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="342"/>
         <source>Empty Minifigure</source>
         <translation>Prázdná minifigurka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="390"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="395"/>
         <source>Template Name</source>
         <translation>Název šablony</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="403"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="408"/>
         <source>Cannot overwrite a built-in template.</source>
         <translation>Vestavěnou šablonu nelze přepsat.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="443"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="448"/>
         <source>Minifigure Template Files (*.minifigure *.minifig);;All Files (*)</source>
         <translation>Soubory šablon minifigurek (*.minifigure *.minifig);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="452"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="457"/>
         <source>Could not read file &apos;%1&apos;:
 %2</source>
         <translation>Soubor &apos;%1&apos; se nepodařilo přečíst:
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="464"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="469"/>
         <source>Minifigure Template Files (*.minifigure);;All Files (*)</source>
         <translation>Soubory šablon minifigurek (*.minifigure);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="472"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="477"/>
         <source>Could not write file &apos;%1&apos;:
 %2</source>
         <translation>Soubor &apos;%1&apos; se nepodařilo zapsat:
@@ -20420,7 +21151,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">%1: %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="336"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="341"/>
         <source>Default Template</source>
         <translation>Výchozí šablona</translation>
     </message>
@@ -20430,32 +21161,32 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Vyberte dílek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte dílek pro tuto část minifigurky. Chcete-li jej vynechat, vyberte možnost Žádný. Náhled se aktualizuje, když vyberete jiný díl.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="61"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="62"/>
         <source>%1 color</source>
         <translation>%1 barva</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="62"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="63"/>
         <source>Choose the color for %1.</source>
         <translation>Vyberte barvu pro %1.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="64"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="65"/>
         <source>&lt;p&gt;&lt;b&gt;Choose Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Change the color of this minifigure part. The preview updates immediately, and saving a template includes the chosen color.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vyberte barvu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Změňte barvu tohoto dílu minifigurky. Náhled se okamžitě aktualizuje a uložení šablony obsahuje vybranou barvu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="77"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="79"/>
         <source>%1 rotation</source>
         <translation>%1 otočení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="78"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="80"/>
         <source>Rotate %1, in degrees (-360 to 360).</source>
         <translation>Otočit %1 ve stupních (-360 až 360).</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="79"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="81"/>
         <source>&lt;p&gt;&lt;b&gt;Rotation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Adjust this part&apos;s angle to pose the minifigure. Values range from -360 to 360 degrees. The available rotation depends on the selected minifigure section.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Otočení&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Upravte úhel tohoto dílu a nastavte pózu minifigurky. Hodnoty se pohybují od -360 do 360 stupňů. Dostupné otočení závisí na vybrané části minifigurky.&lt;/p&gt;</translation>
     </message>
@@ -20465,7 +21196,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">Náhled minifigurky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="130"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="135"/>
         <source>Preview of the chosen parts, colors, and pose.</source>
         <translation>Náhled vybraných dílů, barev a pózy.</translation>
     </message>
@@ -20475,9 +21206,9 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Náhled minifigurky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kontrolujte sestavenou minifigurku, jak měníte dílky, barvy nebo úhly. Zvolte OK pro přidání této konfigurace do aktuálního modelu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="390"/>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="397"/>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="403"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="395"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="402"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="408"/>
         <source>Save Template</source>
         <translation>Uložit šablonu</translation>
     </message>
@@ -20486,7 +21217,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">Název šablony:</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="397"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="402"/>
         <source>Template name cannot be empty.</source>
         <translation>Název šablony nesmí být prázdný.</translation>
     </message>
@@ -20496,28 +21227,28 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">Výchozí šablonu nelze přepsat.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="409"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="414"/>
         <source>Are you sure you want to overwrite the template &apos;%1&apos;?</source>
         <translation>Opravdu chcete přepsat tuto šablonu &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="410"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="415"/>
         <source>Overwrite Template</source>
         <translation>Přepsat šablonu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="428"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="433"/>
         <source>Are you sure you want to delete the template &apos;%1&apos;?</source>
         <translation>Opravdu chcete odstranit tuto šablonu &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="430"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="435"/>
         <source>Delete Template</source>
         <translation>Odstranit šablonu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="443"/>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="452"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="448"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="457"/>
         <source>Import Templates</source>
         <translation>Importovat šablony</translation>
     </message>
@@ -20536,8 +21267,8 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="464"/>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="472"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="469"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="477"/>
         <source>Export Templates</source>
         <translation>Exportovat šablony</translation>
     </message>
@@ -20548,7 +21279,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="502"/>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="507"/>
         <source>None</source>
         <translation>Žádné</translation>
     </message>
@@ -20758,7 +21489,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Odebrání kroku</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model.cpp" line="761"/>
+        <location filename="../../source/core/sw_model.cpp" line="776"/>
         <location filename="../../source/core/sw_model_clipboard.cpp" line="175"/>
         <location filename="../../source/core/sw_model_group.cpp" line="61"/>
         <location filename="../../source/core/sw_model_group.cpp" line="98"/>
@@ -20908,29 +21639,29 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Nelze vygenerovat geometrii pro díl &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model.cpp" line="688"/>
+        <location filename="../../source/core/sw_model.cpp" line="703"/>
         <source>Delete Step</source>
         <translation>Odstranit krok</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model.cpp" line="891"/>
+        <location filename="../../source/core/sw_model.cpp" line="906"/>
         <source>Explode</source>
         <translation>Rozložit</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model.cpp" line="1114"/>
-        <location filename="../../source/core/sw_model.cpp" line="1124"/>
-        <location filename="../../source/core/sw_model.cpp" line="1145"/>
+        <location filename="../../source/core/sw_model.cpp" line="1129"/>
+        <location filename="../../source/core/sw_model.cpp" line="1139"/>
+        <location filename="../../source/core/sw_model.cpp" line="1160"/>
         <source>Save Exploded Copy</source>
         <translation>Uložit rozloženou kopii</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model.cpp" line="1114"/>
+        <location filename="../../source/core/sw_model.cpp" line="1129"/>
         <source>LDraw Models (*.%1);;All Files (*)</source>
         <translation>Modely LDraw (*.%1);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model.cpp" line="1124"/>
+        <location filename="../../source/core/sw_model.cpp" line="1139"/>
         <source>The exploded copy needs a name other than the open file.</source>
         <translation>Rozložená kopie potřebuje jiný název, než má otevřený soubor.</translation>
     </message>
@@ -20966,63 +21697,63 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Duplikovat</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="111"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="112"/>
         <source>Create Step Image</source>
         <translation>Vytvořit obrázek kroku</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="172"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="190"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="173"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="191"/>
         <source>Could not create the step images.</source>
         <translation>Obrázky kroků se nepodařilo vytvořit.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="267"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="442"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="451"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="622"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="269"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="444"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="453"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="628"/>
         <source>Could not allocate the parts list image.</source>
         <translation>Nepodařilo se přidělit obrázek seznamu dílů.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="310"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="312"/>
         <source>Could not create the parts list framebuffer.</source>
         <translation>Nelze vytvořit framebuffer seznamu dílů.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="391"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="393"/>
         <source>Could not read the parts list image.</source>
         <translation>Nelze přečíst obrázek seznamu dílů.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="739"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1123"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1143"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1149"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1160"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1176"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1180"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1210"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="777"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1161"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1181"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1187"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1198"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1214"/>
         <location filename="../../source/core/sw_model_render.cpp" line="1218"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1230"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1234"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1248"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1256"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1268"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1272"/>
         <source>Could not write file &apos;%1&apos;:
 %2</source>
         <translation>Soubor &apos;%1&apos; se nepodařilo zapsat:
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="1117"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1155"/>
         <source>Save at least two poses of the main model first.</source>
         <translation>Nejprve uložte alespoň dvě pózy hlavního modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model.cpp" line="600"/>
+        <location filename="../../source/core/sw_model.cpp" line="615"/>
         <source>Set Step View</source>
         <translation>Nastavit pohled kroku</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model.cpp" line="667"/>
+        <location filename="../../source/core/sw_model.cpp" line="682"/>
         <source>Insert Step</source>
         <translation>Vložit krok</translation>
     </message>
@@ -21127,12 +21858,12 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Přidat zdroj osvětlení</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model.cpp" line="1200"/>
+        <location filename="../../source/core/sw_model.cpp" line="1215"/>
         <source>Minifigure </source>
         <translation>Minifigurka </translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model.cpp" line="1225"/>
+        <location filename="../../source/core/sw_model.cpp" line="1240"/>
         <source>Add Minifigure</source>
         <translation>Přidat minifigurku</translation>
     </message>
@@ -21319,14 +22050,14 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Rozsah zvětšení</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model.cpp" line="752"/>
+        <location filename="../../source/core/sw_model.cpp" line="767"/>
         <source>Change Model Properties</source>
         <translation>Změnit vlastnosti modelu</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model.cpp" line="761"/>
-        <location filename="../../source/core/sw_model.cpp" line="772"/>
-        <location filename="../../source/core/sw_model.cpp" line="831"/>
+        <location filename="../../source/core/sw_model.cpp" line="776"/>
+        <location filename="../../source/core/sw_model.cpp" line="787"/>
+        <location filename="../../source/core/sw_model.cpp" line="846"/>
         <source>Part Array</source>
         <translation>Pole dílů</translation>
     </message>
@@ -21361,7 +22092,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Není nic vybráno.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model.cpp" line="772"/>
+        <location filename="../../source/core/sw_model.cpp" line="787"/>
         <source>Array only has 1 element or less. No parts added.</source>
         <oldsource>Array only has 1 element or less, no pieces added.</oldsource>
         <translation>Pole obsahuje pouze 1 prvek nebo méně, nejsou přidávány žádné díly.</translation>
@@ -21680,7 +22411,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
     <name>swPageSetupDialog</name>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="133"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="142"/>
         <source>Page Setup</source>
         <translation>Nastavení stránky</translation>
     </message>
@@ -21758,177 +22489,177 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Jednotky okrajů, metrické nebo imperiální. Volbou předvolby se vyberou odpovídající jednotky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="19"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="20"/>
         <source>A0</source>
         <translation>A0</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="20"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="21"/>
         <source>A1</source>
         <translation>A1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="21"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="22"/>
         <source>A2</source>
         <translation>A2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="22"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="23"/>
         <source>A3</source>
         <translation>A3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="23"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="24"/>
         <source>A4</source>
         <translation>A4</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="24"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="25"/>
         <source>A5</source>
         <translation>A5</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="25"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="26"/>
         <source>A6</source>
         <translation>A6</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="26"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="27"/>
         <source>B4</source>
         <translation>B4</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="27"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="28"/>
         <source>B5</source>
         <translation>B5</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="28"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="29"/>
         <source>B6</source>
         <translation>B6</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="29"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="30"/>
         <source>JIS B4</source>
         <translation>JIS B4</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="30"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="31"/>
         <source>JIS B5</source>
         <translation>JIS B5</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="32"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="33"/>
         <source>Letter</source>
         <translation>Letter</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="33"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="34"/>
         <source>Legal</source>
         <translation>Legal</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="34"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="35"/>
         <source>Tabloid</source>
         <translation>Tabloid</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="35"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="36"/>
         <source>Executive</source>
         <translation>Executive</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="36"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="37"/>
         <source>Statement</source>
         <translation>Statement</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="37"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="38"/>
         <source>ANSI C</source>
         <translation>ANSI C</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="39"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="40"/>
         <source>XGA</source>
         <translation>XGA</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="40"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="41"/>
         <source>HD</source>
         <translation>HD</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="41"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="42"/>
         <source>WXGA</source>
         <translation>WXGA</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="42"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="43"/>
         <source>UXGA</source>
         <translation>UXGA</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="43"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="44"/>
         <source>Full HD</source>
         <translation>Full HD</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="44"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="45"/>
         <source>WUXGA</source>
         <translation>WUXGA</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="45"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="46"/>
         <source>Tablet</source>
         <translation>Tablet</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="46"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="47"/>
         <source>QHD</source>
         <translation>QHD</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="47"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="48"/>
         <source>4K UHD</source>
         <translation>4K UHD</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="61"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="62"/>
         <source>Pixels</source>
         <translation>Pixely</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="61"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="62"/>
         <source>Millimeters</source>
         <translation>Milimetry</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="61"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="62"/>
         <source>Centimeters</source>
         <translation>Centimetry</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="61"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="62"/>
         <source>Inches</source>
         <translation>Palce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="65"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="66"/>
         <source>Custom</source>
         <translation>Vlastní</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="78"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="79"/>
         <source>%1 x %2 %3</source>
         <translation>%1 x %2 %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="80"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="81"/>
         <source>%1 (%2)</source>
         <translation>%1 (%2)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="133"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="142"/>
         <source>The margins must leave room for the page contents.</source>
         <translation>Okraje musí ponechat místo pro obsah stránky.</translation>
     </message>
@@ -22880,9 +23611,10 @@ Hmotnost: %1</translation>
         <translation type="vanished">Nakreslete cvočky</translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1715"/>
         <source>studs</source>
         <translatorcomment>TODO</translatorcomment>
-        <translation type="vanished">cvočky</translation>
+        <translation>cvočky</translation>
     </message>
     <message>
         <source>Draw lines every</source>
@@ -24229,7 +24961,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation type="vanished">Všechny soubory (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1362"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1369"/>
         <source>Select POV-Ray Executable</source>
         <translation>Vyberte spustitelný soubor POV-Ray</translation>
     </message>
@@ -24238,17 +24970,17 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation type="vanished">Otevřete složku LGEO</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1407"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1414"/>
         <source>Reset Colors</source>
         <translation>Obnovit barvy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1407"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1414"/>
         <source>Would you like to also reset the interface colors to match the color theme?</source>
         <translation>Chcete také resetovat barvy rozhraní tak, aby odpovídaly barevnému motivu?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1421"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1428"/>
         <source>Select Background Color</source>
         <translation>Vybrat barvu pozadí</translation>
     </message>
@@ -24267,7 +24999,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation type="vanished">Vybrat barvu os</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="933"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="939"/>
         <source>&apos;%1&apos; did not run as Blender, so Blender rendering stays unavailable.
 
 %2</source>
@@ -24276,316 +25008,330 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1100"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1107"/>
         <source>Select Parts Library</source>
         <translation>Vybrat knihovnu dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1116"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1123"/>
         <source>Select Unofficial Library Archive</source>
         <translation>Vybrat archiv neoficiální knihovny</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1124"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1131"/>
         <source>Select Part Connections Folder</source>
         <translation>Vybrat složku připojení dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1286"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1293"/>
         <source>Choose Minifigure Builder Settings</source>
         <translation>Vybrat nastavení tvůrce minifigurek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1299"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1306"/>
         <source>Save Minifigure Builder Settings</source>
         <translation>Uložit nastavení tvůrce minifigurek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1316"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1323"/>
         <source>Saved the latest minifigure builder settings to &apos;%1&apos;.</source>
         <translation>Poslední nastavení tvůrce minifigurek bylo uloženo do &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1321"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1328"/>
         <source>Select BrickLink Mapping File</source>
         <translation>Vybrat mapovací soubor BrickLink</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1100"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1107"/>
         <source>Parts Library Files (*.zip *.bin LDConfig.ldr ldconfig.ldr);;All Files (*)</source>
         <translation>Soubory knihovny dílů (*.zip *.bin LDConfig.ldr ldconfig.ldr);;Všechny soubory (*)</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="639"/>
         <source>%n plate(s)</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>%n plate</numerusform>
             <numerusform>%n plate</numerusform>
             <numerusform>%n plate</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1116"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="641"/>
+        <source>plates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="657"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="660"/>
+        <source>s</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="750"/>
+        <source>px</source>
+        <translation type="unfinished">px</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1123"/>
         <source>Supported Archives (*.zip);;All Files (*)</source>
         <translation>Podporované archivy (*.zip);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1136"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1143"/>
         <source>Downloading the LDCad shadow library...</source>
         <translation>Stahování stínové knihovny LDCad...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1143"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1150"/>
         <source>Could not download the LDCad shadow library from %1.</source>
         <translation>Stínovou knihovnu LDCad se nepodařilo stáhnout z %1.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1286"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1299"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1293"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1306"/>
         <source>Settings Files (*.ini);;All Files (*)</source>
         <translation>Soubory nastavení (*.ini);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1321"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1328"/>
         <source>Mapping Files (*.txt *.json);;All Files (*)</source>
         <translation>Mapovací soubory (*.txt *.json);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1357"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1371"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1364"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1378"/>
         <source>Executable Files (*.exe);;All Files (*)</source>
         <translation>Spustitelné soubory (*.exe);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1359"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1373"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1366"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1380"/>
         <source>All Files (*)</source>
         <translation>Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1376"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1383"/>
         <source>Select Blender Executable</source>
         <translation>Vybrat spustitelný soubor Blender</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1384"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1391"/>
         <source>Select LGEO Folder</source>
         <translation>Vybrat složku LGEO</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1392"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1399"/>
         <source>Select Instructions Template</source>
         <translation>Vybrat šablonu návodu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1392"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1399"/>
         <source>LDraw Files (*.ldr *.dat *.mpd);;All Files (*)</source>
         <translation>Soubory LDraw (*.ldr *.dat *.mpd);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1426"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1433"/>
         <source>Select Text Color</source>
         <translation>Vyberte barvu textu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1431"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1438"/>
         <source>Select Connection Points Color</source>
         <translation>Vybrat barvu bodů spojení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1437"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1444"/>
         <source>Select Text Halo Color</source>
         <translation>Vyberte barvu svatozáře textu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1443"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1450"/>
         <source>Select Marquee Border Color</source>
         <translation>Vyberte barvu ohraničení výběrového obdélníku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1448"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1455"/>
         <source>Select Marquee Fill Color</source>
         <translation>Vyberte barvu výplně výběrového obdélníku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1454"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1461"/>
         <source>Select Overlay Color</source>
         <translation>Vybrat barvu překryvu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1459"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1466"/>
         <source>Select Explode Lines Color</source>
         <translation>Vybrat barvu čar rozložení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1465"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1472"/>
         <source>Select Axis Icon Outline Color</source>
         <translation>Vybrat barvu obrysu ikony os</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1471"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1478"/>
         <source>Select Cutaway Shade Color</source>
         <translation>Vybrat barvu stínu řezu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1477"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1484"/>
         <source>Select Element Margin Color</source>
         <translation>Vybrat barvu okraje prvku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1483"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1490"/>
         <source>Select Element Padding Color</source>
         <translation>Vybrat barvu odsazení prvku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1496"/>
         <source>Select Element Anchor Color</source>
         <translation>Vybrat barvu kotvy prvku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1495"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1502"/>
         <source>Select Ruler Pointer Color</source>
         <translation>Vybrat barvu ukazatele pravítka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1501"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1508"/>
         <source>Select Active View Color</source>
         <translation>Vybrat barvu aktivního pohledu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1506"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1513"/>
         <source>Select Inactive View Color</source>
         <translation>Vyberte barvu neaktivního pohledu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1511"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1518"/>
         <source>Select Fade Color</source>
         <translation>Vybrat barvu zeslabení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1517"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1524"/>
         <source>Select Edit Fade Color</source>
         <translation>Vybrat barvu zeslabení úprav</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1523"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1530"/>
         <source>Select Joint Fade Color</source>
         <translation>Vybrat barvu zeslabení kloubů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1529"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1536"/>
         <source>Select Hover Outline Color</source>
         <translation>Vybrat barvu obrysu při najetí</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1534"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1541"/>
         <source>Select Highlight Color</source>
         <translation>Vybrat barvu zvýraznění</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1540"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1547"/>
         <source>Select Grid Stud Color</source>
         <translatorcomment>TODO</translatorcomment>
         <translation>Vybrat barvu výstupků mřížky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1546"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1553"/>
         <source>Select Grid Line Color</source>
         <translatorcomment>TODO</translatorcomment>
         <translation>Vybrat barvu čar mřížky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1551"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1558"/>
         <source>Select View Cube Color</source>
         <translatorcomment>TODO</translatorcomment>
         <translation>Vybrat barvu krychle pohledu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1556"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1563"/>
         <source>Select View Cube Text Color</source>
         <translatorcomment>TODO</translatorcomment>
         <translation>Vybrat barvu textu krychle pohledu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1561"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1568"/>
         <source>Select View Cube Highlight Color</source>
         <translatorcomment>TODO</translatorcomment>
         <translation>Vybrat barvu zvýraznění krychle pohledu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1566"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1573"/>
         <source>Select X Axis Color</source>
         <translation>Vybrat barvu osy X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1571"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1578"/>
         <source>Select Y Axis Color</source>
         <translation>Vybrat barvu osy Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1576"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1583"/>
         <source>Select Z Axis Color</source>
         <translation>Vybrat barvu osy Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1596"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1603"/>
         <source>Select Object Selected Color</source>
         <translation>Vyberte barvu vybraného objektu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1601"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1608"/>
         <source>Select Object Focused Color</source>
         <translation>Vyberte barvu zaostřeného objektu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1606"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1613"/>
         <source>Select Object Deactivated Color</source>
         <translation>Vybrat barvu deaktivovaného objektu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1612"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1619"/>
         <source>Select Camera Color</source>
         <translation>Vyberte barvu kamery</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1617"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1624"/>
         <source>Select Light Color</source>
         <translation>Vyberte barvu světla</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1622"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1629"/>
         <source>Select Control Point Color</source>
         <translation>Vyberte barvu kontrolního bodu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1628"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1635"/>
         <source>Select Control Point Focused Color</source>
         <translation>Vyberte barvu zaostřeného kontrolního bodu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1634"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1641"/>
         <source>Select Control Point Seated Color</source>
         <translation>Vybrat barvu usazeného kontrolního bodu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1640"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1647"/>
         <source>Select Flex Path Spread Handle Color</source>
         <translation>Vybrat barvu úchytu rozevření ohebné dráhy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1646"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1653"/>
         <source>Select Flex Path Color</source>
         <translation>Vybrat barvu ohebné dráhy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1652"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1659"/>
         <source>Select Flex Path Out of Reach Color</source>
         <translation>Vybrat barvu ohebné dráhy mimo dosah</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1707"/>
         <source>%n stud(s)</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>%n výstupek</numerusform>
             <numerusform>%n výstupky</numerusform>
             <numerusform>%n výstupků</numerusform>
@@ -24713,7 +25459,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="113"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="146"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="147"/>
         <source>Page</source>
         <translation>Stránka</translation>
     </message>
@@ -24774,185 +25520,185 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation>Hlavní jednotka mřížky kreslené barvou Hlavní čáry mřížky stránky, v jednotkách okrajů výchozího nastavení stránky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="138"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="139"/>
         <source>Split each grid unit into fractions drawn in the Page Grid Secondary Lines color, dragged elements snap to the fractions.</source>
         <translation>Rozdělí každou jednotku mřížky na zlomky kreslené barvou Vedlejší čáry mřížky stránky, přetahované prvky se přichytávají ke zlomkům.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="139"/>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="140"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="141"/>
         <source>Divisions</source>
         <translation>Dělení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="146"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="147"/>
         <source>Margins</source>
         <translation>Okraje</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="147"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="148"/>
         <source>Lay the grid out within the margins or across the whole page.</source>
         <translation>Rozvrhne mřížku uvnitř okrajů nebo přes celou stránku.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="148"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="150"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="149"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="151"/>
         <source>Grid Area</source>
         <translation>Oblast mřížky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="155"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="156"/>
         <source>Instructions Page</source>
         <translation>Stránka pokynů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="159"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="160"/>
         <source>Show Margins</source>
         <translation>Zobrazit okraje</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="159"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="160"/>
         <source>Outline the page margins on screen, they are never printed.</source>
         <translation>Vyznačí okraje stránky na obrazovce, nikdy se netisknou.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="160"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="161"/>
         <source>Show Rulers</source>
         <translation>Zobrazit pravítka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="160"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="161"/>
         <source>Show rulers in the page units along the page, their arrows follow the pointer.</source>
         <translation>Zobrazí pravítka v jednotkách stránky podél stránky, jejich šipky sledují ukazatel.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="161"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="162"/>
         <source>Show Element Margins</source>
         <translation>Zobrazit okraje prvků</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="161"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="162"/>
         <source>Fill the margins around each element on screen with the element margin color, they are never printed.</source>
         <translation>Vyplní okraje kolem každého prvku na obrazovce barvou okraje prvku, nikdy se netisknou.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="162"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="163"/>
         <source>Show Element Padding</source>
         <translation>Zobrazit odsazení prvků</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="162"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="163"/>
         <source>Fill the padding inside the border of each element on screen with the element padding color, it is never printed.</source>
         <translation>Vyplní odsazení uvnitř ohraničení každého prvku na obrazovce barvou odsazení prvku, nikdy se netiskne.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="163"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="164"/>
         <source>Show Element Anchors</source>
         <translation>Zobrazit kotvy prvků</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="163"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="164"/>
         <source>Mark the corners, edge centers and center of each element on screen, they are never printed.</source>
         <translation>Označí rohy, středy stran a střed každého prvku na obrazovce, nikdy se netisknou.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="196"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="197"/>
         <source>Page Margins</source>
         <translation>Okraje stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="197"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="198"/>
         <source>Page Grid Primary Lines</source>
         <translation>Hlavní čáry mřížky stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="196"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="197"/>
         <source>Color of the dashed outline of the page margins.</source>
         <translation>Barva čárkovaného obrysu okrajů stránky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="197"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="198"/>
         <source>Color of the grid lines at every grid unit.</source>
         <translation>Barva čar mřížky u každé jednotky mřížky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="198"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="199"/>
         <source>Color of the grid lines at the fractions of a grid unit.</source>
         <translation>Barva čar mřížky u zlomků jednotky mřížky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="198"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="199"/>
         <source>Page Grid Secondary Lines</source>
         <translation>Vedlejší čáry mřížky stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="200"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="201"/>
         <source>Editor</source>
         <translation>Editor</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="204"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="205"/>
         <source>Syntax Highlighting</source>
         <translation>Zvýraznění syntaxe</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="204"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="205"/>
         <source>Color the commands of the model file in the Editor panel.</source>
         <translation>Obarví příkazy souboru modelu v panelu Editor.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="205"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="206"/>
         <source>Line Numbers</source>
         <translation>Čísla řádků</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="205"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="206"/>
         <source>Number the lines of the model file in the Editor panel.</source>
         <translation>Očísluje řádky souboru modelu v panelu Editor.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="206"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="207"/>
         <source>Wrap Lines</source>
         <translation>Zalamovat řádky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="206"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="207"/>
         <source>Wrap long lines of the model file in the Editor panel.</source>
         <translation>Zalomí dlouhé řádky souboru modelu v panelu Editor.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="207"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="208"/>
         <source>Whitespace Markers</source>
         <translation>Značky bílých znaků</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="207"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="208"/>
         <source>Mark tabs, spaces and line ends in the Editor panel.</source>
         <translation>Označí tabulátory, mezery a konce řádků v panelu Editor.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="209"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="210"/>
         <source>Instructions</source>
         <translation>Pokyny</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="277"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="278"/>
         <source>Landscape</source>
         <translation>Na šířku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="277"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="278"/>
         <source>Portrait</source>
         <translation>Na výšku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="281"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="282"/>
         <source>%1, %2, %3, %4</source>
         <translation>%1, %2, %3, %4</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="283"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="284"/>
         <source>%1 x %2 %3 %4, margins %5 %6...</source>
         <translation>%1 x %2 %3 %4, okraje %5 %6...</translation>
     </message>
@@ -25000,12 +25746,12 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation>Přepsat zkratky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="686"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="691"/>
         <source>Default Lights is unavailable. Flat shading is used instead.</source>
         <translation>Výchozí osvětlení není k dispozici. Místo toho se používá ploché stínování.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="713"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="718"/>
         <source>View cube rendering is unavailable.</source>
         <translation>Vykreslení krychle pohledu není k dispozici.</translation>
     </message>
@@ -25231,7 +25977,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation>Styl zvýraznění</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="735"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="740"/>
         <source>Outline rendering is unavailable; the Tint and Edges style will be used.</source>
         <translation>Vykreslování obrysů není dostupné, použije se styl Odstín a hrany.</translation>
     </message>
@@ -25535,9 +26281,8 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation>Šířka obrysu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source> px</source>
-        <translation> px</translation>
+        <translation type="vanished"> px</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25685,9 +26430,8 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation>Doba otočení otáčivého stolu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source> s</source>
-        <translation> s</translation>
+        <translation type="vanished"> s</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25862,7 +26606,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation>Barva záporné osy X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1581"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1588"/>
         <source>Select Negative X Axis Color</source>
         <translation>Vybrat barvu záporné osy X</translation>
     </message>
@@ -25877,7 +26621,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation>Barva záporné osy Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1586"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1593"/>
         <source>Select Negative Y Axis Color</source>
         <translation>Vybrat barvu záporné osy Y</translation>
     </message>
@@ -25892,7 +26636,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation>Barva záporné osy Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1591"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1598"/>
         <source>Select Negative Z Axis Color</source>
         <translation>Vybrat barvu záporné osy Z</translation>
     </message>
@@ -25937,8 +26681,8 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation>Kreslí záporné poloviny čar os barvami záporných os, přičemž čára Z sahá pod základní mřížku.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="621"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1752"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="622"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1760"/>
         <source>%1 ldu</source>
         <translation>%1 ldu</translation>
     </message>
@@ -26349,7 +27093,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1165"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1172"/>
         <source>Update</source>
         <translation>Aktualizovat</translation>
     </message>
@@ -26420,7 +27164,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1294"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1301"/>
         <source>Update Minifigure Builder Settings</source>
         <translation>Aktualizovat nastavení tvůrce minifigurek</translation>
     </message>
@@ -26501,7 +27245,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="933"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="939"/>
         <source>Blender Executable</source>
         <translation>Spustitelný soubor Blender</translation>
     </message>
@@ -26968,7 +27712,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1133"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1140"/>
         <source>Download Part Connections</source>
         <translation>Stáhnout spojení dílů</translation>
     </message>
@@ -26979,7 +27723,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1165"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1172"/>
         <source>Download</source>
         <translation>Stáhnout</translation>
     </message>
@@ -27126,6 +27870,16 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Default Instructions Template</source>
         <translation>Výchozí šablona pokynů</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Save an end line (MLCAD ROTSTEP END) in the next step whenever a step view is saved, so the view only turns that one step.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>End Step Views</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -27675,8 +28429,8 @@ N/A: %1 dílů</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="919"/>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1396"/>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1398"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1404"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1406"/>
         <source>Part</source>
         <translation>Díl</translation>
     </message>
@@ -27686,45 +28440,45 @@ N/A: %1 dílů</translation>
         <translation>Přepnout klíčový snímek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1200"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1202"/>
         <source>Never</source>
         <translation>Nikdy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1323"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1331"/>
         <source>X</source>
         <translation>X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1328"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1336"/>
         <source>%1 %2</source>
         <translation>%1 %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1328"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1336"/>
         <source>%1 (%2)</source>
         <translation>%1 (%2)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1371"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1379"/>
         <source>%1 Swatch</source>
         <translation>Vzorek barvy %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1398"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1406"/>
         <source>Part ID</source>
         <oldsource>Piece Id</oldsource>
         <translation>ID dílu</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="881"/>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1399"/>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1430"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1407"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1438"/>
         <source>Color</source>
         <translation>Barva</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1399"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1407"/>
         <source>Part color</source>
         <translation>Barva dílu</translation>
     </message>
@@ -27749,64 +28503,64 @@ N/A: %1 dílů</translation>
         <translation type="obsolete">Krok, když je dílek skrytý</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1407"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1415"/>
         <source>Camera</source>
         <translation>Kamera</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1409"/>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1427"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1417"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1435"/>
         <source>Name</source>
         <translation>Název</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1409"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1417"/>
         <source>Camera name</source>
         <translation>Název kamery</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1410"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1418"/>
         <source>Projection</source>
         <translation>Projekce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1410"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1418"/>
         <source>Camera projection</source>
         <translation>Projekce kamery</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1414"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1422"/>
         <source>FOV</source>
         <translation>Zorné pole</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1414"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1422"/>
         <source>Field of view in degrees</source>
         <translation>Zorné pole ve stupních</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1415"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1423"/>
         <source>Near</source>
         <translation>Blízká rovina</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1415"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1423"/>
         <source>Near clipping distance</source>
         <translation>Blízká ořezová vzdálenost</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1416"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1424"/>
         <source>Far</source>
         <translation>Vzdálená rovina</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1416"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1424"/>
         <source>Far clipping distance</source>
         <translation>Daleká ořezová vzdálenost</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1419"/>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1474"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1427"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1482"/>
         <source>Transform</source>
         <translation>Transformace</translation>
     </message>
@@ -27816,19 +28570,19 @@ N/A: %1 dílů</translation>
         <translation type="obsolete">Pozice X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1421"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1429"/>
         <source>Camera position</source>
         <translation>Pozice kamery</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1323"/>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1442"/>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1471"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1331"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1450"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1479"/>
         <source>Y</source>
         <translation>Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1323"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1331"/>
         <source>Z</source>
         <translation>Z</translation>
     </message>
@@ -27838,7 +28592,7 @@ N/A: %1 dílů</translation>
         <translation type="obsolete">Cíl X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1422"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1430"/>
         <source>Camera target position</source>
         <translation>Cílová pozice kamery</translation>
     </message>
@@ -27848,42 +28602,42 @@ N/A: %1 dílů</translation>
         <translation type="obsolete">Nahoru X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1423"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1431"/>
         <source>Camera up direction</source>
         <translation>Směr horního vektoru kamery</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1425"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1433"/>
         <source>Light</source>
         <translation>Světlo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1427"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1435"/>
         <source>Light name</source>
         <translation>Název světla</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1428"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1436"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1428"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1436"/>
         <source>Light type</source>
         <translation>Typ světla</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1430"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1438"/>
         <source>Light color</source>
         <translation>Barva světla</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1431"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1439"/>
         <source>Cast Shadow</source>
         <translation>Vrhat stín</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1431"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1439"/>
         <source>Cast a shadow from this light</source>
         <translation>Vrhat stín z tohoto světla</translation>
     </message>
@@ -27908,301 +28662,301 @@ N/A: %1 dílů</translation>
         <translation type="obsolete">Úhel ve stupních, při kterém intenzita bodového světla klesne na nulu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1401"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1409"/>
         <source>S</source>
         <translation>K</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1401"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1409"/>
         <source>Steps</source>
         <translation>Kroky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1403"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1411"/>
         <source>Added in Step</source>
         <translation>Přidáno v kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1403"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1411"/>
         <source>Added in Step: Step when the part is added to the model</source>
         <translation>Přidáno v kroku: krok, ve kterém je díl přidán do modelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1404"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1412"/>
         <source>Removed in Step</source>
         <translation>Odebráno v kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1404"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1412"/>
         <source>Removed in Step: Step when the part is removed from the model, leave empty to keep it until the end</source>
         <translation>Odebráno v kroku: krok, ve kterém je díl odebrán z modelu, ponechte prázdné pro ponechání do konce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1412"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1420"/>
         <source>F</source>
         <translation>Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1412"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1420"/>
         <source>Field of View and Clipping</source>
         <translation>Zorné pole a ořez</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1414"/>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1435"/>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1436"/>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1451"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1422"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1443"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1444"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1459"/>
         <source>°</source>
         <translation>°</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1421"/>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1476"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1429"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1484"/>
         <source>P</source>
         <translation>P</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1421"/>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1476"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1429"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1484"/>
         <source>Position</source>
         <translation>Pozice</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1422"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1430"/>
         <source>L</source>
         <translation>C</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1422"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1430"/>
         <source>Look At</source>
         <translation>Zacílit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1423"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1431"/>
         <source>U</source>
         <translation>N</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1423"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1431"/>
         <source>Up</source>
         <translation>Nahoru</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1429"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1437"/>
         <source>Area Shape</source>
         <translation>Tvar plochy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1429"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1437"/>
         <source>The shape of the area light</source>
         <translation>Tvar plošného světla</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1433"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1441"/>
         <source>A</source>
         <translation>Ú</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1433"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1441"/>
         <source>Spotlight Angles</source>
         <translation>Úhly bodového světla</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1435"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1443"/>
         <source>Cone</source>
         <translation>Kužel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1435"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1443"/>
         <source>Angle in degrees of the spotlight&apos;s beam</source>
         <translation>Úhel paprsku bodového světla ve stupních</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1436"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1444"/>
         <source>Penumbra</source>
         <translation>Polostín</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1436"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1444"/>
         <source>Angle in degrees over which the intensity of the spotlight falls off to zero</source>
         <translation>Úhel ve stupních, při kterém intenzita bodového světla klesne na nulu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1439"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1447"/>
         <source>Area Size</source>
         <translation>Velikost plochy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1439"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1447"/>
         <source>S</source>
         <comment>Area Size</comment>
         <translation>P</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1441"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1449"/>
         <source>Size X</source>
         <translation>Velikost X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1441"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1449"/>
         <source>The width of the area light</source>
         <translation>Šířka plošného světla</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1442"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1450"/>
         <source>The height of the area light</source>
         <translation>Výška plošného světla</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1445"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1453"/>
         <source>Blender Settings</source>
         <translation>Nastavení Blenderu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1447"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1455"/>
         <source>B</source>
         <translation>B</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1447"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1455"/>
         <source>Blender</source>
         <translation>Blender</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1449"/>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1458"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1457"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1466"/>
         <source>Power</source>
         <translation>Výkon</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1449"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1457"/>
         <source>Power of the light in watts</source>
         <oldsource>Power of the light in Watts</oldsource>
         <translation>Výkon světla ve wattech</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1449"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1457"/>
         <source> W</source>
         <translation> W</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1450"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1458"/>
         <source>Radius</source>
         <translation>Poloměr</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1450"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1458"/>
         <source>Shadow soft size</source>
         <translation>Velikost měkkého stínu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1451"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1459"/>
         <source>Angle</source>
         <translation>Úhel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1451"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1459"/>
         <source>Angular diameter of the light</source>
         <translation>Úhlový průměr světla</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1454"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1462"/>
         <source>POV-Ray Settings</source>
         <translation>Nastavení POV-Ray</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1456"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1464"/>
         <source>V</source>
         <translation>V</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1456"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1464"/>
         <source>POV-Ray</source>
         <translation>POV-Ray</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1458"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1466"/>
         <source>Power of the light (multiplicative factor)</source>
         <translation>Výkon světla (násobitel)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1459"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1467"/>
         <source>Additional exponential spotlight edge softening</source>
         <translation>Dodatečné exponenciální změkčení okrajů bodového světla</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1462"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1470"/>
         <source>Fade</source>
         <translation>Zeslabení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1462"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1470"/>
         <source>F</source>
         <comment>Fade</comment>
         <translation>Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1464"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1472"/>
         <source>Fade Distance</source>
         <translation>Vzdálenost útlumu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1464"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1472"/>
         <source>The distance at which the full light intensity arrives</source>
         <translation>Vzdálenost, ve které dosahuje plná intenzita světla</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1465"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1473"/>
         <source>Fade Power</source>
         <translation>Síla útlumu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1465"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1473"/>
         <source>Light falloff rate</source>
         <translation>Míra poklesu světla</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1468"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1476"/>
         <source>G</source>
         <translation>M</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1468"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1476"/>
         <source>Area Grid</source>
         <translation>Mřížka plochy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1470"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1478"/>
         <source>Number of point sources along the X axis (1 to 64).</source>
         <translation>Počet bodových zdrojů podél osy X (1 až 64).</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1471"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1479"/>
         <source>Number of point sources along the Y axis (1 to 64).</source>
         <translation>Počet bodových zdrojů podél osy Y (1 až 64).</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1477"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1485"/>
         <source>R</source>
         <translation>R</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1477"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1485"/>
         <source>Rotation</source>
         <translation>Rotace</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1795"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1803"/>
         <source>Size </source>
         <translation>Velikost </translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1795"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1803"/>
         <source>Size X </source>
         <translation>Velikost X </translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1459"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1467"/>
         <source>Tightness</source>
         <translation>Těsnost</translation>
     </message>
@@ -28212,7 +28966,7 @@ N/A: %1 dílů</translation>
         <translation type="obsolete">Dodatečné exponenciální změkčení okrajů bodového světla</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1470"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1478"/>
         <source>Grid X</source>
         <translation>Mřížka X</translation>
     </message>
@@ -28227,7 +28981,7 @@ N/A: %1 dílů</translation>
         <translation type="obsolete">Počet bodových zdrojů podél osy Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1476"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1484"/>
         <source>Position of the object</source>
         <translation>Poloha objektu</translation>
     </message>
@@ -28237,7 +28991,7 @@ N/A: %1 dílů</translation>
         <translation type="obsolete">Rotace X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1477"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1485"/>
         <source>Rotation of the object in degrees</source>
         <translation>Otočení objektu ve stupních</translation>
     </message>
@@ -28456,10 +29210,10 @@ Lze jej změnit v Předvolby &gt; Obecné &gt; Online služby.</translation>
     <name>swRenderDialog</name>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="420"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="796"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="857"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1621"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="421"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="803"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="864"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1628"/>
         <source>Render</source>
         <translation>Vykreslit</translation>
     </message>
@@ -28488,7 +29242,7 @@ Lze jej změnit v Předvolby &gt; Obecné &gt; Online služby.</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Zobrazit protokol&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Otevřete výstup rendereru a prozkoumejte neúspěšné vykreslení nebo varování. Toto tlačítko bude dostupné, jakmile bude zaznamenán protokol.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="430"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="431"/>
         <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Start the render using the current settings. While rendering, this button becomes Cancel so you can stop the operation.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vykreslit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spusťte vykreslování s aktuálním nastavením. Během vykreslování se toto tlačítko změní na Zrušit, abyste mohli operaci zastavit.&lt;/p&gt;</translation>
     </message>
@@ -28528,8 +29282,8 @@ Lze jej změnit v Předvolby &gt; Obecné &gt; Online služby.</translation>
         <translation type="obsolete">Blender import nastavení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="982"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1963"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="989"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1970"/>
         <source>Open in Blender</source>
         <translation>Otevřít v Blenderu</translation>
     </message>
@@ -28539,7 +29293,7 @@ Lze jej změnit v Předvolby &gt; Obecné &gt; Online služby.</translation>
         <translation type="obsolete">Importujte a otevřete model LDraw v Blender</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1774"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1781"/>
         <source>Exporting Model</source>
         <translation>Export modelu</translation>
     </message>
@@ -28554,7 +29308,7 @@ Lze jej změnit v Předvolby &gt; Obecné &gt; Online služby.</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Vykreslení obrazu POV-Ray&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslení aktuálního kroku modelu pomocí POV-Ray. Vyberte výstupní obrázek a poté pomocí Nastavení nastavte jeho rozměry a kvalitu. Začněte výběrem možnosti Render.&lt;/p&gt;&lt;p&gt;Náhled je upraven tak, aby odpovídal dialogu. Zobrazit protokol zobrazuje diagnostický výstup, pokud je k dispozici.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="446"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="447"/>
         <source>Render the current model step with POV-Ray.</source>
         <translation>Vykreslete aktuální krok modelu pomocí POV-Ray.</translation>
     </message>
@@ -28579,7 +29333,7 @@ Lze jej změnit v Předvolby &gt; Obecné &gt; Online služby.</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Nastavení Blenderu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Nakonfigurujte spustitelný soubor Blenderu, moduly pro import LDraw, cesty knihoven a nastavení vykreslování. Blender a modul importu musí být nakonfigurovány před vykreslením nebo otevřením modelu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1017"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1024"/>
         <source>Render the current model step with Blender.</source>
         <translation>Vykreslit aktuální krok modelu pomocí Blenderu.</translation>
     </message>
@@ -28604,875 +29358,884 @@ Lze jej změnit v Předvolby &gt; Obecné &gt; Online služby.</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Otevřít v Blenderu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Importujte aktuální krok modelu do Blenderu pro úpravy. Pokud tato akce není k dispozici, nakonfigurujte Blender a jeho doplněk pro import LDraw prostřednictvím Nastavení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1016"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1023"/>
         <source>Import the current model step and open it in Blender.</source>
         <translation>Importujte aktuální krok modelu a otevřete jej v Blenderu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="571"/>
         <source> px</source>
-        <translation> px</translation>
+        <translation type="vanished"> px</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="444"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="445"/>
         <source>POV-Ray Render</source>
         <translation>Vykreslení POV-Ray</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="445"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="446"/>
         <source>&lt;p&gt;&lt;b&gt;POV-Ray Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the current model step using POV-Ray. Choose the output image, its size and quality and the scene in the panels beside the preview, then select Render to start.&lt;/p&gt;&lt;p&gt;The preview is scaled to fit the window. Log shows the renderer output below the preview.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vykreslení POV-Ray&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslí aktuální krok modelu pomocí POV-Ray. V panelech vedle náhledu vyberte výstupní obrázek, jeho velikost a kvalitu a scénu, poté spusťte volbou Vykreslit.&lt;/p&gt;&lt;p&gt;Náhled se přizpůsobí velikosti okna. Protokol zobrazuje výstup vykreslovače pod náhledem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="450"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="451"/>
         <source>Blender Render</source>
         <translation>Vykreslení Blender</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="451"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="452"/>
         <source>&lt;p&gt;&lt;b&gt;Blender Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the current model step with Blender and the bundled LDraw add-ons. Choose the output image, its size and the scene, parts and editing settings in the panels beside the preview, then select Render to start, or Open in Blender to edit the model there.&lt;/p&gt;&lt;p&gt;Set the Blender executable in Preferences, General first. Log shows the Blender output below the preview.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vykreslení Blender&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslí aktuální krok modelu pomocí Blenderu a přibalených doplňků LDraw. V panelech vedle náhledu vyberte výstupní obrázek, jeho velikost a nastavení scény, dílů a úprav, poté spusťte volbou Vykreslit, nebo model upravte volbou Otevřít v Blenderu.&lt;/p&gt;&lt;p&gt;Spustitelný soubor Blenderu nastavte nejprve v Předvolby, Obecné. Protokol zobrazuje výstup Blenderu pod náhledem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="582"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="583"/>
         <source>Presets</source>
         <translation>Přednastavení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="582"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="583"/>
         <source>&lt;p&gt;&lt;b&gt;Presets&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep the image size, quality and scene settings under a name and bring them back with one choice. Save stores the current settings as a preset and Delete removes the chosen one.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přednastavení&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Uložte velikost obrázku, kvalitu a nastavení scény pod názvem a jedinou volbou je vraťte zpět. Uložit uloží aktuální nastavení jako přednastavení a Odstranit odstraní vybrané.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="586"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="587"/>
         <source>Preset</source>
         <translation>Přednastavení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="586"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="587"/>
         <source>Choose a preset to apply its image size, quality and scene settings.</source>
         <translation>Vyberte přednastavení pro použití jeho velikosti obrázku, kvality a nastavení scény.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="611"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="612"/>
         <source>Save...</source>
         <translation>Uložit...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="611"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="612"/>
         <source>Save the current image size, quality and scene settings as a preset.</source>
         <translation>Uloží aktuální velikost obrázku, kvalitu a nastavení scény jako přednastavení.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="612"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="613"/>
         <source>Delete...</source>
         <translation>Odstranit...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="612"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="613"/>
         <source>Delete the chosen preset.</source>
         <translation>Odstraní vybrané přednastavení.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="615"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="616"/>
         <source>Output</source>
         <translation>Výstup</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="615"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="616"/>
         <source>&lt;p&gt;&lt;b&gt;Output&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose where the rendered image is saved and its format, such as PNG, JPEG, or BMP.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Výstup&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte, kam se vykreslený obrázek uloží, a jeho formát, například PNG, JPEG nebo BMP.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="618"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="619"/>
         <source>File</source>
         <translation>Soubor</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="623"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="624"/>
         <source>Image</source>
         <translation>Obrázek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="623"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="624"/>
         <source>&lt;p&gt;&lt;b&gt;Image&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the size of the rendered image in pixels and the rendering quality. Larger images and higher quality take longer to render.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Obrázek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Nastavte velikost vykresleného obrázku v pixelech a kvalitu vykreslení. Větší obrázky a vyšší kvalita se vykreslují déle.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="628"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="629"/>
         <source>Width</source>
         <translation>Šířka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="632"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="630"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="635"/>
+        <source>px</source>
+        <translation type="unfinished">px</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="634"/>
         <source>Height</source>
         <translation>Výška</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="759"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="766"/>
         <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set how much detail Blender gives the parts. More detail looks better and takes longer to import and render.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Díly&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Nastavte, kolik detailu dá Blender dílům. Více detailu vypadá lépe a import i vykreslení trvají déle.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="796"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="803"/>
         <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the image or open the model in Blender, then follow the progress here. Log shows the Blender output below the preview.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vykreslit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslete obrázek nebo otevřete model v Blenderu a sledujte průběh zde. Protokol zobrazuje výstup Blenderu pod náhledem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="802"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="809"/>
         <source>Quality</source>
         <translation>Kvalita</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="802"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="809"/>
         <source>&lt;p&gt;&lt;b&gt;Quality&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Low uses POV-Ray&apos;s default quality without additional antialiasing options. Medium uses quality level 5 with antialiasing and fast radiosity. High uses quality level 11 with additional antialiasing settings and full radiosity.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Kvalita&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Nízká používá výchozí kvalitu POV-Ray bez dalších voleb vyhlazování. Střední používá úroveň kvality 5 s vyhlazováním a rychlou radiozitou. Vysoká používá úroveň kvality 11 s dalšími nastaveními vyhlazování a plnou radiozitou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="808"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="815"/>
         <source>Full Image</source>
         <translation>Celý obrázek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="808"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="815"/>
         <source>Region</source>
         <translation>Oblast</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="809"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="816"/>
         <source>Area</source>
         <translation>Rozsah</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="809"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="816"/>
         <source>Choose whether the whole image is rendered or only a region drawn on the preview.</source>
         <translation>Vyberte, zda se vykreslí celý obrázek, nebo jen oblast nakreslená na náhledu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="809"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="816"/>
         <source>&lt;p&gt;&lt;b&gt;Area&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Full Image renders the whole image. Region renders only the part outlined on the preview and leaves the rest of the image transparent. Drag on the preview to draw the region, hold Ctrl to draw a square, drag its edges or corners to resize it, drag inside it to move it, and drag outside it to draw a new one.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Rozsah&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Celý obrázek vykreslí celý obrázek. Oblast vykreslí jen část vyznačenou na náhledu a zbytek obrázku nechá průhledný. Tažením na náhledu nakreslíte oblast, s podrženým Ctrl nakreslíte čtverec, tažením za její hrany nebo rohy změníte velikost, tažením uvnitř ji přesunete a tažením mimo ni nakreslíte novou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="811"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="818"/>
         <source>Batch</source>
         <translation>Dávka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="811"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="818"/>
         <source>&lt;p&gt;&lt;b&gt;Batch&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render several images in one go, one for each building step or each camera of the model. Each image is saved next to the output file with the step number or camera name added to its name.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Dávka&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslí několik obrázků najednou, jeden pro každý krok sestavení nebo každou kameru modelu. Každý obrázek se uloží vedle výstupního souboru s číslem kroku nebo názvem kamery přidaným k názvu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="814"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="821"/>
         <source>Model</source>
         <translation>Model</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="814"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="821"/>
         <source>Current Step</source>
         <translation>Aktuální krok</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="814"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="821"/>
         <source>All Steps</source>
         <translation>Všechny kroky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="815"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="822"/>
         <source>Steps</source>
         <translation>Kroky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="815"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="822"/>
         <source>Choose whether the finished model, the current step or every step is rendered.</source>
         <translation>Vyberte, zda se vykreslí hotový model, aktuální krok, nebo každý krok.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="815"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="822"/>
         <source>&lt;p&gt;&lt;b&gt;Steps&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Model renders the finished model. Current Step renders the model as built up to the step shown in the main window. All Steps renders one image for every step, numbered after the step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Kroky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Model vykreslí hotový model. Aktuální krok vykreslí model sestavený do kroku zobrazeného v hlavním okně. Všechny kroky vykreslí jeden obrázek pro každý krok, očíslovaný podle kroku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="818"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="825"/>
         <source>Cameras</source>
         <translation>Kamery</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="818"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="825"/>
         <source>Choose the view or a camera of the model to render from, or every camera.</source>
         <translation>Vyberte pohled nebo kameru modelu, ze které se vykreslí, nebo každou kameru.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="818"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="825"/>
         <source>&lt;p&gt;&lt;b&gt;Cameras&lt;/b&gt;&lt;/p&gt;&lt;p&gt;View renders from the view of the main window. A camera renders from that camera of the model. All Cameras renders one image for every camera, named after the camera.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Kamery&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pohled vykreslí z pohledu hlavního okna. Kamera vykreslí z dané kamery modelu. Všechny kamery vykreslí jeden obrázek pro každou kameru, pojmenovaný podle kamery.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="739"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="821"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1078"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="745"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="828"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1085"/>
         <source>Scene</source>
         <translation>Scéna</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="824"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="831"/>
         <source>LDraw</source>
         <translation>LDraw</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="824"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="831"/>
         <source>LGEO</source>
         <translation>LGEO</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="759"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="825"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="766"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="832"/>
         <source>Parts</source>
         <translation>Díly</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="825"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="832"/>
         <source>Choose whether the model is rendered with LDraw parts or the modeled LGEO parts.</source>
         <translation>Vyberte, zda se model vykreslí s díly LDraw, nebo s modelovanými díly LGEO.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="825"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="832"/>
         <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;LDraw renders the parts of the parts library. LGEO replaces the parts it has with the smooth modeled parts of the LGEO library by Lutz Uhlmann, StudWorx offers to download it the first time. Models that ask for LGEO in their file always use it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Díly&lt;/b&gt;&lt;/p&gt;&lt;p&gt;LDraw vykreslí díly z knihovny dílů. LGEO nahradí díly, které má, hladkými modelovanými díly z knihovny LGEO od Lutze Uhlmanna, kterou StudWorx nabídne stáhnout při prvním použití. Modely, které si LGEO žádají ve svém souboru, ji používají vždy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="761"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="827"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="768"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="834"/>
         <source>Standard</source>
         <translation>Standard</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="427"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1066"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="428"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1073"/>
         <source>Editor</source>
         <translation>Editor</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="703"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="804"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="706"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="771"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="811"/>
         <source>Off</source>
         <translation>Vypnuto</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="715"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="720"/>
         <source>Overwrite Image</source>
         <translation>Přepsat obrázek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="715"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="720"/>
         <source>Replace an existing image file of the same name.</source>
         <translation>Nahradí existující soubor obrázku se stejným názvem.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="716"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="721"/>
         <source>Transparent Background</source>
         <translation>Průhledné pozadí</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="716"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="721"/>
         <source>Leave the background as transparent pixels for compositing.</source>
         <translation>Ponechá pozadí jako průhledné pixely pro kompozici.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="716"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="721"/>
         <source>&lt;p&gt;&lt;b&gt;Transparent Background&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Renders the background as transparent pixels for compositing. The ground plane added by Add Environment stays visible.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Průhledné pozadí&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslí pozadí jako průhledné pixely pro kompozici. Rovina země přidaná volbou Přidat prostředí zůstane viditelná.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="718"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="723"/>
         <source>Crop Image</source>
         <translation>Oříznout obrázek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="718"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="723"/>
         <source>Crop the image to the visible model, needs Transparent Background.</source>
         <translation>Ořízne obrázek na viditelný model, vyžaduje Průhledné pozadí.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="718"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="723"/>
         <source>&lt;p&gt;&lt;b&gt;Crop Image&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cuts the transparent border off the rendered image so it ends at the visible model. Needs Transparent Background.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Oříznout obrázek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odřízne průhledný okraj vykresleného obrázku, aby končil u viditelného modelu. Vyžaduje Průhledné pozadí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="730"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="746"/>
         <source> %</source>
-        <translation> %</translation>
+        <translation type="vanished"> %</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="732"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="737"/>
         <source>Scale</source>
         <translation>Měřítko</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="732"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="737"/>
         <source>Render at a percentage of the image size for quick test renders.</source>
         <translation>Vykreslí v procentech velikosti obrázku pro rychlé zkušební vykreslení.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="739"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="738"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="754"/>
+        <source>%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="745"/>
         <source>&lt;p&gt;&lt;b&gt;Scene&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the look, colors, camera and lights of the scene Blender renders.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Scéna&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Nastavte vzhled, barvy, kameru a světla scény, kterou Blender vykresluje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="741"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="747"/>
         <source>Look</source>
         <translation>Vzhled</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="741"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="747"/>
         <source>Photorealistic</source>
         <translation>Fotorealistický</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="741"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="747"/>
         <source>LEGO® Instructions</source>
         <translation>Pokyny LEGO®</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="741"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="747"/>
         <source>Choose a photorealistic render or the flat look of LEGO® building instructions.</source>
         <translation>Vyberte fotorealistické vykreslení, nebo plochý vzhled stavebních pokynů LEGO®.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="748"/>
         <source>Colors</source>
         <translation>Barvy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="748"/>
         <source>Realistic</source>
         <translation>Realistické</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="748"/>
         <source>Original LDraw</source>
         <translation>Původní LDraw</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="748"/>
         <source>Alternate LDraw</source>
         <translation>Alternativní LDraw</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="748"/>
         <source>Choose the color scheme of the parts.</source>
         <translation>Vyberte barevné schéma dílů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="748"/>
         <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Realistic uses the colors of the real parts. Original LDraw uses the colors of the parts library. Alternate LDraw uses its alternate colors with lighter edges.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Barvy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Realistické používá barvy skutečných dílů. Původní LDraw používá barvy z knihovny dílů. Alternativní LDraw používá své alternativní barvy se světlejšími hranami.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="743"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="749"/>
         <source>Add Environment</source>
         <translation>Přidat prostředí</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="743"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="749"/>
         <source>Add a ground plane and a lighting environment, photorealistic look only.</source>
         <translation>Přidá rovinu země a světelné prostředí, pouze pro fotorealistický vzhled.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="744"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="750"/>
         <source>Position Camera</source>
         <translation>Umístit kameru</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="744"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="750"/>
         <source>Place the camera so the whole model is in view.</source>
         <translation>Umístí kameru tak, aby byl celý model v záběru.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="747"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="753"/>
         <source>Camera Border</source>
         <translation>Okraj kamery</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="747"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="753"/>
         <source>Leave this border around the model when the camera is placed.</source>
         <translation>Ponechá tento okraj kolem modelu při umístění kamery.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="756"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="763"/>
         <source>Import Cameras</source>
         <translation>Importovat kamery</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="756"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="763"/>
         <source>Use the cameras of the model.</source>
         <translation>Použije kamery modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="757"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
         <source>Import Lights</source>
         <translation>Importovat světla</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="757"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
         <source>Use the lights of the model.</source>
         <translation>Použije světla modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="768"/>
         <source>Primitives</source>
         <translation>Primitiva</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="768"/>
         <source>Choose the resolution of the part primitives, how round curved surfaces are.</source>
         <translation>Vyberte rozlišení primitiv dílů, tedy jak kulaté jsou zakřivené povrchy.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="771"/>
         <source>Rounded</source>
         <translation>Zaoblené</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="771"/>
         <source>Flattened</source>
         <translation>Zploštělé</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="771"/>
         <source>Subtle Rounded</source>
         <translation>Jemně zaoblené</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="765"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="772"/>
         <source>Logo Studs</source>
         <translation>Výstupky s logem</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="765"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="772"/>
         <source>Show the LEGO® logo on the studs, at the cost of extra geometry and import time.</source>
         <translation>Zobrazí logo LEGO® na výstupcích za cenu další geometrie a delšího importu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="775"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="782"/>
         <source>Bevel Edges</source>
         <translation>Zkosené hrany</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="775"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="782"/>
         <source>Round off sharp edges by this width, Off keeps them sharp.</source>
         <translation>Zaoblí ostré hrany o tuto šířku, Vypnuto je ponechá ostré.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="776"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="783"/>
         <source>Part Gaps</source>
         <translation>Mezery mezi díly</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="776"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="783"/>
         <source> mm</source>
         <translation> mm</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="776"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="783"/>
         <source>Leave this gap between the parts, Off places them touching.</source>
         <translation>Ponechá tuto mezeru mezi díly, Vypnuto je umístí v dotyku.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="777"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="784"/>
         <source>Flex Parts</source>
         <translation>Ohebné díly</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="777"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="784"/>
         <source>LSynth</source>
         <translation>LSynth</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="777"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="784"/>
         <source>LDCad</source>
         <translation>LDCad</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="777"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="784"/>
         <source>Choose the source that shapes flexible parts such as hoses and string.</source>
         <translation>Vyberte zdroj, který tvaruje ohebné díly, například hadice a provázek.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="778"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="785"/>
         <source>Curved Walls</source>
         <translation>Zakřivené stěny</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="778"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="785"/>
         <source>Make surfaces slightly concave for livelier reflections.</source>
         <translation>Udělá povrchy mírně vypouklé dovnitř pro živější odlesky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="779"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="786"/>
         <source>Smooth Shading</source>
         <translation>Hladké stínování</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="779"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="786"/>
         <source>Smooth curved faces and keep sharp edges.</source>
         <translation>Vyhladí zakřivené plochy a ponechá ostré hrany.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="781"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="788"/>
         <source>Editing</source>
         <translation>Úpravy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="781"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="788"/>
         <source>&lt;p&gt;&lt;b&gt;Editing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set how the model is built up in Blender, which matters most when you edit it after Open in Blender.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Úpravy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Nastavte, jak se model v Blenderu sestaví, což je nejdůležitější, když jej po volbě Otevřít v Blenderu upravujete.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="783"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="790"/>
         <source>Link Like Parts</source>
         <translation>Propojit stejné díly</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="783"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="790"/>
         <source>Let parts of the same shape and color share one mesh.</source>
         <translation>Díly stejného tvaru a barvy sdílejí jednu síť.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="784"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="791"/>
         <source>Instance Studs</source>
         <translation>Instancovat výstupky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="784"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="791"/>
         <source>Make every stud its own object, slow for models with many studs.</source>
         <translation>Udělá z každého výstupku samostatný objekt, pomalé pro modely s mnoha výstupky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="785"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="792"/>
         <source>Flatten Hierarchy</source>
         <translation>Zploštit hierarchii</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="785"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="792"/>
         <source>Place all parts directly under the root instead of a tree of submodels.</source>
         <translation>Umístí všechny díly přímo pod kořen místo stromu podmodelů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="786"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="793"/>
         <source>Parent Minifigures</source>
         <translation>Nadřadit minifigurky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="786"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="793"/>
         <source>Parent the parts of each minifigure to each other.</source>
         <translation>Nadřadí díly každé minifigurky navzájem.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="804"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="811"/>
         <source>On</source>
         <translation>Zapnuto</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="806"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="813"/>
         <source>Focal Blur</source>
         <translation>Rozostření zaostření</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="806"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="813"/>
         <source>Blur parts nearer or farther than the camera target, like a real camera lens. Takes several times longer to render.</source>
         <translation>Rozostří díly blíže nebo dále než cíl kamery, jako skutečný objektiv kamery. Vykreslování trvá několikrát déle.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="806"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="813"/>
         <source>&lt;p&gt;&lt;b&gt;Focal Blur&lt;/b&gt;&lt;/p&gt;&lt;p&gt;On keeps the camera target sharp and blurs the parts in front of it and behind it, like the depth of field of a real camera lens, at any quality. It takes several times longer to render. Orthographic cameras are never blurred.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Rozostření zaostření&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zapnuto ponechá cíl kamery ostrý a rozostří díly před ním a za ním, jako hloubka ostrosti skutečného objektivu kamery, v jakékoli kvalitě. Vykreslování trvá několikrát déle. Pravoúhlé kamery se nikdy nerozostřují.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="827"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="834"/>
         <source>Studio</source>
         <translation>Studio</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="827"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="834"/>
         <source>Matte</source>
         <translation>Matné</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="829"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="836"/>
         <source>Lights</source>
         <translation>Světla</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="829"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="836"/>
         <source>Choose the lights placed around models that have no lights of their own.</source>
         <translation>Vyberte světla umístěná kolem modelů, které nemají vlastní světla.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="829"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="836"/>
         <source>&lt;p&gt;&lt;b&gt;Lights&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Standard uses four point lights with crisp shadows. Studio uses a large soft key light, a fill light and a rim light behind the model. Matte uses a wide overhead light and a shadowless light from the camera for even, soft lighting. Lights placed in the model replace these.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Světla&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Standard používá čtyři bodová světla s ostrými stíny. Studio používá velké měkké hlavní světlo, vyplňující světlo a okrajové světlo za modelem. Matné používá široké horní světlo a bezestínové světlo od kamery pro rovnoměrné měkké osvětlení. Světla umístěná v modelu je nahrazují.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="831"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="838"/>
         <source>Plain</source>
         <translation>Prostý</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="831"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="838"/>
         <source>Shadow Catcher</source>
         <translation>Zachycení stínů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="831"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="838"/>
         <source>Reflective</source>
         <translation>Reflexní</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="831"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="838"/>
         <source>Cyclorama</source>
         <translation>Cyklorama</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="833"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="840"/>
         <source>Floor</source>
         <translation>Podlaha</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="833"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="840"/>
         <source>Choose how the floor under the model looks.</source>
         <translation>Vyberte, jak podlaha pod modelem vypadá.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="833"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="840"/>
         <source>&lt;p&gt;&lt;b&gt;Floor&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Plain uses the floor color of the model. Shadow Catcher takes the background color so only the shadows show. Reflective adds a glossy mirror finish. Cyclorama fades the floor into the background with distance for a seamless backdrop.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Podlaha&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Prostý používá barvu podlahy modelu. Zachycení stínů převezme barvu pozadí, takže jsou vidět jen stíny. Reflexní přidá lesklý zrcadlový povrch. Cyklorama s rostoucí vzdáleností plynule přechází do pozadí pro bezešvé pozadí scény.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="838"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="845"/>
         <source>Background Color</source>
         <translation>Barva pozadí</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="840"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="847"/>
         <source>Environment</source>
         <translation>Prostředí</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="840"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="847"/>
         <source>Choose a panoramic image that surrounds and lights the scene, or leave empty to use the background color.</source>
         <translation>Vyberte panoramatický obrázek, který obklopuje a osvětluje scénu, nebo nechte prázdné pro použití barvy pozadí.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="840"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="847"/>
         <source>&lt;p&gt;&lt;b&gt;Environment&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose an equirectangular panorama, ideally an HDR or EXR image, that wraps around the scene as its sky and lights it through radiosity at Medium and High quality. Leave empty to use the background color.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Prostředí&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte ekvirektangulární panorama, nejlépe obrázek HDR nebo EXR, které obklopuje scénu jako její obloha a osvětluje ji radiozitou ve střední a vysoké kvalitě. Nechte prázdné pro použití barvy pozadí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="844"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="851"/>
         <source>Choose an environment image.</source>
         <translation>Vyberte obrázek prostředí.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="846"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="853"/>
         <source>Browse</source>
         <translation>Procházet</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="850"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="857"/>
         <source>Visible</source>
         <translation>Viditelné</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="850"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="857"/>
         <source>Transparent</source>
         <translation>Průhledné</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="852"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="859"/>
         <source>Background</source>
         <translation>Pozadí</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="852"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="859"/>
         <source>Choose whether the background and floor are rendered or left as transparent pixels for compositing.</source>
         <translation>Vyberte, zda se pozadí a podlaha vykreslí, nebo zůstanou jako průhledné pixely pro kompozici.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="857"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="864"/>
         <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Start the POV-Ray render, then follow its progress here. Editor shows the POV-Ray scene and Log the POV-Ray output below the preview.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vykreslit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spustí vykreslení POV-Ray a sleduje jeho průběh zde. Editor zobrazuje scénu POV-Ray a Protokol výstup POV-Ray pod náhledem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="958"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="965"/>
         <source>Select Environment Image</source>
         <translation>Vybrat obrázek prostředí</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1069"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1076"/>
         <source>&lt;p&gt;&lt;b&gt;Editor&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The POV-Ray scene written from the model and the current settings, with every part, color and position, the camera and the lights. Edit it and tick Render using this configuration instead of the model configuration to render your edits.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Editor&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Scéna POV-Ray zapsaná z modelu a aktuálního nastavení, se všemi díly, barvami a polohami, kamerou a světly. Upravte ji a zaškrtněte Vykreslit pomocí této konfigurace místo konfigurace modelu, aby se vaše úpravy vykreslily.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1077"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1084"/>
         <source>Text of the POV-Ray scene.</source>
         <translation>Text scény POV-Ray.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1081"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1088"/>
         <source>Rendering the edited scene. Reset to pick up model changes.</source>
         <translation>Vykresluje se upravená scéna. Obnovením převezmete změny modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1089"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1096"/>
         <source>Render using this configuration instead of the model configuration</source>
         <translation>Vykreslit pomocí této konfigurace místo konfigurace modelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1090"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1097"/>
         <source>Render the text of the editor instead of the scene written from the model and the settings.</source>
         <translation>Vykreslí text editoru místo scény zapsané z modelu a nastavení.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1091"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1098"/>
         <source>&lt;p&gt;&lt;b&gt;Render using this configuration instead of the model configuration&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render renders the text of the editor as it is, so your edits show in the image. The size, quality, scene, preset and batch settings have no effect and are greyed out. Output and Area still apply.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vykreslit pomocí této konfigurace místo konfigurace modelu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslit vykreslí text editoru tak, jak je, takže se vaše úpravy projeví v obrázku. Velikost, kvalita, scéna, přednastavení a nastavení dávky nemají účinek a jsou zašedlé. Výstup a Rozsah se stále uplatňují.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1106"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1113"/>
         <source>Reset</source>
         <translation>Obnovit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1106"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1113"/>
         <source>Write the scene again from the model and the current settings.</source>
         <translation>Znovu zapíše scénu z modelu a aktuálního nastavení.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1106"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1113"/>
         <source>&lt;p&gt;&lt;b&gt;Reset&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace the text with the scene written again from the model and the current settings, from the camera and step of the first image. Your edits are lost.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Obnovit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Nahradí text scénou znovu zapsanou z modelu a aktuálního nastavení, z kamery a kroku prvního obrázku. Vaše úpravy budou ztraceny.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1107"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1114"/>
         <source>Open...</source>
         <translation>Otevřít...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1107"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1114"/>
         <source>Open a POV-Ray scene file in the editor.</source>
         <translation>Otevře soubor scény POV-Ray v editoru.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1107"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1114"/>
         <source>&lt;p&gt;&lt;b&gt;Open...&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace the text with a POV-Ray scene file, such as one saved with Save As, and tick Render using this configuration instead of the model configuration so Render uses it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Otevřít...&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Nahradí text souborem scény POV-Ray, například uloženým volbou Uložit jako, a zaškrtněte Vykreslit pomocí této konfigurace místo konfigurace modelu, aby jej Vykreslit použilo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1108"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1115"/>
         <source>Save As...</source>
         <translation>Uložit jako...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1108"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1115"/>
         <source>Save the scene as a POV-Ray file.</source>
         <translation>Uloží scénu jako soubor POV-Ray.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1108"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1115"/>
         <source>&lt;p&gt;&lt;b&gt;Save As...&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Save the text of the editor as a POV-Ray scene file to render or edit outside StudWorx.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Uložit jako...&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Uloží text editoru jako soubor scény POV-Ray k vykreslení nebo úpravě mimo StudWorx.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1129"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1136"/>
         <source>Open Scene</source>
         <translation>Otevřít scénu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1138"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1145"/>
         <source>Could not open the scene %1.</source>
         <translation>Scénu %1 se nepodařilo otevřít.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1150"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1157"/>
         <source>Save Scene As</source>
         <translation>Uložit scénu jako</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1129"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1150"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1136"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1157"/>
         <source>POV-Ray Scenes (*.pov);;All Files (*)</source>
         <translation>Scény POV-Ray (*.pov);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1158"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1165"/>
         <source>Could not save the scene to %1.</source>
         <translation>Scénu se nepodařilo uložit do %1.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1163"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1170"/>
         <source>Show or hide the Editor panel with the POV-Ray scene.</source>
         <translation>Zobrazí nebo skryje panel Editor se scénou POV-Ray.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1164"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1171"/>
         <source>&lt;p&gt;&lt;b&gt;Editor&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Editor panel below the preview to read and edit the POV-Ray scene, render your edits or save a copy.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Editor&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje panel Editor pod náhledem pro čtení a úpravu scény POV-Ray, vykreslení vašich úprav nebo uložení kopie.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1381"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1388"/>
         <source>A preset named &apos;%1&apos; already exists. Do you want to overwrite it?</source>
         <translation>Přednastavení s názvem &apos;%1&apos; již existuje. Chcete jej přepsat?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1794"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1801"/>
         <source>Could not write the edited scene to %1.</source>
         <translation>Upravenou scénu se nepodařilo zapsat do %1.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1941"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1948"/>
         <source>Could not start Blender.</source>
         <translation>Blender se nepodařilo spustit.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1991"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1998"/>
         <source>Could not start the Blender render process.</source>
         <translation>Proces vykreslování Blenderu se nepodařilo spustit.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2252"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2275"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2259"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2282"/>
         <source>Could not write file &apos;%1&apos;:
 %2</source>
         <translation>Soubor &apos;%1&apos; se nepodařilo zapsat:
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2292"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2299"/>
         <source>Could not render the image.</source>
         <translation>Obrázek se nepodařilo vykreslit.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2300"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2307"/>
         <source>Save Image File</source>
         <translation>Uložit soubor obrázku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2300"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2307"/>
         <source>Supported Image Files (*.bmp *.png *.jpg);;BMP Files (*.bmp);;PNG Files (*.png);;JPEG Files (*.jpg);;All Files (*)</source>
         <translation>Podporované soubory obrázků (*.bmp *.png *.jpg);;Soubory BMP (*.bmp);;Soubory PNG (*.png);;Soubory JPEG (*.jpg);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="983"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="990"/>
         <source>&lt;p&gt;&lt;b&gt;Open in Blender&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Import the current model step into Blender with the Scene, Parts and Editing settings and open it there for editing. No image is saved.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Otevřít v Blenderu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Importuje aktuální krok modelu do Blenderu s nastavením Scény, Dílů a Úprav a otevře jej tam k úpravě. Žádný obrázek se neuloží.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="821"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="828"/>
         <source>&lt;p&gt;&lt;b&gt;Scene&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the lights, floor and surroundings POV-Ray renders the model in.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Scéna&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Nastavte světla, podlahu a okolí, ve kterých POV-Ray model vykresluje.&lt;/p&gt;</translation>
     </message>
@@ -29481,74 +30244,74 @@ Lze jej změnit v Předvolby &gt; Obecné &gt; Online služby.</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Vykreslit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spusťte vykreslování v POV-Ray a sledujte jeho průběh zde. Protokol zobrazuje výstup POV-Ray pod náhledem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1016"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1023"/>
         <source>Set the Blender executable in Preferences, General to use Blender.</source>
         <translation>Pro použití Blenderu nastavte spustitelný soubor Blenderu v Předvolby, Obecné.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1038"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1045"/>
         <source>&lt;p&gt;&lt;b&gt;Log&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The output of the renderer, updated while it renders. Read it to investigate warnings or a failed render, select text and copy it with the standard keyboard shortcut when reporting a problem.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Protokol&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Výstup vykreslovače, aktualizovaný během vykreslování. Přečtěte si jej při zkoumání varování nebo selhání vykreslení a při hlášení problému v něm vyberte text a zkopírujte jej standardní klávesovou zkratkou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1044"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1051"/>
         <source>The renderer output shows here once a render starts.</source>
         <translation>Výstup vykreslovače se zobrazí zde po spuštění vykreslování.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1183"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1190"/>
         <source>Show or hide the Log panel with the renderer output.</source>
         <translation>Zobrazí nebo skryje panel Protokol s výstupem vykreslovače.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1184"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1191"/>
         <source>&lt;p&gt;&lt;b&gt;Log&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Log panel below the preview with the renderer output and diagnostic messages.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Protokol&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje panel Protokol pod náhledem s výstupem vykreslovače a diagnostickými zprávami.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1347"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1354"/>
         <source>Custom</source>
         <translation>Vlastní</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1360"/>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1367"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1381"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1374"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1388"/>
         <source>Save Preset</source>
         <translation>Uložit přednastavení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1360"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1367"/>
         <source>Preset Name</source>
         <translation>Název přednastavení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1367"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1374"/>
         <source>Preset name cannot be empty.</source>
         <translation>Název přednastavení nesmí být prázdný.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1402"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1409"/>
         <source>Delete Preset</source>
         <translation>Odstranit přednastavení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1402"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1409"/>
         <source>Are you sure you want to delete the preset &apos;%1&apos;?</source>
         <translation>Opravdu chcete odstranit přednastavení &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1491"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1498"/>
         <source>View</source>
         <translation>Pohled</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1498"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1505"/>
         <source>All Cameras</source>
         <translation>Všechny kamery</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1693"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1700"/>
         <source>LGEO parts need the standard POV-Ray include files such as colors.inc, which POV-Ray %1 could not find.
 
 Install the povray-includes package or the include files of your POV-Ray version, or choose LDraw parts in the Scene panel.</source>
@@ -29557,27 +30320,27 @@ Install the povray-includes package or the include files of your POV-Ray version
 Nainstalujte balíček povray-includes nebo soubory include své verze POV-Ray, nebo v panelu Scéna zvolte díly LDraw.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1773"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1780"/>
         <source>Image %1 of %2</source>
         <translation>Obrázek %1 z %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1774"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1781"/>
         <source>%1, Exporting Model</source>
         <translation>%1, export modelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1801"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1808"/>
         <source>%1, %p%</source>
         <translation>%1, %p%</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1865"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1872"/>
         <source>Could not start POV-Ray.</source>
         <translation>POV-Ray se nepodařilo spustit.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1880"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1887"/>
         <source>Saving Blender Model</source>
         <translation>Ukládání modelu pro Blender</translation>
     </message>
@@ -29589,17 +30352,17 @@ Nainstalujte balíček povray-includes nebo soubory include své verze POV-Ray, 
 %2.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1961"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1968"/>
         <source>errors%1</source>
         <translation>chybami%1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1961"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1968"/>
         <source> and warnings</source>
         <translation> a varováními</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1961"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1968"/>
         <source>warnings</source>
         <translation>varováními</translation>
     </message>
@@ -29610,7 +30373,7 @@ Nainstalujte balíček povray-includes nebo soubory include své verze POV-Ray, 
         <translation type="obsolete">Otevřít ve výstupu Blender</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1962"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1969"/>
         <source>Open in Blender encountered %1. See Show Details...</source>
         <translation>Otevření v Blenderu skončilo s %1. Viz Zobrazit podrobnosti...</translation>
     </message>
@@ -29621,14 +30384,14 @@ Nainstalujte balíček povray-includes nebo soubory include své verze POV-Ray, 
         <translation type="obsolete">Chyba při spouštění procesu vykreslování Blender</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2050"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2057"/>
         <source>Failed to open log file: &apos;%1&apos;:
 %2</source>
         <translation>Nepodařilo se otevřít soubor protokolu: &apos;%1&apos;:
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2211"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2218"/>
         <source>An error occurred while rendering.</source>
         <translation>Při vykreslování došlo k chybě.</translation>
     </message>
@@ -29643,12 +30406,12 @@ Nainstalujte balíček povray-includes nebo soubory include své verze POV-Ray, 
         <translation type="obsolete">Nastavení POV-Ray</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="628"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="629"/>
         <source>Set the rendered image width in pixels (1 to 32768).</source>
         <translation>Nastavte šířku vykresleného obrázku v pixelech (1 až 32768).</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="632"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="634"/>
         <source>Set the rendered image height in pixels (1 to 32768).</source>
         <translation>Nastavte výšku vykresleného obrázku v pixelech (1 až 32768).</translation>
     </message>
@@ -29680,24 +30443,24 @@ Nainstalujte balíček povray-includes nebo soubory include své verze POV-Ray, 
         <translation type="vanished">Kvalita:</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="761"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="800"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="768"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="807"/>
         <source>High</source>
         <translation>Nejvyšší</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="800"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="807"/>
         <source>Medium</source>
         <translation>Střední</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="761"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="800"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="768"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="807"/>
         <source>Low</source>
         <translation>Nízká</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="802"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="809"/>
         <source>Choose the rendering quality; higher quality can take longer.</source>
         <translation>Vyberte kvalitu vykreslování; vyšší kvalita může trvat déle.</translation>
     </message>
@@ -29734,23 +30497,23 @@ Nainstalujte balíček povray-includes nebo soubory include své verze POV-Ray, 
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Protokol vykreslení&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přečtěte si výstup vykreslovacího modulu a prozkoumejte varování nebo neúspěšné vykreslení. Při hlášení problému vyberte text a zkopírujte jej pomocí standardní klávesové zkratky. Zavřít se vrátí do dialogového okna Render.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1045"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1052"/>
         <source>Renderer Output</source>
         <translation>Výstup vykreslování</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="422"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1035"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="423"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1042"/>
         <source>Log</source>
         <translation>Protokol</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="958"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="965"/>
         <source>Environment Images (*.hdr *.exr *.png *.jpg *.jpeg *.tif *.tiff);;All Files (*)</source>
         <translation>Obrázky prostředí (*.hdr *.exr *.png *.jpg *.jpeg *.tif *.tiff);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1046"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1053"/>
         <source>Read and copy renderer output and diagnostic messages.</source>
         <translation>Zobrazí a umožní kopírovat výstup vykreslování a diagnostické zprávy.</translation>
     </message>
@@ -29780,7 +30543,7 @@ Nainstalujte balíček povray-includes nebo soubory include své verze POV-Ray, 
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="843"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="850"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -29810,18 +30573,18 @@ Nainstalujte balíček povray-includes nebo soubory include své verze POV-Ray, 
         <translation>Průběh vykreslování</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1629"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1636"/>
         <source>Cancel Render</source>
         <translation>Zrušit vykreslení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1629"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1636"/>
         <source>Are you sure you want to cancel the current render?</source>
         <translation>Opravdu chcete zrušit tvorbu aktuálního vykreslení?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1858"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1985"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1865"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1992"/>
         <source>Cancel</source>
         <translation>Zrušit</translation>
     </message>
@@ -30212,47 +30975,51 @@ Nainstalujte POV-Ray 3.7 nebo novější z %1 a nastavte jej v Předvolby › Ob
         <translation>Vyberte kroky nebo díly; přetažením dílů změníte jejich pořadí nebo změníte jejich stavební krok.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="189"/>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="190"/>
         <source>Step %1</source>
         <translation>Krok %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="333"/>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="334"/>
         <source>Keys: %1 (%2)</source>
         <translation>Klíče: %1 (%2)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="337"/>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="338"/>
         <source>Animation keys of this object at this step. Double-click to select it and show the Keyframes panel.</source>
         <translation>Animační klíče tohoto objektu v tomto kroku. Dvojitým kliknutím jej vyberete a zobrazíte panel Klíčové snímky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="352"/>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="355"/>
         <source>relative</source>
         <translation>relativní</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="352"/>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="355"/>
         <source>absolute</source>
         <translation>absolutní</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="352"/>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="355"/>
         <source>added</source>
         <translation>přidáno</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="357"/>
-        <source>View: back to default</source>
-        <translation>Pohled: zpět na výchozí</translation>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="355"/>
+        <source>relative [default]</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="359"/>
+        <source>View: back to default</source>
+        <translation type="vanished">Pohled: zpět na výchozí</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="357"/>
         <source>View: %1, %2, %3 %4</source>
         <translation>Pohled: %1, %2, %3 %4</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="364"/>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="362"/>
         <source>Step view saved as an MLCAD ROTSTEP line. Double-click to edit it.</source>
         <translation>Pohled kroku uložený jako řádek MLCAD ROTSTEP. Dvojitým kliknutím jej upravíte.</translation>
     </message>

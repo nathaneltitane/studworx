@@ -52,6 +52,8 @@ protected:
 	std::optional<swInstructionsPageUnits> mUnits;
 };
 
+enum class swInstructionsPageObject : int;
+
 class swInstructionsPropertiesWidget : public QDockWidget
 {
 	Q_OBJECT
@@ -61,6 +63,9 @@ public:
 
 	void AddOptionsAction(QAction* Action);
 	void SelectionChanged(QGraphicsItem* FocusItem);
+	void PageClicked(swInstructionsPageType PageType, std::optional<swInstructionsPageObject> Object = std::nullopt);
+	void UpdateNoticeSize();
+	void UpdateImageSize();
 	void SetCurrentPage(int PageIndex);
 
 protected:
@@ -69,7 +74,10 @@ protected:
 		Document,
 		Cover,
 		Page,
-		Bands,
+		Header,
+		Footer,
+		LeftBand,
+		RightBand,
 		Watermark,
 		BillOfMaterials,
 		PageLayout,
@@ -79,6 +87,7 @@ protected:
 		Notice,
 		Pointer,
 		Box,
+		Image,
 		Count
 	};
 
@@ -131,6 +140,8 @@ protected:
 		swInstructionsUnitButton* UnitButton = nullptr;
 		QDoubleSpinBox* SizeSpinBox = nullptr;
 		QToolButton* BrowseButton = nullptr;
+		QToolButton* SymbolButton = nullptr;
+		QToolButton* FitButton = nullptr;
 		EditorType Type = EditorType::Bool;
 		QString Name;
 		int Minimum = 0;
@@ -149,7 +160,7 @@ protected:
 	QDoubleSpinBox* CreateLengthEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip, int Minimum, int Maximum, double PageFraction = 0.0);
 	double GetEditorMaximum(const EditorWidgets& Editor) const;
 	QSpinBox* CreatePercentEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip, int Minimum, int Maximum);
-	QComboBox* CreateChoiceEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip, const QStringList& Choices);
+	QComboBox* CreateChoiceEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip, const QStringList& Choices, const QList<int>& Values = {});
 	QToolButton* CreateApplyAllButton(const QString& ToolTip);
 	QToolButton* CreateColorEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip);
 	QToolButton* CreateFontEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip);
@@ -170,6 +181,7 @@ protected:
 	void UpdateEditors();
 	void UpdatePageLayout();
 	void UpdateCategories();
+	void FitWidth();
 	swInstructionsPageSettings GetPageLayoutSettings() const;
 	swInstructionsPageType GetPageType() const;
 
@@ -186,11 +198,20 @@ protected:
 	QSpinBox* mColumnsSpinBox = nullptr;
 	QComboBox* mStepFlowComboBox = nullptr;
 	QToolButton* mFinalModelButton = nullptr;
-	QToolButton* mFinalModelColorButton = nullptr;
 	QToolButton* mThumbnailPageButton = nullptr;
 	QToolButton* mBackgroundPageButton = nullptr;
-	QToolButton* mBandsPageButton = nullptr;
-	QToolButton* mBandsApplyAllButton = nullptr;
+	QToolButton* mBandsPageButtons[4] = {};
+	QDoubleSpinBox* mNoticeSizeSpinBoxes[2] = {};
+	QLabel* mNoticeSizeLabels[2] = {};
+	swInstructionsUnitButton* mNoticeSizeUnitButtons[2] = {};
+	std::optional<swInstructionsElementKey> mNoticeKey;
+	QSizeF mNoticeItemSize;
+	QDoubleSpinBox* mImageSizeSpinBoxes[2] = {};
+	QLabel* mImageSizeLabels[2] = {};
+	swInstructionsUnitButton* mImageSizeUnitButtons[2] = {};
+	std::optional<swInstructionsElementKey> mImageKey;
+	qreal mImageAspect = 1.0;
+	QToolButton* mBandsApplyAllButtons[4] = {};
 	QToolButton* mWatermarkPageButton = nullptr;
 	QToolButton* mThumbnailApplyAllButton = nullptr;
 	QToolButton* mModelSizePageButton = nullptr;
@@ -201,6 +222,7 @@ protected:
 	swInstructionsBoxElement mBoxElement = swInstructionsBoxElement::StepImage;
 	std::array<std::vector<QWidget*>, static_cast<int>(swInstructionsBoxElement::Count)> mBoxRows;
 	QVBoxLayout* mCategoriesLayout = nullptr;
+	QScrollArea* mScrollArea = nullptr;
 };
 
 // Shows a length in page units.

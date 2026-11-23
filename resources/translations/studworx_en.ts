@@ -40,7 +40,7 @@
 <context>
     <name>swInstructionsEditorWidget</name>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="471"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="465"/>
         <source>And %n more.</source>
         <translation>
             <numerusform>And %n more.</numerusform>
@@ -48,7 +48,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="474"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="468"/>
         <source>The text was not applied. %n line(s) are not valid LDraw syntax:</source>
         <translation>
             <numerusform>The text was not applied. %n line(s) are not valid LDraw syntax:</numerusform>
@@ -59,7 +59,7 @@
 <context>
     <name>swMainWindow</name>
     <message numerus="yes">
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="172"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="173"/>
         <source>%n objects selected</source>
         <translation>
             <numerusform>%n object selected</numerusform>
@@ -67,7 +67,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="351"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="352"/>
         <source>Merged %n submodels.</source>
         <translation>
             <numerusform>Merged %n submodel.</numerusform>
@@ -101,17 +101,15 @@
 <context>
     <name>swPreferencesDialog</name>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="639"/>
         <source>%n plate(s)</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>%n plate</numerusform>
             <numerusform>%n plates</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1707"/>
         <source>%n stud(s)</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>%n stud</numerusform>
             <numerusform>%n studs</numerusform>
         </translation>

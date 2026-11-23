@@ -11,6 +11,7 @@
 #include "sw_widget_preview.h"
 #include "sw_window_utilities.h"
 #include "sw_dialog_render.h"
+#include "sw_dialog_instructions_print.h"
 
 #ifdef Q_OS_WIN
 #if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
@@ -339,7 +340,7 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 #endif
 
 #ifndef Q_OS_IOS
-	const bool CreateRenderResources = !SaveAndExit || Options.SaveImage || Options.SaveKMZ || Options.SaveHTML || Options.SavePOVRay || Options.RenderPOVRay;
+	const bool CreateRenderResources = !SaveAndExit || Options.SaveImage || Options.SaveKMZ || Options.SaveHTML || Options.SavePDF || Options.SavePOVRay || Options.RenderPOVRay;
 	const swResult<void> RendererResult = swContext::InitializeRenderer(CreateRenderResources);
 
 	if (!RendererResult)
@@ -992,6 +993,38 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 				if (!ExportResult.error().isEmpty())
 					StdErr << ExportResult.error() << '\n';
 			}
+		}
+
+		if (Options.SavePDF)
+		{
+#ifndef QT_NO_PRINTER
+			// pdf beside the model by default
+			QString FileName = !Options.SavePDFName.isEmpty() ? Options.SavePDFName : Options.ProjectName;
+			const QString Extension = QFileInfo(FileName).suffix().toLower();
+
+			if (Extension.isEmpty())
+				FileName += QLatin1String(".pdf");
+			else if (Extension != QLatin1String("pdf"))
+				FileName = FileName.left(FileName.length() - Extension.length() - 1) + QLatin1String(".pdf");
+
+			swInstructions* Instructions = mProject->GetInstructions();
+			QPrinter Printer(QPrinter::HighResolution);
+			Printer.setOutputFormat(QPrinter::PdfFormat);
+			Printer.setOutputFileName(FileName);
+			swSetupInstructionsPrinter(Instructions, &Printer);
+			swPrintInstructions(Instructions, &Printer);
+
+			if (QFileInfo(FileName).size() > 0)
+				StdOut << tr("Saved '%1'.\n").arg(FileName);
+			else
+			{
+				OutputFailed = true;
+				StdErr << tr("Failed to save '%1'.\n").arg(FileName);
+			}
+#else
+			OutputFailed = true;
+			StdErr << tr("--export-pdf needs printing support.\n");
+#endif
 		}
 	}
 

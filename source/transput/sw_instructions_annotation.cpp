@@ -84,6 +84,21 @@ void swInstructions::SetNoticePages(int Id, swInstructionsImagePages Pages, size
 	}
 }
 
+void swInstructions::SetNoticeAlignment(int Id, int Alignment, int VerticalAlignment)
+{
+	for (swInstructionsNotice& Notice : mNotices)
+	{
+		if (Notice.Id != Id)
+			continue;
+
+		Notice.Alignment = Alignment;
+		Notice.VerticalAlignment = VerticalAlignment;
+
+		emit PageLayoutChanged();
+		return;
+	}
+}
+
 void swInstructions::RemoveNotice(int Id)
 {
 	const swInstructionsElementKey Key = { swInstructionsPlacementElement::Notice, nullptr, static_cast<swStep>(Id) };
@@ -112,9 +127,13 @@ void swInstructions::RemoveElementReferences(const swInstructionsElementKey& Key
 
 	for (swInstructionsPointer& Pointer : mPointers)
 		if (Pointer.TargetType == swInstructionsPointerTarget::Element && Pointer.TargetElement == Key)
+		{
 			Pointer.TargetType = swInstructionsPointerTarget::Point;
+			Pointer.TargetAnchor = QPointF(-1.0, -1.0);
+		}
 
 	mElementOffsets.erase(Key);
+	mElementSizes.erase(Key);
 	mLockedPositions.erase(Key);
 }
 
@@ -217,7 +236,7 @@ int swInstructions::AddPointer(size_t PageIndex, const swInstructionsElementKey&
 	return Pointer.Id;
 }
 
-void swInstructions::SetPointerTarget(int Id, swInstructionsPointerTarget TargetType, const swInstructionsElementKey& TargetElement, int TargetPart, const QPointF& TipPosition)
+void swInstructions::SetPointerTarget(int Id, swInstructionsPointerTarget TargetType, const swInstructionsElementKey& TargetElement, int TargetPart, const QPointF& TipPosition, const QPointF& TargetAnchor)
 {
 	for (swInstructionsPointer& Pointer : mPointers)
 	{
@@ -228,6 +247,35 @@ void swInstructions::SetPointerTarget(int Id, swInstructionsPointerTarget Target
 		Pointer.TargetElement = TargetElement;
 		Pointer.TargetPart = TargetPart;
 		Pointer.TipPosition = TipPosition;
+		Pointer.TargetAnchor = TargetAnchor;
+
+		emit PageLayoutChanged();
+		return;
+	}
+}
+
+void swInstructions::SetPointerBend(int Id, qreal Bend)
+{
+	for (swInstructionsPointer& Pointer : mPointers)
+	{
+		if (Pointer.Id != Id || Pointer.Bend == Bend)
+			continue;
+
+		Pointer.Bend = qBound(0.0, Bend, 1.0);
+
+		emit PageLayoutChanged();
+		return;
+	}
+}
+
+void swInstructions::SetPointerReach(int Id, qreal Reach)
+{
+	for (swInstructionsPointer& Pointer : mPointers)
+	{
+		if (Pointer.Id != Id || Pointer.Reach == Reach)
+			continue;
+
+		Pointer.Reach = Reach < 0.0 ? -1.0 : Reach;
 
 		emit PageLayoutChanged();
 		return;

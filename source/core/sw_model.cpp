@@ -592,6 +592,21 @@ void swModel::SetStepView(swStep Step, const std::optional<swStepView>& StepView
 	else
 		Properties.mStepViews.erase(Step);
 
+	// a turned view ends after its step
+
+	if (StepView && StepView->Mode != swStepViewMode::End && swGetPreferences().mEndStepViews && Step < GetLastStep() && !Properties.mStepViews.count(Step + 1))
+		Properties.mStepViews[Step + 1] = swStepView{ swStepViewMode::End, swVector3(0.0f, 0.0f, 0.0f) };
+
+	// its end line goes with it
+
+	if (!StepView && mProperties.mStepViews.count(Step))
+	{
+		const std::map<swStep, swStepView>::const_iterator Next = Properties.mStepViews.find(Step + 1);
+
+		if (Next != Properties.mStepViews.end() && Next->second.Mode == swStepViewMode::End)
+			Properties.mStepViews.erase(Next);
+	}
+
 	if (Properties == mProperties)
 		return;
 

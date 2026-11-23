@@ -1,6 +1,7 @@
 #include "sw_global.h"
 #include "sw_dialog_setup_page.h"
 #include "sw_window_utilities.h"
+#include "sw_widget_spin_box.h"
 #include "ui_sw_dialog_setup_page.h"
 #include "sw_instructions.h"
 #include "sw_profile.h"
@@ -149,6 +150,21 @@ void swPageSetupDialog::accept()
 	QDialog::accept();
 }
 
+// use to add or update unit text
+static void SetUnitLabel(swRangeDoubleSpinBox* SpinBox, const QString& Unit)
+{
+	QObject* Label = SpinBox->property("UnitLabel").value<QObject*>();
+
+	if (!Label)
+	{
+		Label = swAddSpinBoxUnit(SpinBox, Unit);
+		SpinBox->setProperty("UnitLabel", QVariant::fromValue(Label));
+	}
+
+	if (Label)
+		static_cast<swSpinBoxUnitLabel*>(Label)->setText(Unit.trimmed());
+}
+
 void swPageSetupDialog::UpdateSpinBoxes()
 {
 	auto SetUnits = [](swRangeDoubleSpinBox* SpinBox, swInstructionsPageUnits Units)
@@ -166,7 +182,8 @@ void swPageSetupDialog::UpdateSpinBoxes()
 
 		QSignalBlocker Blocker(SpinBox);
 		SpinBox->setRange(1.0 / Scale, 100000.0 / Scale);
-		SpinBox->setSuffix(QLatin1Char(' ') + swGetPageUnitSuffix(Units));
+		SpinBox->SetReference();
+		SetUnitLabel(SpinBox, swGetPageUnitSuffix(Units));
 		SpinBox->setValue(Points / Scale);
 	};
 
@@ -198,7 +215,8 @@ void swPageSetupDialog::UpdateMargins()
 
 		QSignalBlocker Blocker(SpinBox);
 		SpinBox->setRange(0.0, qMax(Room - ContentMinimum, 0.0f) / Scale);
-		SpinBox->SetReference(QLatin1Char(' ') + swGetPageUnitSuffix(mMarginUnits));
+		SpinBox->SetReference();
+		SetUnitLabel(SpinBox, swGetPageUnitSuffix(mMarginUnits));
 		SpinBox->setValue(Points / Scale);
 	};
 

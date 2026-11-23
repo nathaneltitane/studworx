@@ -196,20 +196,24 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 
 	mWidthSpinBox = new swRangeSpinBox(SizeGroup);
 	mWidthSpinBox->setRange(1, SW_MAXIMUM_IMAGE_DIMENSION);
+	mWidthSpinBox->SetReference();
 	mWidthSpinBox->setValue(Options->Width);
 	mWidthSpinBox->setToolTip(tr("Width of the saved image, in pixels (1 to 32768)."));
 	WidthLabel->setBuddy(mWidthSpinBox);
 	SizeLayout->addWidget(mWidthSpinBox, 1, 1);
+	swAddSpinBoxUnit(mWidthSpinBox, tr("px"));
 
 	QLabel* HeightLabel = new QLabel(tr("&Height"), SizeGroup);
 	SizeLayout->addWidget(HeightLabel, 2, 0);
 
 	mHeightSpinBox = new swRangeSpinBox(SizeGroup);
 	mHeightSpinBox->setRange(1, SW_MAXIMUM_IMAGE_DIMENSION);
+	mHeightSpinBox->SetReference();
 	mHeightSpinBox->setValue(Options->Height);
 	mHeightSpinBox->setToolTip(tr("Height of the saved image, in pixels (1 to 32768)."));
 	HeightLabel->setBuddy(mHeightSpinBox);
 	SizeLayout->addWidget(mHeightSpinBox, 2, 1);
+	swAddSpinBoxUnit(mHeightSpinBox, tr("px"));
 
 	QHBoxLayout* OrientationLayout = new QHBoxLayout();
 	// orientation buttons line up with the size fields
@@ -266,6 +270,7 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 
 	mFromSpinBox = new swRangeSpinBox(StepsGroup);
 	mFromSpinBox->setRange(1, mLastStep);
+	mFromSpinBox->SetReference();
 	mFromSpinBox->setValue(mCurrentStep);
 	mFromSpinBox->setToolTip(tr("First step to save."));
 	mFromSpinBox->setAccessibleName(tr("First Step"));
@@ -274,6 +279,7 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 
 	mToSpinBox = new swRangeSpinBox(StepsGroup);
 	mToSpinBox->setRange(1, mLastStep);
+	mToSpinBox->SetReference();
 	mToSpinBox->setValue(mLastStep);
 	mToSpinBox->setToolTip(tr("Last step to save."));
 	mToSpinBox->setAccessibleName(tr("Last Step"));
@@ -330,21 +336,23 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 
 	mAngleStartSpinBox = new swRangeSpinBox(TurntableGroup);
 	mAngleStartSpinBox->setRange(-360, 360);
-	mAngleStartSpinBox->setSuffix(QString::fromUtf8("°"));
+	mAngleStartSpinBox->SetReference();
 	mAngleStartSpinBox->setValue(Options->Turntable.AngleStart);
 	mAngleStartSpinBox->setToolTip(tr("First angle, measured from the current view."));
 	mAngleStartSpinBox->setAccessibleName(tr("First Angle"));
 	mAngleStartSpinBox->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
 	AngleLayout->addWidget(mAngleStartSpinBox, 1);
+	swAddSpinBoxUnit(mAngleStartSpinBox, QString::fromUtf8("°"));
 
 	mAngleEndSpinBox = new swRangeSpinBox(TurntableGroup);
 	mAngleEndSpinBox->setRange(-360, 360);
-	mAngleEndSpinBox->setSuffix(QString::fromUtf8("°"));
+	mAngleEndSpinBox->SetReference();
 	mAngleEndSpinBox->setValue(Options->Turntable.AngleEnd);
 	mAngleEndSpinBox->setToolTip(tr("Last angle, measured from the current view."));
 	mAngleEndSpinBox->setAccessibleName(tr("Last Angle"));
 	mAngleEndSpinBox->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
 	AngleLayout->addWidget(mAngleEndSpinBox, 1);
+	swAddSpinBoxUnit(mAngleEndSpinBox, QString::fromUtf8("°"));
 
 	QLabel* NextStepLabel = new QLabel(tr("Next Step"), TurntableGroup);
 	TurntableLayout->addWidget(NextStepLabel, 5, 0);
@@ -369,12 +377,14 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 	mNextStepSpinBox->setAccessibleName(tr("Next Step Interval"));
 	mNextStepSpinBox->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Fixed);
 	NextStepLayout->addWidget(mNextStepSpinBox, 1);
+	mNextStepUnitLabel = swAddSpinBoxUnit(mNextStepSpinBox, tr("turns"));
 
 	QLabel* TurnsLabel = new QLabel(tr("T&urns"), TurntableGroup);
 	TurntableLayout->addWidget(TurnsLabel, 6, 0);
 
 	mTurnsSpinBox = new swRangeSpinBox(TurntableGroup);
 	mTurnsSpinBox->setRange(1, 10);
+	mTurnsSpinBox->SetReference();
 	mTurns = qBound(1, Options->Turntable.Turns, 10);
 	mTurnsSpinBox->setValue(mTurns);
 	mTurnsSpinBox->setToolTip(tr("Number of revolutions or swings in one loop (1 to 10)."));
@@ -388,6 +398,7 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 
 	mFramesSpinBox = new swRangeSpinBox(TurntableGroup);
 	mFramesSpinBox->setRange(2, 360);
+	mFramesSpinBox->SetReference();
 	mFramesSpinBox->setValue(mTurntableFrames);
 	FramesLabel->setBuddy(mFramesSpinBox);
 	TurntableLayout->addWidget(mFramesSpinBox, 7, 1);
@@ -399,11 +410,12 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 	mFrameRateSpinBox->setRange(0.5, 50.0);
 	mFrameRateSpinBox->setDecimals(1);
 	mFrameRateSpinBox->setSingleStep(1.0);
-	mFrameRateSpinBox->setSuffix(tr(" fps"));
+	mFrameRateSpinBox->SetReference();
 	mFrameRateSpinBox->setValue(Options->Turntable.FrameRate);
 	mFrameRateSpinBox->setToolTip(tr("Frames shown each second (0.5 to 50)."));
 	FrameRateLabel->setBuddy(mFrameRateSpinBox);
 	TurntableLayout->addWidget(mFrameRateSpinBox, 8, 1);
+	swAddSpinBoxUnit(mFrameRateSpinBox, tr("fps"));
 
 	QLabel* HoldLastLabel = new QLabel(tr("Hol&d Last"), TurntableGroup);
 	TurntableLayout->addWidget(HoldLastLabel, 9, 0);
@@ -412,11 +424,12 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 	mHoldLastSpinBox->setRange(0.0, 10.0);
 	mHoldLastSpinBox->setDecimals(1);
 	mHoldLastSpinBox->setSingleStep(0.5);
-	mHoldLastSpinBox->setSuffix(tr(" s"));
+	mHoldLastSpinBox->SetReference();
 	mHoldLastSpinBox->setValue(Options->Turntable.HoldLast);
 	mHoldLastSpinBox->setToolTip(tr("Seconds the last step stays on screen before the loop restarts (0 to 10)."));
 	HoldLastLabel->setBuddy(mHoldLastSpinBox);
 	TurntableLayout->addWidget(mHoldLastSpinBox, 9, 1);
+	swAddSpinBoxUnit(mHoldLastSpinBox, tr("s"));
 
 	QLabel* DurationLabel = new QLabel(tr("Duration"), TurntableGroup);
 	TurntableLayout->addWidget(DurationLabel, 10, 0);
@@ -461,11 +474,12 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 
 	mMarginSpinBox = new swRangeSpinBox(FramingGroup);
 	mMarginSpinBox->setRange(0, 50);
-	mMarginSpinBox->setSuffix(tr(" %"));
+	mMarginSpinBox->SetReference();
 	mMarginSpinBox->setValue(Options->Framing.Margin);
 	mMarginSpinBox->setToolTip(tr("Empty space around the model, in percent of the image (0 to 50)."));
 	MarginLabel->setBuddy(mMarginSpinBox);
 	FramingLayout->addWidget(mMarginSpinBox, 2, 1);
+	swAddSpinBoxUnit(mMarginSpinBox, tr("%"));
 
 	QLabel* ScopeLabel = new QLabel(tr("&Bounds"), FramingGroup);
 	FramingLayout->addWidget(ScopeLabel, 3, 0);
@@ -925,7 +939,8 @@ void swImageDialog::UpdateTurntable()
 			mNextStepSpinBox->setDecimals(1);
 			mNextStepSpinBox->setRange(0.1, 60.0);
 			mNextStepSpinBox->setSingleStep(0.5);
-			mNextStepSpinBox->setSuffix(tr(" s"));
+			mNextStepSpinBox->SetReference();
+			mNextStepUnitLabel->setText(tr("s"));
 			mNextStepSpinBox->setValue(mNextStepSeconds);
 			mNextStepSpinBox->setToolTip(tr("Seconds each step shows (0.1 to 60)."));
 		}
@@ -934,7 +949,8 @@ void swImageDialog::UpdateTurntable()
 			mNextStepSpinBox->setDecimals(0);
 			mNextStepSpinBox->setRange(1.0, 10.0);
 			mNextStepSpinBox->setSingleStep(1.0);
-			mNextStepSpinBox->setSuffix(QString());
+			mNextStepSpinBox->SetReference();
+			mNextStepUnitLabel->setText(tr("turns"));
 			mNextStepSpinBox->setValue(mNextStepTurns);
 			mNextStepSpinBox->setToolTip(tr("Turns each step shows (1 to 10)."));
 		}
@@ -951,12 +967,14 @@ void swImageDialog::UpdateTurntable()
 		if (StepMotion)
 		{
 			mFramesSpinBox->setRange(1, qMax(mLastStep, 1));
+			mFramesSpinBox->SetReference();
 			mFramesSpinBox->setValue(GetRangeEnd() - GetRangeStart() + 1);
 			mFramesSpinBox->setToolTip(tr("Steps play one per frame, set by the Steps group."));
 		}
 		else
 		{
 			mFramesSpinBox->setRange(2, 360);
+			mFramesSpinBox->SetReference();
 			mFramesSpinBox->setValue(mTurntableFrames);
 			mFramesSpinBox->setToolTip(JointsMotion ? tr("Number of images between two poses (2 to 360).") : tr("Number of images in one turn (2 to 360)."));
 		}
@@ -972,11 +990,13 @@ void swImageDialog::UpdateTurntable()
 		if (Turning && NextStep != swImageNextStep::Off)
 		{
 			mTurnsSpinBox->setRange(1, 100000);
+			mTurnsSpinBox->SetReference();
 			mTurnsSpinBox->setValue(qMax(qRound(static_cast<double>(FrameCount) / mTurntableFrames), 1));
 		}
 		else
 		{
 			mTurnsSpinBox->setRange(1, 10);
+			mTurnsSpinBox->SetReference();
 			mTurnsSpinBox->setValue(mTurns);
 		}
 	}

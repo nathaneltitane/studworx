@@ -37,11 +37,10 @@ struct swInstructionsPageSettings
 	int Columns = 1;
 	swInstructionsDirection Direction = swInstructionsDirection::Horizontal;
 	bool FinalModel = false;
-	bool FinalModelColor = false;
 
 	bool operator== (const swInstructionsPageSettings& Other) const
 	{
-		return Rows == Other.Rows && Columns == Other.Columns && Direction == Other.Direction && FinalModel == Other.FinalModel && FinalModelColor == Other.FinalModelColor;
+		return Rows == Other.Rows && Columns == Other.Columns && Direction == Other.Direction && FinalModel == Other.FinalModel;
 	}
 };
 
@@ -235,6 +234,74 @@ enum class swInstructionsPropertyType
 	RightBandReserve,
 	ShowWatermark,
 	WatermarkOpacity,
+
+	// text alignment inside the box
+	StepNumberAlignment,
+	StepNumberVerticalAlignment,
+	BillOfMaterialsTitleAlignment,
+	BillOfMaterialsTitleVerticalAlignment,
+	PageNumberAlignment,
+	PageNumberVerticalAlignment,
+	PartCountAlignment,
+	PartCountVerticalAlignment,
+	CoverTitleAlignment,
+	CoverTitleVerticalAlignment,
+	CoverAuthorAlignment,
+	CoverAuthorVerticalAlignment,
+	NoticeAlignment,
+	NoticeVerticalAlignment,
+	ShowCoverTitle,
+	ShowCoverImage,
+	ImageMargin,
+	ImagePadding,
+	ImageBorderWidth,
+	ImageBorderColor,
+	ImageBackgroundColor,
+	ImageCornerRadius,
+	PointerBendRadius,
+	ShowFinalModelPage,
+	BlankPageBackgroundColor,
+	PartsListQuantityMargin,
+	PartsListQuantityPadding,
+	PartsListQuantityBorderWidth,
+	PartsListQuantityBorderColor,
+	PartsListQuantityBackgroundColor,
+	PartsListQuantityCornerRadius,
+	FinalModelPadding,
+	FinalModelCornerRadius,
+	StepMargin,
+	StepPadding,
+	StepBorderWidth,
+	StepBorderColor,
+	StepCornerRadius,
+	FinalModelBackgroundColor,
+	HeaderBandMargin,
+	HeaderBandPadding,
+	HeaderBandBorderWidth,
+	HeaderBandBorderColor,
+	HeaderBandCornerRadius,
+	FooterBandMargin,
+	FooterBandPadding,
+	FooterBandBorderWidth,
+	FooterBandBorderColor,
+	FooterBandCornerRadius,
+	LeftBandMargin,
+	LeftBandPadding,
+	LeftBandBorderWidth,
+	LeftBandBorderColor,
+	LeftBandCornerRadius,
+	RightBandMargin,
+	RightBandPadding,
+	RightBandBorderWidth,
+	RightBandBorderColor,
+	RightBandCornerRadius,
+	WatermarkMargin,
+	WatermarkPadding,
+	WatermarkBorderWidth,
+	WatermarkBorderColor,
+	WatermarkCornerRadius,
+	WatermarkBackgroundColor,
+	LockHomeView,
 	Count
 };
 
@@ -258,6 +325,15 @@ enum class swInstructionsBoxElement
 	Notice,
 	PartCount,
 	SubmodelPreview,
+	Image,
+	PartsListQuantity,
+	FinalModel,
+	StepArea,
+	HeaderBand,
+	FooterBand,
+	LeftBand,
+	RightBand,
+	Watermark,
 	Count
 };
 
@@ -300,13 +376,17 @@ struct swInstructionsBoxStyle
 enum class swInstructionsPointerStyle
 {
 	Line,
-	Wedge
+	Wedge,
+	LShape,
+	ZShape,
+	UShape
 };
 
 enum class swInstructionsPointerTip
 {
 	Arrow,
-	Dot
+	Dot,
+	HollowDot
 };
 
 // What a step element is placed against.
@@ -453,6 +533,10 @@ struct swInstructionsNotice
 	QPointF Position;
 	QString Text;
 	QString File;
+
+	// minus one follows the notice properties
+	int Alignment = -1;
+	int VerticalAlignment = -1;
 };
 
 // A picture linked by path, such as a logo.
@@ -461,7 +545,7 @@ struct swInstructionsImage
 	int Id = 0;
 	swInstructionsImagePages Pages = swInstructionsImagePages::Front;
 	int Placement = 12;
-	int Size = 25;
+	qreal Size = 25.0;
 	QString File;
 
 	// default template images are not written to the model
@@ -489,6 +573,15 @@ struct swInstructionsPointer
 	swInstructionsElementKey TargetElement;
 	int TargetPart = -1;
 	QPointF TipPosition;
+
+	// The tip spot as a fraction of the target box, negative when the tip finds the border.
+	QPointF TargetAnchor = QPointF(-1.0, -1.0);
+
+	// The Z shape bend as a fraction from the base to the tip.
+	qreal Bend = 0.5;
+
+	// How far the U shape reaches out, negative for automatic.
+	qreal Reach = -1.0;
 
 	// Pointers default to the pointer properties.
 	int Style = -1;
@@ -585,10 +678,17 @@ public:
 	bool HasElementOffset(const swInstructionsElementKey& Key) const;
 	void SetElementOffsets(const std::map<swInstructionsElementKey, QPointF>& Offsets);
 	void ResetElementOffset(const swInstructionsElementKey& Key);
+
+	// An invalid size fits the content.
+	QSizeF GetElementSize(const swInstructionsElementKey& Key) const;
+	void SetElementSize(const swInstructionsElementKey& Key, const QSizeF& Size);
 	void SetElementPlacement(swInstructionsPropertyType Type, int Placement, const swInstructionsElementKey& Key);
 
 	// The box of an element.
 	swInstructionsBoxStyle GetBoxStyle(swInstructionsBoxElement Element, swModel* Model, swStep Step) const;
+
+	// Gets the box of a page element.
+	swInstructionsBoxStyle GetPageBoxStyle(size_t PageIndex, swInstructionsBoxElement Element) const;
 
 	// Notices and pointers stay on their page.
 	swInstructionsPageKey GetPageElementsKey(size_t PageIndex) const;
@@ -603,6 +703,7 @@ public:
 	void SetNoticeText(int Id, const QString& Text, const QString& File);
 	void SetNoticePosition(int Id, const QPointF& Position);
 	void SetNoticePages(int Id, swInstructionsImagePages Pages, size_t PageIndex, const QPointF& Position);
+	void SetNoticeAlignment(int Id, int Alignment, int VerticalAlignment);
 	void RemoveNotice(int Id);
 
 	const std::vector<swInstructionsPointer>& GetPointers() const
@@ -629,8 +730,10 @@ public:
 
 	const swInstructionsPointer* FindPointer(int Id) const;
 	int AddPointer(size_t PageIndex, const swInstructionsElementKey& Source, const QPointF& TipPosition);
-	void SetPointerTarget(int Id, swInstructionsPointerTarget TargetType, const swInstructionsElementKey& TargetElement, int TargetPart, const QPointF& TipPosition);
+	void SetPointerTarget(int Id, swInstructionsPointerTarget TargetType, const swInstructionsElementKey& TargetElement, int TargetPart, const QPointF& TipPosition, const QPointF& TargetAnchor);
 	void SetPointerAnchor(int Id, int Anchor);
+	void SetPointerBend(int Id, qreal Bend);
+	void SetPointerReach(int Id, qreal Reach);
 	void SetPointerStyle(int Id, int Style, int Tip);
 	void RemovePointer(int Id);
 
@@ -790,6 +893,7 @@ public:
 	std::map<swInstructionsStepKey, swInstructionsPageSettings> mPageSettingsOverrides;
 	std::map<swInstructionsStepKey, swInstructionsProperties> mPagePropertyOverrides;
 	std::map<swInstructionsElementKey, QPointF> mElementOffsets;
+	std::map<swInstructionsElementKey, QSizeF> mElementSizes;
 	std::map<swInstructionsElementKey, QPointF> mLockedPositions;
 	std::map<swInstructionsPageKey, std::map<swInstructionsElementKey, QPointF>> mLockedPages;
 	std::map<swInstructionsPageKey, swInstructionsProperties> mFrozenPages;

@@ -81,6 +81,8 @@ struct swPreferencesDialogOptions
 	bool MouseShortcutsDefault;
 };
 
+class swRangeSpinBox;
+
 namespace Ui
 {
 class swPreferencesDialog;
@@ -192,7 +194,7 @@ private:
 	void UpdateMouseTree();
 	void UpdateMouseTreeItem(int ItemIndex);
 	QTreeWidgetItem* FindMouseTreeItem(int ItemIndex) const;
-	static void UpdateStudSuffix(QSpinBox* SpinBox);
+	static void UpdateStudSuffix(swRangeSpinBox* SpinBox);
 	void SetShortcutModified(QTreeWidgetItem* TreeItem, bool Modified);
 	void UpdateShortcutConflicts();
 	void CreateInstructionsTab();
@@ -206,7 +208,7 @@ private:
 	QCheckBox* mInstructionsSnapToGrid = nullptr;
 	QDoubleSpinBox* mInstructionsGridSize = nullptr;
 	QComboBox* mInstructionsGridScope = nullptr;
-	QSpinBox* mInstructionsGridDivisions = nullptr;
+	swRangeSpinBox* mInstructionsGridDivisions = nullptr;
 	QToolButton* mInstructionsGridPrimaryColor = nullptr;
 	QToolButton* mInstructionsGridSecondaryColor = nullptr;
 	QToolButton* mInstructionsMarginColor = nullptr;

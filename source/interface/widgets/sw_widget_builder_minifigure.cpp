@@ -10,6 +10,7 @@
 #include "sw_model.h"
 #include "sw_object_camera.h"
 #include "sw_widget_spin_box_double.h"
+#include "sw_widget_spin_box.h"
 #include "sw_window_utilities.h"
 #include "sw_widget_selection_part_popup.h"
 #include "sw_window_main.h"
@@ -71,6 +72,7 @@ swMinifigureBuilderWidget::swMinifigureBuilderWidget(QWidget* Parent)
 		if (SpinBox)
 		{
 			SpinBox->setRange(-360.0, 360.0);
+			SpinBox->setSuffix(QString::fromUtf8(" / %1").arg(SpinBox->textFromValue(SpinBox->maximum())));
 			SpinBox->SetSnap(swFloatPropertySnap::Rotation);
 			SpinBox->setSingleStep(5.0);
 			SpinBox->setObjectName(QString("MinifigureBuilderRotation%1").arg(ItemIndex));
@@ -88,7 +90,10 @@ swMinifigureBuilderWidget::swMinifigureBuilderWidget(QWidget* Parent)
 			MinifigureBuilderLayout->addWidget(PartButton, Row, Column + 1, 1, SpinBox ? ColumnCount - 2 : ColumnCount - 1);
 
 			if (SpinBox)
+			{
 				MinifigureBuilderLayout->addWidget(SpinBox, Row, Column + ColumnCount - 1);
+				swAddSpinBoxUnit(SpinBox, QString::fromUtf8("°"));
+			}
 
 			Row++;
 		};

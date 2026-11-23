@@ -8,6 +8,7 @@
 #include "sw_project.h"
 #include "sw_model.h"
 #include "sw_object_part.h"
+#include "sw_data_part.h"
 #include "sw_window_utilities.h"
 #include "sw_profile.h"
 #include "sw_window_main.h"
@@ -245,7 +246,62 @@ void swInstructionsDialog::UpdatePageList()
 			break;
 
 		case swInstructionsPageType::Steps:
+		{
+			// pages joining two or more models are assemblies
+			const std::vector<swInstructionsStep>& Steps = mInstructions->mPages[PageNumber].Steps;
+			swModel* Model = Steps.empty() ? nullptr : Steps.front().Model;
+
+			if (!Model)
+				break;
+
+			swStep LastStep = 0;
+
+			for (const swInstructionsStep& Step : Steps)
+				LastStep = qMax(LastStep, Step.Step);
+
+			std::set<const swModel*> Shown;
+			const swModel* Focus = nullptr;
+
+			for (const std::unique_ptr<swPart>& Part : Model->GetParts())
+			{
+				if (Part->IsHidden() || Part->GetStepShow() > LastStep)
+					continue;
+
+				const swModel* PartModel = Part->mPartData->IsModel() ? Part->mPartData->GetModel() : Model;
+				Shown.insert(PartModel);
+
+				// the first submodel added here names the page
+				const bool Added = std::any_of(Steps.begin(), Steps.end(), [&Part](const swInstructionsStep& Step) { return Step.Step == Part->GetStepShow(); });
+
+				if (Added && PartModel != Model && !Focus)
+					Focus = PartModel;
+			}
+
+			auto GetTitle = [](const swModel* TitleModel)
+			{
+				const swModelProperties& Properties = TitleModel->GetProperties();
+				QString Title = Properties.mDescription.trimmed();
+
+				if (Title.isEmpty())
+					Title = Properties.mModelName.trimmed();
+
+				if (Title.isEmpty())
+					Title = QFileInfo(Properties.mFileName).completeBaseName();
+
+				return Title;
+			};
+
+			// a page of only the finished model is an assembly
+			if (std::all_of(Steps.begin(), Steps.end(), [](const swInstructionsStep& Step) { return Step.FinalModel; }))
+				Focus = Model;
+
+			if (Shown.size() >= 2 || Focus == Model)
+				Label = tr("%1 - Assembly - %2").arg(Label, GetTitle(Focus ? Focus : Model));
+			else
+				Label = tr("%1 - %2").arg(Label, GetTitle(Shown.empty() ? Model : *Shown.begin()));
+
 			break;
+		}
 		}
 
 		ThumbnailsWidget->addItem(Label);
@@ -511,6 +567,15 @@ void swInstructionsDialog::RemovePage()
 	if (mInstructions->mPages[Row].Type == swInstructionsPageType::Blank)
 	{
 		mInstructions->RemoveBlankPage(Row);
+		return;
+	}
+
+	// the final model page hides
+	const std::vector<swInstructionsStep>& PageSteps = mInstructions->mPages[Row].Steps;
+
+	if (!PageSteps.empty() && std::all_of(PageSteps.begin(), PageSteps.end(), [](const swInstructionsStep& Step) { return Step.FinalModel; }) && PageSteps.front().Model == mInstructions->GetMainModel())
+	{
+		mInstructions->SetDefaultBool(swInstructionsPropertyType::ShowFinalModelPage, false);
 		return;
 	}
 

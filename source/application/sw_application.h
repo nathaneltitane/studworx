@@ -195,6 +195,7 @@ public:
 	quint32 mBackgroundSolidColor;
 	bool mDrawAxes;
 	bool mFollowStepViews;
+	bool mEndStepViews;
 	swProjectionScope mProjectionScope;
 	int mCutawaySize;
 	int mTurntableIdleDuration;
@@ -346,6 +347,7 @@ struct swCommandLineOptions
 	bool SetBrickLinkExceptions = false;
 	int BrickLinkCondition = 0;
 	bool SaveHTML = false;
+	bool SavePDF = false;
 	bool SavePOVRay = false;
 	bool RenderPOVRay = false;
 	bool SetCameraAngles = false;
@@ -401,6 +403,7 @@ struct swCommandLineOptions
 	QString BrickLinkWantedList;
 	QString BrickLinkExceptions;
 	QString SaveHTMLName;
+	QString SavePDFName;
 	QString SavePOVRayName;
 	QString RenderPOVRayName;
 	QString SettingsImportName;
@@ -420,7 +423,7 @@ struct swCommandLineOptions
 	// Tells if only settings transfer.
 	bool HasSaveAndExit() const
 	{
-		return SaveImage || SaveFlatten || SaveUndo || SaveWavefront || Save3DS || SaveCOLLADA || SaveKMZ || SaveCSV || SaveBrickLink || SaveHTML || SavePOVRay || RenderPOVRay;
+		return SaveImage || SaveFlatten || SaveUndo || SaveWavefront || Save3DS || SaveCOLLADA || SaveKMZ || SaveCSV || SaveBrickLink || SaveHTML || SavePDF || SavePOVRay || RenderPOVRay;
 	}
 
 	bool HasSettingsTransfer() const

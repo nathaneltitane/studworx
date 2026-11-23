@@ -9,6 +9,7 @@
 #include "sw_window_utilities.h"
 #include "sw_renderer_povray.h"
 #include "sw_renderer_blender.h"
+#include "sw_widget_spin_box.h"
 #include "sw_widget_text_edit.h"
 #include "sw_widget_editor.h"
 
@@ -565,10 +566,10 @@ void swRenderDialog::CreatePanels()
 
 	auto CreateSpinBox = [](int Value)
 	{
-		QSpinBox* SpinBox = new QSpinBox();
+		swRangeSpinBox* SpinBox = new swRangeSpinBox(nullptr);
 		SpinBox->setRange(1, SW_MAXIMUM_IMAGE_DIMENSION);
 		SpinBox->setValue(Value);
-		SpinBox->setSuffix(tr(" px"));
+		SpinBox->SetReference();
 		swSetupPanelSpinBox(SpinBox);
 
 		return SpinBox;
@@ -626,10 +627,12 @@ void swRenderDialog::CreatePanels()
 	mWidthSpinBox = CreateSpinBox(mWidth);
 	QSpinBox* WidthSpinBox = mWidthSpinBox;
 	CreateRow(ImagePanel, tr("Width"), WidthSpinBox, tr("Set the rendered image width in pixels (1 to 32768)."), QString());
+	swAddSpinBoxUnit(WidthSpinBox, tr("px"));
 
 	mHeightSpinBox = CreateSpinBox(mHeight);
 	QSpinBox* HeightSpinBox = mHeightSpinBox;
 	CreateRow(ImagePanel, tr("Height"), HeightSpinBox, tr("Set the rendered image height in pixels (1 to 32768)."), QString());
+	swAddSpinBoxUnit(HeightSpinBox, tr("px"));
 
 	// keep changes for the next render
 	connect(WidthSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, [this](int Value)
@@ -684,13 +687,13 @@ void swRenderDialog::CreatePanels()
 			});
 		};
 
-		auto CreateDoubleSpinBox = [](double Maximum, double Value, const QString& Suffix)
+		auto CreateDoubleSpinBox = [](double Maximum, double Value)
 		{
-			QDoubleSpinBox* SpinBox = new QDoubleSpinBox();
+			swRangeDoubleSpinBox* SpinBox = new swRangeDoubleSpinBox(nullptr);
 			SpinBox->setRange(0.0, Maximum);
 			SpinBox->setSingleStep(0.1);
 			SpinBox->setValue(Value);
-			SpinBox->setSuffix(Suffix);
+			SpinBox->SetReference();
 			swSetupPanelSpinBox(SpinBox);
 
 			return SpinBox;
@@ -699,9 +702,11 @@ void swRenderDialog::CreatePanels()
 		// zero turns the setting off
 		auto CreateSettingSpinBox = [this, &CreateRow, &CreateDoubleSpinBox, IsSettingOn, GetSettingText](QWidget* Panel, const QString& Name, const QString& Key, const QString& ValueKey, double Maximum, double Factor, const QString& Suffix, const QString& ToolTip, const QString& WhatsThis)
 		{
-			QDoubleSpinBox* SpinBox = CreateDoubleSpinBox(Maximum, IsSettingOn(Key) ? swGetBlenderSetting(ValueKey).toDouble() * Factor : 0.0, Suffix);
+			QDoubleSpinBox* SpinBox = CreateDoubleSpinBox(Maximum, IsSettingOn(Key) ? swGetBlenderSetting(ValueKey).toDouble() * Factor : 0.0);
 			SpinBox->setSpecialValueText(tr("Off"));
 			CreateRow(Panel, Name, SpinBox, ToolTip, WhatsThis);
+			if (!Suffix.isEmpty())
+				swAddSpinBoxUnit(SpinBox, Suffix);
 
 			connect(SpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, [Key, ValueKey, Factor, GetSettingText](double Value)
 			{
@@ -724,12 +729,13 @@ void swRenderDialog::CreatePanels()
 			swSetProfileInteger(SW_PROFILE_BLENDER_CROP_IMAGE, Checked);
 		});
 
-		QSpinBox* ScaleSpinBox = new QSpinBox();
+		swRangeSpinBox* ScaleSpinBox = new swRangeSpinBox(nullptr);
 		ScaleSpinBox->setRange(1, 100);
 		ScaleSpinBox->setValue(std::clamp(qRound(swGetBlenderSetting("renderpercentage").toDouble()), 1, 100));
-		ScaleSpinBox->setSuffix(tr(" %"));
+		ScaleSpinBox->SetReference();
 		swSetupPanelSpinBox(ScaleSpinBox);
 		CreateRow(ImagePanel, tr("Scale"), ScaleSpinBox, tr("Render at a percentage of the image size for quick test renders."), QString());
+		swAddSpinBoxUnit(ScaleSpinBox, tr("%"));
 
 		connect(ScaleSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, [](int Value)
 		{
@@ -743,8 +749,9 @@ void swRenderDialog::CreatePanels()
 		CreateSettingCheckBox(ScenePanel, tr("Add Environment"), "addenvironment", tr("Add a ground plane and a lighting environment, photorealistic look only."), QString());
 		QCheckBox* PositionCheckBox = CreateSettingCheckBox(ScenePanel, tr("Position Camera"), "positioncamera", tr("Place the camera so the whole model is in view."), QString());
 
-		QDoubleSpinBox* BorderSpinBox = CreateDoubleSpinBox(50.0, swGetBlenderSetting("cameraborderpercentage").toDouble(), tr(" %"));
+		QDoubleSpinBox* BorderSpinBox = CreateDoubleSpinBox(50.0, swGetBlenderSetting("cameraborderpercentage").toDouble());
 		CreateRow(ScenePanel, tr("Camera Border"), BorderSpinBox, tr("Leave this border around the model when the camera is placed."), QString());
+		swAddSpinBoxUnit(BorderSpinBox, tr("%"));
 		BorderSpinBox->setEnabled(PositionCheckBox->isChecked());
 
 		connect(PositionCheckBox, &QCheckBox::toggled, BorderSpinBox, &QWidget::setEnabled);

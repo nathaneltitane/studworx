@@ -1150,7 +1150,9 @@ swDoubleSpinBox* swPropertiesWidget::CreateFloatEditor(swObjectPropertyId Proper
 	if (ShowName)
 		Widget->setPrefix(Name + QLatin1Char(' '));
 
-	Widget->setSuffix(Suffix);
+	// unbounded ranges show no limit
+	Widget->setSuffix(Max < FLT_MAX ? QString(" / %1").arg(Widget->textFromValue(Widget->maximum())) : QString());
+	Widget->setProperty("Unit", Suffix);
 	swSetupPanelSpinBox(Widget);
 
 	connect(Widget, &swDoubleSpinBox::EditingStarted, this, &swPropertiesWidget::FloatEditingStarted);
@@ -1309,6 +1311,12 @@ QWidget* swPropertiesWidget::AddValueRow(QWidget* Container, const QString& Lett
 		Editor.Editor->setParent(Row);
 		swAddPanelRowWidget(Row, Editor.Editor);
 		mPropertyWidgets[static_cast<int>(GetEditorWidgetPropertyId(Editor.Editor))].Row = Row;
+
+		// unit beside the editor
+		const QString Unit = Editor.Editor->property("Unit").toString();
+
+		if (!Unit.isEmpty())
+			swAddSpinBoxUnit(static_cast<QAbstractSpinBox*>(Editor.Editor), Unit);
 
 		if (Editor.KeyFrameId != swObjectPropertyId::Count)
 			swAddPanelRowWidget(Row, CreateKeyFrameWidget(Editor.KeyFrameId));

@@ -71,6 +71,7 @@ struct swKeyFrameEdit
 };
 
 struct swImageFraming;
+struct swInstructionsBoxStyle;
 struct swSetInventoryItem;
 struct swModelHistoryEditState;
 struct swGroupHistoryState;
@@ -193,6 +194,88 @@ struct swStepView
 		return !(*this == Other);
 	}
 };
+
+// step view angles about the ldraw axes
+
+inline swMatrix44 swGetStepViewRotation(const swVector3& Angles)
+{
+	const swMatrix44 Rotation = swMultiply(swMultiply(swMatrix44RotationX(Angles.x * SW_DEGREES_TO_RADIANS), swMatrix44RotationY(Angles.y * SW_DEGREES_TO_RADIANS)), swMatrix44RotationZ(Angles.z * SW_DEGREES_TO_RADIANS));
+
+	return swMatrix44LDrawToStudWorx(Rotation);
+}
+
+// relative from home, absolute from front
+
+inline void swGetStepViewBase(swStepViewMode Mode, swVector3& Direction, swVector3& Up)
+{
+	if (Mode == swStepViewMode::Absolute)
+	{
+		Direction = swVector3(0.0f, -1.0f, 0.0f);
+		Up = swVector3(0.0f, 0.0f, 1.0f);
+	}
+	else
+	{
+		Direction = swNormalize(swVector3(375.0f, -375.0f, 187.5f));
+		Up = swNormalize(swVector3(0.2357f, -0.2357f, 0.94281f));
+	}
+}
+
+// model turn equals camera turn
+
+inline void swGetStepViewCamera(swStepViewMode Mode, const swVector3& Angles, swVector3& Direction, swVector3& Up)
+{
+	swGetStepViewBase(Mode, Direction, Up);
+
+	const swMatrix44 Inverse = swMatrix44Transpose(swGetStepViewRotation(Angles));
+
+	Direction = swNormalize(swMultiply30(Direction, Inverse));
+	Up = swNormalize(swMultiply30(Up, Inverse));
+}
+
+// angles of a camera frame
+
+inline swVector3 swGetStepViewAngles(swStepViewMode Mode, const swVector3& CameraDirection, const swVector3& CameraUp)
+{
+	swVector3 BaseDirection, BaseUp;
+	swGetStepViewBase(Mode, BaseDirection, BaseUp);
+
+	const swVector3 Direction = swNormalize(CameraDirection);
+	const swVector3 Right = swNormalize(swCross(CameraUp, Direction));
+	const swVector3 Up = swCross(Direction, Right);
+	const swVector3 BaseRight = swNormalize(swCross(BaseUp, BaseDirection));
+
+	// home up is not square, straighten it like the camera does
+
+	const swVector3 BaseUpSquare = swCross(BaseDirection, BaseRight);
+
+	// frame against the base view
+
+	const swMatrix44 Base(swVector4(BaseRight, 0.0f), swVector4(BaseUpSquare, 0.0f), swVector4(BaseDirection, 0.0f), swVector4(0.0f, 0.0f, 0.0f, 1.0f));
+	const swMatrix44 Current(swVector4(Right, 0.0f), swVector4(Up, 0.0f), swVector4(Direction, 0.0f), swVector4(0.0f, 0.0f, 0.0f, 1.0f));
+	const swMatrix44 Rotation = swMatrix44StudWorxToLDraw(swMultiply(swMatrix44Transpose(Base), Current));
+
+	float X, Y, Z;
+	const float SinY = swClamp(-Rotation[0][2], -1.0f, 1.0f);
+	Y = asinf(SinY);
+
+	if (fabsf(SinY) < 0.9999f)
+	{
+		X = atan2f(Rotation[1][2], Rotation[2][2]);
+		Z = atan2f(Rotation[0][1], Rotation[0][0]);
+	}
+	else
+	{
+		X = atan2f(-Rotation[2][1], Rotation[1][1]);
+		Z = 0.0f;
+	}
+
+	auto Round = [](float Radians)
+	{
+		return qRound(Radians * SW_RADIANS_TO_DEGREES * 100.0f) / 100.0f;
+	};
+
+	return swVector3(Round(X), Round(Y), Round(Z));
+}
 
 class swModelProperties
 {
@@ -568,7 +651,7 @@ public:
 	QImage GetStepImage(bool Zoom, int Width, int Height, swStep Step, swImageBackground Background = swImageBackground::Default, swCamera* Camera = nullptr);
 
 	// Empty inventories give a null image.
-	swResult<QImage> GetPartsListImage(int MaxWidth, int ThumbnailSize, swStep Step, quint32 BackgroundColor, quint32 ThumbnailBackgroundColor, QFont Font, QColor TextColor, bool KeepMissingParts, bool ShowCounts = true, swPartsListSort Sort = swPartsListSort::Color, swPartsListLayout Layout = swPartsListLayout::Rows, swPartsListAlignment Alignment = swPartsListAlignment::End, int MaxHeight = INT_MAX, float Scale = 1.0f, bool ShowPartIds = false, int CountPlacement = 21, std::vector<QRect>* CountRects = nullptr) const;
+	swResult<QImage> GetPartsListImage(int MaxWidth, int ThumbnailSize, swStep Step, quint32 BackgroundColor, quint32 ThumbnailBackgroundColor, QFont Font, QColor TextColor, bool KeepMissingParts, bool ShowCounts = true, swPartsListSort Sort = swPartsListSort::Color, swPartsListLayout Layout = swPartsListLayout::Rows, swPartsListAlignment Alignment = swPartsListAlignment::End, int MaxHeight = INT_MAX, float Scale = 1.0f, bool ShowPartIds = false, int CountPlacement = 21, std::vector<QRect>* CountRects = nullptr, const swInstructionsBoxStyle* CountBox = nullptr, qreal Bleed = 0.0) const;
 	swResult<void> SaveStepImages(const QString& BaseName, bool AddStepSuffix, bool Zoom, int Width, int Height, swStep Start, swStep End, swImageBackground Background, const QColor& BackgroundColor = QColor());
 
 	// Frames turn the active view around the model center.

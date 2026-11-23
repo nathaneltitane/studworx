@@ -103,6 +103,7 @@ void swStepsWidget::CustomMenuRequested(QPoint Pos)
 	Menu->addAction(gMainWindow->mActions[SW_STEPS_INSERT_AFTER]);
 	Menu->addAction(gMainWindow->mActions[SW_STEPS_DELETE]);
 	Menu->addAction(gMainWindow->mActions[SW_VIEW_STEP_VIEW_EDIT]);
+	Menu->addAction(gMainWindow->mActions[SW_VIEW_STEP_VIEW_ADD]);
 
 	// remove only on step view rows
 	if (ViewStep.isValid())
@@ -349,14 +350,11 @@ void swStepsWidget::Update(bool Clear, bool UpdateItems)
 		if (!ViewStepItem)
 			continue;
 
-		const QString Modes[] = { tr("relative"), tr("absolute"), tr("added") };
-		const swVector3& Angles = StepView.second.Angles;
-		QString Label;
+		// default is relative zero
 
-		if (StepView.second.Mode == swStepViewMode::End)
-			Label = tr("View: back to default");
-		else
-			Label = tr("View: %1, %2, %3 %4").arg(Angles.x).arg(Angles.y).arg(Angles.z).arg(Modes[static_cast<int>(StepView.second.Mode)]);
+		const QString Modes[] = { tr("relative"), tr("absolute"), tr("added"), tr("relative [default]") };
+		const swVector3 Angles = StepView.second.Mode == swStepViewMode::End ? swVector3(0.0f, 0.0f, 0.0f) : StepView.second.Angles;
+		const QString Label = tr("View: %1, %2, %3 %4").arg(Angles.x).arg(Angles.y).arg(Angles.z).arg(Modes[static_cast<int>(StepView.second.Mode)]);
 
 		QTreeWidgetItem* ViewItem = new QTreeWidgetItem(QStringList(Label));
 		ViewItem->setFlags(Qt::ItemIsEnabled);

@@ -38,10 +38,12 @@ private slots:
 	void ExportsResolveMovedParts();
 	void BrickLinkUsesExceptions();
 	void HTMLExportUsesModelFolder();
+	void InstructionsExportPDF();
 	void FlattenReplacesNestedSubModels();
 	void AxisAlignedRotations_data();
 	void AxisAlignedRotations();
 	void GreyscaleColorKeepsAlpha();
+	void StepViewAnglesRoundTrip();
 	void LockedJointSavesAndLoads();
 	void JointModePreferencesDefault();
 	void AxisAlignedRotationTolerance();
@@ -57,6 +59,7 @@ private slots:
 	void InstructionsPartCountsAreNamed();
 	void InstructionsPartCountsDefaultOff();
 	void InstructionsPartCountsRoundTrip();
+	void InstructionsPointersRoundTrip();
 	void InstructionsBandsAreNamed();
 	void MenusNameEveryCommand();
 	void InterfaceUsesPaintedIcons();

@@ -2213,9 +2213,6 @@
             <property name="toolTip">
              <string>Choose the thickness of the outline drawn around selected, new and missing parts.</string>
             </property>
-            <property name="suffix">
-             <string> px</string>
-            </property>
             <property name="minimum">
              <number>1</number>
             </property>
@@ -2293,6 +2290,29 @@
            </widget>
           </item>
           <item row="1" column="0">
+           <widget class="QLabel" name="EndStepViewsLabel">
+            <property name="toolTip">
+             <string>Save an end line (MLCAD ROTSTEP END) in the next step whenever a step view is saved, so the view only turns that one step.</string>
+            </property>
+            <property name="text">
+             <string>End Step Views</string>
+            </property>
+            <property name="buddy">
+             <cstring>EndStepViewsCheckBox</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QCheckBox" name="EndStepViewsCheckBox">
+            <property name="accessibleName">
+             <string>End Step Views</string>
+            </property>
+            <property name="toolTip">
+             <string>Save an end line (MLCAD ROTSTEP END) in the next step whenever a step view is saved, so the view only turns that one step.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
            <widget class="QLabel" name="ProjectionScopeLabel">
             <property name="toolTip">
              <string>Choose whether a projection change applies to the active view only or to all model views.</string>
@@ -2305,7 +2325,7 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
+          <item row="2" column="1">
            <widget class="QComboBox" name="ProjectionScopeCombo">
             <property name="accessibleName">
              <string>Projection Scope</string>
@@ -2744,9 +2764,6 @@
             <property name="specialValueText">
              <string>Never</string>
             </property>
-            <property name="suffix">
-             <string> s</string>
-            </property>
             <property name="minimum">
              <number>0</number>
             </property>
@@ -2778,9 +2795,6 @@
             </property>
             <property name="toolTip">
              <string>Choose how long the model takes for one full turn.</string>
-            </property>
-            <property name="suffix">
-             <string> s</string>
             </property>
             <property name="minimum">
              <number>5</number>
@@ -5846,6 +5860,7 @@
   <tabstop>ViewCubeLocationCombo</tabstop>
   <tabstop>ViewCubeLabelsCombo</tabstop>
   <tabstop>FollowStepViewsCheckBox</tabstop>
+  <tabstop>EndStepViewsCheckBox</tabstop>
   <tabstop>ProjectionScopeCombo</tabstop>
   <tabstop>AxisIconSizeCombo</tabstop>
   <tabstop>AxisIconLocationCombo</tabstop>

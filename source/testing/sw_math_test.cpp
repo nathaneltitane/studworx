@@ -1,6 +1,7 @@
 #include "sw_global.h"
 #include "sw_tests.h"
 #include "sw_math.h"
+#include "sw_model.h"
 
 // QCOMPARE takes tiny floats for zero, the very residue these tests look for
 #define SW_COMPARE_EXACT(Actual, Expected) QVERIFY2((Actual) == (Expected), qPrintable(QString("%1 is not %2").arg(Actual, 0, 'g', 9).arg(Expected, 0, 'g', 9)))
@@ -203,4 +204,34 @@ void swTests::GreyscaleColorKeepsAlpha()
 	QCOMPARE(swGreyscaleColor(SW_RGBA(255, 0, 0, 153)), static_cast<quint32>(SW_RGBA(76, 76, 76, 153)));
 	QCOMPARE(swGreyscaleColor(SW_RGBA(255, 255, 255, 10)), static_cast<quint32>(SW_RGBA(255, 255, 255, 10)));
 	QCOMPARE(swGreyscaleColor(SW_RGBA(0, 0, 0, 255)), static_cast<quint32>(SW_RGBA(0, 0, 0, 255)));
+}
+
+// saved step views read back unmirrored
+void swTests::StepViewAnglesRoundTrip()
+{
+	const swVector3 AnglesList[] = { swVector3(0.0f, 0.0f, 0.0f), swVector3(0.0f, 45.0f, 0.0f), swVector3(0.0f, -45.0f, 0.0f), swVector3(30.0f, 45.0f, 0.0f), swVector3(20.0f, 30.0f, 10.0f) };
+	const swStepViewMode Modes[] = { swStepViewMode::Absolute, swStepViewMode::Relative };
+
+	for (const swStepViewMode Mode : Modes)
+	{
+		for (const swVector3& Angles : AnglesList)
+		{
+			swVector3 Direction, Up;
+			swGetStepViewCamera(Mode, Angles, Direction, Up);
+			const swVector3 ReadBack = swGetStepViewAngles(Mode, Direction, Up);
+
+			QVERIFY2(swLength(ReadBack - Angles) < 0.05f, qPrintable(QString("mode %1 angles %2 %3 %4 read %5 %6 %7").arg(static_cast<int>(Mode)).arg(Angles.x).arg(Angles.y).arg(Angles.z).arg(ReadBack.x).arg(ReadBack.y).arg(ReadBack.z)));
+		}
+	}
+
+	// absolute zero looks at the front
+
+	swVector3 Direction, Up;
+	swGetStepViewCamera(swStepViewMode::Absolute, swVector3(0.0f, 0.0f, 0.0f), Direction, Up);
+	QVERIFY(swLength(Direction - swVector3(0.0f, -1.0f, 0.0f)) < 0.001f);
+
+	// relative zero is the home view
+
+	swGetStepViewCamera(swStepViewMode::Relative, swVector3(0.0f, 0.0f, 0.0f), Direction, Up);
+	QVERIFY(swLength(Direction - swNormalize(swVector3(375.0f, -375.0f, 187.5f))) < 0.001f);
 }

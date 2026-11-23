@@ -441,6 +441,20 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		ShowStepViewDialog();
 		break;
 
+	case SW_VIEW_STEP_VIEW_ADD:
+		if (ActiveModel && ActiveView)
+		{
+			swStepView StepView;
+			const swStepViewMode ComboModes[3] = { swStepViewMode::Absolute, swStepViewMode::Relative, swStepViewMode::End };
+
+			StepView.Mode = ComboModes[mStepViewModeCombo->currentIndex()];
+
+			if (StepView.Mode != swStepViewMode::End)
+				StepView.Angles = ActiveView->GetStepViewAngles(StepView.Mode);
+			ActiveModel->SetStepView(ActiveModel->GetCurrentStep(), StepView);
+		}
+		break;
+
 	case SW_VIEW_STEP_VIEW_REMOVE:
 		if (ActiveModel)
 			ActiveModel->SetStepView(ActiveModel->GetCurrentStep(), std::nullopt);

@@ -133,6 +133,7 @@ void swPreferencesDialog::CreateInstructionsTab()
 
 	mInstructionsGridDivisions = new swRangeSpinBox(GridGroup);
 	mInstructionsGridDivisions->setRange(1, SW_GRID_DIVISIONS_MAXIMUM);
+	mInstructionsGridDivisions->SetReference();
 	mInstructionsGridDivisions->setPrefix(QLatin1String("1/"));
 	mInstructionsGridDivisions->setValue(Instructions.GridDivisions);
 	mInstructionsGridDivisions->setToolTip(tr("Split each grid unit into fractions drawn in the Page Grid Secondary Lines color, dragged elements snap to the fractions."));

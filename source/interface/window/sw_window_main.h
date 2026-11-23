@@ -339,6 +339,7 @@ public:
 
 signals:
 	void ModelContentsChanged();
+	void ViewOrientationChanged();
 
 public:
 	void ShowHTMLDialog(QWidget* Parent = nullptr);
@@ -496,6 +497,7 @@ protected:
 	QToolButton* mColorButton = nullptr;
 	swPropertiesWidget* mPropertiesWidget = nullptr;
 	swStepsWidget* mStepsWidget = nullptr;
+	QComboBox* mStepViewModeCombo = nullptr;
 	swDoubleSpinBox* mTransformXEdit = nullptr;
 	swDoubleSpinBox* mTransformYEdit = nullptr;
 	swDoubleSpinBox* mTransformZEdit = nullptr;

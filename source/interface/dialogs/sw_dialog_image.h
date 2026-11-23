@@ -5,6 +5,7 @@
 class swModel;
 class swRangeSpinBox;
 class swRangeDoubleSpinBox;
+class swSpinBoxUnitLabel;
 class swImagePreviewWidget;
 
 class swImageDialog : public QDialog
@@ -89,6 +90,7 @@ protected:
 	swRangeSpinBox* mAngleEndSpinBox = nullptr;
 	QComboBox* mNextStepComboBox = nullptr;
 	swRangeDoubleSpinBox* mNextStepSpinBox = nullptr;
+	swSpinBoxUnitLabel* mNextStepUnitLabel = nullptr;
 	swRangeSpinBox* mTurnsSpinBox = nullptr;
 	swRangeSpinBox* mFramesSpinBox = nullptr;
 	swRangeDoubleSpinBox* mFrameRateSpinBox = nullptr;

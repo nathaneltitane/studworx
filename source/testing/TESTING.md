@@ -31,6 +31,8 @@ named after the model, with a styled `index.html` as its entry page that holds
 the first instructions page image and a `step-1` anchor, and with a Landscape
 Display the page image must be saved at twice the size `index.html` shows it. A style sheet in the profile must replace the built-in one, the built-in one must name the feature of each block in a comment set apart by blank lines,
 and a step model box Corner Radius must round the page cards.
+`--export-pdf` without a file name must save a PDF beside the model holding
+one sheet per instructions page.
 `--flatten` must replace a submodel inside a moved and turned submodel with its
 parts at their world positions, with color 16 parts taking the color of the submodel above,
 and `--undo` must then bring back the original main model.
@@ -49,6 +51,9 @@ The grid extent test grows the base grid in studs and the height grids in plates
 around parts above and below the floor, and checks that the margins apply only
 away from the origin, that a zero margin hugs the parts and that infinite bounds
 leave the grid alone.
+A step view test turns the camera to absolute and relative angles and reads
+them back, so a saved step view never comes back mirrored, and checks that
+absolute zero looks at the front and relative zero is the home view.
 A profile test writes settings inside a batch, in a temporary settings folder,
 and checks that they read back at once, that a nested batch and a removed key
 behave, and that the file is written only when the batch ends. A first start

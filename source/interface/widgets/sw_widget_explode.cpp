@@ -13,8 +13,9 @@ swExplodeWidget::swExplodeWidget(QWidget* Parent)
 	connect(ui->uniform, &QCheckBox::toggled, this, &swExplodeWidget::UpdateUniform);
 	connect(ui->uniformAxis, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &swExplodeWidget::UpdateUniform);
 
-	for (QDoubleSpinBox* Spread : { ui->spreadX, ui->spreadY, ui->spreadZ })
+	for (swRangeDoubleSpinBox* Spread : { ui->spreadX, ui->spreadY, ui->spreadZ })
 	{
+		Spread->SetReference();
 		connect(Spread, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &swExplodeWidget::UpdateUniform);
 		connect(Spread, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &swExplodeWidget::SettingsChanged);
 	}

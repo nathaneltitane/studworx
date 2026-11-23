@@ -350,6 +350,7 @@ void swMainWindow::CreateMenus()
 	mViewpointMenu->addAction(mActions[SW_VIEW_VIEWPOINT_HOME]);
 	mViewpointMenu->addSeparator();
 	mViewpointMenu->addAction(mActions[SW_VIEW_STEP_VIEW_EDIT]);
+	mViewpointMenu->addAction(mActions[SW_VIEW_STEP_VIEW_ADD]);
 	mViewpointMenu->addAction(mActions[SW_VIEW_STEP_VIEW_TOGGLE_FOLLOW]);
 	mCutawayMenu = new QMenu(tr("&Cutaway"), this);
 	mCutawayMenu->setObjectName("Cutaway");
@@ -1092,7 +1093,7 @@ void swMainWindow::CreateToolBars()
 
 	mStepsToolBar = new QDockWidget(tr("Steps"), this);
 	mStepsToolBar->setObjectName("StepsToolbar");
-	mStepsToolBar->setWhatsThis(tr("<p><b>Steps</b></p><p>Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.</p>"));
+	mStepsToolBar->setWhatsThis(tr("<p><b>Steps</b></p><p>Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands. Turn the model with the view cube and press Add Step View to save that view in the current step.</p>"));
 	swSetupWidgetHelp(mStepsToolBar);
 	mStepsToolBar->setAcceptDrops(true);
 
@@ -1102,6 +1103,22 @@ void swMainWindow::CreateToolBars()
 	QWidget* StepsPanel = new QWidget(mStepsToolBar);
 	QVBoxLayout* StepsLayout = new QVBoxLayout(StepsPanel);
 	StepsLayout->addWidget(mStepsWidget);
+
+	// save the turned view
+
+	QHBoxLayout* StepViewLayout = new QHBoxLayout();
+
+	mStepViewModeCombo = new QComboBox(StepsPanel);
+	mStepViewModeCombo->addItems({ tr("Absolute"), tr("Relative"), tr("Default") });
+	mStepViewModeCombo->setToolTip(tr("How Add Step View saves the view: absolute angles from the world zero (the front view), relative angles from the home view, or default to go back to the home view for this and the next steps."));
+	StepViewLayout->addWidget(mStepViewModeCombo);
+
+	QPushButton* StepViewButton = new QPushButton(tr("Add Step View"), StepsPanel);
+	StepViewButton->setToolTip(mActions[SW_VIEW_STEP_VIEW_ADD]->statusTip());
+	connect(StepViewButton, &QPushButton::clicked, mActions[SW_VIEW_STEP_VIEW_ADD], &QAction::trigger);
+	StepViewLayout->addWidget(StepViewButton, 1);
+
+	StepsLayout->addLayout(StepViewLayout);
 	StepsLayout->addWidget(mPropertiesWidget->GetStepRowsWidget());
 
 	mStepsToolBar->setWidget(StepsPanel);

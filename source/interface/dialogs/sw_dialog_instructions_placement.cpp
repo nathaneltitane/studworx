@@ -94,21 +94,9 @@ swInstructionsPlacementWidget::swInstructionsPlacementWidget(QWidget* Parent, sw
 
 	connect(mAnchorGroup, &QButtonGroup::idClicked, this, &swInstructionsPlacementWidget::AnchorClicked);
 
-	ButtonsLayout->addStretch(1);
+	// lock and reset follow the anchors
 
-	QWidget* ResetRow = swCreatePanelRow(CentralWidget);
-
-	mResetPositionButton = new QToolButton(ResetRow);
-	mResetPositionButton->setText(tr("Reset Position"));
-	mResetPositionButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
-	mResetPositionButton->setToolTip(tr("Move the dragged element back onto its placement."));
-	mResetPositionButton->setWhatsThis(mResetPositionButton->toolTip());
-	mResetPositionButton->setAccessibleName(mResetPositionButton->text());
-	swSetupPanelButton(mResetPositionButton);
-	mResetPositionButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-	static_cast<QHBoxLayout*>(ResetRow->layout())->addWidget(mResetPositionButton, 1);
-
-	mLockButton = new QToolButton(ResetRow);
+	mLockButton = new QToolButton(CentralWidget);
 	mLockButton->setText(tr("Lock Position"));
 	mLockButton->setCheckable(true);
 	mLockButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
@@ -117,7 +105,18 @@ swInstructionsPlacementWidget::swInstructionsPlacementWidget(QWidget* Parent, sw
 	mLockButton->setAccessibleName(mLockButton->text());
 	swSetupPanelButton(mLockButton);
 	mLockButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-	static_cast<QHBoxLayout*>(ResetRow->layout())->addWidget(mLockButton, 1);
+	ButtonsLayout->addWidget(mLockButton);
+
+	mResetPositionButton = new QToolButton(CentralWidget);
+	mResetPositionButton->setText(tr("Reset Position"));
+	mResetPositionButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
+	mResetPositionButton->setToolTip(tr("Move the dragged element back onto its placement."));
+	mResetPositionButton->setWhatsThis(mResetPositionButton->toolTip());
+	mResetPositionButton->setAccessibleName(mResetPositionButton->text());
+	swSetupPanelButton(mResetPositionButton);
+	mResetPositionButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+	ButtonsLayout->addWidget(mResetPositionButton);
+	ButtonsLayout->addStretch(1);
 
 	// the anchor sits in the grid middle
 	mGridWidget = new QWidget(CentralWidget);
@@ -141,7 +140,7 @@ swInstructionsPlacementWidget::swInstructionsPlacementWidget(QWidget* Parent, sw
 		Button->setWhatsThis(Button->toolTip());
 		Button->setAccessibleName(Name);
 		swSetupPanelButton(Button);
-		GridLayout->addWidget(Button, Placement / SW_PLACEMENT_GRID_SIZE, Placement % SW_PLACEMENT_GRID_SIZE);
+		GridLayout->addWidget(Button, Placement / SW_PLACEMENT_GRID_SIZE + 1, Placement % SW_PLACEMENT_GRID_SIZE + 1);
 		mPlacementButtons[Placement] = Button;
 
 		connect(Button, &QToolButton::clicked, this, [this, Placement]()
@@ -150,13 +149,54 @@ swInstructionsPlacementWidget::swInstructionsPlacementWidget(QWidget* Parent, sw
 		});
 	}
 
-	// match the reset and lock widths
-	PlacementLayout->setSpacing(ResetRow->layout()->spacing());
-	mLockButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-	mLockButton->setFixedWidth(mGridWidget->sizeHint().width());
-	static_cast<QHBoxLayout*>(ResetRow->layout())->setStretch(1, 0);
+	// arrows ring the grid and nudge
+	struct swNudgeButton
+	{
+		int DirectionX;
+		int DirectionY;
+		QString Arrow;
+		const char* Name;
+	};
 
-	Layout->addWidget(ResetRow);
+	const swNudgeButton NudgeButtons[8] =
+	{
+		{ -1, -1, QStringLiteral("\u2196"), QT_TR_NOOP("Up Left") },
+		{ 0, -1, QStringLiteral("\u2191"), QT_TR_NOOP("Up") },
+		{ 1, -1, QStringLiteral("\u2197"), QT_TR_NOOP("Up Right") },
+		{ -1, 0, QStringLiteral("\u2190"), QT_TR_NOOP("Left") },
+		{ 1, 0, QStringLiteral("\u2192"), QT_TR_NOOP("Right") },
+		{ -1, 1, QStringLiteral("\u2199"), QT_TR_NOOP("Down Left") },
+		{ 0, 1, QStringLiteral("\u2193"), QT_TR_NOOP("Down") },
+		{ 1, 1, QStringLiteral("\u2198"), QT_TR_NOOP("Down Right") }
+	};
+
+	const int NudgeEdge = SW_PLACEMENT_GRID_SIZE + 1;
+
+	for (int Index = 0; Index < 8; Index++)
+	{
+		const swNudgeButton& Nudge = NudgeButtons[Index];
+		const QString Name = tr(Nudge.Name);
+
+		QToolButton* Button = new QToolButton(mGridWidget);
+		Button->setText(Nudge.Arrow);
+		Button->setAutoRepeat(true);
+		Button->setToolTip(tr("Move the selection %1 by one grid division, Shift moves a whole grid unit, past the paper edge if needed.").arg(Name.toLower()));
+		Button->setWhatsThis(Button->toolTip());
+		Button->setAccessibleName(tr("Move %1").arg(Name));
+		swSetupPanelButton(Button);
+		GridLayout->addWidget(Button, (Nudge.DirectionY + 1) * NudgeEdge / 2, (Nudge.DirectionX + 1) * NudgeEdge / 2);
+		mNudgeButtons[Index] = Button;
+
+		const int DirectionX = Nudge.DirectionX;
+		const int DirectionY = Nudge.DirectionY;
+
+		connect(Button, &QToolButton::clicked, this, [this, DirectionX, DirectionY]()
+		{
+			emit NudgeSelection(DirectionX, DirectionY, QApplication::keyboardModifiers() & Qt::ShiftModifier);
+		});
+	}
+
+	PlacementLayout->setSpacing(ButtonsLayout->spacing());
 
 	connect(mResetPositionButton, &QToolButton::clicked, this, &swInstructionsPlacementWidget::ResetPositionClicked);
 	connect(mLockButton, &QToolButton::toggled, this, &swInstructionsPlacementWidget::LockClicked);
@@ -390,6 +430,9 @@ void swInstructionsPlacementWidget::UpdateWidget()
 {
 	UpdateControls();
 
+	for (QToolButton* Button : mNudgeButtons)
+		Button->setEnabled(mSelectionCount > 0);
+
 	// locked pages keep every position
 	if (mPageIndex < 0 || !mInstructions->IsPageLocked(static_cast<size_t>(mPageIndex)))
 		return;
@@ -400,6 +443,9 @@ void swInstructionsPlacementWidget::UpdateWidget()
 		Button->setEnabled(false);
 
 	for (QToolButton* Button : mPlacementButtons)
+		Button->setEnabled(false);
+
+	for (QToolButton* Button : mNudgeButtons)
 		Button->setEnabled(false);
 
 	QSignalBlocker Blocker(mLockButton);
@@ -655,6 +701,7 @@ swInstructionsGridWidget::swInstructionsGridWidget(QWidget* Parent, swInstructio
 
 	mGridDivisionsSpinBox = new swRangeSpinBox(GridDivisionsRow);
 	mGridDivisionsSpinBox->setRange(1, SW_GRID_DIVISIONS_MAXIMUM);
+	mGridDivisionsSpinBox->SetReference();
 	mGridDivisionsSpinBox->setPrefix(QLatin1String("1/"));
 	mGridDivisionsSpinBox->setToolTip(tr("Split each grid unit into fractions drawn with the secondary color, dragged elements snap to the fractions."));
 	mGridDivisionsSpinBox->setWhatsThis(mGridDivisionsSpinBox->toolTip());

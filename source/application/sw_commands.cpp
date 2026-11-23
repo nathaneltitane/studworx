@@ -1811,6 +1811,15 @@ const swCommand gCommands[] =
 		""
 	},
 
+	// SW_VIEW_STEP_VIEW_ADD
+	{
+		QT_TRANSLATE_NOOP("Action", "View.StepView.Add"),
+		QT_TRANSLATE_NOOP("Menu", "Add Step View"),
+		QT_TRANSLATE_NOOP("Status", "Save the current view as the view of the current step"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Add Step View</b></p><p>Turn the model with the view cube, then save that view in the current step, written as an MLCad ROTSTEP line.</p>"),
+		""
+	},
+
 	// SW_VIEW_STEP_VIEW_REMOVE
 	{
 		QT_TRANSLATE_NOOP("Action", "View.StepView.Remove"),

@@ -22,6 +22,132 @@ inline void swSnapBorderRect(const QTransform& Transform, QRectF& Rect, qreal& B
 		BorderWidth = qMax<qreal>(qRound(BorderWidth * Scale), 1.0) / Scale;
 }
 
+// A step divider snapped like box borders.
+class swInstructionsDividerItem : public QGraphicsRectItem
+{
+public:
+	swInstructionsDividerItem(const QRectF& Rect, bool Rounded, QGraphicsItem* Parent)
+		: QGraphicsRectItem(Rect, Parent), mRounded(Rounded)
+	{
+	}
+
+	void paint(QPainter* Painter, const QStyleOptionGraphicsItem* Option, QWidget* Widget) override
+	{
+		Q_UNUSED(Option);
+		Q_UNUSED(Widget);
+
+		QRectF LineRect = rect();
+		const QTransform& Transform = Painter->worldTransform();
+
+		// whole pixel thickness at any zoom
+
+		if (!Transform.isRotating() && Transform.isInvertible())
+		{
+			const QRectF DeviceRect = Transform.mapRect(LineRect);
+			const bool Vertical = LineRect.width() < LineRect.height();
+			const qreal Thickness = qMax<qreal>(qRound(Vertical ? DeviceRect.width() : DeviceRect.height()), 1.0);
+			QRectF SnappedRect;
+
+			if (Vertical)
+				SnappedRect = QRectF(qRound(DeviceRect.center().x() - Thickness / 2.0), qRound(DeviceRect.top()), Thickness, qRound(DeviceRect.bottom()) - qRound(DeviceRect.top()));
+			else
+				SnappedRect = QRectF(qRound(DeviceRect.left()), qRound(DeviceRect.center().y() - Thickness / 2.0), qRound(DeviceRect.right()) - qRound(DeviceRect.left()), Thickness);
+
+			LineRect = Transform.inverted().mapRect(SnappedRect);
+		}
+
+		const qreal Radius = mRounded ? qMin(LineRect.width(), LineRect.height()) / 2.0 : 0.0;
+
+		Painter->save();
+		Painter->setRenderHint(QPainter::Antialiasing, true);
+		Painter->setPen(Qt::NoPen);
+		Painter->setBrush(brush());
+		Painter->drawRoundedRect(LineRect, Radius, Radius);
+		Painter->restore();
+	}
+
+protected:
+	bool mRounded = false;
+};
+
+// Fills inside the border, rounded.
+inline void swPaintBoxBackground(QPainter* Painter, const QRectF& BorderRect, const swInstructionsBoxStyle& BoxStyle)
+{
+	if (!BoxStyle.BackgroundColor.alpha())
+		return;
+
+	QPainterPath BackgroundPath;
+	BackgroundPath.addRoundedRect(BorderRect, BoxStyle.CornerRadius, BoxStyle.CornerRadius);
+
+	Painter->save();
+	Painter->setRenderHint(QPainter::Antialiasing, true);
+	Painter->fillPath(BackgroundPath, BoxStyle.BackgroundColor);
+	Painter->restore();
+}
+
+// Draws the border with equal sides at any zoom.
+inline void swPaintBoxBorder(QPainter* Painter, const QRectF& BorderRect, const swInstructionsBoxStyle& BoxStyle)
+{
+	if (BoxStyle.BorderWidth <= 0.0 || !BoxStyle.BorderColor.alpha())
+		return;
+
+	QRectF OuterRect = BorderRect;
+	qreal BorderWidth = BoxStyle.BorderWidth;
+	swSnapBorderRect(Painter->worldTransform(), OuterRect, BorderWidth);
+
+	// one stroke keeps corners as thick as sides
+	const qreal BorderHalf = BorderWidth / 2.0;
+	const QRectF LineRect = OuterRect.adjusted(BorderHalf, BorderHalf, -BorderHalf, -BorderHalf);
+	const qreal LineRadius = qMax(0.0, BoxStyle.CornerRadius - BorderHalf);
+	QPen BorderPen(BoxStyle.BorderColor, BorderWidth);
+	BorderPen.setJoinStyle(Qt::MiterJoin);
+
+	Painter->save();
+	Painter->setRenderHint(QPainter::Antialiasing, true);
+	Painter->setPen(BorderPen);
+	Painter->setBrush(Qt::NoBrush);
+	Painter->drawRoundedRect(LineRect, LineRadius, LineRadius);
+	Painter->restore();
+}
+
+// A box around an area, filled and framed.
+class swInstructionsFrameItem : public QGraphicsRectItem
+{
+public:
+	swInstructionsFrameItem(const QRectF& Rect, const swInstructionsBoxStyle& BoxStyle, QGraphicsItem* Parent)
+		: QGraphicsRectItem(Rect, Parent), mBoxStyle(BoxStyle)
+	{
+		setPen(Qt::NoPen);
+	}
+
+	void paint(QPainter* Painter, const QStyleOptionGraphicsItem* Option, QWidget* Widget) override
+	{
+		Q_UNUSED(Widget);
+
+		const qreal Margin = mBoxStyle.Margin;
+		const QRectF BorderRect = rect().adjusted(Margin, Margin, -Margin, -Margin);
+
+		swPaintBoxBackground(Painter, BorderRect, mBoxStyle);
+		swPaintBoxBorder(Painter, BorderRect, mBoxStyle);
+
+		if (!(Option->state & QStyle::State_Selected))
+			return;
+
+		// a highlight visible on light pages
+		QPen Pen(Option->palette.highlight(), 2.0, Qt::DashLine);
+		Pen.setCosmetic(true);
+
+		Painter->save();
+		Painter->setPen(Pen);
+		Painter->setBrush(Qt::NoBrush);
+		Painter->drawRect(rect());
+		Painter->restore();
+	}
+
+protected:
+	swInstructionsBoxStyle mBoxStyle;
+};
+
 // Pointers leave any boxed element.
 class swInstructionsBoxBase
 {
@@ -36,6 +162,11 @@ public:
 
 	// The margin, border and padding.
 	virtual const swInstructionsBoxStyle& GetBoxStyle() const = 0;
+
+	// A fixed outer size and the content alignment inside it.
+	virtual void SetBoxLayout(const QSizeF& BoxSize, int Alignment, int VerticalAlignment) = 0;
+	virtual void SetBoxSize(const QSizeF& BoxSize) = 0;
+	virtual QSizeF GetBoxSize() const = 0;
 };
 
 // The box around page elements.
@@ -59,10 +190,50 @@ public:
 		return mBoxStyle;
 	}
 
-	// The content fills its own background.
-	void SetContentBackground(bool ContentBackground)
+	void SetBoxLayout(const QSizeF& BoxSize, int Alignment, int VerticalAlignment) override
 	{
-		mContentBackground = ContentBackground;
+		T::prepareGeometryChange();
+		mBoxSize = BoxSize;
+		mAlignment = qBound(0, Alignment, 2);
+		mVerticalAlignment = qBound(0, VerticalAlignment, 2);
+
+		// text lines follow the alignment
+		if constexpr (std::is_base_of_v<QGraphicsTextItem, T>)
+		{
+			QTextOption TextOption = T::document()->defaultTextOption();
+			TextOption.setAlignment(mAlignment == 1 ? Qt::AlignHCenter : mAlignment == 2 ? Qt::AlignRight : Qt::AlignLeft);
+			T::document()->setDefaultTextOption(TextOption);
+
+			if (mBoxSize.isValid())
+				T::setTextWidth(qMax(1.0, mBoxSize.width() - 2.0 * mBoxStyle.GetInset()));
+			else if (T::textWidth() < 0.0)
+				T::setTextWidth(T::document()->idealWidth());
+		}
+	}
+
+	void SetBoxSize(const QSizeF& BoxSize) override
+	{
+		SetBoxLayout(BoxSize, mAlignment, mVerticalAlignment);
+	}
+
+	QSizeF GetBoxSize() const override
+	{
+		return mBoxSize;
+	}
+
+	// Content corner inside the box.
+	QPointF GetContentOffset() const
+	{
+		const qreal Inset = mBoxStyle.GetInset();
+
+		if (!mBoxSize.isValid())
+			return QPointF(Inset, Inset);
+
+		const QSizeF ContentSize = T::boundingRect().size();
+		const qreal FreeWidth = qMax(0.0, mBoxSize.width() - 2.0 * Inset - ContentSize.width());
+		const qreal FreeHeight = qMax(0.0, mBoxSize.height() - 2.0 * Inset - ContentSize.height());
+
+		return QPointF(Inset + FreeWidth * mAlignment / 2.0, Inset + FreeHeight * mVerticalAlignment / 2.0);
 	}
 
 	QRectF GetBorderRect() const override
@@ -81,6 +252,9 @@ public:
 	{
 		const QRectF ContentRect = T::boundingRect();
 
+		if (mBoxSize.isValid())
+			return QRectF(QPointF(0.0, 0.0), mBoxSize);
+
 		if (ContentRect.isEmpty())
 			return ContentRect;
 
@@ -89,77 +263,75 @@ public:
 		return ContentRect.adjusted(0.0, 0.0, 2.0 * Inset, 2.0 * Inset);
 	}
 
+	// only drawn parts take clicks, selected items their frame
+
 	QPainterPath shape() const override
 	{
 		QPainterPath Path;
-		Path.addRect(boundingRect());
+
+		if (T::isSelected())
+			Path.addRect(boundingRect());
+		else
+		{
+			UpdateHitMask();
+			Path.addRegion(mHitRegion);
+			Path.translate(boundingRect().topLeft());
+		}
 
 		return Path;
 	}
 
 	bool contains(const QPointF& Point) const override
 	{
-		return boundingRect().contains(Point);
+		if (T::isSelected())
+			return boundingRect().contains(Point);
+
+		UpdateHitMask();
+
+		const QRectF BoxRect = boundingRect();
+		const QPoint Pixel = (Point - BoxRect.topLeft()).toPoint();
+
+		return mHitRegion.intersects(QRect(Pixel - QPoint(2, 2), QSize(5, 5)));
 	}
 
 	void paint(QPainter* Painter, const QStyleOptionGraphicsItem* Option, QWidget* Widget) override
 	{
 		const QRectF BoxRect = boundingRect();
 
+		// a repaint renews the hit mask
+
+		if (!mHitUpdating)
+			mHitValid = false;
+
 		if (BoxRect.isEmpty())
 			return;
 
-		const qreal Inset = mBoxStyle.GetInset();
-
-		if (mBoxStyle.BackgroundColor.alpha())
-		{
-			// corners stay round around the border, the margin included
-			const qreal BackgroundRadius = mBoxStyle.GetBackgroundRadius();
-			const qreal ContentRadius = qMax(0.0, BackgroundRadius - Inset);
-			QPainterPath BackgroundPath;
-			BackgroundPath.addRoundedRect(BoxRect, BackgroundRadius, BackgroundRadius);
-
-			if (mContentBackground)
-			{
-				BackgroundPath.setFillRule(Qt::OddEvenFill);
-				BackgroundPath.addRoundedRect(T::boundingRect().translated(Inset, Inset), ContentRadius, ContentRadius);
-			}
-
-			Painter->save();
-			Painter->setRenderHint(QPainter::Antialiasing, mBoxStyle.CornerRadius > 0.0);
-			Painter->fillPath(BackgroundPath, mBoxStyle.BackgroundColor);
-			Painter->restore();
-		}
+		// background fills inside the border
+		swPaintBoxBackground(Painter, GetBorderRect(), mBoxStyle);
 
 		// Content inside the padding.
 		QStyleOptionGraphicsItem ContentOption(*Option);
 		ContentOption.state &= ~(QStyle::State_Selected | QStyle::State_HasFocus);
 
 		Painter->save();
-		Painter->translate(Inset, Inset);
+
+		// rounded boxes trim their fill
+
+		if (mClipContent && mBoxStyle.CornerRadius > 0.0)
+		{
+			const qreal Border = GetBorderWidth();
+			const QRectF InnerRect = GetBorderRect().adjusted(Border, Border, -Border, -Border);
+			const qreal InnerRadius = qMax(0.0, mBoxStyle.CornerRadius - Border);
+			QPainterPath ClipPath;
+			ClipPath.addRoundedRect(InnerRect, InnerRadius, InnerRadius);
+			Painter->setClipPath(ClipPath, Qt::IntersectClip);
+		}
+
+		Painter->translate(GetContentOffset());
 		T::paint(Painter, &ContentOption, Widget);
 		Painter->restore();
 
-		if (mBoxStyle.BorderWidth > 0.0 && mBoxStyle.BorderColor.alpha())
-		{
-			// Equal border sides at any zoom.
-			QRectF OuterRect = GetBorderRect();
-			qreal BorderWidth = mBoxStyle.BorderWidth;
-			swSnapBorderRect(Painter->worldTransform(), OuterRect, BorderWidth);
-
-			const QRectF InnerRect = OuterRect.adjusted(BorderWidth, BorderWidth, -BorderWidth, -BorderWidth);
-			QPainterPath BorderPath;
-			BorderPath.setFillRule(Qt::OddEvenFill);
-			BorderPath.addRoundedRect(OuterRect, mBoxStyle.CornerRadius, mBoxStyle.CornerRadius);
-
-			if (InnerRect.isValid())
-				BorderPath.addRoundedRect(InnerRect, qMax(0.0, mBoxStyle.CornerRadius - BorderWidth), qMax(0.0, mBoxStyle.CornerRadius - BorderWidth));
-
-			Painter->save();
-			Painter->setRenderHint(QPainter::Antialiasing, true);
-			Painter->fillPath(BorderPath, mBoxStyle.BorderColor);
-			Painter->restore();
-		}
+		swPaintBoxBorder(Painter, GetBorderRect(), mBoxStyle);
 
 		if (!(Option->state & QStyle::State_Selected))
 			return;
@@ -173,12 +345,59 @@ public:
 		Painter->setPen(Pen);
 		Painter->setBrush(Qt::NoBrush);
 		Painter->drawRect(BoxRect);
+
+		// handles drag the width and height
+		if (mBoxSize.isValid())
+		{
+			const qreal HandleSize = 8.0 / qMax(0.001, Painter->worldTransform().m11());
+			const QPointF Handles[8] = { BoxRect.topLeft(), QPointF(BoxRect.center().x(), BoxRect.top()), BoxRect.topRight(), QPointF(BoxRect.right(), BoxRect.center().y()), BoxRect.bottomRight(), QPointF(BoxRect.center().x(), BoxRect.bottom()), BoxRect.bottomLeft(), QPointF(BoxRect.left(), BoxRect.center().y()) };
+
+			Painter->setPen(Qt::NoPen);
+			Painter->setBrush(Option->palette.highlight());
+
+			for (const QPointF& Handle : Handles)
+				Painter->drawRect(QRectF(Handle - QPointF(HandleSize / 2.0, HandleSize / 2.0), QSizeF(HandleSize, HandleSize)));
+		}
+
 		Painter->restore();
 	}
 
 protected:
 	swInstructionsBoxStyle mBoxStyle;
-	bool mContentBackground = false;
+	QSizeF mBoxSize;
+	bool mClipContent = false;
+
+	// the painted pixels in page units
+
+	void UpdateHitMask() const
+	{
+		if (mHitValid)
+			return;
+
+		const QRectF BoxRect = boundingRect();
+		QImage Mask(qMax(1, qCeil(BoxRect.width())), qMax(1, qCeil(BoxRect.height())), QImage::Format_ARGB32_Premultiplied);
+		Mask.fill(Qt::transparent);
+
+		if (!BoxRect.isEmpty())
+		{
+			QStyleOptionGraphicsItem Option;
+			Option.exposedRect = BoxRect;
+			QPainter Painter(&Mask);
+			Painter.translate(-BoxRect.topLeft());
+			mHitUpdating = true;
+			const_cast<swInstructionsBoxItem*>(this)->paint(&Painter, &Option, nullptr);
+			mHitUpdating = false;
+		}
+
+		mHitRegion = QRegion(QBitmap::fromImage(Mask.createAlphaMask()));
+		mHitValid = true;
+	}
+
+	mutable QRegion mHitRegion;
+	mutable bool mHitValid = false;
+	mutable bool mHitUpdating = false;
+	int mAlignment = 0;
+	int mVerticalAlignment = 1;
 };
 
 class swInstructionsStepImageItem : public swInstructionsBoxItem<QGraphicsPixmapItem>
@@ -456,6 +675,40 @@ public:
 
 	void UpdateGeometry();
 
+	// The tip drags to a new target.
+	bool IsTipAt(const QPointF& Position) const
+	{
+		return !mLocked && QLineF(Position, mTipPosition).length() <= qMax(mTipSize, 10.0);
+	}
+
+	// The base drags to another anchor of its element.
+	bool IsBaseAt(const QPointF& Position) const
+	{
+		return !mLocked && QLineF(Position, mBasePosition).length() <= 8.0;
+	}
+
+	// The Z middle and U outer segments drag sideways.
+	bool IsBendAt(const QPointF& Position) const;
+	bool IsBendHorizontal() const;
+	bool GetBendLine(bool& Horizontal, qreal& Coordinate) const;
+
+	void SetLocked(bool Locked)
+	{
+		mLocked = Locked;
+	}
+
+	// The element grid under a dragged tip.
+	bool GetSnapGrid(QRectF& Rect, QPointF& Fraction, bool& Snapped) const
+	{
+		if (!mDraggingTip || !mSnapItem)
+			return false;
+
+		Rect = mSnapRect;
+		Fraction = mSnapFraction;
+		Snapped = mSnapped;
+		return true;
+	}
+
 	QRectF boundingRect() const override;
 	QPainterPath shape() const override;
 	void paint(QPainter* Painter, const QStyleOptionGraphicsItem* Option, QWidget* Widget) override;
@@ -466,6 +719,20 @@ protected:
 	void mouseReleaseEvent(QGraphicsSceneMouseEvent* Event) override;
 	QPainterPath GetPath(const QRectF& SourceRect, qreal BorderWidth) const;
 	QPainterPath GetWedgePath(const QRectF& SourceRect, qreal BorderWidth) const;
+	QPolygonF GetLeadPoints(const QPointF& Base) const
+	{
+		return GetLeadPoints(Base, mAnchor);
+	}
+
+	QPolygonF GetLeadPoints(const QPointF& Base, int Anchor) const;
+	int GetClearAnchor(const QRectF& SourceRect, int Preferred, const QPointF& Reference) const;
+	QPointF GetTipDirection() const;
+	bool IsLeadHorizontal(const QPointF& Base) const
+	{
+		return IsLeadHorizontal(Base, mAnchor);
+	}
+
+	bool IsLeadHorizontal(const QPointF& Base, int Anchor) const;
 	QPainterPath GetClipPath(const QRectF& SourceRect, qreal BorderWidth) const;
 
 	swInstructions* mInstructions = nullptr;
@@ -482,6 +749,17 @@ protected:
 	QRectF mSourceRect;
 	int mAnchor = 0;
 	qreal mSourceBorderWidth = 0.0;
+	qreal mSourceRadius = 0.0;
+	bool mLocked = false;
+	bool mDraggingBend = false;
+	bool mDraggingBase = false;
+	qreal mBend = 0.5;
+	qreal mReach = -1.0;
+	qreal mBendRadius = 0.0;
+	const QGraphicsItem* mSnapItem = nullptr;
+	QRectF mSnapRect;
+	QPointF mSnapFraction;
+	bool mSnapped = false;
 	bool mDraggingTip = false;
 };
 
@@ -532,6 +810,8 @@ protected:
 	void SelectElement(const swInstructionsElementKey& Key);
 	void AlignSelection(int Placement, bool LastSelection);
 	void PlaceElement(int Placement);
+	void NudgeSelection(int DirectionX, int DirectionY, bool FullUnit);
+	void keyPressEvent(QKeyEvent* Event) override;
 	void resizeEvent(QResizeEvent* Event) override;
 	void mousePressEvent(QMouseEvent* Event) override;
 	void mouseReleaseEvent(QMouseEvent* Event) override;
@@ -542,6 +822,8 @@ protected:
 	bool viewportEvent(QEvent* Event) override;
 	void DrawGrid(QPainter* Painter, const QRectF& Rect);
 	void DrawElementBoxes(QPainter* Painter);
+	void DrawPointerGrid(QPainter* Painter);
+	int FindResizeHandle(const QPoint& Position, QGraphicsItem** HandleItem) const;
 	void UpdateRulers();
 	void FitPage();
 
@@ -555,6 +837,14 @@ protected:
 	swInstructionsPlacementWidget* mPlacementWidget;
 	const swInstructionsPage* mPage = nullptr;
 	std::vector<std::pair<QGraphicsItem*, QPointF>> mDragItems;
+	QGraphicsItem* mResizeItem = nullptr;
+	int mResizeHandle = 0;
+	QPointF mResizeStartPosition;
+	QRectF mResizeStartRect;
+	QPoint mPressPosition;
+	bool mDragStarted = false;
+	bool mFitPending = false;
+	bool mSelectionPending = false;
 	std::optional<swInstructionsElementKey> mPendingSelection;
 	std::vector<swInstructionsElementKey> mSelectionOrder;
 	bool mRebuildingPage = false;
@@ -584,6 +874,16 @@ constexpr int SW_PLACEMENT_POSITION_DATA = 0;
 
 // the band a background item draws
 constexpr int SW_BAND_DATA = 1;
+
+// the page object a plain item draws
+constexpr int SW_OBJECT_DATA = 2;
+
+enum class swInstructionsPageObject : int
+{
+	Divider,
+	StepArea,
+	FinalModel
+};
 
 // Identifies a page element.
 bool swGetElementKey(const QGraphicsItem* Item, swInstructionsElementKey& Key);

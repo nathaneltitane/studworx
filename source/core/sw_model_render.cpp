@@ -22,6 +22,7 @@
 #include "sw_window_utilities.h"
 #include "sw_lxf.h"
 #include "sw_widget_preview.h"
+#include "sw_instructions.h"
 #include "sw_string.h"
 #include "sw_file_gif.h"
 #include <locale.h>
@@ -192,7 +193,7 @@ swResult<QImage> swModel::RenderStepImageWithReadyAssets(bool Zoom, int Width, i
 	return Image;
 }
 
-swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnailSize, swStep Step, quint32 BackgroundColor, quint32 ThumbnailBackgroundColor, QFont Font, QColor TextColor, bool KeepMissingParts, bool ShowCounts, swPartsListSort Sort, swPartsListLayout Layout, swPartsListAlignment Alignment, int MaxHeight, float Scale, bool ShowPartIds, int CountPlacement, std::vector<QRect>* CountRects) const
+swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnailSize, swStep Step, quint32 BackgroundColor, quint32 ThumbnailBackgroundColor, QFont Font, QColor TextColor, bool KeepMissingParts, bool ShowCounts, swPartsListSort Sort, swPartsListLayout Layout, swPartsListAlignment Alignment, int MaxHeight, float Scale, bool ShowPartIds, int CountPlacement, std::vector<QRect>* CountRects, const swInstructionsBoxStyle* CountBox, qreal Bleed) const
 {
 	// scale every pixel size
 	auto Scaled = [Scale](int Size)
@@ -200,9 +201,10 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 		return qRound(Size * Scale);
 	};
 
-	// wrap inside the image padding
-	MaxWidth = qMax(Scaled(MaxWidth) - Scaled(40), Scaled(16));
-	MaxHeight = MaxHeight < INT_MAX / 8 ? qMax(Scaled(MaxHeight) - Scaled(40), Scaled(16)) : INT_MAX;
+	// wrap inside the image padding and the fill bleed
+	const int BleedSize = qRound(Bleed * Scale);
+	MaxWidth = qMax(Scaled(MaxWidth) - Scaled(40) - 2 * BleedSize, Scaled(16));
+	MaxHeight = MaxHeight < INT_MAX / 8 ? qMax(Scaled(MaxHeight) - Scaled(40) - 2 * BleedSize, Scaled(16)) : INT_MAX;
 
 	if (Font.pointSizeF() > 0.0)
 		Font.setPointSizeF(Font.pointSizeF() * Scale);
@@ -463,14 +465,18 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 	// count placement around the thumbnail, the 5x5 placement grid
 	const int CountRow = qBound(0, CountPlacement / 5, 4);
 	const int CountColumn = qBound(0, CountPlacement % 5, 4);
-	const int TextHeight = Ascent;
 	const int TextGap = Scaled(6);
+
+	// quantity box around the count text
+	const swInstructionsBoxStyle CountStyle = CountBox ? *CountBox : swInstructionsBoxStyle();
+	const int CountInset = ShowCounts ? qRound(CountStyle.GetInset() * Scale) : 0;
+	const int TextHeight = Ascent + 2 * CountInset;
 
 	// cell holds the thumbnail and its text
 	for (swPartsListImage& Image : Images)
 	{
 		Image.PartId = QFileInfo(QString::fromLatin1(Image.PartData->mFileName)).completeBaseName();
-		Image.TextWidth = qMax(ShowCounts ? FontMetrics.horizontalAdvance(QString::number(Image.Count) + 'x') : 0, ShowPartIds ? FontMetrics.horizontalAdvance(Image.PartId) : 0);
+		Image.TextWidth = qMax(ShowCounts ? FontMetrics.horizontalAdvance(QString::number(Image.Count) + 'x') + 2 * CountInset : 0, ShowPartIds ? FontMetrics.horizontalAdvance(Image.PartId) : 0);
 
 		const int Width = Image.Bounds.width();
 		const int Height = Image.Bounds.height();
@@ -616,7 +622,7 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 		}
 	}
 
-	QImage PainterImage(ImageWidth + Scaled(40), CurrentHeight + Scaled(40), QImage::Format_ARGB32);
+	QImage PainterImage(ImageWidth + Scaled(40) + 2 * BleedSize, CurrentHeight + Scaled(40) + 2 * BleedSize, QImage::Format_ARGB32);
 
 	if (PainterImage.isNull())
 		return swUnexpected(tr("Could not allocate the parts list image."));
@@ -624,10 +630,16 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 	PainterImage.fill(swQColorFromRGBA(BackgroundColor));
 
 	QPainter Painter(&PainterImage);
+
+	// one shared fill behind all parts
+
+	if (qAlpha(ThumbnailBackgroundColor))
+		Painter.fillRect(PainterImage.rect(), swQColorFromRGBA(ThumbnailBackgroundColor));
+
 	Painter.setFont(Font);
 	Painter.setPen(TextColor);
 
-	const QPoint Padding(Scaled(20), Scaled(20));
+	const QPoint Padding(Scaled(20) + BleedSize, Scaled(20) + BleedSize);
 
 	if (CountRects)
 		CountRects->clear();
@@ -650,29 +662,55 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 			return TextPosition.x();
 		};
 
-		// keep the background inside the spacing
-		if (qAlpha(ThumbnailBackgroundColor))
-		{
-			const QRect ThumbnailRect(Position, Image.Bounds.size());
-			const QRect CellRect = LineCount ? ThumbnailRect.united(QRect(TextPosition, QSize(Image.TextWidth, TextHeight))) : ThumbnailRect;
-			Painter.fillRect(CellRect.adjusted(-Scaled(6), -Scaled(6), Scaled(6), Scaled(6)), swQColorFromRGBA(ThumbnailBackgroundColor));
-		}
-
 		Painter.drawImage(Position, Image.Thumbnail, Image.Bounds);
 
 		// count first, id on the last line
 		if (ShowCounts)
 		{
 			const int CountWidth = FontMetrics.horizontalAdvance(Text);
-			const int CountX = GetTextX(CountWidth);
-			Painter.drawText(QPoint(CountX, TextPosition.y() + FontMetrics.ascent()), Text);
+			const QRect BoxRect(GetTextX(CountWidth + 2 * CountInset), TextPosition.y(), CountWidth + 2 * CountInset, FontMetrics.height() + 2 * CountInset);
+
+			// background fills inside the border
+
+			if (CountStyle.BackgroundColor.alpha())
+			{
+				const qreal FillMargin = CountStyle.Margin * Scale;
+				const qreal Radius = CountStyle.CornerRadius * Scale;
+				QPainterPath BackgroundPath;
+				BackgroundPath.addRoundedRect(QRectF(BoxRect).adjusted(FillMargin, FillMargin, -FillMargin, -FillMargin), Radius, Radius);
+
+				Painter.setRenderHint(QPainter::Antialiasing, true);
+				Painter.fillPath(BackgroundPath, CountStyle.BackgroundColor);
+			}
+
+			const qreal BorderWidth = CountStyle.BorderWidth * Scale;
+
+			if (BorderWidth > 0.0 && CountStyle.BorderColor.alpha())
+			{
+				// one stroke inside the margin
+
+				const qreal Margin = CountStyle.Margin * Scale;
+				const qreal Half = BorderWidth / 2.0;
+				const QRectF LineRect = QRectF(BoxRect).adjusted(Margin + Half, Margin + Half, -Margin - Half, -Margin - Half);
+				const qreal LineRadius = qMax(0.0, CountStyle.CornerRadius * Scale - Half);
+				QPen BorderPen(CountStyle.BorderColor, BorderWidth);
+				BorderPen.setJoinStyle(Qt::MiterJoin);
+
+				Painter.setRenderHint(QPainter::Antialiasing, true);
+				Painter.setPen(BorderPen);
+				Painter.setBrush(Qt::NoBrush);
+				Painter.drawRoundedRect(LineRect, LineRadius, LineRadius);
+				Painter.setPen(TextColor);
+			}
+
+			Painter.drawText(QPoint(BoxRect.x() + CountInset, BoxRect.y() + CountInset + FontMetrics.ascent()), Text);
 
 			if (CountRects)
-				CountRects->push_back(QRect(CountX, TextPosition.y(), CountWidth, FontMetrics.height()));
+				CountRects->push_back(BoxRect);
 		}
 
 		if (ShowPartIds)
-			Painter.drawText(QPoint(GetTextX(FontMetrics.horizontalAdvance(Image.PartId)), TextPosition.y() + FontMetrics.ascent() + ShowCounts * FontMetrics.lineSpacing()), Image.PartId);
+			Painter.drawText(QPoint(GetTextX(FontMetrics.horizontalAdvance(Image.PartId)), TextPosition.y() + FontMetrics.ascent() + ShowCounts * (FontMetrics.lineSpacing() + 2 * CountInset)), Image.PartId);
 	}
 
 	Painter.end();

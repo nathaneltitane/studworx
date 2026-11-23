@@ -11,6 +11,7 @@ struct swJointRing;
 struct swInsertPartInformation;
 enum class swCameraProjection;
 enum class swImageBackground;
+enum class swStepViewMode;
 
 enum class swDragState
 {
@@ -351,7 +352,7 @@ public:
 	void SetViewpoint(const swVector3& Position, const swVector3& Target, const swVector3& Up);
 	void ApplyStepView();
 	void ApplyStepView(swStep Step);
-	swVector3 GetStepViewAngles() const;
+	swVector3 GetStepViewAngles(swStepViewMode Mode) const;
 	void SetCameraAngles(float Latitude, float Longitude);
 	void SetCamera(swCamera* Camera, bool ForceCopy);
 	void SetCamera(const QString& CameraName);

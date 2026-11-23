@@ -87,6 +87,7 @@ studworx model.ldr opens a model. The options below work without opening a windo
 | --undo | Undo every command line edit and save the model, to check that undo restores it |
 | --export-wavefront, --export-3ds, --export-collada, --export-kmz, --export-csv, --export-bricklink, --export-html, --export-povray | Export Wavefront, 3D Studio, COLLADA, KMZ, CSV, BrickLink, HTML and POV-Ray files, each with an optional file name |
 | --kmz-geometry | Keep every part or only the visible surfaces in KMZ exports |
+| --export-pdf | Print the instruction pages to a PDF file, with an optional file name |
 | --render-povray | Render with POV-Ray, with an optional file name |
 | --import-settings, --export-settings | Settings as an ini file |
 | --import-keyboard-shortcuts, --export-keyboard-shortcuts, --import-mouse-shortcuts, --export-mouse-shortcuts | Keyboard and mouse shortcuts |
@@ -342,7 +343,8 @@ Every part belongs to a building step. Steps drive the model view, the instructi
 - **Steps menu.** Move through the building steps, add or delete steps, and play them back like an animation.
 - **Steps panel.** Shows the step each part is added in and removed in. An empty removal step reads Never. Drag parts between steps or reorder them, and Set Current Step from a step's right-click menu.
 - **Move and paste.** Move the selected parts to an earlier or later step, add steps from the Steps panel, and paste parts together with their steps.
-- **Step views.** Steps can turn the model to their own view angle, like the ROTSTEP command of MLCad, and the Steps panel shows and edits them.
+- **Step views.** Steps can turn the model to their own view angle, like the ROTSTEP command of MLCad, and the Steps panel shows and edits them. Absolute angles start from the world zero, the front view, relative angles from the home view, and Default goes back to the home view.
+- **Add Step View.** Turn the model with the view cube, pick Absolute, Relative or Default beside the button, and Add Step View saves that view in the current step. The next step gets a Default line so the view turns only its own step, unless End Step Views is off in Preferences.
 - **Keys in the Steps panel.** Each step with animation keys lists a Keys row per keyed object naming its keyed properties, and a double click on it selects that object at that step and shows the Keyframes panel.
 - **Step view commands.** Give each step its own view angle, so the model turns to show that step best as you go through them.
 - **Emphasis.** Make the build easier to follow: highlight the new parts of each step, fade the earlier ones, fade the rest of the model while you edit a submodel or set a joint, outline the submodel under the pointer, and mark the connection points of the part you point at, in a see-through color if you like, or not at all.
@@ -404,16 +406,18 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 
 - **Page setup.** Paper and screen presets, metric or imperial units, margins and orientation.
 - **Page bar.** Undo and redo changes, turn the instruction pages, jump to the front cover, the bill of materials or the back cover, type a page number, and insert or remove blank pages and empty steps.
-- **Pages.** Instructions get a front cover with the title and author, a list of every part, a back cover, and as many steps per page as you want, filled row by row or column by column, each page with its own background. Titles, notices and part counts take your own text or a text file. The finished model can fill the room left after the last step, with its own border and margin.
+- **Pages.** Instructions get a front cover with title and author, a parts list, a back cover and any number of steps per page, filled by row or column, each page with its own background, plus a finished model page. Titles, notices and part counts take your own text or a text file. The finished model can fill the room after the last step, with its own border and margin. Lock to Home View draws pages from the home view unless a step view turns it.
 - **Images and templates.** Put your own pictures, like a logo, on the front or back cover. Save the look of your instructions as a template and apply it to any model, or pick a default template that every model starts from. One typeface, one text size, or both can cover the whole document.
 - **Part counts.** The cover, the bill of materials and every step page can show how many parts they take, and each submodel can start with a picture of it finished and its part count.
 - **Style.** Choose the font, how steps are divided, with dividers that get their own margins and rounded ends, how big and how the model is drawn, and how the parts list looks and is sorted.
 - **Step images.** Parts new to each step are outlined, in the width and color you pick, and the earlier ones fade.
 - **Placement.** Drag every page element where you want it, or lock it in place. Elements snap to a page grid, or to the edges and centers of the page and the other elements. Cover texts, part counts and page numbers can also sit right against the paper edge. Click a parts list quantity or the preview count to place it around its picture.
-- **Elements.** Every page element, like page numbers or the parts list, can have its own colors, fonts, border, rounded corners and background. Notices and pointers draw attention to parts and steps.
+- **Pages panel.** Lists every page, named after its submodel, with the assembly pages marked.
+- **Moving elements.** A click only selects, an element moves once you drag it, the arrow keys nudge it one grid division at a time, and Reset Position puts it back.
+- **Elements.** Every page element, like page numbers or the parts list, can have its own colors, fonts, border, rounded corners and background. Texts line up left, centered or right and top, middle or bottom in a box you size. Notices and pointers draw attention to parts and steps, pointers drawn as a line, an L, Z or U shape with rounded bends, or a callout wedge.
 - **Rulers.** Rulers along the page measure it in your units, show the margins, and follow the pointer with a small arrow.
 - **Element inspector.** Like a web browser's inspector, it shows the space around and inside every page element, so you can line things up. It never prints.
-- **Editor, Export HTML and Print.** An Editor panel to read and edit the model file text, whose height snaps to whole lines so no line is ever cut off, Export HTML for the instruction pages, and a built-in Print panel.
+- **Editor, Export HTML and Print.** An Editor panel to read and edit the model file text, whose height snaps to whole lines so no line is ever cut off, Export HTML for the instruction pages, and a built-in Print panel that prints on paper or to a PDF file, also from the command line.
 
 [//]: # (gallery scroll)
 
@@ -460,6 +464,7 @@ Nine pages with lined up label and control columns, checkboxes included, each la
 - **General.** Where StudWorx finds the parts library, Blender, POV-Ray and LGEO, with one-click updates for colors, minifigure parts and the BrickLink mapping. Also your Rebrickable key and the author line written into new models.
 - **Startup and files.** What happens when StudWorx starts and when you open a file: reopen the last model, wait for every part, warn about missing parts, save after replacing them, notice changes made elsewhere, and what to do with LeoCAD models.
 - **Rendering and Views.** Rendering sets how parts look, and Views sets what the model view shows around them, from the view cube to the grids.
+- **Step views.** On the Rendering page, Follow Step Views turns the view with each step, and End Step Views ends a saved step view after its step.
 - **Interface and Instructions.** Interface holds every display color. Instructions holds the default page settings, the rulers and inspector, and the editor options.
 - **Display colors.** Every color StudWorx draws with, from the background and grids to selections, highlights, axes and the instruction page guides, see-through where it makes sense.
 - **Categories.** Part categories turned on and off with a checkbox, edited, imported and exported.

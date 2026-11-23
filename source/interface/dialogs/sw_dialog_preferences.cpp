@@ -3,6 +3,7 @@
 #include "sw_model.h"
 #include "ui_sw_dialog_preferences.h"
 #include "sw_window_utilities.h"
+#include "sw_widget_spin_box.h"
 #include "sw_library.h"
 #include "sw_dialog_color_edge.h"
 #include "sw_renderer_blender.h"
@@ -636,7 +637,8 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->GridMarginSpinBox->setValue(mOptions->Preferences.mGridMargin);
 	UpdateStudSuffix(ui->GridMarginSpinBox);
 	ui->GridHeightMarginSpinBox->setValue(mOptions->Preferences.mGridHeightMargin);
-	ui->GridHeightMarginSpinBox->setSuffix(QLatin1String(" / ") + tr("%n plate(s)", nullptr, ui->GridHeightMarginSpinBox->maximum()));
+	ui->GridHeightMarginSpinBox->SetReference();
+	swAddSpinBoxUnit(ui->GridHeightMarginSpinBox, tr("plates"));
 	ui->GridNegativeAxesCheckBox->setChecked(mOptions->Preferences.mDrawGridNegativeAxes);
 	ui->GridHeightXZCheckBox->setChecked(mOptions->Preferences.mDrawGridHeightXZ);
 	ui->GridHeightYZCheckBox->setChecked(mOptions->Preferences.mDrawGridHeightYZ);
@@ -646,13 +648,16 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->GridAxisZCheckBox->setChecked(mOptions->Preferences.mDrawGridAxisZ);
 	ui->AxisIconSizeCombo->setCurrentIndex(mOptions->Preferences.mDrawAxes ? swSizeIndex(mOptions->Preferences.mAxisIconSize, SW_AXIS_ICON_SIZES) : 0);
 	ui->FollowStepViewsCheckBox->setChecked(mOptions->Preferences.mFollowStepViews);
+	ui->EndStepViewsCheckBox->setChecked(mOptions->Preferences.mEndStepViews);
 	ui->ProjectionScopeCombo->setCurrentIndex(static_cast<int>(mOptions->Preferences.mProjectionScope));
 	ui->CutawaySizeSpinBox->setValue(mOptions->Preferences.mCutawaySize);
 	UpdateStudSuffix(ui->CutawaySizeSpinBox);
 	ui->CutawayEdgesCheckBox->setChecked(mOptions->Preferences.mCutawayEdges);
-	ui->TurntableIdleDurationSpinBox->SetReference(ui->TurntableIdleDurationSpinBox->suffix());
+	ui->TurntableIdleDurationSpinBox->SetReference();
+	swAddSpinBoxUnit(ui->TurntableIdleDurationSpinBox, tr("s"));
 	ui->TurntableIdleDurationSpinBox->setValue(mOptions->Preferences.mTurntableIdleDuration);
-	ui->TurntableTurnTimeSpinBox->SetReference(ui->TurntableTurnTimeSpinBox->suffix());
+	ui->TurntableTurnTimeSpinBox->SetReference();
+	swAddSpinBoxUnit(ui->TurntableTurnTimeSpinBox, tr("s"));
 	ui->TurntableTurnTimeSpinBox->setValue(mOptions->Preferences.mTurntableTurnTime);
 	ui->TurntableAxisCombo->setCurrentIndex(static_cast<int>(mOptions->Preferences.mTurntableAxis));
 
@@ -741,7 +746,8 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->HighlightRenderModeLabel->setEnabled(OutlineSupported);
 
 	ui->SelectionOutlineWidth->setRange(SW_SELECTION_OUTLINE_WIDTH_MINIMUM, SW_SELECTION_OUTLINE_WIDTH_MAXIMUM);
-	ui->SelectionOutlineWidth->SetReference(ui->SelectionOutlineWidth->suffix());
+	ui->SelectionOutlineWidth->SetReference();
+	swAddSpinBoxUnit(ui->SelectionOutlineWidth, tr("px"));
 	ui->SelectionOutlineWidth->setValue(mOptions->Preferences.mSelectionOutlineWidth);
 
 	// width applies to outlines only
@@ -1039,6 +1045,7 @@ void swPreferencesDialog::accept()
 		mOptions->Preferences.mAxisIconSize = SW_AXIS_ICON_SIZES[ui->AxisIconSizeCombo->currentIndex() - 1];
 
 	mOptions->Preferences.mFollowStepViews = ui->FollowStepViewsCheckBox->isChecked();
+	mOptions->Preferences.mEndStepViews = ui->EndStepViewsCheckBox->isChecked();
 	mOptions->Preferences.mProjectionScope = static_cast<swProjectionScope>(ui->ProjectionScopeCombo->currentIndex());
 	mOptions->Preferences.mCutawaySize = ui->CutawaySizeSpinBox->value();
 	mOptions->Preferences.mCutawayEdges = ui->CutawayEdgesCheckBox->isChecked();
@@ -1702,9 +1709,10 @@ void swPreferencesDialog::ConditionalLinesCheckBoxToggled()
 }
 
 // use to show the maximum stud count
-void swPreferencesDialog::UpdateStudSuffix(QSpinBox* SpinBox)
+void swPreferencesDialog::UpdateStudSuffix(swRangeSpinBox* SpinBox)
 {
-	SpinBox->setSuffix(QLatin1String(" / ") + tr("%n stud(s)", nullptr, SpinBox->maximum()));
+	SpinBox->SetReference();
+	swAddSpinBoxUnit(SpinBox, tr("studs"));
 }
 
 // use to show the cutaway shade alpha

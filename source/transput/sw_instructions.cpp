@@ -84,6 +84,33 @@ swInstructionsBoxTypes swGetBoxTypes(swInstructionsBoxElement Element)
 	case swInstructionsBoxElement::SubmodelPreview:
 		return { swInstructionsPropertyType::SubmodelPreviewMargin, swInstructionsPropertyType::SubmodelPreviewPadding, swInstructionsPropertyType::SubmodelPreviewBorderWidth, swInstructionsPropertyType::SubmodelPreviewCornerRadius, swInstructionsPropertyType::SubmodelPreviewBorderColor, swInstructionsPropertyType::SubmodelPreviewBackgroundColor };
 
+	case swInstructionsBoxElement::Image:
+		return { swInstructionsPropertyType::ImageMargin, swInstructionsPropertyType::ImagePadding, swInstructionsPropertyType::ImageBorderWidth, swInstructionsPropertyType::ImageCornerRadius, swInstructionsPropertyType::ImageBorderColor, swInstructionsPropertyType::ImageBackgroundColor };
+
+	case swInstructionsBoxElement::PartsListQuantity:
+		return { swInstructionsPropertyType::PartsListQuantityMargin, swInstructionsPropertyType::PartsListQuantityPadding, swInstructionsPropertyType::PartsListQuantityBorderWidth, swInstructionsPropertyType::PartsListQuantityCornerRadius, swInstructionsPropertyType::PartsListQuantityBorderColor, swInstructionsPropertyType::PartsListQuantityBackgroundColor };
+
+	case swInstructionsBoxElement::FinalModel:
+		return { swInstructionsPropertyType::FinalModelMargin, swInstructionsPropertyType::FinalModelPadding, swInstructionsPropertyType::FinalModelBorderWidth, swInstructionsPropertyType::FinalModelCornerRadius, swInstructionsPropertyType::FinalModelBorderColor, swInstructionsPropertyType::FinalModelBackgroundColor };
+
+	case swInstructionsBoxElement::StepArea:
+		return { swInstructionsPropertyType::StepMargin, swInstructionsPropertyType::StepPadding, swInstructionsPropertyType::StepBorderWidth, swInstructionsPropertyType::StepCornerRadius, swInstructionsPropertyType::StepBorderColor, swInstructionsPropertyType::StepBackgroundColor };
+
+	case swInstructionsBoxElement::HeaderBand:
+		return { swInstructionsPropertyType::HeaderBandMargin, swInstructionsPropertyType::HeaderBandPadding, swInstructionsPropertyType::HeaderBandBorderWidth, swInstructionsPropertyType::HeaderBandCornerRadius, swInstructionsPropertyType::HeaderBandBorderColor, swInstructionsPropertyType::HeaderBandColor };
+
+	case swInstructionsBoxElement::FooterBand:
+		return { swInstructionsPropertyType::FooterBandMargin, swInstructionsPropertyType::FooterBandPadding, swInstructionsPropertyType::FooterBandBorderWidth, swInstructionsPropertyType::FooterBandCornerRadius, swInstructionsPropertyType::FooterBandBorderColor, swInstructionsPropertyType::FooterBandColor };
+
+	case swInstructionsBoxElement::LeftBand:
+		return { swInstructionsPropertyType::LeftBandMargin, swInstructionsPropertyType::LeftBandPadding, swInstructionsPropertyType::LeftBandBorderWidth, swInstructionsPropertyType::LeftBandCornerRadius, swInstructionsPropertyType::LeftBandBorderColor, swInstructionsPropertyType::LeftBandColor };
+
+	case swInstructionsBoxElement::RightBand:
+		return { swInstructionsPropertyType::RightBandMargin, swInstructionsPropertyType::RightBandPadding, swInstructionsPropertyType::RightBandBorderWidth, swInstructionsPropertyType::RightBandCornerRadius, swInstructionsPropertyType::RightBandBorderColor, swInstructionsPropertyType::RightBandColor };
+
+	case swInstructionsBoxElement::Watermark:
+		return { swInstructionsPropertyType::WatermarkMargin, swInstructionsPropertyType::WatermarkPadding, swInstructionsPropertyType::WatermarkBorderWidth, swInstructionsPropertyType::WatermarkCornerRadius, swInstructionsPropertyType::WatermarkBorderColor, swInstructionsPropertyType::WatermarkBackgroundColor };
+
 	case swInstructionsBoxElement::Notice:
 	case swInstructionsBoxElement::Count:
 		break;
@@ -148,6 +175,7 @@ swInstructions::swInstructions(Project* Project)
 	connect(this, &swInstructions::PageLayoutChanged, this, &swInstructions::StoreCommandLines);
 	connect(this, &swInstructions::StepSettingsChanged, this, &swInstructions::StoreCommandLines);
 	connect(this, &swInstructions::UnitsChanged, this, &swInstructions::StoreCommandLines);
+	connect(this, &swInstructions::PageSetupChanged, this, &swInstructions::StoreCommandLines);
 }
 
 void swInstructions::SetProject(Project* Project)
@@ -173,6 +201,7 @@ void swInstructions::ReloadCommandLines()
 	mPageSettingsOverrides.clear();
 	mPagePropertyOverrides.clear();
 	mElementOffsets.clear();
+	mElementSizes.clear();
 	mLockedPositions.clear();
 	mLockedPages.clear();
 	mFrozenPages.clear();
@@ -227,10 +256,13 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverAuthorColor)].Value = SW_RGBA(0, 0, 0, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitleColor)].Value = SW_RGBA(0, 0, 0, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowCoverAuthor)].Value = true;
+	Properties[static_cast<int>(swInstructionsPropertyType::ShowCoverTitle)].Value = true;
+	Properties[static_cast<int>(swInstructionsPropertyType::ShowCoverImage)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::PageBackgroundColor)].Value = SW_RGBA(255, 255, 255, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::SubmodelBackgroundColor)].Value = SW_RGBA(255, 255, 255, 255);
-	Properties[static_cast<int>(swInstructionsPropertyType::StepImageSize)].Value = 100;
-	Properties[static_cast<int>(swInstructionsPropertyType::CoverImageSize)].Value = 100;
+	Properties[static_cast<int>(swInstructionsPropertyType::BlankPageBackgroundColor)].Value = SW_RGBA(255, 255, 255, 255);
+	Properties[static_cast<int>(swInstructionsPropertyType::StepImageSize)].Value = 0;
+	Properties[static_cast<int>(swInstructionsPropertyType::CoverImageSize)].Value = 0;
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitleText)].Value = QString();
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitleFile)].Value = QString();
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverAuthorText)].Value = QString();
@@ -297,7 +329,7 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::BillOfMaterialsPartCountPlacement)].Value = SW_PLACEMENT_GRID_SIZE + 3;
 	Properties[static_cast<int>(swInstructionsPropertyType::PagePartCountPlacement)].Value = SW_PLACEMENT_COUNT - SW_PLACEMENT_GRID_SIZE - 4;
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowSubmodelPreview)].Value = false;
-	Properties[static_cast<int>(swInstructionsPropertyType::SubmodelPreviewSize)].Value = 100;
+	Properties[static_cast<int>(swInstructionsPropertyType::SubmodelPreviewSize)].Value = 0;
 	Properties[static_cast<int>(swInstructionsPropertyType::SubmodelPreviewPlacement)].Value = SW_PLACEMENT_GRID_SIZE * 2 + 1;
 	Properties[static_cast<int>(swInstructionsPropertyType::SubmodelPreviewPartCountPlacement)].Value = SW_PLACEMENT_COUNT - 3;
 
@@ -313,22 +345,46 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowWatermark)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::WatermarkOpacity)].Value = 25;
 
+	// texts start left and middle, cover texts centered
+	for (int Type = static_cast<int>(swInstructionsPropertyType::StepNumberAlignment); Type <= static_cast<int>(swInstructionsPropertyType::NoticeAlignment); Type += 2)
+	{
+		Properties[Type].Value = 0;
+		Properties[Type + 1].Value = 1;
+	}
+
+	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitleAlignment)].Value = 1;
+	Properties[static_cast<int>(swInstructionsPropertyType::CoverAuthorAlignment)].Value = 1;
+
 	// boxes keep the former spacing
 	for (int Element = 0; Element < static_cast<int>(swInstructionsBoxElement::Count); Element++)
 	{
 		const swInstructionsBoxTypes BoxTypes = swGetBoxTypes(static_cast<swInstructionsBoxElement>(Element));
 
-		Properties[static_cast<int>(BoxTypes.Margin)].Value = 6;
-		Properties[static_cast<int>(BoxTypes.Padding)].Value = 6;
+		const bool PageBox = Element >= static_cast<int>(swInstructionsBoxElement::FinalModel);
+		const swInstructionsBoxElement BoxElement = static_cast<swInstructionsBoxElement>(Element);
+
+		Properties[static_cast<int>(BoxTypes.Margin)].Value = PageBox ? 0 : 6;
+		Properties[static_cast<int>(BoxTypes.Padding)].Value = PageBox ? 0 : 6;
 		Properties[static_cast<int>(BoxTypes.CornerRadius)].Value = 0;
 
-		if (static_cast<swInstructionsBoxElement>(Element) == swInstructionsBoxElement::PartsList)
+		if (BoxElement == swInstructionsBoxElement::PartsList)
 			continue;
 
 		Properties[static_cast<int>(BoxTypes.BorderWidth)].Value = 0;
 		Properties[static_cast<int>(BoxTypes.BorderColor)].Value = SW_RGBA(0, 0, 0, 255);
-		Properties[static_cast<int>(BoxTypes.BackgroundColor)].Value = SW_RGBA(255, 255, 255, 0);
+
+		// colors set above stay
+		if (BoxElement != swInstructionsBoxElement::StepArea && (BoxElement < swInstructionsBoxElement::HeaderBand || BoxElement > swInstructionsBoxElement::RightBand))
+			Properties[static_cast<int>(BoxTypes.BackgroundColor)].Value = SW_RGBA(255, 255, 255, 0);
 	}
+
+	// images keep their place unboxed
+	Properties[static_cast<int>(swInstructionsPropertyType::ImageMargin)].Value = 0;
+	Properties[static_cast<int>(swInstructionsPropertyType::ImagePadding)].Value = 0;
+
+	// quantities keep their bare text
+	Properties[static_cast<int>(swInstructionsPropertyType::PartsListQuantityMargin)].Value = 0;
+	Properties[static_cast<int>(swInstructionsPropertyType::PartsListQuantityPadding)].Value = 0;
 
 	// submodel previews sit on light grey
 	Properties[static_cast<int>(swInstructionsPropertyType::SubmodelPreviewBackgroundColor)].Value = SW_RGBA(221, 221, 221, 255);
@@ -347,6 +403,8 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	// pointers follow their element border
 	Properties[static_cast<int>(swInstructionsPropertyType::PointerWidth)].Value = 0;
 	Properties[static_cast<int>(swInstructionsPropertyType::PointerTipSize)].Value = 0;
+	Properties[static_cast<int>(swInstructionsPropertyType::PointerBendRadius)].Value = 0;
+	Properties[static_cast<int>(swInstructionsPropertyType::ShowFinalModelPage)].Value = true;
 
 	// parts stand in rows on their bottom
 	Properties[static_cast<int>(swInstructionsPropertyType::PLILayout)].Value = static_cast<int>(swPartsListLayout::Rows);
@@ -355,6 +413,10 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 
 	// step models render in perspective
 	Properties[static_cast<int>(swInstructionsPropertyType::ModelProjection)].Value = static_cast<int>(swCameraProjection::Perspective);
+
+	// models follow the model view
+
+	Properties[static_cast<int>(swInstructionsPropertyType::LockHomeView)].Value = false;
 
 	// outline new parts in yellow
 	Properties[static_cast<int>(swInstructionsPropertyType::FadePreviousSteps)].Value = true;
@@ -365,7 +427,7 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	// the back cover starts blank
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowBackCover)].Value = true;
 
-	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 177, "Missing default property");
+	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 243, "Missing default property");
 
 	return Properties;
 }
@@ -399,6 +461,7 @@ void swInstructions::ResetProperties()
 	mStepProperties = mDefaultProperties;
 	mPagePropertyOverrides.clear();
 	mElementOffsets.clear();
+	mElementSizes.clear();
 	mLockedPositions.clear();
 	CreatePages();
 
@@ -633,7 +696,7 @@ QFont swInstructions::GetFontProperty(swInstructionsPropertyType Type, swModel* 
 
 bool swInstructions::IsPageProperty(swInstructionsPropertyType Type)
 {
-	return Type == swInstructionsPropertyType::PLIThumbnailSize || Type == swInstructionsPropertyType::PLIThumbnailBackgroundColor || Type == swInstructionsPropertyType::PageBackgroundColor || Type == swInstructionsPropertyType::StepImageSize || Type == swInstructionsPropertyType::ShowWatermark || (Type >= swInstructionsPropertyType::ShowHeaderBand && Type <= swInstructionsPropertyType::RightBandReserve);
+	return Type == swInstructionsPropertyType::PLIThumbnailSize || Type == swInstructionsPropertyType::PLIThumbnailBackgroundColor || Type == swInstructionsPropertyType::PageBackgroundColor || Type == swInstructionsPropertyType::StepImageSize || Type == swInstructionsPropertyType::ShowWatermark || (Type >= swInstructionsPropertyType::ShowHeaderBand && Type <= swInstructionsPropertyType::RightBandReserve) || (Type >= swInstructionsPropertyType::FinalModelBackgroundColor && Type <= swInstructionsPropertyType::WatermarkBackgroundColor);
 }
 
 bool swInstructions::GetStepPageIndex(swModel* Model, swStep Step, size_t& PageIndex) const
@@ -685,6 +748,10 @@ QVariant swInstructions::GetPageProperty(size_t PageIndex, swInstructionsPropert
 
 	if (HasPageProperty(PageIndex, Type) && GetPageKey(PageIndex, Key))
 		return mPagePropertyOverrides.at(Key)[static_cast<int>(Type)].Value;
+
+	// blank pages have their own background
+	if (Type == swInstructionsPropertyType::PageBackgroundColor && PageIndex < mPages.size() && mPages[PageIndex].Type == swInstructionsPageType::Blank)
+		return mStepProperties[static_cast<int>(swInstructionsPropertyType::BlankPageBackgroundColor)].Value;
 
 	// submodel pages have their own background
 	if (Type == swInstructionsPropertyType::PageBackgroundColor && mProject && GetPageKey(PageIndex, Key) && Key.first && Key.first != mProject->GetMainModel())
@@ -740,7 +807,7 @@ QColor swInstructions::GetPageBackgroundColor(size_t PageIndex) const
 void swInstructions::EmitPagePropertyChanged(swInstructionsPropertyType Type)
 {
 	// draw the background, bands and watermark with the page
-	if (Type == swInstructionsPropertyType::PageBackgroundColor || Type == swInstructionsPropertyType::ShowWatermark || (Type >= swInstructionsPropertyType::ShowHeaderBand && Type <= swInstructionsPropertyType::RightBandReserve))
+	if (Type == swInstructionsPropertyType::PageBackgroundColor || Type == swInstructionsPropertyType::ShowWatermark || (Type >= swInstructionsPropertyType::ShowHeaderBand && Type <= swInstructionsPropertyType::RightBandReserve) || Type >= swInstructionsPropertyType::FinalModelBackgroundColor)
 		emit PageLayoutChanged();
 	else
 		emit StepSettingsChanged(nullptr, 0);
@@ -783,9 +850,12 @@ void swInstructions::ApplyPageToAllPages(size_t PageIndex, swInstructionsPropert
 	for (auto& [PageKey, Properties] : mPagePropertyOverrides)
 		Properties[static_cast<int>(Type)] = swInstructionsProperty();
 
-	// every page includes the submodel pages
+	// every page includes submodel and blank pages
 	if (Type == swInstructionsPropertyType::PageBackgroundColor)
+	{
 		SetDefaultProperty(swInstructionsPropertyType::SubmodelBackgroundColor, Value);
+		SetDefaultProperty(swInstructionsPropertyType::BlankPageBackgroundColor, Value);
+	}
 
 	SetDefaultProperty(Type, Value);
 	EmitPagePropertyChanged(Type);
@@ -850,6 +920,24 @@ void swInstructions::SetElementOffsets(const std::map<swInstructionsElementKey, 
 	emit PageLayoutChanged();
 }
 
+QSizeF swInstructions::GetElementSize(const swInstructionsElementKey& Key) const
+{
+	const std::map<swInstructionsElementKey, QSizeF>::const_iterator Size = mElementSizes.find(Key);
+
+	return Size == mElementSizes.end() ? QSizeF() : Size->second;
+}
+
+void swInstructions::SetElementSize(const swInstructionsElementKey& Key, const QSizeF& Size)
+{
+	// an empty size fits the content again
+	if (Size.isEmpty())
+		mElementSizes.erase(Key);
+	else
+		mElementSizes[Key] = Size;
+
+	emit PageLayoutChanged();
+}
+
 void swInstructions::ResetElementOffset(const swInstructionsElementKey& Key)
 {
 	if (mElementOffsets.erase(Key))
@@ -883,6 +971,21 @@ swInstructionsBoxStyle swInstructions::GetBoxStyle(swInstructionsBoxElement Elem
 	BoxStyle.CornerRadius = GetIntProperty(BoxTypes.CornerRadius, Model, Step);
 	BoxStyle.BorderColor = GetColorProperty(BoxTypes.BorderColor, Model, Step);
 	BoxStyle.BackgroundColor = GetColorProperty(BoxTypes.BackgroundColor, Model, Step);
+
+	return BoxStyle;
+}
+
+swInstructionsBoxStyle swInstructions::GetPageBoxStyle(size_t PageIndex, swInstructionsBoxElement Element) const
+{
+	const swInstructionsBoxTypes BoxTypes = swGetBoxTypes(Element);
+	swInstructionsBoxStyle BoxStyle;
+
+	BoxStyle.Margin = GetPageIntProperty(PageIndex, BoxTypes.Margin);
+	BoxStyle.Padding = GetPageIntProperty(PageIndex, BoxTypes.Padding);
+	BoxStyle.BorderWidth = GetPageIntProperty(PageIndex, BoxTypes.BorderWidth);
+	BoxStyle.CornerRadius = GetPageIntProperty(PageIndex, BoxTypes.CornerRadius);
+	BoxStyle.BorderColor = GetPageColorProperty(PageIndex, BoxTypes.BorderColor);
+	BoxStyle.BackgroundColor = GetPageColorProperty(PageIndex, BoxTypes.BackgroundColor);
 
 	return BoxStyle;
 }
@@ -1468,6 +1571,7 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::ShowBillOfMaterials:
 	case swInstructionsPropertyType::ShowCoverPage:
 	case swInstructionsPropertyType::ShowBackCover:
+	case swInstructionsPropertyType::ShowFinalModelPage:
 	case swInstructionsPropertyType::ShowCoverBlankPage:
 	case swInstructionsPropertyType::ShowBillOfMaterialsBlankPage:
 		CreatePages();
@@ -1487,8 +1591,25 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::CoverTitleColor:
 	case swInstructionsPropertyType::CoverAuthorColor:
 	case swInstructionsPropertyType::ShowCoverAuthor:
+	case swInstructionsPropertyType::ShowCoverTitle:
+	case swInstructionsPropertyType::ShowCoverImage:
+	case swInstructionsPropertyType::StepNumberAlignment:
+	case swInstructionsPropertyType::StepNumberVerticalAlignment:
+	case swInstructionsPropertyType::BillOfMaterialsTitleAlignment:
+	case swInstructionsPropertyType::BillOfMaterialsTitleVerticalAlignment:
+	case swInstructionsPropertyType::PageNumberAlignment:
+	case swInstructionsPropertyType::PageNumberVerticalAlignment:
+	case swInstructionsPropertyType::PartCountAlignment:
+	case swInstructionsPropertyType::PartCountVerticalAlignment:
+	case swInstructionsPropertyType::CoverTitleAlignment:
+	case swInstructionsPropertyType::CoverTitleVerticalAlignment:
+	case swInstructionsPropertyType::CoverAuthorAlignment:
+	case swInstructionsPropertyType::CoverAuthorVerticalAlignment:
+	case swInstructionsPropertyType::NoticeAlignment:
+	case swInstructionsPropertyType::NoticeVerticalAlignment:
 	case swInstructionsPropertyType::PageBackgroundColor:
 	case swInstructionsPropertyType::SubmodelBackgroundColor:
+	case swInstructionsPropertyType::BlankPageBackgroundColor:
 	case swInstructionsPropertyType::CoverBackgroundColor:
 	case swInstructionsPropertyType::BillOfMaterialsBackgroundColor:
 	case swInstructionsPropertyType::ShowStepDividers:
@@ -1565,6 +1686,7 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::PointerColor:
 	case swInstructionsPropertyType::PointerWidth:
 	case swInstructionsPropertyType::PointerTipSize:
+	case swInstructionsPropertyType::PointerBendRadius:
 	case swInstructionsPropertyType::StepImageCornerRadius:
 	case swInstructionsPropertyType::StepNumberCornerRadius:
 	case swInstructionsPropertyType::PLICornerRadius:
@@ -1627,6 +1749,46 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::RightBandReserve:
 	case swInstructionsPropertyType::ShowWatermark:
 	case swInstructionsPropertyType::WatermarkOpacity:
+	case swInstructionsPropertyType::ImageMargin:
+	case swInstructionsPropertyType::ImagePadding:
+	case swInstructionsPropertyType::ImageBorderWidth:
+	case swInstructionsPropertyType::ImageBorderColor:
+	case swInstructionsPropertyType::ImageBackgroundColor:
+	case swInstructionsPropertyType::ImageCornerRadius:
+	case swInstructionsPropertyType::FinalModelPadding:
+	case swInstructionsPropertyType::FinalModelCornerRadius:
+	case swInstructionsPropertyType::StepMargin:
+	case swInstructionsPropertyType::StepPadding:
+	case swInstructionsPropertyType::StepBorderWidth:
+	case swInstructionsPropertyType::StepBorderColor:
+	case swInstructionsPropertyType::StepCornerRadius:
+	case swInstructionsPropertyType::FinalModelBackgroundColor:
+	case swInstructionsPropertyType::HeaderBandMargin:
+	case swInstructionsPropertyType::HeaderBandPadding:
+	case swInstructionsPropertyType::HeaderBandBorderWidth:
+	case swInstructionsPropertyType::HeaderBandBorderColor:
+	case swInstructionsPropertyType::HeaderBandCornerRadius:
+	case swInstructionsPropertyType::FooterBandMargin:
+	case swInstructionsPropertyType::FooterBandPadding:
+	case swInstructionsPropertyType::FooterBandBorderWidth:
+	case swInstructionsPropertyType::FooterBandBorderColor:
+	case swInstructionsPropertyType::FooterBandCornerRadius:
+	case swInstructionsPropertyType::LeftBandMargin:
+	case swInstructionsPropertyType::LeftBandPadding:
+	case swInstructionsPropertyType::LeftBandBorderWidth:
+	case swInstructionsPropertyType::LeftBandBorderColor:
+	case swInstructionsPropertyType::LeftBandCornerRadius:
+	case swInstructionsPropertyType::RightBandMargin:
+	case swInstructionsPropertyType::RightBandPadding:
+	case swInstructionsPropertyType::RightBandBorderWidth:
+	case swInstructionsPropertyType::RightBandBorderColor:
+	case swInstructionsPropertyType::RightBandCornerRadius:
+	case swInstructionsPropertyType::WatermarkMargin:
+	case swInstructionsPropertyType::WatermarkPadding:
+	case swInstructionsPropertyType::WatermarkBorderWidth:
+	case swInstructionsPropertyType::WatermarkBorderColor:
+	case swInstructionsPropertyType::WatermarkCornerRadius:
+	case swInstructionsPropertyType::WatermarkBackgroundColor:
 		emit PageLayoutChanged();
 		break;
 
@@ -1660,6 +1822,20 @@ void swInstructions::CreatePages()
 			}
 
 			AddDefaultPages(Model, AddedModels);
+
+			// the finished main model gets its own page
+			if (GetBoolProperty(swInstructionsPropertyType::ShowFinalModelPage, nullptr, 0) && Model->GetLastStep() > 0)
+			{
+				swInstructionsStep FinalStep;
+				FinalStep.Model = Model;
+				FinalStep.Step = Model->GetLastStep();
+				FinalStep.FinalModel = true;
+
+				swInstructionsPage Page;
+				Page.Settings = GetStepPageSettings({ nullptr, 0 });
+				Page.Steps.push_back(std::move(FinalStep));
+				FinishPage(Page);
+			}
 
 			if (GetBoolProperty(swInstructionsPropertyType::ShowBillOfMaterials, nullptr, 0))
 			{

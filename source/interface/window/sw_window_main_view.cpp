@@ -254,9 +254,11 @@ void swMainWindow::ShowStepViewDialog()
 	QFormLayout* Layout = new QFormLayout();
 	DialogLayout->addLayout(Layout);
 
+	// angles start from the model view
+
 	QComboBox* ModeCombo = new QComboBox(&Dialog);
-	ModeCombo->addItems({ tr("No view change"), tr("Relative to the default view"), tr("Absolute"), tr("Added to the previous view"), tr("Back to the default view") });
-	ModeCombo->setToolTip(tr("How this step turns the view, saved as an MLCAD ROTSTEP line ending the step."));
+	ModeCombo->addItems({ tr("Absolute"), tr("Relative"), tr("Default") });
+	ModeCombo->setToolTip(tr("How this step turns the view, saved as an MLCAD ROTSTEP line ending the step: absolute angles from the world zero (the front view) or relative angles from the home view, filled in from the model view, or default to go back to the home view for this and the next steps."));
 	Layout->addRow(tr("Rotation"), ModeCombo);
 
 	swRangeDoubleSpinBox* AngleEdits[3];
@@ -267,62 +269,78 @@ void swMainWindow::ShowStepViewDialog()
 		AngleEdits[Axis] = new swRangeDoubleSpinBox(&Dialog);
 		AngleEdits[Axis]->setRange(-360.0, 360.0);
 		AngleEdits[Axis]->setDecimals(2);
-		AngleEdits[Axis]->SetReference(tr("°"));
+		AngleEdits[Axis]->SetReference();
 		Layout->addRow(AxisNames[Axis], AngleEdits[Axis]);
+		swAddSpinBoxUnit(AngleEdits[Axis], tr("°"));
 	}
-
-	QPushButton* CurrentViewButton = new QPushButton(tr("Use Current View"), &Dialog);
-	CurrentViewButton->setToolTip(tr("Fill in the absolute rotation that matches the current view."));
-	CurrentViewButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-	Layout->addRow(QString(), CurrentViewButton);
 
 	QDialogButtonBox* Buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &Dialog);
 	DialogLayout->addWidget(Buttons);
 
-	auto UpdateEnabled = [ModeCombo, AngleEdits]()
+	// combo rows to file modes
+
+	const swStepViewMode ComboModes[3] = { swStepViewMode::Absolute, swStepViewMode::Relative, swStepViewMode::End };
+
+	auto FillCurrentAngles = [ActiveView, ModeCombo, AngleEdits, ComboModes]()
 	{
-		const bool HasAngles = ModeCombo->currentIndex() >= 1 && ModeCombo->currentIndex() <= 3;
+		// default takes no angles
+
+		const bool HasAngles = ComboModes[ModeCombo->currentIndex()] != swStepViewMode::End;
 
 		for (QDoubleSpinBox* AngleEdit : AngleEdits)
 			AngleEdit->setEnabled(HasAngles);
-	};
 
-	if (Current != StepViews.end())
-	{
-		ModeCombo->setCurrentIndex(static_cast<int>(Current->second.Mode) + 1);
+		if (!HasAngles)
+			return;
 
-		for (int Axis = 0; Axis < 3; Axis++)
-			AngleEdits[Axis]->setValue(Current->second.Angles[Axis]);
-	}
-
-	UpdateEnabled();
-
-	connect(ModeCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), &Dialog, UpdateEnabled);
-	connect(CurrentViewButton, &QPushButton::clicked, &Dialog, [ActiveView, ModeCombo, AngleEdits]()
-	{
-		const swVector3 Angles = ActiveView->GetStepViewAngles();
-
-		ModeCombo->setCurrentIndex(static_cast<int>(swStepViewMode::Absolute) + 1);
+		const swVector3 Angles = ActiveView->GetStepViewAngles(ComboModes[ModeCombo->currentIndex()]);
 
 		for (int Axis = 0; Axis < 3; Axis++)
 			AngleEdits[Axis]->setValue(Angles[Axis]);
+	};
+
+	// older added views stay unless changed
+
+	const bool HasView = Current != StepViews.end();
+	const bool KeepsView = HasView && Current->second.Mode == swStepViewMode::Add;
+
+	if (HasView && !KeepsView)
+	{
+		ModeCombo->setCurrentIndex(Current->second.Mode == swStepViewMode::End ? 2 : Current->second.Mode == swStepViewMode::Relative ? 1 : 0);
+
+		for (int Axis = 0; Axis < 3; Axis++)
+			AngleEdits[Axis]->setValue(Current->second.Angles[Axis]);
+
+		for (QDoubleSpinBox* AngleEdit : AngleEdits)
+			AngleEdit->setEnabled(Current->second.Mode != swStepViewMode::End);
+	}
+	else
+		FillCurrentAngles();
+
+	bool ViewEdited = false;
+
+	connect(ModeCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), &Dialog, [&ViewEdited, FillCurrentAngles]()
+	{
+		ViewEdited = true;
+		FillCurrentAngles();
 	});
+
+	for (QDoubleSpinBox* AngleEdit : AngleEdits)
+		connect(AngleEdit, QOverload<double>::of(&QDoubleSpinBox::valueChanged), &Dialog, [&ViewEdited]()
+		{
+			ViewEdited = true;
+		});
 	connect(Buttons, &QDialogButtonBox::accepted, &Dialog, &QDialog::accept);
 	connect(Buttons, &QDialogButtonBox::rejected, &Dialog, &QDialog::reject);
 
-	if (Dialog.exec() != QDialog::Accepted)
+	if (Dialog.exec() != QDialog::Accepted || (KeepsView && !ViewEdited))
 		return;
 
-	std::optional<swStepView> StepView;
+	swStepView StepView;
+	StepView.Mode = ComboModes[ModeCombo->currentIndex()];
 
-	if (ModeCombo->currentIndex() > 0)
-	{
-		StepView = swStepView();
-		StepView->Mode = static_cast<swStepViewMode>(ModeCombo->currentIndex() - 1);
-
-		if (StepView->Mode != swStepViewMode::End)
-			StepView->Angles = swVector3(AngleEdits[0]->value(), AngleEdits[1]->value(), AngleEdits[2]->value());
-	}
+	if (StepView.Mode != swStepViewMode::End)
+		StepView.Angles = swVector3(AngleEdits[0]->value(), AngleEdits[1]->value(), AngleEdits[2]->value());
 
 	ActiveModel->SetStepView(Step, StepView);
 }

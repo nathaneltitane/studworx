@@ -539,6 +539,11 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.SaveHTML = true;
 			ParseString(Options.SaveHTMLName, false);
 		}
+		else if (Option == QLatin1String("--export-pdf"))
+		{
+			Options.SavePDF = true;
+			ParseString(Options.SavePDFName, false);
+		}
 		else if (Option == QLatin1String("--export-povray"))
 		{
 			Options.SavePOVRay = true;
@@ -636,6 +641,7 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.StdOut += tr("  --bricklink-notify: Ask BrickLink to notify new listings of the exported parts.\n");
 			Options.StdOut += tr("  --bricklink-exceptions <file>: Comma or tab separated file of parts and the BrickLink numbers that replace their mapping in BrickLink exports.\n");
 			Options.StdOut += tr("  --export-html [folder]: Create HTML instructions in a folder named after the model inside the folder.\n");
+			Options.StdOut += tr("  --export-pdf [outfile.pdf]: Print the instruction pages to a PDF file on the page setup paper.\n");
 			Options.StdOut += tr("  --export-povray [outfile.pov]: Export the model to POV-Ray format.\n");
 			Options.StdOut += tr("  --render-povray [outfile.png]: Render the model with POV-Ray using the POV-Ray window settings, the picture width and height, and the transparent background.\n");
 			Options.StdOut += tr("\nSettings:\n");
