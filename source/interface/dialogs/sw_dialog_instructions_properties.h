@@ -109,7 +109,13 @@ protected:
 		SubmodelPreview,
 		BillOfMaterials,
 		Notice,
-		Pointer
+		Pointer,
+		Bands,
+		BandContent,
+		Watermark,
+		WatermarkNotice,
+		Image,
+		PageImage
 	};
 
 	struct CategoryWidgets

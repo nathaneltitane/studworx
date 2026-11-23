@@ -881,22 +881,6 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	CreateColorEditor(swInstructionsPropertyType::NoticeTextColor, tr("Notice Text Color"), tr("Color of the notice text."));
 	AddEditorRow(CategoryIndex::Notice, swInstructionsPropertyType::NoticeTextColor);
 
-	AddCategory(CategoryIndex::Pointer, tr("Pointer"), tr("<p><b>Pointer</b></p><p>A pointer leaves the border of an element to point at a part, a step or a notice. Right-click an element and choose Add Pointer, then drag its tip onto a part of a step model, another element or any point of the page, the tip follows what it points at. Right-click a pointer to choose the anchor it leaves from, or its own style and tip.</p>"));
-
-	// choices follow pointer styles and tips
-	CreateChoiceEditor(swInstructionsPropertyType::PointerStyle, tr("Pointer Style"), tr("Draw pointers as a line or as a callout wedge narrowing to the tip."), { tr("Line"), tr("Callout Wedge") });
-	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerStyle);
-	CreateChoiceEditor(swInstructionsPropertyType::PointerTip, tr("Pointer Tip"), tr("End line pointers with an arrow or a dot, callout wedges have no tip."), { tr("Arrow"), tr("Dot") });
-	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerTip);
-	CreateColorEditor(swInstructionsPropertyType::PointerColor, tr("Pointer Color"), tr("Color of the pointers."));
-	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerColor);
-
-	// lowest pointer values
-	CreateLengthEditor(swInstructionsPropertyType::PointerWidth, tr("Pointer Width"), tr("Width of the pointer lines, Border follows the border of the element."), 0, 72, 0.1)->setSpecialValueText(tr("Border"));
-	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerWidth);
-	CreateLengthEditor(swInstructionsPropertyType::PointerTipSize, tr("Tip Size"), tr("Size of the arrows and dots, and width of the wedges at the element, never less than three times the pointer width."), 0, 288, 0.5)->setSpecialValueText(tr("Automatic"));
-	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerTipSize);
-
 	AddCategory(CategoryIndex::Box, tr("Box"), tr("<p><b>Box</b></p><p>The space and border around each element. The margin keeps other elements away, the padding keeps the border away from the content and the background fills all of it, margin and padding included. Pointers leave the border. The step and cover models also set their size here. Choose the element to edit, selecting an element on the page chooses it.</p>"));
 
 	// choices follow the box elements
@@ -975,6 +959,22 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		CreateColorEditor(BoxTypes.BackgroundColor, tr("Background"), tr("Color filling the whole element, margin and padding included, transparent shows what lies behind."));
 		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.BackgroundColor)->parentWidget());
 	}
+
+	AddCategory(CategoryIndex::Pointer, tr("Pointer"), tr("<p><b>Pointer</b></p><p>A pointer leaves the border of an element to point at a part, a step or a notice. Right-click an element and choose Add Pointer, then drag its tip onto a part of a step model, another element or any point of the page, the tip follows what it points at. Right-click a pointer to choose the anchor it leaves from, or its own style and tip.</p>"));
+
+	// choices follow pointer styles and tips
+	CreateChoiceEditor(swInstructionsPropertyType::PointerStyle, tr("Pointer Style"), tr("Draw pointers as a line or as a callout wedge narrowing to the tip."), { tr("Line"), tr("Callout Wedge") });
+	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerStyle);
+	CreateChoiceEditor(swInstructionsPropertyType::PointerTip, tr("Pointer Tip"), tr("End line pointers with an arrow or a dot, callout wedges have no tip."), { tr("Arrow"), tr("Dot") });
+	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerTip);
+	CreateColorEditor(swInstructionsPropertyType::PointerColor, tr("Pointer Color"), tr("Color of the pointers."));
+	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerColor);
+
+	// lowest pointer values
+	CreateLengthEditor(swInstructionsPropertyType::PointerWidth, tr("Pointer Width"), tr("Width of the pointer lines, Border follows the border of the element."), 0, 72, 0.1)->setSpecialValueText(tr("Border"));
+	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerWidth);
+	CreateLengthEditor(swInstructionsPropertyType::PointerTipSize, tr("Tip Size"), tr("Size of the arrows and dots, and width of the wedges at the element, never less than three times the pointer width."), 0, 288, 0.5)->setSpecialValueText(tr("Automatic"));
+	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerTipSize);
 
 	// labels share one width
 	int LabelWidth = 0;
@@ -1412,6 +1412,28 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 		Focus = FocusType::Notice;
 	else if (dynamic_cast<swInstructionsPointerItem*>(FocusItem))
 		Focus = FocusType::Pointer;
+	else if (dynamic_cast<swInstructionsImageItem*>(FocusItem))
+		Focus = FocusType::Image;
+	else if (FocusItem && FocusItem->data(SW_BAND_DATA).isValid())
+		Focus = FocusType::Bands;
+
+	// band and watermark content opens their group
+	swInstructionsElementKey Key;
+
+	if ((Focus == FocusType::Notice || Focus == FocusType::Image) && swGetElementKey(FocusItem, Key))
+	{
+		const int Id = static_cast<int>(std::get<2>(Key));
+		const swInstructionsNotice* Notice = Focus == FocusType::Notice ? mInstructions->FindNotice(Id) : nullptr;
+		const swInstructionsImage* Image = Focus == FocusType::Image ? mInstructions->FindImage(Id) : nullptr;
+		const swInstructionsImagePages Pages = Notice ? Notice->Pages : Image ? Image->Pages : swInstructionsImagePages::None;
+
+		if (Pages == swInstructionsImagePages::Watermark)
+			Focus = Notice ? FocusType::WatermarkNotice : FocusType::Watermark;
+		else if (Pages >= swInstructionsImagePages::Header)
+			Focus = FocusType::BandContent;
+		else if (Image && Pages == swInstructionsImagePages::None)
+			Focus = FocusType::PageImage;
+	}
 
 	// cover and materials own settings
 	if (Focus == FocusType::StepImage && dynamic_cast<swInstructionsStepImageItem*>(FocusItem)->IsCoverImage())
@@ -1464,10 +1486,20 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 		break;
 
 	case FocusType::Notice:
+	case FocusType::WatermarkNotice:
 		SetBoxElement(swInstructionsBoxElement::Notice);
 		break;
 
+	case FocusType::BandContent:
+		if (dynamic_cast<swInstructionsNoticeItem*>(FocusItem))
+			SetBoxElement(swInstructionsBoxElement::Notice);
+		break;
+
 	case FocusType::Pointer:
+	case FocusType::Bands:
+	case FocusType::Watermark:
+	case FocusType::Image:
+	case FocusType::PageImage:
 	case FocusType::None:
 		break;
 	}
@@ -1519,6 +1551,36 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 
 		case FocusType::Pointer:
 			Open = CategoryIndex::Pointer;
+			break;
+
+		case FocusType::Bands:
+			Open = CategoryIndex::Bands;
+			OpenAlso = Open;
+			break;
+
+		case FocusType::BandContent:
+			Open = CategoryIndex::Bands;
+			OpenAlso = dynamic_cast<swInstructionsNoticeItem*>(FocusItem) ? CategoryIndex::Notice : CategoryIndex::Bands;
+			break;
+
+		case FocusType::Watermark:
+			Open = CategoryIndex::Watermark;
+			OpenAlso = Open;
+			break;
+
+		case FocusType::WatermarkNotice:
+			Open = CategoryIndex::Watermark;
+			OpenAlso = CategoryIndex::Notice;
+			break;
+
+		case FocusType::Image:
+			Open = CategoryIndex::Cover;
+			OpenAlso = Open;
+			break;
+
+		case FocusType::PageImage:
+			Open = CategoryIndex::Page;
+			OpenAlso = Open;
 			break;
 
 		case FocusType::StepImage:

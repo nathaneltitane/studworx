@@ -2059,6 +2059,7 @@ void swUpdateInstructionsPageScene(swInstructions* Instructions, const swInstruc
 		BandItem->setBrush(QBrush(Instructions->GetPageColorProperty(PageIndex, swGetBandType(swInstructionsPropertyType::HeaderBandColor, Band))));
 		BandItem->setZValue(-2.0);
 		BandItem->setData(SW_BAND_DATA, static_cast<int>(swInstructionsImagePages::Header) + Band);
+		BandItem->setFlag(QGraphicsItem::ItemIsSelectable);
 	}
 
 	// number step and materials pages
