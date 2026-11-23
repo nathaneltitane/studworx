@@ -50,7 +50,7 @@
 					"description": "StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library.",
 					"applicationCategory": "DesignApplication",
 					"operatingSystem": "Linux, Windows, macOS",
-					"softwareVersion": "2026-11-22",
+					"softwareVersion": "2026-11-23",
 					"license": "https://www.gnu.org/licenses/gpl-3.0.html",
 					"downloadUrl": "https://github.com/nathaneltitane/studworx/releases/latest",
 					"image": "https://studworx.app/resources/social/social.png",
@@ -2033,11 +2033,11 @@
 					</thead>
 
 					<tbody>
-						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-22_amd64.deb / arm64.deb</td></tr>
-						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-22-x86_64.rpm / aarch64.rpm</td></tr>
-						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-22-x86_64.appimage / aarch64.appimage</td></tr>
-						<tr><td>Windows</td><td>studworx-windows-2026-11-22-x64.exe</td></tr>
-						<tr><td>macOS</td><td>studworx-macos-2026-11-22-universal.dmg</td></tr>
+						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-23_amd64.deb / arm64.deb</td></tr>
+						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-23-x86_64.rpm / aarch64.rpm</td></tr>
+						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-23-x86_64.appimage / aarch64.appimage</td></tr>
+						<tr><td>Windows</td><td>studworx-windows-2026-11-23-x64.exe</td></tr>
+						<tr><td>macOS</td><td>studworx-macos-2026-11-23-universal.dmg</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -2090,10 +2090,19 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
+				<summary>2026-11-23</summary>
+
+				<ul>
+					<li><a href="#instructions">Instructions</a>: bands now start at the paper edge, not inside the page margins</li>
+					<li>Instructions: Reserve Space only moves the page content when a band reaches past the margin</li>
+				</ul>
+			</details>
+
+			<details>
 				<summary>2026-11-22</summary>
 
 				<ul>
-					<li><a href="#instructions">Instructions</a>: header, footer, left and right bands repeat their text and images on every step page, and %page and %title fill in the page number and the model title</li>
+					<li>Instructions: header, footer, left and right bands repeat their text and images on every step page, and %page and %title fill in the page number and the model title</li>
 					<li>Instructions: the Bands properties set each band&#x27;s size and color, and Reserve Space keeps the page content clear of a band</li>
 					<li>Instructions: right click the page to add watermark text or a watermark <a href="#image">image</a> behind the page content, with its own opacity</li>
 					<li>Instructions: Show On in a notice&#x27;s right click menu moves it between its page, a band and the watermark</li>
@@ -2208,40 +2217,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				</ul>
 			</details>
 
-			<details>
-				<summary>2026-11-16</summary>
-
-				<ul>
-					<li>Site: every footer button has its own logo, with tools, files and steps logos for <a href="#toolbars">Toolbars</a>, Files and Steps, GitHub and PayPal logos for GitHub and Donate, and L²CU in green like on MechaBlocks</li>
-					<li>Site: the page styles live in their own files under resources/css, and resources/css/logo.css picks each section&#x27;s logo, so a new or swapped logo shows without rebuilding the page</li>
-					<li>Translations: Traditional Chinese has about 1,900 more and better translations, from yoyomaimai</li>
-					<li>Translations: Traditional Chinese reads right for Startup, Origin, Author Line, Hip Accessory and Filter Parts</li>
-					<li>Site: Interface covers the window and Panels the panels, with split views told once and showing or hiding panels moved to Panels</li>
-					<li>Translations: every line in all nine languages was reviewed, the missing ones translated, and each language uses one word per meaning, the same words as its menus</li>
-					<li>Translations: snap sizes read as studs, plates and bricks in every language, and each property row letter matches its row name</li>
-					<li>Translations: Yes, No and the other dialog buttons follow the language picked in StudWorx</li>
-					<li>Instructions: Undo and Redo at the start of the page bar, and the main window Undo and Redo shortcuts, take back and put back changes to the instructions, quick changes to one setting counting as one</li>
-					<li>Instructions: Model Size in the Box of the step and cover <a href="#models">models</a> sizes them from 10 to 200 percent, on all pages or this page only</li>
-					<li>Instructions: new part outlines follow only what can be seen, no more lines from parts hidden inside or behind others</li>
-					<li>Instructions: Page Background shows its own color on submodel pages instead of the Submodel Background</li>
-					<li>Instructions: Parts List and Notice backgrounds start transparent, like the other boxes and images</li>
-					<li>Preferences: the Get Key button widens to show its whole label in longer languages</li>
-					<li>Translations: every machine-translated line in all nine languages was checked, and about 2,900 wrong ones now read right, like Close that read as near, Light as pale and Stud as earring</li>
-					<li>Translations: Traditional Chinese uses Taiwan words, like 匯入 and 匯出 for import and export</li>
-					<li>Instructions: Step Flow in Steps per Page fills pages row by row or column by column, picked by you instead of by the page shape</li>
-					<li>Instructions: on pages with empty cells the last step stretches to fill them, and the step dividers follow the cells</li>
-					<li>Instructions: Show Final Model puts the finished model in the room left after a model<code>s last step, with Main Page Color to give a submodel</code>s finished model the main page color</li>
-					<li>Instructions: when the last page is full, the finished model goes on a new page, and Show Final Model and Main Page Color are greyed out on pages without a model&#x27;s last step</li>
-					<li>Instructions: Apply to All Pages on a submodel page keeps the main Page Background instead of resetting it</li>
-					<li>Instructions: Cover Title, Cover Author and BOM Title take your own text, or a text file that wins over it, and notices take a text file too</li>
-					<li>Instructions: the Editor panel stays folded when collapsed or dragged down, instead of growing back by a line</li>
-					<li>Instructions: dividers get their own Divider group with margin, padding, rounded ends and Horizontal or Vertical to hide lines where page colors already split the page, and reach the page margins by default without poking past them</li>
-					<li>Instructions: the Steps per Page buttons show only their divider lines, the button is the page, one step per page shows a circle</li>
-					<li>Instructions: new part outlines on large step images no longer show seam lines</li>
-					<li>Instructions: Show Author sits on its own row</li>
-				</ul>
-			</details>
-
 			<p class="more"><a href="https://github.com/nathaneltitane/studworx/blob/main/NOTICE.md">Read every notice ›</a></p>
 		</section>
 
@@ -2252,7 +2227,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p>LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.</p>
 			<div class="authorship">
 				<a class="avatar" href="https://nathaneltitane.com" aria-label="N Λ T H Λ N E L"><img src="resources/avatar/avatar-bird.png" alt="" width="64" height="64"></a>
-				<p>Version // 2026-11-22<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://www.linkedin.com/in/nathaneltitane">LinkedIn</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
+				<p>Version // 2026-11-23<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://www.linkedin.com/in/nathaneltitane">LinkedIn</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
 			</div>
 		</div>
 

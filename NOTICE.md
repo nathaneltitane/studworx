@@ -1,6 +1,14 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-23</summary>
+
+  - Instructions: bands now start at the paper edge, not inside the page margins
+  - Instructions: Reserve Space only moves the page content when a band reaches past the margin
+
+  </details>
+
+  <details>
   <summary>2026-11-22</summary>
 
   - Instructions: header, footer, left and right bands repeat their text and images on every step page, and %page and %title fill in the page number and the model title
