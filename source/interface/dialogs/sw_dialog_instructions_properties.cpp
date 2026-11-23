@@ -555,7 +555,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		CreateToggleEditor(swInstructionsPropertyType::ShowSubmodelPreview, tr("Show Submodel Preview"), tr("Show the finished submodel with its part count on the first page of each submodel."))
 	});
 
-	AddCategory(CategoryIndex::Bands, tr("Bands"), tr("<p><b>Bands</b></p><p>Strips along the edges of the step and blank pages. Right click a band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. A band can reserve its space so the page content stays clear of it.</p>"));
+	AddCategory(CategoryIndex::Bands, tr("Bands"), tr("<p><b>Bands</b></p><p>Strips along the paper edges of the step and blank pages. Right click a band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. A band can reserve its space so the page content stays clear of it.</p>"));
 
 	const QString BandNames[4] = { tr("Header"), tr("Footer"), tr("Left"), tr("Right") };
 	const swInstructionsPropertyType BandTypes[4][4] = {
@@ -573,7 +573,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 			CreateToggleEditor(BandTypes[BandIndex][0], tr("Show %1 Band").arg(BandName), tr("Show the %1 band on the step and blank pages.").arg(BandName.toLower()))
 		});
 
-		CreateLengthEditor(BandTypes[BandIndex][1], tr("%1 Size").arg(BandName), tr("Thickness of the %1 band.").arg(BandName.toLower()), 1, 576, 0.5);
+		CreateLengthEditor(BandTypes[BandIndex][1], tr("%1 Size").arg(BandName), tr("Thickness of the %1 band from the paper edge.").arg(BandName.toLower()), 1, 576, 0.5);
 		AddEditorRow(CategoryIndex::Bands, BandTypes[BandIndex][1]);
 		CreateColorEditor(BandTypes[BandIndex][2], tr("%1 Color").arg(BandName), tr("Color filling the %1 band, transparent shows the page.").arg(BandName.toLower()));
 		AddEditorRow(CategoryIndex::Bands, BandTypes[BandIndex][2]);

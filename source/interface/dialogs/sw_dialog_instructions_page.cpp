@@ -1351,8 +1351,8 @@ static swInstructionsPropertyType swGetBandType(swInstructionsPropertyType First
 	return static_cast<swInstructionsPropertyType>(static_cast<int>(First) + Band);
 }
 
-// use to get a band rectangle, empty when hidden
-static QRectF swGetBandRect(const swInstructions* Instructions, size_t PageIndex, const QRectF& MarginsRect, int Band)
+// use to get a band rectangle from the paper edge, empty when hidden
+static QRectF swGetBandRect(const swInstructions* Instructions, size_t PageIndex, int Band)
 {
 	const swInstructionsPageType Type = Instructions->mPages[PageIndex].Type;
 
@@ -1360,20 +1360,22 @@ static QRectF swGetBandRect(const swInstructions* Instructions, size_t PageIndex
 		return QRectF();
 
 	const qreal Size = Instructions->GetPageIntProperty(PageIndex, swGetBandType(swInstructionsPropertyType::HeaderBandSize, Band));
+	const qreal Width = Instructions->mPageSetup.Width;
+	const qreal Height = Instructions->mPageSetup.Height;
 
 	switch (Band)
 	{
 	case 0:
-		return QRectF(MarginsRect.left(), MarginsRect.top(), MarginsRect.width(), Size);
+		return QRectF(0.0, 0.0, Width, Size);
 
 	case 1:
-		return QRectF(MarginsRect.left(), MarginsRect.bottom() - Size, MarginsRect.width(), Size);
+		return QRectF(0.0, Height - Size, Width, Size);
 
 	case 2:
-		return QRectF(MarginsRect.left(), MarginsRect.top(), Size, MarginsRect.height());
+		return QRectF(0.0, 0.0, Size, Height);
 	}
 
-	return QRectF(MarginsRect.right() - Size, MarginsRect.top(), Size, MarginsRect.height());
+	return QRectF(Width - Size, 0.0, Size, Height);
 }
 
 // use to get the page area bands leave free
@@ -1383,19 +1385,20 @@ static QRectF swGetContentRect(const swInstructions* Instructions, size_t PageIn
 
 	for (int Band = 0; Band < 4; Band++)
 	{
-		const QRectF BandRect = swGetBandRect(Instructions, PageIndex, MarginsRect, Band);
+		const QRectF BandRect = swGetBandRect(Instructions, PageIndex, Band);
 
 		if (BandRect.isNull() || !Instructions->GetPageBoolProperty(PageIndex, swGetBandType(swInstructionsPropertyType::HeaderBandReserve, Band)))
 			continue;
 
+		// only a band past the margin pushes content
 		if (Band == 0)
-			Rect.setTop(Rect.top() + BandRect.height());
+			Rect.setTop(qMax(Rect.top(), BandRect.bottom()));
 		else if (Band == 1)
-			Rect.setBottom(Rect.bottom() - BandRect.height());
+			Rect.setBottom(qMin(Rect.bottom(), BandRect.top()));
 		else if (Band == 2)
-			Rect.setLeft(Rect.left() + BandRect.width());
+			Rect.setLeft(qMax(Rect.left(), BandRect.right()));
 		else
-			Rect.setRight(Rect.right() - BandRect.width());
+			Rect.setRight(qMin(Rect.right(), BandRect.left()));
 	}
 
 	return Rect;
@@ -1424,7 +1427,7 @@ void swInstructionsPageWidget::PlaceElement(int Placement)
 	// band notices stay in their band
 	if (Band >= 0 && Band < 4)
 	{
-		const QRectF BandRect = swGetBandRect(mInstructions, PageIndex, MarginsRect, Band);
+		const QRectF BandRect = swGetBandRect(mInstructions, PageIndex, Band);
 
 		if (!BandRect.isNull())
 			mInstructions->SetNoticePosition(Id, Item->pos() + swGetPlacementPosition(BandRect, ItemRect.size(), swGetValidPlacement(Placement, true)) - ItemRect.topLeft() - BandRect.topLeft());
@@ -1819,7 +1822,7 @@ static void swAddPageAnnotations(swInstructions* Instructions, size_t PageIndex,
 	{
 		// band notices follow their band
 		const int Band = static_cast<int>(Notice.Pages) - static_cast<int>(swInstructionsImagePages::Header);
-		const QRectF BandRect = BandPage && Band >= 0 && Band < 4 ? swGetBandRect(Instructions, PageIndex, MarginsRect, Band) : QRectF();
+		const QRectF BandRect = BandPage && Band >= 0 && Band < 4 ? swGetBandRect(Instructions, PageIndex, Band) : QRectF();
 		bool Shown = BandPage && !BandRect.isNull();
 
 		if (Notice.Pages == swInstructionsImagePages::None)
@@ -1943,7 +1946,7 @@ static void swAddPageImages(swInstructions* Instructions, const swInstructionsPa
 		{
 			const int Band = static_cast<int>(Image.Pages) - static_cast<int>(swInstructionsImagePages::Header);
 			const bool IsWatermark = Image.Pages == swInstructionsImagePages::Watermark;
-			const QRectF BandRect = Band >= 0 && Band < 4 ? swGetBandRect(Instructions, PageIndex, MarginsRect, Band) : QRectF();
+			const QRectF BandRect = Band >= 0 && Band < 4 ? swGetBandRect(Instructions, PageIndex, Band) : QRectF();
 
 			if (BandRect.isNull() && (!IsWatermark || !Instructions->GetPageBoolProperty(PageIndex, swInstructionsPropertyType::ShowWatermark)))
 				continue;
@@ -2046,7 +2049,7 @@ void swUpdateInstructionsPageScene(swInstructions* Instructions, const swInstruc
 
 	for (int Band = 0; Band < 4; Band++)
 	{
-		const QRectF BandRect = swGetBandRect(Instructions, PageIndex, MarginsRect, Band);
+		const QRectF BandRect = swGetBandRect(Instructions, PageIndex, Band);
 
 		if (BandRect.isNull())
 			continue;
