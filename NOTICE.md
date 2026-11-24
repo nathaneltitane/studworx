@@ -38,6 +38,18 @@
   - Instructions: clicking a blank spot of a page opens the properties of that page, the cover, step, bill of materials or blank page settings
   - Instructions: a scaled up cover image no longer covers the cover texts
   - Command line: --export-pdf prints the instruction pages to a PDF file on the page setup paper
+  - Instructions: the bill of materials has its own title, parts list, quantity and part count settings and boxes, so changing it no longer changes the step pages; older files start from the step values
+  - Instructions: Show Final Model leaves out the separate final model page and adds no page after a full last page, the final model background takes the Page Background color, submodel pages included, until you pick your own
+  - Instructions: two buttons beside the page number show two pages at once, side by side or one above the other, pages 1 and 2, 3 and 4 and so on, and clicking the other page edits it
+  - Instructions: Assembly Background in the Page section colors the pages where two or more models come together, clear follows the page as before
+  - Instructions: a main model step placing only a just finished submodel gets no page, its final model already shows it
+  - Instructions: At Final Model in the Divider section leaves out the lines along the final model box
+  - Instructions: the page of the finished main model is listed as Completion, and Completion Background in the Page section colors its own page, or only its box on a steps page, the Completion box in the Box section has its own margin, padding, border and background
+  - Instructions: the mouse wheel over the page runs through the pages, two at a time when two pages show
+  - Instructions: Reserve Parts Area in the Parts List section keeps a strip of each step for the parts list and step number, the model fits in the rest
+  - Instructions: Show Boundaries in the gear menu outlines the outer edge, margin and padding, or every edge of each element in thin red lines, and Layout Areas outlines the content and step areas, parts strips and dividers in blue, the edge, border and layout colors follow the axis colors and change in Preferences, on both pages of a spread, on screen only
+  - Window titles: a space before the unsaved changes asterisk, like KDE apps
+  - Command line: --resave <outfile.ldr> loads the instruction settings and saves the model, to check how older files load
 
   </details>
 

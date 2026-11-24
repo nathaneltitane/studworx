@@ -442,6 +442,11 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.SaveUndo = true;
 			ParseString(Options.SaveUndoName, true);
 		}
+		else if (Option == QLatin1String("--resave"))
+		{
+			Options.SaveResave = true;
+			ParseString(Options.SaveResaveName, true);
+		}
 		else if (Option == QLatin1String("--export-wavefront"))
 		{
 			Options.SaveWavefront = true;
@@ -629,6 +634,7 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.StdOut += tr("\nExport:\n");
 			Options.StdOut += tr("  --flatten <outfile.ldr>: Replace every submodel at all depths with its parts and save the model, before any other export.\n");
 			Options.StdOut += tr("  --undo <outfile.ldr>: Undo every command line edit and save the model, to check that undo restores it.\n");
+			Options.StdOut += tr("  --resave <outfile.ldr>: Load the instruction settings and save the model, to check how older files load.\n");
 			Options.StdOut += tr("  --export-wavefront [outfile.obj]: Export the model to Wavefront OBJ format.\n");
 			Options.StdOut += tr("  --export-3ds [outfile.3ds]: Export the model to 3D Studio 3DS format.\n");
 			Options.StdOut += tr("  --export-collada [outfile.dae]: Export the model to COLLADA DAE format.\n");

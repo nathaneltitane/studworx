@@ -25,6 +25,9 @@ void swInstructionsPreferences::Load()
 	ElementPaddingColor = swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR);
 	ElementAnchorColor = swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR);
 	RulerPointerColor = swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR);
+	BoundaryEdgeColor = swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_BOUNDARY_EDGE_COLOR);
+	BoundaryBorderColor = swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_BOUNDARY_BORDER_COLOR);
+	LayoutAreaColor = swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_LAYOUT_AREA_COLOR);
 	GridPrimaryColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_PRIMARY_COLOR));
 	GridSecondaryColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_SECONDARY_COLOR));
 	MarginColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_MARGIN_COLOR));
@@ -59,6 +62,9 @@ void swInstructionsPreferences::Save() const
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR, ElementPaddingColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR, ElementAnchorColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR, RulerPointerColor);
+	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_BOUNDARY_EDGE_COLOR, BoundaryEdgeColor);
+	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_BOUNDARY_BORDER_COLOR, BoundaryBorderColor);
+	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_LAYOUT_AREA_COLOR, LayoutAreaColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_PRIMARY_COLOR, swRGBAFromQColor(GridPrimaryColor));
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_SECONDARY_COLOR, swRGBAFromQColor(GridSecondaryColor));
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_MARGIN_COLOR, swRGBAFromQColor(MarginColor));

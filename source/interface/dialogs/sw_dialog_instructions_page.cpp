@@ -8,6 +8,7 @@
 #include "sw_object_camera.h"
 #include "sw_view.h"
 #include "sw_window_utilities.h"
+#include <QPicture>
 #include "sw_window_main.h"
 
 // use to identify a page element
@@ -246,6 +247,13 @@ static bool swGetElementAlignment(const swInstructions* Instructions, const swIn
 	VerticalAlignment = Instructions->GetIntProperty(static_cast<swInstructionsPropertyType>(static_cast<int>(Type) + 1), Model, Step);
 
 	return true;
+}
+
+// use to turn watermarks in place
+static void swRotateWatermark(QGraphicsItem* Item, const swInstructions* Instructions)
+{
+	Item->setTransformOriginPoint(Item->boundingRect().center());
+	Item->setRotation(Instructions->GetIntProperty(swInstructionsPropertyType::WatermarkRotation, nullptr, 0));
 }
 
 // use to place an element
@@ -591,7 +599,7 @@ swInstructionsStepNumberItem::swInstructionsStepNumberItem(QGraphicsItem* Parent
 	: swInstructionsBoxItem(Parent), mInstructions(Instructions), mModel(Model), mStep(Step)
 {
 	setFlags(SW_MOVABLE_ITEM_FLAGS);
-	SetBoxStyle(mInstructions->GetBoxStyle(swInstructionsBoxElement::StepNumber, mModel, mStep));
+	SetBoxStyle(mInstructions->GetBoxStyle(mStep ? swInstructionsBoxElement::StepNumber : swInstructionsBoxElement::BillOfMaterialsTitle, mModel, mStep));
 }
 
 QVariant swInstructionsStepNumberItem::itemChange(GraphicsItemChange Change, const QVariant& Value)
@@ -604,7 +612,7 @@ QVariant swInstructionsStepNumberItem::itemChange(GraphicsItemChange Change, con
 
 void swInstructionsStepNumberItem::Update()
 {
-	bool Visible = mInstructions->GetBoolProperty(swInstructionsPropertyType::ShowStepNumber, mModel, mStep);
+	bool Visible = mInstructions->GetBoolProperty(mStep ? swInstructionsPropertyType::ShowStepNumber : swInstructionsPropertyType::ShowBillOfMaterialsTitle, mModel, mStep);
 	setVisible(Visible);
 
 	// step 0 is the bill of materials title
@@ -650,7 +658,7 @@ swInstructionsPartCountItem::swInstructionsPartCountItem(QGraphicsItem* Parent, 
 {
 	setFlags(SW_MOVABLE_ITEM_FLAGS);
 	setZValue(1.0);
-	SetBoxStyle(mInstructions->GetBoxStyle(swInstructionsBoxElement::PartCount, mModel, 0));
+	SetBoxStyle(mInstructions->GetBoxStyle(Element == swInstructionsPlacementElement::BillOfMaterialsPartCount ? swInstructionsBoxElement::BillOfMaterialsPartCount : swInstructionsBoxElement::PartCount, mModel, 0));
 
 	// steps use the page number look
 	const bool PageCount = mElement == swInstructionsPlacementElement::PagePartCount || mElement == swInstructionsPlacementElement::SubmodelPreviewPartCount;
@@ -700,32 +708,26 @@ void swInstructionsPartsListItem::Update()
 		return;
 
 	// the box paints the background in one piece
-	QColor BackgroundColor = mInstructions->GetColorProperty(swInstructionsPropertyType::PLIBackgroundColor, mModel, mStep);
+	QColor BackgroundColor = mInstructions->GetColorProperty(mBillOfMaterials ? swInstructionsPropertyType::BillOfMaterialsListBackgroundColor : swInstructionsPropertyType::PLIBackgroundColor, mModel, mStep);
 	BackgroundColor.setAlpha(0);
-	QFont Font = mInstructions->GetFontProperty(swInstructionsPropertyType::PLIFont, mModel, mStep);
-	QColor TextColor = mInstructions->GetColorProperty(swInstructionsPropertyType::PLITextColor, mModel, mStep);
-	const bool ShowCounts = mInstructions->GetBoolProperty(swInstructionsPropertyType::PLIShowCounts, mModel, mStep);
+	QFont Font = mInstructions->GetFontProperty(mBillOfMaterials ? swInstructionsPropertyType::BillOfMaterialsFont : swInstructionsPropertyType::PLIFont, mModel, mStep);
+	QColor TextColor = mInstructions->GetColorProperty(mBillOfMaterials ? swInstructionsPropertyType::BillOfMaterialsTextColor : swInstructionsPropertyType::PLITextColor, mModel, mStep);
+	const bool ShowCounts = mInstructions->GetBoolProperty(mBillOfMaterials ? swInstructionsPropertyType::BillOfMaterialsShowCounts : swInstructionsPropertyType::PLIShowCounts, mModel, mStep);
 	const bool ShowPartIds = mBillOfMaterials && mInstructions->GetBoolProperty(swInstructionsPropertyType::BillOfMaterialsShowPartIds, mModel, mStep);
-	const swPartsListSort Sort = static_cast<swPartsListSort>(mInstructions->GetIntProperty(swInstructionsPropertyType::PLISortOrder, mModel, mStep));
-	const swPartsListLayout Layout = static_cast<swPartsListLayout>(mInstructions->GetIntProperty(swInstructionsPropertyType::PLILayout, mModel, mStep));
-	const swPartsListAlignment Alignment = static_cast<swPartsListAlignment>(mInstructions->GetIntProperty(swInstructionsPropertyType::PLIAlignment, mModel, mStep));
-	const int ThumbnailSize = mInstructions->GetIntProperty(swInstructionsPropertyType::PLIThumbnailSize, mModel, mStep);
-	const QColor ThumbnailBackgroundColor = mInstructions->GetColorProperty(swInstructionsPropertyType::PLIThumbnailBackgroundColor, mModel, mStep);
-	const int CountPlacement = mInstructions->GetIntProperty(swInstructionsPropertyType::PLICountPlacement, mModel, mStep);
+	const swPartsListSort Sort = static_cast<swPartsListSort>(mInstructions->GetIntProperty(mBillOfMaterials ? swInstructionsPropertyType::BillOfMaterialsSortOrder : swInstructionsPropertyType::PLISortOrder, mModel, mStep));
+	const swPartsListLayout Layout = static_cast<swPartsListLayout>(mInstructions->GetIntProperty(mBillOfMaterials ? swInstructionsPropertyType::BillOfMaterialsLayout : swInstructionsPropertyType::PLILayout, mModel, mStep));
+	const swPartsListAlignment Alignment = static_cast<swPartsListAlignment>(mInstructions->GetIntProperty(mBillOfMaterials ? swInstructionsPropertyType::BillOfMaterialsAlignment : swInstructionsPropertyType::PLIAlignment, mModel, mStep));
+	const int ThumbnailSize = mInstructions->GetIntProperty(mBillOfMaterials ? swInstructionsPropertyType::BillOfMaterialsThumbnailSize : swInstructionsPropertyType::PLIThumbnailSize, mModel, mStep);
+	const int CountPlacement = mInstructions->GetIntProperty(mBillOfMaterials ? swInstructionsPropertyType::BillOfMaterialsCountPlacement : swInstructionsPropertyType::PLICountPlacement, mModel, mStep);
 	const float Scale = swGetRenderScale(mInstructions);
 	std::vector<QRect> CountRects;
 
-	// thumbnail fills take the padding to reach the border
-
-	swInstructionsBoxStyle BoxStyle = mInstructions->GetBoxStyle(swInstructionsBoxElement::PartsList, mModel, mStep);
-	const qreal Bleed = ThumbnailBackgroundColor.alpha() ? BoxStyle.Padding : 0.0;
-	BoxStyle.Padding -= Bleed;
-	SetBoxStyle(BoxStyle);
+	SetBoxStyle(mInstructions->GetBoxStyle(mBillOfMaterials ? swInstructionsBoxElement::BillOfMaterialsList : swInstructionsBoxElement::PartsList, mModel, mStep));
 	mClipContent = true;
 
-	const swInstructionsBoxStyle CountBox = mInstructions->GetBoxStyle(swInstructionsBoxElement::PartsListQuantity, mModel, mStep);
+	const swInstructionsBoxStyle CountBox = mInstructions->GetBoxStyle(mBillOfMaterials ? swInstructionsBoxElement::BillOfMaterialsQuantity : swInstructionsBoxElement::PartsListQuantity, mModel, mStep);
 
-	const swResult<QImage> PartsImage = mModel->GetPartsListImage(mMaxWidth, ThumbnailSize, mBillOfMaterials ? 0 : mStep, swRGBAFromQColor(BackgroundColor), swRGBAFromQColor(ThumbnailBackgroundColor), Font, TextColor, false, ShowCounts, Sort, Layout, Alignment, mMaxHeight, Scale, ShowPartIds, CountPlacement, &CountRects, &CountBox, Bleed);
+	const swResult<QImage> PartsImage = mModel->GetPartsListImage(mMaxWidth, ThumbnailSize, mBillOfMaterials ? 0 : mStep, swRGBAFromQColor(BackgroundColor), Font, TextColor, false, ShowCounts, Sort, Layout, Alignment, mMaxHeight, Scale, ShowPartIds, CountPlacement, &CountRects, &CountBox);
 
 	// quantities rebuild with the image
 	int SelectedCount = -1;
@@ -2125,7 +2127,7 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 		if (TitleItem->isVisible())
 		{
 			const QSizeF TitleSize = TitleItem->boundingRect().size();
-			const int TitlePlacement = swGetValidPlacement(Instructions->GetIntProperty(swInstructionsPropertyType::StepNumberPlacement, Page->Model, 0), true);
+			const int TitlePlacement = swGetValidPlacement(Instructions->GetIntProperty(swInstructionsPropertyType::BillOfMaterialsTitlePlacement, Page->Model, 0), true);
 			const QPointF TitlePosition = swGetPlacementPosition(MarginsRect, TitleSize, TitlePlacement);
 			swPlaceElement(TitleItem, Instructions, TitlePosition);
 			TitleRect = QRectF(TitlePosition, TitleSize);
@@ -2158,7 +2160,7 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 		}
 
 		swInstructionsPartsListItem* PartsImageItem = new swInstructionsPartsListItem(PageItem, Instructions, Page->Model, 0);
-		const qreal Inset = 2.0 * PartsImageItem->GetBoxStyle().GetInset();
+		const qreal Inset = 2.0 * Instructions->GetBoxStyle(swInstructionsBoxElement::BillOfMaterialsList, Page->Model, 0).GetInset();
 		PartsImageItem->SetBillOfMaterials(qMax(static_cast<int>(PartsRect.width() - Inset), 16), qMax(static_cast<int>(PartsRect.height() - Inset), 16));
 		PartsImageItem->Update();
 
@@ -2202,6 +2204,7 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 
 			const bool Horizontal = Instructions->GetBoolProperty(swInstructionsPropertyType::StepDividerHorizontal, FirstStep.Model, FirstStep.Step);
 			const bool Vertical = Instructions->GetBoolProperty(swInstructionsPropertyType::StepDividerVertical, FirstStep.Model, FirstStep.Step);
+			const bool FinalModelDividers = Instructions->GetBoolProperty(swInstructionsPropertyType::StepDividerFinalModel, FirstStep.Model, FirstStep.Step);
 
 			auto IsNear = [](qreal Value1, qreal Value2)
 			{
@@ -2215,6 +2218,11 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 				for (const swInstructionsStep& Other : Page->Steps)
 				{
 					const QRectF& OtherRect = Other.Rect;
+
+					// the final model border already splits
+
+					if (!FinalModelDividers && (Step.FinalModel || Other.FinalModel))
+						continue;
 
 					// draw along the shared part of touching edges
 					const qreal Top = qMax(Rect.top(), OtherRect.top());
@@ -2246,13 +2254,16 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 
 		if (Step.FinalModel)
 		{
-			// the box shrinks the image area
-			const swInstructionsBoxStyle FinalStyle = Instructions->GetBoxStyle(swInstructionsBoxElement::FinalModel, Step.Model, Step.Step);
+			// the finished main model has its own box
+			const bool Completion = Step.Model == Instructions->GetMainModel();
+			const swInstructionsBoxStyle FinalStyle = Instructions->GetBoxStyle(Completion ? swInstructionsBoxElement::Completion : swInstructionsBoxElement::FinalModel, Step.Model, Step.Step);
 			const QRectF FinalRect = CellRect.adjusted(FinalStyle.GetInset(), FinalStyle.GetInset(), -FinalStyle.GetInset(), -FinalStyle.GetInset());
+
+			new swInstructionsGuideItem(FinalRect, PageItem);
 
 			swInstructionsFrameItem* FinalFrameItem = new swInstructionsFrameItem(CellRect, FinalStyle, PageItem);
 			FinalFrameItem->setZValue(-1.0);
-			FinalFrameItem->setData(SW_OBJECT_DATA, static_cast<int>(swInstructionsPageObject::FinalModel));
+			FinalFrameItem->setData(SW_OBJECT_DATA, static_cast<int>(Completion ? swInstructionsPageObject::Completion : swInstructionsPageObject::FinalModel));
 
 			swInstructionsStepImageItem* FinalImageItem = new swInstructionsStepImageItem(PageItem, Instructions, Step.Model, Step.Step);
 			const qreal FinalInset = FinalImageItem->GetBoxStyle().GetInset();
@@ -2273,9 +2284,7 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 		StepAreaItem->setData(SW_OBJECT_DATA, static_cast<int>(swInstructionsPageObject::StepArea));
 
 		swInstructionsStepImageItem* StepImageItem = new swInstructionsStepImageItem(StepAreaItem, Instructions, Step.Model, Step.Step);
-		const qreal ImageInset = StepImageItem->GetBoxStyle().GetInset() + AreaInset;
-		StepImageItem->SetImageSize(qMax(static_cast<int>(CellRect.width() - 2.0 * ImageInset), 1), qMax(static_cast<int>(CellRect.height() - 2.0 * ImageInset), 1));
-		StepImageItem->Update();
+		const qreal ImageInset = StepImageItem->GetBoxStyle().GetInset();
 
 		swInstructionsStepNumberItem* StepNumberItem = new swInstructionsStepNumberItem(StepAreaItem, Instructions, Step.Model, Step.Step);
 		StepNumberItem->Update();
@@ -2309,8 +2318,53 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 		const QSizeF NumberSize = StepNumberItem->boundingRect().size();
 		const QSizeF PartsSize = PartsImageItem->boundingRect().size();
 
+		// the parts strip keeps the model out
+
+		QRectF ImageSizeRect(QPointF(AreaInset, AreaInset), CellRect.size() - QSizeF(2.0 * AreaInset, 2.0 * AreaInset));
+		QRectF ImagePlaceRect = AreaRect;
+
+		if (PartsImageItem->isVisible() && Instructions->GetBoolProperty(swInstructionsPropertyType::PLIReserveArea, Step.Model, Step.Step))
+		{
+			QRectF NumberRect(swGetPlacementPosition(AreaRect, NumberSize, NumberPlacement), NumberSize);
+			QRectF PartsRect(swGetPlacementPosition(AreaRect, PartsSize, PartsPlacement), PartsSize);
+
+			if (NumberAnchor == swInstructionsPlacementAnchor::PartsList)
+				NumberRect.moveTopLeft(swGetPlacementPosition(PartsRect, NumberSize, NumberPlacement));
+
+			if (PartsAnchor == swInstructionsPlacementAnchor::StepNumber)
+				PartsRect.moveTopLeft(swGetPlacementPosition(NumberRect, PartsSize, PartsPlacement));
+
+			// the number joins when beside the list
+			const bool NumberJoins = StepNumberItem->isVisible() && (NumberAnchor == swInstructionsPlacementAnchor::PartsList || PartsAnchor == swInstructionsPlacementAnchor::StepNumber);
+			const QRectF StripRect = NumberJoins ? PartsRect.united(NumberRect) : PartsRect;
+
+			// the side follows the area placement
+			const int AreaPlacement = PartsAnchor == swInstructionsPlacementAnchor::Area ? PartsPlacement : NumberPlacement;
+			const int Row = AreaPlacement / SW_PLACEMENT_GRID_SIZE;
+			const int Column = AreaPlacement % SW_PLACEMENT_GRID_SIZE;
+
+			if (Row == 1)
+				ImagePlaceRect.setTop(qMax(ImagePlaceRect.top(), StripRect.bottom()));
+			else if (Row == 3)
+				ImagePlaceRect.setBottom(qMin(ImagePlaceRect.bottom(), StripRect.top()));
+			else if (Column == 1)
+				ImagePlaceRect.setLeft(qMax(ImagePlaceRect.left(), StripRect.right()));
+			else if (Column == 3)
+				ImagePlaceRect.setRight(qMin(ImagePlaceRect.right(), StripRect.left()));
+
+			ImageSizeRect = ImageSizeRect.intersected(ImagePlaceRect);
+		}
+
+		new swInstructionsGuideItem(AreaRect, StepAreaItem);
+
+		if (ImagePlaceRect != AreaRect)
+			new swInstructionsGuideItem(ImagePlaceRect, StepAreaItem);
+
+		StepImageItem->SetImageSize(qMax(static_cast<int>(ImageSizeRect.width() - 2.0 * ImageInset), 1), qMax(static_cast<int>(ImageSizeRect.height() - 2.0 * ImageInset), 1));
+		StepImageItem->Update();
+
 		const int ImagePlacement = swGetValidPlacement(Instructions->GetIntProperty(swInstructionsPropertyType::StepImagePlacement, Step.Model, Step.Step), true);
-		swPlaceElement(StepImageItem, Instructions, swGetPlacementPosition(AreaRect, StepImageItem->boundingRect().size(), ImagePlacement));
+		swPlaceElement(StepImageItem, Instructions, swGetPlacementPosition(ImagePlaceRect, StepImageItem->boundingRect().size(), ImagePlacement));
 
 		// place moved and locked elements first
 		if (NumberAnchor == swInstructionsPlacementAnchor::Area)
@@ -2352,6 +2406,14 @@ static void swAddPageAnnotations(swInstructions* Instructions, size_t PageIndex,
 		swInstructionsNoticeItem* NoticeItem = new swInstructionsNoticeItem(PageItem, Instructions, Notice);
 		NoticeItem->setPlainText(swFillPageCodes(Instructions, PageIndex, NoticeItem->toPlainText()));
 
+		// watermarks wrap in their font
+
+		if (Notice.Pages == swInstructionsImagePages::Watermark)
+		{
+			NoticeItem->setFont(Instructions->GetFontProperty(swInstructionsPropertyType::WatermarkFont, nullptr, 0));
+			NoticeItem->setDefaultTextColor(Instructions->GetColorProperty(swInstructionsPropertyType::WatermarkTextColor, nullptr, 0));
+		}
+
 		// wrap long notices at half width
 		const qreal TextWidth = BandRect.isNull() ? ContentRect.width() / 2.0 : BandRect.width();
 
@@ -2360,9 +2422,9 @@ static void swAddPageAnnotations(swInstructions* Instructions, size_t PageIndex,
 
 		if (Notice.Pages == swInstructionsImagePages::Watermark)
 		{
-			NoticeItem->setOpacity(Instructions->GetPageIntProperty(PageIndex, swInstructionsPropertyType::WatermarkOpacity) / 100.0);
 			NoticeItem->SetBoxStyle(Instructions->GetPageBoxStyle(PageIndex, swInstructionsBoxElement::Watermark));
 			NoticeItem->setZValue(-1.0);
+			swRotateWatermark(NoticeItem, Instructions);
 		}
 
 		swPlaceElement(NoticeItem, Instructions, BandRect.topLeft() + Notice.Position);
@@ -2477,6 +2539,7 @@ static void swAddPageImages(swInstructions* Instructions, const swInstructionsPa
 			{
 				ImageItem->setOpacity(Instructions->GetPageIntProperty(PageIndex, swInstructionsPropertyType::WatermarkOpacity) / 100.0);
 				ImageItem->SetBoxStyle(Instructions->GetPageBoxStyle(PageIndex, swInstructionsBoxElement::Watermark));
+				swRotateWatermark(ImageItem, Instructions);
 				ImageItem->setZValue(-1.0);
 				swPlaceElement(ImageItem, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, ImageItem->boundingRect().size(), Image.Placement));
 			}
@@ -2591,6 +2654,8 @@ void swUpdateInstructionsPageScene(swInstructions* Instructions, const swInstruc
 		swPlaceElement(PageNumberItem, Instructions, swGetPagePlacementPosition(Instructions, ContentRect, PageNumberItem->boundingRect().size(), Placement));
 	}
 
+	new swInstructionsGuideItem(ContentRect, PageItem);
+
 	if (Page->Type != swInstructionsPageType::Blank && Page->Type != swInstructionsPageType::BackCover)
 		swAddPageContent(Instructions, Page, Scene, PageItem, ContentRect);
 
@@ -2626,6 +2691,73 @@ void swLockInstructionsPage(swInstructions* Instructions, size_t PageIndex)
 	Instructions->LockPage(PageIndex, Positions);
 }
 
+// use to gather element boxes and layout areas
+static void swCollectBoundaries(const QGraphicsScene* Scene, const QTransform& Offset, std::vector<swInstructionsBoundaryBox>& Boxes, std::vector<QPolygonF>& LayoutEdges)
+{
+	for (const QGraphicsItem* Item : Scene->items(Qt::AscendingOrder))
+	{
+		if (!Item->isVisible())
+			continue;
+
+		const QTransform Transform = Item->sceneTransform() * Offset;
+
+		if (const swInstructionsGuideItem* GuideItem = dynamic_cast<const swInstructionsGuideItem*>(Item))
+			LayoutEdges.push_back(Transform.map(QPolygonF(GuideItem->GetRect())));
+		else if (const swInstructionsDividerItem* DividerItem = dynamic_cast<const swInstructionsDividerItem*>(Item))
+			LayoutEdges.push_back(Transform.map(QPolygonF(DividerItem->rect())));
+		else if (const swInstructionsFrameItem* FrameItem = dynamic_cast<const swInstructionsFrameItem*>(Item))
+			Boxes.push_back({ Transform, FrameItem->rect(), FrameItem->GetBoxStyle() });
+		else if (const swInstructionsBoxBase* BoxItem = dynamic_cast<const swInstructionsBoxBase*>(Item))
+			if (!Item->boundingRect().isEmpty())
+				Boxes.push_back({ Transform, Item->boundingRect(), BoxItem->GetBoxStyle() });
+	}
+}
+
+// a drawn copy of the paired page, clicked to edit it
+
+class swInstructionsSpreadItem : public QGraphicsItem
+{
+public:
+	swInstructionsSpreadItem(const QPicture& Picture, const QRectF& Rect, int Row)
+		: mPicture(Picture), mRect(Rect), mRow(Row)
+	{
+	}
+
+	int GetRow() const
+	{
+		return mRow;
+	}
+
+	QRectF boundingRect() const override
+	{
+		return mRect;
+	}
+
+	void paint(QPainter* Painter, const QStyleOptionGraphicsItem* Option, QWidget* Widget) override
+	{
+		Q_UNUSED(Option);
+		Q_UNUSED(Widget);
+
+		Painter->drawPicture(mRect.topLeft(), mPicture);
+	}
+
+protected:
+	QPicture mPicture;
+	QRectF mRect;
+	int mRow;
+};
+
+void swInstructionsPageWidget::SetPageSpread(swInstructionsPageSpread PageSpread)
+{
+	if (mPageSpread == PageSpread)
+		return;
+
+	mPageSpread = PageSpread;
+
+	if (mPage)
+		SetCurrentPage(mPage);
+}
+
 void swInstructionsPageWidget::SetCurrentPage(const swInstructionsPage* Page)
 {
 	QGraphicsScene* Scene = scene();
@@ -2643,9 +2775,38 @@ void swInstructionsPageWidget::SetCurrentPage(const swInstructionsPage* Page)
 	}
 
 	mDragItems.clear();
+	mPairBoxes.clear();
+	mPairLayoutEdges.clear();
 	mPage = Page;
 	mRebuildingPage = true;
 	swUpdateInstructionsPageScene(mInstructions, Page, Scene);
+
+	// pairs are 1 and 2, 3 and 4, the edited page stays at the origin
+
+	const size_t PageIndex = Page ? static_cast<size_t>(Page - mInstructions->mPages.data()) : 0;
+	const size_t PairIndex = PageIndex ^ 1;
+
+	if (Page && mPageSpread != swInstructionsPageSpread::Single && PairIndex < mInstructions->mPages.size())
+	{
+		QGraphicsScene PairScene;
+		swUpdateInstructionsPageScene(mInstructions, &mInstructions->mPages[PairIndex], &PairScene);
+
+		const QRectF PageRect = Scene->sceneRect();
+		const bool SideBySide = mPageSpread == swInstructionsPageSpread::SideBySide;
+		const qreal Gap = qMin(PageRect.width(), PageRect.height()) * 0.04;
+		const qreal Direction = PairIndex > PageIndex ? 1.0 : -1.0;
+		const QRectF PairRect = PageRect.translated(SideBySide ? Direction * (PageRect.width() + Gap) : 0.0, SideBySide ? 0.0 : Direction * (PageRect.height() + Gap));
+
+		QPicture Picture;
+		QPainter Painter(&Picture);
+		PairScene.render(&Painter, QRectF(QPointF(0.0, 0.0), PageRect.size()), PairScene.sceneRect());
+		Painter.end();
+
+		Scene->addItem(new swInstructionsSpreadItem(Picture, PairRect, static_cast<int>(PairIndex)));
+		swCollectBoundaries(&PairScene, QTransform::fromTranslate(PairRect.left(), PairRect.top()), mPairBoxes, mPairLayoutEdges);
+		Scene->setSceneRect(PageRect.united(PairRect));
+	}
+
 	FitPage();
 
 	// select a new pointer alone
@@ -2706,6 +2867,17 @@ int swInstructionsPageWidget::FindResizeHandle(const QPoint& Position, QGraphics
 
 void swInstructionsPageWidget::mousePressEvent(QMouseEvent* Event)
 {
+	// the paired page becomes the edited one
+
+	if (const swInstructionsSpreadItem* SpreadItem = dynamic_cast<const swInstructionsSpreadItem*>(itemAt(Event->pos())))
+	{
+		mDragStarted = false;
+		mResizeItem = nullptr;
+		emit PageClicked(SpreadItem->GetRow());
+		Event->accept();
+		return;
+	}
+
 	mPressPosition = Event->pos();
 	mDragStarted = false;
 
@@ -2741,13 +2913,20 @@ void swInstructionsPageWidget::mousePressEvent(QMouseEvent* Event)
 		const QRect HitRect(Event->pos() - QPoint(4, 4), QSize(9, 9));
 		std::optional<swInstructionsPageObject> Object;
 
+		// thin dividers win over the areas they cross
+
 		for (const QGraphicsItem* Item : items(HitRect))
 		{
-			if (Item->data(SW_OBJECT_DATA).isValid())
-			{
-				Object = static_cast<swInstructionsPageObject>(Item->data(SW_OBJECT_DATA).toInt());
+			if (!Item->data(SW_OBJECT_DATA).isValid())
+				continue;
+
+			const swInstructionsPageObject ItemObject = static_cast<swInstructionsPageObject>(Item->data(SW_OBJECT_DATA).toInt());
+
+			if (!Object || ItemObject == swInstructionsPageObject::Divider)
+				Object = ItemObject;
+
+			if (ItemObject == swInstructionsPageObject::Divider)
 				break;
-			}
 		}
 
 		mPropertiesWidget->PageClicked(mPage->Type, Object);
@@ -2906,9 +3085,17 @@ void swInstructionsPageWidget::RemoveSelectedElements()
 
 		if (Show != ShowTypes.end())
 		{
+			swInstructionsPropertyType ShowType = Show->second;
+
+			// the bill of materials hides its own
+			if (std::get<2>(Key) == 0 && ShowType == swInstructionsPropertyType::ShowStepNumber)
+				ShowType = swInstructionsPropertyType::ShowBillOfMaterialsTitle;
+			else if (std::get<2>(Key) == 0 && ShowType == swInstructionsPropertyType::PLIShowCounts)
+				ShowType = swInstructionsPropertyType::BillOfMaterialsShowCounts;
+
 			mInstructions->ResetElementOffset(Key);
 			mInstructions->SetElementSize(Key, QSizeF());
-			mInstructions->SetDefaultBool(Show->second, false);
+			mInstructions->SetDefaultBool(ShowType, false);
 		}
 		else if (std::get<0>(Key) == swInstructionsPlacementElement::Pointer)
 			mInstructions->RemovePointer(static_cast<int>(std::get<2>(Key)));
@@ -2917,6 +3104,24 @@ void swInstructionsPageWidget::RemoveSelectedElements()
 		else if (std::get<0>(Key) == swInstructionsPlacementElement::Image)
 			mInstructions->RemoveImage(static_cast<int>(std::get<2>(Key)));
 	}
+}
+
+// use to run through the pages
+void swInstructionsPageWidget::wheelEvent(QWheelEvent* Event)
+{
+	// fine wheels add up to one notch
+
+	mWheelDelta += Event->angleDelta().y();
+
+	while (qAbs(mWheelDelta) >= 120)
+	{
+		const int Direction = mWheelDelta > 0 ? -1 : 1;
+
+		mWheelDelta += Direction * 120;
+		emit PageScrolled(Direction);
+	}
+
+	Event->accept();
 }
 
 void swInstructionsPageWidget::contextMenuEvent(QContextMenuEvent* Event)
@@ -3434,6 +3639,19 @@ void swInstructionsPageWidget::mouseReleaseEvent(QMouseEvent* Event)
 	if (mSelectionPending)
 		QTimer::singleShot(0, this, &swInstructionsPageWidget::SelectionChanged);
 
+	// clicks reopen the selection groups
+
+	if (Event->button() == Qt::LeftButton && !mDragStarted && !mResizeItem)
+	{
+		QTimer::singleShot(0, this, [this]()
+		{
+			const QList<QGraphicsItem*> SelectedItems = scene()->selectedItems();
+
+			if (!SelectedItems.isEmpty())
+				mPropertiesWidget->SelectionChanged(SelectedItems.first(), true);
+		});
+	}
+
 	if (mResizeItem)
 	{
 		// keep the size, left and top edges move it
@@ -3529,7 +3747,73 @@ void swInstructionsPageWidget::drawForeground(QPainter* Painter, const QRectF& R
 		DrawGrid(Painter, Rect);
 
 	DrawElementBoxes(Painter);
+	DrawBoundaries(Painter);
 	DrawPointerGrid(Painter);
+}
+
+// use to outline the edges on both pages
+void swInstructionsPageWidget::DrawBoundaries(QPainter* Painter)
+{
+	const swInstructionsBoundaries Boundaries = mInstructions->GetElementBoundaries();
+	const bool ShowLayoutAreas = mInstructions->IsLayoutAreasShown();
+
+	if (Boundaries == swInstructionsBoundaries::Off && !ShowLayoutAreas)
+		return;
+
+	std::vector<swInstructionsBoundaryBox> Boxes = mPairBoxes;
+	std::vector<QPolygonF> LayoutEdges = mPairLayoutEdges;
+	swCollectBoundaries(scene(), QTransform(), Boxes, LayoutEdges);
+
+	Painter->save();
+	Painter->setBrush(Qt::NoBrush);
+
+	if (ShowLayoutAreas)
+	{
+		QPen LayoutPen(mInstructions->GetLayoutAreaColor(), 1.0);
+		LayoutPen.setCosmetic(true);
+		Painter->setPen(LayoutPen);
+
+		for (const QPolygonF& Edge : LayoutEdges)
+			Painter->drawPolygon(Edge);
+	}
+
+	QPen ElementPen(mInstructions->GetBoundaryEdgeColor(), 1.0);
+	ElementPen.setCosmetic(true);
+	QPen DashedPen = ElementPen;
+	DashedPen.setStyle(Qt::DashLine);
+	QPen BorderPen(mInstructions->GetBoundaryBorderColor(), 1.0);
+	BorderPen.setCosmetic(true);
+
+	for (const swInstructionsBoundaryBox& Box : Boxes)
+	{
+		if (Boundaries == swInstructionsBoundaries::Off)
+			break;
+
+		// box model rectangles from the outside in
+		const swInstructionsBoxStyle& BoxStyle = Box.Style;
+		const QRectF BorderRect = Box.Rect.adjusted(BoxStyle.Margin, BoxStyle.Margin, -BoxStyle.Margin, -BoxStyle.Margin);
+		const QRectF PaddingRect = BorderRect.adjusted(BoxStyle.BorderWidth, BoxStyle.BorderWidth, -BoxStyle.BorderWidth, -BoxStyle.BorderWidth);
+		const QRectF ContentRect = PaddingRect.adjusted(BoxStyle.Padding, BoxStyle.Padding, -BoxStyle.Padding, -BoxStyle.Padding);
+
+		Painter->setPen(ElementPen);
+		Painter->drawPolygon(Box.Transform.map(QPolygonF(Box.Rect)));
+
+		if (Boundaries == swInstructionsBoundaries::MarginPadding)
+		{
+			Painter->setPen(DashedPen);
+			Painter->drawPolygon(Box.Transform.map(QPolygonF(ContentRect)));
+		}
+		else if (Boundaries == swInstructionsBoundaries::EveryEdge)
+		{
+			Painter->drawPolygon(Box.Transform.map(QPolygonF(ContentRect)));
+			Painter->setPen(BorderPen);
+
+			for (const QRectF& EdgeRect : { BorderRect, PaddingRect })
+				Painter->drawPolygon(Box.Transform.map(QPolygonF(EdgeRect)));
+		}
+	}
+
+	Painter->restore();
 }
 
 // use to draw the grid on screen

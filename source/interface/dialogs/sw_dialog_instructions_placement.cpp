@@ -261,7 +261,7 @@ swInstructionsPropertyType swInstructionsPlacementWidget::GetPlacementType() con
 	switch (mElement)
 	{
 	case swInstructionsPlacementElement::StepNumber:
-		return swInstructionsPropertyType::StepNumberPlacement;
+		return std::get<2>(mElementKey) ? swInstructionsPropertyType::StepNumberPlacement : swInstructionsPropertyType::BillOfMaterialsTitlePlacement;
 
 	case swInstructionsPlacementElement::PartsList:
 		return swInstructionsPropertyType::PLIPlacement;
@@ -300,7 +300,7 @@ swInstructionsPropertyType swInstructionsPlacementWidget::GetPlacementType() con
 		return swInstructionsPropertyType::SubmodelPreviewPartCountPlacement;
 
 	case swInstructionsPlacementElement::PartsListCount:
-		return swInstructionsPropertyType::PLICountPlacement;
+		return std::get<2>(mElementKey) ? swInstructionsPropertyType::PLICountPlacement : swInstructionsPropertyType::BillOfMaterialsCountPlacement;
 
 	case swInstructionsPlacementElement::Notice:
 	case swInstructionsPlacementElement::Image:
@@ -317,7 +317,10 @@ swInstructionsPropertyType swInstructionsPlacementWidget::GetAnchorType() const
 	switch (mElement)
 	{
 	case swInstructionsPlacementElement::StepNumber:
-		return swInstructionsPropertyType::StepNumberAnchor;
+		if (std::get<2>(mElementKey))
+			return swInstructionsPropertyType::StepNumberAnchor;
+
+		break;
 
 	case swInstructionsPlacementElement::PartsList:
 		return swInstructionsPropertyType::PLIAnchor;
@@ -501,7 +504,7 @@ void swInstructionsPlacementWidget::UpdateControls()
 	switch (mElement)
 	{
 	case swInstructionsPlacementElement::StepNumber:
-		mElementLabel->setText(tr("Step Number"));
+		mElementLabel->setText(std::get<2>(mElementKey) ? tr("Step Number") : tr("BOM Title"));
 		break;
 
 	case swInstructionsPlacementElement::PartsList:
@@ -573,7 +576,7 @@ void swInstructionsPlacementWidget::UpdateControls()
 			Anchor = mInstructions->GetIntProperty(AnchorType, nullptr, 0);
 
 		const int OtherAnchor = static_cast<int>(mElement == swInstructionsPlacementElement::StepNumber ? swInstructionsPlacementAnchor::PartsList : swInstructionsPlacementAnchor::StepNumber);
-		const bool StepElement = mElement == swInstructionsPlacementElement::StepNumber || mElement == swInstructionsPlacementElement::PartsList;
+		const bool StepElement = (mElement == swInstructionsPlacementElement::StepNumber || mElement == swInstructionsPlacementElement::PartsList) && std::get<2>(mElementKey);
 
 		for (QAbstractButton* Button : mAnchorGroup->buttons())
 		{

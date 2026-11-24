@@ -551,6 +551,23 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 			}
 		}
 
+		if (Options.SaveResave)
+		{
+			// loading rewrites the instruction lines
+
+			mProject->GetInstructions();
+
+			const swResult<void> ResaveResult = mProject->SaveCopy(Options.SaveResaveName);
+
+			if (ResaveResult)
+				StdOut << tr("Saved '%1'.\n").arg(Options.SaveResaveName);
+			else
+			{
+				OutputFailed = true;
+				StdErr << ResaveResult.error() << '\n';
+			}
+		}
+
 		if (Options.SaveImage)
 		{
 			swModel* ActiveModel = ActiveView->GetModel();

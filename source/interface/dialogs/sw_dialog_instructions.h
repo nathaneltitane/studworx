@@ -34,6 +34,7 @@ protected slots:
 protected:
 	bool eventFilter(QObject* Object, QEvent* Event) override;
 	void closeEvent(QCloseEvent* Event) override;
+	void changeEvent(QEvent* Event) override;
 	void UpdatePageList();
 	void SnapPageListDock();
 	void SnapEditorDock();
@@ -76,4 +77,5 @@ protected:
 	QToolButton* mNextButton = nullptr;
 	QToolButton* mLastButton = nullptr;
 	swRangeSpinBox* mPageSpinBox = nullptr;
+	int mPageStep = 1;
 };

@@ -590,6 +590,10 @@ void swMainWindow::UpdateTitle()
 
 	setWindowFilePath(swGetActiveProject()->GetTitle());
 
+	// unsaved changes after a space, kde style
+
+	setWindowTitle(isWindowModified() ? swGetActiveProject()->GetTitle() + QLatin1String(" *") : swGetActiveProject()->GetTitle());
+
 	// unsaved model has no folder
 	mActions[SW_VIEW_TERMINAL_OPEN_MODEL_FOLDER]->setEnabled(!swGetActiveProject()->GetFileName().isEmpty());
 
@@ -600,6 +604,7 @@ void swMainWindow::UpdateTitle()
 void swMainWindow::UpdateModified(bool Modified)
 {
 	setWindowModified(Modified);
+	setWindowTitle(Modified ? swGetActiveProject()->GetTitle() + QLatin1String(" *") : swGetActiveProject()->GetTitle());
 
 	if (mInstructionsDialog)
 		mInstructionsDialog->setWindowModified(Modified);

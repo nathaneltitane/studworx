@@ -258,11 +258,11 @@ static const char swHTMLScript[] = R"(
 static std::vector<swInstructionsPropertyType> swGetHTMLOverrideColorTypes(int Row)
 {
 	// rows in the order of the export dialog, then box border and box background
-	static const swInstructionsPropertyType RowTypes[] = { swInstructionsPropertyType::PageBackgroundColor, swInstructionsPropertyType::CoverBackgroundColor, swInstructionsPropertyType::BillOfMaterialsBackgroundColor, swInstructionsPropertyType::CoverTitleColor, swInstructionsPropertyType::PLIThumbnailBackgroundColor, swInstructionsPropertyType::NoticeTextColor, swInstructionsPropertyType::FadeColor, swInstructionsPropertyType::HighlightColor, swInstructionsPropertyType::StepBackgroundColor, swInstructionsPropertyType::StepNumberColor, swInstructionsPropertyType::PageNumberColor, swInstructionsPropertyType::PLITextColor, swInstructionsPropertyType::StepDividerColor, swInstructionsPropertyType::PointerColor };
+	static const swInstructionsPropertyType RowTypes[] = { swInstructionsPropertyType::PageBackgroundColor, swInstructionsPropertyType::CoverBackgroundColor, swInstructionsPropertyType::BillOfMaterialsBackgroundColor, swInstructionsPropertyType::CoverTitleColor, swInstructionsPropertyType::NoticeTextColor, swInstructionsPropertyType::FadeColor, swInstructionsPropertyType::HighlightColor, swInstructionsPropertyType::StepBackgroundColor, swInstructionsPropertyType::StepNumberColor, swInstructionsPropertyType::PageNumberColor, swInstructionsPropertyType::PLITextColor, swInstructionsPropertyType::StepDividerColor, swInstructionsPropertyType::PointerColor };
 
 	// some rows also color the submodel pages, the author and the parts list title
 	if (Row < static_cast<int>(std::size(RowTypes)) && RowTypes[Row] == swInstructionsPropertyType::PageBackgroundColor)
-		return { RowTypes[Row], swInstructionsPropertyType::SubmodelBackgroundColor, swInstructionsPropertyType::BlankPageBackgroundColor };
+		return { RowTypes[Row], swInstructionsPropertyType::SubmodelBackgroundColor, swInstructionsPropertyType::AssemblyBackgroundColor, swInstructionsPropertyType::BlankPageBackgroundColor };
 
 	if (Row < static_cast<int>(std::size(RowTypes)) && RowTypes[Row] == swInstructionsPropertyType::CoverTitleColor)
 		return { RowTypes[Row], swInstructionsPropertyType::CoverAuthorColor, swInstructionsPropertyType::PartCountColor };
@@ -322,7 +322,12 @@ swHTMLExportOptions::swHTMLExportOptions(const Project* Project)
 		BackgroundColor.setAlpha(0);
 	StyleSheet = swGetProfileString(SW_PROFILE_HTML_STYLE_SHEET);
 
-	const QStringList ColorNames = swGetProfileStringList(SW_PROFILE_HTML_OVERRIDE_COLORS);
+	QStringList ColorNames = swGetProfileStringList(SW_PROFILE_HTML_OVERRIDE_COLORS);
+
+	// old lists held a thumbnail row fifth
+	if (ColorNames.size() == SW_HTML_OVERRIDE_COLOR_COUNT + 1)
+		ColorNames.removeAt(4);
+
 	const swInstructionsProperties DefaultProperties = swInstructions::CreateDefaultProperties();
 
 	// unsaved rows start from the instructions defaults
@@ -469,7 +474,7 @@ swResult<void> Project::ExportHTML(const swHTMLExportOptions& Options)
 		if (PartsList.empty())
 			return swResult<void>();
 
-		const swResult<QImage> Image = Model->GetPartsListImage(1024, 512, Step, SW_RGBA(255, 255, 255, 0), SW_RGBA(255, 255, 255, 0), QFont("Arial", 16), Qt::black, true);
+		const swResult<QImage> Image = Model->GetPartsListImage(1024, 512, Step, SW_RGBA(255, 255, 255, 0), QFont("Arial", 16), Qt::black, true);
 
 		if (!Image)
 			return swUnexpected(Image.error());

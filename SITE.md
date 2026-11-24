@@ -85,6 +85,7 @@ studworx model.ldr opens a model. The options below work without opening a windo
 | --bricklink-exceptions | Use a comma or tab separated file of parts and their BrickLink numbers in BrickLink exports |
 | --flatten | Replace every submodel at all depths with its parts and save the model, before any other export |
 | --undo | Undo every command line edit and save the model, to check that undo restores it |
+| --resave | Load the instruction settings and save the model, to check how older files load |
 | --export-wavefront, --export-3ds, --export-collada, --export-kmz, --export-csv, --export-bricklink, --export-html, --export-povray | Export Wavefront, 3D Studio, COLLADA, KMZ, CSV, BrickLink, HTML and POV-Ray files, each with an optional file name |
 | --kmz-geometry | Keep every part or only the visible surfaces in KMZ exports |
 | --export-pdf | Print the instruction pages to a PDF file, with an optional file name |

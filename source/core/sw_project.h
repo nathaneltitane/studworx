@@ -16,7 +16,7 @@ enum class swImageBackground;
 #define SW_HTML_CURRENT_ONLY  0x80
 
 // rows of the override color settings
-#define SW_HTML_OVERRIDE_COLOR_COUNT 16
+#define SW_HTML_OVERRIDE_COLOR_COUNT 15
 
 class swHTMLExportOptions
 {

@@ -326,6 +326,12 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Instructions", "ElementPaddingColor", SW_RGBA(147, 196, 125, 140)),        // SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR #93c47d8c
 	swProfileEntry("Instructions", "ElementAnchorColor", SW_RGBA(214, 51, 160, 255)),          // SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR #d633a0ff
 	swProfileEntry("Instructions", "RulerPointerColor", SW_RGBA(230, 40, 40, 255)),            // SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR #e62828ff
+	swProfileEntry("Instructions", "PageSpread", 0),                                           // SW_PROFILE_INSTRUCTIONS_PAGE_SPREAD
+	swProfileEntry("Instructions", "ElementBoundaries", 0),                                    // SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_BOUNDARIES
+	swProfileEntry("Instructions", "ShowLayoutAreas", 0),                                      // SW_PROFILE_INSTRUCTIONS_SHOW_LAYOUT_AREAS
+	swProfileEntry("Instructions", "BoundaryEdgeColor", SW_RGBA(255, 85, 127, 255)),           // SW_PROFILE_INSTRUCTIONS_BOUNDARY_EDGE_COLOR #ff557fff
+	swProfileEntry("Instructions", "BoundaryBorderColor", SW_RGBA(100, 200, 20, 255)),         // SW_PROFILE_INSTRUCTIONS_BOUNDARY_BORDER_COLOR #64c814ff
+	swProfileEntry("Instructions", "LayoutAreaColor", SW_RGBA(0, 170, 255, 255)),              // SW_PROFILE_INSTRUCTIONS_LAYOUT_AREA_COLOR #00aaffff
 	swProfileEntry("InstructionsDefaults", "PageWidth", 1008.0f),                              // SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_WIDTH
 	swProfileEntry("InstructionsDefaults", "PageHeight", 612.0f),                              // SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_HEIGHT
 	swProfileEntry("InstructionsDefaults", "MarginLeft", 36.0f),                               // SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_LEFT

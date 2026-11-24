@@ -725,6 +725,16 @@ static void swDrawPaintedIcon(QPainter* Painter, swPaintedIcon Icon, const QSize
 		Draw.Stroke(swCreateIconLine({ { 9.88, 19.62 }, { 12, 17.5 }, { 14.12, 19.62 } }));
 		Draw.Stroke(swCreateIconLine({ { 17.54, 17.65 }, { 16.76, 14.75 }, { 19.66, 13.97 } }));
 		break;
+
+	case swPaintedIcon::PageSideBySide:
+		Draw.Stroke(swCreateIconRect(3, 5, 11, 19, 1));
+		Draw.Stroke(swCreateIconRect(13, 5, 21, 19, 1));
+		break;
+
+	case swPaintedIcon::PageStacked:
+		Draw.Stroke(swCreateIconRect(5, 3, 19, 11, 1));
+		Draw.Stroke(swCreateIconRect(5, 13, 19, 21, 1));
+		break;
 	}
 
 	Painter->restore();

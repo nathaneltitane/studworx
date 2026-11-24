@@ -205,6 +205,51 @@ swInstructionsPropertiesWidget::swInstructionsPropertiesWidget(QWidget* Parent, 
 		ShowActions.emplace_back(Action, ShowOption.Getter);
 	}
 
+	// thin lines on screen only
+	QMenu* BoundariesMenu = OptionsMenu->addMenu(tr("Show Boundaries"));
+	QActionGroup* BoundariesGroup = new QActionGroup(BoundariesMenu);
+
+	const std::pair<swInstructionsBoundaries, QString> BoundaryNames[] =
+	{
+		{ swInstructionsBoundaries::Off, tr("No Element Edges") },
+		{ swInstructionsBoundaries::OuterEdge, tr("Outer Edge") },
+		{ swInstructionsBoundaries::MarginPadding, tr("Margin and Padding") },
+		{ swInstructionsBoundaries::EveryEdge, tr("Every Edge") }
+	};
+
+	for (const std::pair<swInstructionsBoundaries, QString>& BoundaryName : BoundaryNames)
+	{
+		QAction* Action = BoundariesMenu->addAction(BoundaryName.second);
+		Action->setCheckable(true);
+		Action->setData(static_cast<int>(BoundaryName.first));
+		BoundariesGroup->addAction(Action);
+	}
+
+	BoundariesMenu->actions().value(1)->setToolTip(tr("One red line around each element, margin included"));
+	BoundariesMenu->actions().value(2)->setToolTip(tr("A red line at the margin edge and a dashed one at the padding edge of each element"));
+	BoundariesMenu->actions().value(3)->setToolTip(tr("Red lines at the margin, border and padding edges of each element"));
+
+	connect(BoundariesGroup, &QActionGroup::triggered, mInstructions, [this](QAction* Action)
+	{
+		mInstructions->SetElementBoundaries(static_cast<swInstructionsBoundaries>(Action->data().toInt()));
+	});
+
+	BoundariesMenu->addSeparator();
+
+	QAction* LayoutAreasAction = BoundariesMenu->addAction(tr("Layout Areas"));
+	LayoutAreasAction->setToolTip(tr("Blue lines around the content area, step areas, model areas, parts strips and dividers"));
+	LayoutAreasAction->setCheckable(true);
+	connect(LayoutAreasAction, &QAction::toggled, mInstructions, &swInstructions::SetShowLayoutAreas);
+
+	connect(BoundariesMenu, &QMenu::aboutToShow, this, [this, BoundariesGroup, LayoutAreasAction]()
+	{
+		QSignalBlocker Blocker(LayoutAreasAction);
+		LayoutAreasAction->setChecked(mInstructions->IsLayoutAreasShown());
+
+		for (QAction* Action : BoundariesGroup->actions())
+			Action->setChecked(Action->data().toInt() == static_cast<int>(mInstructions->GetElementBoundaries()));
+	});
+
 	OptionsMenu->addSeparator();
 
 	// document units replace value units
@@ -462,15 +507,13 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	});
 
 	AddRow(CategoryIndex::Cover, {
-		CreateToggleEditor(swInstructionsPropertyType::ShowFinalModelPage, tr("Show Final Model Page"), tr("Close the steps with a page showing the finished model on its own."))
+		CreateToggleEditor(swInstructionsPropertyType::ShowFinalModelPage, tr("Show Final Model Page"), tr("Close the steps with a page showing the finished model on its own, left out while the last page already shows it."))
 	});
 
 	AddRow(CategoryIndex::Cover, {
 		CreateToggleEditor(swInstructionsPropertyType::ShowCoverBlankPage, tr("Blank Page After Cover"), tr("Follow the cover with a blank page, like the inside of a printed cover."))
 	});
 
-	CreateColorEditor(swInstructionsPropertyType::CoverBackgroundColor, tr("Cover Background"), tr("Color filling the whole cover page, margins included."));
-	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverBackgroundColor);
 
 	CreateTextEditor(swInstructionsPropertyType::CoverTitleText, tr("Cover Title"), tr("Title on the cover, empty for the model description or name."), false);
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleText);
@@ -520,14 +563,22 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	CreateChoiceEditor(swInstructionsPropertyType::PartCountVerticalAlignment, tr("Part Count Vertical Alignment"), tr("Line up the part count on the cover and the bill of materials at the top, middle or bottom of a box with Edit Size."), { tr("Top"), tr("Middle"), tr("Bottom") });
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::PartCountVerticalAlignment);
 
-	AddCategory(CategoryIndex::Page, tr("Page"), tr("<p><b>Page</b></p><p>The background and the number of the step and blank pages. The background applies to all these pages, or only to the current page when it has its own, the cover and the bill of materials have their own backgrounds. The cover and blank pages are not numbered unless all pages are. Drag the number or use the Placement panel to move it on all pages.</p>"));
+	AddCategory(CategoryIndex::Page, tr("Page"), tr("<p><b>Page</b></p><p>The background and the number of the step and blank pages. The background applies to all these pages, or only to the current page when it has its own, the cover and the bill of materials have their own backgrounds here too. The cover and blank pages are not numbered unless all pages are. Drag the number or use the Placement panel to move it on all pages.</p>"));
 
-	CreateColorEditor(swInstructionsPropertyType::PageBackgroundColor, tr("Page Background"), tr("Color filling the whole page of main model steps, margins included."));
-	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::PageBackgroundColor);
-	CreateColorEditor(swInstructionsPropertyType::SubmodelBackgroundColor, tr("Submodel Background"), tr("Color filling the whole page of submodel steps, margins included."));
-	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::SubmodelBackgroundColor);
+	CreateColorEditor(swInstructionsPropertyType::CoverBackgroundColor, tr("Cover Background"), tr("Color filling the whole cover page, margins included."));
+	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::CoverBackgroundColor);
 	CreateColorEditor(swInstructionsPropertyType::BlankPageBackgroundColor, tr("Blank Page Background"), tr("Color filling the whole of every blank page, margins included."));
 	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::BlankPageBackgroundColor);
+	CreateColorEditor(swInstructionsPropertyType::SubmodelBackgroundColor, tr("Submodel Background"), tr("Color filling the whole page of submodel steps, margins included."));
+	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::SubmodelBackgroundColor);
+	CreateColorEditor(swInstructionsPropertyType::AssemblyBackgroundColor, tr("Assembly Background"), tr("Color filling the whole page where two or more models come together, margins included, clear to follow the page."));
+	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::AssemblyBackgroundColor);
+	CreateColorEditor(swInstructionsPropertyType::PageBackgroundColor, tr("Page Background"), tr("Color filling the whole page of main model steps, margins included."));
+	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::PageBackgroundColor);
+	CreateColorEditor(swInstructionsPropertyType::CompletionBackgroundColor, tr("Completion Background"), tr("Color behind the finished main model, filling its own page or only its box on a steps page, clear to follow the page, a Completion box background goes first."));
+	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::CompletionBackgroundColor);
+	CreateColorEditor(swInstructionsPropertyType::BillOfMaterialsBackgroundColor, tr("BOM Background"), tr("Color filling the whole bill of materials page, margins included."));
+	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::BillOfMaterialsBackgroundColor);
 
 	// background for all or current page
 	mBackgroundPageButton = new QToolButton(this);
@@ -676,9 +727,17 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		AddRow(Category, { ApplyAllButton });
 	}
 
-	AddCategory(CategoryIndex::Watermark, tr("Watermark"), tr("<p><b>Watermark</b></p><p>Text or an image behind the page content, right click the page to add one. The opacity sets how strongly it shows, its box, border and background are set in the Box group.</p>"));
+	AddCategory(CategoryIndex::Watermark, tr("Watermark"), tr("<p><b>Watermark</b></p><p>Text or an image behind the page content, right click the page to add one. The text color alpha sets how strongly text shows, Image Opacity how strongly an image shows, its box, border and background are set in the Box group.</p>"));
 
-	CreatePercentEditor(swInstructionsPropertyType::WatermarkOpacity, tr("Watermark Opacity"), tr("How strongly the watermark shows, 100 percent is solid."), 1, 100);
+	CreateFontEditor(swInstructionsPropertyType::WatermarkFont, tr("Watermark Font"), tr("Font of the watermark text."));
+	AddEditorRow(CategoryIndex::Watermark, swInstructionsPropertyType::WatermarkFont);
+	CreateColorEditor(swInstructionsPropertyType::WatermarkTextColor, tr("Watermark Text Color"), tr("Color of the watermark text, its alpha sets how strongly the text shows."));
+	AddEditorRow(CategoryIndex::Watermark, swInstructionsPropertyType::WatermarkTextColor);
+	QSpinBox* RotationSpinBox = CreatePercentEditor(swInstructionsPropertyType::WatermarkRotation, tr("Watermark Rotation"), tr("Turn every watermark around its center, in degrees."), -180, 180);
+	RotationSpinBox->setSingleStep(15);
+	mEditors[static_cast<int>(swInstructionsPropertyType::WatermarkRotation)].SymbolButton->setText(QStringLiteral("°"));
+	AddEditorRow(CategoryIndex::Watermark, swInstructionsPropertyType::WatermarkRotation);
+	CreatePercentEditor(swInstructionsPropertyType::WatermarkOpacity, tr("Image Opacity"), tr("How strongly the watermark image shows, 100 percent is solid."), 1, 100);
 	AddEditorRow(CategoryIndex::Watermark, swInstructionsPropertyType::WatermarkOpacity);
 
 	mWatermarkPageButton = new QToolButton(this);
@@ -700,10 +759,15 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 
 	AddRow(CategoryIndex::Watermark, { mWatermarkPageButton });
 
-	AddCategory(CategoryIndex::BillOfMaterials, tr("Bill of Materials"), tr("<p><b>Bill of Materials</b></p><p>The last page, listing every part of the model. It uses the Parts List settings, under a Parts List title in its own font and color, with the box of the step numbers.</p>"));
+	AddCategory(CategoryIndex::BillOfMaterials, tr("Bill of Materials"), tr("<p><b>Bill of Materials</b></p><p>The last page, listing every part of the model under a Parts List title. Its title, list, quantities and part count have their own settings here and their own boxes in the Box group, so they never change the steps.</p>"));
 
 	AddRow(CategoryIndex::BillOfMaterials, {
 		CreateToggleEditor(swInstructionsPropertyType::ShowBillOfMaterials, tr("Show Bill of Materials"), tr("End the instructions with a page listing every part of the model."))
+	});
+
+	AddRow(CategoryIndex::BillOfMaterials, {
+		CreateToggleEditor(swInstructionsPropertyType::ShowBillOfMaterialsTitle, tr("Show BOM Title"), tr("Show the Parts List title above the bill of materials.")),
+		CreateToggleEditor(swInstructionsPropertyType::BillOfMaterialsShowCounts, tr("Show Part Counts"), tr("Show how many of each part the bill of materials needs."))
 	});
 
 	AddRow(CategoryIndex::BillOfMaterials, {
@@ -718,8 +782,6 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		CreateToggleEditor(swInstructionsPropertyType::ShowBillOfMaterialsBlankPage, tr("Blank Page Before Bill of Materials"), tr("Precede the bill of materials with a blank page."))
 	});
 
-	CreateColorEditor(swInstructionsPropertyType::BillOfMaterialsBackgroundColor, tr("BOM Background"), tr("Color filling the whole bill of materials page, margins included."));
-	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsBackgroundColor);
 	CreateTextEditor(swInstructionsPropertyType::BillOfMaterialsTitleText, tr("BOM Title"), tr("Title above the bill of materials, empty for Parts List."), false);
 	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsTitleText);
 	CreateTextEditor(swInstructionsPropertyType::BillOfMaterialsTitleFile, tr("BOM Title File"), tr("Text file holding the bill of materials title, used instead of the typed title, relative to the model file."), true);
@@ -733,7 +795,23 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	CreateChoiceEditor(swInstructionsPropertyType::BillOfMaterialsTitleVerticalAlignment, tr("BOM Title Vertical Alignment"), tr("Line up the Parts List title at the top, middle or bottom of a box with Edit Size."), { tr("Top"), tr("Middle"), tr("Bottom") });
 	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsTitleVerticalAlignment);
 
-	AddCategory(CategoryIndex::PageLayout, tr("Steps per Page"), tr("<p><b>Steps per Page</b></p><p>The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model. The final model has its own box, with margin, padding, border, corner radius and background, set in the Box group.</p>"));
+	// choices follow the sort order
+	CreateChoiceEditor(swInstructionsPropertyType::BillOfMaterialsSortOrder, tr("BOM List Order"), tr("Order of the parts in the bill of materials."), { tr("Sort by Color"), tr("Sort by Name"), tr("Sort by Part ID") });
+	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsSortOrder);
+
+	// choices follow layout and alignment
+	CreateChoiceEditor(swInstructionsPropertyType::BillOfMaterialsLayout, tr("BOM List Layout"), tr("Line the parts of the bill of materials up in rows or in columns."), { tr("Rows"), tr("Columns") });
+	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsLayout);
+	CreateChoiceEditor(swInstructionsPropertyType::BillOfMaterialsAlignment, tr("BOM Line Reference"), tr("Thumbnail edge the parts of the bill of materials line up on."), { tr("Top"), tr("Middle"), tr("Bottom") });
+	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsAlignment);
+	CreateFontEditor(swInstructionsPropertyType::BillOfMaterialsFont, tr("BOM List Font"), tr("Font of the part counts and part IDs of the bill of materials."));
+	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsFont);
+	CreateColorEditor(swInstructionsPropertyType::BillOfMaterialsTextColor, tr("BOM List Text Color"), tr("Color of the part counts and part IDs of the bill of materials."));
+	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsTextColor);
+	CreateLengthEditor(swInstructionsPropertyType::BillOfMaterialsThumbnailSize, tr("BOM Thumbnail Size"), tr("Size each part of the bill of materials is drawn at, larger thumbnails show larger parts."), 32, 2048);
+	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsThumbnailSize);
+
+	AddCategory(CategoryIndex::PageLayout, tr("Steps per Page"), tr("<p><b>Steps per Page</b></p><p>The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model, a full last page already ends on it, and the separate final model page is then left out. The final model has its own box, with margin, padding, border, corner radius and background, set in the Box group, its background takes the Page Background color until you pick your own.</p>"));
 
 	std::vector<QWidget*> PresetButtons;
 
@@ -799,7 +877,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 
 	mFinalModelButton = new QToolButton(this);
 	mFinalModelButton->setText(tr("Show Final Model"));
-	mFinalModelButton->setToolTip(tr("Show the finished model in the room left on the page after the last step of a model."));
+	mFinalModelButton->setToolTip(tr("Show the finished model in the room left on the page after the last step of a model, in place of the final model page."));
 	mFinalModelButton->setWhatsThis(mFinalModelButton->toolTip());
 	mFinalModelButton->setCheckable(true);
 	mFinalModelButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
@@ -823,10 +901,10 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddRow(CategoryIndex::PageLayout, { mFinalModelButton });
 	AddRow(CategoryIndex::PageLayout, { ApplyAllButton });
 
-	AddCategory(CategoryIndex::Step, tr("Step Number"), tr("<p><b>Step Number</b></p><p>The step number and the area of each step, which has its own box in the Box group. The bill of materials shows a Parts List title in its place.</p>"));
+	AddCategory(CategoryIndex::Step, tr("Step Number"), tr("<p><b>Step Number</b></p><p>The step number and the area of each step, which has its own box in the Box group.</p>"));
 
 	AddRow(CategoryIndex::Step, {
-		CreateToggleEditor(swInstructionsPropertyType::ShowStepNumber, tr("Show Step Number"), tr("Show the number of each step in its top left corner, and the Parts List title of the bill of materials."))
+		CreateToggleEditor(swInstructionsPropertyType::ShowStepNumber, tr("Show Step Number"), tr("Show the number of each step in its top left corner."))
 	});
 
 	CreateFontEditor(swInstructionsPropertyType::StepNumberFont, tr("Step Number Font"), tr("Font of the step numbers."));
@@ -838,11 +916,15 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	CreateChoiceEditor(swInstructionsPropertyType::StepNumberVerticalAlignment, tr("Step Number Vertical Alignment"), tr("Line up the step numbers at the top, middle or bottom of a box with Edit Size."), { tr("Top"), tr("Middle"), tr("Bottom") });
 	AddEditorRow(CategoryIndex::Step, swInstructionsPropertyType::StepNumberVerticalAlignment);
 
-	AddCategory(CategoryIndex::PartsList, tr("Parts List"), tr("<p><b>Parts List</b></p><p>The list of parts added in each step. The bill of materials uses the same settings.</p>"));
+	AddCategory(CategoryIndex::PartsList, tr("Parts List"), tr("<p><b>Parts List</b></p><p>The list of parts added in each step. Reserve Parts Area keeps a strip of the step for it, on the side where it is placed, like a band, and the model fits in the rest. The step number shares the strip when it sits beside the list.</p>"));
 
 	AddRow(CategoryIndex::PartsList, {
 		CreateToggleEditor(swInstructionsPropertyType::ShowStepPLI, tr("Show Parts List"), tr("Show the parts added in each step next to its number.")),
 		CreateToggleEditor(swInstructionsPropertyType::PLIShowCounts, tr("Show Part Counts"), tr("Show how many of each part are needed."))
+	});
+
+	AddRow(CategoryIndex::PartsList, {
+		CreateToggleEditor(swInstructionsPropertyType::PLIReserveArea, tr("Reserve Parts Area"), tr("Keep a strip of the step for the parts list and the step number beside it, on the side it is placed, the model fits in the rest and never runs under them."))
 	});
 
 	// choices follow the sort order
@@ -860,15 +942,13 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddEditorRow(CategoryIndex::PartsList, swInstructionsPropertyType::PLITextColor);
 	CreateLengthEditor(swInstructionsPropertyType::PLIThumbnailSize, tr("Thumbnail Size"), tr("Size each part is drawn at, larger thumbnails show larger parts."), 32, 2048);
 	AddEditorRow(CategoryIndex::PartsList, swInstructionsPropertyType::PLIThumbnailSize);
-	CreateColorEditor(swInstructionsPropertyType::PLIThumbnailBackgroundColor, tr("Thumbnail Background"), tr("Color behind each part and its count, transparent draws none."));
-	AddEditorRow(CategoryIndex::PartsList, swInstructionsPropertyType::PLIThumbnailBackgroundColor);
 
 	// thumbnails for all or current page
 	mThumbnailPageButton = new QToolButton(this);
 	mThumbnailPageButton->setText(tr("Thumbnails on This Page Only"));
 	mThumbnailPageButton->setCheckable(true);
 	mThumbnailPageButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
-	mThumbnailPageButton->setToolTip(tr("Give this page its own thumbnail size and background, unchecked it follows all pages."));
+	mThumbnailPageButton->setToolTip(tr("Give this page its own thumbnail size, unchecked it follows all pages."));
 	mThumbnailPageButton->setWhatsThis(mThumbnailPageButton->toolTip());
 	mThumbnailPageButton->setAccessibleName(mThumbnailPageButton->text());
 	swSetupPanelButton(mThumbnailPageButton);
@@ -877,17 +957,16 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 
 	AddRow(CategoryIndex::PartsList, { mThumbnailPageButton });
 
-	mThumbnailApplyAllButton = CreateApplyAllButton(tr("Use the thumbnail size and background of this page on every page."));
+	mThumbnailApplyAllButton = CreateApplyAllButton(tr("Use the thumbnail size of this page on every page."));
 
 	connect(mThumbnailApplyAllButton, &QToolButton::clicked, this, [this]()
 	{
 		mInstructions->ApplyPageToAllPages(mPageIndex, swInstructionsPropertyType::PLIThumbnailSize);
-		mInstructions->ApplyPageToAllPages(mPageIndex, swInstructionsPropertyType::PLIThumbnailBackgroundColor);
 	});
 
 	AddRow(CategoryIndex::PartsList, { mThumbnailApplyAllButton });
 
-	AddCategory(CategoryIndex::Divider, tr("Divider"), tr("<p><b>Divider</b></p><p>The lines between neighboring steps. Horizontal and Vertical hide the lines in one direction, for example where page colors already split the page. The margin keeps the line ends away from the page margins, the padding keeps the steps away from the lines.</p>"));
+	AddCategory(CategoryIndex::Divider, tr("Divider"), tr("<p><b>Divider</b></p><p>The lines between neighboring steps. Horizontal and Vertical hide the lines in one direction, for example where page colors already split the page, At Final Model hides the lines along the final model. The margin keeps the line ends away from the page margins, the padding keeps the steps away from the lines.</p>"));
 
 	AddRow(CategoryIndex::Divider, {
 		CreateToggleEditor(swInstructionsPropertyType::ShowStepDividers, tr("Show Step Dividers"), tr("Draw lines between neighboring steps.")),
@@ -899,14 +978,18 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		CreateToggleEditor(swInstructionsPropertyType::StepDividerVertical, tr("Vertical"), tr("Draw the lines between steps side by side."))
 	});
 
-	CreateColorEditor(swInstructionsPropertyType::StepDividerColor, tr("Divider Color"), tr("Color of the lines between steps."));
-	AddEditorRow(CategoryIndex::Divider, swInstructionsPropertyType::StepDividerColor);
-	CreateLengthEditor(swInstructionsPropertyType::StepDividerWidth, tr("Divider Width"), tr("Width of the lines between steps."), 1, 72, 0.1);
-	AddEditorRow(CategoryIndex::Divider, swInstructionsPropertyType::StepDividerWidth);
+	AddRow(CategoryIndex::Divider, {
+		CreateToggleEditor(swInstructionsPropertyType::StepDividerFinalModel, tr("At Final Model"), tr("Draw the lines along the final model, off leaves them out where its box already splits the page."))
+	});
+
 	CreateLengthEditor(swInstructionsPropertyType::StepDividerMargin, tr("Divider Margin"), tr("Space between the line ends and the page margins."), 0, 144, 0.25);
 	AddEditorRow(CategoryIndex::Divider, swInstructionsPropertyType::StepDividerMargin);
 	CreateLengthEditor(swInstructionsPropertyType::StepDividerPadding, tr("Divider Padding"), tr("Space between the lines and the steps on each side."), 0, 144, 0.25);
 	AddEditorRow(CategoryIndex::Divider, swInstructionsPropertyType::StepDividerPadding);
+	CreateLengthEditor(swInstructionsPropertyType::StepDividerWidth, tr("Divider Width"), tr("Width of the lines between steps."), 1, 72, 0.1);
+	AddEditorRow(CategoryIndex::Divider, swInstructionsPropertyType::StepDividerWidth);
+	CreateColorEditor(swInstructionsPropertyType::StepDividerColor, tr("Divider Color"), tr("Color of the lines between steps."));
+	AddEditorRow(CategoryIndex::Divider, swInstructionsPropertyType::StepDividerColor);
 
 	AddCategory(CategoryIndex::Notice, tr("Notice"), tr("<p><b>Notice</b></p><p>Free text written on a page to point out something. Right-click the page and choose Add Notice to write one, double-click it to edit its text. Drag it, lock it in place or give it pointers like any other element.</p>"));
 
@@ -1001,12 +1084,19 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		});
 	}
 
-	AddCategory(CategoryIndex::Box, tr("Box"), tr("<p><b>Box</b></p><p>The space and border around each element. The margin keeps other elements away outside the border, the padding keeps the border away from the content and the background fills inside the border. The final model, step areas, bands and watermark are boxes too. Pointers leave the border. The step and cover models also set their size here, fitted to their box until a size is set. Choose the element to edit, selecting an element on the page chooses it.</p>"));
+	AddCategory(CategoryIndex::Box, tr("Box"), tr("<p><b>Box</b></p><p>The space and border around each element. The margin keeps other elements away outside the border, the padding keeps the border away from the content and the background fills inside the border. The final model, the completion box of the finished main model, step areas, bands and watermark are boxes too. Pointers leave the border. The step and cover models also set their size here, fitted to their box until a size is set. Choose the element to edit, selecting an element on the page chooses it.</p>"));
 
 	// choices follow the box elements
 	mBoxElementComboBox = new QComboBox(this);
-	mBoxElementComboBox->addItems({ tr("Step Model"), tr("Step Number"), tr("Parts List"), tr("Page Number"), tr("Cover Title"), tr("Cover Author"), tr("Cover Model"), tr("Notice"), tr("Part Count"), tr("Submodel Preview"), tr("Image"), tr("Parts List Quantity"), tr("Final Model"), tr("Step Area"), tr("Header"), tr("Footer"), tr("Left Band"), tr("Right Band"), tr("Watermark") });
-	mBoxElementComboBox->setToolTip(tr("Choose the element whose box is edited, the parts list box is also the bill of materials box."));
+	mBoxElementComboBox->addItems({ tr("Step Model"), tr("Step Number"), tr("Parts List"), tr("Page Number"), tr("Cover Title"), tr("Cover Author"), tr("Cover Model"), tr("Notice"), tr("Part Count"), tr("Submodel Preview"), tr("Image"), tr("Parts List Quantity"), tr("Final Model"), tr("Step Area"), tr("Header"), tr("Footer"), tr("Left Band"), tr("Right Band"), tr("Watermark"), tr("BOM Title"), tr("BOM Parts List"), tr("BOM Quantity"), tr("BOM Part Count") });
+
+	// items carry their element, completion follows final model
+
+	for (int Index = 0; Index < mBoxElementComboBox->count(); Index++)
+		mBoxElementComboBox->setItemData(Index, Index);
+
+	mBoxElementComboBox->insertItem(static_cast<int>(swInstructionsBoxElement::FinalModel) + 1, tr("Completion"), static_cast<int>(swInstructionsBoxElement::Completion));
+	mBoxElementComboBox->setToolTip(tr("Choose the element whose box is edited."));
 	mBoxElementComboBox->setWhatsThis(mBoxElementComboBox->toolTip());
 	mBoxElementComboBox->setAccessibleName(tr("Element"));
 	swSetupPanelEdit(mBoxElementComboBox);
@@ -1015,7 +1105,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	connect(mBoxElementComboBox, qOverload<int>(&QComboBox::currentIndexChanged), this, [this](int Index)
 	{
 		if (Index >= 0)
-			SetBoxElement(static_cast<swInstructionsBoxElement>(Index));
+			SetBoxElement(static_cast<swInstructionsBoxElement>(mBoxElementComboBox->itemData(Index).toInt()));
 	});
 
 	for (int ElementIndex = 0; ElementIndex < static_cast<int>(swInstructionsBoxElement::Count); ElementIndex++)
@@ -1023,7 +1113,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		const swInstructionsBoxTypes BoxTypes = swGetBoxTypes(static_cast<swInstructionsBoxElement>(ElementIndex));
 		std::vector<QWidget*>& Rows = mBoxRows[ElementIndex];
 
-		// model sizes lead their boxes, fitted until set
+		// model sizes follow their boxes, fitted until set
 
 		auto AddModelSizeRows = [this, &Rows](swInstructionsPropertyType Type, const QString& ToolTip)
 		{
@@ -1048,6 +1138,19 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 
 			Rows.push_back(AddRow(CategoryIndex::Box, { FitButton }));
 		};
+
+		CreateLengthEditor(BoxTypes.Margin, tr("Margin"), tr("Space outside the border."), 0, 288, 0.5);
+		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.Margin)->parentWidget());
+		CreateLengthEditor(BoxTypes.Padding, tr("Padding"), tr("Space between the border and the content, filled with the background."), 0, 288, 0.5);
+		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.Padding)->parentWidget());
+		CreateLengthEditor(BoxTypes.BorderWidth, tr("Border Width"), tr("Width of the line around the element, 0 draws no line."), 0, 72, 0.1);
+		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.BorderWidth)->parentWidget());
+		CreateLengthEditor(BoxTypes.CornerRadius, tr("Corner Radius"), tr("Roundness of the box corners, 0 keeps them square."), 0, 72, 0.5);
+		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.CornerRadius)->parentWidget());
+		CreateColorEditor(BoxTypes.BorderColor, tr("Border Color"), tr("Color of the line around the element."));
+		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.BorderColor)->parentWidget());
+		CreateColorEditor(BoxTypes.BackgroundColor, tr("Background"), tr("Color filling the whole element, margin and padding included, transparent shows what lies behind."));
+		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.BackgroundColor)->parentWidget());
 
 		if (ElementIndex == static_cast<int>(swInstructionsBoxElement::StepImage))
 		{
@@ -1086,19 +1189,6 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		{
 			AddModelSizeRows(swInstructionsPropertyType::CoverImageSize, tr("Longest side of the cover model, larger sizes are trimmed to its space."));
 		}
-
-		CreateLengthEditor(BoxTypes.Margin, tr("Margin"), tr("Space outside the border."), 0, 288, 0.5);
-		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.Margin)->parentWidget());
-		CreateLengthEditor(BoxTypes.Padding, tr("Padding"), tr("Space between the border and the content, filled with the background."), 0, 288, 0.5);
-		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.Padding)->parentWidget());
-		CreateLengthEditor(BoxTypes.BorderWidth, tr("Border Width"), tr("Width of the line around the element, 0 draws no line."), 0, 72, 0.1);
-		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.BorderWidth)->parentWidget());
-		CreateLengthEditor(BoxTypes.CornerRadius, tr("Corner Radius"), tr("Roundness of the box corners, 0 keeps them square."), 0, 72, 0.5);
-		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.CornerRadius)->parentWidget());
-		CreateColorEditor(BoxTypes.BorderColor, tr("Border Color"), tr("Color of the line around the element."));
-		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.BorderColor)->parentWidget());
-		CreateColorEditor(BoxTypes.BackgroundColor, tr("Background"), tr("Color filling the whole element, margin and padding included, transparent shows what lies behind."));
-		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.BackgroundColor)->parentWidget());
 	}
 
 	AddCategory(CategoryIndex::Pointer, tr("Pointer"), tr("<p><b>Pointer</b></p><p>A pointer leaves the border of an element to point at a part, a step or a notice. Right-click an element and choose Add Pointer, then drag its tip onto a part of a step model, another element or any point of the page, the tip follows what it points at. Right-click a pointer to choose the anchor it leaves from, or its own style and tip.</p>"));
@@ -1519,7 +1609,7 @@ void swInstructionsPropertiesWidget::AddOptionsAction(QAction* Action)
 	RowLayout->insertWidget(RowLayout->count() - 1, Button, 1);
 }
 
-void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
+void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem, bool Clicked)
 {
 	// remember the notice for its size
 	mNoticeKey.reset();
@@ -1647,12 +1737,15 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 		break;
 
 	case FocusType::StepNumber:
-		SetBoxElement(swInstructionsBoxElement::StepNumber);
+		SetBoxElement(Step ? swInstructionsBoxElement::StepNumber : swInstructionsBoxElement::BillOfMaterialsTitle);
 		break;
 
 	case FocusType::PartsList:
-	case FocusType::BillOfMaterials:
 		SetBoxElement(QuantityFocus ? swInstructionsBoxElement::PartsListQuantity : swInstructionsBoxElement::PartsList);
+		break;
+
+	case FocusType::BillOfMaterials:
+		SetBoxElement(QuantityFocus ? swInstructionsBoxElement::BillOfMaterialsQuantity : swInstructionsBoxElement::BillOfMaterialsList);
 		break;
 
 	case FocusType::PageNumber:
@@ -1672,9 +1765,12 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 		break;
 
 	case FocusType::CoverPartCount:
-	case FocusType::BillOfMaterialsPartCount:
 	case FocusType::PagePartCount:
 		SetBoxElement(swInstructionsBoxElement::PartCount);
+		break;
+
+	case FocusType::BillOfMaterialsPartCount:
+		SetBoxElement(swInstructionsBoxElement::BillOfMaterialsPartCount);
 		break;
 
 	case FocusType::SubmodelPreview:
@@ -1716,11 +1812,11 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 		break;
 	}
 
-	if (Focus == mFocus && Model == mModel && Step == mStep)
+	if (Focus == mFocus && Model == mModel && Step == mStep && !Clicked)
 		return;
 
-	// selection opens its own group
-	if (Focus != mFocus && Focus != FocusType::None)
+	// every click opens its own group
+	if ((Focus != mFocus || Clicked) && Focus != FocusType::None)
 	{
 		CategoryIndex Open = CategoryIndex::Box;
 		CategoryIndex OpenAlso = CategoryIndex::Box;
@@ -1728,7 +1824,7 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 		switch (Focus)
 		{
 		case FocusType::StepNumber:
-			Open = CategoryIndex::Step;
+			Open = Step ? CategoryIndex::Step : CategoryIndex::BillOfMaterials;
 			break;
 
 		case FocusType::PartsList:
@@ -1737,7 +1833,6 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 
 		case FocusType::BillOfMaterials:
 			Open = CategoryIndex::BillOfMaterials;
-			OpenAlso = CategoryIndex::PartsList;
 			break;
 
 		case FocusType::BillOfMaterialsPartCount:
@@ -1793,8 +1888,12 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 			break;
 		}
 
+		// boxed elements also open the box section
+
+		const bool OpenBox = Focus != FocusType::Pointer;
+
 		for (int Index = 0; Index < static_cast<int>(CategoryIndex::Count); Index++)
-			mCategoryWidgets[Index].Button->SetExpanded(Index == static_cast<int>(Open) || Index == static_cast<int>(OpenAlso));
+			mCategoryWidgets[Index].Button->SetExpanded(Index == static_cast<int>(Open) || Index == static_cast<int>(OpenAlso) || (OpenBox && Index == static_cast<int>(CategoryIndex::Box)));
 	}
 
 	mFocus = Focus;
@@ -1840,15 +1939,17 @@ void swInstructionsPropertiesWidget::PageClicked(swInstructionsPageType PageType
 		OpenAlso = CategoryIndex::Box;
 		SetBoxElement(swInstructionsBoxElement::StepArea);
 	}
-	else if (Object == swInstructionsPageObject::FinalModel)
+	else if (Object == swInstructionsPageObject::FinalModel || Object == swInstructionsPageObject::Completion)
 	{
 		Open = CategoryIndex::PageLayout;
 		OpenAlso = CategoryIndex::Box;
-		SetBoxElement(swInstructionsBoxElement::FinalModel);
+		SetBoxElement(Object == swInstructionsPageObject::Completion ? swInstructionsBoxElement::Completion : swInstructionsBoxElement::FinalModel);
 	}
 
 	for (int Index = 0; Index < static_cast<int>(CategoryIndex::Count); Index++)
 		mCategoryWidgets[Index].Button->SetExpanded(Index == static_cast<int>(Open) || Index == static_cast<int>(OpenAlso));
+
+	UpdateCategories();
 }
 
 void swInstructionsPropertiesWidget::SetBoxElement(swInstructionsBoxElement Element)
@@ -1857,7 +1958,7 @@ void swInstructionsPropertiesWidget::SetBoxElement(swInstructionsBoxElement Elem
 
 	{
 		QSignalBlocker Blocker(mBoxElementComboBox);
-		mBoxElementComboBox->setCurrentIndex(static_cast<int>(Element));
+		mBoxElementComboBox->setCurrentIndex(mBoxElementComboBox->findData(static_cast<int>(Element)));
 	}
 
 	// show the chosen element rows
@@ -2114,12 +2215,22 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	SetEnabled(swInstructionsPropertyType::ShowBillOfMaterialsBlankPage, ShowBillOfMaterials);
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsShowPartIds, ShowBillOfMaterials);
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsBackgroundColor, ShowBillOfMaterials);
-	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleFont, ShowBillOfMaterials && ShowStepNumber);
-	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleColor, ShowBillOfMaterials && ShowStepNumber);
-	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleAlignment, ShowBillOfMaterials && ShowStepNumber);
-	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleVerticalAlignment, ShowBillOfMaterials && ShowStepNumber);
-	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleText, ShowBillOfMaterials && ShowStepNumber);
-	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleFile, ShowBillOfMaterials && ShowStepNumber);
+	const bool ShowBillOfMaterialsTitle = ShowBillOfMaterials && GetBool(swInstructionsPropertyType::ShowBillOfMaterialsTitle);
+
+	SetEnabled(swInstructionsPropertyType::ShowBillOfMaterialsTitle, ShowBillOfMaterials);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleFont, ShowBillOfMaterialsTitle);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleColor, ShowBillOfMaterialsTitle);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleAlignment, ShowBillOfMaterialsTitle);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleVerticalAlignment, ShowBillOfMaterialsTitle);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleText, ShowBillOfMaterialsTitle);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleFile, ShowBillOfMaterialsTitle);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsShowCounts, ShowBillOfMaterials);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsSortOrder, ShowBillOfMaterials);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsLayout, ShowBillOfMaterials);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsAlignment, ShowBillOfMaterials);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsFont, ShowBillOfMaterials);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTextColor, ShowBillOfMaterials);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsThumbnailSize, ShowBillOfMaterials);
 	SetEnabled(swInstructionsPropertyType::StepNumberFont, ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::StepNumberColor, ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::StepNumberAlignment, ShowStepNumber);
@@ -2133,8 +2244,23 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 
 	for (int Index = 0; Index < AlignmentNames.size(); Index++)
 		AlignmentComboBox->setItemText(Index, AlignmentNames[Index]);
+
+	// the bill of materials names its own
+	QComboBox* BillAlignmentComboBox = qobject_cast<QComboBox*>(mEditors[static_cast<int>(swInstructionsPropertyType::BillOfMaterialsAlignment)].Widget);
+	const bool BillColumns = mInstructions->GetIntProperty(swInstructionsPropertyType::BillOfMaterialsLayout, mModel, mStep) == static_cast<int>(swPartsListLayout::Columns);
+	const QStringList BillAlignmentNames = BillColumns ? QStringList{ tr("Left"), tr("Center"), tr("Right") } : QStringList{ tr("Top"), tr("Middle"), tr("Bottom") };
+
+	for (int Index = 0; Index < BillAlignmentNames.size(); Index++)
+		BillAlignmentComboBox->setItemText(Index, BillAlignmentNames[Index]);
 	SetEnabled(swInstructionsPropertyType::NoticeFont, true);
+	SetEnabled(swInstructionsPropertyType::WatermarkFont, true);
+
+	// image opacity needs a watermark image
+
+	const std::vector<swInstructionsImage>& Images = mInstructions->GetImages();
+	SetEnabled(swInstructionsPropertyType::WatermarkOpacity, std::any_of(Images.begin(), Images.end(), [](const swInstructionsImage& Image) { return Image.Pages == swInstructionsImagePages::Watermark; }));
 	SetEnabled(swInstructionsPropertyType::StepDividerColor, ShowStepDividers);
+	SetEnabled(swInstructionsPropertyType::PLIReserveArea, GetBool(swInstructionsPropertyType::ShowStepPLI));
 
 	const bool ShowPageNumber = GetBool(swInstructionsPropertyType::ShowPageNumber);
 
@@ -2150,6 +2276,7 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	SetEnabled(swInstructionsPropertyType::StepDividerRounded, ShowStepDividers);
 	SetEnabled(swInstructionsPropertyType::StepDividerHorizontal, ShowStepDividers);
 	SetEnabled(swInstructionsPropertyType::StepDividerVertical, ShowStepDividers);
+	SetEnabled(swInstructionsPropertyType::StepDividerFinalModel, ShowStepDividers);
 
 	const swInstructionsPageType PageType = GetPageType();
 	QSignalBlocker Blocker(mThumbnailPageButton);
@@ -2244,6 +2371,18 @@ QColor swInstructionsPropertiesWidget::GetColorValue(swInstructionsPropertyType 
 	if (Type == swInstructionsPropertyType::PageBackgroundColor && !mInstructions->HasPageProperty(mPageIndex, Type))
 		return mInstructions->GetColorProperty(Type, nullptr, 0);
 
+	// a clear final model takes the page background
+	if (Type == swInstructionsPropertyType::FinalModelBackgroundColor && mInstructions->GetPageColorProperty(mPageIndex, Type).alpha() == 0)
+		return mInstructions->GetBoxStyle(swInstructionsBoxElement::FinalModel, mModel, mStep).BackgroundColor;
+
+	// a clear completion takes its page color
+	if (Type == swInstructionsPropertyType::CompletionBoxBackgroundColor && mInstructions->GetColorProperty(Type, nullptr, 0).alpha() == 0)
+		return mInstructions->GetBoxStyle(swInstructionsBoxElement::Completion, nullptr, 0).BackgroundColor;
+
+	// a clear assembly or completion takes the page background
+	if ((Type == swInstructionsPropertyType::AssemblyBackgroundColor || Type == swInstructionsPropertyType::CompletionBackgroundColor) && mInstructions->GetColorProperty(Type, nullptr, 0).alpha() == 0)
+		return mInstructions->GetColorProperty(swInstructionsPropertyType::PageBackgroundColor, nullptr, 0);
+
 	if (swInstructions::IsPageProperty(Type))
 		return mInstructions->GetPageColorProperty(mPageIndex, Type);
 
@@ -2269,7 +2408,6 @@ void swInstructionsPropertiesWidget::SetColorValue(swInstructionsPropertyType Ty
 void swInstructionsPropertiesWidget::SetThumbnailPageScope(bool PageOnly)
 {
 	mInstructions->SetPageScope(mPageIndex, swInstructionsPropertyType::PLIThumbnailSize, PageOnly);
-	mInstructions->SetPageScope(mPageIndex, swInstructionsPropertyType::PLIThumbnailBackgroundColor, PageOnly);
 }
 
 void swInstructionsPropertiesWidget::DividerPresetClicked(int Preset)

@@ -83,10 +83,40 @@ static const QLatin1String gInstructionsPropertyNames[] =
 	QLatin1String("FOOTER_BAND_MARGIN"), QLatin1String("FOOTER_BAND_PADDING"), QLatin1String("FOOTER_BAND_BORDER_WIDTH"), QLatin1String("FOOTER_BAND_BORDER_COLOR"), QLatin1String("FOOTER_BAND_CORNER_RADIUS"),
 	QLatin1String("LEFT_BAND_MARGIN"), QLatin1String("LEFT_BAND_PADDING"), QLatin1String("LEFT_BAND_BORDER_WIDTH"), QLatin1String("LEFT_BAND_BORDER_COLOR"), QLatin1String("LEFT_BAND_CORNER_RADIUS"),
 	QLatin1String("RIGHT_BAND_MARGIN"), QLatin1String("RIGHT_BAND_PADDING"), QLatin1String("RIGHT_BAND_BORDER_WIDTH"), QLatin1String("RIGHT_BAND_BORDER_COLOR"), QLatin1String("RIGHT_BAND_CORNER_RADIUS"),
-	QLatin1String("WATERMARK_MARGIN"), QLatin1String("WATERMARK_PADDING"), QLatin1String("WATERMARK_BORDER_WIDTH"), QLatin1String("WATERMARK_BORDER_COLOR"), QLatin1String("WATERMARK_CORNER_RADIUS"), QLatin1String("WATERMARK_BACKGROUND_COLOR"), QLatin1String("LOCK_HOME_VIEW")
+	QLatin1String("WATERMARK_MARGIN"), QLatin1String("WATERMARK_PADDING"), QLatin1String("WATERMARK_BORDER_WIDTH"), QLatin1String("WATERMARK_BORDER_COLOR"), QLatin1String("WATERMARK_CORNER_RADIUS"), QLatin1String("WATERMARK_BACKGROUND_COLOR"), QLatin1String("LOCK_HOME_VIEW"),
+	QLatin1String("WATERMARK_FONT"), QLatin1String("WATERMARK_TEXT_COLOR"), QLatin1String("WATERMARK_ROTATION"),
+	QLatin1String("SHOW_BILL_OF_MATERIALS_TITLE"), QLatin1String("BILL_OF_MATERIALS_TITLE_PLACEMENT"), QLatin1String("BILL_OF_MATERIALS_FONT"),
+	QLatin1String("BILL_OF_MATERIALS_TEXT_COLOR"), QLatin1String("BILL_OF_MATERIALS_SHOW_COUNTS"), QLatin1String("BILL_OF_MATERIALS_SORT_ORDER"),
+	QLatin1String("BILL_OF_MATERIALS_LAYOUT"), QLatin1String("BILL_OF_MATERIALS_ALIGNMENT"), QLatin1String("BILL_OF_MATERIALS_THUMBNAIL_SIZE"),
+	QLatin1String("BILL_OF_MATERIALS_COUNT_PLACEMENT"), QLatin1String("BILL_OF_MATERIALS_TITLE_MARGIN"), QLatin1String("BILL_OF_MATERIALS_TITLE_PADDING"),
+	QLatin1String("BILL_OF_MATERIALS_TITLE_BORDER_WIDTH"), QLatin1String("BILL_OF_MATERIALS_TITLE_BORDER_COLOR"), QLatin1String("BILL_OF_MATERIALS_TITLE_CORNER_RADIUS"),
+	QLatin1String("BILL_OF_MATERIALS_TITLE_BACKGROUND_COLOR"), QLatin1String("BILL_OF_MATERIALS_LIST_MARGIN"), QLatin1String("BILL_OF_MATERIALS_LIST_PADDING"),
+	QLatin1String("BILL_OF_MATERIALS_LIST_BORDER_WIDTH"), QLatin1String("BILL_OF_MATERIALS_LIST_BORDER_COLOR"), QLatin1String("BILL_OF_MATERIALS_LIST_CORNER_RADIUS"),
+	QLatin1String("BILL_OF_MATERIALS_LIST_BACKGROUND_COLOR"), QLatin1String("BILL_OF_MATERIALS_QUANTITY_MARGIN"), QLatin1String("BILL_OF_MATERIALS_QUANTITY_PADDING"),
+	QLatin1String("BILL_OF_MATERIALS_QUANTITY_BORDER_WIDTH"), QLatin1String("BILL_OF_MATERIALS_QUANTITY_BORDER_COLOR"), QLatin1String("BILL_OF_MATERIALS_QUANTITY_CORNER_RADIUS"),
+	QLatin1String("BILL_OF_MATERIALS_QUANTITY_BACKGROUND_COLOR"), QLatin1String("BILL_OF_MATERIALS_PART_COUNT_MARGIN"), QLatin1String("BILL_OF_MATERIALS_PART_COUNT_PADDING"),
+	QLatin1String("BILL_OF_MATERIALS_PART_COUNT_BORDER_WIDTH"), QLatin1String("BILL_OF_MATERIALS_PART_COUNT_BORDER_COLOR"), QLatin1String("BILL_OF_MATERIALS_PART_COUNT_CORNER_RADIUS"),
+	QLatin1String("BILL_OF_MATERIALS_PART_COUNT_BACKGROUND_COLOR"), QLatin1String("ASSEMBLY_BACKGROUND_COLOR"), QLatin1String("STEP_DIVIDER_FINAL_MODEL"), QLatin1String("COMPLETION_BACKGROUND_COLOR"),
+	QLatin1String("COMPLETION_MARGIN"), QLatin1String("COMPLETION_PADDING"), QLatin1String("COMPLETION_BORDER_WIDTH"), QLatin1String("COMPLETION_BORDER_COLOR"), QLatin1String("COMPLETION_CORNER_RADIUS"),
+	QLatin1String("COMPLETION_BOX_BACKGROUND_COLOR"), QLatin1String("PLI_RESERVE_AREA")
 };
 
 static_assert(std::size(gInstructionsPropertyNames) == static_cast<size_t>(swInstructionsPropertyType::Count), "Missing property name");
+
+// use to map old properties
+static bool swMapOldInstructionsProperty(int& Type, const QVariant& Value)
+{
+	if (Type != static_cast<int>(swInstructionsPropertyType::PLIThumbnailBackgroundColor))
+		return true;
+
+	// transparent fills drew nothing
+	if (!swQColorFromRGBA(Value.toUInt()).alpha())
+		return false;
+
+	Type = static_cast<int>(swInstructionsPropertyType::PLIBackgroundColor);
+
+	return true;
+}
 
 static const QLatin1String gInstructionsElementNames[] =
 {
@@ -483,12 +513,27 @@ static bool swIsInstructionsPropertyWritten(const swInstructionsProperties& Prop
 	if (Type == static_cast<int>(swInstructionsPropertyType::UseDocumentFontSize) && Properties[static_cast<int>(swInstructionsPropertyType::UseDocumentFont)].Value.toBool())
 		return true;
 
+	// files without it copy the steps
+	for (const std::pair<swInstructionsPropertyType, swInstructionsPropertyType>& Source : swGetBillOfMaterialsSources())
+		if (static_cast<int>(Source.first) == Type && Value != Properties[static_cast<int>(Source.second)].Value)
+			return true;
+
 	return Value != DefaultValue;
+}
+
+// unwritten bill of materials values follow the steps
+
+static void swCopyBillOfMaterialsProperties(swInstructionsProperties& Properties, const std::vector<bool>& ReadTypes)
+{
+	for (const std::pair<swInstructionsPropertyType, swInstructionsPropertyType>& Source : swGetBillOfMaterialsSources())
+		if (!ReadTypes[static_cast<int>(Source.first)])
+			Properties[static_cast<int>(Source.first)].Value = Properties[static_cast<int>(Source.second)].Value;
 }
 
 void swInstructions::LoadCommandLines(const QStringList& CommandLines)
 {
-	std::vector<swInstructionsStepKey> FinalColorKeys;
+	std::vector<bool> ReadTypes(static_cast<size_t>(swInstructionsPropertyType::Count), false);
+	std::map<swInstructionsPageKey, std::vector<bool>> FrozenReadTypes;
 
 	// skip commands with missing models
 	for (const QString& CommandLine : CommandLines)
@@ -538,18 +583,21 @@ void swInstructions::LoadCommandLines(const QStringList& CommandLines)
 				Key = Reader.ReadStepKey();
 			}
 
-			const int Type = Reader.ReadName(gInstructionsPropertyNames);
+			int Type = Reader.ReadName(gInstructionsPropertyNames);
 
 			if (!Reader.IsValid() || (PageProperty && !IsPageProperty(static_cast<swInstructionsPropertyType>(Type))))
 				continue;
 
 			const QVariant Value = Reader.ReadValue(mDefaultProperties[Type].Value);
 
-			if (!Reader.IsValid())
+			if (!Reader.IsValid() || !swMapOldInstructionsProperty(Type, Value))
 				continue;
 
 			if (!PageProperty)
+			{
 				swSetInstructionsProperty(mStepProperties, Type, Value);
+				ReadTypes[Type] = true;
+			}
 			else
 			{
 				swInstructionsProperty& Property = mPagePropertyOverrides[Key][Type];
@@ -582,9 +630,7 @@ void swInstructions::LoadCommandLines(const QStringList& CommandLines)
 			Settings.Direction = Options.contains(QLatin1String("VERTICAL")) ? swInstructionsDirection::Vertical : swInstructionsDirection::Horizontal;
 			Settings.FinalModel = Options.contains(QLatin1String("FINAL_MODEL"));
 
-			// the old main page color word
-			if (Options.contains(QLatin1String("FINAL_MODEL_COLOR")))
-				FinalColorKeys.push_back(PageSettings ? Key : swInstructionsStepKey(nullptr, 0));
+			// the old main page color word now follows the page
 
 			if (PageSettings)
 				mPageSettingsOverrides[Key] = Settings;
@@ -653,18 +699,24 @@ void swInstructions::LoadCommandLines(const QStringList& CommandLines)
 			if (FrozenIt == mFrozenPages.end())
 				FrozenIt = mFrozenPages.emplace(PageKey, mDefaultProperties).first;
 
+			std::vector<bool>& FrozenTypes = FrozenReadTypes[PageKey];
+			FrozenTypes.resize(static_cast<size_t>(swInstructionsPropertyType::Count), false);
+
 			if (Command == QLatin1String("FREEZE_PAGE"))
 				continue;
 
-			const int Type = Reader.ReadName(gInstructionsPropertyNames);
+			int Type = Reader.ReadName(gInstructionsPropertyNames);
 
 			if (!Reader.IsValid())
 				continue;
 
 			const QVariant Value = Reader.ReadValue(mDefaultProperties[Type].Value);
 
-			if (Reader.IsValid())
+			if (Reader.IsValid() && swMapOldInstructionsProperty(Type, Value))
+			{
 				swSetInstructionsProperty(FrozenIt->second, Type, Value);
+				FrozenTypes[Type] = true;
+			}
 		}
 		else if (Command == QLatin1String("NOTICE"))
 		{
@@ -809,16 +861,11 @@ void swInstructions::LoadCommandLines(const QStringList& CommandLines)
 		}
 	}
 
-	// old files colored the final model like the page
-	const swInstructionsProperty& PageColor = mStepProperties[static_cast<int>(swInstructionsPropertyType::PageBackgroundColor)];
+	// older files share the step settings
+	swCopyBillOfMaterialsProperties(mStepProperties, ReadTypes);
 
-	for (const swInstructionsStepKey& Key : FinalColorKeys)
-	{
-		swInstructionsProperty& Property = Key.first ? mPagePropertyOverrides[Key][static_cast<int>(swInstructionsPropertyType::FinalModelBackgroundColor)] : mStepProperties[static_cast<int>(swInstructionsPropertyType::FinalModelBackgroundColor)];
-
-		Property.Mode = swInstructionsPropertyMode::Default;
-		Property.Value = PageColor.Value;
-	}
+	for (const std::pair<const swInstructionsPageKey, std::vector<bool>>& Frozen : FrozenReadTypes)
+		swCopyBillOfMaterialsProperties(mFrozenPages[Frozen.first], Frozen.second);
 }
 
 // use to write an image line

@@ -111,6 +111,46 @@ inline void swPaintBoxBorder(QPainter* Painter, const QRectF& BorderRect, const 
 }
 
 // A box around an area, filled and framed.
+// an element box outlined by boundaries
+struct swInstructionsBoundaryBox
+{
+	QTransform Transform;
+	QRectF Rect;
+	swInstructionsBoxStyle Style;
+};
+
+// an unpainted layout area shown by boundaries
+
+class swInstructionsGuideItem : public QGraphicsItem
+{
+public:
+	swInstructionsGuideItem(const QRectF& Rect, QGraphicsItem* Parent)
+		: QGraphicsItem(Parent), mRect(Rect)
+	{
+		setFlag(QGraphicsItem::ItemHasNoContents);
+	}
+
+	const QRectF& GetRect() const
+	{
+		return mRect;
+	}
+
+	QRectF boundingRect() const override
+	{
+		return QRectF();
+	}
+
+	void paint(QPainter* Painter, const QStyleOptionGraphicsItem* Option, QWidget* Widget) override
+	{
+		Q_UNUSED(Painter);
+		Q_UNUSED(Option);
+		Q_UNUSED(Widget);
+	}
+
+protected:
+	QRectF mRect;
+};
+
 class swInstructionsFrameItem : public QGraphicsRectItem
 {
 public:
@@ -142,6 +182,11 @@ public:
 		Painter->setBrush(Qt::NoBrush);
 		Painter->drawRect(rect());
 		Painter->restore();
+	}
+
+	const swInstructionsBoxStyle& GetBoxStyle() const
+	{
+		return mBoxStyle;
 	}
 
 protected:
@@ -765,6 +810,14 @@ protected:
 
 class swInstructionsPageWidget;
 
+// Pages shown together, pairs start from the first page.
+enum class swInstructionsPageSpread
+{
+	Single,
+	SideBySide,
+	Stacked
+};
+
 // Rulers along the page.
 class swInstructionsRulerWidget : public QWidget
 {
@@ -793,6 +846,7 @@ public:
 	swInstructionsPageWidget(QWidget* Parent, swInstructions* Instructions, swInstructionsPropertiesWidget* PropertiesWidget, swInstructionsPlacementWidget* PlacementWidget);
 
 	void SetCurrentPage(const swInstructionsPage* Page);
+	void SetPageSpread(swInstructionsPageSpread PageSpread);
 	void RemoveSelectedElements();
 
 	swInstructions* GetInstructions() const
@@ -816,16 +870,22 @@ protected:
 	void mousePressEvent(QMouseEvent* Event) override;
 	void mouseReleaseEvent(QMouseEvent* Event) override;
 	void mouseMoveEvent(QMouseEvent* Event) override;
+	void wheelEvent(QWheelEvent* Event) override;
 	void contextMenuEvent(QContextMenuEvent* Event) override;
 	void drawForeground(QPainter* Painter, const QRectF& Rect) override;
 	void scrollContentsBy(int DeltaX, int DeltaY) override;
 	bool viewportEvent(QEvent* Event) override;
 	void DrawGrid(QPainter* Painter, const QRectF& Rect);
 	void DrawElementBoxes(QPainter* Painter);
+	void DrawBoundaries(QPainter* Painter);
 	void DrawPointerGrid(QPainter* Painter);
 	int FindResizeHandle(const QPoint& Position, QGraphicsItem** HandleItem) const;
 	void UpdateRulers();
 	void FitPage();
+
+signals:
+	void PageClicked(int Row);
+	void PageScrolled(int Direction);
 
 protected slots:
 	void StepSettingsChanged(swModel* Model, swStep Step);
@@ -836,6 +896,10 @@ protected:
 	swInstructionsPropertiesWidget* mPropertiesWidget;
 	swInstructionsPlacementWidget* mPlacementWidget;
 	const swInstructionsPage* mPage = nullptr;
+	swInstructionsPageSpread mPageSpread = swInstructionsPageSpread::Single;
+	std::vector<swInstructionsBoundaryBox> mPairBoxes;
+	std::vector<QPolygonF> mPairLayoutEdges;
+	int mWheelDelta = 0;
 	std::vector<std::pair<QGraphicsItem*, QPointF>> mDragItems;
 	QGraphicsItem* mResizeItem = nullptr;
 	int mResizeHandle = 0;
@@ -882,7 +946,8 @@ enum class swInstructionsPageObject : int
 {
 	Divider,
 	StepArea,
-	FinalModel
+	FinalModel,
+	Completion
 };
 
 // Identifies a page element.

@@ -17,8 +17,8 @@
 swInstructionsDialog::swInstructionsDialog(QWidget* Parent, Project* Project)
 	: QMainWindow(Parent), mProject(Project)
 {
-	setWindowTitle(tr("Instructions") + QLatin1String("[*]"));
 	setWindowModified(mProject->IsModified());
+	setWindowTitle(isWindowModified() ? tr("Instructions") + QLatin1String(" *") : tr("Instructions"));
 
 	mInstructions = mProject->GetInstructions();
 
@@ -46,6 +46,9 @@ swInstructionsDialog::swInstructionsDialog(QWidget* Parent, Project* Project)
 	QWidget* PageArea = new QWidget(this);
 	QVBoxLayout* PageAreaLayout = new QVBoxLayout(PageArea);
 	PageAreaLayout->setContentsMargins(0, 0, 0, 0);
+
+	// the bar margins space it evenly
+	PageAreaLayout->setSpacing(0);
 	PageAreaLayout->addWidget(mPageWidget, 1);
 	PageAreaLayout->addWidget(CreatePageBar());
 	setCentralWidget(PageArea);
@@ -207,6 +210,15 @@ void swInstructionsDialog::UpdateOptions()
 	mEditorWidget->UpdateOptions();
 }
 
+// use to mark unsaved changes, kde style
+void swInstructionsDialog::changeEvent(QEvent* Event)
+{
+	if (Event->type() == QEvent::ModifiedChange)
+		setWindowTitle(isWindowModified() ? tr("Instructions") + QLatin1String(" *") : tr("Instructions"));
+
+	QMainWindow::changeEvent(Event);
+}
+
 void swInstructionsDialog::closeEvent(QCloseEvent* Event)
 {
 	SaveLayout();
@@ -247,39 +259,15 @@ void swInstructionsDialog::UpdatePageList()
 
 		case swInstructionsPageType::Steps:
 		{
-			// pages joining two or more models are assemblies
-			const std::vector<swInstructionsStep>& Steps = mInstructions->mPages[PageNumber].Steps;
-			swModel* Model = Steps.empty() ? nullptr : Steps.front().Model;
+			const swModel* TitleModel = nullptr;
+			const bool Assembly = mInstructions->GetPageTitleModel(PageNumber, TitleModel);
 
-			if (!Model)
+			if (!TitleModel)
 				break;
 
-			swStep LastStep = 0;
-
-			for (const swInstructionsStep& Step : Steps)
-				LastStep = qMax(LastStep, Step.Step);
-
-			std::set<const swModel*> Shown;
-			const swModel* Focus = nullptr;
-
-			for (const std::unique_ptr<swPart>& Part : Model->GetParts())
+			auto GetTitle = [](const swModel* Model)
 			{
-				if (Part->IsHidden() || Part->GetStepShow() > LastStep)
-					continue;
-
-				const swModel* PartModel = Part->mPartData->IsModel() ? Part->mPartData->GetModel() : Model;
-				Shown.insert(PartModel);
-
-				// the first submodel added here names the page
-				const bool Added = std::any_of(Steps.begin(), Steps.end(), [&Part](const swInstructionsStep& Step) { return Step.Step == Part->GetStepShow(); });
-
-				if (Added && PartModel != Model && !Focus)
-					Focus = PartModel;
-			}
-
-			auto GetTitle = [](const swModel* TitleModel)
-			{
-				const swModelProperties& Properties = TitleModel->GetProperties();
+				const swModelProperties& Properties = Model->GetProperties();
 				QString Title = Properties.mDescription.trimmed();
 
 				if (Title.isEmpty())
@@ -291,14 +279,10 @@ void swInstructionsDialog::UpdatePageList()
 				return Title;
 			};
 
-			// a page of only the finished model is an assembly
-			if (std::all_of(Steps.begin(), Steps.end(), [](const swInstructionsStep& Step) { return Step.FinalModel; }))
-				Focus = Model;
-
-			if (Shown.size() >= 2 || Focus == Model)
-				Label = tr("%1 - Assembly - %2").arg(Label, GetTitle(Focus ? Focus : Model));
+			if (mInstructions->IsCompletionPage(PageNumber))
+				Label = tr("%1 - Completion - %2").arg(Label, GetTitle(mInstructions->GetMainModel()));
 			else
-				Label = tr("%1 - %2").arg(Label, GetTitle(Shown.empty() ? Model : *Shown.begin()));
+				Label = Assembly ? tr("%1 - Assembly - %2").arg(Label, GetTitle(TitleModel)) : tr("%1 - %2").arg(Label, GetTitle(TitleModel));
 
 			break;
 		}
@@ -450,6 +434,33 @@ void swInstructionsDialog::CurrentThumbnailChanged(int Index)
 }
 
 // use to build the page buttons and the page box
+// use to step pages down to go forward, like the wheel on the page
+class swPageSpinBox : public swRangeSpinBox
+{
+public:
+	using swRangeSpinBox::swRangeSpinBox;
+
+	void stepBy(int Steps) override
+	{
+		swRangeSpinBox::stepBy(-Steps);
+	}
+
+protected:
+	StepEnabled stepEnabled() const override
+	{
+		const StepEnabled Enabled = swRangeSpinBox::stepEnabled();
+		StepEnabled Swapped = StepNone;
+
+		if (Enabled & StepUpEnabled)
+			Swapped |= StepDownEnabled;
+
+		if (Enabled & StepDownEnabled)
+			Swapped |= StepUpEnabled;
+
+		return Swapped;
+	}
+};
+
 QWidget* swInstructionsDialog::CreatePageBar()
 {
 	QWidget* PageBar = new QWidget(this);
@@ -492,25 +503,84 @@ QWidget* swInstructionsDialog::CreatePageBar()
 	UpdateHistoryButtons();
 
 	mFirstButton = CreateButton(tr("&First"), tr("Go to the first page"), swCreatePaintedIcon(swPaintedIcon::TimeFirst), false, [this]() { ShowPage(0); });
-	mPreviousButton = CreateButton(tr("&Previous"), tr("Go to the previous page"), swCreatePaintedIcon(swPaintedIcon::TimePrevious), false, [this, ThumbnailsWidget]() { ShowPage(ThumbnailsWidget->currentRow() - 1); });
+	mPreviousButton = CreateButton(tr("&Previous"), tr("Go to the previous page"), swCreatePaintedIcon(swPaintedIcon::TimePrevious), false, [this, ThumbnailsWidget]() { ShowPage(ThumbnailsWidget->currentRow() / mPageStep * mPageStep - mPageStep); });
 	mCoverButton = CreateButton(tr("Fr&ont Cover"), tr("Go to the front cover"), QIcon(), false, [this]() { ShowPage(FindPage(swInstructionsPageType::Cover)); });
 	mStepPageButton = CreateButton(tr("&Step Page"), tr("Insert an empty step before the current page"), QIcon(), false, [this]() { InsertStepPage(); });
 	mBlankPageButton = CreateButton(tr("Bl&ank Page"), tr("Insert a blank page before the current page"), QIcon(), false, [this, ThumbnailsWidget]() { mInstructions->InsertBlankPage(ThumbnailsWidget->currentRow()); });
 	mRemovePageButton = CreateButton(tr("&Remove Page"), tr("Remove the current page when it is blank or holds only empty steps"), QIcon(), false, [this]() { RemovePage(); });
 	mBillOfMaterialsButton = CreateButton(tr("&Bill of Materials"), tr("Go to the bill of materials page"), QIcon(), false, [this]() { ShowPage(FindPage(swInstructionsPageType::BillOfMaterials)); });
 	mBackCoverButton = CreateButton(tr("Bac&k Cover"), tr("Go to the back cover"), QIcon(), false, [this]() { ShowPage(FindPage(swInstructionsPageType::BackCover)); });
-	mNextButton = CreateButton(tr("&Next"), tr("Go to the next page"), swCreatePaintedIcon(swPaintedIcon::TimeNext), true, [this, ThumbnailsWidget]() { ShowPage(ThumbnailsWidget->currentRow() + 1); });
+	mNextButton = CreateButton(tr("&Next"), tr("Go to the next page"), swCreatePaintedIcon(swPaintedIcon::TimeNext), true, [this, ThumbnailsWidget]() { ShowPage(qMin(ThumbnailsWidget->currentRow() / mPageStep * mPageStep + mPageStep, ThumbnailsWidget->count() - 1)); });
 	mLastButton = CreateButton(tr("&Last"), tr("Go to the last page"), swCreatePaintedIcon(swPaintedIcon::TimeLast), true, [this, ThumbnailsWidget]() { ShowPage(ThumbnailsWidget->count() - 1); });
 
 	PageBarLayout->addStretch(1);
 
+	// two pages side by side or stacked, one at a time
+
+	const QString SpreadWhatsThis = tr("<p><b>Two Pages</b></p><p>Show two pages at once, pages 1 and 2, 3 and 4 and so on, side by side or one above the other. Only one of the two can be on, click it again for a single page. You edit the current page, click the other page to edit it.</p>");
+	QToolButton* SideBySideButton = new QToolButton(PageBar);
+	QToolButton* StackedButton = new QToolButton(PageBar);
+
+	SideBySideButton->setIcon(swCreatePaintedIcon(swPaintedIcon::PageSideBySide));
+	SideBySideButton->setToolTip(tr("Show two pages side by side"));
+	SideBySideButton->setAccessibleName(tr("Side by Side"));
+	StackedButton->setIcon(swCreatePaintedIcon(swPaintedIcon::PageStacked));
+	StackedButton->setToolTip(tr("Show two pages one above the other"));
+	StackedButton->setAccessibleName(tr("Stacked"));
+
+	const swInstructionsPageSpread StoredSpread = static_cast<swInstructionsPageSpread>(std::clamp(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_PAGE_SPREAD), 0, 2));
+
+	for (QToolButton* Button : { SideBySideButton, StackedButton })
+	{
+		Button->setCheckable(true);
+		Button->setWhatsThis(SpreadWhatsThis);
+		Button->setChecked(StoredSpread == (Button == SideBySideButton ? swInstructionsPageSpread::SideBySide : swInstructionsPageSpread::Stacked));
+		PageBarLayout->addWidget(Button);
+
+		connect(Button, &QToolButton::toggled, this, [this, Button, SideBySideButton, StackedButton](bool Checked)
+		{
+			QToolButton* OtherButton = Button == SideBySideButton ? StackedButton : SideBySideButton;
+
+			if (Checked)
+			{
+				QSignalBlocker Blocker(OtherButton);
+				OtherButton->setChecked(false);
+			}
+
+			const swInstructionsPageSpread PageSpread = SideBySideButton->isChecked() ? swInstructionsPageSpread::SideBySide : StackedButton->isChecked() ? swInstructionsPageSpread::Stacked : swInstructionsPageSpread::Single;
+
+			swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_PAGE_SPREAD, static_cast<int>(PageSpread));
+			mPageWidget->SetPageSpread(PageSpread);
+			mPageStep = PageSpread == swInstructionsPageSpread::Single ? 1 : 2;
+			UpdatePageBar();
+		});
+	}
+
+	mPageWidget->SetPageSpread(StoredSpread);
+	mPageStep = StoredSpread == swInstructionsPageSpread::Single ? 1 : 2;
+	connect(mPageWidget, &swInstructionsPageWidget::PageClicked, this, &swInstructionsDialog::ShowPage);
+
+	// the wheel turns pages like the buttons
+
+	connect(mPageWidget, &swInstructionsPageWidget::PageScrolled, this, [this](int Direction)
+	{
+		(Direction > 0 ? mNextButton : mPreviousButton)->click();
+	});
+
 	// current page out of all pages, like the print range
-	mPageSpinBox = new swRangeSpinBox(PageBar);
+	mPageSpinBox = new swPageSpinBox(PageBar);
 	mPageSpinBox->setToolTip(tr("Current page out of all pages, type a number to go there"));
 	mPageSpinBox->setWhatsThis(mFirstButton->whatsThis());
 	mPageSpinBox->setKeyboardTracking(false);
 	connect(mPageSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, [this](int Page) { ShowPage(Page - 1); });
 	PageBarLayout->addWidget(mPageSpinBox);
+
+	// square buttons as tall as the page box
+
+	const int SpreadSize = qMax(mPageSpinBox->sizeHint().height(), mFirstButton->sizeHint().height());
+
+	for (QToolButton* Button : { SideBySideButton, StackedButton })
+		Button->setFixedSize(SpreadSize, SpreadSize);
 
 	return PageBar;
 }
@@ -635,7 +705,11 @@ void swInstructionsDialog::UpdatePageBar()
 	QSignalBlocker Blocker(mPageSpinBox);
 	mPageSpinBox->setRange(1, qMax(LastRow + 1, 1));
 	mPageSpinBox->SetReference();
-	mPageSpinBox->setValue(Row + 1);
+
+	// two pages step by pairs
+
+	mPageSpinBox->setSingleStep(mPageStep);
+	mPageSpinBox->setValue(Row / mPageStep * mPageStep + 1);
 	mBillOfMaterialsButton->setEnabled(FindPage(swInstructionsPageType::BillOfMaterials) >= 0);
 	mBackCoverButton->setEnabled(FindPage(swInstructionsPageType::BackCover) >= 0);
 }

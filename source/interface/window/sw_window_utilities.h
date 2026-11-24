@@ -221,6 +221,8 @@ enum class swPaintedIcon
 	ArrowDown,
 	Lock,
 	Snowflake,
+	PageSideBySide,
+	PageStacked,
 	Count
 };
 

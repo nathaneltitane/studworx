@@ -11,6 +11,14 @@ enum class swInstructionsPageUnits
 	Inches
 };
 
+enum class swInstructionsBoundaries
+{
+	Off,
+	OuterEdge,
+	MarginPadding,
+	EveryEdge
+};
+
 // Gets the points per page unit.
 float swGetPageUnitScale(swInstructionsPageUnits Units);
 QString swGetPageUnitSuffix(swInstructionsPageUnits Units);
@@ -88,7 +96,7 @@ enum class swInstructionsPropertyType
 	CoverTitlePlacement,
 	BillOfMaterialsPlacement,
 	PLIThumbnailSize,
-	PLIThumbnailBackgroundColor,
+	PLIThumbnailBackgroundColor, // read as parts list background
 	CoverAuthorPlacement,
 	CoverImagePlacement,
 	StepImagePlacement,
@@ -302,6 +310,53 @@ enum class swInstructionsPropertyType
 	WatermarkCornerRadius,
 	WatermarkBackgroundColor,
 	LockHomeView,
+	WatermarkFont,
+	WatermarkTextColor,
+	WatermarkRotation,
+	ShowBillOfMaterialsTitle,
+	BillOfMaterialsTitlePlacement,
+	BillOfMaterialsFont,
+	BillOfMaterialsTextColor,
+	BillOfMaterialsShowCounts,
+	BillOfMaterialsSortOrder,
+	BillOfMaterialsLayout,
+	BillOfMaterialsAlignment,
+	BillOfMaterialsThumbnailSize,
+	BillOfMaterialsCountPlacement,
+	BillOfMaterialsTitleMargin,
+	BillOfMaterialsTitlePadding,
+	BillOfMaterialsTitleBorderWidth,
+	BillOfMaterialsTitleBorderColor,
+	BillOfMaterialsTitleCornerRadius,
+	BillOfMaterialsTitleBackgroundColor,
+	BillOfMaterialsListMargin,
+	BillOfMaterialsListPadding,
+	BillOfMaterialsListBorderWidth,
+	BillOfMaterialsListBorderColor,
+	BillOfMaterialsListCornerRadius,
+	BillOfMaterialsListBackgroundColor,
+	BillOfMaterialsQuantityMargin,
+	BillOfMaterialsQuantityPadding,
+	BillOfMaterialsQuantityBorderWidth,
+	BillOfMaterialsQuantityBorderColor,
+	BillOfMaterialsQuantityCornerRadius,
+	BillOfMaterialsQuantityBackgroundColor,
+	BillOfMaterialsPartCountMargin,
+	BillOfMaterialsPartCountPadding,
+	BillOfMaterialsPartCountBorderWidth,
+	BillOfMaterialsPartCountBorderColor,
+	BillOfMaterialsPartCountCornerRadius,
+	BillOfMaterialsPartCountBackgroundColor,
+	AssemblyBackgroundColor,
+	StepDividerFinalModel,
+	CompletionBackgroundColor,
+	CompletionMargin,
+	CompletionPadding,
+	CompletionBorderWidth,
+	CompletionBorderColor,
+	CompletionCornerRadius,
+	CompletionBoxBackgroundColor,
+	PLIReserveArea,
 	Count
 };
 
@@ -334,6 +389,11 @@ enum class swInstructionsBoxElement
 	LeftBand,
 	RightBand,
 	Watermark,
+	BillOfMaterialsTitle,
+	BillOfMaterialsList,
+	BillOfMaterialsQuantity,
+	BillOfMaterialsPartCount,
+	Completion,
 	Count
 };
 
@@ -349,6 +409,9 @@ struct swInstructionsBoxTypes
 
 // Gets the box of an element.
 swInstructionsBoxTypes swGetBoxTypes(swInstructionsBoxElement Element);
+
+// Gets the step setting each bill of materials setting starts from.
+const std::vector<std::pair<swInstructionsPropertyType, swInstructionsPropertyType>>& swGetBillOfMaterialsSources();
 
 struct swInstructionsBoxStyle
 {
@@ -673,6 +736,8 @@ public:
 
 	// Cover and parts list backgrounds.
 	QColor GetPageBackgroundColor(size_t PageIndex) const;
+	bool GetPageTitleModel(size_t PageIndex, const swModel*& TitleModel) const;
+	bool IsCompletionPage(size_t PageIndex) const;
 
 	QPointF GetElementOffset(const swInstructionsElementKey& Key) const;
 	bool HasElementOffset(const swInstructionsElementKey& Key) const;
@@ -832,6 +897,16 @@ public:
 		return mShowElementAnchors;
 	}
 
+	swInstructionsBoundaries GetElementBoundaries() const
+	{
+		return mElementBoundaries;
+	}
+
+	bool IsLayoutAreasShown() const
+	{
+		return mShowLayoutAreas;
+	}
+
 	bool IsRulersShown() const
 	{
 		return mShowRulers;
@@ -855,6 +930,21 @@ public:
 	QColor GetRulerPointerColor() const
 	{
 		return mRulerPointerColor;
+	}
+
+	QColor GetBoundaryEdgeColor() const
+	{
+		return mBoundaryEdgeColor;
+	}
+
+	QColor GetBoundaryBorderColor() const
+	{
+		return mBoundaryBorderColor;
+	}
+
+	QColor GetLayoutAreaColor() const
+	{
+		return mLayoutAreaColor;
 	}
 
 	// Rulers measure in page units.
@@ -881,6 +971,8 @@ public:
 	void SetShowElementMargins(bool ShowElementMargins);
 	void SetShowElementPadding(bool ShowElementPadding);
 	void SetShowElementAnchors(bool ShowElementAnchors);
+	void SetElementBoundaries(swInstructionsBoundaries ElementBoundaries);
+	void SetShowLayoutAreas(bool ShowLayoutAreas);
 	void SetShowRulers(bool ShowRulers);
 	bool CanUndo() const;
 	bool CanRedo() const;
@@ -953,6 +1045,8 @@ protected:
 	bool mShowElementMargins = false;
 	bool mShowElementPadding = false;
 	bool mShowElementAnchors = false;
+	swInstructionsBoundaries mElementBoundaries = swInstructionsBoundaries::Off;
+	bool mShowLayoutAreas = false;
 	bool mShowRulers = true;
 	float mGridSize = 72.0f;
 	int mGridDivisions = 8;
@@ -963,6 +1057,9 @@ protected:
 	QColor mElementPaddingColor;
 	QColor mElementAnchorColor;
 	QColor mRulerPointerColor;
+	QColor mBoundaryEdgeColor;
+	QColor mBoundaryBorderColor;
+	QColor mLayoutAreaColor;
 	int mNextNoticeId = 1;
 	int mNextPointerId = 1;
 	int mNextImageId = 1;

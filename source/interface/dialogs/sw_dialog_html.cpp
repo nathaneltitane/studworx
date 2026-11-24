@@ -67,14 +67,13 @@ swHTMLDialog::swHTMLDialog(QWidget* Parent, swHTMLExportOptions* Options)
 		swUpdateColorButton(ui->backgroundColor, SelectedColor);
 	});
 
-	// rows in the order of the export override colors, half in each column
+	// rows in the order of the export override colors, the longer half on the left
 	const std::pair<QString, QString> OverrideColorRows[SW_HTML_OVERRIDE_COLOR_COUNT] =
 	{
 		{ tr("Page Background"), tr("Color filling the whole page of main model and submodel steps, margins included.") },
 		{ tr("Cover Background"), tr("Color filling the whole cover page, margins included.") },
 		{ tr("Bill of Materials Background"), tr("Color filling the whole bill of materials page, margins included.") },
 		{ tr("Cover Title"), tr("Color of the model title and author.") },
-		{ tr("Thumbnail Background"), tr("Color behind each part and its count, transparent draws none.") },
 		{ tr("Notice Text"), tr("Color of the notice text.") },
 		{ tr("Fade"), tr("Color tinting the parts added in earlier steps, kept between 85 and 95 percent opaque.") },
 		{ tr("Highlight"), tr("Color of the outline around the parts added in each step, kept between 85 and 95 percent opaque.") },
@@ -97,8 +96,9 @@ swHTMLDialog::swHTMLDialog(QWidget* Parent, swHTMLExportOptions* Options)
 		const auto& [Name, ToolTip] = OverrideColorRows[Row];
 		QLabel* Label = new QLabel(Name, ui->OverrideGroup);
 		QToolButton* Button = new QToolButton(ui->OverrideGroup);
-		const int Column = Row / (SW_HTML_OVERRIDE_COLOR_COUNT / 2) * 2;
-		const int GridRow = Row % (SW_HTML_OVERRIDE_COLOR_COUNT / 2);
+		const int ColumnRows = (SW_HTML_OVERRIDE_COLOR_COUNT + 1) / 2;
+		const int Column = Row / ColumnRows * 2;
+		const int GridRow = Row % ColumnRows;
 
 		Label->setToolTip(ToolTip);
 		Label->setBuddy(Button);

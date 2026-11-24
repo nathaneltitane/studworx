@@ -62,7 +62,7 @@ public:
 	swInstructionsPropertiesWidget(QWidget* Parent, swInstructions* Instructions);
 
 	void AddOptionsAction(QAction* Action);
-	void SelectionChanged(QGraphicsItem* FocusItem);
+	void SelectionChanged(QGraphicsItem* FocusItem, bool Clicked = false);
 	void PageClicked(swInstructionsPageType PageType, std::optional<swInstructionsPageObject> Object = std::nullopt);
 	void UpdateNoticeSize();
 	void UpdateImageSize();

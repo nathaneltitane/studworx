@@ -5042,7 +5042,7 @@
        <item row="7" column="0">
         <widget class="QGroupBox" name="InstructionsColorsGroup">
          <property name="whatsThis">
-          <string>&lt;p&gt;&lt;b&gt;Instructions&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Colors of the element inspector of the instructions page, drawn like the box model of a web browser inspector: the margin fill around each element, the padding fill inside its border, and markers at its anchors, the corners, edge centers and center that placement aligns to. The Ruler Pointer color fills the arrows that follow the pointer on the rulers. Page Margins colors the dashed outline of the page margins, and Page Grid Primary Lines and Page Grid Secondary Lines color the grid lines at every grid unit and at its fractions. Each color picker sets its alpha, from transparent to opaque.&lt;/p&gt;&lt;p&gt;Show or hide each overlay with Show Element Margins, Show Element Padding and Show Element Anchors in the Instructions preferences or the Options menu of the Instructions window. The overlays show on screen only and are never printed.&lt;/p&gt;</string>
+          <string>&lt;p&gt;&lt;b&gt;Instructions&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Colors of the element inspector of the instructions page, drawn like the box model of a web browser inspector: the margin fill around each element, the padding fill inside its border, and markers at its anchors, the corners, edge centers and center that placement aligns to. The Ruler Pointer color fills the arrows that follow the pointer on the rulers. Boundary Edges colors the margin and padding edge lines of Show Boundaries, Boundary Borders its border edge lines, and Layout Areas the lines around the layout areas, parts strips and dividers. Page Margins colors the dashed outline of the page margins, and Page Grid Primary Lines and Page Grid Secondary Lines color the grid lines at every grid unit and at its fractions. Each color picker sets its alpha, from transparent to opaque.&lt;/p&gt;&lt;p&gt;Show or hide each overlay with Show Element Margins, Show Element Padding and Show Element Anchors in the Instructions preferences or the Options menu of the Instructions window. The overlays show on screen only and are never printed.&lt;/p&gt;</string>
          </property>
          <property name="title">
           <string>Instructions</string>
@@ -5146,6 +5146,84 @@
             </property>
             <property name="toolTip">
              <string>Choose the fill color of the ruler arrows that follow the pointer on the instructions page.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="BoundaryEdgeColorLabel">
+            <property name="toolTip">
+             <string>Choose the color of the margin and padding edge lines of each element drawn by Show Boundaries on the instructions page.</string>
+            </property>
+            <property name="buddy">
+             <cstring>BoundaryEdgeColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Boundary Edges</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QToolButton" name="BoundaryEdgeColorButton">
+            <property name="accessibleName">
+             <string>Boundary Edges Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the color of the margin and padding edge lines of each element drawn by Show Boundaries on the instructions page.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="BoundaryBorderColorLabel">
+            <property name="toolTip">
+             <string>Choose the color of the border edge lines of each element drawn by Show Boundaries on the instructions page.</string>
+            </property>
+            <property name="buddy">
+             <cstring>BoundaryBorderColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Boundary Borders</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QToolButton" name="BoundaryBorderColorButton">
+            <property name="accessibleName">
+             <string>Boundary Borders Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the color of the border edge lines of each element drawn by Show Boundaries on the instructions page.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="LayoutAreaColorLabel">
+            <property name="toolTip">
+             <string>Choose the color of the layout area, parts strip and divider lines drawn by Show Boundaries on the instructions page.</string>
+            </property>
+            <property name="buddy">
+             <cstring>LayoutAreaColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Layout Areas</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QToolButton" name="LayoutAreaColorButton">
+            <property name="accessibleName">
+             <string>Layout Areas Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the color of the layout area, parts strip and divider lines drawn by Show Boundaries on the instructions page.</string>
             </property>
             <property name="text">
              <string />
@@ -5941,6 +6019,9 @@
   <tabstop>ElementPaddingColorButton</tabstop>
   <tabstop>ElementAnchorColorButton</tabstop>
   <tabstop>RulerPointerColorButton</tabstop>
+  <tabstop>BoundaryEdgeColorButton</tabstop>
+  <tabstop>BoundaryBorderColorButton</tabstop>
+  <tabstop>LayoutAreaColorButton</tabstop>
   <tabstop>categoriesTree</tabstop>
   <tabstop>partsTree</tabstop>
   <tabstop>importCategories</tabstop>

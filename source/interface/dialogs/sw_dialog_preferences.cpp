@@ -458,6 +458,9 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->ElementPaddingColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->ElementAnchorColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->RulerPointerColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
+	connect(ui->BoundaryEdgeColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
+	connect(ui->BoundaryBorderColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
+	connect(ui->LayoutAreaColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->FadeStepsColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->FadeInlineColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->FadeJointColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
@@ -783,6 +786,9 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	SetButtonPixmap(mOptions->Instructions.ElementPaddingColor, ui->ElementPaddingColorButton);
 	SetButtonPixmap(mOptions->Instructions.ElementAnchorColor, ui->ElementAnchorColorButton);
 	SetButtonPixmap(mOptions->Instructions.RulerPointerColor, ui->RulerPointerColorButton);
+	SetButtonPixmap(mOptions->Instructions.BoundaryEdgeColor, ui->BoundaryEdgeColorButton);
+	SetButtonPixmap(mOptions->Instructions.BoundaryBorderColor, ui->BoundaryBorderColorButton);
+	SetButtonPixmap(mOptions->Instructions.LayoutAreaColor, ui->LayoutAreaColorButton);
 	SetButtonPixmap(mOptions->Preferences.mActiveViewColor, ui->ActiveViewColorButton);
 	SetButtonPixmap(mOptions->Preferences.mInactiveViewColor, ui->InactiveViewColorButton);
 	SetButtonPixmap(mOptions->Preferences.mFadeStepsColor, ui->FadeStepsColor);
@@ -1500,6 +1506,24 @@ void swPreferencesDialog::ColorButtonClicked()
 	{
 		Color = &mOptions->Instructions.RulerPointerColor;
 		Title = tr("Select Ruler Pointer Color");
+		DialogOptions = QColorDialog::ShowAlphaChannel;
+	}
+	else if (Button == ui->BoundaryEdgeColorButton)
+	{
+		Color = &mOptions->Instructions.BoundaryEdgeColor;
+		Title = tr("Select Boundary Edge Color");
+		DialogOptions = QColorDialog::ShowAlphaChannel;
+	}
+	else if (Button == ui->BoundaryBorderColorButton)
+	{
+		Color = &mOptions->Instructions.BoundaryBorderColor;
+		Title = tr("Select Boundary Border Color");
+		DialogOptions = QColorDialog::ShowAlphaChannel;
+	}
+	else if (Button == ui->LayoutAreaColorButton)
+	{
+		Color = &mOptions->Instructions.LayoutAreaColor;
+		Title = tr("Select Layout Area Color");
 		DialogOptions = QColorDialog::ShowAlphaChannel;
 	}
 	else if (Button == ui->ActiveViewColorButton)

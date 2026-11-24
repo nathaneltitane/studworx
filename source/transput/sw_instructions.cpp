@@ -111,12 +111,66 @@ swInstructionsBoxTypes swGetBoxTypes(swInstructionsBoxElement Element)
 	case swInstructionsBoxElement::Watermark:
 		return { swInstructionsPropertyType::WatermarkMargin, swInstructionsPropertyType::WatermarkPadding, swInstructionsPropertyType::WatermarkBorderWidth, swInstructionsPropertyType::WatermarkCornerRadius, swInstructionsPropertyType::WatermarkBorderColor, swInstructionsPropertyType::WatermarkBackgroundColor };
 
+	case swInstructionsBoxElement::BillOfMaterialsTitle:
+		return { swInstructionsPropertyType::BillOfMaterialsTitleMargin, swInstructionsPropertyType::BillOfMaterialsTitlePadding, swInstructionsPropertyType::BillOfMaterialsTitleBorderWidth, swInstructionsPropertyType::BillOfMaterialsTitleCornerRadius, swInstructionsPropertyType::BillOfMaterialsTitleBorderColor, swInstructionsPropertyType::BillOfMaterialsTitleBackgroundColor };
+
+	case swInstructionsBoxElement::BillOfMaterialsList:
+		return { swInstructionsPropertyType::BillOfMaterialsListMargin, swInstructionsPropertyType::BillOfMaterialsListPadding, swInstructionsPropertyType::BillOfMaterialsListBorderWidth, swInstructionsPropertyType::BillOfMaterialsListCornerRadius, swInstructionsPropertyType::BillOfMaterialsListBorderColor, swInstructionsPropertyType::BillOfMaterialsListBackgroundColor };
+
+	case swInstructionsBoxElement::BillOfMaterialsQuantity:
+		return { swInstructionsPropertyType::BillOfMaterialsQuantityMargin, swInstructionsPropertyType::BillOfMaterialsQuantityPadding, swInstructionsPropertyType::BillOfMaterialsQuantityBorderWidth, swInstructionsPropertyType::BillOfMaterialsQuantityCornerRadius, swInstructionsPropertyType::BillOfMaterialsQuantityBorderColor, swInstructionsPropertyType::BillOfMaterialsQuantityBackgroundColor };
+
+	case swInstructionsBoxElement::BillOfMaterialsPartCount:
+		return { swInstructionsPropertyType::BillOfMaterialsPartCountMargin, swInstructionsPropertyType::BillOfMaterialsPartCountPadding, swInstructionsPropertyType::BillOfMaterialsPartCountBorderWidth, swInstructionsPropertyType::BillOfMaterialsPartCountCornerRadius, swInstructionsPropertyType::BillOfMaterialsPartCountBorderColor, swInstructionsPropertyType::BillOfMaterialsPartCountBackgroundColor };
+
 	case swInstructionsBoxElement::Notice:
+	case swInstructionsBoxElement::Completion:
+		return { swInstructionsPropertyType::CompletionMargin, swInstructionsPropertyType::CompletionPadding, swInstructionsPropertyType::CompletionBorderWidth, swInstructionsPropertyType::CompletionCornerRadius, swInstructionsPropertyType::CompletionBorderColor, swInstructionsPropertyType::CompletionBoxBackgroundColor };
+
 	case swInstructionsBoxElement::Count:
 		break;
 	}
 
 	return { swInstructionsPropertyType::NoticeMargin, swInstructionsPropertyType::NoticePadding, swInstructionsPropertyType::NoticeBorderWidth, swInstructionsPropertyType::NoticeCornerRadius, swInstructionsPropertyType::NoticeBorderColor, swInstructionsPropertyType::NoticeBackgroundColor };
+}
+
+// the bill of materials starts from the steps
+const std::vector<std::pair<swInstructionsPropertyType, swInstructionsPropertyType>>& swGetBillOfMaterialsSources()
+{
+	static const std::vector<std::pair<swInstructionsPropertyType, swInstructionsPropertyType>> Sources = []()
+	{
+		std::vector<std::pair<swInstructionsPropertyType, swInstructionsPropertyType>> Pairs = {
+			{ swInstructionsPropertyType::ShowBillOfMaterialsTitle, swInstructionsPropertyType::ShowStepNumber },
+			{ swInstructionsPropertyType::BillOfMaterialsTitlePlacement, swInstructionsPropertyType::StepNumberPlacement },
+			{ swInstructionsPropertyType::BillOfMaterialsFont, swInstructionsPropertyType::PLIFont },
+			{ swInstructionsPropertyType::BillOfMaterialsTextColor, swInstructionsPropertyType::PLITextColor },
+			{ swInstructionsPropertyType::BillOfMaterialsShowCounts, swInstructionsPropertyType::PLIShowCounts },
+			{ swInstructionsPropertyType::BillOfMaterialsSortOrder, swInstructionsPropertyType::PLISortOrder },
+			{ swInstructionsPropertyType::BillOfMaterialsLayout, swInstructionsPropertyType::PLILayout },
+			{ swInstructionsPropertyType::BillOfMaterialsAlignment, swInstructionsPropertyType::PLIAlignment },
+			{ swInstructionsPropertyType::BillOfMaterialsThumbnailSize, swInstructionsPropertyType::PLIThumbnailSize },
+			{ swInstructionsPropertyType::BillOfMaterialsCountPlacement, swInstructionsPropertyType::PLICountPlacement }
+		};
+
+		const std::pair<swInstructionsBoxElement, swInstructionsBoxElement> Boxes[] = {
+			{ swInstructionsBoxElement::BillOfMaterialsTitle, swInstructionsBoxElement::StepNumber },
+			{ swInstructionsBoxElement::BillOfMaterialsList, swInstructionsBoxElement::PartsList },
+			{ swInstructionsBoxElement::BillOfMaterialsQuantity, swInstructionsBoxElement::PartsListQuantity },
+			{ swInstructionsBoxElement::BillOfMaterialsPartCount, swInstructionsBoxElement::PartCount }
+		};
+
+		for (const std::pair<swInstructionsBoxElement, swInstructionsBoxElement>& Box : Boxes)
+		{
+			const swInstructionsBoxTypes To = swGetBoxTypes(Box.first);
+			const swInstructionsBoxTypes From = swGetBoxTypes(Box.second);
+
+			Pairs.insert(Pairs.end(), { { To.Margin, From.Margin }, { To.Padding, From.Padding }, { To.BorderWidth, From.BorderWidth }, { To.CornerRadius, From.CornerRadius }, { To.BorderColor, From.BorderColor }, { To.BackgroundColor, From.BackgroundColor } });
+		}
+
+		return Pairs;
+	}();
+
+	return Sources;
 }
 
 swInstructions::swInstructions(Project* Project)
@@ -155,11 +209,16 @@ swInstructions::swInstructions(Project* Project)
 	mShowElementMargins = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_MARGINS) != 0;
 	mShowElementPadding = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_PADDING) != 0;
 	mShowElementAnchors = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_ANCHORS) != 0;
+	mElementBoundaries = static_cast<swInstructionsBoundaries>(qBound(0, swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_BOUNDARIES), static_cast<int>(swInstructionsBoundaries::EveryEdge)));
+	mShowLayoutAreas = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_LAYOUT_AREAS) != 0;
 	mShowRulers = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_RULERS) != 0;
 	mElementMarginColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR));
 	mElementPaddingColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR));
 	mElementAnchorColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR));
 	mRulerPointerColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR));
+	mBoundaryEdgeColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_BOUNDARY_EDGE_COLOR));
+	mBoundaryBorderColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_BOUNDARY_BORDER_COLOR));
+	mLayoutAreaColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_LAYOUT_AREA_COLOR));
 
 	LoadDefaultTemplate();
 	LoadCommandLines(mProject && mProject->GetMainModel() ? mProject->GetMainModel()->GetInstructionLines() : QStringList());
@@ -261,6 +320,11 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::PageBackgroundColor)].Value = SW_RGBA(255, 255, 255, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::SubmodelBackgroundColor)].Value = SW_RGBA(255, 255, 255, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::BlankPageBackgroundColor)].Value = SW_RGBA(255, 255, 255, 255);
+
+	// clear follows the page or submodel color
+
+	Properties[static_cast<int>(swInstructionsPropertyType::AssemblyBackgroundColor)].Value = SW_RGBA(0, 0, 0, 0);
+	Properties[static_cast<int>(swInstructionsPropertyType::CompletionBackgroundColor)].Value = SW_RGBA(0, 0, 0, 0);
 	Properties[static_cast<int>(swInstructionsPropertyType::StepImageSize)].Value = 0;
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverImageSize)].Value = 0;
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitleText)].Value = QString();
@@ -277,6 +341,7 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::StepDividerRounded)].Value = false;
 	Properties[static_cast<int>(swInstructionsPropertyType::StepDividerHorizontal)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::StepDividerVertical)].Value = true;
+	Properties[static_cast<int>(swInstructionsPropertyType::StepDividerFinalModel)].Value = true;
 
 	// highlight keeps the view outline width
 
@@ -295,6 +360,7 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::StepNumberAnchor)].Value = static_cast<int>(swInstructionsPlacementAnchor::Area);
 	Properties[static_cast<int>(swInstructionsPropertyType::PLIPlacement)].Value = SW_PLACEMENT_GRID_SIZE + SW_PLACEMENT_GRID_SIZE - 1;
 	Properties[static_cast<int>(swInstructionsPropertyType::PLIAnchor)].Value = static_cast<int>(swInstructionsPlacementAnchor::StepNumber);
+	Properties[static_cast<int>(swInstructionsPropertyType::PLIReserveArea)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitlePlacement)].Value = SW_PLACEMENT_GRID_SIZE + 2;
 	Properties[static_cast<int>(swInstructionsPropertyType::BillOfMaterialsPlacement)].Value = SW_PLACEMENT_GRID_SIZE + 1;
 	Properties[static_cast<int>(swInstructionsPropertyType::PLIThumbnailSize)].Value = 300;
@@ -344,6 +410,9 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowWatermark)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::WatermarkOpacity)].Value = 25;
+	Properties[static_cast<int>(swInstructionsPropertyType::WatermarkFont)].Value = QFont("Arial", 16).toString();
+	Properties[static_cast<int>(swInstructionsPropertyType::WatermarkTextColor)].Value = SW_RGBA(0, 0, 0, 64);
+	Properties[static_cast<int>(swInstructionsPropertyType::WatermarkRotation)].Value = 0;
 
 	// texts start left and middle, cover texts centered
 	for (int Type = static_cast<int>(swInstructionsPropertyType::StepNumberAlignment); Type <= static_cast<int>(swInstructionsPropertyType::NoticeAlignment); Type += 2)
@@ -427,7 +496,11 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	// the back cover starts blank
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowBackCover)].Value = true;
 
-	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 243, "Missing default property");
+	// the bill of materials copies the steps
+	for (const std::pair<swInstructionsPropertyType, swInstructionsPropertyType>& Source : swGetBillOfMaterialsSources())
+		Properties[static_cast<int>(Source.first)].Value = Properties[static_cast<int>(Source.second)].Value;
+
+	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 290, "Missing default property");
 
 	return Properties;
 }
@@ -696,7 +769,7 @@ QFont swInstructions::GetFontProperty(swInstructionsPropertyType Type, swModel* 
 
 bool swInstructions::IsPageProperty(swInstructionsPropertyType Type)
 {
-	return Type == swInstructionsPropertyType::PLIThumbnailSize || Type == swInstructionsPropertyType::PLIThumbnailBackgroundColor || Type == swInstructionsPropertyType::PageBackgroundColor || Type == swInstructionsPropertyType::StepImageSize || Type == swInstructionsPropertyType::ShowWatermark || (Type >= swInstructionsPropertyType::ShowHeaderBand && Type <= swInstructionsPropertyType::RightBandReserve) || (Type >= swInstructionsPropertyType::FinalModelBackgroundColor && Type <= swInstructionsPropertyType::WatermarkBackgroundColor);
+	return Type == swInstructionsPropertyType::PLIThumbnailSize || Type == swInstructionsPropertyType::PageBackgroundColor || Type == swInstructionsPropertyType::StepImageSize || Type == swInstructionsPropertyType::ShowWatermark || (Type >= swInstructionsPropertyType::ShowHeaderBand && Type <= swInstructionsPropertyType::RightBandReserve) || (Type >= swInstructionsPropertyType::FinalModelBackgroundColor && Type <= swInstructionsPropertyType::WatermarkBackgroundColor);
 }
 
 bool swInstructions::GetStepPageIndex(swModel* Model, swStep Step, size_t& PageIndex) const
@@ -752,6 +825,21 @@ QVariant swInstructions::GetPageProperty(size_t PageIndex, swInstructionsPropert
 	// blank pages have their own background
 	if (Type == swInstructionsPropertyType::PageBackgroundColor && PageIndex < mPages.size() && mPages[PageIndex].Type == swInstructionsPageType::Blank)
 		return mStepProperties[static_cast<int>(swInstructionsPropertyType::BlankPageBackgroundColor)].Value;
+
+	// a completion page alone has its own background
+
+	if (Type == swInstructionsPropertyType::PageBackgroundColor && swQColorFromRGBA(mStepProperties[static_cast<int>(swInstructionsPropertyType::CompletionBackgroundColor)].Value.toUInt()).alpha() != 0 && IsCompletionPage(PageIndex) && std::all_of(mPages[PageIndex].Steps.begin(), mPages[PageIndex].Steps.end(), [](const swInstructionsStep& Step) { return Step.FinalModel; }))
+		return mStepProperties[static_cast<int>(swInstructionsPropertyType::CompletionBackgroundColor)].Value;
+
+	// assembly pages have their own background
+
+	if (Type == swInstructionsPropertyType::PageBackgroundColor && swQColorFromRGBA(mStepProperties[static_cast<int>(swInstructionsPropertyType::AssemblyBackgroundColor)].Value.toUInt()).alpha() != 0)
+	{
+		const swModel* TitleModel = nullptr;
+
+		if (GetPageTitleModel(PageIndex, TitleModel))
+			return mStepProperties[static_cast<int>(swInstructionsPropertyType::AssemblyBackgroundColor)].Value;
+	}
 
 	// submodel pages have their own background
 	if (Type == swInstructionsPropertyType::PageBackgroundColor && mProject && GetPageKey(PageIndex, Key) && Key.first && Key.first != mProject->GetMainModel())
@@ -855,6 +943,8 @@ void swInstructions::ApplyPageToAllPages(size_t PageIndex, swInstructionsPropert
 	{
 		SetDefaultProperty(swInstructionsPropertyType::SubmodelBackgroundColor, Value);
 		SetDefaultProperty(swInstructionsPropertyType::BlankPageBackgroundColor, Value);
+		SetDefaultProperty(swInstructionsPropertyType::AssemblyBackgroundColor, Value);
+		SetDefaultProperty(swInstructionsPropertyType::CompletionBackgroundColor, Value);
 	}
 
 	SetDefaultProperty(Type, Value);
@@ -971,6 +1061,19 @@ swInstructionsBoxStyle swInstructions::GetBoxStyle(swInstructionsBoxElement Elem
 	BoxStyle.CornerRadius = GetIntProperty(BoxTypes.CornerRadius, Model, Step);
 	BoxStyle.BorderColor = GetColorProperty(BoxTypes.BorderColor, Model, Step);
 	BoxStyle.BackgroundColor = GetColorProperty(BoxTypes.BackgroundColor, Model, Step);
+
+	// a clear final model takes the page background
+
+	if (Element == swInstructionsBoxElement::FinalModel && BoxStyle.BackgroundColor.alpha() == 0)
+		BoxStyle.BackgroundColor = GetColorProperty(swInstructionsPropertyType::PageBackgroundColor, nullptr, 0);
+
+	// a clear completion takes its page color
+
+	if (Element == swInstructionsBoxElement::Completion && BoxStyle.BackgroundColor.alpha() == 0)
+	{
+		const QColor CompletionColor = GetColorProperty(swInstructionsPropertyType::CompletionBackgroundColor, nullptr, 0);
+		BoxStyle.BackgroundColor = CompletionColor.alpha() != 0 ? CompletionColor : GetColorProperty(swInstructionsPropertyType::PageBackgroundColor, nullptr, 0);
+	}
 
 	return BoxStyle;
 }
@@ -1306,14 +1409,20 @@ void swInstructions::UpdateColors()
 	const QColor ElementPaddingColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR));
 	const QColor ElementAnchorColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR));
 	const QColor RulerPointerColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR));
+	const QColor BoundaryEdgeColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_BOUNDARY_EDGE_COLOR));
+	const QColor BoundaryBorderColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_BOUNDARY_BORDER_COLOR));
+	const QColor LayoutAreaColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_LAYOUT_AREA_COLOR));
 
-	if (mElementMarginColor == ElementMarginColor && mElementPaddingColor == ElementPaddingColor && mElementAnchorColor == ElementAnchorColor && mRulerPointerColor == RulerPointerColor)
+	if (mElementMarginColor == ElementMarginColor && mElementPaddingColor == ElementPaddingColor && mElementAnchorColor == ElementAnchorColor && mRulerPointerColor == RulerPointerColor && mBoundaryEdgeColor == BoundaryEdgeColor && mBoundaryBorderColor == BoundaryBorderColor && mLayoutAreaColor == LayoutAreaColor)
 		return;
 
 	mElementMarginColor = ElementMarginColor;
 	mElementPaddingColor = ElementPaddingColor;
 	mElementAnchorColor = ElementAnchorColor;
 	mRulerPointerColor = RulerPointerColor;
+	mBoundaryEdgeColor = BoundaryEdgeColor;
+	mBoundaryBorderColor = BoundaryBorderColor;
+	mLayoutAreaColor = LayoutAreaColor;
 
 	emit GridChanged();
 }
@@ -1353,6 +1462,22 @@ void swInstructions::SetShowElementPadding(bool ShowElementPadding)
 void swInstructions::SetShowElementAnchors(bool ShowElementAnchors)
 {
 	SetShowOption(mShowElementAnchors, ShowElementAnchors, SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_ANCHORS);
+}
+
+void swInstructions::SetElementBoundaries(swInstructionsBoundaries ElementBoundaries)
+{
+	if (mElementBoundaries == ElementBoundaries)
+		return;
+
+	mElementBoundaries = ElementBoundaries;
+	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_BOUNDARIES, static_cast<int>(ElementBoundaries));
+
+	emit GridChanged();
+}
+
+void swInstructions::SetShowLayoutAreas(bool ShowLayoutAreas)
+{
+	SetShowOption(mShowLayoutAreas, ShowLayoutAreas, SW_PROFILE_INSTRUCTIONS_SHOW_LAYOUT_AREAS);
 }
 
 void swInstructions::SetShowRulers(bool ShowRulers)
@@ -1565,6 +1690,13 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 
 	Property.Value = Value;
 
+	// the bill of materials page redraws
+	if (Type >= swInstructionsPropertyType::ShowBillOfMaterialsTitle && Type <= swInstructionsPropertyType::BillOfMaterialsPartCountBackgroundColor)
+	{
+		emit PageLayoutChanged();
+		return;
+	}
+
 	// dividers and lists change the layout
 	switch (Type)
 	{
@@ -1609,6 +1741,14 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::NoticeVerticalAlignment:
 	case swInstructionsPropertyType::PageBackgroundColor:
 	case swInstructionsPropertyType::SubmodelBackgroundColor:
+	case swInstructionsPropertyType::AssemblyBackgroundColor:
+	case swInstructionsPropertyType::CompletionBackgroundColor:
+	case swInstructionsPropertyType::CompletionMargin:
+	case swInstructionsPropertyType::CompletionPadding:
+	case swInstructionsPropertyType::CompletionBorderWidth:
+	case swInstructionsPropertyType::CompletionBorderColor:
+	case swInstructionsPropertyType::CompletionCornerRadius:
+	case swInstructionsPropertyType::CompletionBoxBackgroundColor:
 	case swInstructionsPropertyType::BlankPageBackgroundColor:
 	case swInstructionsPropertyType::CoverBackgroundColor:
 	case swInstructionsPropertyType::BillOfMaterialsBackgroundColor:
@@ -1620,6 +1760,7 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::StepDividerRounded:
 	case swInstructionsPropertyType::StepDividerHorizontal:
 	case swInstructionsPropertyType::StepDividerVertical:
+	case swInstructionsPropertyType::StepDividerFinalModel:
 	case swInstructionsPropertyType::FinalModelBorderWidth:
 	case swInstructionsPropertyType::FinalModelBorderColor:
 	case swInstructionsPropertyType::FinalModelMargin:
@@ -1627,6 +1768,7 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::StepNumberAnchor:
 	case swInstructionsPropertyType::PLIPlacement:
 	case swInstructionsPropertyType::PLIAnchor:
+	case swInstructionsPropertyType::PLIReserveArea:
 	case swInstructionsPropertyType::CoverTitlePlacement:
 	case swInstructionsPropertyType::BillOfMaterialsPlacement:
 	case swInstructionsPropertyType::CoverAuthorPlacement:
@@ -1749,6 +1891,9 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::RightBandReserve:
 	case swInstructionsPropertyType::ShowWatermark:
 	case swInstructionsPropertyType::WatermarkOpacity:
+	case swInstructionsPropertyType::WatermarkFont:
+	case swInstructionsPropertyType::WatermarkTextColor:
+	case swInstructionsPropertyType::WatermarkRotation:
 	case swInstructionsPropertyType::ImageMargin:
 	case swInstructionsPropertyType::ImagePadding:
 	case swInstructionsPropertyType::ImageBorderWidth:
@@ -1824,7 +1969,13 @@ void swInstructions::CreatePages()
 			AddDefaultPages(Model, AddedModels);
 
 			// the finished main model gets its own page
-			if (GetBoolProperty(swInstructionsPropertyType::ShowFinalModelPage, nullptr, 0) && Model->GetLastStep() > 0)
+
+			const bool FinalOnPage = std::any_of(mPages.begin(), mPages.end(), [Model](const swInstructionsPage& StepsPage)
+			{
+				return std::any_of(StepsPage.Steps.begin(), StepsPage.Steps.end(), [Model](const swInstructionsStep& Step) { return Step.FinalModel && Step.Model == Model; });
+			});
+
+			if (GetBoolProperty(swInstructionsPropertyType::ShowFinalModelPage, nullptr, 0) && Model->GetLastStep() > 0 && !FinalOnPage)
 			{
 				swInstructionsStep FinalStep;
 				FinalStep.Model = Model;
@@ -1859,6 +2010,23 @@ void swInstructions::CreatePages()
 	}
 }
 
+// use to find steps placing one submodel and nothing else
+static bool swIsOnlySubModelStep(const swModel* Model, swStep Step)
+{
+	int Count = 0;
+
+	for (const std::unique_ptr<swPart>& Part : Model->GetParts())
+	{
+		if (Part->IsHidden() || Part->GetStepShow() != Step)
+			continue;
+
+		if (!Part->mPartData->IsModel() || ++Count > 1)
+			return false;
+	}
+
+	return Count == 1;
+}
+
 void swInstructions::AddDefaultPages(swModel* Model, std::vector<const swModel*>& AddedModels)
 {
 	if (std::find(AddedModels.begin(), AddedModels.end(), Model) != AddedModels.end())
@@ -1868,7 +2036,6 @@ void swInstructions::AddDefaultPages(swModel* Model, std::vector<const swModel*>
 
 	const swStep LastStep = Model->GetLastStep();
 	swInstructionsPage Page;
-	swInstructionsPageSettings LastSettings;
 
 	// add entries for new steps
 	std::vector<swInstructionsProperties>& StepProperties = mModels[Model].StepProperties;
@@ -1901,6 +2068,11 @@ void swInstructions::AddDefaultPages(swModel* Model, std::vector<const swModel*>
 
 		AddBlankPages(Page, { Model, Step });
 
+		// a step adding only a just shown finished submodel repeats it
+
+		if (StepSubModels.size() == 1 && !mPages.empty() && swIsOnlySubModelStep(Model, Step) && std::any_of(mPages.back().Steps.begin(), mPages.back().Steps.end(), [&StepSubModels](const swInstructionsStep& PageStep) { return PageStep.FinalModel && PageStep.Model == *StepSubModels.begin(); }))
+			continue;
+
 		if (Page.Steps.empty())
 			Page.Settings = GetStepPageSettings({ Model, Step });
 
@@ -1910,7 +2082,6 @@ void swInstructions::AddDefaultPages(swModel* Model, std::vector<const swModel*>
 		InstructionsStep.Step = Step;
 
 		Page.Steps.push_back(std::move(InstructionsStep));
-		LastSettings = Page.Settings;
 
 		if (static_cast<int>(Page.Steps.size()) == Page.Settings.Rows * Page.Settings.Columns)
 			FinishPage(Page);
@@ -1918,15 +2089,9 @@ void swInstructions::AddDefaultPages(swModel* Model, std::vector<const swModel*>
 
 	// the finished model fills the room left after the last step
 
-	// a full last page sends it to a new page with the same layout
+	// a full last page already ends on it
 
-	if (Page.Steps.empty() && LastSettings.FinalModel)
-	{
-		const swInstructionsStepKey FinalKey = { Model, LastStep };
-		Page.Settings = mPageSettingsOverrides.count(FinalKey) ? mPageSettingsOverrides.at(FinalKey) : LastSettings;
-	}
-
-	if (LastStep > 0 && Page.Settings.FinalModel)
+	if (LastStep > 0 && !Page.Steps.empty() && Page.Settings.FinalModel)
 	{
 		swInstructionsStep FinalStep;
 
@@ -1940,6 +2105,71 @@ void swInstructions::AddDefaultPages(swModel* Model, std::vector<const swModel*>
 	AddBlankPages(Page, { Model, LastStep + 1 });
 
 	FinishPage(Page);
+}
+
+// use to find the page of the finished main model
+bool swInstructions::IsCompletionPage(size_t PageIndex) const
+{
+	if (PageIndex >= mPages.size() || mPages[PageIndex].Type != swInstructionsPageType::Steps)
+		return false;
+
+	const swModel* MainModel = GetMainModel();
+	const std::vector<swInstructionsStep>& Steps = mPages[PageIndex].Steps;
+
+	return MainModel && std::any_of(Steps.begin(), Steps.end(), [MainModel](const swInstructionsStep& Step) { return Step.FinalModel && Step.Model == MainModel; });
+}
+
+// use to tell assembly pages from the rest
+bool swInstructions::GetPageTitleModel(size_t PageIndex, const swModel*& TitleModel) const
+{
+	TitleModel = nullptr;
+
+	if (PageIndex >= mPages.size() || mPages[PageIndex].Type != swInstructionsPageType::Steps)
+		return false;
+
+	// pages joining two or more models are assemblies
+
+	const std::vector<swInstructionsStep>& Steps = mPages[PageIndex].Steps;
+	const swModel* Model = Steps.empty() ? nullptr : Steps.front().Model;
+
+	if (!Model)
+		return false;
+
+	swStep LastStep = 0;
+
+	for (const swInstructionsStep& Step : Steps)
+		LastStep = qMax(LastStep, Step.Step);
+
+	std::set<const swModel*> Shown;
+	const swModel* Focus = nullptr;
+
+	for (const std::unique_ptr<swPart>& Part : Model->GetParts())
+	{
+		if (Part->IsHidden() || Part->GetStepShow() > LastStep)
+			continue;
+
+		const swModel* PartModel = Part->mPartData->IsModel() ? Part->mPartData->GetModel() : Model;
+		Shown.insert(PartModel);
+
+		// the first submodel added here names the page
+		const bool Added = std::any_of(Steps.begin(), Steps.end(), [&Part](const swInstructionsStep& Step) { return Step.Step == Part->GetStepShow(); });
+
+		if (Added && PartModel != Model && !Focus)
+			Focus = PartModel;
+	}
+
+	// a page of only the finished model is an assembly
+	if (std::all_of(Steps.begin(), Steps.end(), [](const swInstructionsStep& Step) { return Step.FinalModel; }))
+		Focus = Model;
+
+	if (Shown.size() >= 2 || Focus == Model)
+	{
+		TitleModel = Focus ? Focus : Model;
+		return true;
+	}
+
+	TitleModel = Shown.empty() ? Model : *Shown.begin();
+	return false;
 }
 
 void swInstructions::FinishPage(swInstructionsPage& Page)

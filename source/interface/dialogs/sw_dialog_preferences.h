@@ -27,6 +27,9 @@ struct swInstructionsPreferences
 	quint32 ElementPaddingColor;
 	quint32 ElementAnchorColor;
 	quint32 RulerPointerColor;
+	quint32 BoundaryEdgeColor;
+	quint32 BoundaryBorderColor;
+	quint32 LayoutAreaColor;
 	QColor GridPrimaryColor;
 	QColor GridSecondaryColor;
 	QColor MarginColor;

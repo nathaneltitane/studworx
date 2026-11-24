@@ -193,7 +193,7 @@ swResult<QImage> swModel::RenderStepImageWithReadyAssets(bool Zoom, int Width, i
 	return Image;
 }
 
-swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnailSize, swStep Step, quint32 BackgroundColor, quint32 ThumbnailBackgroundColor, QFont Font, QColor TextColor, bool KeepMissingParts, bool ShowCounts, swPartsListSort Sort, swPartsListLayout Layout, swPartsListAlignment Alignment, int MaxHeight, float Scale, bool ShowPartIds, int CountPlacement, std::vector<QRect>* CountRects, const swInstructionsBoxStyle* CountBox, qreal Bleed) const
+swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnailSize, swStep Step, quint32 BackgroundColor, QFont Font, QColor TextColor, bool KeepMissingParts, bool ShowCounts, swPartsListSort Sort, swPartsListLayout Layout, swPartsListAlignment Alignment, int MaxHeight, float Scale, bool ShowPartIds, int CountPlacement, std::vector<QRect>* CountRects, const swInstructionsBoxStyle* CountBox) const
 {
 	// scale every pixel size
 	auto Scaled = [Scale](int Size)
@@ -201,10 +201,9 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 		return qRound(Size * Scale);
 	};
 
-	// wrap inside the image padding and the fill bleed
-	const int BleedSize = qRound(Bleed * Scale);
-	MaxWidth = qMax(Scaled(MaxWidth) - Scaled(40) - 2 * BleedSize, Scaled(16));
-	MaxHeight = MaxHeight < INT_MAX / 8 ? qMax(Scaled(MaxHeight) - Scaled(40) - 2 * BleedSize, Scaled(16)) : INT_MAX;
+	// wrap inside the image padding
+	MaxWidth = qMax(Scaled(MaxWidth) - Scaled(40), Scaled(16));
+	MaxHeight = MaxHeight < INT_MAX / 8 ? qMax(Scaled(MaxHeight) - Scaled(40), Scaled(16)) : INT_MAX;
 
 	if (Font.pointSizeF() > 0.0)
 		Font.setPointSizeF(Font.pointSizeF() * Scale);
@@ -622,7 +621,7 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 		}
 	}
 
-	QImage PainterImage(ImageWidth + Scaled(40) + 2 * BleedSize, CurrentHeight + Scaled(40) + 2 * BleedSize, QImage::Format_ARGB32);
+	QImage PainterImage(ImageWidth + Scaled(40), CurrentHeight + Scaled(40), QImage::Format_ARGB32);
 
 	if (PainterImage.isNull())
 		return swUnexpected(tr("Could not allocate the parts list image."));
@@ -631,15 +630,10 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 
 	QPainter Painter(&PainterImage);
 
-	// one shared fill behind all parts
-
-	if (qAlpha(ThumbnailBackgroundColor))
-		Painter.fillRect(PainterImage.rect(), swQColorFromRGBA(ThumbnailBackgroundColor));
-
 	Painter.setFont(Font);
 	Painter.setPen(TextColor);
 
-	const QPoint Padding(Scaled(20) + BleedSize, Scaled(20) + BleedSize);
+	const QPoint Padding(Scaled(20), Scaled(20));
 
 	if (CountRects)
 		CountRects->clear();
