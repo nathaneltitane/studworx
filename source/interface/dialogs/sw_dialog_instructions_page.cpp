@@ -2004,6 +2004,109 @@ static QString swFillPageCodes(const swInstructions* Instructions, size_t PageIn
 	return Text.replace(QLatin1String("%page"), swGetPageNumberText(Instructions, PageIndex)).replace(QLatin1String("%title"), swGetModelTitle(Instructions, Instructions->GetMainModel()));
 }
 
+// use to add a step area and its elements
+static void swAddStepArea(swInstructions* Instructions, const swInstructionsStep& Step, QGraphicsItem* ParentItem, const QRectF& CellRect, const QMarginsF& DividerMargins)
+{
+	// the step area is a box holding its elements
+	const swInstructionsBoxStyle AreaStyle = Instructions->GetBoxStyle(swInstructionsBoxElement::StepArea, Step.Model, Step.Step);
+	const qreal AreaInset = AreaStyle.GetInset();
+	swInstructionsFrameItem* StepAreaItem = new swInstructionsFrameItem(QRectF(QPointF(0.0, 0.0), CellRect.size()), AreaStyle, ParentItem);
+	StepAreaItem->setPos(CellRect.topLeft());
+	StepAreaItem->setData(SW_OBJECT_DATA, static_cast<int>(swInstructionsPageObject::StepArea));
+
+	swInstructionsStepImageItem* StepImageItem = new swInstructionsStepImageItem(StepAreaItem, Instructions, Step.Model, Step.Step);
+	const qreal ImageInset = StepImageItem->GetBoxStyle().GetInset();
+
+	swInstructionsStepNumberItem* StepNumberItem = new swInstructionsStepNumberItem(StepAreaItem, Instructions, Step.Model, Step.Step);
+	StepNumberItem->Update();
+
+	// place step elements in the split area
+	QRectF AreaRect(QPointF(AreaInset, AreaInset), CellRect.size() - QSizeF(2.0 * AreaInset, 2.0 * AreaInset));
+	AreaRect = AreaRect.marginsRemoved(DividerMargins);
+
+	// wrap the parts list at its area
+	swInstructionsPartsListItem* PartsImageItem = new swInstructionsPartsListItem(StepAreaItem, Instructions, Step.Model, Step.Step);
+	const qreal Inset = 2.0 * PartsImageItem->GetBoxStyle().GetInset();
+	PartsImageItem->SetMaxSize(qMax(static_cast<int>(AreaRect.width() - Inset), 16), qMax(static_cast<int>(AreaRect.height() - Inset), 16));
+	PartsImageItem->Update();
+
+	swInstructionsPlacementAnchor NumberAnchor = static_cast<swInstructionsPlacementAnchor>(Instructions->GetIntProperty(swInstructionsPropertyType::StepNumberAnchor, Step.Model, Step.Step));
+	swInstructionsPlacementAnchor PartsAnchor = static_cast<swInstructionsPlacementAnchor>(Instructions->GetIntProperty(swInstructionsPropertyType::PLIAnchor, Step.Model, Step.Step));
+
+	// fall back from hidden anchors
+	if (NumberAnchor != swInstructionsPlacementAnchor::PartsList || !PartsImageItem->isVisible() || PartsAnchor == swInstructionsPlacementAnchor::StepNumber)
+		NumberAnchor = swInstructionsPlacementAnchor::Area;
+
+	if (PartsAnchor != swInstructionsPlacementAnchor::StepNumber || !StepNumberItem->isVisible())
+		PartsAnchor = swInstructionsPlacementAnchor::Area;
+
+	const int NumberPlacement = swGetValidPlacement(Instructions->GetIntProperty(swInstructionsPropertyType::StepNumberPlacement, Step.Model, Step.Step), NumberAnchor == swInstructionsPlacementAnchor::Area);
+	const int PartsPlacement = swGetValidPlacement(Instructions->GetIntProperty(swInstructionsPropertyType::PLIPlacement, Step.Model, Step.Step), PartsAnchor == swInstructionsPlacementAnchor::Area);
+	const QSizeF NumberSize = StepNumberItem->boundingRect().size();
+	const QSizeF PartsSize = PartsImageItem->boundingRect().size();
+
+	// the parts strip keeps the model out
+
+	QRectF ImageSizeRect(QPointF(AreaInset, AreaInset), CellRect.size() - QSizeF(2.0 * AreaInset, 2.0 * AreaInset));
+	QRectF ImagePlaceRect = AreaRect;
+
+	if (PartsImageItem->isVisible() && Instructions->GetBoolProperty(swInstructionsPropertyType::PLIReserveArea, Step.Model, Step.Step))
+	{
+		QRectF NumberRect(swGetPlacementPosition(AreaRect, NumberSize, NumberPlacement), NumberSize);
+		QRectF PartsRect(swGetPlacementPosition(AreaRect, PartsSize, PartsPlacement), PartsSize);
+
+		if (NumberAnchor == swInstructionsPlacementAnchor::PartsList)
+			NumberRect.moveTopLeft(swGetPlacementPosition(PartsRect, NumberSize, NumberPlacement));
+
+		if (PartsAnchor == swInstructionsPlacementAnchor::StepNumber)
+			PartsRect.moveTopLeft(swGetPlacementPosition(NumberRect, PartsSize, PartsPlacement));
+
+		// the number joins when beside the list
+		const bool NumberJoins = StepNumberItem->isVisible() && (NumberAnchor == swInstructionsPlacementAnchor::PartsList || PartsAnchor == swInstructionsPlacementAnchor::StepNumber);
+		const QRectF StripRect = NumberJoins ? PartsRect.united(NumberRect) : PartsRect;
+
+		// the side follows the area placement
+		const int AreaPlacement = PartsAnchor == swInstructionsPlacementAnchor::Area ? PartsPlacement : NumberPlacement;
+		const int Row = AreaPlacement / SW_PLACEMENT_GRID_SIZE;
+		const int Column = AreaPlacement % SW_PLACEMENT_GRID_SIZE;
+
+		if (Row == 1)
+			ImagePlaceRect.setTop(qMax(ImagePlaceRect.top(), StripRect.bottom()));
+		else if (Row == 3)
+			ImagePlaceRect.setBottom(qMin(ImagePlaceRect.bottom(), StripRect.top()));
+		else if (Column == 1)
+			ImagePlaceRect.setLeft(qMax(ImagePlaceRect.left(), StripRect.right()));
+		else if (Column == 3)
+			ImagePlaceRect.setRight(qMin(ImagePlaceRect.right(), StripRect.left()));
+
+		ImageSizeRect = ImageSizeRect.intersected(ImagePlaceRect);
+	}
+
+	new swInstructionsGuideItem(AreaRect, StepAreaItem);
+
+	if (ImagePlaceRect != AreaRect)
+		new swInstructionsGuideItem(ImagePlaceRect, StepAreaItem);
+
+	StepImageItem->SetImageSize(qMax(static_cast<int>(ImageSizeRect.width() - 2.0 * ImageInset), 1), qMax(static_cast<int>(ImageSizeRect.height() - 2.0 * ImageInset), 1));
+	StepImageItem->Update();
+
+	const int ImagePlacement = swGetValidPlacement(Instructions->GetIntProperty(swInstructionsPropertyType::StepImagePlacement, Step.Model, Step.Step), true);
+	swPlaceElement(StepImageItem, Instructions, swGetPlacementPosition(ImagePlaceRect, StepImageItem->boundingRect().size(), ImagePlacement));
+
+	// place moved and locked elements first
+	if (NumberAnchor == swInstructionsPlacementAnchor::Area)
+		swPlaceElement(StepNumberItem, Instructions, swGetPlacementPosition(AreaRect, NumberSize, NumberPlacement));
+
+	if (PartsAnchor == swInstructionsPlacementAnchor::Area)
+		swPlaceElement(PartsImageItem, Instructions, swGetPlacementPosition(AreaRect, PartsSize, PartsPlacement));
+
+	if (NumberAnchor == swInstructionsPlacementAnchor::PartsList)
+		swPlaceElement(StepNumberItem, Instructions, swGetPlacementPosition(QRectF(PartsImageItem->pos(), PartsSize), NumberSize, NumberPlacement));
+
+	if (PartsAnchor == swInstructionsPlacementAnchor::StepNumber)
+		swPlaceElement(PartsImageItem, Instructions, swGetPlacementPosition(QRectF(StepNumberItem->pos(), NumberSize), PartsSize, PartsPlacement));
+}
+
 // use to add the page elements
 static void swAddPageContent(swInstructions* Instructions, const swInstructionsPage* Page, QGraphicsScene* Scene, QGraphicsRectItem* PageItem, const QRectF& MarginsRect)
 {
@@ -2276,108 +2379,10 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 			continue;
 		}
 
-		// the step area is a box holding its elements
-		const swInstructionsBoxStyle AreaStyle = Instructions->GetBoxStyle(swInstructionsBoxElement::StepArea, Step.Model, Step.Step);
-		const qreal AreaInset = AreaStyle.GetInset();
-		swInstructionsFrameItem* StepAreaItem = new swInstructionsFrameItem(QRectF(QPointF(0.0, 0.0), CellRect.size()), AreaStyle, PageItem);
-		StepAreaItem->setPos(CellRect.topLeft());
-		StepAreaItem->setData(SW_OBJECT_DATA, static_cast<int>(swInstructionsPageObject::StepArea));
+		// dividers inset the inner edges
+		const QMarginsF DividerMargins(Step.Rect.left() > 0.0001 ? DividerInset : 0.0, Step.Rect.top() > 0.0001 ? DividerInset : 0.0, Step.Rect.right() < 0.9999 ? DividerInset : 0.0, Step.Rect.bottom() < 0.9999 ? DividerInset : 0.0);
 
-		swInstructionsStepImageItem* StepImageItem = new swInstructionsStepImageItem(StepAreaItem, Instructions, Step.Model, Step.Step);
-		const qreal ImageInset = StepImageItem->GetBoxStyle().GetInset();
-
-		swInstructionsStepNumberItem* StepNumberItem = new swInstructionsStepNumberItem(StepAreaItem, Instructions, Step.Model, Step.Step);
-		StepNumberItem->Update();
-
-		// place step elements in the split area
-		QRectF AreaRect(QPointF(AreaInset, AreaInset), CellRect.size() - QSizeF(2.0 * AreaInset, 2.0 * AreaInset));
-		const qreal InsetLeft = Step.Rect.left() > 0.0001 ? DividerInset : 0.0;
-		const qreal InsetTop = Step.Rect.top() > 0.0001 ? DividerInset : 0.0;
-		const qreal InsetRight = Step.Rect.right() < 0.9999 ? DividerInset : 0.0;
-		const qreal InsetBottom = Step.Rect.bottom() < 0.9999 ? DividerInset : 0.0;
-		AreaRect.adjust(InsetLeft, InsetTop, -InsetRight, -InsetBottom);
-
-		// wrap the parts list at its area
-		swInstructionsPartsListItem* PartsImageItem = new swInstructionsPartsListItem(StepAreaItem, Instructions, Step.Model, Step.Step);
-		const qreal Inset = 2.0 * PartsImageItem->GetBoxStyle().GetInset();
-		PartsImageItem->SetMaxSize(qMax(static_cast<int>(AreaRect.width() - Inset), 16), qMax(static_cast<int>(AreaRect.height() - Inset), 16));
-		PartsImageItem->Update();
-
-		swInstructionsPlacementAnchor NumberAnchor = static_cast<swInstructionsPlacementAnchor>(Instructions->GetIntProperty(swInstructionsPropertyType::StepNumberAnchor, Step.Model, Step.Step));
-		swInstructionsPlacementAnchor PartsAnchor = static_cast<swInstructionsPlacementAnchor>(Instructions->GetIntProperty(swInstructionsPropertyType::PLIAnchor, Step.Model, Step.Step));
-
-		// fall back from hidden anchors
-		if (NumberAnchor != swInstructionsPlacementAnchor::PartsList || !PartsImageItem->isVisible() || PartsAnchor == swInstructionsPlacementAnchor::StepNumber)
-			NumberAnchor = swInstructionsPlacementAnchor::Area;
-
-		if (PartsAnchor != swInstructionsPlacementAnchor::StepNumber || !StepNumberItem->isVisible())
-			PartsAnchor = swInstructionsPlacementAnchor::Area;
-
-		const int NumberPlacement = swGetValidPlacement(Instructions->GetIntProperty(swInstructionsPropertyType::StepNumberPlacement, Step.Model, Step.Step), NumberAnchor == swInstructionsPlacementAnchor::Area);
-		const int PartsPlacement = swGetValidPlacement(Instructions->GetIntProperty(swInstructionsPropertyType::PLIPlacement, Step.Model, Step.Step), PartsAnchor == swInstructionsPlacementAnchor::Area);
-		const QSizeF NumberSize = StepNumberItem->boundingRect().size();
-		const QSizeF PartsSize = PartsImageItem->boundingRect().size();
-
-		// the parts strip keeps the model out
-
-		QRectF ImageSizeRect(QPointF(AreaInset, AreaInset), CellRect.size() - QSizeF(2.0 * AreaInset, 2.0 * AreaInset));
-		QRectF ImagePlaceRect = AreaRect;
-
-		if (PartsImageItem->isVisible() && Instructions->GetBoolProperty(swInstructionsPropertyType::PLIReserveArea, Step.Model, Step.Step))
-		{
-			QRectF NumberRect(swGetPlacementPosition(AreaRect, NumberSize, NumberPlacement), NumberSize);
-			QRectF PartsRect(swGetPlacementPosition(AreaRect, PartsSize, PartsPlacement), PartsSize);
-
-			if (NumberAnchor == swInstructionsPlacementAnchor::PartsList)
-				NumberRect.moveTopLeft(swGetPlacementPosition(PartsRect, NumberSize, NumberPlacement));
-
-			if (PartsAnchor == swInstructionsPlacementAnchor::StepNumber)
-				PartsRect.moveTopLeft(swGetPlacementPosition(NumberRect, PartsSize, PartsPlacement));
-
-			// the number joins when beside the list
-			const bool NumberJoins = StepNumberItem->isVisible() && (NumberAnchor == swInstructionsPlacementAnchor::PartsList || PartsAnchor == swInstructionsPlacementAnchor::StepNumber);
-			const QRectF StripRect = NumberJoins ? PartsRect.united(NumberRect) : PartsRect;
-
-			// the side follows the area placement
-			const int AreaPlacement = PartsAnchor == swInstructionsPlacementAnchor::Area ? PartsPlacement : NumberPlacement;
-			const int Row = AreaPlacement / SW_PLACEMENT_GRID_SIZE;
-			const int Column = AreaPlacement % SW_PLACEMENT_GRID_SIZE;
-
-			if (Row == 1)
-				ImagePlaceRect.setTop(qMax(ImagePlaceRect.top(), StripRect.bottom()));
-			else if (Row == 3)
-				ImagePlaceRect.setBottom(qMin(ImagePlaceRect.bottom(), StripRect.top()));
-			else if (Column == 1)
-				ImagePlaceRect.setLeft(qMax(ImagePlaceRect.left(), StripRect.right()));
-			else if (Column == 3)
-				ImagePlaceRect.setRight(qMin(ImagePlaceRect.right(), StripRect.left()));
-
-			ImageSizeRect = ImageSizeRect.intersected(ImagePlaceRect);
-		}
-
-		new swInstructionsGuideItem(AreaRect, StepAreaItem);
-
-		if (ImagePlaceRect != AreaRect)
-			new swInstructionsGuideItem(ImagePlaceRect, StepAreaItem);
-
-		StepImageItem->SetImageSize(qMax(static_cast<int>(ImageSizeRect.width() - 2.0 * ImageInset), 1), qMax(static_cast<int>(ImageSizeRect.height() - 2.0 * ImageInset), 1));
-		StepImageItem->Update();
-
-		const int ImagePlacement = swGetValidPlacement(Instructions->GetIntProperty(swInstructionsPropertyType::StepImagePlacement, Step.Model, Step.Step), true);
-		swPlaceElement(StepImageItem, Instructions, swGetPlacementPosition(ImagePlaceRect, StepImageItem->boundingRect().size(), ImagePlacement));
-
-		// place moved and locked elements first
-		if (NumberAnchor == swInstructionsPlacementAnchor::Area)
-			swPlaceElement(StepNumberItem, Instructions, swGetPlacementPosition(AreaRect, NumberSize, NumberPlacement));
-
-		if (PartsAnchor == swInstructionsPlacementAnchor::Area)
-			swPlaceElement(PartsImageItem, Instructions, swGetPlacementPosition(AreaRect, PartsSize, PartsPlacement));
-
-		if (NumberAnchor == swInstructionsPlacementAnchor::PartsList)
-			swPlaceElement(StepNumberItem, Instructions, swGetPlacementPosition(QRectF(PartsImageItem->pos(), PartsSize), NumberSize, NumberPlacement));
-
-		if (PartsAnchor == swInstructionsPlacementAnchor::StepNumber)
-			swPlaceElement(PartsImageItem, Instructions, swGetPlacementPosition(QRectF(StepNumberItem->pos(), NumberSize), PartsSize, PartsPlacement));
+		swAddStepArea(Instructions, Step, PageItem, CellRect, DividerMargins);
 	}
 }
 
