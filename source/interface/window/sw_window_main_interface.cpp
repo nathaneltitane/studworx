@@ -109,6 +109,7 @@ void swMainWindow::CreateWidgets()
 
 	restoreState(State);
 	mRestoreState = State;
+	swKeepFittedDocks(this);
 
 	// new keyframes panel goes under the terminal
 

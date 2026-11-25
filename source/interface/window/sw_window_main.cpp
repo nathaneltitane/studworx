@@ -376,7 +376,14 @@ bool swMainWindow::eventFilter(QObject* Object, QEvent* Event)
 	if (!mRestoreState.isEmpty())
 	{
 		if (Object == this && Event->type() == QEvent::Resize && isVisible())
-			QTimer::singleShot(0, this, [this]() { if (!mRestoreState.isEmpty()) restoreState(mRestoreState); });
+			QTimer::singleShot(0, this, [this]()
+			{
+				if (mRestoreState.isEmpty())
+					return;
+
+				restoreState(mRestoreState);
+				swKeepFittedDocks(this);
+			});
 		else if (Event->type() == QEvent::MouseButtonPress || Event->type() == QEvent::KeyPress)
 			mRestoreState.clear();
 	}

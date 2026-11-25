@@ -5206,22 +5206,22 @@ File format is not recognized.</source>
 <context>
     <name>QDockWidget</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="670"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="696"/>
         <source>Float</source>
         <translation>浮动</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="674"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="700"/>
         <source>Close</source>
         <translation>关闭</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="714"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="740"/>
         <source>Expand</source>
         <translation>展开</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="714"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="740"/>
         <source>Collapse</source>
         <translation>折叠</translation>
     </message>
@@ -19967,36 +19967,36 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swMainWindow</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="326"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="635"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="643"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1004"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="327"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="636"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="644"/>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1005"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1006"/>
         <source>Transform</source>
         <translation>变换</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="333"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="334"/>
         <source>C&amp;ameras</source>
         <translation>相机</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="413"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="414"/>
         <source>&amp;File</source>
         <translation>文件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="427"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="428"/>
         <source>&amp;Export</source>
         <translation>导出</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="459"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="460"/>
         <source>&amp;Edit</source>
         <translation>编辑</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="485"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="486"/>
         <source>&amp;View</source>
         <translation>视图</translation>
     </message>
@@ -20005,7 +20005,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">视点</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="372"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="373"/>
         <source>Projection</source>
         <translation>投影</translation>
     </message>
@@ -20014,42 +20014,42 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">步骤</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="486"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="487"/>
         <source>T&amp;oolbars</source>
         <translation>工具栏</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="522"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="523"/>
         <source>&amp;Part</source>
         <translation>零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="594"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="595"/>
         <source>&amp;Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="631"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="632"/>
         <source>&lt;p&gt;&lt;b&gt;Selection Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the rule applied when you pick a part in the model view. Single selects that part; the other modes include matching part types, matching colors, or both. For example, color selection lets you pick matching red parts without selecting each one separately.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;选择模式&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择在模型视图中选取一个零件时应用的规则。单个模式选择该零件；其他模式包括匹配零件类型、匹配颜色或两者兼而有之。例如，颜色选择可让您挑选匹配的红色零件，而无需单独选择每一个。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="644"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="645"/>
         <source>Transform Options</source>
         <translation>变换选项</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="646"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="647"/>
         <source>&lt;p&gt;&lt;b&gt;Transform Options&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the axes and pivot used for interactive transforms. Relative Transforms uses the focused object&apos;s orientation, so movement along X follows that object&apos;s local X axis. Absolute Transforms uses the model axes. Rotate Together rotates the selection around a shared pivot; Rotate Separately rotates each part around its own origin.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;变换选项&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择用于交互式变换的轴和枢轴。相对变换使用聚焦物体的方向，因此沿 X 方向的移动遵循该物体的局部 X 轴。绝对变换使用模型轴。“一起旋转”围绕共享枢轴旋转所选内容；“单独旋转”围绕每个零件自己的原点旋转。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="650"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="651"/>
         <source>Snap XY</source>
         <translation>XY 平面吸附</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="654"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="655"/>
         <source>Snap Z</source>
         <translation>Z 轴吸附</translation>
     </message>
@@ -20058,18 +20058,18 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">吸附菜单</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="658"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="667"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="659"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="668"/>
         <source>Movement Snap</source>
         <translation>移动吸附</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="668"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="669"/>
         <source>Snap translations to fixed intervals</source>
         <translation>将平移吸附到固定间隔</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="670"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="671"/>
         <source>&lt;p&gt;&lt;b&gt;Movement Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose how far objects move in each snapped increment. XY controls movement across the base plane; Z controls vertical movement, so they can use different intervals. Turn snapping off for free placement, then enable it again when you need consistent spacing.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;移动吸附&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择物体在每个吸附增量中移动的距离。XY 控制在基准平面上的移动；Z 控制垂直移动，因此它们可以使用不同的间隔。关闭吸附功能以实现自由放置，然后在需要一致间距时再次启用它。&lt;/p&gt;</translation>
     </message>
@@ -20078,23 +20078,23 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">角度吸附菜单</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="674"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="682"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="675"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="683"/>
         <source>Rotation Snap</source>
         <translation>旋转吸附</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="683"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="684"/>
         <source>Snap rotations to fixed intervals</source>
         <translation>将旋转吸附到固定间隔</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="685"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="686"/>
         <source>&lt;p&gt;&lt;b&gt;Rotation Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose an angle increment for interactive rotation. For example, a 90-degree increment is useful for quarter turns, while smaller increments allow finer alignment. Turn snapping off for free rotation without fixed angle increments.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;旋转吸附&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择交互式旋转的角度增量。例如，90 度增量对于四分之一圈很有用，而较小的增量则允许更精细的对齐。关闭吸附功能即可自由旋转，无需固定角度增量。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="689"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="690"/>
         <source>Standard</source>
         <translation>标准</translation>
     </message>
@@ -20103,7 +20103,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;时间工具栏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;箭头按钮在搭建步骤中前后移动，以便查看模型是如何组装的。它们不会更改分配给零件的步骤，更改请使用时间线。播放依次播放模型的各步骤以显示关键帧动作，再次使用时暂停，停止则回到开始播放时所在的步骤。设置关键帧和移除关键帧会在当前步骤添加或移除所选对象的关键帧，与关键帧面板中的菱形作用相同。添加关键帧控制编辑操作是否在当前步骤创建动画关键帧，从而让位置等属性在各步骤之间变化。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="781"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="782"/>
         <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.&lt;/p&gt;&lt;p&gt;Docked at the top or bottom, the swatches line up in one row; scroll the wheel or use the arrows at its ends to move along it, or double-click an arrow to jump to that end.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;颜色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;从色板中选择当前的 LDraw 颜色。插入或上色零件时使用此颜色。要为所选零件重新上色，请使用色板上方的颜色按钮。将鼠标悬停在色板上可查看其名称和颜色代码。&lt;/p&gt;&lt;p&gt;停靠在顶部或底部时，色板排成一行；滚动滚轮或使用两端的箭头可沿其移动，双击箭头可跳到该端。&lt;/p&gt;</translation>
     </message>
@@ -20112,24 +20112,24 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;时间线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择一个步骤使其成为当前步骤，或选择零件行以在模型中选中这些零件。可以在步骤之间拖动零件，或在步骤内重新排序。关键帧行标明某一步骤中带动画关键帧的对象，双击会在该处选中该对象并显示关键帧面板。右键点击可使用插入、移除、移动步骤和可见性命令。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="390"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="722"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="391"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="723"/>
         <source>Tools</source>
         <translation>工具</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="152"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="153"/>
         <source>New Model</source>
         <translation>新建模型</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="153"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="154"/>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="232"/>
         <source>Open Model</source>
         <translation>打开模型</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="154"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="155"/>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="417"/>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="440"/>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="449"/>
@@ -20143,7 +20143,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">着色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="423"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="424"/>
         <source>&amp;Import</source>
         <translation>导入</translation>
     </message>
@@ -20157,43 +20157,43 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">子模型</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="623"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="628"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="624"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="629"/>
         <source>Selection Mode</source>
         <translation>选择模式</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="629"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="630"/>
         <source>Change selection mode</source>
         <translation>更改选择模式</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="630"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="631"/>
         <source>Choose which related parts are included when selecting a part.</source>
         <translation>选择零件时，选择要一并包含的相关零件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="645"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="646"/>
         <source>Choose coordinate axes and whether selected parts rotate together.</source>
         <translation>选择坐标轴以及所选零件是否一起旋转。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="669"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="670"/>
         <source>Choose movement snapping intervals for XY and Z.</source>
         <translation>选择 XY 和 Z 的移动吸附间隔。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="684"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="685"/>
         <source>Choose the rotation snapping interval.</source>
         <translation>选择旋转吸附间隔。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="691"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="692"/>
         <source>&lt;p&gt;&lt;b&gt;Standard Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use file controls to create, open, and save models, and Undo or Redo to navigate edit history. Before moving or rotating objects, choose the selection rule, coordinate reference, and snapping increments from the four drop-down controls. Help &gt; &quot;What&apos;s This?&quot; explains individual controls.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;标准工具栏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使用文件控件创建、打开和保存模型，使用撤销或重做浏览编辑历史。在移动或旋转对象之前，可从四个下拉控件中选择选择规则、坐标参照和吸附增量。帮助 &gt; “这是什么？”会说明各个控件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="709"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="710"/>
         <source>Time</source>
         <translation>时间</translation>
     </message>
@@ -20208,22 +20208,22 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;时间工具栏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使用箭头按钮切换搭建步骤，查看模型的组装过程。这不会改变零件所属的步骤；如需更改，请使用“时间轴”。“添加关键帧”控制编辑操作是否在当前步骤创建动画关键帧，使位置等属性可随步骤变化。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="724"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="725"/>
         <source>&lt;p&gt;&lt;b&gt;Tools Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a tool, then use it in the model view. Insertion tools create parts, lights, or cameras. Editing tools select, transform, remove, or recolor objects. Navigation tools change the viewpoint without changing model geometry. Mouse assignments can be customized in Preferences.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;工具栏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择一个工具，然后在模型视图中使用它。插入工具可以创建零件、光源或相机。编辑工具选择、变换、删除物体或重新着色物体。导航工具可以在不改变模型几何形状的情况下改变视点。可以在“偏好设置”中自定义鼠标分配。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="766"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="767"/>
         <source>Parts</source>
         <translation>零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="769"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="770"/>
         <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a category or palette and filter its parts. Selecting a part prepares it for insertion; drag it into the model view to place it. Double-click a part to open its preview. Options controls filtering, thumbnails, and list display.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;零件&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择一个类别或零件库并筛选其零件。选择一个零件，准备插入；将其拖到模型视图中进行放置。双击一个零件以打开其预览。选项控制筛选、缩略图和列表显示。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="779"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="780"/>
         <source>Colors</source>
         <translation>颜色</translation>
     </message>
@@ -20233,57 +20233,57 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;颜色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;从样本中选择当前的 LDraw 颜色。这种颜色在插入或绘画零件时使用。要对选定的零件重新着色，请使用样本上方的颜色按钮。将鼠标悬停在样本上即可查看其名称和颜色代码。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="797"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="798"/>
         <source>Apply the current color to selected parts.</source>
         <translation>将当前颜色应用到选定的零件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="798"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="799"/>
         <source>Change Selection Color</source>
         <translation>更改选择颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="799"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="800"/>
         <source>&lt;p&gt;&lt;b&gt;Change Selection Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Apply the current color to selected parts. Choosing a swatch sets the current color; this button applies that color to the selection.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;更改选择颜色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将当前颜色应用于选定的零件。选择色板会设置当前颜色；此按钮将该颜色应用于所选内容。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="821"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="822"/>
         <source>Scroll the swatches left. Double-click to jump to the first one.</source>
         <translation>向左滚动色板。双击可跳到第一个。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="821"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="822"/>
         <source>Scroll the swatches right. Double-click to jump to the last one.</source>
         <translation>向右滚动色板。双击可跳到最后一个。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="851"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="852"/>
         <source>LDraw Colors</source>
         <translation>LDraw 颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="980"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="981"/>
         <source>Properties</source>
         <translation>属性</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="982"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="983"/>
         <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit properties of the focused object or selection. Available fields depend on whether you select parts, a camera, or a light. Expand a section to see its fields. Keyframe controls mark properties at the current building step.&lt;/p&gt;&lt;p&gt;The transform fields at the bottom apply an X/Y/Z translation or rotation using the chosen transform mode. Press Enter to apply the values.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;属性&lt;/b&gt;&lt;/p&gt;&lt;p&gt;编辑聚焦物体或所选内容的属性。可用字段取决于您选择的是零件、相机还是光源。展开某个部分以查看其字段。关键帧控件标记当前构建步骤的属性。&lt;/p&gt;&lt;p&gt;底部的变换字段使用所选变换模式应用 X/Y/Z 平移或旋转。按 Enter 键应用这些值。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1035"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1036"/>
         <source>Choose absolute or relative translation or rotation.</source>
         <translation>选择绝对或相对平移或旋转。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1036"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1037"/>
         <source>&lt;p&gt;&lt;b&gt;Apply Transform&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the translation or rotation mode, enter X/Y/Z values, and press Enter to apply them. Translation values use LDraw units; rotation values use degrees.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;应用变换&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择平移或旋转模式，输入 X/Y/Z 值，然后按 Enter 键应用它们。平移值使用 LDraw 单位；旋转值以度为单位。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1014"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1015"/>
         <source>Transform X</source>
         <translation>变换 X</translation>
     </message>
@@ -20298,27 +20298,27 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>模型视图选项</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="163"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="164"/>
         <source>Open Model Folder</source>
         <translation>打开模型文件夹</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="342"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="343"/>
         <source>View&amp;points</source>
         <translation>视点</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="355"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="356"/>
         <source>&amp;Cutaway</source>
         <translation>剖切</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="379"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="380"/>
         <source>&amp;Shading</source>
         <translation>着色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="446"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="447"/>
         <source>Ren&amp;der</source>
         <translation>渲染</translation>
     </message>
@@ -20327,114 +20327,114 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">查找</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="532"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="533"/>
         <source>&amp;Joint</source>
         <translation>关节</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="547"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="548"/>
         <source>&amp;Group</source>
         <translation>组</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="554"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="555"/>
         <source>&amp;Visibility</source>
         <translation>可见性</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="561"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="562"/>
         <source>&amp;Steps</source>
         <translation>步骤</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="578"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="579"/>
         <source>&amp;Models</source>
         <translation>模型</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="711"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="712"/>
         <source>&lt;p&gt;&lt;b&gt;Time Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Steps panel for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;时间工具栏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;箭头按钮在搭建步骤中前后移动，以便查看模型是如何组装的。它们不会更改分配给零件的步骤，更改请使用步骤面板。播放依次播放模型的各步骤以显示关键帧动作，再次使用时暂停，停止则回到开始播放时所在的步骤。设置关键帧和移除关键帧会在当前步骤添加或移除所选对象的关键帧，与关键帧面板中的菱形作用相同。添加关键帧控制编辑操作是否在当前步骤创建动画关键帧，从而让位置等属性在各步骤之间变化。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="809"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="810"/>
         <source>Choose how inserted parts are colored.</source>
         <translation>选择插入的零件如何着色。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="809"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="810"/>
         <source>Color Options</source>
         <translation>颜色选项</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="822"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="823"/>
         <source>Scroll Colors Left</source>
         <translation>向左滚动颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="822"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="823"/>
         <source>Scroll Colors Right</source>
         <translation>向右滚动颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1003"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1004"/>
         <source>T</source>
         <translation>T</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1015"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1016"/>
         <source>Enter the X translation in LDraw units or rotation in degrees.</source>
         <translation>输入以 LDraw 单位表示的 X 平移，或以度为单位的旋转。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1020"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1021"/>
         <source>Transform Y</source>
         <translation>变换 Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1021"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1022"/>
         <source>Enter the Y translation in LDraw units or rotation in degrees.</source>
         <translation>输入以 LDraw 单位表示的 Y 平移，或以度为单位的旋转。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1026"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1027"/>
         <source>Transform Z</source>
         <translation>变换 Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1027"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1028"/>
         <source>Enter the Z translation in LDraw units or rotation in degrees.</source>
         <translation>输入以 LDraw 单位表示的 Z 平移，或以度为单位的旋转。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1094"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1095"/>
         <source>Steps</source>
         <translation>步骤</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1096"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1097"/>
         <source>&lt;p&gt;&lt;b&gt;Steps&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands. Turn the model with the view cube and press Add Step View to save that view in the current step.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1112"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1113"/>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="260"/>
         <source>Relative</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1112"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1113"/>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="260"/>
         <source>Default</source>
         <translation type="unfinished">默认</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1113"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1114"/>
         <source>How Add Step View saves the view: absolute angles from the world zero (the front view), relative angles from the home view, or default to go back to the home view for this and the next steps.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1116"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1117"/>
         <source>Add Step View</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20452,12 +20452,12 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;时间轴&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择一个步骤以使其成为当前步骤，或选择零件行以选择模型中的这些零件。在步骤之间拖动零件或在步骤内对它们重新排序。右键单击可执行步骤插入、删除、移动和可见性命令。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1131"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1132"/>
         <source>Minifigure Builder</source>
         <translation>人仔构建器</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1149"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1150"/>
         <source>Explode</source>
         <translation>分解</translation>
     </message>
@@ -20466,7 +20466,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;分解&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将其他每个可见零件（或仅所选零件）按其到锚点距离的 X、Y、Z 百分比远离锚点散开。每个零件沿固定它的连接滑出。收拢或撤销可将零件放回，保存副本会将分解后的模型保存到单独的文件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1162"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1163"/>
         <source>Joints</source>
         <translation>关节</translation>
     </message>
@@ -20475,7 +20475,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;关节&lt;/b&gt;&lt;/p&gt;&lt;p&gt;所选子模型上选取的关节及其轴，以及一棵树，列出每个带关节的模型、其带关节的子模型和它们的关节。选取关节可移动或旋转它，删除关节可使其恢复静止。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1171"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1172"/>
         <source>Poses</source>
         <translation>姿势</translation>
     </message>
@@ -20484,7 +20484,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;姿势&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在关节面板中选取的模型的姿势。将关节角度保存为命名姿势，然后可调用、重命名或删除。姿势随模型一起保存。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1180"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1181"/>
         <source>Keyframes</source>
         <translation>关键帧</translation>
     </message>
@@ -20514,33 +20514,33 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;预览&lt;/b&gt;&lt;/p&gt;&lt;p&gt;检查零件而不将其放入模型中。双击零件停靠区中的零件进行预览。当源选择发生变化时，锁定预览保持当前预览；解锁它以允许更新。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1232"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1233"/>
         <source>Asset loading failed</source>
         <translation>资源加载失败</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="569"/>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="665"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="576"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="672"/>
         <source>Could not load part.</source>
         <translation>无法加载零件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="591"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="598"/>
         <source>Could not generate geometry.</source>
         <translation>无法生成几何图形。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="605"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="612"/>
         <source>Regenerating synthesized part geometry.</source>
         <translation>正在重新生成合成零件几何体。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="607"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="614"/>
         <source>Loading model parts (%1 / %2).</source>
         <translation>正在加载模型零件（%1 / %2）。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="614"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="621"/>
         <source>The model could not be fully loaded. Some parts may be missing.
 
 %1</source>
@@ -20552,7 +20552,7 @@ Choose where to save it and download the latest %3 now?</source>
 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="849"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="856"/>
         <source>Close Other Tabs</source>
         <translation>关闭其他标签页</translation>
     </message>
@@ -20609,7 +20609,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>迁移后的模型会连同 StudWorx 元命令一起保存，LeoCAD 随后会忽略其中的相机、灯光、组和零件设置。保持原样的模型在 LeoCAD 中仍可读取。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="953"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="960"/>
         <source>Export HTML</source>
         <translation>导出 HTML</translation>
     </message>
@@ -20619,17 +20619,17 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">POV-Ray 导出</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1160"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1167"/>
         <source>Save Image</source>
         <translation>保存图像</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1172"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1179"/>
         <source>Nothing to select.</source>
         <translation>没有可选择的内容。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1172"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1179"/>
         <source>Select Objects</source>
         <translation>选择物体</translation>
     </message>
@@ -20647,7 +20647,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">相对于默认视图</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1112"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1113"/>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="260"/>
         <source>Absolute</source>
         <translation>绝对</translation>
@@ -20888,92 +20888,92 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>&lt;p&gt;&lt;b&gt;预览&lt;/b&gt;&lt;/p&gt;&lt;p&gt;查看零件或模型而不将其放入模型中。双击零件停靠栏中的零件即可预览。锁定预览会在源选择更改时保持当前预览；解锁后允许更新。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="662"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="669"/>
         <source>Found through BrickLink number %1</source>
         <translation>通过 BrickLink 编号 %1 找到</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="670"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="677"/>
         <source>Marked as an alias in the parts library.</source>
         <translation>在零件库中被标记为别名。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="671"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="678"/>
         <source>The part the alias stands for</source>
         <translation>该别名所代表的零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="676"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="683"/>
         <source>Marked as moved in the parts library.</source>
         <translation>在零件库中被标记为已移动。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="677"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="684"/>
         <source>The part it moved to</source>
         <translation>它所移至的零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="961"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="968"/>
         <source>Export POV-Ray</source>
         <translation>导出 POV-Ray</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1046"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1053"/>
         <source>Print</source>
         <translation>打印</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1046"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1053"/>
         <source>Could not start the print job.</source>
         <translation>无法启动打印任务。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1079"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1086"/>
         <source>Preview...</source>
         <translation>预览...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1309"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1316"/>
         <source>Insert Color</source>
         <translation>插入颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1311"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1318"/>
         <source>Current Color</source>
         <translation>当前颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1312"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1319"/>
         <source>Selected Part Color</source>
         <translation>选定零件颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1313"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1320"/>
         <source>Last Inserted Part Color</source>
         <translation>上次插入的零件颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1315"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1322"/>
         <source>Lock Parts Color</source>
         <translation>锁定零件颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1359"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1366"/>
         <source>Custom Rotation Snap</source>
         <translation>自定义旋转吸附</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1367"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1374"/>
         <source>Snap Angle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1374"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1381"/>
         <source>Snap angle in degrees</source>
         <translation>吸附角度，单位为度</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1392"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1399"/>
         <source>Custom (%1 Degrees)...</source>
         <translation>自定义 (%1 度)...</translation>
     </message>
@@ -21439,27 +21439,27 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>正交</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1256"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1257"/>
         <source>Selection</source>
         <translation>选择</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1257"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1258"/>
         <source>View Orientation</source>
         <translation>视图方向</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1258"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1259"/>
         <source>Position</source>
         <translation>位置</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1259"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1260"/>
         <source>Snap and Transform</source>
         <translation>吸附与变换</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1260"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1261"/>
         <source>Step</source>
         <translation>步骤</translation>
     </message>

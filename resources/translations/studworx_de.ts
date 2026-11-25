@@ -5237,22 +5237,22 @@ Das Dateiformat wird nicht erkannt.</translation>
 <context>
     <name>QDockWidget</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="670"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="696"/>
         <source>Float</source>
         <translation>Abdocken</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="674"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="700"/>
         <source>Close</source>
         <translation>Schließen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="714"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="740"/>
         <source>Expand</source>
         <translation>Ausklappen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="714"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="740"/>
         <source>Collapse</source>
         <translation>Einklappen</translation>
     </message>
@@ -19723,36 +19723,36 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
 <context>
     <name>swMainWindow</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="326"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="635"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="643"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1004"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="327"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="636"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="644"/>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1005"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1006"/>
         <source>Transform</source>
         <translation>Transformation</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="333"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="334"/>
         <source>C&amp;ameras</source>
         <translation>K&amp;ameras</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="413"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="414"/>
         <source>&amp;File</source>
         <translation>&amp;Datei</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="427"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="428"/>
         <source>&amp;Export</source>
         <translation>&amp;Exportieren</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="459"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="460"/>
         <source>&amp;Edit</source>
         <translation>&amp;Bearbeiten</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="485"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="486"/>
         <source>&amp;View</source>
         <translation>&amp;Ansicht</translation>
     </message>
@@ -19771,18 +19771,18 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation>Optionen der Modellansicht</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="152"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="153"/>
         <source>New Model</source>
         <translation>Neues Modell</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="153"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="154"/>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="232"/>
         <source>Open Model</source>
         <translation>Modell öffnen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="154"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="155"/>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="417"/>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="440"/>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="449"/>
@@ -19792,17 +19792,17 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation>Modell speichern</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="163"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="164"/>
         <source>Open Model Folder</source>
         <translation>Modellordner öffnen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="355"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="356"/>
         <source>&amp;Cutaway</source>
         <translation>&amp;Schnittansicht</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="372"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="373"/>
         <source>Projection</source>
         <translation>Projektion</translation>
     </message>
@@ -19811,7 +19811,7 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="vanished">Sch&amp;atten</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="423"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="424"/>
         <source>&amp;Import</source>
         <translation>&amp;Importieren</translation>
     </message>
@@ -19825,109 +19825,109 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="vanished">Schrit&amp;te</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="486"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="487"/>
         <source>T&amp;oolbars</source>
         <translation>Werkzeug&amp;leisten</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="522"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="523"/>
         <source>&amp;Part</source>
         <translation>&amp;Teil</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="532"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="533"/>
         <source>&amp;Joint</source>
         <translation>&amp;Gelenk</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="547"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="548"/>
         <source>&amp;Group</source>
         <translation>&amp;Gruppe</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="554"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="555"/>
         <source>&amp;Visibility</source>
         <translation>&amp;Sichtbarkeit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="561"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="562"/>
         <source>&amp;Steps</source>
         <translation>&amp;Schritte</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="578"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="579"/>
         <source>&amp;Models</source>
         <translation>&amp;Modelle</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="630"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="631"/>
         <source>Choose which related parts are included when selecting a part.</source>
         <translation>Wählen Sie bei der Auswahl eines Teils aus, welche verwandten Teile enthalten sind.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="644"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="645"/>
         <source>Transform Options</source>
         <translation>Transformationsoptionen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="645"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="646"/>
         <source>Choose coordinate axes and whether selected parts rotate together.</source>
         <translation>Wählen Sie Koordinatenachsen und ob sich ausgewählte Teile gemeinsam drehen lassen.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="669"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="670"/>
         <source>Choose movement snapping intervals for XY and Z.</source>
         <translation>Wählen Sie die Einrastintervalle für die Bewegung in XY und Z.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="684"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="685"/>
         <source>Choose the rotation snapping interval.</source>
         <translation>Wählen Sie das Einrastintervall für die Drehung.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="711"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="712"/>
         <source>&lt;p&gt;&lt;b&gt;Time Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Steps panel for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zeit-Werkzeugleiste&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mit den Pfeiltasten geht man durch die Bauschritte, um zu prüfen, wie das Modell zusammengebaut wird. Sie ändern nicht den Schritt, dem ein Teil zugewiesen ist; dafür dient das Schritte-Panel. Abspielen spielt die Schritte durch das Modell ab, um die animierte Bewegung zu zeigen, und pausiert bei erneutem Drücken, und Stopp geht zurück zu dem Schritt, bei dem das Abspielen begann. Schlüssel setzen und Schlüssel entfernen fügen die Schlüssel der ausgewählten Objekte im aktuellen Schritt hinzu oder entfernen sie, wie die Rauten des Keyframes-Panels. Schlüssel hinzufügen legt fest, ob Bearbeitungen im aktuellen Schritt Animationsschlüssel erzeugen, sodass sich Eigenschaften wie die Position zwischen Schritten ändern können.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="724"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="725"/>
         <source>&lt;p&gt;&lt;b&gt;Tools Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a tool, then use it in the model view. Insertion tools create parts, lights, or cameras. Editing tools select, transform, remove, or recolor objects. Navigation tools change the viewpoint without changing model geometry. Mouse assignments can be customized in Preferences.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Werkzeugleiste&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wählen Sie ein Werkzeug aus und verwenden Sie es dann in der Modellansicht. Einfügewerkzeuge erstellen Teile, Lichter oder Kameras. Mit den Bearbeitungswerkzeugen können Sie Objekte auswählen, umwandeln, entfernen oder neu einfärben. Navigationswerkzeuge ändern den Blickwinkel, ohne die Modellgeometrie zu ändern. Mauszuweisungen können in den Einstellungen angepasst werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="769"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="770"/>
         <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a category or palette and filter its parts. Selecting a part prepares it for insertion; drag it into the model view to place it. Double-click a part to open its preview. Options controls filtering, thumbnails, and list display.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Teile&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wählen Sie eine Kategorie oder Palette und filtern Sie deren Teile. Durch die Auswahl eines Teils wird es zum Einfügen vorbereitet; ziehen Sie es in die Modellansicht, um es zu platzieren. Doppelklicken Sie auf ein Teil, um dessen Vorschau zu öffnen. Optionen steuern Filterung, Miniaturansichten und Listenanzeige.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1094"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1095"/>
         <source>Steps</source>
         <translation>Schritte</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1096"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1097"/>
         <source>&lt;p&gt;&lt;b&gt;Steps&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands. Turn the model with the view cube and press Add Step View to save that view in the current step.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1112"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1113"/>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="260"/>
         <source>Relative</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1112"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1113"/>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="260"/>
         <source>Default</source>
         <translation type="unfinished">Standard</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1113"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1114"/>
         <source>How Add Step View saves the view: absolute angles from the world zero (the front view), relative angles from the home view, or default to go back to the home view for this and the next steps.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1116"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1117"/>
         <source>Add Step View</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19941,62 +19941,62 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Farben&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wählen Sie die aktuelle LDraw-Farbe aus den Farbfeldern. Diese Farbe wird beim Einfügen oder Bemalen von Teilen verwendet. Um ausgewählte Teile neu einzufärben, verwenden Sie die Farbschaltfläche über den Farbfeldern. Bewegen Sie den Mauszeiger über ein Farbfeld, um dessen Namen und Farbcode anzuzeigen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="797"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="798"/>
         <source>Apply the current color to selected parts.</source>
         <translation>Wenden Sie die aktuelle Farbe auf ausgewählte Teile an.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="798"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="799"/>
         <source>Change Selection Color</source>
         <translation>Auswahlfarbe ändern</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="799"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="800"/>
         <source>&lt;p&gt;&lt;b&gt;Change Selection Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Apply the current color to selected parts. Choosing a swatch sets the current color; this button applies that color to the selection.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Auswahlfarbe ändern&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wenden Sie die aktuelle Farbe auf ausgewählte Teile an. Durch Auswählen eines Farbfelds wird die aktuelle Farbe festgelegt. Diese Schaltfläche wendet diese Farbe auf die Auswahl an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="809"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="810"/>
         <source>Choose how inserted parts are colored.</source>
         <translation>Festlegen, wie eingefügte Teile gefärbt werden.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="809"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="810"/>
         <source>Color Options</source>
         <translation>Farboptionen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="822"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="823"/>
         <source>Scroll Colors Left</source>
         <translation>Farben nach links blättern</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="822"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="823"/>
         <source>Scroll Colors Right</source>
         <translation>Farben nach rechts blättern</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="851"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="852"/>
         <source>LDraw Colors</source>
         <translation>LDraw-Farben</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="982"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="983"/>
         <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit properties of the focused object or selection. Available fields depend on whether you select parts, a camera, or a light. Expand a section to see its fields. Keyframe controls mark properties at the current building step.&lt;/p&gt;&lt;p&gt;The transform fields at the bottom apply an X/Y/Z translation or rotation using the chosen transform mode. Press Enter to apply the values.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Eigenschaften&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Eigenschaften des fokussierten Objekts oder der Auswahl bearbeiten. Die verfügbaren Felder hängen davon ab, ob Sie Teile, eine Kamera oder ein Licht auswählen. Erweitern Sie einen Abschnitt, um seine Felder anzuzeigen. Keyframe-Steuerelemente markieren Eigenschaften im aktuellen Bauschritt.&lt;/p&gt;&lt;p&gt;Die Transformationsfelder unten wenden eine X/Y/Z-Verschiebung oder -Rotation unter Verwendung des gewählten Transformationsmodus an. Drücken Sie die Eingabetaste, um die Werte anzuwenden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1003"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1004"/>
         <source>T</source>
         <translation>T</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1035"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1036"/>
         <source>Choose absolute or relative translation or rotation.</source>
         <translation>Wählen Sie absolute oder relative Verschiebung oder Drehung.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1036"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1037"/>
         <source>&lt;p&gt;&lt;b&gt;Apply Transform&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the translation or rotation mode, enter X/Y/Z values, and press Enter to apply them. Translation values use LDraw units; rotation values use degrees.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Transformation anwenden&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wählen Sie den Verschiebungs- oder Rotationsmodus, geben Sie X/Y/Z-Werte ein und drücken Sie die Eingabetaste, um sie anzuwenden. Verschiebungswerte verwenden LDraw-Einheiten; Rotationswerte verwenden Grad.&lt;/p&gt;</translation>
     </message>
@@ -20005,7 +20005,7 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Zeitachse&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Einen Schritt auswählen, um ihn zum aktuellen zu machen, oder Teilezeilen auswählen, um diese Teile im Modell auszuwählen. Teile zwischen Schritten ziehen oder innerhalb eines Schritts umsortieren. Schlüsselzeilen nennen die Objekte mit Animationsschlüsseln in einem Schritt; ein Doppelklick wählt dort dieses Objekt aus und zeigt das Keyframes-Panel. Rechtsklick für Befehle zum Einfügen, Entfernen und Verschieben von Schritten und für deren Sichtbarkeit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1149"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1150"/>
         <source>Explode</source>
         <translation>Explosion</translation>
     </message>
@@ -20014,7 +20014,7 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Explosion&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Jedes andere sichtbare Teil oder nur die ausgewählten um einen X-, Y- und Z-Prozentsatz ihrer Entfernung von einem Anker wegschieben. Jedes Teil gleitet entlang der Verbindung heraus, die es hält. Zusammenfalten oder Rückgängig setzt die Teile zurück, und Kopie speichern sichert das explodierte Modell in einer eigenen Datei.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1162"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1163"/>
         <source>Joints</source>
         <translation>Gelenke</translation>
     </message>
@@ -20023,7 +20023,7 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Gelenke&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Das am ausgewählten Untermodell gewählte Gelenk mit seiner Achse und ein Baum aller Modelle mit Gelenken, ihrer Untermodelle mit Gelenken und deren Gelenke. Ein Gelenk wählen, um es zu bewegen oder zu drehen, und eines löschen, um es in die Ruhelage zurückzusetzen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1171"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1172"/>
         <source>Poses</source>
         <translation>Posen</translation>
     </message>
@@ -20032,7 +20032,7 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Posen&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Die Posen des im Gelenke-Panel gewählten Modells. Die Gelenkwinkel als benannte Pose speichern, dann abrufen, umbenennen oder löschen. Posen werden mit dem Modell gespeichert.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1180"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1181"/>
         <source>Keyframes</source>
         <translation>Keyframes</translation>
     </message>
@@ -20041,22 +20041,22 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Eine Zeitleiste über die ganze Breite mit den Animations-Keys der ausgewählten oder aller Objekte, eine Spalte pro Schritt. Keys im aktuellen Schritt hinzufügen oder entfernen und die Schritte durchspielen, um die animierte Bewegung zu sehen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1014"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1015"/>
         <source>Transform X</source>
         <translation>X transformieren</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="342"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="343"/>
         <source>View&amp;points</source>
         <translation>&amp;Ansichten</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="379"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="380"/>
         <source>&amp;Shading</source>
         <translation>Sch&amp;attierung</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="446"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="447"/>
         <source>Ren&amp;der</source>
         <translation>&amp;Rendern</translation>
     </message>
@@ -20065,7 +20065,7 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="obsolete">&amp;Finden</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="691"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="692"/>
         <source>&lt;p&gt;&lt;b&gt;Standard Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use file controls to create, open, and save models, and Undo or Redo to navigate edit history. Before moving or rotating objects, choose the selection rule, coordinate reference, and snapping increments from the four drop-down controls. Help &gt; &quot;What&apos;s This?&quot; explains individual controls.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Standard-Werkzeugleiste&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mit den Dateisteuerelementen Modelle erstellen, öffnen und speichern, mit Rückgängig oder Wiederherstellen im Bearbeitungsverlauf navigieren. Vor dem Verschieben oder Drehen von Objekten die Auswahlregel, den Koordinatenbezug und die Einrastschritte in den vier Dropdown-Listen wählen. Hilfe &gt; „Was ist das?“ erklärt einzelne Elemente.&lt;/p&gt;</translation>
     </message>
@@ -20074,27 +20074,27 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Zeit-Werkzeugleiste&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mit den Pfeiltasten geht man durch die Bauschritte, um zu prüfen, wie das Modell zusammengebaut wird. Sie ändern nicht den Schritt, dem ein Teil zugewiesen ist; dafür dient die Zeitachse. Abspielen spielt die Schritte durch das Modell ab, um die animierte Bewegung zu zeigen, und pausiert bei erneutem Drücken, und Stopp geht zurück zu dem Schritt, bei dem das Abspielen begann. Schlüssel setzen und Schlüssel entfernen fügen die Schlüssel der ausgewählten Objekte im aktuellen Schritt hinzu oder entfernen sie, wie die Rauten des Keyframes-Panels. Schlüssel hinzufügen legt fest, ob Bearbeitungen im aktuellen Schritt Animationsschlüssel erzeugen, sodass sich Eigenschaften wie die Position zwischen Schritten ändern können.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1015"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1016"/>
         <source>Enter the X translation in LDraw units or rotation in degrees.</source>
         <translation>Geben Sie die X-Verschiebung in LDraw-Einheiten oder die Drehung in Grad ein.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1020"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1021"/>
         <source>Transform Y</source>
         <translation>Y transformieren</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1021"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1022"/>
         <source>Enter the Y translation in LDraw units or rotation in degrees.</source>
         <translation>Geben Sie die Y-Verschiebung in LDraw-Einheiten oder die Drehung in Grad ein.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1026"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1027"/>
         <source>Transform Z</source>
         <translation>Z transformieren</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1027"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1028"/>
         <source>Enter the Z translation in LDraw units or rotation in degrees.</source>
         <translation>Geben Sie die Z-Verschiebung in LDraw-Einheiten oder die Drehung in Grad ein.</translation>
     </message>
@@ -20104,7 +20104,7 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Zeitleiste&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wählen Sie einen Schritt aus, um ihn zum aktuellen zu machen, oder wählen Sie Teilezeilen aus, um diese Teile im Modell auszuwählen. Ziehen Sie Teile zwischen Schritten oder ordnen Sie sie innerhalb eines Schritts neu an. Klicken Sie mit der rechten Maustaste, um Befehle zum Einfügen, Entfernen, Verschieben und Sichtbarmachen von Schritten anzuzeigen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1131"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1132"/>
         <source>Minifigure Builder</source>
         <translation>Minifiguren-Baukasten</translation>
     </message>
@@ -20130,33 +20130,33 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Vorschau&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Inspizieren Sie ein Teil, ohne es im Modell zu platzieren. Doppelklicken Sie im Teile-Dock auf ein Teil, um eine Vorschau anzuzeigen. „Vorschau sperren“ behält die aktuelle Vorschau bei, wenn sich die Quellenauswahl ändert; Entsperren Sie es, um Updates zuzulassen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1232"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1233"/>
         <source>Asset loading failed</source>
         <translation>Das Laden der Ressource ist fehlgeschlagen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="569"/>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="665"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="576"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="672"/>
         <source>Could not load part.</source>
         <translation>Das Teil konnte nicht geladen werden.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="591"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="598"/>
         <source>Could not generate geometry.</source>
         <translation>Geometrie konnte nicht generiert werden.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="605"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="612"/>
         <source>Regenerating synthesized part geometry.</source>
         <translation>Synthetisierte Teilegeometrie wird neu erzeugt.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="607"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="614"/>
         <source>Loading model parts (%1 / %2).</source>
         <translation>Modellteile werden geladen (%1 / %2).</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="614"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="621"/>
         <source>The model could not be fully loaded. Some parts may be missing.
 
 %1</source>
@@ -20269,7 +20269,7 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation>„%1“ ist bereits vorhanden. Ersetzen?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="953"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="960"/>
         <source>Export HTML</source>
         <translation>HTML exportieren</translation>
     </message>
@@ -20279,17 +20279,17 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="obsolete">POV-Ray Exportieren</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1160"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1167"/>
         <source>Save Image</source>
         <translation>Bild speichern</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1172"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1179"/>
         <source>Nothing to select.</source>
         <translation>Nichts auszuwählen.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1172"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1179"/>
         <source>Select Objects</source>
         <translation>Objekte auswählen</translation>
     </message>
@@ -20307,7 +20307,7 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="vanished">Relativ zur voreingestellten Ansicht</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1112"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1113"/>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="260"/>
         <source>Absolute</source>
         <translation>Absolut</translation>
@@ -20548,92 +20548,92 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation>&lt;p&gt;&lt;b&gt;Vorschau&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ein Teil oder Modell ansehen, ohne es im Modell zu platzieren. Doppelklick auf ein Teil im Teile-Dock zeigt es in der Vorschau. Vorschau sperren behält die aktuelle Vorschau bei, wenn sich die Quellauswahl ändert; entsperren, um Aktualisierungen zuzulassen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="662"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="669"/>
         <source>Found through BrickLink number %1</source>
         <translation>Gefunden über die BrickLink-Nummer %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="670"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="677"/>
         <source>Marked as an alias in the parts library.</source>
         <translation>In der Teilebibliothek als Alias markiert.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="671"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="678"/>
         <source>The part the alias stands for</source>
         <translation>Das Teil, für das der Alias steht</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="676"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="683"/>
         <source>Marked as moved in the parts library.</source>
         <translation>In der Teilebibliothek als verschoben markiert.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="677"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="684"/>
         <source>The part it moved to</source>
         <translation>Das Teil, zu dem es verschoben wurde</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="961"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="968"/>
         <source>Export POV-Ray</source>
         <translation>POV-Ray exportieren</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1046"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1053"/>
         <source>Print</source>
         <translation>Drucken</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1046"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1053"/>
         <source>Could not start the print job.</source>
         <translation>Der Druckauftrag konnte nicht gestartet werden.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1079"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1086"/>
         <source>Preview...</source>
         <translation>Vorschau...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1309"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1316"/>
         <source>Insert Color</source>
         <translation>Einfügefarbe</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1311"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1318"/>
         <source>Current Color</source>
         <translation>Aktuelle Farbe</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1312"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1319"/>
         <source>Selected Part Color</source>
         <translation>Farbe des ausgewählten Teils</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1313"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1320"/>
         <source>Last Inserted Part Color</source>
         <translation>Farbe des zuletzt eingefügten Teils</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1315"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1322"/>
         <source>Lock Parts Color</source>
         <translation>Teilefarbe sperren</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1359"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1366"/>
         <source>Custom Rotation Snap</source>
         <translation>Eigenes Einrasten der Drehung</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1367"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1374"/>
         <source>Snap Angle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1374"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1381"/>
         <source>Snap angle in degrees</source>
         <translation>Einrastwinkel in Grad</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1392"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1399"/>
         <source>Custom (%1 Degrees)...</source>
         <translation>Benutzerdefiniert (%1 Grad)...</translation>
     </message>
@@ -20819,17 +20819,17 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="vanished">LEGO® Diginal Designer Dateien (*.lxf);;Alle Dateien (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="594"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="595"/>
         <source>&amp;Help</source>
         <translation>&amp;Hilfe</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="650"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="651"/>
         <source>Snap XY</source>
         <translation>Einrasten XY</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="654"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="655"/>
         <source>Snap Z</source>
         <translation>Einrasten Z</translation>
     </message>
@@ -20838,13 +20838,13 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="vanished">Schritte Menü</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="658"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="667"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="659"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="668"/>
         <source>Movement Snap</source>
         <translation>Einrasten für Bewegung</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="668"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="669"/>
         <source>Snap translations to fixed intervals</source>
         <translation>Einrasten der Bewegung in festen Intervallen</translation>
     </message>
@@ -20853,24 +20853,24 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="vanished">Winkelschritte Menü</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="674"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="682"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="675"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="683"/>
         <source>Rotation Snap</source>
         <translation>Einrasten für Drehung</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="683"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="684"/>
         <source>Snap rotations to fixed intervals</source>
         <translation>Einrasten der Drehung in festen Intervallen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="689"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="690"/>
         <source>Standard</source>
         <translation>Standard</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="390"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="722"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="391"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="723"/>
         <source>Tools</source>
         <translation>Werkzeuge</translation>
     </message>
@@ -20879,28 +20879,28 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="vanished">Unter&amp;modell</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="623"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="628"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="624"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="629"/>
         <source>Selection Mode</source>
         <translation>Auswahlmodus</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="631"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="632"/>
         <source>&lt;p&gt;&lt;b&gt;Selection Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the rule applied when you pick a part in the model view. Single selects that part; the other modes include matching part types, matching colors, or both. For example, color selection lets you pick matching red parts without selecting each one separately.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Auswahlmodus&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wählen Sie die Regel aus, die angewendet wird, wenn Sie ein Teil in der Modellansicht auswählen. Einzelauswahl wählt dieses Teil aus; die anderen Modi umfassen passende Teiletypen, passende Farben oder beides. Mit der Farbauswahl können Sie beispielsweise passende rote Teile auswählen, ohne jedes einzeln auswählen zu müssen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="646"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="647"/>
         <source>&lt;p&gt;&lt;b&gt;Transform Options&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the axes and pivot used for interactive transforms. Relative Transforms uses the focused object&apos;s orientation, so movement along X follows that object&apos;s local X axis. Absolute Transforms uses the model axes. Rotate Together rotates the selection around a shared pivot; Rotate Separately rotates each part around its own origin.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Transformationsoptionen&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wählen Sie die Achsen und den Drehpunkt aus, die für interaktive Transformationen verwendet werden. Bei relativen Transformationen wird die Ausrichtung des fokussierten Objekts verwendet, sodass die Bewegung entlang der X-Achse der lokalen X-Achse des Objekts folgt. Absolute Transformationen verwenden die Modellachsen. Gemeinsam drehen dreht die Auswahl um einen gemeinsamen Drehpunkt; Separat drehen dreht jedes Teil einzeln um seinen eigenen Ursprung.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="670"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="671"/>
         <source>&lt;p&gt;&lt;b&gt;Movement Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose how far objects move in each snapped increment. XY controls movement across the base plane; Z controls vertical movement, so they can use different intervals. Turn snapping off for free placement, then enable it again when you need consistent spacing.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Einrasten für Bewegung&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wählen Sie, wie weit sich Objekte in jedem eingerasteten Schritt bewegen. XY steuert die Bewegung über die Basisebene; Z steuert die vertikale Bewegung, sodass unterschiedliche Intervalle verwendet werden können. Schalten Sie das Einrasten für die freie Platzierung aus und aktivieren Sie es dann wieder, wenn Sie einen einheitlichen Abstand benötigen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="685"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="686"/>
         <source>&lt;p&gt;&lt;b&gt;Rotation Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose an angle increment for interactive rotation. For example, a 90-degree increment is useful for quarter turns, while smaller increments allow finer alignment. Turn snapping off for free rotation without fixed angle increments.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Einrasten für Drehung&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wählen Sie einen Winkelschritt für die interaktive Drehung. Eine 90-Grad-Schrittweite eignet sich beispielsweise für Vierteldrehungen, während kleinere Schrittweiten eine feinere Ausrichtung ermöglichen. Schalten Sie das Einrasten aus, um eine freie Drehung ohne feste Winkelschritte zu ermöglichen.&lt;/p&gt;</translation>
     </message>
@@ -20910,7 +20910,7 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Standard-Symbolleiste&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Verwenden Sie Dateisteuerelemente zum Erstellen, Öffnen und Speichern von Projekten und „Rückgängig“ oder „Wiederherstellen“, um durch den Bearbeitungsverlauf zu navigieren. Bevor Sie Objekte verschieben oder drehen, wählen Sie die Auswahlregel, den Koordinatenbezug und die Fangschritte aus den vier Dropdown-Steuerelementen aus. Hilfe &gt; Was ist das? erklärt einzelne Bedienelemente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="709"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="710"/>
         <source>Time</source>
         <translation>Zeit</translation>
     </message>
@@ -20920,32 +20920,32 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Zeitsymbolleiste&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Die Pfeilschaltflächen bewegen sich durch die Bauschritte, sodass Sie prüfen können, wie das Modell zusammengebaut wird. Sie ändern nicht den einem Teil zugewiesenen Schritt; Verwenden Sie dazu die Timeline. „Keys hinzufügen“ steuert, ob durch Bearbeitungen Animationskeys im aktuellen Schritt erstellt werden, sodass Eigenschaften wie die Position zwischen den Schritten variieren können.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="766"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="767"/>
         <source>Parts</source>
         <translation>Teile</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="779"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="780"/>
         <source>Colors</source>
         <translation>Farben</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="781"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="782"/>
         <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.&lt;/p&gt;&lt;p&gt;Docked at the top or bottom, the swatches line up in one row; scroll the wheel or use the arrows at its ends to move along it, or double-click an arrow to jump to that end.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Farben&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Die aktuelle LDraw-Farbe aus den Farbfeldern wählen. Diese Farbe wird beim Einfügen oder Anmalen von Teilen verwendet. Um ausgewählte Teile umzufärben, die Farbschaltfläche über den Farbfeldern verwenden. Mit dem Mauszeiger über einem Farbfeld werden sein Name und sein Farbcode angezeigt.&lt;/p&gt;&lt;p&gt;Sind die Farbfelder oben oder unten angedockt, reihen sie sich in einer Zeile auf; mit dem Mausrad oder den Pfeilen an ihren Enden lässt sich darin blättern, und ein Doppelklick auf einen Pfeil springt ans jeweilige Ende.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="821"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="822"/>
         <source>Scroll the swatches left. Double-click to jump to the first one.</source>
         <translation>Die Farbfelder nach links blättern. Doppelklick springt zum ersten.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="821"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="822"/>
         <source>Scroll the swatches right. Double-click to jump to the last one.</source>
         <translation>Die Farbfelder nach rechts blättern. Doppelklick springt zum letzten.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="980"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="981"/>
         <source>Properties</source>
         <translation>Eigenschaften</translation>
     </message>
@@ -21029,12 +21029,12 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="vanished">StudWorx</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="629"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="630"/>
         <source>Change selection mode</source>
         <translation>Auswahlmodus wechseln</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="849"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="856"/>
         <source>Close Other Tabs</source>
         <translation>Andere Tabs schließen</translation>
     </message>
@@ -21203,27 +21203,27 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation>Orthographisch</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1256"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1257"/>
         <source>Selection</source>
         <translation>Auswahl</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1257"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1258"/>
         <source>View Orientation</source>
         <translation>Ansichtsausrichtung</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1258"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1259"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1259"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1260"/>
         <source>Snap and Transform</source>
         <translation>Einrasten und Transformieren</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1260"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1261"/>
         <source>Step</source>
         <translation>Schritt</translation>
     </message>

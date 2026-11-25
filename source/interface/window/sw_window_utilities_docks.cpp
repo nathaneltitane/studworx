@@ -56,7 +56,7 @@ static void swClampFloatingDock(QDockWidget* DockWidget)
 	Timer->start();
 }
 
-// use to hold title-only panels when one leaves or the window grows
+// use to hold title-only panels and uncut fixed rows
 static void swKeepSqueezedDocks(QMainWindow* MainWindow, const QDockWidget* Leaving = nullptr)
 {
 	if (!MainWindow)
@@ -67,15 +67,36 @@ static void swKeepSqueezedDocks(QMainWindow* MainWindow, const QDockWidget* Leav
 
 	for (QDockWidget* DockWidget : MainWindow->findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
 	{
-		if (DockWidget != Leaving && !DockWidget->isFloating() && DockWidget->isVisible() && DockWidget->height() <= DockWidget->minimumSizeHint().height())
+		if (DockWidget == Leaving || DockWidget->isFloating() || !DockWidget->isVisible())
+			continue;
+
+		if (DockWidget->height() <= DockWidget->minimumSizeHint().height())
 		{
 			DockWidgets.append(DockWidget);
 			Heights.append(DockWidget->minimumSizeHint().height());
+			continue;
+		}
+
+		// open panels never cut their rows
+
+		const QWidget* Contents = DockWidget->widget();
+
+		if (Contents && Contents->height() < Contents->minimumSizeHint().height())
+		{
+			DockWidgets.append(DockWidget);
+			Heights.append(DockWidget->height() - Contents->height() + Contents->minimumSizeHint().height());
 		}
 	}
 
 	if (!DockWidgets.isEmpty())
 		QTimer::singleShot(0, MainWindow, [MainWindow, DockWidgets, Heights]() { MainWindow->resizeDocks(DockWidgets, Heights, Qt::Vertical); });
+}
+
+// use to refit panels after a saved layout
+
+void swKeepFittedDocks(QMainWindow* MainWindow)
+{
+	swKeepSqueezedDocks(MainWindow);
 }
 
 bool swInterfaceFitFilter::eventFilter(QObject* Object, QEvent* Event)
@@ -150,6 +171,11 @@ bool swInterfaceFitFilter::eventFilter(QObject* Object, QEvent* Event)
 	{
 		if (Type == QEvent::Polish)
 			MainWindow->setDockOptions(QMainWindow::AnimatedDocks | QMainWindow::AllowNestedDocks | QMainWindow::AllowTabbedDocks);
+
+		// saved heights can cut new rows
+
+		if (Type == QEvent::Show)
+			QTimer::singleShot(0, MainWindow, [MainWindow]() { swKeepSqueezedDocks(MainWindow); });
 
 		return false;
 	}

@@ -83,6 +83,9 @@ protected:
 // Fits a floating panel to its contents.
 void swFitFloatingDock(QDockWidget* DockWidget, bool Open = false);
 
+// Gives open docked panels the height their rows need, after a saved layout comes back.
+void swKeepFittedDocks(QMainWindow* MainWindow);
+
 // Keeps a panel as tall as its contents.
 void swFitHeightToContents(QWidget* Widget);
 
