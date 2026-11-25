@@ -256,7 +256,9 @@ static QString swWriteInstructionsStepKey(const swInstructionsStepKey& Key)
 
 static QString swWriteInstructionsElementKey(const swInstructionsElementKey& Key)
 {
-	return gInstructionsElementNames[static_cast<int>(std::get<0>(Key))] + QLatin1Char(' ') + swWriteInstructionsModel(std::get<1>(Key)) + QLatin1Char(' ') + QString::number(std::get<2>(Key));
+	const swModel* Model = swFindPublicationElement(std::get<0>(Key)) ? nullptr : std::get<1>(Key);
+
+	return gInstructionsElementNames[static_cast<int>(std::get<0>(Key))] + QLatin1Char(' ') + swWriteInstructionsModel(Model) + QLatin1Char(' ') + QString::number(std::get<2>(Key));
 }
 
 static QString swWriteInstructionsPageKey(const swInstructionsPageKey& Key)
@@ -442,7 +444,17 @@ public:
 	swInstructionsElementKey ReadElementKey()
 	{
 		const swInstructionsPlacementElement Element = static_cast<swInstructionsPlacementElement>(ReadName(gInstructionsElementNames));
+		const bool Valid = mValid;
 		swModel* Model = ReadModel();
+
+		// cover texts belong to any main model
+
+		if (swFindPublicationElement(Element))
+		{
+			Model = mProject ? mProject->GetMainModel() : nullptr;
+			mValid = Valid && Model;
+		}
+
 		return { Element, Model, static_cast<swStep>(ReadInt()) };
 	}
 
@@ -1017,7 +1029,7 @@ QStringList swInstructions::ReadTemplateLines(const QString& FileName)
 	if (FileName.isEmpty() || !File.open(QIODevice::ReadOnly | QIODevice::Text))
 		return CommandLines;
 
-	static const QRegularExpression MetaExpression(QStringLiteral("^0\\s+!SW\\s+(PROPERTY|STEPS_PER_PAGE|IMAGE|NOTICE)\\s+INSTRUCTION(\\s.*)?$"));
+	static const QRegularExpression MetaExpression(QStringLiteral("^0\\s+!SW\\s+([A-Z_]+)\\s+INSTRUCTION(\\s.*)?$"));
 	static const QRegularExpression FileExpression(QStringLiteral("^0\\s+FILE\\s"));
 	QTextStream Stream(&File);
 	int FileCount = 0;
@@ -1046,45 +1058,7 @@ bool swInstructions::SaveTemplate(const QString& FileName) const
 	if (!File.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate))
 		return false;
 
-	// the built-in defaults stay unwritten
-	const swInstructionsProperties BuiltInProperties = CreateDefaultProperties();
-	QStringList CommandLines;
-
-	for (int Type = 0; Type < static_cast<int>(swInstructionsPropertyType::Count); Type++)
-	{
-		const QVariant& DefaultValue = BuiltInProperties[Type].Value;
-		const QVariant& Value = mStepProperties[Type].Value;
-
-		if (swIsInstructionsPropertyWritten(mStepProperties, Type, DefaultValue))
-			CommandLines.append(QLatin1String("PROPERTY ") + swGetInstructionsPropertyNames().at(Type) + QLatin1Char(' ') + swWriteInstructionsValue(Value, DefaultValue));
-	}
-
-	if (!(mPageSettings == swInstructionsPageSettings()))
-		CommandLines.append(QLatin1String("STEPS_PER_PAGE") + swWriteInstructionsPageSettings(mPageSettings));
-
-	// images keep a full path to work from any model
-	for (const swInstructionsImage& Image : mImages)
-		if (Image.Pages != swInstructionsImagePages::None)
-			CommandLines.append(swWriteInstructionsImage(Image, GetFilePath(Image.File)));
-
-	// shortcut: step, parts list and blank page notices belong to one model, left out
-	for (swInstructionsNotice Notice : mNotices)
-	{
-		const swInstructionsPageType PageType = std::get<0>(Notice.PageKey);
-
-		if (Notice.Pages == swInstructionsImagePages::None)
-		{
-			if (PageType != swInstructionsPageType::Cover && PageType != swInstructionsPageType::BackCover)
-				continue;
-
-			Notice.Pages = PageType == swInstructionsPageType::Cover ? swInstructionsImagePages::Front : swInstructionsImagePages::Back;
-		}
-
-		if (!Notice.File.isEmpty())
-			Notice.File = GetFilePath(Notice.File);
-
-		CommandLines.append(swWriteInstructionsNotice(Notice));
-	}
+	const QStringList CommandLines = GetCommandLines(true);
 
 	QTextStream Stream(&File);
 	Stream << "0 Instructions Template\n0 Name: " << QFileInfo(FileName).fileName() << "\n";
@@ -1118,9 +1092,12 @@ bool swInstructions::ApplyTemplate(const QString& FileName)
 	return true;
 }
 
-QStringList swInstructions::GetCommandLines() const
+// use to write the instructions, a template keeps every value and full file paths
+QStringList swInstructions::GetCommandLines(bool Template) const
 {
 	QStringList CommandLines;
+	const swInstructionsProperties BuiltInProperties = Template ? CreateDefaultProperties() : swInstructionsProperties();
+	const swInstructionsProperties& DefaultProperties = Template ? BuiltInProperties : mDefaultProperties;
 
 	// paper and units go with the model
 	CommandLines.append(QStringLiteral("PAGE_SETUP %1 %2 %3 %4 %5 %6 UNITS %7 %8").arg(mPageSetup.Width).arg(mPageSetup.Height).arg(mPageSetup.MarginLeft).arg(mPageSetup.MarginRight).arg(mPageSetup.MarginTop).arg(mPageSetup.MarginBottom).arg(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_PAGE_UNITS)).arg(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_MARGIN_UNITS)));
@@ -1128,7 +1105,7 @@ QStringList swInstructions::GetCommandLines() const
 	// write changed properties only
 	for (int Type = 0; Type < static_cast<int>(swInstructionsPropertyType::Count); Type++)
 	{
-		const QVariant& DefaultValue = mDefaultProperties[Type].Value;
+		const QVariant& DefaultValue = DefaultProperties[Type].Value;
 		const QVariant& Value = mStepProperties[Type].Value;
 
 		if (swIsInstructionsPropertyWritten(mStepProperties, Type, DefaultValue))
@@ -1142,11 +1119,11 @@ QStringList swInstructions::GetCommandLines() const
 			const swInstructionsProperty& Property = PageProperties.second[Type];
 
 			if (Property.Mode != swInstructionsPropertyMode::NotSet)
-				CommandLines.append(QLatin1String("PAGE_PROPERTY STEP ") + swWriteInstructionsStepKey(PageProperties.first) + QLatin1Char(' ') + swGetInstructionsPropertyNames().at(Type) + QLatin1Char(' ') + swWriteInstructionsValue(Property.Value, mDefaultProperties[Type].Value));
+				CommandLines.append(QLatin1String("PAGE_PROPERTY STEP ") + swWriteInstructionsStepKey(PageProperties.first) + QLatin1Char(' ') + swGetInstructionsPropertyNames().at(Type) + QLatin1Char(' ') + swWriteInstructionsValue(Property.Value, DefaultProperties[Type].Value));
 		}
 	}
 
-	if (!(mPageSettings == mDefaultPageSettings))
+	if (!(mPageSettings == (Template ? swInstructionsPageSettings() : mDefaultPageSettings)))
 		CommandLines.append(QLatin1String("STEPS_PER_PAGE") + swWriteInstructionsPageSettings(mPageSettings));
 
 	for (const std::pair<const swInstructionsStepKey, swInstructionsPageSettings>& PageSettings : mPageSettingsOverrides)
@@ -1181,7 +1158,7 @@ QStringList swInstructions::GetCommandLines() const
 
 		for (int Type = 0; Type < static_cast<int>(swInstructionsPropertyType::Count); Type++)
 		{
-			const QVariant& DefaultValue = mDefaultProperties[Type].Value;
+			const QVariant& DefaultValue = DefaultProperties[Type].Value;
 			const QVariant& Value = Properties[Type].Value;
 
 			if (swIsInstructionsPropertyWritten(Properties, Type, DefaultValue))
@@ -1189,8 +1166,20 @@ QStringList swInstructions::GetCommandLines() const
 		}
 	}
 
-	for (const swInstructionsNotice& Notice : mNotices)
+	for (swInstructionsNotice Notice : mNotices)
+	{
+		const swInstructionsPageType PageType = std::get<0>(Notice.PageKey);
+
+		// cover notices fit any model
+
+		if (Template && Notice.Pages == swInstructionsImagePages::None && (PageType == swInstructionsPageType::Cover || PageType == swInstructionsPageType::BackCover))
+			Notice.Pages = PageType == swInstructionsPageType::Cover ? swInstructionsImagePages::Front : swInstructionsImagePages::Back;
+
+		if (Template && !Notice.File.isEmpty())
+			Notice.File = GetFilePath(Notice.File);
+
 		CommandLines.append(swWriteInstructionsNotice(Notice));
+	}
 
 	for (const swInstructionsPointer& Pointer : mPointers)
 	{
@@ -1207,9 +1196,11 @@ QStringList swInstructions::GetCommandLines() const
 		                    (Pointer.Reach >= 0.0 ? QLatin1String(" REACH ") + swFormatValue(Pointer.Reach, 2) : QString()));
 	}
 
+	// template images keep a full path to work from any model
+
 	for (const swInstructionsImage& Image : mImages)
-		if (!Image.Template)
-			CommandLines.append(swWriteInstructionsImage(Image, Image.File));
+		if (Template || !Image.Template)
+			CommandLines.append(swWriteInstructionsImage(Image, Template ? GetFilePath(Image.File) : Image.File));
 
 	return CommandLines;
 }

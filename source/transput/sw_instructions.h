@@ -1120,7 +1120,7 @@ protected:
 	void RemoveElementReferences(const swInstructionsElementKey& Key);
 	void LoadDefaultTemplate();
 	void LoadCommandLines(const QStringList& CommandLines, bool ModelLines = false);
-	QStringList GetCommandLines() const;
+	QStringList GetCommandLines(bool Template = false) const;
 	void StoreCommandLines();
 	void ReloadCommandLines();
 	void RestoreCommandLines(std::vector<QStringList>& From, std::vector<QStringList>& To);

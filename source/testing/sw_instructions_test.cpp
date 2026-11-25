@@ -228,7 +228,7 @@ void swTests::InstructionsLayoutIsAlwaysWritten()
 	QVERIFY(Old.contains("0 !SW PROPERTY INSTRUCTION COVER FRONT PIECES_PLACEMENT 16"));
 	QVERIFY(Old.contains("0 !SW PROPERTY INSTRUCTION COVER FRONT TITLE_PLACEMENT 7"));
 	QVERIFY(Old.contains("0 !SW PROPERTY INSTRUCTION COVER FRONT AUTHOR_PLACEMENT 18"));
-	QVERIFY(Old.contains("0 !SW OFFSET INSTRUCTION COVER_FRONT_PRODUCT_ID \"old.ldr\" 0 -20 -40"));
+	QVERIFY(Old.contains("0 !SW OFFSET INSTRUCTION COVER_FRONT_PRODUCT_ID - 0 -20 -40"));
 
 	// new models use the current cells
 
@@ -309,7 +309,7 @@ void swTests::InstructionsPublicationUrlRoundTrip()
 		QSKIP("SW_TEST_BINARY is not set");
 
 	const QString FileSource = ReadInstructionsSource(QStringLiteral("source/transput/sw_instructions_file.cpp"));
-	QVERIFY(FileSource.contains(QStringLiteral("(PROPERTY|STEPS_PER_PAGE|IMAGE|NOTICE)")));
+	QVERIFY(FileSource.contains(QStringLiteral("([A-Z_]+)\\\\s+INSTRUCTION")));
 
 	QTemporaryDir Folder;
 	QVERIFY(Folder.isValid());
@@ -414,7 +414,7 @@ void swTests::ModelPublicationRoundTrip()
 	QCOMPARE(SavedLines.indexOf(QStringLiteral("0")), SavedLines.indexOf(Lines.first()) + 1);
 }
 
-// Applies a template with a front cover, a back cover and a footer notice, set as the default template, to a fresh model with the StudWorx binary. All three must come back as saved lines, and the covers must draw them. Save Template maps cover page notices to these lines in sw_instructions_file.cpp, the dialog is not reachable here.
+// Applies a template with a front cover, a back cover and a footer notice and two cover text drags, set as the default template, to a fresh model with the StudWorx binary. All must come back as saved lines, a drag saved from another model must fit this one, and the covers must draw the notices. Save Template maps cover page notices to these lines in sw_instructions_file.cpp, the dialog is not reachable here.
 void swTests::InstructionsTemplateKeepsNotices()
 {
 	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
@@ -425,7 +425,7 @@ void swTests::InstructionsTemplateKeepsNotices()
 
 	const QString FileSource = ReadInstructionsSource(QStringLiteral("source/transput/sw_instructions_file.cpp"));
 	QVERIFY(FileSource.contains(QStringLiteral("PageType == swInstructionsPageType::Cover ? swInstructionsImagePages::Front : swInstructionsImagePages::Back")));
-	QVERIFY(FileSource.contains(QStringLiteral("(PROPERTY|STEPS_PER_PAGE|IMAGE|NOTICE)")));
+	QVERIFY(FileSource.contains(QStringLiteral("([A-Z_]+)\\\\s+INSTRUCTION")));
 
 	QTemporaryDir Folder;
 	QVERIFY(Folder.isValid());
@@ -443,6 +443,10 @@ void swTests::InstructionsTemplateKeepsNotices()
 	QVERIFY(Template.open(QIODevice::WriteOnly));
 	Template.write("0 Instructions Template\n0 Name: template.ldr\n");
 	Template.write((Notices.join("\n") + "\n").toUtf8());
+
+	// drags saved for any model or for another one
+
+	Template.write("0 !SW OFFSET INSTRUCTION COVER_FRONT_COMMENTS - 0 40 -30\n0 !SW OFFSET INSTRUCTION COVER_FRONT_PRODUCT_ID \"other.ldr\" 0 -20.5 10\n");
 	Template.close();
 
 	QFile Settings(Folder.filePath("config/StudWorx/StudWorx.conf"));
@@ -487,6 +491,9 @@ void swTests::InstructionsTemplateKeepsNotices()
 
 	for (const QString& Notice : Notices)
 		QVERIFY2(Lines.contains(Notice), qPrintable(Notice + "\nsaved:\n" + Lines.join("\n")));
+
+	for (const QString& Offset : { QStringLiteral("0 !SW OFFSET INSTRUCTION COVER_FRONT_COMMENTS - 0 40 -30"), QStringLiteral("0 !SW OFFSET INSTRUCTION COVER_FRONT_PRODUCT_ID - 0 -20.5 10") })
+		QVERIFY2(Lines.contains(Offset), qPrintable(Offset + "\nsaved:\n" + Lines.join("\n")));
 
 	QVERIFY2(Pages[0][0] != Pages[1][0], "the front cover notice was not drawn");
 	QVERIFY2(Pages[0][1] != Pages[1][1], "the back cover notice was not drawn");

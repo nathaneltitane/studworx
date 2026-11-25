@@ -296,6 +296,20 @@ static qreal swGetRenderScale(const swInstructions* Instructions)
 	return qMax(1.0, SW_INSTRUCTIONS_RENDER_SIZE / qMax<qreal>(qMax(PageSetup.Width, PageSetup.Height), 1.0));
 }
 
+// The screen dots per inch Qt sizes point fonts with.
+Q_GUI_EXPORT int qt_defaultDpiY();
+
+// use to size page text alike on every screen
+static QFont swGetPageFont(QFont Font)
+{
+	// layouts are made at 96 dots per inch
+
+	if (Font.pointSizeF() > 0.0)
+		Font.setPointSizeF(Font.pointSizeF() * 96.0 / qMax(1, qt_defaultDpiY()));
+
+	return Font;
+}
+
 // renders kept until the model changes
 
 struct swStepImageRender
@@ -698,7 +712,7 @@ void swInstructionsStepNumberItem::Update()
 	setVisible(Visible);
 
 	// step 0 is the bill of materials title
-	setFont(mInstructions->GetFontProperty(mStep ? swInstructionsPropertyType::StepNumberFont : swInstructionsPropertyType::BillOfMaterialsTitleFont, mModel, mStep));
+	setFont(swGetPageFont(mInstructions->GetFontProperty(mStep ? swInstructionsPropertyType::StepNumberFont : swInstructionsPropertyType::BillOfMaterialsTitleFont, mModel, mStep)));
 	setBrush(QBrush(mInstructions->GetColorProperty(mStep ? swInstructionsPropertyType::StepNumberColor : swInstructionsPropertyType::BillOfMaterialsTitleColor, mModel, mStep)));
 	setText(mStep ? QString::number(mStep) : mInstructions->GetSourcedText(swInstructionsPropertyType::BillOfMaterialsTitleText, swInstructionsPropertyType::BillOfMaterialsTitleFile, QCoreApplication::translate("swInstructionsDialog", "Parts List")));
 }
@@ -722,7 +736,7 @@ swInstructionsPageNumberItem::swInstructionsPageNumberItem(QGraphicsItem* Parent
 	setZValue(1.0);
 	SetBoxStyle(mInstructions->GetBoxStyle(swInstructionsBoxElement::PageNumber, nullptr, 0));
 
-	setFont(mInstructions->GetFontProperty(swInstructionsPropertyType::PageNumberFont, nullptr, 0));
+	setFont(swGetPageFont(mInstructions->GetFontProperty(swInstructionsPropertyType::PageNumberFont, nullptr, 0)));
 	setBrush(QBrush(mInstructions->GetColorProperty(swInstructionsPropertyType::PageNumberColor, nullptr, 0)));
 	setText(swGetPageNumberText(mInstructions, PageIndex));
 }
@@ -753,7 +767,7 @@ swInstructionsPartCountItem::swInstructionsPartCountItem(QGraphicsItem* Parent, 
 	if (mElement == swInstructionsPlacementElement::BillOfMaterialsPartCount)
 		CountFont.setPointSizeF(mInstructions->GetFontProperty(swInstructionsPropertyType::BillOfMaterialsTitleFont, mModel, 0).pointSizeF());
 
-	setFont(CountFont);
+	setFont(swGetPageFont(CountFont));
 	setBrush(QBrush(mInstructions->GetColorProperty(PageCount ? swInstructionsPropertyType::PagePartCountColor : swInstructionsPropertyType::PartCountColor, mModel, 0)));
 	setText(mInstructions->GetPartCountText(Count));
 }
@@ -794,7 +808,7 @@ void swInstructionsPartsListItem::Update()
 	// the box paints the background in one piece
 	QColor BackgroundColor = mInstructions->GetColorProperty(mBillOfMaterials ? swInstructionsPropertyType::BillOfMaterialsListBackgroundColor : swInstructionsPropertyType::PLIBackgroundColor, mModel, mStep);
 	BackgroundColor.setAlpha(0);
-	QFont Font = mInstructions->GetFontProperty(mBillOfMaterials ? swInstructionsPropertyType::BillOfMaterialsFont : swInstructionsPropertyType::PLIFont, mModel, mStep);
+	QFont Font = swGetPageFont(mInstructions->GetFontProperty(mBillOfMaterials ? swInstructionsPropertyType::BillOfMaterialsFont : swInstructionsPropertyType::PLIFont, mModel, mStep));
 	QColor TextColor = mInstructions->GetColorProperty(mBillOfMaterials ? swInstructionsPropertyType::BillOfMaterialsTextColor : swInstructionsPropertyType::PLITextColor, mModel, mStep);
 	const bool ShowCounts = mInstructions->GetBoolProperty(mBillOfMaterials ? swInstructionsPropertyType::BillOfMaterialsShowCounts : swInstructionsPropertyType::PLIShowCounts, mModel, mStep);
 	const bool ShowPartIds = mBillOfMaterials && mInstructions->GetBoolProperty(swInstructionsPropertyType::BillOfMaterialsShowPartIds, mModel, mStep);
@@ -973,7 +987,7 @@ swInstructionsNoticeItem::swInstructionsNoticeItem(QGraphicsItem* Parent, swInst
 	setZValue(1.0);
 	SetBoxStyle(mInstructions->GetBoxStyle(swInstructionsBoxElement::Notice, nullptr, 0));
 
-	setFont(mInstructions->GetFontProperty(swInstructionsPropertyType::NoticeFont, nullptr, 0));
+	setFont(swGetPageFont(mInstructions->GetFontProperty(swInstructionsPropertyType::NoticeFont, nullptr, 0)));
 	setDefaultTextColor(mInstructions->GetColorProperty(swInstructionsPropertyType::NoticeTextColor, nullptr, 0));
 	const QString FileText = mInstructions->GetFileText(Notice.File);
 	setPlainText(FileText.isEmpty() ? Notice.Text : FileText);
@@ -2257,7 +2271,7 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 
 			// wrapped lines follow the alignment property
 			swInstructionsCoverTextItem* Item = new swInstructionsCoverTextItem(PageItem, Instructions, Model, Element);
-			Item->setFont(Font);
+			Item->setFont(swGetPageFont(Font));
 			Item->setDefaultTextColor(Color);
 			Item->setPlainText(Text);
 
@@ -2524,7 +2538,7 @@ static void swAddPageAnnotations(swInstructions* Instructions, size_t PageIndex,
 
 		if (Notice.Pages == swInstructionsImagePages::Watermark)
 		{
-			NoticeItem->setFont(Instructions->GetFontProperty(swInstructionsPropertyType::WatermarkFont, nullptr, 0));
+			NoticeItem->setFont(swGetPageFont(Instructions->GetFontProperty(swInstructionsPropertyType::WatermarkFont, nullptr, 0)));
 			NoticeItem->setDefaultTextColor(Instructions->GetColorProperty(swInstructionsPropertyType::WatermarkTextColor, nullptr, 0));
 		}
 

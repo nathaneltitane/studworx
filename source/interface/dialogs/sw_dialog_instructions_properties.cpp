@@ -329,7 +329,7 @@ swInstructionsPropertiesWidget::swInstructionsPropertiesWidget(QWidget* Parent, 
 
 	// templates carry the look to other models
 	QAction* SaveTemplateAction = OptionsMenu->addAction(tr("Save Template..."));
-	SaveTemplateAction->setToolTip(tr("Save the look, the steps per page, the cover images and the cover, band and watermark notices of these instructions to a model file that any model can apply"));
+	SaveTemplateAction->setToolTip(tr("Save everything laid out in these instructions to a model file that any model can apply"));
 	connect(SaveTemplateAction, &QAction::triggered, this, [this]()
 	{
 		const QString FileName = QFileDialog::getSaveFileName(this, tr("Save Template"), QString(), tr("LDraw Files (*.ldr);;All Files (*)"));
@@ -339,7 +339,7 @@ swInstructionsPropertiesWidget::swInstructionsPropertiesWidget(QWidget* Parent, 
 	});
 
 	QAction* ApplyTemplateAction = OptionsMenu->addAction(tr("Apply Template..."));
-	ApplyTemplateAction->setToolTip(tr("Apply the look, the steps per page, the cover images and the notices of a template or of another model to these instructions"));
+	ApplyTemplateAction->setToolTip(tr("Apply everything laid out in a template or in another model to these instructions"));
 	connect(ApplyTemplateAction, &QAction::triggered, this, [this]()
 	{
 		const QString FileName = QFileDialog::getOpenFileName(this, tr("Apply Template"), QString(), tr("LDraw Files (*.ldr *.dat *.mpd);;All Files (*)"));

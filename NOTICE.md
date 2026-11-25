@@ -10,6 +10,8 @@
   - Instructions: placed cover texts stay put when others are shown or hidden, and the placement tool places every element, pointer tips too
   - Instructions: texts are selected with one click anywhere on them, and pages no longer stall while clicking
   - Instructions: templates keep the notices of the covers, bands and watermark
+  - Instructions: templates keep everything laid out, moved cover texts included, so any model gets the same layout
+  - Instructions: page texts are the same size on every screen and in every export, notices and labels no longer shift or get cut
   - Instructions: the file properties of every instructions setting start with their scope, like COVER FRONT TITLE_FONT, the old names are no longer read
   - Instructions: Relative To places the step number against the parts list and the parts list against the number, choosing one frees the other
   - Instructions: the parts list sits centered beside the step number, and the pair keeps the same spacing in every step
