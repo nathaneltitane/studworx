@@ -12,6 +12,7 @@
 #include "sw_window_utilities.h"
 #include "sw_dialog_render.h"
 #include "sw_dialog_instructions_print.h"
+#include "sw_dialog_instructions_page.h"
 
 #ifdef Q_OS_WIN
 #if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
@@ -340,7 +341,7 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 #endif
 
 #ifndef Q_OS_IOS
-	const bool CreateRenderResources = !SaveAndExit || Options.SaveImage || Options.SaveKMZ || Options.SaveHTML || Options.SavePDF || Options.SavePOVRay || Options.RenderPOVRay;
+	const bool CreateRenderResources = !SaveAndExit || Options.SaveImage || Options.SaveKMZ || Options.SaveHTML || Options.SavePDF || Options.SavePages || Options.SavePOVRay || Options.RenderPOVRay;
 	const swResult<void> RendererResult = swContext::InitializeRenderer(CreateRenderResources);
 
 	if (!RendererResult)
@@ -1042,6 +1043,37 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 			OutputFailed = true;
 			StdErr << tr("--export-pdf needs printing support.\n");
 #endif
+		}
+
+		if (Options.SavePages)
+		{
+			// page images beside the model by default
+			const QFileInfo ProjectInfo(Options.ProjectName);
+			const QDir Dir(!Options.SavePagesName.isEmpty() ? Options.SavePagesName : ProjectInfo.absolutePath());
+			swInstructions* Instructions = mProject->GetInstructions();
+			const QSizeF PageSize(Instructions->mPageSetup.Width, Instructions->mPageSetup.Height);
+			const QSize ImageSize = (PageSize * qMin(1.0, SW_MAXIMUM_IMAGE_DIMENSION / qMax(PageSize.width(), PageSize.height()))).toSize();
+
+			if (!Dir.mkpath(QLatin1String(".")))
+			{
+				OutputFailed = true;
+				StdErr << tr("Failed to create folder '%1'.\n").arg(Dir.path());
+			}
+			else
+			{
+				for (size_t PageIndex = 0; PageIndex < Instructions->mPages.size(); PageIndex++)
+				{
+					const QString FileName = Dir.filePath(QString::fromLatin1("%1-page-%2.png").arg(ProjectInfo.completeBaseName()).arg(PageIndex + 1, 2, 10, QLatin1Char('0')));
+
+					if (swRenderInstructionsPage(Instructions, PageIndex, ImageSize).save(FileName))
+						StdOut << tr("Saved '%1'.\n").arg(FileName);
+					else
+					{
+						OutputFailed = true;
+						StdErr << tr("Failed to save '%1'.\n").arg(FileName);
+					}
+				}
+			}
 		}
 	}
 

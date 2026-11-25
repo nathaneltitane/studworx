@@ -309,6 +309,7 @@
 						<tr><td>--export-wavefront, --export-3ds, --export-collada, --export-kmz, --export-csv, --export-bricklink, --export-html, --export-povray</td><td>Export Wavefront, 3D Studio, COLLADA, KMZ, CSV, BrickLink, HTML and POV-Ray files, each with an optional file name</td></tr>
 						<tr><td>--kmz-geometry</td><td>Keep every part or only the visible surfaces in KMZ exports</td></tr>
 						<tr><td>--export-pdf</td><td>Print the instruction pages to a PDF file, with an optional file name</td></tr>
+						<tr><td>--export-pages</td><td>Save each instruction page as a picture, with an optional folder</td></tr>
 						<tr><td>--render-povray</td><td>Render with POV-Ray, with an optional file name</td></tr>
 						<tr><td>--import-settings, --export-settings</td><td>Settings as an ini file</td></tr>
 						<tr><td>--import-keyboard-shortcuts, --export-keyboard-shortcuts, --import-mouse-shortcuts, --export-mouse-shortcuts</td><td>Keyboard and mouse shortcuts</td></tr>
@@ -2140,6 +2141,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Instructions: clicking a blank spot of a page opens the properties of that page, the cover, step, bill of materials or blank page settings</li>
 					<li>Instructions: a scaled up cover image no longer covers the cover texts</li>
 					<li>Command line: --export-pdf prints the instruction pages to a PDF file on the page setup paper</li>
+					<li>Command line: --export-pages saves each instruction page as a PNG picture at the page setup size</li>
 					<li>Instructions: the bill of materials has its own title, parts list, quantity and part count settings and boxes, so changing it no longer changes the step pages; older <a href="#files">files</a> start from the step values</li>
 					<li>Instructions: Show Final Model leaves out the separate final model page and adds no page after a full last page, the final model background takes the Page Background color, submodel pages included, until you pick your own</li>
 					<li>Instructions: two buttons beside the page number show two pages at once, side by side or one above the other, pages 1 and 2, 3 and 4 and so on, and clicking the other page edits it</li>

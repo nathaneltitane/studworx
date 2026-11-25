@@ -2672,6 +2672,22 @@ void swUpdateInstructionsPageScene(swInstructions* Instructions, const swInstruc
 	swAddPageAnnotations(Instructions, PageIndex, Scene, PageItem, MarginsRect, ContentRect);
 }
 
+// use to draw one page into an image
+QImage swRenderInstructionsPage(swInstructions* Instructions, size_t PageIndex, const QSize& Size)
+{
+	QImage Image(Size, QImage::Format_ARGB32_Premultiplied);
+	Image.fill(Instructions->GetPageBackgroundColor(PageIndex));
+
+	QGraphicsScene Scene;
+	swUpdateInstructionsPageScene(Instructions, &Instructions->mPages[PageIndex], &Scene);
+
+	QPainter Painter(&Image);
+	Painter.setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform | QPainter::TextAntialiasing);
+	Scene.render(&Painter, QRectF(QPointF(), QSizeF(Image.size())), Scene.sceneRect(), Qt::KeepAspectRatio);
+
+	return Image;
+}
+
 // use to lock a page where it is drawn now
 void swLockInstructionsPage(swInstructions* Instructions, size_t PageIndex)
 {

@@ -349,6 +349,7 @@ struct swCommandLineOptions
 	int BrickLinkCondition = 0;
 	bool SaveHTML = false;
 	bool SavePDF = false;
+	bool SavePages = false;
 	bool SavePOVRay = false;
 	bool RenderPOVRay = false;
 	bool SetCameraAngles = false;
@@ -406,6 +407,7 @@ struct swCommandLineOptions
 	QString BrickLinkExceptions;
 	QString SaveHTMLName;
 	QString SavePDFName;
+	QString SavePagesName;
 	QString SavePOVRayName;
 	QString RenderPOVRayName;
 	QString SettingsImportName;
@@ -425,7 +427,7 @@ struct swCommandLineOptions
 	// Tells if only settings transfer.
 	bool HasSaveAndExit() const
 	{
-		return SaveImage || SaveFlatten || SaveUndo || SaveResave || SaveWavefront || Save3DS || SaveCOLLADA || SaveKMZ || SaveCSV || SaveBrickLink || SaveHTML || SavePDF || SavePOVRay || RenderPOVRay;
+		return SaveImage || SaveFlatten || SaveUndo || SaveResave || SaveWavefront || Save3DS || SaveCOLLADA || SaveKMZ || SaveCSV || SaveBrickLink || SaveHTML || SavePDF || SavePages || SavePOVRay || RenderPOVRay;
 	}
 
 	bool HasSettingsTransfer() const

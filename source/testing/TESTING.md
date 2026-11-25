@@ -32,7 +32,8 @@ the first instructions page image and a `step-1` anchor, and with a Landscape
 Display the page image must be saved at twice the size `index.html` shows it. A style sheet in the profile must replace the built-in one, the built-in one must name the feature of each block in a comment set apart by blank lines,
 and a step model box Corner Radius must round the page cards.
 `--export-pdf` without a file name must save a PDF beside the model holding
-one sheet per instructions page.
+one sheet per instructions page, and `--export-pages` into a missing folder must make it
+and save one PNG per page at the page setup size, named after the model with its page number.
 `--flatten` must replace a submodel inside a moved and turned submodel with its
 parts at their world positions, with color 16 parts taking the color of the submodel above,
 and `--undo` must then bring back the original main model.

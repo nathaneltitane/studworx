@@ -39,6 +39,7 @@ private slots:
 	void BrickLinkUsesExceptions();
 	void HTMLExportUsesModelFolder();
 	void InstructionsExportPDF();
+	void InstructionsExportPages();
 	void FlattenReplacesNestedSubModels();
 	void AxisAlignedRotations_data();
 	void AxisAlignedRotations();

@@ -38,6 +38,7 @@
   - Instructions: clicking a blank spot of a page opens the properties of that page, the cover, step, bill of materials or blank page settings
   - Instructions: a scaled up cover image no longer covers the cover texts
   - Command line: --export-pdf prints the instruction pages to a PDF file on the page setup paper
+  - Command line: --export-pages saves each instruction page as a PNG picture at the page setup size
   - Instructions: the bill of materials has its own title, parts list, quantity and part count settings and boxes, so changing it no longer changes the step pages; older files start from the step values
   - Instructions: Show Final Model leaves out the separate final model page and adds no page after a full last page, the final model background takes the Page Background color, submodel pages included, until you pick your own
   - Instructions: two buttons beside the page number show two pages at once, side by side or one above the other, pages 1 and 2, 3 and 4 and so on, and clicking the other page edits it

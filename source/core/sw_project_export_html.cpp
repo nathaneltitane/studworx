@@ -600,17 +600,8 @@ swResult<void> Project::ExportHTML(const swHTMLExportOptions& Options)
 			else if (Page.Model && Models.find(Page.Model) == Models.end())
 				continue;
 
-			QGraphicsScene Scene;
 			// twice the shown size keeps pages sharp on high density screens
-			QImage Image(ImageSize * qMin(2.0, static_cast<double>(SW_MAXIMUM_IMAGE_DIMENSION) / qMax(ImageSize.width(), ImageSize.height())), QImage::Format_ARGB32_Premultiplied);
-			Image.fill(Instructions.GetPageBackgroundColor(PageIndex));
-
-			swUpdateInstructionsPageScene(&Instructions, &Page, &Scene);
-
-			QPainter Painter(&Image);
-			Painter.setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform | QPainter::TextAntialiasing);
-			Scene.render(&Painter, QRectF(QPointF(), QSizeF(Image.size())), Scene.sceneRect(), Qt::KeepAspectRatio);
-			Painter.end();
+			const QImage Image = swRenderInstructionsPage(&Instructions, PageIndex, ImageSize * qMin(2.0, static_cast<double>(SW_MAXIMUM_IMAGE_DIMENSION) / qMax(ImageSize.width(), ImageSize.height())));
 
 			const QString PageNumber = QString::number(PageIndex + 1);
 			const QString ImageName = QString::fromLatin1("%1-page-%2.png").arg(ProjectBaseName, QString("%1").arg(PageIndex + 1, 2, 10, QLatin1Char('0')));

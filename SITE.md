@@ -89,6 +89,7 @@ studworx model.ldr opens a model. The options below work without opening a windo
 | --export-wavefront, --export-3ds, --export-collada, --export-kmz, --export-csv, --export-bricklink, --export-html, --export-povray | Export Wavefront, 3D Studio, COLLADA, KMZ, CSV, BrickLink, HTML and POV-Ray files, each with an optional file name |
 | --kmz-geometry | Keep every part or only the visible surfaces in KMZ exports |
 | --export-pdf | Print the instruction pages to a PDF file, with an optional file name |
+| --export-pages | Save each instruction page as a picture, with an optional folder |
 | --render-povray | Render with POV-Ray, with an optional file name |
 | --import-settings, --export-settings | Settings as an ini file |
 | --import-keyboard-shortcuts, --export-keyboard-shortcuts, --import-mouse-shortcuts, --export-mouse-shortcuts | Keyboard and mouse shortcuts |
