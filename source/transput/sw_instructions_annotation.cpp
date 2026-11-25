@@ -323,3 +323,108 @@ void swInstructions::RemovePointer(int Id)
 	if (mPointers.size() != PointerCount)
 		emit PageLayoutChanged();
 }
+
+swInstructionsClipboard swInstructions::CopyElements(const std::vector<swInstructionsElementKey>& Keys) const
+{
+	swInstructionsClipboard Clipboard;
+
+	for (const swInstructionsElementKey& Key : Keys)
+	{
+		const int Id = static_cast<int>(std::get<2>(Key));
+		const swInstructionsPlacementElement Element = std::get<0>(Key);
+
+		if (const swInstructionsNotice* Notice = Element == swInstructionsPlacementElement::Notice ? FindNotice(Id) : nullptr)
+			Clipboard.Notices.push_back(*Notice);
+		else if (const swInstructionsImage* Image = Element == swInstructionsPlacementElement::Image ? FindImage(Id) : nullptr)
+			Clipboard.Images.push_back(*Image);
+		else if (const swInstructionsPointer* Pointer = Element == swInstructionsPlacementElement::Pointer ? FindPointer(Id) : nullptr)
+			Clipboard.Pointers.push_back(*Pointer);
+		else
+			continue;
+
+		// sizes and moves come along
+
+		const std::map<swInstructionsElementKey, QSizeF>::const_iterator SizeIt = mElementSizes.find(Key);
+
+		if (SizeIt != mElementSizes.end())
+			Clipboard.Sizes[Key] = SizeIt->second;
+
+		const std::map<swInstructionsElementKey, QPointF>::const_iterator OffsetIt = mElementOffsets.find(Key);
+
+		if (OffsetIt != mElementOffsets.end())
+			Clipboard.Offsets[Key] = OffsetIt->second;
+	}
+
+	return Clipboard;
+}
+
+std::vector<swInstructionsElementKey> swInstructions::PasteElements(const swInstructionsClipboard& Clipboard, size_t PageIndex, const QPointF& Shift)
+{
+	std::vector<swInstructionsElementKey> PastedKeys;
+	const swInstructionsPageKey PageKey = GetPageElementsKey(PageIndex);
+
+	// the copy takes the size and the shifted move
+	auto AddKey = [this, &Clipboard, &PastedKeys](swInstructionsPlacementElement Element, int OldId, int NewId, const QPointF& OffsetShift)
+	{
+		const swInstructionsElementKey OldKey = { Element, nullptr, static_cast<swStep>(OldId) };
+		const swInstructionsElementKey NewKey = { Element, nullptr, static_cast<swStep>(NewId) };
+		const std::map<swInstructionsElementKey, QSizeF>::const_iterator SizeIt = Clipboard.Sizes.find(OldKey);
+		const std::map<swInstructionsElementKey, QPointF>::const_iterator OffsetIt = Clipboard.Offsets.find(OldKey);
+		const QPointF Offset = (OffsetIt != Clipboard.Offsets.end() ? OffsetIt->second : QPointF()) + OffsetShift;
+
+		if (SizeIt != Clipboard.Sizes.end())
+			mElementSizes[NewKey] = SizeIt->second;
+
+		if (!Offset.isNull())
+			mElementOffsets[NewKey] = Offset;
+
+		PastedKeys.push_back(NewKey);
+	};
+
+	for (swInstructionsNotice Notice : Clipboard.Notices)
+	{
+		const int OldId = Notice.Id;
+
+		// page notices land on this page
+		Notice.Id = mNextNoticeId++;
+		Notice.Position += Shift;
+
+		if (Notice.Pages == swInstructionsImagePages::None)
+			Notice.PageKey = PageKey;
+
+		mNotices.push_back(Notice);
+		AddKey(swInstructionsPlacementElement::Notice, OldId, Notice.Id, QPointF());
+	}
+
+	for (swInstructionsImage Image : Clipboard.Images)
+	{
+		const int OldId = Image.Id;
+
+		// images sit on a cell, the move shifts them
+		Image.Id = mNextImageId++;
+		Image.Template = false;
+
+		mImages.push_back(Image);
+		AddKey(swInstructionsPlacementElement::Image, OldId, Image.Id, Shift);
+	}
+
+	for (swInstructionsPointer Pointer : Clipboard.Pointers)
+	{
+		// pointers start at an element of their page
+		if (Pointer.PageKey != PageKey)
+			continue;
+
+		const int OldId = Pointer.Id;
+
+		Pointer.Id = mNextPointerId++;
+		Pointer.TipPosition += Shift;
+
+		mPointers.push_back(Pointer);
+		AddKey(swInstructionsPlacementElement::Pointer, OldId, Pointer.Id, QPointF());
+	}
+
+	if (!PastedKeys.empty())
+		emit PageLayoutChanged();
+
+	return PastedKeys;
+}

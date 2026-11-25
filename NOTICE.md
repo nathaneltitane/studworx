@@ -13,6 +13,8 @@
   - Instructions: the file properties of every instructions setting start with their scope, like COVER FRONT TITLE_FONT, the old names are no longer read
   - Instructions: Relative To places the step number against the parts list and the parts list against the number, choosing one frees the other
   - Instructions: the parts list sits centered beside the step number, and the pair keeps the same spacing in every step
+  - Instructions: Copy, Paste and Duplicate for notices, images and pointers, with the main window keys and in the right-click menu, each copy one grid step away
+  - Instructions: each cover text starts on its own cell, the title above the author, so turning texts on never stacks them
 
   </details>
 

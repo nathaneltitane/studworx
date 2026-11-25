@@ -873,6 +873,15 @@ public:
 	void SetCurrentPage(const swInstructionsPage* Page);
 	void SetPageSpread(swInstructionsPageSpread PageSpread);
 	void RemoveSelectedElements();
+	void CopySelectedElements();
+	void PasteElements();
+	void DuplicateSelectedElements();
+	void AddClipboardActions(QMenu& Menu, bool Copyable);
+
+	bool CanPaste() const
+	{
+		return !mClipboard.IsEmpty();
+	}
 
 	swInstructions* GetInstructions() const
 	{
@@ -890,6 +899,8 @@ protected:
 	void AlignSelection(int Placement, bool LastSelection);
 	void PlaceElement(int Placement);
 	void NudgeSelection(int DirectionX, int DirectionY, bool FullUnit);
+	bool RunClipboardKey(QKeyEvent* Event, bool Run);
+	bool event(QEvent* Event) override;
 	void keyPressEvent(QKeyEvent* Event) override;
 	void resizeEvent(QResizeEvent* Event) override;
 	void mousePressEvent(QMouseEvent* Event) override;
@@ -934,7 +945,9 @@ protected:
 	bool mDragStarted = false;
 	bool mFitPending = false;
 	bool mSelectionPending = false;
-	std::optional<swInstructionsElementKey> mPendingSelection;
+	std::vector<swInstructionsElementKey> mPendingSelection;
+	swInstructionsClipboard mClipboard;
+	int mPasteCount = 0;
 	std::vector<swInstructionsElementKey> mSelectionOrder;
 	bool mRebuildingPage = false;
 	swInstructionsRulerWidget* mHorizontalRuler = nullptr;

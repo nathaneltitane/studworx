@@ -727,6 +727,21 @@ struct swInstructionsPointer
 	int Tip = -1;
 };
 
+// Copied annotations, each keyed by its old element key.
+struct swInstructionsClipboard
+{
+	std::vector<swInstructionsNotice> Notices;
+	std::vector<swInstructionsImage> Images;
+	std::vector<swInstructionsPointer> Pointers;
+	std::map<swInstructionsElementKey, QSizeF> Sizes;
+	std::map<swInstructionsElementKey, QPointF> Offsets;
+
+	bool IsEmpty() const
+	{
+		return Notices.empty() && Images.empty() && Pointers.empty();
+	}
+};
+
 struct swInstructionsPage
 {
 	swInstructionsPageSettings Settings;
@@ -881,6 +896,10 @@ public:
 	void SetPointerReach(int Id, qreal Reach);
 	void SetPointerStyle(int Id, int Style, int Tip);
 	void RemovePointer(int Id);
+
+	// Copies of notices, images and pointers with their sizes and offsets.
+	swInstructionsClipboard CopyElements(const std::vector<swInstructionsElementKey>& Keys) const;
+	std::vector<swInstructionsElementKey> PasteElements(const swInstructionsClipboard& Clipboard, size_t PageIndex, const QPointF& Shift);
 
 	// A locked element keeps its position.
 	bool IsElementLocked(const swInstructionsElementKey& Key) const;

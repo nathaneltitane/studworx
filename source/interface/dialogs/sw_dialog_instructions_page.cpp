@@ -2816,10 +2816,10 @@ void swInstructionsPageWidget::SetCurrentPage(const swInstructionsPage* Page)
 	FitPage();
 
 	// select a new pointer alone
-	if (mPendingSelection)
+	if (!mPendingSelection.empty())
 	{
-		SelectedKeys = { *mPendingSelection };
-		mPendingSelection.reset();
+		SelectedKeys = std::set<swInstructionsElementKey>(mPendingSelection.begin(), mPendingSelection.end());
+		mPendingSelection.clear();
 	}
 
 	const QList<QGraphicsItem*> Items = Scene->items();
@@ -3259,6 +3259,7 @@ void swInstructionsPageWidget::contextMenuEvent(QContextMenuEvent* Event)
 		});
 
 		Menu.addSeparator();
+		AddClipboardActions(Menu, true);
 
 		connect(Menu.addAction(tr("Remove Pointer")), &QAction::triggered, this, [this, Id]()
 		{
@@ -3342,7 +3343,9 @@ void swInstructionsPageWidget::contextMenuEvent(QContextMenuEvent* Event)
 			});
 		}
 
-		// remove sits under add
+		// copies and remove sit under add
+		AddClipboardActions(Menu, Element == swInstructionsPlacementElement::Notice || Element == swInstructionsPlacementElement::Image);
+
 		if (ElementItem)
 		{
 			const QString RemoveName = Element == swInstructionsPlacementElement::Notice ? tr("Remove Notice") : Element == swInstructionsPlacementElement::Image ? tr("Remove Image") : tr("Remove Element");
@@ -3561,7 +3564,124 @@ void swInstructionsPageWidget::SelectElement(const swInstructionsElementKey& Key
 	}
 
 	// select the element once rebuilt
-	mPendingSelection = Key;
+	mPendingSelection = { Key };
+}
+
+// use to list copy, paste and duplicate
+void swInstructionsPageWidget::AddClipboardActions(QMenu& Menu, bool Copyable)
+{
+	const std::pair<QString, int> Commands[] =
+	{
+		{ tr("Copy"), SW_EDIT_COPY },
+		{ tr("Paste"), SW_EDIT_PASTE },
+		{ tr("Duplicate"), SW_PART_DUPLICATE }
+	};
+
+	for (const auto& [Name, CommandId] : Commands)
+	{
+		QAction* Action = Menu.addAction(Name);
+
+		// the main window keys show
+		if (gMainWindow)
+			Action->setShortcut(gMainWindow->mActions[CommandId]->shortcut());
+
+		Action->setEnabled(CommandId == SW_EDIT_PASTE ? CanPaste() : Copyable);
+
+		if (CommandId == SW_EDIT_COPY)
+			connect(Action, &QAction::triggered, this, &swInstructionsPageWidget::CopySelectedElements);
+		else if (CommandId == SW_EDIT_PASTE)
+			connect(Action, &QAction::triggered, this, &swInstructionsPageWidget::PasteElements);
+		else
+			connect(Action, &QAction::triggered, this, &swInstructionsPageWidget::DuplicateSelectedElements);
+	}
+
+	Menu.addSeparator();
+}
+
+// use to copy the notices, images and pointers
+void swInstructionsPageWidget::CopySelectedElements()
+{
+	std::vector<swInstructionsElementKey> Keys;
+
+	for (QGraphicsItem* Item : scene()->selectedItems())
+	{
+		swInstructionsElementKey Key;
+
+		if (swGetElementKey(Item, Key))
+			Keys.push_back(Key);
+	}
+
+	swInstructionsClipboard Clipboard = mInstructions->CopyElements(Keys);
+
+	// other elements keep the old copy
+	if (Clipboard.IsEmpty())
+		return;
+
+	mClipboard = std::move(Clipboard);
+	mPasteCount = 0;
+}
+
+void swInstructionsPageWidget::PasteElements()
+{
+	if (!mPage || mClipboard.IsEmpty())
+		return;
+
+	const size_t PageIndex = static_cast<size_t>(mPage - mInstructions->mPages.data());
+
+	if (mInstructions->IsPageLocked(PageIndex))
+		return;
+
+	// each paste steps one grid further
+	mPasteCount++;
+	const qreal Step = mInstructions->GetGridSnapSize() * mPasteCount;
+
+	// the copies are selected once rebuilt
+	scene()->clearSelection();
+
+	{
+		const QSignalBlocker Blocker(mInstructions);
+		mPendingSelection = mInstructions->PasteElements(mClipboard, PageIndex, QPointF(Step, Step));
+	}
+
+	if (!mPendingSelection.empty())
+		emit mInstructions->PageLayoutChanged();
+}
+
+void swInstructionsPageWidget::DuplicateSelectedElements()
+{
+	if (!mPage)
+		return;
+
+	const size_t PageIndex = static_cast<size_t>(mPage - mInstructions->mPages.data());
+	std::vector<swInstructionsElementKey> Keys;
+
+	if (mInstructions->IsPageLocked(PageIndex))
+		return;
+
+	for (QGraphicsItem* Item : scene()->selectedItems())
+	{
+		swInstructionsElementKey Key;
+
+		if (swGetElementKey(Item, Key))
+			Keys.push_back(Key);
+	}
+
+	const swInstructionsClipboard Clipboard = mInstructions->CopyElements(Keys);
+	const qreal Step = mInstructions->GetGridSnapSize();
+
+	if (Clipboard.IsEmpty())
+		return;
+
+	// the copies are selected once rebuilt
+	scene()->clearSelection();
+
+	{
+		const QSignalBlocker Blocker(mInstructions);
+		mPendingSelection = mInstructions->PasteElements(Clipboard, PageIndex, QPointF(Step, Step));
+	}
+
+	if (!mPendingSelection.empty())
+		emit mInstructions->PageLayoutChanged();
 }
 
 // use to move the selection by grid steps
@@ -3603,9 +3723,55 @@ void swInstructionsPageWidget::NudgeSelection(int DirectionX, int DirectionY, bo
 		emit mInstructions->PageLayoutChanged();
 }
 
+// use to match the main window copy keys
+bool swInstructionsPageWidget::RunClipboardKey(QKeyEvent* Event, bool Run)
+{
+	if (!gMainWindow)
+		return false;
+
+	const QKeySequence Pressed(static_cast<int>(Event->modifiers() & ~Qt::KeypadModifier) | Event->key());
+	const std::pair<int, void (swInstructionsPageWidget::*)()> Commands[] =
+	{
+		{ SW_EDIT_COPY, &swInstructionsPageWidget::CopySelectedElements },
+		{ SW_EDIT_PASTE, &swInstructionsPageWidget::PasteElements },
+		{ SW_PART_DUPLICATE, &swInstructionsPageWidget::DuplicateSelectedElements }
+	};
+
+	for (const auto& [CommandId, Command] : Commands)
+	{
+		if (gMainWindow->mActions[CommandId]->shortcut() != Pressed)
+			continue;
+
+		if (Run)
+			(this->*Command)();
+
+		return true;
+	}
+
+	return false;
+}
+
+// the page takes its keys before the main window
+bool swInstructionsPageWidget::event(QEvent* Event)
+{
+	if (Event->type() == QEvent::ShortcutOverride && RunClipboardKey(static_cast<QKeyEvent*>(Event), false))
+	{
+		Event->accept();
+		return true;
+	}
+
+	return QGraphicsView::event(Event);
+}
+
 // use to nudge with the number pad
 void swInstructionsPageWidget::keyPressEvent(QKeyEvent* Event)
 {
+	if (RunClipboardKey(Event, true))
+	{
+		Event->accept();
+		return;
+	}
+
 	static const std::map<int, QPoint> PadDirections =
 	{
 		{ Qt::Key_1, QPoint(-1, 1) }, { Qt::Key_2, QPoint(0, 1) }, { Qt::Key_3, QPoint(1, 1) },

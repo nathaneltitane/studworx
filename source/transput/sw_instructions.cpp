@@ -538,14 +538,11 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 		Properties[static_cast<int>(swGetPublicationType(Publication, swInstructionsPublicationField::Font))].Value = QFont("Arial", 24).toString();
 		Properties[static_cast<int>(swGetPublicationType(Publication, swInstructionsPublicationField::Color))].Value = SW_RGBA(0, 0, 0, 255);
 
-		// headings sit in the middle row, other texts stack along the bottom edge
-		int Placement = Heading ? SW_PLACEMENT_GRID_SIZE + 2 : SW_PLACEMENT_COUNT - SW_PLACEMENT_GRID_SIZE + 2;
+		// each text starts on its own cell around the image
+		static constexpr int Placements[] = { 2, 7, 20, 0, 4, 21, 23, 22, 24, 18, 10, 14, 16 };
+		static_assert(std::size(Placements) == SW_COVER_ELEMENT_COUNT, "Missing cover placement");
 
-		// pieces keep the bottom left corner
-		if (Publication.Kind == swInstructionsCoverElement::Pieces)
-			Placement = SW_PLACEMENT_COUNT - SW_PLACEMENT_GRID_SIZE - 4;
-
-		Properties[static_cast<int>(swGetPublicationType(Publication, swInstructionsPublicationField::Placement))].Value = Placement;
+		Properties[static_cast<int>(swGetPublicationType(Publication, swInstructionsPublicationField::Placement))].Value = Placements[static_cast<int>(Publication.Kind)];
 	}
 
 	// the bill of materials copies the steps
