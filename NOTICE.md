@@ -1,6 +1,20 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-25</summary>
+
+  - Properties: the Summary tab has a Publication group with title, author, product ID, version, publication date, URL, contact, copyright and notice, saved in the model file
+  - Preferences: the Author group is gone, the author of a model lives in Model Properties > Summary
+  - Instructions: the front and back cover each have their own Title, Author, Product ID, Version, Publication Date, URL, Contact, Copyright, Notice, Comments, Measurements, Weight and Pieces, and Pieces is the part count of the whole model
+  - Instructions: texts fill in %title, %author, %id, %version, %date, %url, %contact, %copyright, %notice, %size, %weight and %comments from the model
+  - Instructions: placed cover texts stay put when others are shown or hidden, and the placement tool places every element, pointer tips too
+  - Instructions: texts are selected with one click anywhere on them, and pages no longer stall while clicking
+  - Instructions: templates keep the notices of the covers, bands and watermark
+  - Instructions: the file properties of every instructions setting start with their scope, like COVER FRONT TITLE_FONT, the old names are no longer read
+
+  </details>
+
+  <details>
   <summary>2026-11-24</summary>
 
   - Command line: --export-pages saves each instruction page as a PNG picture at the page setup size

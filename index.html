@@ -50,7 +50,7 @@
 					"description": "StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library.",
 					"applicationCategory": "DesignApplication",
 					"operatingSystem": "Linux, Windows, macOS",
-					"softwareVersion": "2026-11-24",
+					"softwareVersion": "2026-11-25",
 					"license": "https://www.gnu.org/licenses/gpl-3.0.html",
 					"downloadUrl": "https://github.com/nathaneltitane/studworx/releases/latest",
 					"image": "https://studworx.app/resources/social/social.png",
@@ -2323,11 +2323,11 @@
 					</thead>
 
 					<tbody>
-						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-24_amd64.deb / arm64.deb</td></tr>
-						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-24-x86_64.rpm / aarch64.rpm</td></tr>
-						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-24-x86_64.appimage / aarch64.appimage</td></tr>
-						<tr><td>Windows</td><td>studworx-windows-2026-11-24-x64.exe</td></tr>
-						<tr><td>macOS</td><td>studworx-macos-2026-11-24-universal.dmg</td></tr>
+						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-25_amd64.deb / arm64.deb</td></tr>
+						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-25-x86_64.rpm / aarch64.rpm</td></tr>
+						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-25-x86_64.appimage / aarch64.appimage</td></tr>
+						<tr><td>Windows</td><td>studworx-windows-2026-11-25-x64.exe</td></tr>
+						<tr><td>macOS</td><td>studworx-macos-2026-11-25-universal.dmg</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -2380,14 +2380,29 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
+				<summary>2026-11-25</summary>
+
+				<ul>
+					<li>Properties: the Summary tab has a Publication group with title, author, product ID, version, publication date, URL, contact, copyright and notice, saved in the model file</li>
+					<li><a href="#preferences">Preferences</a>: the Author group is gone, the author of a model lives in Model Properties &gt; Summary</li>
+					<li><a href="#instructions">Instructions</a>: the front and back cover each have their own Title, Author, Product ID, Version, Publication Date, URL, Contact, Copyright, Notice, Comments, Measurements, Weight and Pieces, and Pieces is the part count of the whole model</li>
+					<li>Instructions: texts fill in %title, %author, %id, %version, %date, %url, %contact, %copyright, %notice, %size, %weight and %comments from the model</li>
+					<li>Instructions: placed cover texts stay put when others are shown or hidden, and the placement tool places every element, pointer tips too</li>
+					<li>Instructions: texts are selected with one click anywhere on them, and pages no longer stall while clicking</li>
+					<li>Instructions: templates keep the notices of the covers, bands and watermark</li>
+					<li>Instructions: the file properties of every instructions setting start with their scope, like COVER FRONT TITLE_FONT, the old names are no longer read</li>
+				</ul>
+			</details>
+
+			<details>
 				<summary>2026-11-24</summary>
 
 				<ul>
 					<li>Command line: --export-pages saves each instruction page as a PNG picture at the page setup size</li>
 					<li>Command line: the pictures are named after the model and page number, and saved beside the model or in a folder you name</li>
 					<li>Properties: the Summary tab has a Publication group with title, author, product ID, version, publication date, URL, contact, copyright and notice, saved in the model file</li>
-					<li><a href="#instructions">Instructions</a>: the front and back cover each have their own Title, Author, Product ID, Version, Publication Date, URL, Contact, Copyright, Notice, Comments, Measurements, Weight and Pieces, the Publication group picks the cover to edit, and Pieces is the part count of the whole model</li>
-					<li><a href="#preferences">Preferences</a>: the Author group is gone, the author of a model lives in Model Properties &gt; Summary</li>
+					<li>Instructions: the front and back cover each have their own Title, Author, Product ID, Version, Publication Date, URL, Contact, Copyright, Notice, Comments, Measurements, Weight and Pieces, the Publication group picks the cover to edit, and Pieces is the part count of the whole model</li>
+					<li>Preferences: the Author group is gone, the author of a model lives in Model Properties &gt; Summary</li>
 					<li>Instructions: placed cover texts stay put when others are shown or hidden</li>
 					<li>Instructions: the placement tool places every element, pointer tips too</li>
 					<li>Instructions: texts are selected with one click anywhere on them, and pages no longer stall while clicking</li>
@@ -2504,37 +2519,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				</ul>
 			</details>
 
-			<details>
-				<summary>2026-11-18</summary>
-
-				<ul>
-					<li>Keyboard preferences: a Built-in Keys group at the end lists the keys that can&#x27;t be changed, greyed out</li>
-					<li>Shortcuts: Delete removes only what is selected where you work: the joint in the Joints panel, the step in the Steps panel, the picked keys in the Keyframes panel, the pointers, notices or blank page in the instructions, or the selected objects in the view; Del always deletes, listed under Built-in Keys in Keyboard preferences and can&#x27;t be given to another command</li>
-					<li>Steps panel: the Timeline panel is now the Steps panel, saved shortcuts and panel places carry over</li>
-					<li><a href="#panels">Panels</a>: the Poses panel keeps its place on every start, and a panel layout filled with Joints copies resets to the default once</li>
-					<li>Site: Preferences lists every built-in key and what it does</li>
-					<li>Site: Steps, Keyboard preferences, main window, lighting styles, projections, cutaways, wireframe, height grids, split views and Selected Part images retaken</li>
-					<li>Keyframes panel: click a diamond to pick it, Ctrl+click to add or take it out, Shift+click to take it out; picked keys light up and Delete removes them</li>
-					<li>Shortcuts: Ctrl+Shift+W, Exit Mode in the menus and Keyboard preferences, exits one mode per press, innermost first: a pick, joint mode, the cutaway, then in-place submodel editing; it keeps the selection</li>
-					<li>Shortcuts: Esc steps back the same way, clears the selection before leaving a mode, and now also steps out of in-place submodel editing</li>
-					<li>Shortcuts: Ctrl+Shift+J only goes into joint mode; Ctrl+Shift+W or Esc leaves it</li>
-					<li>Joints: Ctrl+Shift+J goes into joint mode on the selected submodel, or the jointed submodel around the selected part, and Ctrl+Shift+W or Esc leaves it; Joint Mode and End Joint Mode are in Part &gt; Joint and the right-click menu</li>
-					<li>Joints: right-clicking in joint mode keeps the joint, so End Joint Mode works from the right-click menu</li>
-					<li>Joints panel: a Piece column shows where each submodel sits in its file, taken out of the submodel&#x27;s name</li>
-					<li>Joints panel: a Lock column freezes a joint, saved in the file; a locked joint shows in the Deactivated grey and can&#x27;t be moved, turned, edited or deleted</li>
-					<li>Preferences: Joint Mode Start opens the first joint, the last used joint of that submodel, or an overview with every joint shown as a ring to click</li>
-					<li>Preferences: Select Joints in View shows the other joints as faded rings while a joint is open, and clicking one opens it</li>
-					<li>Preferences: joint options have their own Joints group, with Joint Mode Start last</li>
-					<li>Preferences: Select Joints by Submodel, off by default, opens the nearest joint from a click anywhere on a jointed submodel in the joint overview</li>
-					<li>Joints: Joint Mode with nothing selected, or from a right click on empty space, opens the overview with every joint outlined and ringed; clicking an outlined part opens its joint</li>
-					<li>Mouse: the right button orbits only once the mouse moves, so a plain right click opens the right-click menu</li>
-					<li>Shading: menus list Default Lights, Flat and Wireframe, then Studio, Standard, Matte and Toon; Studio is the new default lighting style</li>
-					<li>Save Model Image: the preview plays the Joints motion from pose to pose, framed once so the model holds still</li>
-					<li>Train tracks: no crash when a track part is picked before the view draws it</li>
-					<li>Site: every image retaken from the installed build, with the joint overview, the Joints group in Preferences and Studio lighting</li>
-				</ul>
-			</details>
-
 			<p class="more"><a href="https://github.com/nathaneltitane/studworx/blob/main/NOTICE.md">Read every notice ›</a></p>
 		</section>
 
@@ -2545,7 +2529,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p>LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.</p>
 			<div class="authorship">
 				<a class="avatar" href="https://nathaneltitane.com" aria-label="N Λ T H Λ N E L"><img src="resources/avatar/avatar-bird.png" alt="" width="64" height="64"></a>
-				<p>Version // 2026-11-24<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://www.linkedin.com/in/nathaneltitane">LinkedIn</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
+				<p>Version // 2026-11-25<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://www.linkedin.com/in/nathaneltitane">LinkedIn</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
 			</div>
 		</div>
 
