@@ -2041,6 +2041,22 @@ static void swAddStepArea(swInstructions* Instructions, const swInstructionsStep
 	const QSizeF NumberSize = StepNumberItem->boundingRect().size();
 	const QSizeF PartsSize = PartsImageItem->boundingRect().size();
 
+	// an anchored pair sits in the area as one block
+	QRectF NumberRect(swGetPlacementPosition(AreaRect, NumberSize, NumberPlacement), NumberSize);
+	QRectF PartsRect(swGetPlacementPosition(AreaRect, PartsSize, PartsPlacement), PartsSize);
+
+	if (NumberAnchor == swInstructionsPlacementAnchor::PartsList || PartsAnchor == swInstructionsPlacementAnchor::StepNumber)
+	{
+		const bool NumberFollows = NumberAnchor == swInstructionsPlacementAnchor::PartsList;
+		const QRectF BaseRect(QPointF(), NumberFollows ? PartsSize : NumberSize);
+		const QRectF FollowRect(swGetPlacementPosition(BaseRect, NumberFollows ? NumberSize : PartsSize, NumberFollows ? NumberPlacement : PartsPlacement), NumberFollows ? NumberSize : PartsSize);
+		const QRectF BlockRect = BaseRect.united(FollowRect);
+		const QPointF Shift = swGetPlacementPosition(AreaRect, BlockRect.size(), NumberFollows ? PartsPlacement : NumberPlacement) - BlockRect.topLeft();
+
+		(NumberFollows ? PartsRect : NumberRect) = BaseRect.translated(Shift);
+		(NumberFollows ? NumberRect : PartsRect) = FollowRect.translated(Shift);
+	}
+
 	// the parts strip keeps the model out
 
 	QRectF ImageSizeRect(QPointF(AreaInset, AreaInset), CellRect.size() - QSizeF(2.0 * AreaInset, 2.0 * AreaInset));
@@ -2048,15 +2064,6 @@ static void swAddStepArea(swInstructions* Instructions, const swInstructionsStep
 
 	if (PartsImageItem->isVisible() && Instructions->GetBoolProperty(swInstructionsPropertyType::PLIReserveArea, Step.Model, Step.Step))
 	{
-		QRectF NumberRect(swGetPlacementPosition(AreaRect, NumberSize, NumberPlacement), NumberSize);
-		QRectF PartsRect(swGetPlacementPosition(AreaRect, PartsSize, PartsPlacement), PartsSize);
-
-		if (NumberAnchor == swInstructionsPlacementAnchor::PartsList)
-			NumberRect.moveTopLeft(swGetPlacementPosition(PartsRect, NumberSize, NumberPlacement));
-
-		if (PartsAnchor == swInstructionsPlacementAnchor::StepNumber)
-			PartsRect.moveTopLeft(swGetPlacementPosition(NumberRect, PartsSize, PartsPlacement));
-
 		// the number joins when beside the list
 		const bool NumberJoins = StepNumberItem->isVisible() && (NumberAnchor == swInstructionsPlacementAnchor::PartsList || PartsAnchor == swInstructionsPlacementAnchor::StepNumber);
 		const QRectF StripRect = NumberJoins ? PartsRect.united(NumberRect) : PartsRect;
@@ -2091,10 +2098,10 @@ static void swAddStepArea(swInstructions* Instructions, const swInstructionsStep
 
 	// place moved and locked elements first
 	if (NumberAnchor == swInstructionsPlacementAnchor::Area)
-		swPlaceElement(StepNumberItem, Instructions, swGetPlacementPosition(AreaRect, NumberSize, NumberPlacement));
+		swPlaceElement(StepNumberItem, Instructions, NumberRect.topLeft());
 
 	if (PartsAnchor == swInstructionsPlacementAnchor::Area)
-		swPlaceElement(PartsImageItem, Instructions, swGetPlacementPosition(AreaRect, PartsSize, PartsPlacement));
+		swPlaceElement(PartsImageItem, Instructions, PartsRect.topLeft());
 
 	if (NumberAnchor == swInstructionsPlacementAnchor::PartsList)
 		swPlaceElement(StepNumberItem, Instructions, swGetPlacementPosition(QRectF(PartsImageItem->pos(), PartsSize), NumberSize, NumberPlacement));

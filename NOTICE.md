@@ -11,6 +11,8 @@
   - Instructions: texts are selected with one click anywhere on them, and pages no longer stall while clicking
   - Instructions: templates keep the notices of the covers, bands and watermark
   - Instructions: the file properties of every instructions setting start with their scope, like COVER FRONT TITLE_FONT, the old names are no longer read
+  - Instructions: Relative To places the step number against the parts list and the parts list against the number, choosing one frees the other
+  - Instructions: the parts list sits centered beside the step number, and the pair keeps the same spacing in every step
 
   </details>
 

@@ -367,6 +367,17 @@ void swInstructionsPlacementWidget::AnchorClicked(int Anchor)
 	const swInstructionsPropertyType PlacementType = GetPlacementType();
 	const int Placement = swGetValidPlacement(mInstructions->GetIntProperty(PlacementType, nullptr, 0), static_cast<swInstructionsPlacementAnchor>(Anchor) == swInstructionsPlacementAnchor::Area);
 
+	// the other element leaves this one, no anchor loop
+	if (static_cast<swInstructionsPlacementAnchor>(Anchor) != swInstructionsPlacementAnchor::Area)
+	{
+		const bool Number = mElement == swInstructionsPlacementElement::StepNumber;
+		const swInstructionsPropertyType OtherAnchorType = Number ? swInstructionsPropertyType::PLIAnchor : swInstructionsPropertyType::StepNumberAnchor;
+		const swInstructionsPropertyType OtherPlacementType = Number ? swInstructionsPropertyType::PLIPlacement : swInstructionsPropertyType::StepNumberPlacement;
+
+		mInstructions->SetDefaultInt(OtherPlacementType, swGetValidPlacement(mInstructions->GetIntProperty(OtherPlacementType, nullptr, 0), true));
+		mInstructions->SetDefaultInt(OtherAnchorType, static_cast<int>(swInstructionsPlacementAnchor::Area));
+	}
+
 	mInstructions->SetDefaultInt(PlacementType, Placement);
 	mInstructions->SetDefaultInt(AnchorType, Anchor);
 }
