@@ -12,6 +12,12 @@
 #include "sw_application.h"
 #include "sw_window_main.h"
 
+// freed pictures go back to the system
+
+#if defined(__GLIBC__)
+#include <malloc.h>
+#endif
+
 // use to identify a page element
 bool swGetElementKey(const QGraphicsItem* Item, swInstructionsElementKey& Key)
 {
@@ -290,13 +296,29 @@ static qreal swGetRenderScale(const swInstructions* Instructions)
 	return qMax(1.0, SW_INSTRUCTIONS_RENDER_SIZE / qMax<qreal>(qMax(PageSetup.Width, PageSetup.Height), 1.0));
 }
 
-// render caches drop older generations
+// renders kept until the model changes
 
-static quint64 gInstructionsImageGeneration = 1;
+struct swStepImageRender
+{
+	QImage Image;
+	std::vector<swInstructionsStepImageItem::swPartRegion> PartRegions;
+};
+
+struct swPartsListRender
+{
+	QImage Image;
+	std::vector<QRect> CountRects;
+};
+
+static QCache<QByteArray, swStepImageRender> gStepImageCache(SW_INSTRUCTIONS_STEP_IMAGE_CACHE);
+static QCache<QByteArray, swPartsListRender> gPartsListCache(SW_INSTRUCTIONS_PARTS_LIST_CACHE);
+
+// use to free every kept render
 
 void swClearInstructionsImageCache()
 {
-	gInstructionsImageGeneration++;
+	gStepImageCache.clear();
+	gPartsListCache.clear();
 }
 
 // use to write the model part of a render key
@@ -489,26 +511,9 @@ void swInstructionsStepImageItem::Update()
 		KeyStream << Camera->m_fovy << Camera->m_zNear << Camera->m_zFar << static_cast<int>(Camera->GetProjection());
 	}
 
-	// renders kept until the model changes
-
-	struct swStepImageRender
-	{
-		QImage Image;
-		std::vector<swPartRegion> PartRegions;
-	};
-
-	static QCache<QByteArray, swStepImageRender> RenderCache(SW_INSTRUCTIONS_STEP_IMAGE_CACHE);
-	static quint64 CacheGeneration = 0;
-
-	if (CacheGeneration != gInstructionsImageGeneration)
-	{
-		RenderCache.clear();
-		CacheGeneration = gInstructionsImageGeneration;
-	}
-
 	// a stored render skips the drawing
 
-	if (const swStepImageRender* Render = RenderCache.object(Key))
+	if (const swStepImageRender* Render = gStepImageCache.object(Key))
 	{
 		mPartRegions = Render->PartRegions;
 		setPixmap(QPixmap::fromImage(Render->Image));
@@ -607,7 +612,7 @@ void swInstructionsStepImageItem::Update()
 
 	// cost is the picture kilobytes
 
-	RenderCache.insert(Key, new swStepImageRender{ Image, mPartRegions }, static_cast<int>(Image.sizeInBytes() / 1024) + 1);
+	gStepImageCache.insert(Key, new swStepImageRender{ Image, mPartRegions }, static_cast<int>(Image.sizeInBytes() / 1024) + 1);
 
 	if (!mModel->IsActive())
 		mModel->CalculateStep(SW_STEP_MAXIMUM);
@@ -815,32 +820,15 @@ void swInstructionsPartsListItem::Update()
 	KeyStream << mMaxWidth << mMaxHeight << ThumbnailSize << BackgroundColor << Font.toString() << TextColor << ShowCounts << ShowPartIds << static_cast<int>(Sort) << static_cast<int>(Layout) << static_cast<int>(Alignment) << CountPlacement << Scale;
 	KeyStream << CountBox.Margin << CountBox.Padding << CountBox.BorderWidth << CountBox.BorderColor << CountBox.BackgroundColor << CountBox.CornerRadius;
 
-	// lists kept until the model changes
-
-	struct swPartsListRender
-	{
-		QImage Image;
-		std::vector<QRect> CountRects;
-	};
-
-	static QCache<QByteArray, swPartsListRender> RenderCache(SW_INSTRUCTIONS_PARTS_LIST_CACHE);
-	static quint64 CacheGeneration = 0;
-
-	if (CacheGeneration != gInstructionsImageGeneration)
-	{
-		RenderCache.clear();
-		CacheGeneration = gInstructionsImageGeneration;
-	}
-
 	// a stored list skips the drawing
 
-	const swPartsListRender* Render = RenderCache.object(Key);
+	const swPartsListRender* Render = gPartsListCache.object(Key);
 	swResult<QImage> PartsImage = Render ? swResult<QImage>(Render->Image) : mModel->GetPartsListImage(mMaxWidth, ThumbnailSize, ListStep, swRGBAFromQColor(BackgroundColor), Font, TextColor, false, ShowCounts, Sort, Layout, Alignment, mMaxHeight, Scale, ShowPartIds, CountPlacement, &CountRects, &CountBox);
 
 	if (Render)
 		CountRects = Render->CountRects;
 	else if (PartsImage)
-		RenderCache.insert(Key, new swPartsListRender{ PartsImage.value(), CountRects }, static_cast<int>(PartsImage.value().sizeInBytes() / 1024) + 1);
+		gPartsListCache.insert(Key, new swPartsListRender{ PartsImage.value(), CountRects }, static_cast<int>(PartsImage.value().sizeInBytes() / 1024) + 1);
 
 	// quantities rebuild with the image
 	int SelectedCount = -1;
@@ -1855,6 +1843,29 @@ swInstructionsPageWidget::swInstructionsPageWidget(QWidget* Parent, swInstructio
 	connect(mInstructions, &swInstructions::PageSetupChanged, this, &swInstructionsPageWidget::UpdateRulers);
 
 	UpdateRulers();
+}
+
+// use to free the unowned page scene
+
+swInstructionsPageWidget::~swInstructionsPageWidget()
+{
+	QGraphicsScene* Scene = scene();
+
+	// no selection signals while freeing
+
+	disconnect(Scene, nullptr, this, nullptr);
+	setScene(nullptr);
+	delete Scene;
+
+	// closed instructions keep nothing
+
+	swClearInstructionsImageCache();
+
+	// return the freed pages memory
+
+#if defined(__GLIBC__)
+	malloc_trim(0);
+#endif
 }
 
 void swInstructionsPageWidget::StepSettingsChanged(swModel* Model, swStep Step)

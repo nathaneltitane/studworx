@@ -519,15 +519,16 @@ public:
 	bool FindPart(const QPointF& Point, int& PartIndex) const;
 	bool GetPartPoint(int PartIndex, QPointF& Point) const;
 
-protected:
-	QVariant itemChange(GraphicsItemChange Change, const QVariant& Value) override;
-
+	// The screen area of one drawn part.
 	struct swPartRegion
 	{
 		int PartIndex;
 		QRectF Rect;
 		QPointF Center;
 	};
+
+protected:
+	QVariant itemChange(GraphicsItemChange Change, const QVariant& Value) override;
 
 	swInstructions* mInstructions = nullptr;
 	swModel* mModel = nullptr;
@@ -869,6 +870,7 @@ class swInstructionsPageWidget : public QGraphicsView
 
 public:
 	swInstructionsPageWidget(QWidget* Parent, swInstructions* Instructions, swInstructionsPropertiesWidget* PropertiesWidget, swInstructionsPlacementWidget* PlacementWidget);
+	~swInstructionsPageWidget();
 
 	void SetCurrentPage(const swInstructionsPage* Page);
 	void SetPageSpread(swInstructionsPageSpread PageSpread);

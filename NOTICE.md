@@ -16,7 +16,7 @@
   - Instructions: Copy, Paste and Duplicate for notices, images and pointers, with the main window keys and in the right-click menu, each copy one grid step away, a paste on another page lands in place
   - Instructions: Paste works from the page list too, and locked pages grey out Paste and Duplicate
   - Instructions: saved pages keep their layout, placements are always written so new defaults never move them, and older files keep their cover cells
-  - Instructions: pages redraw at once after moving or editing texts, step pictures and parts lists are kept in memory until the model changes
+  - Instructions: pages redraw at once after moving or editing texts, step pictures and parts lists are kept in memory until the model changes, closing Instructions frees all of its memory
   - Instructions: each cover text starts on its own cell, the title above the author, so turning texts on never stacks them
 
   </details>

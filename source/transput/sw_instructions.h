@@ -616,8 +616,8 @@ constexpr int SW_GRID_DIVISIONS_MAXIMUM = 64;
 constexpr qreal SW_INSTRUCTIONS_RENDER_SIZE = 3300.0;
 
 // The memory kept for rendered step pictures and parts lists, in kilobytes.
-constexpr int SW_INSTRUCTIONS_STEP_IMAGE_CACHE = 384 * 1024;
-constexpr int SW_INSTRUCTIONS_PARTS_LIST_CACHE = 128 * 1024;
+constexpr int SW_INSTRUCTIONS_STEP_IMAGE_CACHE = 192 * 1024;
+constexpr int SW_INSTRUCTIONS_PARTS_LIST_CACHE = 32 * 1024;
 
 struct swInstructionsProperty
 {
