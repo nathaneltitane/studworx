@@ -6435,7 +6435,7 @@ File format is not recognized.</source>
         <translation>%1: помилка: %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="753"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="866"/>
         <source>Create Parts List</source>
         <translation>Створити список деталей</translation>
     </message>
@@ -15495,52 +15495,52 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Панель сторінок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перейдіть до першої, попередньої, наступної або останньої сторінки, або одразу до обкладинки чи специфікації; ці кнопки неактивні, поки відповідні сторінки вимкнено. «Сторінка кроку» вставляє порожній крок перед поточною сторінкою, «Порожня сторінка» вставляє порожню сторінку перед нею, а «Видалити сторінку» видаляє порожню сторінку або сторінку з порожніми кроками. Поле праворуч показує поточну сторінку, введіть номер, щоб перейти до неї. Комбінації клавіш часової шкали «Перший», «Попередній», «Наступний» і «Останній» також гортають сторінки, поки фокус на сторінці або на панелі «Сторінки».&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="486"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="494"/>
         <source>&lt;p&gt;&lt;b&gt;Page Bar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The First, Previous, Next and Last step shortcuts turn the pages too while the page or the Pages panel has focus.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Панель сторінок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перейдіть до першої, попередньої, наступної або останньої сторінки, або одразу до обкладинки чи специфікації; ці кнопки неактивні, поки відповідні сторінки вимкнено. «Сторінка кроку» вставляє порожній крок перед поточною сторінкою, «Порожня сторінка» вставляє порожню сторінку перед нею, а «Видалити сторінку» видаляє порожню сторінку або сторінку з порожніми кроками. Поле праворуч показує поточну сторінку, введіть номер, щоб перейти до неї. Комбінації клавіш кроків «Перший», «Попередній», «Наступний» і «Останній» також гортають сторінки, поки фокус на сторінці або на панелі «Сторінки».&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="496"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="504"/>
         <source>&lt;p&gt;&lt;b&gt;Undo and Redo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Undo takes back your last change to the instructions, Redo puts it back. Quick changes to the same setting count as one change. The main window Undo and Redo shortcuts work here too.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Скасувати і Повторити&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Скасувати прибирає вашу останню зміну інструкції, Повторити повертає її. Швидкі зміни того самого параметра вважаються однією зміною. Сполучення клавіш Скасувати і Повторити з головного вікна працюють і тут.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="498"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="506"/>
         <source>&amp;Undo</source>
         <translation>Скас&amp;увати</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="498"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="506"/>
         <source>Take back the last change to the instructions</source>
         <translation>Скасувати останню зміну інструкції</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="500"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="508"/>
         <source>Re&amp;do</source>
         <translation>Повтор&amp;ити</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="500"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="508"/>
         <source>Put back the last change that was taken back</source>
         <translation>Повторити останню скасовану зміну</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="512"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="520"/>
         <source>&amp;First</source>
         <translation>&amp;Перша</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="512"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="520"/>
         <source>Go to the first page</source>
         <translation>Перейти до першої сторінки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="521"/>
         <source>&amp;Previous</source>
         <translation>П&amp;опередня</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="521"/>
         <source>Go to the previous page</source>
         <translation>Перейти до попередньої сторінки</translation>
     </message>
@@ -15578,112 +15578,112 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="514"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="522"/>
         <source>Fr&amp;ont Cover</source>
         <translation>&amp;Передня обкладинка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="514"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="522"/>
         <source>Go to the front cover</source>
         <translation>Перейти до передньої обкладинки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="515"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="523"/>
         <source>&amp;Step Page</source>
         <translation>&amp;Сторінка кроку</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="515"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="523"/>
         <source>Insert an empty step before the current page</source>
         <translation>Вставити порожній крок перед поточною сторінкою</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="516"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="524"/>
         <source>Bl&amp;ank Page</source>
         <translation>Пор&amp;ожня сторінка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="516"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="524"/>
         <source>Insert a blank page before the current page</source>
         <translation>Вставити порожню сторінку перед поточною сторінкою</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="517"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="525"/>
         <source>&amp;Remove Page</source>
         <translation>&amp;Видалити сторінку</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="517"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="525"/>
         <source>Remove the current page when it is blank or holds only empty steps</source>
         <translation>Видалити поточну сторінку, якщо вона порожня або містить лише порожні кроки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="518"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="526"/>
         <source>&amp;Bill of Materials</source>
         <translation>&amp;Специфікація</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="518"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="526"/>
         <source>Go to the bill of materials page</source>
         <translation>Перейти до сторінки специфікації</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="519"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="527"/>
         <source>Bac&amp;k Cover</source>
         <translation>&amp;Задня обкладинка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="519"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="527"/>
         <source>Go to the back cover</source>
         <translation>Перейти до задньої обкладинки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="520"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="528"/>
         <source>&amp;Next</source>
         <translation>&amp;Наступна</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="520"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="528"/>
         <source>Go to the next page</source>
         <translation>Перейти до наступної сторінки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="521"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="529"/>
         <source>&amp;Last</source>
         <translation>Ос&amp;тання</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="521"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="529"/>
         <source>Go to the last page</source>
         <translation>Перейти до останньої сторінки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="527"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="535"/>
         <source>&lt;p&gt;&lt;b&gt;Two Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show two pages at once, pages 1 and 2, 3 and 4 and so on, side by side or one above the other. Only one of the two can be on, click it again for a single page. You edit the current page, click the other page to edit it.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="532"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="540"/>
         <source>Show two pages side by side</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="533"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="541"/>
         <source>Side by Side</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="535"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="543"/>
         <source>Show two pages one above the other</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="536"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="544"/>
         <source>Stacked</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="579"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="587"/>
         <source>Current page out of all pages, type a number to go there</source>
         <translation>Поточна сторінка з усіх сторінок, введіть номер, щоб перейти до неї</translation>
     </message>
@@ -15708,58 +15708,58 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Сторінка %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="619"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="698"/>
         <source>Parts List</source>
         <translation>Список деталей</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="629"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="708"/>
         <source>%1 / %2</source>
         <translation>%1 / %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="796"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="909"/>
         <source>Add Notice</source>
         <translation>Додати примітку</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="796"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="909"/>
         <source>Edit Notice</source>
         <translation>Редагувати примітку</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="799"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="912"/>
         <source>Notice &amp;Text</source>
         <translation>&amp;Текст примітки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="805"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="918"/>
         <source>Text &amp;File</source>
         <translation>Текстовий &amp;файл</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="808"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="921"/>
         <source>Text file used instead of the typed text, relative to the model file.</source>
         <translation>Текстовий файл замість введеного тексту, відносно файлу моделі.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="823"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="936"/>
         <source>Choose the text file.</source>
         <translation>Вибрати текстовий файл.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="813"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="837"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="926"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="950"/>
         <source>Choose Text File</source>
         <translation>Вибрати текстовий файл</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="823"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="936"/>
         <source>Remove the text file and go back to the typed text.</source>
         <translation>Прибрати текстовий файл і повернутися до введеного тексту.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="837"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="950"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation>Текстові файли (*.txt);;Усі файли (*)</translation>
     </message>
@@ -15982,8 +15982,8 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsPageListWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4560"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4570"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4673"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4683"/>
         <source>Pages</source>
         <translation>Сторінки</translation>
     </message>
@@ -15992,32 +15992,32 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Сторінки&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть сторінку, щоб показати її. Клацніть сторінку правою кнопкою миші, щоб вставити або видалити порожні сторінки навколо неї.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4512"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4625"/>
         <source>Lock Page: keep every element where it is and refuse removal</source>
         <translation>Закріпити сторінку: залишити кожен елемент на місці й заборонити вилучення</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4626"/>
         <source>Freeze Page: keep the page settings when changes are made for all pages</source>
         <translation>Заморозити сторінку: зберегти налаштування сторінки під час змін для всіх сторінок</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4561"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4674"/>
         <source>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a page to show it. Right-click a page to insert or remove blank pages around it.&lt;/p&gt;&lt;p&gt;Click the lock beside a page to keep its elements where they are. A locked page can&apos;t be removed.&lt;/p&gt;&lt;p&gt;Click the snowflake to freeze a page. It keeps its own copy of the settings, so changes for all pages skip it. Unfreeze it to follow the other pages again.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Сторінки&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть сторінку, щоб показати її. Клацніть сторінку правою кнопкою миші, щоб вставити або видалити порожні сторінки навколо неї.&lt;/p&gt;&lt;p&gt;Натисніть замок біля сторінки, щоб її елементи залишалися на місці. Закріплену сторінку не можна вилучити.&lt;/p&gt;&lt;p&gt;Натисніть сніжинку, щоб заморозити сторінку. Вона зберігає власну копію налаштувань, тож зміни для всіх сторінок її оминають. Розморозьте її, щоб вона знову слідувала за іншими сторінками.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4591"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4704"/>
         <source>Insert Blank Page Before</source>
         <translation>Вставити порожню сторінку перед</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4599"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4712"/>
         <source>Insert Blank Page After</source>
         <translation>Вставити порожню сторінку після</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4607"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4720"/>
         <source>Remove Blank Page</source>
         <translation>Видалити порожню сторінку</translation>
     </message>
@@ -16030,281 +16030,281 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsPageWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1733"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1846"/>
         <source>Units of the rulers, the page units or the document units when they are in use.</source>
         <translation>Одиниці лінійок, одиниці сторінки або одиниці документа, коли вони використовуються.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3188"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3301"/>
         <source>Anchor</source>
         <translation>Якір</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3189"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3302"/>
         <source>Top Left</source>
         <translation>Вгорі ліворуч</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3189"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3423"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3302"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3536"/>
         <source>Top</source>
         <translation>Згори</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3189"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3302"/>
         <source>Top Right</source>
         <translation>Вгорі праворуч</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3189"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3423"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3302"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3536"/>
         <source>Right</source>
         <translation>Праворуч</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3189"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3302"/>
         <source>Bottom Right</source>
         <translation>Внизу праворуч</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3189"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3423"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3302"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3536"/>
         <source>Bottom</source>
         <translation>Знизу</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3189"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3302"/>
         <source>Bottom Left</source>
         <translation>Внизу ліворуч</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3189"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3423"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3302"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3536"/>
         <source>Left</source>
         <translation>Ліворуч</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3194"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3307"/>
         <source>Automatic</source>
         <translation>Автоматично</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3220"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3412"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3333"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3525"/>
         <source>Default</source>
         <translation>За замовчуванням</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3237"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3350"/>
         <source>Style</source>
         <translation>Стиль</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3237"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3350"/>
         <source>Line</source>
         <translation>Лінія</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3237"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3350"/>
         <source>Callout Wedge</source>
         <translation>Клин виноски</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3237"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3350"/>
         <source>L Shape</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3237"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3350"/>
         <source>Z Shape</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3237"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3350"/>
         <source>U Shape</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3242"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3355"/>
         <source>Tip</source>
         <translation>Кінчик</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3242"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3355"/>
         <source>Dot</source>
         <translation>Крапка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3242"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3355"/>
         <source>Arrow</source>
         <translation>Стрілка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3242"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3355"/>
         <source>Hollow Dot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3252"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3365"/>
         <source>Reset Bend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3264"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3377"/>
         <source>Remove Pointer</source>
         <translation>Видалити вказівник</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3274"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3387"/>
         <source>Add Notice...</source>
         <translation>Додати примітку...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3286"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3399"/>
         <source>Add Watermark Text...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3314"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3427"/>
         <source>Add Watermark Image...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3338"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3451"/>
         <source>Add Pointer</source>
         <translation>Додати вказівник</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3351"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3464"/>
         <source>Remove Element</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3374"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3487"/>
         <source>This Page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3375"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3453"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3488"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3566"/>
         <source>Header Band</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3376"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3454"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3567"/>
         <source>Footer Band</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3377"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3455"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3490"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3568"/>
         <source>Left Band</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3378"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3456"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3491"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3569"/>
         <source>Right Band</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3379"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3457"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3492"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3570"/>
         <source>Watermark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3406"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3519"/>
         <source>Align</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3423"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3536"/>
         <source>Center</source>
         <translation type="unfinished">Центр</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3423"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3536"/>
         <source>Middle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3486"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3599"/>
         <source>Edit Notice...</source>
         <translation>Редагувати примітку...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3510"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3536"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3623"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3649"/>
         <source>Edit Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3575"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3688"/>
         <source>Copy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3576"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3689"/>
         <source>Paste</source>
         <translation type="unfinished">Вставити</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3577"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3690"/>
         <source>Duplicate</source>
         <translation type="unfinished">Дублювати</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3351"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3464"/>
         <source>Remove Notice</source>
         <translation>Видалити примітку</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3297"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3410"/>
         <source>Images (*.png *.jpg *.jpeg *.svg *.bmp *.gif *.webp);;All Files (*)</source>
         <translation>Зображення (*.png *.jpg *.jpeg *.svg *.bmp *.gif *.webp);;Усі файли (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3301"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3314"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3414"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3427"/>
         <source>Add Image...</source>
         <translation>Додати зображення...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3303"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3316"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3416"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3429"/>
         <source>Add Image</source>
         <translation>Додати зображення</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3499"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3612"/>
         <source>Change Image...</source>
         <translation>Змінити зображення...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3501"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3614"/>
         <source>Change Image</source>
         <translation>Змінити зображення</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3368"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3446"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3481"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3559"/>
         <source>Show On</source>
         <translation>Показувати на</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3450"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3563"/>
         <source>Front Cover</source>
         <translation>Передня обкладинка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3451"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3564"/>
         <source>Back Cover</source>
         <translation>Задня обкладинка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3452"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3565"/>
         <source>Both Covers</source>
         <translation>Обидві обкладинки</translation>
     </message>
@@ -16321,7 +16321,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">Ширина у відсотках від ширини сторінки:</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3351"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3464"/>
         <source>Remove Image</source>
         <translation>Вилучити зображення</translation>
     </message>
@@ -19282,22 +19282,22 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsRulerWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4260"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4373"/>
         <source>Horizontal Ruler</source>
         <translation>Горизонтальна лінійка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4261"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4374"/>
         <source>Horizontal position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Горизонтальна позиція на сторінці в одиницях сторінки; стрілка слідує за вказівником.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4265"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4378"/>
         <source>Vertical Ruler</source>
         <translation>Вертикальна лінійка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4266"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4379"/>
         <source>Vertical position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Вертикальна позиція на сторінці в одиницях сторінки; стрілка слідує за вказівником.</translation>
     </message>

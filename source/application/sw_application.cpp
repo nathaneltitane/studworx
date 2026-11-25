@@ -1377,5 +1377,9 @@ void swApplication::ShowPreferencesDialog()
 		swGetPartsLibrary()->LoadColors();
 
 	gMainWindow->SetShadingMode(Options.Preferences.mShadingMode);
+
+	// colors and studs draw again
+
+	swClearInstructionsImageCache();
 	swView::UpdateAllViews();
 }

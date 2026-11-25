@@ -9,6 +9,7 @@
 #include "sw_view.h"
 #include "sw_window_utilities.h"
 #include <QPicture>
+#include "sw_application.h"
 #include "sw_window_main.h"
 
 // use to identify a page element
@@ -289,6 +290,28 @@ static qreal swGetRenderScale(const swInstructions* Instructions)
 	return qMax(1.0, SW_INSTRUCTIONS_RENDER_SIZE / qMax<qreal>(qMax(PageSetup.Width, PageSetup.Height), 1.0));
 }
 
+// render caches drop older generations
+
+static quint64 gInstructionsImageGeneration = 1;
+
+void swClearInstructionsImageCache()
+{
+	gInstructionsImageGeneration++;
+}
+
+// use to write the model part of a render key
+
+static void swWriteInstructionsImageKey(QDataStream& Stream, swModel* Model, swStep Step)
+{
+	Stream << reinterpret_cast<quintptr>(Model) << Step;
+
+	// any model edit changes its revision
+
+	if (gApplication && gApplication->mProject)
+		for (const std::unique_ptr<swModel>& ProjectModel : gApplication->mProject->GetModels())
+			Stream << reinterpret_cast<quintptr>(ProjectModel.get()) << ProjectModel->GetCurrentHistoryRevision();
+}
+
 // use to crop an image to its pixels
 static QImage swCropImage(const QImage& Image, QPoint& Offset)
 {
@@ -414,10 +437,11 @@ void swInstructionsStepImageItem::Update()
 	View.MakeCurrent();
 
 	// step background behind the image
+
 	const QColor BackgroundColor = mInstructions->GetColorProperty(swInstructionsPropertyType::StepBackgroundColor, mModel, mStep);
-	View.SetBackgroundColor(SW_RGBA(BackgroundColor.red(), BackgroundColor.green(), BackgroundColor.blue(), 0));
 
 	// render large and draw at page size
+
 	const qreal Scale = swGetRenderScale(mInstructions);
 	const int CellWidth = qRound(mWidth * Scale);
 	const int CellHeight = qRound(mHeight * Scale);
@@ -435,32 +459,84 @@ void swInstructionsStepImageItem::Update()
 	const qreal ModelSize = ModelLength > 0 ? static_cast<qreal>(ModelLength) / qMax(qMax(mWidth, mHeight), 1) : 1.0;
 	const int Width = qMax(qRound(CellWidth * ModelSize), 1);
 	const int Height = qMax(qRound(CellHeight * ModelSize), 1);
-	View.SetSize(Width, Height);
-	View.SetLineWidthScale(Scale);
 
 	// cover and previews show the finished model
+
 	const bool Finished = mCoverImage || mSubmodelPreview || mFinalModel;
 	const bool FadeSteps = !Finished && mInstructions->GetBoolProperty(swInstructionsPropertyType::FadePreviousSteps, mModel, mStep);
 	const QColor FadeColor = mInstructions->GetColorProperty(swInstructionsPropertyType::FadeColor, mModel, mStep);
-	View.SetFadeStepsOverride(FadeSteps, swRGBAFromQColor(FadeColor));
-
 	const bool HighlightNewParts = !Finished && mInstructions->GetBoolProperty(swInstructionsPropertyType::HighlightNewParts, mModel, mStep);
 	const QColor HighlightColor = mInstructions->GetColorProperty(swInstructionsPropertyType::HighlightColor, mModel, mStep);
-	View.SetHighlightNewPartsOverride(HighlightNewParts, swRGBAFromQColor(HighlightColor), mInstructions->GetIntProperty(swInstructionsPropertyType::HighlightWidth, mModel, mStep));
+	const int HighlightWidth = mInstructions->GetIntProperty(swInstructionsPropertyType::HighlightWidth, mModel, mStep);
+	const int Projection = mInstructions->GetIntProperty(swInstructionsPropertyType::ModelProjection, mModel, mStep);
+	const bool LockHomeView = mInstructions->GetBoolProperty(swInstructionsPropertyType::LockHomeView, mModel, mStep);
+	const qreal Inset = mBoxStyle.GetInset();
+
+	// every input of the render
+
+	QByteArray Key;
+	QDataStream KeyStream(&Key, QIODevice::WriteOnly);
+	swWriteInstructionsImageKey(KeyStream, mModel, mStep);
+	KeyStream << BackgroundColor << Scale << CellWidth << CellHeight << Width << Height << Finished << FadeSteps << FadeColor << HighlightNewParts << HighlightColor << HighlightWidth << Projection << LockHomeView << Inset;
+
+	// a locked view ignores the main camera
+
+	if (!LockHomeView)
+	{
+		const swCamera* Camera = View.GetCamera();
+
+		KeyStream.writeRawData(reinterpret_cast<const char*>(&Camera->mWorldView), sizeof(Camera->mWorldView));
+		KeyStream << Camera->m_fovy << Camera->m_zNear << Camera->m_zFar << static_cast<int>(Camera->GetProjection());
+	}
+
+	// renders kept until the model changes
+
+	struct swStepImageRender
+	{
+		QImage Image;
+		std::vector<swPartRegion> PartRegions;
+	};
+
+	static QCache<QByteArray, swStepImageRender> RenderCache(SW_INSTRUCTIONS_STEP_IMAGE_CACHE);
+	static quint64 CacheGeneration = 0;
+
+	if (CacheGeneration != gInstructionsImageGeneration)
+	{
+		RenderCache.clear();
+		CacheGeneration = gInstructionsImageGeneration;
+	}
+
+	// a stored render skips the drawing
+
+	if (const swStepImageRender* Render = RenderCache.object(Key))
+	{
+		mPartRegions = Render->PartRegions;
+		setPixmap(QPixmap::fromImage(Render->Image));
+		return;
+	}
+
+	View.SetBackgroundColor(SW_RGBA(BackgroundColor.red(), BackgroundColor.green(), BackgroundColor.blue(), 0));
+	View.SetSize(Width, Height);
+	View.SetLineWidthScale(Scale);
+	View.SetFadeStepsOverride(FadeSteps, swRGBAFromQColor(FadeColor));
+	View.SetHighlightNewPartsOverride(HighlightNewParts, swRGBAFromQColor(HighlightColor), HighlightWidth);
 
 	// work on a copy of the main camera
+
 	View.SetCamera(View.GetCamera(), true);
-	View.GetCamera()->SetProjection(static_cast<swCameraProjection>(mInstructions->GetIntProperty(swInstructionsPropertyType::ModelProjection, mModel, mStep)));
+	View.GetCamera()->SetProjection(static_cast<swCameraProjection>(Projection));
 
 	// a locked view starts from home
 
-	if (mInstructions->GetBoolProperty(swInstructionsPropertyType::LockHomeView, mModel, mStep))
+	if (LockHomeView)
 		View.SetViewpoint(swViewpoint::Home);
 
 	// show the step rotation view
+
 	View.ApplyStepView(mStep);
 
 	// frame the complete model
+
 	View.ZoomExtentsAtStep(mModel->GetLastStep(), swGeometryBoundsMode::IncludeFallback, false);
 
 	std::vector<QImage> Images = View.GetStepImages(mStep, mStep);
@@ -492,7 +568,6 @@ void swInstructionsStepImageItem::Update()
 	View.SetSize(Width, Height);
 
 	const swStep CurrentStep = mModel->GetCurrentStep();
-	const qreal Inset = mBoxStyle.GetInset();
 	const QPointF Origin(Inset - CropOffset.x() / Scale, Inset - CropOffset.y() / Scale);
 	const std::vector<std::unique_ptr<swPart>>& Parts = mModel->GetParts();
 
@@ -529,6 +604,10 @@ void swInstructionsStepImageItem::Update()
 	}
 
 	mModel->SetTemporaryStep(CurrentStep);
+
+	// cost is the picture kilobytes
+
+	RenderCache.insert(Key, new swStepImageRender{ Image, mPartRegions }, static_cast<int>(Image.sizeInBytes() / 1024) + 1);
 
 	if (!mModel->IsActive())
 		mModel->CalculateStep(SW_STEP_MAXIMUM);
@@ -727,7 +806,41 @@ void swInstructionsPartsListItem::Update()
 
 	const swInstructionsBoxStyle CountBox = mInstructions->GetBoxStyle(mBillOfMaterials ? swInstructionsBoxElement::BillOfMaterialsQuantity : swInstructionsBoxElement::PartsListQuantity, mModel, mStep);
 
-	const swResult<QImage> PartsImage = mModel->GetPartsListImage(mMaxWidth, ThumbnailSize, mBillOfMaterials ? 0 : mStep, swRGBAFromQColor(BackgroundColor), Font, TextColor, false, ShowCounts, Sort, Layout, Alignment, mMaxHeight, Scale, ShowPartIds, CountPlacement, &CountRects, &CountBox);
+	// every input of the parts list
+
+	const swStep ListStep = mBillOfMaterials ? 0 : mStep;
+	QByteArray Key;
+	QDataStream KeyStream(&Key, QIODevice::WriteOnly);
+	swWriteInstructionsImageKey(KeyStream, mModel, ListStep);
+	KeyStream << mMaxWidth << mMaxHeight << ThumbnailSize << BackgroundColor << Font.toString() << TextColor << ShowCounts << ShowPartIds << static_cast<int>(Sort) << static_cast<int>(Layout) << static_cast<int>(Alignment) << CountPlacement << Scale;
+	KeyStream << CountBox.Margin << CountBox.Padding << CountBox.BorderWidth << CountBox.BorderColor << CountBox.BackgroundColor << CountBox.CornerRadius;
+
+	// lists kept until the model changes
+
+	struct swPartsListRender
+	{
+		QImage Image;
+		std::vector<QRect> CountRects;
+	};
+
+	static QCache<QByteArray, swPartsListRender> RenderCache(SW_INSTRUCTIONS_PARTS_LIST_CACHE);
+	static quint64 CacheGeneration = 0;
+
+	if (CacheGeneration != gInstructionsImageGeneration)
+	{
+		RenderCache.clear();
+		CacheGeneration = gInstructionsImageGeneration;
+	}
+
+	// a stored list skips the drawing
+
+	const swPartsListRender* Render = RenderCache.object(Key);
+	swResult<QImage> PartsImage = Render ? swResult<QImage>(Render->Image) : mModel->GetPartsListImage(mMaxWidth, ThumbnailSize, ListStep, swRGBAFromQColor(BackgroundColor), Font, TextColor, false, ShowCounts, Sort, Layout, Alignment, mMaxHeight, Scale, ShowPartIds, CountPlacement, &CountRects, &CountBox);
+
+	if (Render)
+		CountRects = Render->CountRects;
+	else if (PartsImage)
+		RenderCache.insert(Key, new swPartsListRender{ PartsImage.value(), CountRects }, static_cast<int>(PartsImage.value().sizeInBytes() / 1024) + 1);
 
 	// quantities rebuild with the image
 	int SelectedCount = -1;

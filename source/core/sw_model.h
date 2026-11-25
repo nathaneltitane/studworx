@@ -409,6 +409,7 @@ public:
 
 	bool IsModified() const;
 	void SetSaved();
+	quint64 GetCurrentHistoryRevision() const;
 
 	bool GetPartWorldMatrix(swPart* Part, swMatrix44& ParentWorldMatrix) const;
 	bool IncludesModel(const swModel* Model) const;
@@ -871,7 +872,6 @@ protected:
 	void DiscardHistorySequence();
 	void RevertHistorySequence();
 	void RemoveFirstUndoIfUnchanged();
-	quint64 GetCurrentHistoryRevision() const;
 
 	QString GetGroupName(const QString& Prefix);
 	void RemoveEmptyGroups();

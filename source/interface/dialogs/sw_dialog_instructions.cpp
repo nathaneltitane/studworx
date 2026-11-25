@@ -393,6 +393,10 @@ void swInstructionsDialog::SnapEditorDock()
 
 void swInstructionsDialog::ModelChanged()
 {
+	// edited models draw again
+
+	swClearInstructionsImageCache();
+
 	// rebuild the pages once per event
 	if (mUpdatePending)
 		return;
@@ -411,6 +415,10 @@ void swInstructionsDialog::ModelChanged()
 void swInstructionsDialog::SetProject(Project* Project)
 {
 	mProject = Project;
+
+	// another project draws again
+
+	swClearInstructionsImageCache();
 
 	// hand the instructions to the project
 	mPageWidget->scene()->clearSelection();
