@@ -3577,6 +3577,10 @@ void swInstructionsPageWidget::AddClipboardActions(QMenu& Menu, bool Copyable)
 		{ tr("Duplicate"), SW_PART_DUPLICATE }
 	};
 
+	// locked pages take no copies
+
+	const bool Editable = mPage && !mInstructions->IsPageLocked(static_cast<size_t>(mPage - mInstructions->mPages.data()));
+
 	for (const auto& [Name, CommandId] : Commands)
 	{
 		QAction* Action = Menu.addAction(Name);
@@ -3585,7 +3589,7 @@ void swInstructionsPageWidget::AddClipboardActions(QMenu& Menu, bool Copyable)
 		if (gMainWindow)
 			Action->setShortcut(gMainWindow->mActions[CommandId]->shortcut());
 
-		Action->setEnabled(CommandId == SW_EDIT_PASTE ? CanPaste() : Copyable);
+		Action->setEnabled(CommandId == SW_EDIT_COPY ? Copyable : Editable && (CommandId == SW_EDIT_PASTE ? CanPaste() : Copyable));
 
 		if (CommandId == SW_EDIT_COPY)
 			connect(Action, &QAction::triggered, this, &swInstructionsPageWidget::CopySelectedElements);
@@ -3619,11 +3623,16 @@ void swInstructionsPageWidget::CopySelectedElements()
 
 	mClipboard = std::move(Clipboard);
 	mPasteCount = 0;
+
+	// pastes start from the copied page
+
+	mCopyPageIndex = mPage ? static_cast<size_t>(mPage - mInstructions->mPages.data()) : 0;
+	mPastePageIndex = mCopyPageIndex;
 }
 
 void swInstructionsPageWidget::PasteElements()
 {
-	if (!mPage || mClipboard.IsEmpty())
+	if (!CanPaste())
 		return;
 
 	const size_t PageIndex = static_cast<size_t>(mPage - mInstructions->mPages.data());
@@ -3631,8 +3640,26 @@ void swInstructionsPageWidget::PasteElements()
 	if (mInstructions->IsPageLocked(PageIndex))
 		return;
 
-	// each paste steps one grid further
-	mPasteCount++;
+	// shared images and notices show on many pages
+
+	const bool Shared = !mClipboard.Images.empty() || std::any_of(mClipboard.Notices.begin(), mClipboard.Notices.end(), [](const swInstructionsNotice& Notice)
+	{
+		return Notice.Pages != swInstructionsImagePages::None;
+	});
+
+	// other pages start in place, each paste steps one grid further
+
+	if (PageIndex != mPastePageIndex && !Shared)
+	{
+		mPastePageIndex = PageIndex;
+		mPasteCount = PageIndex == mCopyPageIndex ? 1 : 0;
+	}
+	else
+	{
+		mPastePageIndex = PageIndex;
+		mPasteCount++;
+	}
+
 	const qreal Step = mInstructions->GetGridSnapSize() * mPasteCount;
 
 	// the copies are selected once rebuilt

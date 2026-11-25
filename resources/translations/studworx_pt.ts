@@ -15436,7 +15436,7 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
     <name>swInstructionsDialog</name>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="21"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="217"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="224"/>
         <source>Instructions</source>
         <translation>Instruções</translation>
     </message>
@@ -15456,27 +15456,27 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
         <translation>A imprimir páginas...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="118"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="125"/>
         <source>Show or hide the Print panel to print the instruction pages</source>
         <translation>Mostra ou esconde o painel Imprimir para imprimir as páginas de instruções</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="121"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="128"/>
         <source>Export HTML</source>
         <translation>Exportar HTML</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="122"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="129"/>
         <source>Export the instruction pages as HTML pages and images</source>
         <translation>Exporta as páginas de instruções como páginas HTML e imagens</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="145"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="152"/>
         <source>Ctrl+Shift+E</source>
         <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="147"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="154"/>
         <source>Show or hide the Editor panel to inspect and edit the text of the model file</source>
         <translation>Mostra ou esconde o painel Editor para inspecionar e editar o texto do ficheiro do modelo</translation>
     </message>
@@ -15485,12 +15485,12 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
         <translation type="vanished">%1 - Capa</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="249"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="256"/>
         <source>%1 - Bill of Materials</source>
         <translation>%1 - Lista de Materiais</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="253"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="260"/>
         <source>%1 - Blank</source>
         <translation>%1 - Em Branco</translation>
     </message>
@@ -15499,52 +15499,52 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Barra de Páginas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vá para a primeira página, a anterior, a seguinte ou a última, ou diretamente para a capa ou para a lista de materiais, desativadas enquanto essas páginas estiverem desligadas. Página de Passo insere um passo vazio antes da página atual, Página em Branco insere uma página em branco antes dela e Remover Página remove uma página em branco ou uma página de passos vazios. A caixa à direita mostra a página atual, escreva um número para ir para ela. Os atalhos Primeiro, Anterior, Seguinte e Último da linha temporal também mudam de página enquanto a página ou o painel Páginas tiver o foco.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="479"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="486"/>
         <source>&lt;p&gt;&lt;b&gt;Page Bar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The First, Previous, Next and Last step shortcuts turn the pages too while the page or the Pages panel has focus.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Barra de Páginas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vá para a primeira página, a anterior, a seguinte ou a última, ou diretamente para a capa ou para a lista de materiais, desativadas enquanto essas páginas estiverem desligadas. Página de Passo insere um passo vazio antes da página atual, Página em Branco insere uma página em branco antes dela e Remover Página remove uma página em branco ou uma página de passos vazios. A caixa à direita mostra a página atual, escreva um número para ir para ela. Os atalhos Primeiro, Anterior, Seguinte e Último dos passos também mudam de página enquanto a página ou o painel Páginas tiver o foco.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="496"/>
         <source>&lt;p&gt;&lt;b&gt;Undo and Redo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Undo takes back your last change to the instructions, Redo puts it back. Quick changes to the same setting count as one change. The main window Undo and Redo shortcuts work here too.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Desfazer e Refazer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Desfazer retira a sua última alteração nas instruções, Refazer volta a colocá-la. Alterações rápidas na mesma definição contam como uma só alteração. Os atalhos Desfazer e Refazer da janela principal também funcionam aqui.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="491"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="498"/>
         <source>&amp;Undo</source>
         <translation>&amp;Desfazer</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="491"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="498"/>
         <source>Take back the last change to the instructions</source>
         <translation>Desfazer a última alteração nas instruções</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="493"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="500"/>
         <source>Re&amp;do</source>
         <translation>Re&amp;fazer</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="493"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="500"/>
         <source>Put back the last change that was taken back</source>
         <translation>Refazer a última alteração desfeita</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="505"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="512"/>
         <source>&amp;First</source>
         <translation>&amp;Primeira</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="505"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="512"/>
         <source>Go to the first page</source>
         <translation>Ir para a primeira página</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="506"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="513"/>
         <source>&amp;Previous</source>
         <translation>&amp;Anterior</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="506"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="513"/>
         <source>Go to the previous page</source>
         <translation>Ir para a página anterior</translation>
     </message>
@@ -15557,137 +15557,137 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
         <translation type="vanished">Ir para a página da capa</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="245"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="252"/>
         <source>%1 - Front Cover</source>
         <translation>%1 - Capa</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="257"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="264"/>
         <source>%1 - Back Cover</source>
         <translation>%1 - Contracapa</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="283"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="290"/>
         <source>%1 - Completion - %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="285"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="292"/>
         <source>%1 - Assembly - %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="285"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="292"/>
         <source>%1 - %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="507"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="514"/>
         <source>Fr&amp;ont Cover</source>
         <translation>&amp;Capa</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="507"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="514"/>
         <source>Go to the front cover</source>
         <translation>Ir para a capa</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="508"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="515"/>
         <source>&amp;Step Page</source>
         <translation>Página de &amp;Passo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="508"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="515"/>
         <source>Insert an empty step before the current page</source>
         <translation>Insere um passo vazio antes da página atual</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="509"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="516"/>
         <source>Bl&amp;ank Page</source>
         <translation>Página em B&amp;ranco</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="509"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="516"/>
         <source>Insert a blank page before the current page</source>
         <translation>Insere uma página em branco antes da página atual</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="510"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="517"/>
         <source>&amp;Remove Page</source>
         <translation>&amp;Remover Página</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="510"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="517"/>
         <source>Remove the current page when it is blank or holds only empty steps</source>
         <translation>Remove a página atual quando está em branco ou só tem passos vazios</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="511"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="518"/>
         <source>&amp;Bill of Materials</source>
         <translation>Lista de &amp;Materiais</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="511"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="518"/>
         <source>Go to the bill of materials page</source>
         <translation>Ir para a página da lista de materiais</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="512"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="519"/>
         <source>Bac&amp;k Cover</source>
         <translation>Contra&amp;capa</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="512"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="519"/>
         <source>Go to the back cover</source>
         <translation>Ir para a contracapa</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="520"/>
         <source>&amp;Next</source>
         <translation>&amp;Seguinte</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="520"/>
         <source>Go to the next page</source>
         <translation>Ir para a página seguinte</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="514"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="521"/>
         <source>&amp;Last</source>
         <translation>&amp;Última</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="514"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="521"/>
         <source>Go to the last page</source>
         <translation>Ir para a última página</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="520"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="527"/>
         <source>&lt;p&gt;&lt;b&gt;Two Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show two pages at once, pages 1 and 2, 3 and 4 and so on, side by side or one above the other. Only one of the two can be on, click it again for a single page. You edit the current page, click the other page to edit it.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="525"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="532"/>
         <source>Show two pages side by side</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="526"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="533"/>
         <source>Side by Side</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="528"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="535"/>
         <source>Show two pages one above the other</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="529"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="536"/>
         <source>Stacked</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="572"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="579"/>
         <source>Current page out of all pages, type a number to go there</source>
         <translation>Página atual do total de páginas, escreva um número para ir para ela</translation>
     </message>
@@ -15707,7 +15707,7 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
         <translation type="obsolete">Horizontal</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="240"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="247"/>
         <source>Page %1</source>
         <translation>Página %1</translation>
     </message>
@@ -15984,8 +15984,8 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
 <context>
     <name>swInstructionsPageListWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4533"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4543"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4560"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4570"/>
         <source>Pages</source>
         <translation>Páginas</translation>
     </message>
@@ -15994,32 +15994,32 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Páginas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Selecione uma página para a mostrar. Clique com o botão direito numa página para inserir ou remover páginas em branco à sua volta.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4485"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4512"/>
         <source>Lock Page: keep every element where it is and refuse removal</source>
         <translation>Bloquear página: manter cada elemento no lugar e recusar a remoção</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4486"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4513"/>
         <source>Freeze Page: keep the page settings when changes are made for all pages</source>
         <translation>Congelar página: manter as definições da página quando são feitas alterações para todas as páginas</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4534"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4561"/>
         <source>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a page to show it. Right-click a page to insert or remove blank pages around it.&lt;/p&gt;&lt;p&gt;Click the lock beside a page to keep its elements where they are. A locked page can&apos;t be removed.&lt;/p&gt;&lt;p&gt;Click the snowflake to freeze a page. It keeps its own copy of the settings, so changes for all pages skip it. Unfreeze it to follow the other pages again.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Páginas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Selecione uma página para a mostrar. Clique com o botão direito numa página para inserir ou remover páginas em branco à sua volta.&lt;/p&gt;&lt;p&gt;Clique no cadeado ao lado de uma página para manter os seus elementos no lugar. Uma página bloqueada não pode ser removida.&lt;/p&gt;&lt;p&gt;Clique no floco de neve para congelar uma página. Ela guarda a sua própria cópia das definições, por isso as alterações para todas as páginas ignoram-na. Descongele-a para voltar a seguir as outras páginas.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4564"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4591"/>
         <source>Insert Blank Page Before</source>
         <translation>Inserir Página em Branco Antes</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4572"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4599"/>
         <source>Insert Blank Page After</source>
         <translation>Inserir Página em Branco Depois</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4580"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4607"/>
         <source>Remove Blank Page</source>
         <translation>Remover Página em Branco</translation>
     </message>
@@ -19284,22 +19284,22 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
 <context>
     <name>swInstructionsRulerWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4233"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4260"/>
         <source>Horizontal Ruler</source>
         <translation>Régua Horizontal</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4234"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4261"/>
         <source>Horizontal position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Posição horizontal na página nas unidades da página, a seta segue o ponteiro.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4238"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4265"/>
         <source>Vertical Ruler</source>
         <translation>Régua Vertical</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4239"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4266"/>
         <source>Vertical position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Posição vertical na página nas unidades da página, a seta segue o ponteiro.</translation>
     </message>

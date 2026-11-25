@@ -61,6 +61,7 @@ private slots:
 	void InstructionsPartCountsDefaultOff();
 	void InstructionsPartCountsRoundTrip();
 	void InstructionsBillOfMaterialsCopiesSteps();
+	void InstructionsLayoutIsAlwaysWritten();
 	void InstructionsPointersRoundTrip();
 	void InstructionsPublicationUrlRoundTrip();
 	void ModelPublicationRoundTrip();

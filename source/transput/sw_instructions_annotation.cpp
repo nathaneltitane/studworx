@@ -358,10 +358,60 @@ swInstructionsClipboard swInstructions::CopyElements(const std::vector<swInstruc
 	return Clipboard;
 }
 
+// use to check a page shows a group
+
+static bool swIsGroupOnPage(swInstructionsImagePages Pages, swInstructionsPageType PageType)
+{
+	if (Pages == swInstructionsImagePages::None)
+		return true;
+
+	if (Pages == swInstructionsImagePages::Front)
+		return PageType == swInstructionsPageType::Cover;
+
+	if (Pages == swInstructionsImagePages::Back)
+		return PageType == swInstructionsPageType::BackCover;
+
+	if (Pages == swInstructionsImagePages::Both)
+		return PageType == swInstructionsPageType::Cover || PageType == swInstructionsPageType::BackCover;
+
+	// bands and the watermark
+
+	return PageType == swInstructionsPageType::Steps || PageType == swInstructionsPageType::Blank;
+}
+
+// use to check a clipboard fits a page
+
+bool swInstructions::CanPasteElements(const swInstructionsClipboard& Clipboard, size_t PageIndex) const
+{
+	if (PageIndex >= mPages.size())
+		return false;
+
+	const swInstructionsPageType PageType = mPages[PageIndex].Type;
+	const swInstructionsPageKey PageKey = GetPageElementsKey(PageIndex);
+
+	for (const swInstructionsNotice& Notice : Clipboard.Notices)
+		if (swIsGroupOnPage(Notice.Pages, PageType))
+			return true;
+
+	for (const swInstructionsImage& Image : Clipboard.Images)
+		if (swIsGroupOnPage(Image.Pages, PageType))
+			return true;
+
+	for (const swInstructionsPointer& Pointer : Clipboard.Pointers)
+		if (Pointer.PageKey == PageKey)
+			return true;
+
+	return false;
+}
+
 std::vector<swInstructionsElementKey> swInstructions::PasteElements(const swInstructionsClipboard& Clipboard, size_t PageIndex, const QPointF& Shift)
 {
 	std::vector<swInstructionsElementKey> PastedKeys;
 	const swInstructionsPageKey PageKey = GetPageElementsKey(PageIndex);
+
+	// page type picks the groups
+
+	const swInstructionsPageType PageType = PageIndex < mPages.size() ? mPages[PageIndex].Type : swInstructionsPageType::Steps;
 
 	// the copy takes the size and the shifted move
 	auto AddKey = [this, &Clipboard, &PastedKeys](swInstructionsPlacementElement Element, int OldId, int NewId, const QPointF& OffsetShift)
@@ -383,6 +433,11 @@ std::vector<swInstructionsElementKey> swInstructions::PasteElements(const swInst
 
 	for (swInstructionsNotice Notice : Clipboard.Notices)
 	{
+		// group notices stay on their pages
+
+		if (!swIsGroupOnPage(Notice.Pages, PageType))
+			continue;
+
 		const int OldId = Notice.Id;
 
 		// page notices land on this page
@@ -398,6 +453,11 @@ std::vector<swInstructionsElementKey> swInstructions::PasteElements(const swInst
 
 	for (swInstructionsImage Image : Clipboard.Images)
 	{
+		// images stay on their pages
+
+		if (!swIsGroupOnPage(Image.Pages, PageType))
+			continue;
+
 		const int OldId = Image.Id;
 
 		// images sit on a cell, the move shifts them

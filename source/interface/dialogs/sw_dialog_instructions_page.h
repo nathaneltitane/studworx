@@ -880,7 +880,7 @@ public:
 
 	bool CanPaste() const
 	{
-		return !mClipboard.IsEmpty();
+		return mPage && mInstructions->CanPasteElements(mClipboard, static_cast<size_t>(mPage - mInstructions->mPages.data()));
 	}
 
 	swInstructions* GetInstructions() const
@@ -948,6 +948,8 @@ protected:
 	std::vector<swInstructionsElementKey> mPendingSelection;
 	swInstructionsClipboard mClipboard;
 	int mPasteCount = 0;
+	size_t mCopyPageIndex = 0;
+	size_t mPastePageIndex = 0;
 	std::vector<swInstructionsElementKey> mSelectionOrder;
 	bool mRebuildingPage = false;
 	swInstructionsRulerWidget* mHorizontalRuler = nullptr;

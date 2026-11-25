@@ -263,7 +263,7 @@ swInstructions::swInstructions(Project* Project)
 	mLayoutAreaColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_LAYOUT_AREA_COLOR));
 
 	LoadDefaultTemplate();
-	LoadCommandLines(mProject && mProject->GetMainModel() ? mProject->GetMainModel()->GetInstructionLines() : QStringList());
+	LoadCommandLines(mProject && mProject->GetMainModel() ? mProject->GetMainModel()->GetInstructionLines() : QStringList(), true);
 
 	CreatePages();
 
@@ -314,7 +314,7 @@ void swInstructions::ReloadCommandLines()
 	mNextPointerId = 1;
 
 	LoadDefaultTemplate();
-	LoadCommandLines(mProject && mProject->GetMainModel() ? mProject->GetMainModel()->GetInstructionLines() : QStringList());
+	LoadCommandLines(mProject && mProject->GetMainModel() ? mProject->GetMainModel()->GetInstructionLines() : QStringList(), true);
 
 	CreatePages();
 

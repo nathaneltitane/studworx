@@ -106,6 +106,13 @@ swInstructionsDialog::swInstructionsDialog(QWidget* Parent, Project* Project)
 		connect(DeleteAction, &QAction::changed, Shortcut, [Shortcut, DeleteAction]() { Shortcut->setKey(DeleteAction->shortcut()); });
 	}
 
+	// paste key reaches the page from the page list
+
+	QAction* PasteAction = gMainWindow->mActions[SW_EDIT_PASTE];
+	QShortcut* PasteShortcut = new QShortcut(PasteAction->shortcut(), mPageListWidget, nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
+	connect(PasteShortcut, &QShortcut::activated, mPageWidget, &swInstructionsPageWidget::PasteElements);
+	connect(PasteAction, &QAction::changed, PasteShortcut, [PasteShortcut, PasteAction]() { PasteShortcut->setKey(PasteAction->shortcut()); });
+
 	// print panel opens below the grid
 	mPrintWidget = new swInstructionsPrintWidget(this, mInstructions);
 	mPrintWidget->setObjectName("InstructionsPrint");

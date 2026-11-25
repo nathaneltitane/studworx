@@ -899,6 +899,7 @@ public:
 
 	// Copies of notices, images and pointers with their sizes and offsets.
 	swInstructionsClipboard CopyElements(const std::vector<swInstructionsElementKey>& Keys) const;
+	bool CanPasteElements(const swInstructionsClipboard& Clipboard, size_t PageIndex) const;
 	std::vector<swInstructionsElementKey> PasteElements(const swInstructionsClipboard& Clipboard, size_t PageIndex, const QPointF& Shift);
 
 	// A locked element keeps its position.
@@ -1114,7 +1115,7 @@ protected:
 	void SetDefaultProperties();
 	void RemoveElementReferences(const swInstructionsElementKey& Key);
 	void LoadDefaultTemplate();
-	void LoadCommandLines(const QStringList& CommandLines);
+	void LoadCommandLines(const QStringList& CommandLines, bool ModelLines = false);
 	QStringList GetCommandLines() const;
 	void StoreCommandLines();
 	void ReloadCommandLines();

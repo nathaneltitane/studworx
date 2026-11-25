@@ -554,6 +554,40 @@ static void swSetInstructionsProperty(swInstructionsProperties& Properties, int 
 		Properties[static_cast<int>(swInstructionsPropertyType::UseDocumentFontSize)].Value = true;
 }
 
+// placements anchors and alignments
+
+static bool swIsInstructionsLayoutProperty(int Type)
+{
+	const QString& Name = swGetInstructionsPropertyNames().at(Type);
+
+	return Name.contains(QLatin1String("PLACEMENT")) || Name.contains(QLatin1String("ANCHOR")) || Name.contains(QLatin1String("ALIGNMENT"));
+}
+
+// older files kept the earlier cover cells
+
+static void swSetOldCoverPlacements(swInstructionsProperties& Properties, const std::vector<bool>& ReadTypes, const swInstructionsProperties& BuiltInProperties)
+{
+	// shortcut: covers only the cover cell change of 2026-11-25, extend when other layout defaults change for unsaved files
+
+	for (const swInstructionsPublicationElement& Publication : swGetPublicationElements())
+	{
+		const int Type = static_cast<int>(swGetPublicationType(Publication, swInstructionsPublicationField::Placement));
+
+		if (ReadTypes[Type] || Properties[Type].Value != BuiltInProperties[Type].Value)
+			continue;
+
+		const bool Heading = Publication.Kind == swInstructionsCoverElement::Title || Publication.Kind == swInstructionsCoverElement::Author;
+		int Placement = Heading ? SW_PLACEMENT_GRID_SIZE + 2 : SW_PLACEMENT_COUNT - SW_PLACEMENT_GRID_SIZE + 2;
+
+		// pieces sat above the bottom row
+
+		if (Publication.Kind == swInstructionsCoverElement::Pieces)
+			Placement = SW_PLACEMENT_COUNT - SW_PLACEMENT_GRID_SIZE - 4;
+
+		Properties[Type].Value = Placement;
+	}
+}
+
 // the size choice follows a used document font
 
 static bool swIsInstructionsPropertyWritten(const swInstructionsProperties& Properties, int Type, const QVariant& DefaultValue)
@@ -562,6 +596,11 @@ static bool swIsInstructionsPropertyWritten(const swInstructionsProperties& Prop
 
 	if (!Value.isValid())
 		return false;
+
+	// layout never follows changed defaults
+
+	if (swIsInstructionsLayoutProperty(Type))
+		return true;
 
 	if (Type == static_cast<int>(swInstructionsPropertyType::UseDocumentFontSize) && Properties[static_cast<int>(swInstructionsPropertyType::UseDocumentFont)].Value.toBool())
 		return true;
@@ -583,7 +622,7 @@ static void swCopyBillOfMaterialsProperties(swInstructionsProperties& Properties
 			Properties[static_cast<int>(Source.first)].Value = Properties[static_cast<int>(Source.second)].Value;
 }
 
-void swInstructions::LoadCommandLines(const QStringList& CommandLines)
+void swInstructions::LoadCommandLines(const QStringList& CommandLines, bool ModelLines)
 {
 	std::vector<bool> ReadTypes(static_cast<size_t>(swInstructionsPropertyType::Count), false);
 	std::map<swInstructionsPageKey, std::vector<bool>> FrozenReadTypes;
@@ -923,6 +962,17 @@ void swInstructions::LoadCommandLines(const QStringList& CommandLines)
 
 			mNextImageId = qMax(mNextImageId, Image.Id + 1);
 		}
+	}
+
+	// files without placements predate the cover cells
+
+	if (ModelLines && !CommandLines.isEmpty())
+	{
+		const swInstructionsProperties BuiltInProperties = CreateDefaultProperties();
+		swSetOldCoverPlacements(mStepProperties, ReadTypes, BuiltInProperties);
+
+		for (const std::pair<const swInstructionsPageKey, std::vector<bool>>& Frozen : FrozenReadTypes)
+			swSetOldCoverPlacements(mFrozenPages[Frozen.first], Frozen.second, BuiltInProperties);
 	}
 
 	// older files share the step settings

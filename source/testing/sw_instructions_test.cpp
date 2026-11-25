@@ -172,6 +172,79 @@ void swTests::InstructionsBillOfMaterialsCopiesSteps()
 	QVERIFY(Lines.filter("FINAL_MODEL_BACKGROUND_COLOR").isEmpty());
 }
 
+// Saves a model written before the cover cells, and one without settings. The old one keeps its cells, both write every placement.
+void swTests::InstructionsLayoutIsAlwaysWritten()
+{
+	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
+	const QString Binary = Environment.value("SW_TEST_BINARY");
+
+	if (Binary.isEmpty())
+		QSKIP("SW_TEST_BINARY is not set");
+
+	QTemporaryDir Folder;
+	QVERIFY(Folder.isValid());
+	QVERIFY(QDir(Folder.path()).mkpath("library/parts"));
+
+	QFile Part(Folder.filePath("library/parts/3001.dat"));
+	QVERIFY(Part.open(QIODevice::WriteOnly));
+	Part.write("0 Brick  2 x  4\r\n0 Name: 3001.dat\r\n4 16 -40 0 -20 40 0 -20 40 0 20 -40 0 20\r\n");
+	Part.close();
+
+	QProcessEnvironment SaveEnvironment = Environment;
+	SaveEnvironment.insert("XDG_CONFIG_HOME", Folder.filePath("config"));
+	SaveEnvironment.insert("XDG_DATA_HOME", Folder.filePath("data"));
+	SaveEnvironment.insert("XDG_CACHE_HOME", Folder.filePath("cache"));
+	SaveEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
+
+	// saved instruction lines of a model
+
+	const auto Resave = [&](const QString& Name, const QByteArray& Lines)
+	{
+		QFile Model(Folder.filePath(Name + ".ldr"));
+		Model.open(QIODevice::WriteOnly);
+		Model.write("0 main\r\n" + Lines + "1 16 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n");
+		Model.close();
+
+		QProcess Save;
+		Save.setProcessEnvironment(SaveEnvironment);
+		Save.setProcessChannelMode(QProcess::MergedChannels);
+		Save.start(Binary, { "--library", Folder.filePath("library"), Model.fileName(), "--resave", Folder.filePath(Name + "saved.ldr") });
+		Save.waitForFinished(120000);
+
+		QFile Saved(Folder.filePath(Name + "saved.ldr"));
+
+		return Saved.open(QIODevice::ReadOnly) ? QString::fromUtf8(Saved.readAll()).split("\r\n").filter("INSTRUCTION") : QStringList();
+	};
+
+	const QStringList Old = Resave("old", "0 !SW PROPERTY INSTRUCTION COVER FRONT SHOW_PRODUCT_ID TRUE\r\n0 !SW PROPERTY INSTRUCTION COVER FRONT AUTHOR_PLACEMENT 18\r\n0 !SW OFFSET INSTRUCTION COVER_FRONT_PRODUCT_ID \"old.ldr\" 0 -20 -40\r\n");
+	const QStringList Fresh = Resave("fresh", QByteArray());
+
+	QVERIFY(!Old.isEmpty() && !Fresh.isEmpty());
+
+	// old files keep the earlier cells
+
+	QVERIFY(Old.contains("0 !SW PROPERTY INSTRUCTION COVER FRONT PRODUCT_ID_PLACEMENT 22"));
+	QVERIFY(Old.contains("0 !SW PROPERTY INSTRUCTION COVER FRONT COMMENTS_PLACEMENT 22"));
+	QVERIFY(Old.contains("0 !SW PROPERTY INSTRUCTION COVER FRONT PIECES_PLACEMENT 16"));
+	QVERIFY(Old.contains("0 !SW PROPERTY INSTRUCTION COVER FRONT TITLE_PLACEMENT 7"));
+	QVERIFY(Old.contains("0 !SW PROPERTY INSTRUCTION COVER FRONT AUTHOR_PLACEMENT 18"));
+	QVERIFY(Old.contains("0 !SW OFFSET INSTRUCTION COVER_FRONT_PRODUCT_ID \"old.ldr\" 0 -20 -40"));
+
+	// new models use the current cells
+
+	QVERIFY(Fresh.contains("0 !SW PROPERTY INSTRUCTION COVER FRONT TITLE_PLACEMENT 2"));
+	QVERIFY(Fresh.contains("0 !SW PROPERTY INSTRUCTION COVER FRONT PRODUCT_ID_PLACEMENT 20"));
+
+	// placements never depend on defaults
+
+	for (const QStringList& Lines : { Old, Fresh })
+	{
+		QVERIFY(!Lines.filter("PROPERTY INSTRUCTION STEP PARTS_LIST_PLACEMENT ").isEmpty());
+		QVERIFY(!Lines.filter("PROPERTY INSTRUCTION STEP NUMBER_ANCHOR ").isEmpty());
+		QVERIFY(!Lines.filter("PROPERTY INSTRUCTION STEP NUMBER_ALIGNMENT ").isEmpty());
+	}
+}
+
 // Saves pointers with the newer styles, tips, tip anchor, bend, reach and bend radius. They must come back unchanged.
 void swTests::InstructionsPointersRoundTrip()
 {
