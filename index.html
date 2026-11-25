@@ -50,7 +50,7 @@
 					"description": "StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library.",
 					"applicationCategory": "DesignApplication",
 					"operatingSystem": "Linux, Windows, macOS",
-					"softwareVersion": "2026-11-23",
+					"softwareVersion": "2026-11-24",
 					"license": "https://www.gnu.org/licenses/gpl-3.0.html",
 					"downloadUrl": "https://github.com/nathaneltitane/studworx/releases/latest",
 					"image": "https://studworx.app/resources/social/social.png",
@@ -2046,11 +2046,11 @@
 					</thead>
 
 					<tbody>
-						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-23_amd64.deb / arm64.deb</td></tr>
-						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-23-x86_64.rpm / aarch64.rpm</td></tr>
-						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-23-x86_64.appimage / aarch64.appimage</td></tr>
-						<tr><td>Windows</td><td>studworx-windows-2026-11-23-x64.exe</td></tr>
-						<tr><td>macOS</td><td>studworx-macos-2026-11-23-universal.dmg</td></tr>
+						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-24_amd64.deb / arm64.deb</td></tr>
+						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-24-x86_64.rpm / aarch64.rpm</td></tr>
+						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-24-x86_64.appimage / aarch64.appimage</td></tr>
+						<tr><td>Windows</td><td>studworx-windows-2026-11-24-x64.exe</td></tr>
+						<tr><td>macOS</td><td>studworx-macos-2026-11-24-universal.dmg</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -2103,6 +2103,15 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
+				<summary>2026-11-24</summary>
+
+				<ul>
+					<li>Command line: --export-pages saves each instruction page as a PNG picture at the page setup size</li>
+					<li>Command line: the pictures are named after the model and page number, and saved beside the model or in a folder you name</li>
+				</ul>
+			</details>
+
+			<details>
 				<summary>2026-11-23</summary>
 
 				<ul>
@@ -2239,43 +2248,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				</ul>
 			</details>
 
-			<details>
-				<summary>2026-11-17</summary>
-
-				<ul>
-					<li>Preferences: a Deactivated color with alpha under <a href="#interface">Interface</a> &gt; Objects, always a grey shade, for locked or unavailable items</li>
-					<li>Joints: in joint mode, the hinge&#x27;s locked rotate rings show in the Deactivated color, and holding Ctrl lights them and lets them turn the whole submodel around the joint</li>
-					<li>Joints: parts grouped with a jointed submodel turn along with its joint, from the gizmo, the keys and the Joints tool</li>
-					<li>Shortcuts: Shift+I switches to Default Lights shading by default</li>
-					<li>Joints: in joint mode the Move and Rotate tools and their shortcuts act on the joint, like Move Joint and Rotate Joint</li>
-					<li>Views: the rotate gizmo draws its axis circles all the way around, no longer cut in half</li>
-					<li>Joints: editing a submodel in place no longer starts joint mode or joint move and rotate, joint mode only starts from a joint</li>
-					<li>Joints: a jointed submodel inside a group keeps its joint editing, moving and turning</li>
-					<li>Joints: Escape or a click away from the joints leaves joint mode and goes back to selecting parts</li>
-					<li>Instructions: the page view smooths lines, borders and round ends</li>
-					<li>Instructions: rounded divider ends are full half circles at every width, thin dividers no longer look pointy</li>
-					<li>Instructions: Highlight Width sets how thick the new part outline is, from 1 to 72, and wide outlines stay solid</li>
-					<li>Instructions: the highlight color keeps the opacity you pick, no longer held between 85 and 95 percent</li>
-					<li>Instructions: Final Border, Final Border Color and Final Margin in Steps per Page frame the final model area and keep it away from the steps and page margins, none by default</li>
-					<li>Instructions: the Properties groups follow the page from largest to smallest, Page before Bill of Materials and Step Number, Parts List then Divider after Steps per Page</li>
-					<li>Instructions: Page Number is part of the Page group</li>
-					<li>Instructions: every Properties group shows on every page and starts folded, selecting an element opens its group and folds the others</li>
-					<li>Instructions: Show Part IDs in the Bill of Materials group prints the part number under each part of the bill of materials, on by default</li>
-					<li>Instructions: selecting the bill of materials list opens the Parts List group too</li>
-					<li>Instructions: Thumbnail Size goes up to 2048 pixels for large pages</li>
-					<li>Instructions: a full parts list column no longer spills past its area</li>
-					<li>Instructions: a lock beside each page in the Pages panel keeps its elements where they are, and a locked page can&#x27;t be removed</li>
-					<li>Instructions: a snowflake beside each page freezes it, so it keeps its own settings while changes for all pages skip it; unfreezing follows the other pages again</li>
-					<li>Translations: the merged Page and Properties <a href="#help">help</a>, Show Part IDs and the page lock and freeze read right in all nine languages</li>
-					<li>Site: the Properties image is retaken to show the new group order, folded</li>
-					<li>Site: the bill of materials image is retaken to show the part IDs</li>
-					<li>Translations: the new highlight and final model settings read right in all nine languages</li>
-					<li>Site: the Instructions, <a href="#rendering">Rendering</a>, Views and Interface images are retaken to show the panel fold arrows and the new instructions settings, and the Instructions features name Step Flow, the final model, dividers, Model Size, Highlight Width, text files and Undo and Redo</li>
-					<li>Site: the POV-Ray and Blender Render images show the full output path the windows fill in</li>
-					<li>Site: the page notes in SITE.md use plain Markdown comments, and the README says TL:DR</li>
-				</ul>
-			</details>
-
 			<p class="more"><a href="https://github.com/nathaneltitane/studworx/blob/main/NOTICE.md">Read every notice ›</a></p>
 		</section>
 
@@ -2286,7 +2258,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p>LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.</p>
 			<div class="authorship">
 				<a class="avatar" href="https://nathaneltitane.com" aria-label="N Λ T H Λ N E L"><img src="resources/avatar/avatar-bird.png" alt="" width="64" height="64"></a>
-				<p>Version // 2026-11-23<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://www.linkedin.com/in/nathaneltitane">LinkedIn</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
+				<p>Version // 2026-11-24<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://www.linkedin.com/in/nathaneltitane">LinkedIn</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
 			</div>
 		</div>
 

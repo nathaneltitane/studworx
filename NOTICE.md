@@ -1,6 +1,14 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-24</summary>
+
+  - Command line: --export-pages saves each instruction page as a PNG picture at the page setup size
+  - Command line: the pictures are named after the model and page number, and saved beside the model or in a folder you name
+
+  </details>
+
+  <details>
   <summary>2026-11-23</summary>
 
   - Instructions: the final model, step areas, bands and watermark are boxes with margin, padding, border, corner radius and background like every other element
