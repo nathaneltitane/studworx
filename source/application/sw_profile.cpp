@@ -238,10 +238,6 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "PartsListPartDescriptionFilter", 1),                         // SW_PROFILE_PARTS_LIST_PART_DESCRIPTION_FILTER
 	swProfileEntry("Settings", "StudStyle", static_cast<int>(swStudStyle::Plain)),                                                // SW_PROFILE_STUD_STYLE
 
-	swProfileEntry("Defaults", "Author", "Author"),                                            // SW_PROFILE_DEFAULT_AUTHOR_NAME
-	swProfileEntry("Defaults", "AuthorEmail", ""),                                             // SW_PROFILE_DEFAULT_AUTHOR_EMAIL
-	swProfileEntry("Defaults", "AuthorComment", ""),                                           // SW_PROFILE_DEFAULT_AUTHOR_COMMENT
-	swProfileEntry("Defaults", "AuthorSplitter", " | "),                                       // SW_PROFILE_DEFAULT_AUTHOR_SPLITTER
 	swProfileEntry("Defaults", "Template", ""),                                                // SW_PROFILE_DEFAULT_TEMPLATE
 	swProfileEntry("Defaults", "AmbientColor", SW_RGBA(75, 75, 75, 255)),                           // SW_PROFILE_DEFAULT_AMBIENT_COLOR #4b4b4bff
 

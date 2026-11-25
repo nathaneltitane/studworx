@@ -7,101 +7,127 @@
 // metas name properties instead of numbers
 static const QLatin1String gInstructionsPropertyNames[] =
 {
-	QLatin1String("SHOW_STEP_NUMBER"), QLatin1String("SHOW_STEP_PARTS_LIST"), QLatin1String("STEP_NUMBER_FONT"),
-	QLatin1String("STEP_NUMBER_COLOR"), QLatin1String("STEP_BACKGROUND_COLOR"), QLatin1String("PARTS_LIST_BACKGROUND_COLOR"),
-	QLatin1String("PARTS_LIST_FONT"), QLatin1String("PARTS_LIST_TEXT_COLOR"), QLatin1String("PARTS_LIST_BORDER_COLOR"),
-	QLatin1String("PARTS_LIST_BORDER_WIDTH"), QLatin1String("PARTS_LIST_SHOW_COUNTS"), QLatin1String("PARTS_LIST_SORT_ORDER"),
-	QLatin1String("SHOW_STEP_DIVIDERS"), QLatin1String("STEP_DIVIDER_COLOR"), QLatin1String("STEP_DIVIDER_WIDTH"),
-	QLatin1String("SHOW_BILL_OF_MATERIALS"), QLatin1String("USE_DOCUMENT_FONT"), QLatin1String("USE_DOCUMENT_FONT_SIZE"), QLatin1String("DOCUMENT_FONT"),
-	QLatin1String("SHOW_COVER_PAGE"), QLatin1String("COVER_TITLE_FONT"), QLatin1String("COVER_TITLE_COLOR"),
-	QLatin1String("SHOW_COVER_AUTHOR"), QLatin1String("PAGE_BACKGROUND_COLOR"), QLatin1String("STEP_NUMBER_PLACEMENT"),
-	QLatin1String("STEP_NUMBER_ANCHOR"), QLatin1String("PARTS_LIST_PLACEMENT"), QLatin1String("PARTS_LIST_ANCHOR"),
-	QLatin1String("COVER_TITLE_PLACEMENT"), QLatin1String("BILL_OF_MATERIALS_PLACEMENT"), QLatin1String("PARTS_LIST_THUMBNAIL_SIZE"),
-	QLatin1String("PARTS_LIST_THUMBNAIL_BACKGROUND_COLOR"), QLatin1String("COVER_AUTHOR_PLACEMENT"), QLatin1String("COVER_IMAGE_PLACEMENT"),
-	QLatin1String("STEP_IMAGE_PLACEMENT"), QLatin1String("COVER_BACKGROUND_COLOR"), QLatin1String("BILL_OF_MATERIALS_BACKGROUND_COLOR"),
-	QLatin1String("SHOW_COVER_BLANK_PAGE"), QLatin1String("SHOW_BILL_OF_MATERIALS_BLANK_PAGE"), QLatin1String("USE_DOCUMENT_UNITS"),
-	QLatin1String("DOCUMENT_UNITS"), QLatin1String("SHOW_PAGE_NUMBER"), QLatin1String("PAGE_NUMBER_FORMAT"),
-	QLatin1String("PAGE_NUMBER_FONT"), QLatin1String("PAGE_NUMBER_COLOR"), QLatin1String("PAGE_NUMBER_PLACEMENT"),
-	QLatin1String("SHOW_PAGE_NUMBER_ALL_PAGES"), QLatin1String("STEP_IMAGE_MARGIN"), QLatin1String("STEP_IMAGE_PADDING"),
-	QLatin1String("STEP_IMAGE_BORDER_WIDTH"), QLatin1String("STEP_IMAGE_BORDER_COLOR"), QLatin1String("STEP_IMAGE_BACKGROUND_COLOR"),
-	QLatin1String("STEP_NUMBER_MARGIN"), QLatin1String("STEP_NUMBER_PADDING"), QLatin1String("STEP_NUMBER_BORDER_WIDTH"),
-	QLatin1String("STEP_NUMBER_BORDER_COLOR"), QLatin1String("STEP_NUMBER_BACKGROUND_COLOR"), QLatin1String("PARTS_LIST_MARGIN"),
-	QLatin1String("PARTS_LIST_PADDING"), QLatin1String("PAGE_NUMBER_MARGIN"), QLatin1String("PAGE_NUMBER_PADDING"),
-	QLatin1String("PAGE_NUMBER_BORDER_WIDTH"), QLatin1String("PAGE_NUMBER_BORDER_COLOR"), QLatin1String("PAGE_NUMBER_BACKGROUND_COLOR"),
-	QLatin1String("COVER_TITLE_MARGIN"), QLatin1String("COVER_TITLE_PADDING"), QLatin1String("COVER_TITLE_BORDER_WIDTH"),
-	QLatin1String("COVER_TITLE_BORDER_COLOR"), QLatin1String("COVER_TITLE_BACKGROUND_COLOR"), QLatin1String("COVER_AUTHOR_MARGIN"),
-	QLatin1String("COVER_AUTHOR_PADDING"), QLatin1String("COVER_AUTHOR_BORDER_WIDTH"), QLatin1String("COVER_AUTHOR_BORDER_COLOR"),
-	QLatin1String("COVER_AUTHOR_BACKGROUND_COLOR"), QLatin1String("COVER_IMAGE_MARGIN"), QLatin1String("COVER_IMAGE_PADDING"),
-	QLatin1String("COVER_IMAGE_BORDER_WIDTH"), QLatin1String("COVER_IMAGE_BORDER_COLOR"), QLatin1String("COVER_IMAGE_BACKGROUND_COLOR"),
-	QLatin1String("NOTICE_FONT"), QLatin1String("NOTICE_TEXT_COLOR"), QLatin1String("NOTICE_MARGIN"),
-	QLatin1String("NOTICE_PADDING"), QLatin1String("NOTICE_BORDER_WIDTH"), QLatin1String("NOTICE_BORDER_COLOR"),
-	QLatin1String("NOTICE_BACKGROUND_COLOR"), QLatin1String("POINTER_STYLE"), QLatin1String("POINTER_TIP"),
-	QLatin1String("POINTER_COLOR"), QLatin1String("POINTER_WIDTH"), QLatin1String("POINTER_TIP_SIZE"),
-	QLatin1String("PARTS_LIST_LAYOUT"), QLatin1String("PARTS_LIST_ALIGNMENT"),
-	QLatin1String("MODEL_PROJECTION"), QLatin1String("FADE_PREVIOUS_STEPS"), QLatin1String("FADE_COLOR"), QLatin1String("HIGHLIGHT_NEW_PARTS"), QLatin1String("HIGHLIGHT_COLOR"),
-	QLatin1String("STEP_IMAGE_CORNER_RADIUS"), QLatin1String("STEP_NUMBER_CORNER_RADIUS"), QLatin1String("PARTS_LIST_CORNER_RADIUS"),
-	QLatin1String("PAGE_NUMBER_CORNER_RADIUS"), QLatin1String("COVER_TITLE_CORNER_RADIUS"), QLatin1String("COVER_AUTHOR_CORNER_RADIUS"),
-	QLatin1String("COVER_IMAGE_CORNER_RADIUS"), QLatin1String("NOTICE_CORNER_RADIUS"),
-	QLatin1String("BILL_OF_MATERIALS_TITLE_FONT"), QLatin1String("COVER_AUTHOR_FONT"), QLatin1String("BILL_OF_MATERIALS_TITLE_COLOR"), QLatin1String("COVER_AUTHOR_COLOR"), QLatin1String("SUBMODEL_BACKGROUND_COLOR"),
-	QLatin1String("STEP_MODEL_SIZE"), QLatin1String("COVER_MODEL_SIZE"),
-	QLatin1String("COVER_TITLE_TEXT"), QLatin1String("COVER_TITLE_FILE"), QLatin1String("COVER_AUTHOR_TEXT"),
-	QLatin1String("COVER_AUTHOR_FILE"), QLatin1String("BILL_OF_MATERIALS_TITLE_TEXT"), QLatin1String("BILL_OF_MATERIALS_TITLE_FILE"),
-	QLatin1String("STEP_DIVIDER_MARGIN"), QLatin1String("STEP_DIVIDER_PADDING"), QLatin1String("STEP_DIVIDER_ROUNDED"), QLatin1String("STEP_DIVIDER_HORIZONTAL"), QLatin1String("STEP_DIVIDER_VERTICAL"), QLatin1String("HIGHLIGHT_WIDTH"), QLatin1String("FINAL_MODEL_BORDER_WIDTH"), QLatin1String("FINAL_MODEL_BORDER_COLOR"), QLatin1String("FINAL_MODEL_MARGIN"), QLatin1String("BILL_OF_MATERIALS_SHOW_PART_IDS"),
-	QLatin1String("SHOW_COVER_PART_COUNT"), QLatin1String("SHOW_BILL_OF_MATERIALS_PART_COUNT"), QLatin1String("SHOW_PAGE_PART_COUNT"),
-	QLatin1String("PART_COUNT_TEXT"), QLatin1String("PART_COUNT_FILE"), QLatin1String("PART_COUNT_FONT"),
-	QLatin1String("PART_COUNT_COLOR"), QLatin1String("PAGE_PART_COUNT_FONT"), QLatin1String("PAGE_PART_COUNT_COLOR"),
-	QLatin1String("PART_COUNT_PLACEMENT"), QLatin1String("BILL_OF_MATERIALS_PART_COUNT_PLACEMENT"), QLatin1String("PAGE_PART_COUNT_PLACEMENT"),
-	QLatin1String("PART_COUNT_MARGIN"), QLatin1String("PART_COUNT_PADDING"), QLatin1String("PART_COUNT_BORDER_WIDTH"),
-	QLatin1String("PART_COUNT_BORDER_COLOR"), QLatin1String("PART_COUNT_BACKGROUND_COLOR"), QLatin1String("PART_COUNT_CORNER_RADIUS"),
-	QLatin1String("SHOW_SUBMODEL_PREVIEW"), QLatin1String("SUBMODEL_PREVIEW_MODEL_SIZE"), QLatin1String("SUBMODEL_PREVIEW_PLACEMENT"),
-	QLatin1String("SUBMODEL_PREVIEW_MARGIN"), QLatin1String("SUBMODEL_PREVIEW_PADDING"), QLatin1String("SUBMODEL_PREVIEW_BORDER_WIDTH"),
-	QLatin1String("SUBMODEL_PREVIEW_BORDER_COLOR"), QLatin1String("SUBMODEL_PREVIEW_BACKGROUND_COLOR"), QLatin1String("SUBMODEL_PREVIEW_CORNER_RADIUS"),
-	QLatin1String("SUBMODEL_PREVIEW_PART_COUNT_PLACEMENT"), QLatin1String("PARTS_LIST_QUANTITY_PLACEMENT"), QLatin1String("SHOW_BACK_COVER"),
-	QLatin1String("SHOW_HEADER_BAND"), QLatin1String("SHOW_FOOTER_BAND"), QLatin1String("SHOW_LEFT_BAND"), QLatin1String("SHOW_RIGHT_BAND"),
-	QLatin1String("HEADER_BAND_SIZE"), QLatin1String("FOOTER_BAND_SIZE"), QLatin1String("LEFT_BAND_SIZE"), QLatin1String("RIGHT_BAND_SIZE"),
-	QLatin1String("HEADER_BAND_COLOR"), QLatin1String("FOOTER_BAND_COLOR"), QLatin1String("LEFT_BAND_COLOR"), QLatin1String("RIGHT_BAND_COLOR"),
-	QLatin1String("HEADER_BAND_RESERVE"), QLatin1String("FOOTER_BAND_RESERVE"), QLatin1String("LEFT_BAND_RESERVE"), QLatin1String("RIGHT_BAND_RESERVE"),
-	QLatin1String("SHOW_WATERMARK"), QLatin1String("WATERMARK_OPACITY"),
-	QLatin1String("STEP_NUMBER_ALIGNMENT"), QLatin1String("STEP_NUMBER_VERTICAL_ALIGNMENT"),
-	QLatin1String("BILL_OF_MATERIALS_TITLE_ALIGNMENT"), QLatin1String("BILL_OF_MATERIALS_TITLE_VERTICAL_ALIGNMENT"),
-	QLatin1String("PAGE_NUMBER_ALIGNMENT"), QLatin1String("PAGE_NUMBER_VERTICAL_ALIGNMENT"),
-	QLatin1String("PART_COUNT_ALIGNMENT"), QLatin1String("PART_COUNT_VERTICAL_ALIGNMENT"),
-	QLatin1String("COVER_TITLE_ALIGNMENT"), QLatin1String("COVER_TITLE_VERTICAL_ALIGNMENT"),
-	QLatin1String("COVER_AUTHOR_ALIGNMENT"), QLatin1String("COVER_AUTHOR_VERTICAL_ALIGNMENT"),
-	QLatin1String("NOTICE_ALIGNMENT"), QLatin1String("NOTICE_VERTICAL_ALIGNMENT"),
-	QLatin1String("SHOW_COVER_TITLE"), QLatin1String("SHOW_COVER_IMAGE"),
-	QLatin1String("IMAGE_MARGIN"), QLatin1String("IMAGE_PADDING"), QLatin1String("IMAGE_BORDER_WIDTH"),
-	QLatin1String("IMAGE_BORDER_COLOR"), QLatin1String("IMAGE_BACKGROUND_COLOR"), QLatin1String("IMAGE_CORNER_RADIUS"),
-	QLatin1String("POINTER_BEND_RADIUS"), QLatin1String("SHOW_FINAL_MODEL_PAGE"),
-	QLatin1String("BLANK_PAGE_BACKGROUND_COLOR"), QLatin1String("PARTS_LIST_QUANTITY_MARGIN"), QLatin1String("PARTS_LIST_QUANTITY_PADDING"),
-	QLatin1String("PARTS_LIST_QUANTITY_BORDER_WIDTH"), QLatin1String("PARTS_LIST_QUANTITY_BORDER_COLOR"), QLatin1String("PARTS_LIST_QUANTITY_BACKGROUND_COLOR"),
-	QLatin1String("PARTS_LIST_QUANTITY_CORNER_RADIUS"),
-	QLatin1String("FINAL_MODEL_PADDING"), QLatin1String("FINAL_MODEL_CORNER_RADIUS"),
-	QLatin1String("STEP_MARGIN"), QLatin1String("STEP_PADDING"), QLatin1String("STEP_BORDER_WIDTH"), QLatin1String("STEP_BORDER_COLOR"), QLatin1String("STEP_CORNER_RADIUS"),
-	QLatin1String("FINAL_MODEL_BACKGROUND_COLOR"),
-	QLatin1String("HEADER_BAND_MARGIN"), QLatin1String("HEADER_BAND_PADDING"), QLatin1String("HEADER_BAND_BORDER_WIDTH"), QLatin1String("HEADER_BAND_BORDER_COLOR"), QLatin1String("HEADER_BAND_CORNER_RADIUS"),
-	QLatin1String("FOOTER_BAND_MARGIN"), QLatin1String("FOOTER_BAND_PADDING"), QLatin1String("FOOTER_BAND_BORDER_WIDTH"), QLatin1String("FOOTER_BAND_BORDER_COLOR"), QLatin1String("FOOTER_BAND_CORNER_RADIUS"),
-	QLatin1String("LEFT_BAND_MARGIN"), QLatin1String("LEFT_BAND_PADDING"), QLatin1String("LEFT_BAND_BORDER_WIDTH"), QLatin1String("LEFT_BAND_BORDER_COLOR"), QLatin1String("LEFT_BAND_CORNER_RADIUS"),
-	QLatin1String("RIGHT_BAND_MARGIN"), QLatin1String("RIGHT_BAND_PADDING"), QLatin1String("RIGHT_BAND_BORDER_WIDTH"), QLatin1String("RIGHT_BAND_BORDER_COLOR"), QLatin1String("RIGHT_BAND_CORNER_RADIUS"),
-	QLatin1String("WATERMARK_MARGIN"), QLatin1String("WATERMARK_PADDING"), QLatin1String("WATERMARK_BORDER_WIDTH"), QLatin1String("WATERMARK_BORDER_COLOR"), QLatin1String("WATERMARK_CORNER_RADIUS"), QLatin1String("WATERMARK_BACKGROUND_COLOR"), QLatin1String("LOCK_HOME_VIEW"),
-	QLatin1String("WATERMARK_FONT"), QLatin1String("WATERMARK_TEXT_COLOR"), QLatin1String("WATERMARK_ROTATION"),
-	QLatin1String("SHOW_BILL_OF_MATERIALS_TITLE"), QLatin1String("BILL_OF_MATERIALS_TITLE_PLACEMENT"), QLatin1String("BILL_OF_MATERIALS_FONT"),
-	QLatin1String("BILL_OF_MATERIALS_TEXT_COLOR"), QLatin1String("BILL_OF_MATERIALS_SHOW_COUNTS"), QLatin1String("BILL_OF_MATERIALS_SORT_ORDER"),
-	QLatin1String("BILL_OF_MATERIALS_LAYOUT"), QLatin1String("BILL_OF_MATERIALS_ALIGNMENT"), QLatin1String("BILL_OF_MATERIALS_THUMBNAIL_SIZE"),
-	QLatin1String("BILL_OF_MATERIALS_COUNT_PLACEMENT"), QLatin1String("BILL_OF_MATERIALS_TITLE_MARGIN"), QLatin1String("BILL_OF_MATERIALS_TITLE_PADDING"),
-	QLatin1String("BILL_OF_MATERIALS_TITLE_BORDER_WIDTH"), QLatin1String("BILL_OF_MATERIALS_TITLE_BORDER_COLOR"), QLatin1String("BILL_OF_MATERIALS_TITLE_CORNER_RADIUS"),
-	QLatin1String("BILL_OF_MATERIALS_TITLE_BACKGROUND_COLOR"), QLatin1String("BILL_OF_MATERIALS_LIST_MARGIN"), QLatin1String("BILL_OF_MATERIALS_LIST_PADDING"),
-	QLatin1String("BILL_OF_MATERIALS_LIST_BORDER_WIDTH"), QLatin1String("BILL_OF_MATERIALS_LIST_BORDER_COLOR"), QLatin1String("BILL_OF_MATERIALS_LIST_CORNER_RADIUS"),
-	QLatin1String("BILL_OF_MATERIALS_LIST_BACKGROUND_COLOR"), QLatin1String("BILL_OF_MATERIALS_QUANTITY_MARGIN"), QLatin1String("BILL_OF_MATERIALS_QUANTITY_PADDING"),
-	QLatin1String("BILL_OF_MATERIALS_QUANTITY_BORDER_WIDTH"), QLatin1String("BILL_OF_MATERIALS_QUANTITY_BORDER_COLOR"), QLatin1String("BILL_OF_MATERIALS_QUANTITY_CORNER_RADIUS"),
-	QLatin1String("BILL_OF_MATERIALS_QUANTITY_BACKGROUND_COLOR"), QLatin1String("BILL_OF_MATERIALS_PART_COUNT_MARGIN"), QLatin1String("BILL_OF_MATERIALS_PART_COUNT_PADDING"),
-	QLatin1String("BILL_OF_MATERIALS_PART_COUNT_BORDER_WIDTH"), QLatin1String("BILL_OF_MATERIALS_PART_COUNT_BORDER_COLOR"), QLatin1String("BILL_OF_MATERIALS_PART_COUNT_CORNER_RADIUS"),
-	QLatin1String("BILL_OF_MATERIALS_PART_COUNT_BACKGROUND_COLOR"), QLatin1String("ASSEMBLY_BACKGROUND_COLOR"), QLatin1String("STEP_DIVIDER_FINAL_MODEL"), QLatin1String("COMPLETION_BACKGROUND_COLOR"),
-	QLatin1String("COMPLETION_MARGIN"), QLatin1String("COMPLETION_PADDING"), QLatin1String("COMPLETION_BORDER_WIDTH"), QLatin1String("COMPLETION_BORDER_COLOR"), QLatin1String("COMPLETION_CORNER_RADIUS"),
-	QLatin1String("COMPLETION_BOX_BACKGROUND_COLOR"), QLatin1String("PLI_RESERVE_AREA")
+	QLatin1String("STEP SHOW_NUMBER"), QLatin1String("STEP SHOW_PARTS_LIST"), QLatin1String("STEP NUMBER_FONT"), QLatin1String("STEP NUMBER_COLOR"),
+	QLatin1String("STEP BACKGROUND_COLOR"), QLatin1String("STEP PARTS_LIST_BACKGROUND_COLOR"), QLatin1String("STEP PARTS_LIST_FONT"),
+	QLatin1String("STEP PARTS_LIST_TEXT_COLOR"), QLatin1String("STEP PARTS_LIST_BORDER_COLOR"), QLatin1String("STEP PARTS_LIST_BORDER_WIDTH"),
+	QLatin1String("STEP PARTS_LIST_SHOW_COUNTS"), QLatin1String("STEP PARTS_LIST_SORT_ORDER"), QLatin1String("STEP SHOW_DIVIDERS"), QLatin1String("STEP DIVIDER_COLOR"),
+	QLatin1String("STEP DIVIDER_WIDTH"), QLatin1String("BILL_OF_MATERIALS SHOW"), QLatin1String("DOCUMENT USE_FONT"), QLatin1String("DOCUMENT USE_FONT_SIZE"),
+	QLatin1String("DOCUMENT FONT"), QLatin1String("COVER SHOW_FRONT"), QLatin1String("PAGE BACKGROUND_COLOR"), QLatin1String("STEP NUMBER_PLACEMENT"),
+	QLatin1String("STEP NUMBER_ANCHOR"), QLatin1String("STEP PARTS_LIST_PLACEMENT"), QLatin1String("STEP PARTS_LIST_ANCHOR"), QLatin1String("BILL_OF_MATERIALS PLACEMENT"),
+	QLatin1String("STEP PARTS_LIST_THUMBNAIL_SIZE"), QLatin1String("STEP PARTS_LIST_THUMBNAIL_BACKGROUND_COLOR"), QLatin1String("COVER FRONT IMAGE_PLACEMENT"),
+	QLatin1String("STEP IMAGE_PLACEMENT"), QLatin1String("COVER BACKGROUND_COLOR"), QLatin1String("BILL_OF_MATERIALS BACKGROUND_COLOR"),
+	QLatin1String("PAGE SHOW_COVER_BLANK_PAGE"), QLatin1String("PAGE SHOW_BILL_OF_MATERIALS_BLANK_PAGE"), QLatin1String("DOCUMENT USE_UNITS"),
+	QLatin1String("DOCUMENT UNITS"), QLatin1String("PAGE SHOW_NUMBER"), QLatin1String("PAGE NUMBER_FORMAT"), QLatin1String("PAGE NUMBER_FONT"),
+	QLatin1String("PAGE NUMBER_COLOR"), QLatin1String("PAGE NUMBER_PLACEMENT"), QLatin1String("PAGE SHOW_NUMBER_ALL_PAGES"), QLatin1String("STEP IMAGE_MARGIN"),
+	QLatin1String("STEP IMAGE_PADDING"), QLatin1String("STEP IMAGE_BORDER_WIDTH"), QLatin1String("STEP IMAGE_BORDER_COLOR"), QLatin1String("STEP IMAGE_BACKGROUND_COLOR"),
+	QLatin1String("STEP NUMBER_MARGIN"), QLatin1String("STEP NUMBER_PADDING"), QLatin1String("STEP NUMBER_BORDER_WIDTH"), QLatin1String("STEP NUMBER_BORDER_COLOR"),
+	QLatin1String("STEP NUMBER_BACKGROUND_COLOR"), QLatin1String("STEP PARTS_LIST_MARGIN"), QLatin1String("STEP PARTS_LIST_PADDING"), QLatin1String("PAGE NUMBER_MARGIN"),
+	QLatin1String("PAGE NUMBER_PADDING"), QLatin1String("PAGE NUMBER_BORDER_WIDTH"), QLatin1String("PAGE NUMBER_BORDER_COLOR"),
+	QLatin1String("PAGE NUMBER_BACKGROUND_COLOR"), QLatin1String("COVER FRONT IMAGE_MARGIN"), QLatin1String("COVER FRONT IMAGE_PADDING"),
+	QLatin1String("COVER FRONT IMAGE_BORDER_WIDTH"), QLatin1String("COVER FRONT IMAGE_BORDER_COLOR"), QLatin1String("COVER FRONT IMAGE_BACKGROUND_COLOR"),
+	QLatin1String("NOTICE FONT"), QLatin1String("NOTICE TEXT_COLOR"), QLatin1String("NOTICE MARGIN"), QLatin1String("NOTICE PADDING"), QLatin1String("NOTICE BORDER_WIDTH"),
+	QLatin1String("NOTICE BORDER_COLOR"), QLatin1String("NOTICE BACKGROUND_COLOR"), QLatin1String("POINTER STYLE"), QLatin1String("POINTER TIP"),
+	QLatin1String("POINTER COLOR"), QLatin1String("POINTER WIDTH"), QLatin1String("POINTER TIP_SIZE"), QLatin1String("STEP PARTS_LIST_LAYOUT"),
+	QLatin1String("STEP PARTS_LIST_ALIGNMENT"), QLatin1String("DOCUMENT PROJECTION"), QLatin1String("STEP FADE_PREVIOUS_STEPS"), QLatin1String("STEP FADE_COLOR"),
+	QLatin1String("STEP HIGHLIGHT_NEW_PARTS"), QLatin1String("STEP HIGHLIGHT_COLOR"), QLatin1String("STEP IMAGE_CORNER_RADIUS"), QLatin1String("STEP NUMBER_CORNER_RADIUS"),
+	QLatin1String("STEP PARTS_LIST_CORNER_RADIUS"), QLatin1String("PAGE NUMBER_CORNER_RADIUS"), QLatin1String("COVER FRONT IMAGE_CORNER_RADIUS"),
+	QLatin1String("NOTICE CORNER_RADIUS"), QLatin1String("BILL_OF_MATERIALS TITLE_FONT"), QLatin1String("BILL_OF_MATERIALS TITLE_COLOR"),
+	QLatin1String("STEP SUBMODEL_BACKGROUND_COLOR"), QLatin1String("STEP MODEL_SIZE"), QLatin1String("COVER FRONT MODEL_SIZE"),
+	QLatin1String("BILL_OF_MATERIALS TITLE_TEXT"), QLatin1String("BILL_OF_MATERIALS TITLE_FILE"), QLatin1String("STEP DIVIDER_MARGIN"),
+	QLatin1String("STEP DIVIDER_PADDING"), QLatin1String("STEP DIVIDER_ROUNDED"), QLatin1String("STEP DIVIDER_HORIZONTAL"), QLatin1String("STEP DIVIDER_VERTICAL"),
+	QLatin1String("STEP HIGHLIGHT_WIDTH"), QLatin1String("STEP FINAL_MODEL_BORDER_WIDTH"), QLatin1String("STEP FINAL_MODEL_BORDER_COLOR"),
+	QLatin1String("STEP FINAL_MODEL_MARGIN"), QLatin1String("BILL_OF_MATERIALS SHOW_PART_IDS"), QLatin1String("BILL_OF_MATERIALS SHOW_PART_COUNT"),
+	QLatin1String("PAGE SHOW_PART_COUNT"), QLatin1String("PART_COUNT TEXT"), QLatin1String("PART_COUNT FILE"), QLatin1String("PART_COUNT FONT"),
+	QLatin1String("PART_COUNT COLOR"), QLatin1String("PAGE PART_COUNT_FONT"), QLatin1String("PAGE PART_COUNT_COLOR"),
+	QLatin1String("BILL_OF_MATERIALS PART_COUNT_PLACEMENT"), QLatin1String("PAGE PART_COUNT_PLACEMENT"), QLatin1String("STEP SHOW_SUBMODEL_PREVIEW"),
+	QLatin1String("STEP SUBMODEL_PREVIEW_MODEL_SIZE"), QLatin1String("STEP SUBMODEL_PREVIEW_PLACEMENT"), QLatin1String("STEP SUBMODEL_PREVIEW_MARGIN"),
+	QLatin1String("STEP SUBMODEL_PREVIEW_PADDING"), QLatin1String("STEP SUBMODEL_PREVIEW_BORDER_WIDTH"), QLatin1String("STEP SUBMODEL_PREVIEW_BORDER_COLOR"),
+	QLatin1String("STEP SUBMODEL_PREVIEW_BACKGROUND_COLOR"), QLatin1String("STEP SUBMODEL_PREVIEW_CORNER_RADIUS"),
+	QLatin1String("STEP SUBMODEL_PREVIEW_PART_COUNT_PLACEMENT"), QLatin1String("STEP PARTS_LIST_QUANTITY_PLACEMENT"), QLatin1String("COVER SHOW_BACK"),
+	QLatin1String("BAND HEADER SHOW"), QLatin1String("BAND FOOTER SHOW"), QLatin1String("BAND LEFT SHOW"), QLatin1String("BAND RIGHT SHOW"),
+	QLatin1String("BAND HEADER SIZE"), QLatin1String("BAND FOOTER SIZE"), QLatin1String("BAND LEFT SIZE"), QLatin1String("BAND RIGHT SIZE"),
+	QLatin1String("BAND HEADER COLOR"), QLatin1String("BAND FOOTER COLOR"), QLatin1String("BAND LEFT COLOR"), QLatin1String("BAND RIGHT COLOR"),
+	QLatin1String("BAND HEADER RESERVE"), QLatin1String("BAND FOOTER RESERVE"), QLatin1String("BAND LEFT RESERVE"), QLatin1String("BAND RIGHT RESERVE"),
+	QLatin1String("WATERMARK SHOW"), QLatin1String("WATERMARK OPACITY"), QLatin1String("STEP NUMBER_ALIGNMENT"), QLatin1String("STEP NUMBER_VERTICAL_ALIGNMENT"),
+	QLatin1String("BILL_OF_MATERIALS TITLE_ALIGNMENT"), QLatin1String("BILL_OF_MATERIALS TITLE_VERTICAL_ALIGNMENT"), QLatin1String("PAGE NUMBER_ALIGNMENT"),
+	QLatin1String("PAGE NUMBER_VERTICAL_ALIGNMENT"), QLatin1String("PART_COUNT ALIGNMENT"), QLatin1String("PART_COUNT VERTICAL_ALIGNMENT"),
+	QLatin1String("NOTICE ALIGNMENT"), QLatin1String("NOTICE VERTICAL_ALIGNMENT"), QLatin1String("COVER FRONT SHOW_IMAGE"), QLatin1String("IMAGE MARGIN"),
+	QLatin1String("IMAGE PADDING"), QLatin1String("IMAGE BORDER_WIDTH"), QLatin1String("IMAGE BORDER_COLOR"), QLatin1String("IMAGE BACKGROUND_COLOR"),
+	QLatin1String("IMAGE CORNER_RADIUS"), QLatin1String("POINTER BEND_RADIUS"), QLatin1String("STEP SHOW_FINAL_MODEL_PAGE"), QLatin1String("PAGE BLANK_BACKGROUND_COLOR"),
+	QLatin1String("STEP PARTS_LIST_QUANTITY_MARGIN"), QLatin1String("STEP PARTS_LIST_QUANTITY_PADDING"), QLatin1String("STEP PARTS_LIST_QUANTITY_BORDER_WIDTH"),
+	QLatin1String("STEP PARTS_LIST_QUANTITY_BORDER_COLOR"), QLatin1String("STEP PARTS_LIST_QUANTITY_BACKGROUND_COLOR"),
+	QLatin1String("STEP PARTS_LIST_QUANTITY_CORNER_RADIUS"), QLatin1String("STEP FINAL_MODEL_PADDING"), QLatin1String("STEP FINAL_MODEL_CORNER_RADIUS"),
+	QLatin1String("STEP AREA_MARGIN"), QLatin1String("STEP AREA_PADDING"), QLatin1String("STEP AREA_BORDER_WIDTH"), QLatin1String("STEP AREA_BORDER_COLOR"),
+	QLatin1String("STEP AREA_CORNER_RADIUS"), QLatin1String("STEP FINAL_MODEL_BACKGROUND_COLOR"), QLatin1String("BAND HEADER MARGIN"), QLatin1String("BAND HEADER PADDING"),
+	QLatin1String("BAND HEADER BORDER_WIDTH"), QLatin1String("BAND HEADER BORDER_COLOR"), QLatin1String("BAND HEADER CORNER_RADIUS"), QLatin1String("BAND FOOTER MARGIN"),
+	QLatin1String("BAND FOOTER PADDING"), QLatin1String("BAND FOOTER BORDER_WIDTH"), QLatin1String("BAND FOOTER BORDER_COLOR"), QLatin1String("BAND FOOTER CORNER_RADIUS"),
+	QLatin1String("BAND LEFT MARGIN"), QLatin1String("BAND LEFT PADDING"), QLatin1String("BAND LEFT BORDER_WIDTH"), QLatin1String("BAND LEFT BORDER_COLOR"),
+	QLatin1String("BAND LEFT CORNER_RADIUS"), QLatin1String("BAND RIGHT MARGIN"), QLatin1String("BAND RIGHT PADDING"), QLatin1String("BAND RIGHT BORDER_WIDTH"),
+	QLatin1String("BAND RIGHT BORDER_COLOR"), QLatin1String("BAND RIGHT CORNER_RADIUS"), QLatin1String("WATERMARK MARGIN"), QLatin1String("WATERMARK PADDING"),
+	QLatin1String("WATERMARK BORDER_WIDTH"), QLatin1String("WATERMARK BORDER_COLOR"), QLatin1String("WATERMARK CORNER_RADIUS"), QLatin1String("WATERMARK BACKGROUND_COLOR"),
+	QLatin1String("DOCUMENT LOCK_HOME_VIEW"), QLatin1String("WATERMARK FONT"), QLatin1String("WATERMARK TEXT_COLOR"), QLatin1String("WATERMARK ROTATION"),
+	QLatin1String("BILL_OF_MATERIALS SHOW_TITLE"), QLatin1String("BILL_OF_MATERIALS TITLE_PLACEMENT"), QLatin1String("BILL_OF_MATERIALS FONT"),
+	QLatin1String("BILL_OF_MATERIALS TEXT_COLOR"), QLatin1String("BILL_OF_MATERIALS SHOW_COUNTS"), QLatin1String("BILL_OF_MATERIALS SORT_ORDER"),
+	QLatin1String("BILL_OF_MATERIALS LAYOUT"), QLatin1String("BILL_OF_MATERIALS ALIGNMENT"), QLatin1String("BILL_OF_MATERIALS THUMBNAIL_SIZE"),
+	QLatin1String("BILL_OF_MATERIALS COUNT_PLACEMENT"), QLatin1String("BILL_OF_MATERIALS TITLE_MARGIN"), QLatin1String("BILL_OF_MATERIALS TITLE_PADDING"),
+	QLatin1String("BILL_OF_MATERIALS TITLE_BORDER_WIDTH"), QLatin1String("BILL_OF_MATERIALS TITLE_BORDER_COLOR"), QLatin1String("BILL_OF_MATERIALS TITLE_CORNER_RADIUS"),
+	QLatin1String("BILL_OF_MATERIALS TITLE_BACKGROUND_COLOR"), QLatin1String("BILL_OF_MATERIALS LIST_MARGIN"), QLatin1String("BILL_OF_MATERIALS LIST_PADDING"),
+	QLatin1String("BILL_OF_MATERIALS LIST_BORDER_WIDTH"), QLatin1String("BILL_OF_MATERIALS LIST_BORDER_COLOR"), QLatin1String("BILL_OF_MATERIALS LIST_CORNER_RADIUS"),
+	QLatin1String("BILL_OF_MATERIALS LIST_BACKGROUND_COLOR"), QLatin1String("BILL_OF_MATERIALS QUANTITY_MARGIN"), QLatin1String("BILL_OF_MATERIALS QUANTITY_PADDING"),
+	QLatin1String("BILL_OF_MATERIALS QUANTITY_BORDER_WIDTH"), QLatin1String("BILL_OF_MATERIALS QUANTITY_BORDER_COLOR"),
+	QLatin1String("BILL_OF_MATERIALS QUANTITY_CORNER_RADIUS"), QLatin1String("BILL_OF_MATERIALS QUANTITY_BACKGROUND_COLOR"),
+	QLatin1String("BILL_OF_MATERIALS PART_COUNT_MARGIN"), QLatin1String("BILL_OF_MATERIALS PART_COUNT_PADDING"), QLatin1String("BILL_OF_MATERIALS PART_COUNT_BORDER_WIDTH"),
+	QLatin1String("BILL_OF_MATERIALS PART_COUNT_BORDER_COLOR"), QLatin1String("BILL_OF_MATERIALS PART_COUNT_CORNER_RADIUS"),
+	QLatin1String("BILL_OF_MATERIALS PART_COUNT_BACKGROUND_COLOR"), QLatin1String("STEP ASSEMBLY_BACKGROUND_COLOR"), QLatin1String("STEP DIVIDER_FINAL_MODEL"),
+	QLatin1String("STEP COMPLETION_BACKGROUND_COLOR"), QLatin1String("STEP COMPLETION_MARGIN"), QLatin1String("STEP COMPLETION_PADDING"),
+	QLatin1String("STEP COMPLETION_BORDER_WIDTH"), QLatin1String("STEP COMPLETION_BORDER_COLOR"), QLatin1String("STEP COMPLETION_CORNER_RADIUS"),
+	QLatin1String("STEP COMPLETION_BOX_BACKGROUND_COLOR"), QLatin1String("STEP PARTS_LIST_RESERVE_AREA")
 };
 
-static_assert(std::size(gInstructionsPropertyNames) == static_cast<size_t>(swInstructionsPropertyType::Count), "Missing property name");
+static_assert(std::size(gInstructionsPropertyNames) == static_cast<size_t>(swInstructionsPropertyType::CoverElements), "Missing property name");
+
+// the cover elements follow the others, front then back
+static const QLatin1String gInstructionsCoverElementNames[] =
+{
+	QLatin1String("TITLE"), QLatin1String("AUTHOR"), QLatin1String("PRODUCT_ID"), QLatin1String("VERSION"), QLatin1String("PUBLICATION_DATE"), QLatin1String("URL"), QLatin1String("CONTACT"),
+	QLatin1String("COPYRIGHT"), QLatin1String("NOTICE"), QLatin1String("COMMENTS"), QLatin1String("MEASUREMENTS"), QLatin1String("WEIGHT"), QLatin1String("PIECES")
+};
+
+static_assert(std::size(gInstructionsCoverElementNames) == SW_COVER_ELEMENT_COUNT, "Missing cover element name");
+
+static const QLatin1String gInstructionsCoverFieldNames[] =
+{
+	QLatin1String("TEXT"), QLatin1String("FONT"), QLatin1String("COLOR"), QLatin1String("PLACEMENT"), QLatin1String("ALIGNMENT"), QLatin1String("VERTICAL_ALIGNMENT"),
+	QLatin1String("MARGIN"), QLatin1String("PADDING"), QLatin1String("BORDER_WIDTH"), QLatin1String("BORDER_COLOR"), QLatin1String("BACKGROUND_COLOR"), QLatin1String("CORNER_RADIUS")
+};
+
+static_assert(std::size(gInstructionsCoverFieldNames) + 1 == SW_COVER_FIELD_COUNT, "Missing cover field name");
+
+// use to get the words naming every property
+static const QStringList& swGetInstructionsPropertyNames()
+{
+	static const QStringList Names = []
+	{
+		QStringList Result;
+
+		for (const QLatin1String& Name : gInstructionsPropertyNames)
+			Result.append(Name);
+
+		for (const QString& Cover : { QStringLiteral("COVER FRONT "), QStringLiteral("COVER BACK ") })
+			for (const QLatin1String& Element : gInstructionsCoverElementNames)
+			{
+				Result.append(Cover + QLatin1String("SHOW_") + Element);
+
+				for (const QLatin1String& Field : gInstructionsCoverFieldNames)
+					Result.append(Cover + Element + QLatin1Char('_') + Field);
+			}
+
+		return Result;
+	}();
+
+	return Names;
+}
+
 
 // use to map old properties
 static bool swMapOldInstructionsProperty(int& Type, const QVariant& Value)
@@ -120,13 +146,20 @@ static bool swMapOldInstructionsProperty(int& Type, const QVariant& Value)
 
 static const QLatin1String gInstructionsElementNames[] =
 {
-	QLatin1String("NONE"), QLatin1String("STEP_NUMBER"), QLatin1String("PARTS_LIST"), QLatin1String("COVER_TITLE"), QLatin1String("COVER_AUTHOR"), QLatin1String("BILL_OF_MATERIALS"),
+	QLatin1String("NONE"), QLatin1String("STEP_NUMBER"), QLatin1String("PARTS_LIST"), QLatin1String("BILL_OF_MATERIALS"),
 	QLatin1String("STEP_IMAGE"), QLatin1String("COVER_IMAGE"), QLatin1String("PAGE_NUMBER"), QLatin1String("NOTICE"), QLatin1String("POINTER"),
-	QLatin1String("COVER_PART_COUNT"), QLatin1String("BILL_OF_MATERIALS_PART_COUNT"), QLatin1String("PAGE_PART_COUNT"), QLatin1String("SUBMODEL_PREVIEW"),
-	QLatin1String("SUBMODEL_PREVIEW_PART_COUNT"), QLatin1String("PARTS_LIST_QUANTITY"), QLatin1String("IMAGE")
+	QLatin1String("BILL_OF_MATERIALS_PART_COUNT"), QLatin1String("PAGE_PART_COUNT"), QLatin1String("SUBMODEL_PREVIEW"),
+	QLatin1String("SUBMODEL_PREVIEW_PART_COUNT"), QLatin1String("PARTS_LIST_QUANTITY"), QLatin1String("IMAGE"),
+	QLatin1String("COVER_FRONT_TITLE"), QLatin1String("COVER_FRONT_AUTHOR"), QLatin1String("COVER_FRONT_PRODUCT_ID"), QLatin1String("COVER_FRONT_VERSION"),
+	QLatin1String("COVER_FRONT_PUBLICATION_DATE"), QLatin1String("COVER_FRONT_URL"), QLatin1String("COVER_FRONT_CONTACT"), QLatin1String("COVER_FRONT_COPYRIGHT"),
+	QLatin1String("COVER_FRONT_NOTICE"), QLatin1String("COVER_FRONT_COMMENTS"), QLatin1String("COVER_FRONT_MEASUREMENTS"), QLatin1String("COVER_FRONT_WEIGHT"),
+	QLatin1String("COVER_FRONT_PIECES"), QLatin1String("COVER_BACK_TITLE"), QLatin1String("COVER_BACK_AUTHOR"), QLatin1String("COVER_BACK_PRODUCT_ID"),
+	QLatin1String("COVER_BACK_VERSION"), QLatin1String("COVER_BACK_PUBLICATION_DATE"), QLatin1String("COVER_BACK_URL"), QLatin1String("COVER_BACK_CONTACT"),
+	QLatin1String("COVER_BACK_COPYRIGHT"), QLatin1String("COVER_BACK_NOTICE"), QLatin1String("COVER_BACK_COMMENTS"), QLatin1String("COVER_BACK_MEASUREMENTS"),
+	QLatin1String("COVER_BACK_WEIGHT"), QLatin1String("COVER_BACK_PIECES")
 };
 
-static_assert(std::size(gInstructionsElementNames) == static_cast<size_t>(swInstructionsPlacementElement::Image) + 1, "Missing element name");
+static_assert(std::size(gInstructionsElementNames) == static_cast<size_t>(swInstructionsPlacementElement::CoverBackPieces) + 1, "Missing element name");
 
 static const QLatin1String gInstructionsPageTypeNames[] =
 {
@@ -349,6 +382,26 @@ public:
 			mValid = false;
 
 		return qMax(Index, 0);
+	}
+
+	// property names have two or three words
+	int ReadPropertyName()
+	{
+		const QStringList& Names = swGetInstructionsPropertyNames();
+		QString Name = ReadToken();
+
+		for (int Words = 1; Words <= 3 && mValid; Words++)
+		{
+			const int Index = Names.indexOf(Name);
+
+			if (Index != -1)
+				return Index;
+
+			Name += QLatin1Char(' ') + ReadToken();
+		}
+
+		mValid = false;
+		return 0;
 	}
 
 	// write defaults by name, others by number
@@ -583,7 +636,7 @@ void swInstructions::LoadCommandLines(const QStringList& CommandLines)
 				Key = Reader.ReadStepKey();
 			}
 
-			int Type = Reader.ReadName(gInstructionsPropertyNames);
+			int Type = Reader.ReadPropertyName();
 
 			if (!Reader.IsValid() || (PageProperty && !IsPageProperty(static_cast<swInstructionsPropertyType>(Type))))
 				continue;
@@ -705,7 +758,7 @@ void swInstructions::LoadCommandLines(const QStringList& CommandLines)
 			if (Command == QLatin1String("FREEZE_PAGE"))
 				continue;
 
-			int Type = Reader.ReadName(gInstructionsPropertyNames);
+			int Type = Reader.ReadPropertyName();
 
 			if (!Reader.IsValid())
 				continue;
@@ -731,7 +784,8 @@ void swInstructions::LoadCommandLines(const QStringList& CommandLines)
 			{
 				Notice.Pages = static_cast<swInstructionsImagePages>(Reader.ReadName(gInstructionsImagePagesNames));
 
-				if (Notice.Pages < swInstructionsImagePages::Header)
+				// covers and bands only
+				if (Notice.Pages == swInstructionsImagePages::None || Notice.Pages == swInstructionsImagePages::Both)
 					continue;
 			}
 			else if (Where == QLatin1String("PAGE"))
@@ -764,10 +818,20 @@ void swInstructions::LoadCommandLines(const QStringList& CommandLines)
 
 			Notice.Text = swUnescapeInstructionsText(Reader.ReadRest());
 
-			if (!Reader.IsValid() || Notice.Id < 1 || FindNotice(Notice.Id))
+			if (!Reader.IsValid() || Notice.Id < 1)
 				continue;
 
-			mNotices.push_back(Notice);
+			// a model notice replaces the template notice of its id
+			std::vector<swInstructionsNotice>::iterator NoticeIt = std::find_if(mNotices.begin(), mNotices.end(), [&Notice](const swInstructionsNotice& Other)
+			{
+				return Other.Id == Notice.Id;
+			});
+
+			if (NoticeIt != mNotices.end())
+				*NoticeIt = Notice;
+			else
+				mNotices.push_back(Notice);
+
 			mNextNoticeId = qMax(mNextNoticeId, Notice.Id + 1);
 		}
 		else if (Command == QLatin1String("POINTER"))
@@ -874,6 +938,12 @@ static QString swWriteInstructionsImage(const swInstructionsImage& Image, const 
 	return QStringLiteral("IMAGE %1 ").arg(Image.Id) + gInstructionsImagePagesNames[static_cast<int>(Image.Pages)] + QStringLiteral(" PLACEMENT %1 SIZE %2 FILE \"").arg(Image.Placement).arg(Image.Size) + QString(File).remove(QLatin1Char('"')) + QLatin1Char('"');
 }
 
+// use to write a notice line
+static QString swWriteInstructionsNotice(const swInstructionsNotice& Notice)
+{
+	return QStringLiteral("NOTICE %1 ").arg(Notice.Id) + (Notice.Pages == swInstructionsImagePages::None ? QLatin1String("PAGE ") + swWriteInstructionsPageKey(Notice.PageKey) : QLatin1String("SHOW ") + gInstructionsImagePagesNames[static_cast<int>(Notice.Pages)]) + QLatin1String(" POSITION ") + swWriteInstructionsPoint(Notice.Position) + (Notice.File.isEmpty() ? QString() : QLatin1String(" FILE \"") + QString(Notice.File).remove(QLatin1Char('"')) + QLatin1Char('"')) + (Notice.Alignment < 0 ? QString() : QStringLiteral(" ALIGN %1 %2").arg(Notice.Alignment).arg(qMax(0, Notice.VerticalAlignment))) + QLatin1String(" TEXT ") + swEscapeInstructionsText(Notice.Text);
+}
+
 // use to write the steps per page words
 static QString swWriteInstructionsPageSettings(const swInstructionsPageSettings& Settings)
 {
@@ -897,7 +967,7 @@ QStringList swInstructions::ReadTemplateLines(const QString& FileName)
 	if (FileName.isEmpty() || !File.open(QIODevice::ReadOnly | QIODevice::Text))
 		return CommandLines;
 
-	static const QRegularExpression MetaExpression(QStringLiteral("^0\\s+!SW\\s+(PROPERTY|STEPS_PER_PAGE|IMAGE)\\s+INSTRUCTION(\\s.*)?$"));
+	static const QRegularExpression MetaExpression(QStringLiteral("^0\\s+!SW\\s+(PROPERTY|STEPS_PER_PAGE|IMAGE|NOTICE)\\s+INSTRUCTION(\\s.*)?$"));
 	static const QRegularExpression FileExpression(QStringLiteral("^0\\s+FILE\\s"));
 	QTextStream Stream(&File);
 	int FileCount = 0;
@@ -936,7 +1006,7 @@ bool swInstructions::SaveTemplate(const QString& FileName) const
 		const QVariant& Value = mStepProperties[Type].Value;
 
 		if (swIsInstructionsPropertyWritten(mStepProperties, Type, DefaultValue))
-			CommandLines.append(QLatin1String("PROPERTY ") + gInstructionsPropertyNames[Type] + QLatin1Char(' ') + swWriteInstructionsValue(Value, DefaultValue));
+			CommandLines.append(QLatin1String("PROPERTY ") + swGetInstructionsPropertyNames().at(Type) + QLatin1Char(' ') + swWriteInstructionsValue(Value, DefaultValue));
 	}
 
 	if (!(mPageSettings == swInstructionsPageSettings()))
@@ -946,6 +1016,25 @@ bool swInstructions::SaveTemplate(const QString& FileName) const
 	for (const swInstructionsImage& Image : mImages)
 		if (Image.Pages != swInstructionsImagePages::None)
 			CommandLines.append(swWriteInstructionsImage(Image, GetFilePath(Image.File)));
+
+	// shortcut: step, parts list and blank page notices belong to one model, left out
+	for (swInstructionsNotice Notice : mNotices)
+	{
+		const swInstructionsPageType PageType = std::get<0>(Notice.PageKey);
+
+		if (Notice.Pages == swInstructionsImagePages::None)
+		{
+			if (PageType != swInstructionsPageType::Cover && PageType != swInstructionsPageType::BackCover)
+				continue;
+
+			Notice.Pages = PageType == swInstructionsPageType::Cover ? swInstructionsImagePages::Front : swInstructionsImagePages::Back;
+		}
+
+		if (!Notice.File.isEmpty())
+			Notice.File = GetFilePath(Notice.File);
+
+		CommandLines.append(swWriteInstructionsNotice(Notice));
+	}
 
 	QTextStream Stream(&File);
 	Stream << "0 Instructions Template\n0 Name: " << QFileInfo(FileName).fileName() << "\n";
@@ -993,7 +1082,7 @@ QStringList swInstructions::GetCommandLines() const
 		const QVariant& Value = mStepProperties[Type].Value;
 
 		if (swIsInstructionsPropertyWritten(mStepProperties, Type, DefaultValue))
-			CommandLines.append(QLatin1String("PROPERTY ") + gInstructionsPropertyNames[Type] + QLatin1Char(' ') + swWriteInstructionsValue(Value, DefaultValue));
+			CommandLines.append(QLatin1String("PROPERTY ") + swGetInstructionsPropertyNames().at(Type) + QLatin1Char(' ') + swWriteInstructionsValue(Value, DefaultValue));
 	}
 
 	for (const std::pair<const swInstructionsStepKey, swInstructionsProperties>& PageProperties : mPagePropertyOverrides)
@@ -1003,7 +1092,7 @@ QStringList swInstructions::GetCommandLines() const
 			const swInstructionsProperty& Property = PageProperties.second[Type];
 
 			if (Property.Mode != swInstructionsPropertyMode::NotSet)
-				CommandLines.append(QLatin1String("PAGE_PROPERTY STEP ") + swWriteInstructionsStepKey(PageProperties.first) + QLatin1Char(' ') + gInstructionsPropertyNames[Type] + QLatin1Char(' ') + swWriteInstructionsValue(Property.Value, mDefaultProperties[Type].Value));
+				CommandLines.append(QLatin1String("PAGE_PROPERTY STEP ") + swWriteInstructionsStepKey(PageProperties.first) + QLatin1Char(' ') + swGetInstructionsPropertyNames().at(Type) + QLatin1Char(' ') + swWriteInstructionsValue(Property.Value, mDefaultProperties[Type].Value));
 		}
 	}
 
@@ -1046,12 +1135,12 @@ QStringList swInstructions::GetCommandLines() const
 			const QVariant& Value = Properties[Type].Value;
 
 			if (swIsInstructionsPropertyWritten(Properties, Type, DefaultValue))
-				CommandLines.append(QLatin1String("FREEZE_PAGE_PROPERTY PAGE ") + PageKeyText + QLatin1Char(' ') + gInstructionsPropertyNames[Type] + QLatin1Char(' ') + swWriteInstructionsValue(Value, DefaultValue));
+				CommandLines.append(QLatin1String("FREEZE_PAGE_PROPERTY PAGE ") + PageKeyText + QLatin1Char(' ') + swGetInstructionsPropertyNames().at(Type) + QLatin1Char(' ') + swWriteInstructionsValue(Value, DefaultValue));
 		}
 	}
 
 	for (const swInstructionsNotice& Notice : mNotices)
-		CommandLines.append(QStringLiteral("NOTICE %1 ").arg(Notice.Id) + (Notice.Pages == swInstructionsImagePages::None ? QLatin1String("PAGE ") + swWriteInstructionsPageKey(Notice.PageKey) : QLatin1String("SHOW ") + gInstructionsImagePagesNames[static_cast<int>(Notice.Pages)]) + QLatin1String(" POSITION ") + swWriteInstructionsPoint(Notice.Position) + (Notice.File.isEmpty() ? QString() : QLatin1String(" FILE \"") + QString(Notice.File).remove(QLatin1Char('"')) + QLatin1Char('"')) + (Notice.Alignment < 0 ? QString() : QStringLiteral(" ALIGN %1 %2").arg(Notice.Alignment).arg(qMax(0, Notice.VerticalAlignment))) + QLatin1String(" TEXT ") + swEscapeInstructionsText(Notice.Text));
+		CommandLines.append(swWriteInstructionsNotice(Notice));
 
 	for (const swInstructionsPointer& Pointer : mPointers)
 	{

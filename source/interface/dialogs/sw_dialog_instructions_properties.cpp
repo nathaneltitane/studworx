@@ -329,7 +329,7 @@ swInstructionsPropertiesWidget::swInstructionsPropertiesWidget(QWidget* Parent, 
 
 	// templates carry the look to other models
 	QAction* SaveTemplateAction = OptionsMenu->addAction(tr("Save Template..."));
-	SaveTemplateAction->setToolTip(tr("Save the look, the steps per page and the cover images of these instructions to a model file that any model can apply"));
+	SaveTemplateAction->setToolTip(tr("Save the look, the steps per page, the cover images and the cover, band and watermark notices of these instructions to a model file that any model can apply"));
 	connect(SaveTemplateAction, &QAction::triggered, this, [this]()
 	{
 		const QString FileName = QFileDialog::getSaveFileName(this, tr("Save Template"), QString(), tr("LDraw Files (*.ldr);;All Files (*)"));
@@ -339,7 +339,7 @@ swInstructionsPropertiesWidget::swInstructionsPropertiesWidget(QWidget* Parent, 
 	});
 
 	QAction* ApplyTemplateAction = OptionsMenu->addAction(tr("Apply Template..."));
-	ApplyTemplateAction->setToolTip(tr("Apply the look, the steps per page and the cover images of a template or of another model to these instructions"));
+	ApplyTemplateAction->setToolTip(tr("Apply the look, the steps per page, the cover images and the notices of a template or of another model to these instructions"));
 	connect(ApplyTemplateAction, &QAction::triggered, this, [this]()
 	{
 		const QString FileName = QFileDialog::getOpenFileName(this, tr("Apply Template"), QString(), tr("LDraw Files (*.ldr *.dat *.mpd);;All Files (*)"));
@@ -499,7 +499,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	CreateLengthEditor(swInstructionsPropertyType::HighlightWidth, tr("Highlight Width"), tr("Thickness of the outline around the parts added in each step."), 1, 72, 0.05);
 	AddEditorRow(CategoryIndex::Document, swInstructionsPropertyType::HighlightWidth);
 
-	AddCategory(CategoryIndex::Cover, tr("Cover Pages"), tr("<p><b>Cover Pages</b></p><p>The front cover shows the model title, its author and the finished model. The title comes from the model description, or its name when there is none, the author from the model properties. The final model page shows the finished model after the last step. The back cover closes the instructions and starts blank. Right click a cover to add an image, like a logo.</p>"));
+	AddCategory(CategoryIndex::Cover, tr("Cover Pages"), tr("<p><b>Cover Pages</b></p><p>The front cover shows the finished model. The final model page shows the finished model after the last step. The back cover closes the instructions and starts blank. Right click a cover to add an image, like a logo.</p>"));
 
 	AddRow(CategoryIndex::Cover, {
 		CreateToggleEditor(swInstructionsPropertyType::ShowCoverPage, tr("Show Front Cover"), tr("Start the instructions with a page showing the model title and the finished model.")),
@@ -515,53 +515,68 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	});
 
 
-	CreateTextEditor(swInstructionsPropertyType::CoverTitleText, tr("Cover Title"), tr("Title on the cover, empty for the model description or name."), false);
-	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleText);
-	CreateTextEditor(swInstructionsPropertyType::CoverTitleFile, tr("Cover Title File"), tr("Text file holding the cover title, used instead of the typed title, relative to the model file."), true);
-	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleFile);
-	CreateFontEditor(swInstructionsPropertyType::CoverTitleFont, tr("Cover Title Font"), tr("Font of the model title."));
-	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleFont);
-	CreateColorEditor(swInstructionsPropertyType::CoverTitleColor, tr("Cover Title Color"), tr("Color of the model title."));
-	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleColor);
-	CreateChoiceEditor(swInstructionsPropertyType::CoverTitleAlignment, tr("Cover Title Alignment"), tr("Line up the model title left, centered or right inside its box."), { tr("Left"), tr("Center"), tr("Right") });
-	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleAlignment);
-	CreateChoiceEditor(swInstructionsPropertyType::CoverTitleVerticalAlignment, tr("Cover Title Vertical Alignment"), tr("Line up the model title at the top, middle or bottom of a box with Edit Size."), { tr("Top"), tr("Middle"), tr("Bottom") });
-	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleVerticalAlignment);
 	AddRow(CategoryIndex::Cover, {
-		CreateToggleEditor(swInstructionsPropertyType::ShowCoverTitle, tr("Show Title"), tr("Show the model title on the cover.")),
 		CreateToggleEditor(swInstructionsPropertyType::ShowCoverImage, tr("Show Model Image"), tr("Show the finished model on the cover, unchecked leaves room for your own image."))
 	});
-
-	AddRow(CategoryIndex::Cover, {
-		CreateToggleEditor(swInstructionsPropertyType::ShowCoverAuthor, tr("Show Author"), tr("Show the model author on the cover.")),
-		CreateToggleEditor(swInstructionsPropertyType::ShowCoverPartCount, tr("Show Part Count"), tr("Show the number of parts of the whole model on the cover."))
-	});
-
-	CreateTextEditor(swInstructionsPropertyType::CoverAuthorText, tr("Cover Author"), tr("Author on the cover, empty for the model author."), false);
-	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorText);
-	CreateTextEditor(swInstructionsPropertyType::CoverAuthorFile, tr("Cover Author File"), tr("Text file holding the cover author, used instead of the typed author, relative to the model file."), true);
-	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorFile);
-	CreateFontEditor(swInstructionsPropertyType::CoverAuthorFont, tr("Cover Author Font"), tr("Font of the model author."));
-	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorFont);
-	CreateColorEditor(swInstructionsPropertyType::CoverAuthorColor, tr("Cover Author Color"), tr("Color of the model author."));
-	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorColor);
-	CreateChoiceEditor(swInstructionsPropertyType::CoverAuthorAlignment, tr("Cover Author Alignment"), tr("Line up the model author left, centered or right inside its box."), { tr("Left"), tr("Center"), tr("Right") });
-	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorAlignment);
-	CreateChoiceEditor(swInstructionsPropertyType::CoverAuthorVerticalAlignment, tr("Cover Author Vertical Alignment"), tr("Line up the model author at the top, middle or bottom of a box with Edit Size."), { tr("Top"), tr("Middle"), tr("Bottom") });
-	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorVerticalAlignment);
 
 	CreateTextEditor(swInstructionsPropertyType::PartCountText, tr("Part Count Text"), tr("Text of the part counts, %1 stands for the number of parts, empty for the default text."), false);
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::PartCountText);
 	CreateTextEditor(swInstructionsPropertyType::PartCountFile, tr("Part Count File"), tr("Text file holding the part count text, used instead of the typed text, relative to the model file."), true);
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::PartCountFile);
-	CreateFontEditor(swInstructionsPropertyType::PartCountFont, tr("Part Count Font"), tr("Font of the part count on the cover and the bill of materials, where it takes the size of the Parts List title."));
+	CreateFontEditor(swInstructionsPropertyType::PartCountFont, tr("Part Count Font"), tr("Font of the part count on the bill of materials, where it takes the size of the Parts List title."));
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::PartCountFont);
-	CreateColorEditor(swInstructionsPropertyType::PartCountColor, tr("Part Count Color"), tr("Color of the part count on the cover and the bill of materials."));
+	CreateColorEditor(swInstructionsPropertyType::PartCountColor, tr("Part Count Color"), tr("Color of the part count on the bill of materials."));
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::PartCountColor);
-	CreateChoiceEditor(swInstructionsPropertyType::PartCountAlignment, tr("Part Count Alignment"), tr("Line up the part count on the cover and the bill of materials left, centered or right inside its box."), { tr("Left"), tr("Center"), tr("Right") });
+	CreateChoiceEditor(swInstructionsPropertyType::PartCountAlignment, tr("Part Count Alignment"), tr("Line up the part count on the bill of materials left, centered or right inside its box."), { tr("Left"), tr("Center"), tr("Right") });
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::PartCountAlignment);
-	CreateChoiceEditor(swInstructionsPropertyType::PartCountVerticalAlignment, tr("Part Count Vertical Alignment"), tr("Line up the part count on the cover and the bill of materials at the top, middle or bottom of a box with Edit Size."), { tr("Top"), tr("Middle"), tr("Bottom") });
+	CreateChoiceEditor(swInstructionsPropertyType::PartCountVerticalAlignment, tr("Part Count Vertical Alignment"), tr("Line up the part count on the bill of materials at the top, middle or bottom of a box with Edit Size."), { tr("Top"), tr("Middle"), tr("Bottom") });
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::PartCountVerticalAlignment);
+
+	AddCategory(CategoryIndex::Publication, tr("Publication"), tr("<p><b>Publication</b></p><p>The title, author and publication details of the model, each shown on the front or back cover. Empty texts show the model properties of the same name, edited in Model Properties. Texts can use %title, %author, %id, %version, %date, %url, %contact, %copyright, %notice, %size, %weight and %comments.</p>"));
+
+	// the editors below follow the chosen cover
+	mPublicationCoverComboBox = new QComboBox(this);
+	mPublicationCoverComboBox->addItems({ tr("Front Cover"), tr("Back Cover") });
+	mPublicationCoverComboBox->setToolTip(tr("Choose the cover whose elements are edited."));
+	mPublicationCoverComboBox->setWhatsThis(mPublicationCoverComboBox->toolTip());
+	mPublicationCoverComboBox->setAccessibleName(tr("Cover"));
+	swSetupPanelEdit(mPublicationCoverComboBox);
+	AddLabeledRow(CategoryIndex::Publication, tr("Cover"), mPublicationCoverComboBox);
+
+	connect(mPublicationCoverComboBox, qOverload<int>(&QComboBox::currentIndexChanged), this, [this](int Index)
+	{
+		SetPublicationCover(Index == 1);
+	});
+
+	// one group of editors per element and cover
+	for (const swInstructionsPublicationElement& Publication : swGetPublicationElements())
+	{
+		const QString Name = swGetPublicationName(Publication);
+		const QString Kind = swGetPublicationKindName(Publication);
+		const auto GetType = [&Publication](swInstructionsPublicationField Field)
+		{
+			return swGetPublicationType(Publication, Field);
+		};
+
+		std::vector<QWidget*>& Rows = mPublicationRows[Publication.Back ? 1 : 0];
+
+		Rows.push_back(AddRow(CategoryIndex::Publication, {
+			CreateToggleEditor(Publication.Show, tr("Show %1").arg(Kind), tr("Show the %1 of the model on the cover.").arg(Kind))
+		}));
+
+		CreateTextEditor(GetType(swInstructionsPublicationField::Text), Kind, tr("%1 on the cover, empty for the one of the model properties.").arg(Kind), false);
+		Rows.push_back(AddEditorRow(CategoryIndex::Publication, GetType(swInstructionsPublicationField::Text))->parentWidget());
+		CreateFontEditor(GetType(swInstructionsPublicationField::Font), tr("%1 Font").arg(Kind), tr("Font of the %1.").arg(Kind));
+		Rows.push_back(AddEditorRow(CategoryIndex::Publication, GetType(swInstructionsPublicationField::Font))->parentWidget());
+		CreateColorEditor(GetType(swInstructionsPublicationField::Color), tr("%1 Color").arg(Kind), tr("Color of the %1.").arg(Kind));
+		Rows.push_back(AddEditorRow(CategoryIndex::Publication, GetType(swInstructionsPublicationField::Color))->parentWidget());
+		CreateChoiceEditor(GetType(swInstructionsPublicationField::Alignment), tr("%1 Alignment").arg(Kind), tr("Line up the %1 left, centered or right inside its box.").arg(Kind), { tr("Left"), tr("Center"), tr("Right") });
+		Rows.push_back(AddEditorRow(CategoryIndex::Publication, GetType(swInstructionsPublicationField::Alignment))->parentWidget());
+		CreateChoiceEditor(GetType(swInstructionsPublicationField::VerticalAlignment), tr("%1 Vertical Alignment").arg(Kind), tr("Line up the %1 at the top, middle or bottom of a box with Edit Size.").arg(Kind), { tr("Top"), tr("Middle"), tr("Bottom") });
+		Rows.push_back(AddEditorRow(CategoryIndex::Publication, GetType(swInstructionsPublicationField::VerticalAlignment))->parentWidget());
+	}
+
+	SetPublicationCover(false);
 
 	AddCategory(CategoryIndex::Page, tr("Page"), tr("<p><b>Page</b></p><p>The background and the number of the step and blank pages. The background applies to all these pages, or only to the current page when it has its own, the cover and the bill of materials have their own backgrounds here too. The cover and blank pages are not numbered unless all pages are. Drag the number or use the Placement panel to move it on all pages.</p>"));
 
@@ -636,10 +651,10 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		CreateToggleEditor(swInstructionsPropertyType::ShowSubmodelPreview, tr("Show Submodel Preview"), tr("Show the finished submodel with its part count on the first page of each submodel."))
 	});
 
-	AddCategory(CategoryIndex::Header, tr("Header"), tr("<p><b>Header</b></p><p>A strip along the top paper edge of the step and blank pages. Right click the band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. The band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group.</p>"));
-	AddCategory(CategoryIndex::Footer, tr("Footer"), tr("<p><b>Footer</b></p><p>A strip along the bottom paper edge of the step and blank pages. Right click the band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. The band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group.</p>"));
-	AddCategory(CategoryIndex::LeftBand, tr("Left Band"), tr("<p><b>Left Band</b></p><p>A strip along the left paper edge of the step and blank pages. Right click a band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. A band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group.</p>"));
-	AddCategory(CategoryIndex::RightBand, tr("Right Band"), tr("<p><b>Right Band</b></p><p>A strip along the right paper edge of the step and blank pages. Right click the band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. The band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group.</p>"));
+	AddCategory(CategoryIndex::Header, tr("Header"), tr("<p><b>Header</b></p><p>A strip along the top paper edge of the step and blank pages. Right click the band on the page to add text or images, they repeat on every page. Texts can use %page, %title, %author, %id, %version, %date, %url, %contact, %copyright, %notice, %size, %weight and %comments, filled from the page and the model properties. The band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group.</p>"));
+	AddCategory(CategoryIndex::Footer, tr("Footer"), tr("<p><b>Footer</b></p><p>A strip along the bottom paper edge of the step and blank pages. Right click the band on the page to add text or images, they repeat on every page. Texts can use %page, %title, %author, %id, %version, %date, %url, %contact, %copyright, %notice, %size, %weight and %comments, filled from the page and the model properties. The band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group.</p>"));
+	AddCategory(CategoryIndex::LeftBand, tr("Left Band"), tr("<p><b>Left Band</b></p><p>A strip along the left paper edge of the step and blank pages. Right click a band on the page to add text or images, they repeat on every page. Texts can use %page, %title, %author, %id, %version, %date, %url, %contact, %copyright, %notice, %size, %weight and %comments, filled from the page and the model properties. A band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group.</p>"));
+	AddCategory(CategoryIndex::RightBand, tr("Right Band"), tr("<p><b>Right Band</b></p><p>A strip along the right paper edge of the step and blank pages. Right click the band on the page to add text or images, they repeat on every page. Texts can use %page, %title, %author, %id, %version, %date, %url, %contact, %copyright, %notice, %size, %weight and %comments, filled from the page and the model properties. The band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group.</p>"));
 
 	const QString BandNames[4] = { tr("Header"), tr("Footer"), tr("Left"), tr("Right") };
 
@@ -1088,14 +1103,23 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 
 	// choices follow the box elements
 	mBoxElementComboBox = new QComboBox(this);
-	mBoxElementComboBox->addItems({ tr("Step Model"), tr("Step Number"), tr("Parts List"), tr("Page Number"), tr("Cover Title"), tr("Cover Author"), tr("Cover Model"), tr("Notice"), tr("Part Count"), tr("Submodel Preview"), tr("Image"), tr("Parts List Quantity"), tr("Final Model"), tr("Step Area"), tr("Header"), tr("Footer"), tr("Left Band"), tr("Right Band"), tr("Watermark"), tr("BOM Title"), tr("BOM Parts List"), tr("BOM Quantity"), tr("BOM Part Count") });
+	// every element with a box
+	const std::vector<std::pair<swInstructionsBoxElement, QString>> BoxNames = {
+		{ swInstructionsBoxElement::StepImage, tr("Step Model") }, { swInstructionsBoxElement::StepNumber, tr("Step Number") }, { swInstructionsBoxElement::PartsList, tr("Parts List") },
+		{ swInstructionsBoxElement::PageNumber, tr("Page Number") }, { swInstructionsBoxElement::CoverImage, tr("Cover Model") }, { swInstructionsBoxElement::Notice, tr("Notice") },
+		{ swInstructionsBoxElement::SubmodelPreview, tr("Submodel Preview") }, { swInstructionsBoxElement::Image, tr("Image") }, { swInstructionsBoxElement::PartsListQuantity, tr("Parts List Quantity") },
+		{ swInstructionsBoxElement::FinalModel, tr("Final Model") }, { swInstructionsBoxElement::Completion, tr("Completion") }, { swInstructionsBoxElement::StepArea, tr("Step Area") },
+		{ swInstructionsBoxElement::HeaderBand, tr("Header") }, { swInstructionsBoxElement::FooterBand, tr("Footer") }, { swInstructionsBoxElement::LeftBand, tr("Left Band") },
+		{ swInstructionsBoxElement::RightBand, tr("Right Band") }, { swInstructionsBoxElement::Watermark, tr("Watermark") }, { swInstructionsBoxElement::BillOfMaterialsTitle, tr("BOM Title") },
+		{ swInstructionsBoxElement::BillOfMaterialsList, tr("BOM Parts List") }, { swInstructionsBoxElement::BillOfMaterialsQuantity, tr("BOM Quantity") }, { swInstructionsBoxElement::BillOfMaterialsPartCount, tr("BOM Part Count") }
+	};
 
-	// items carry their element, completion follows final model
+	for (const std::pair<swInstructionsBoxElement, QString>& BoxName : BoxNames)
+		mBoxElementComboBox->addItem(BoxName.second, static_cast<int>(BoxName.first));
 
-	for (int Index = 0; Index < mBoxElementComboBox->count(); Index++)
-		mBoxElementComboBox->setItemData(Index, Index);
+	for (const swInstructionsPublicationElement& Publication : swGetPublicationElements())
+		mBoxElementComboBox->addItem(swGetPublicationName(Publication), static_cast<int>(Publication.Box));
 
-	mBoxElementComboBox->insertItem(static_cast<int>(swInstructionsBoxElement::FinalModel) + 1, tr("Completion"), static_cast<int>(swInstructionsBoxElement::Completion));
 	mBoxElementComboBox->setToolTip(tr("Choose the element whose box is edited."));
 	mBoxElementComboBox->setWhatsThis(mBoxElementComboBox->toolTip());
 	mBoxElementComboBox->setAccessibleName(tr("Element"));
@@ -1645,6 +1669,7 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem, 
 
 	// keep item kind and step only
 	FocusType Focus = FocusType::None;
+	const swInstructionsPublicationElement* FocusPublication = nullptr;
 	swModel* Model = nullptr;
 	swStep Step = 1;
 
@@ -1676,15 +1701,14 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem, 
 			Focus = FocusType::BillOfMaterialsPartCount;
 		else if (CountElement == swInstructionsPlacementElement::PagePartCount || CountElement == swInstructionsPlacementElement::SubmodelPreviewPartCount)
 			Focus = FocusType::PagePartCount;
-		else
-			Focus = FocusType::CoverPartCount;
 
 		Model = CountItem->GetModel();
 		Step = 0;
 	}
 	else if (swInstructionsCoverTextItem* TextItem = dynamic_cast<swInstructionsCoverTextItem*>(FocusItem))
 	{
-		Focus = TextItem->IsAuthor() ? FocusType::CoverAuthor : FocusType::CoverTitle;
+		FocusPublication = swFindPublicationElement(TextItem->GetElement());
+		Focus = FocusType::Publication;
 		Model = TextItem->GetModel();
 		Step = 0;
 	}
@@ -1752,21 +1776,16 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem, 
 		SetBoxElement(swInstructionsBoxElement::PageNumber);
 		break;
 
-	case FocusType::CoverTitle:
-		SetBoxElement(swInstructionsBoxElement::CoverTitle);
-		break;
-
-	case FocusType::CoverAuthor:
-		SetBoxElement(swInstructionsBoxElement::CoverAuthor);
+	case FocusType::Publication:
+		SetBoxElement(FocusPublication->Box);
+		SetPublicationCover(FocusPublication->Back);
 		break;
 
 	case FocusType::CoverImage:
 		SetBoxElement(swInstructionsBoxElement::CoverImage);
 		break;
 
-	case FocusType::CoverPartCount:
 	case FocusType::PagePartCount:
-		SetBoxElement(swInstructionsBoxElement::PartCount);
 		break;
 
 	case FocusType::BillOfMaterialsPartCount:
@@ -1845,10 +1864,11 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem, 
 			Open = CategoryIndex::Page;
 			break;
 
-		case FocusType::CoverTitle:
-		case FocusType::CoverAuthor:
+		case FocusType::Publication:
+			Open = CategoryIndex::Publication;
+			break;
+
 		case FocusType::CoverImage:
-		case FocusType::CoverPartCount:
 			Open = CategoryIndex::Cover;
 			break;
 
@@ -1965,6 +1985,19 @@ void swInstructionsPropertiesWidget::SetBoxElement(swInstructionsBoxElement Elem
 	for (int ElementIndex = 0; ElementIndex < static_cast<int>(mBoxRows.size()); ElementIndex++)
 		for (QWidget* Row : mBoxRows[ElementIndex])
 			Row->setVisible(ElementIndex == static_cast<int>(Element));
+}
+
+void swInstructionsPropertiesWidget::SetPublicationCover(bool Back)
+{
+	{
+		QSignalBlocker Blocker(mPublicationCoverComboBox);
+		mPublicationCoverComboBox->setCurrentIndex(Back ? 1 : 0);
+	}
+
+	// show the chosen cover rows
+	for (int Cover = 0; Cover < 2; Cover++)
+		for (QWidget* Row : mPublicationRows[Cover])
+			Row->setVisible((Cover == 1) == Back);
 }
 
 void swInstructionsPropertiesWidget::SetCurrentPage(int PageIndex)
@@ -2175,31 +2208,28 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	SetEnabled(swInstructionsPropertyType::PointerTip, mInstructions->GetIntProperty(swInstructionsPropertyType::PointerStyle, mModel, mStep) != static_cast<int>(swInstructionsPointerStyle::Wedge));
 	const bool ShowCoverPage = GetBool(swInstructionsPropertyType::ShowCoverPage);
 
-	const bool ShowCoverTitle = ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverTitle);
-
-	SetEnabled(swInstructionsPropertyType::ShowCoverTitle, ShowCoverPage);
-	SetEnabled(swInstructionsPropertyType::ShowCoverImage, ShowCoverPage);
-	SetEnabled(swInstructionsPropertyType::CoverTitleFont, ShowCoverTitle);
-	SetEnabled(swInstructionsPropertyType::CoverTitleColor, ShowCoverTitle);
-	SetEnabled(swInstructionsPropertyType::CoverTitleAlignment, ShowCoverTitle);
-	SetEnabled(swInstructionsPropertyType::CoverTitleVerticalAlignment, ShowCoverTitle);
-	SetEnabled(swInstructionsPropertyType::CoverAuthorFont, ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
-	SetEnabled(swInstructionsPropertyType::CoverAuthorColor, ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
-	SetEnabled(swInstructionsPropertyType::CoverAuthorAlignment, ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
-	SetEnabled(swInstructionsPropertyType::CoverAuthorVerticalAlignment, ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
-	SetEnabled(swInstructionsPropertyType::CoverTitleText, ShowCoverTitle);
-	SetEnabled(swInstructionsPropertyType::CoverTitleFile, ShowCoverTitle);
-	SetEnabled(swInstructionsPropertyType::CoverAuthorText, ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
-	SetEnabled(swInstructionsPropertyType::CoverAuthorFile, ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
-	SetEnabled(swInstructionsPropertyType::ShowCoverAuthor, ShowCoverPage);
 	SetEnabled(swInstructionsPropertyType::ShowCoverBlankPage, ShowCoverPage);
+
+	const bool ShowBackCover = GetBool(swInstructionsPropertyType::ShowBackCover);
+
+	// publication texts follow their cover
+	for (const swInstructionsPublicationElement& Publication : swGetPublicationElements())
+	{
+		const bool CoverShown = Publication.Back ? ShowBackCover : ShowCoverPage;
+		const bool ShowText = CoverShown && GetBool(Publication.Show);
+
+		SetEnabled(Publication.Show, ShowCoverPage || ShowBackCover);
+
+		for (swInstructionsPublicationField Field : { swInstructionsPublicationField::Text, swInstructionsPublicationField::Font, swInstructionsPublicationField::Color, swInstructionsPublicationField::Alignment, swInstructionsPublicationField::VerticalAlignment })
+			SetEnabled(swGetPublicationType(Publication, Field), ShowText);
+	}
+
 	SetEnabled(swInstructionsPropertyType::CoverBackgroundColor, ShowCoverPage);
-	SetEnabled(swInstructionsPropertyType::ShowCoverPartCount, ShowCoverPage);
 
 	const bool ShowBillOfMaterials = GetBool(swInstructionsPropertyType::ShowBillOfMaterials);
 
-	// cover and materials share the count text
-	const bool ShowPartCount = (ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverPartCount)) || (ShowBillOfMaterials && GetBool(swInstructionsPropertyType::ShowBillOfMaterialsPartCount));
+	// materials share the count text
+	const bool ShowPartCount = (ShowBillOfMaterials && GetBool(swInstructionsPropertyType::ShowBillOfMaterialsPartCount));
 	const bool ShowPageCount = GetBool(swInstructionsPropertyType::ShowPagePartCount);
 
 	SetEnabled(swInstructionsPropertyType::ShowBillOfMaterialsPartCount, ShowBillOfMaterials);

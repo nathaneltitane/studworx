@@ -288,15 +288,17 @@ swPropertiesDialog::swPropertiesDialog(QWidget* Parent, swPropertiesDialogOption
 
 	ui->DescriptionEdit->setText(mOptions->Properties.mDescription);
 	ui->AuthorEdit->setText(mOptions->Properties.mAuthor);
+	ui->ProductIdEdit->setText(mOptions->Properties.mProductId);
+	ui->VersionEdit->setText(mOptions->Properties.mVersion);
+	ui->PublicationDateEdit->setText(mOptions->Properties.mPublicationDate);
+	ui->UrlEdit->setText(mOptions->Properties.mUrl);
+	ui->ContactEdit->setText(mOptions->Properties.mContact);
+	ui->CopyrightEdit->setText(mOptions->Properties.mCopyright);
+	ui->NoticeEdit->setText(mOptions->Properties.mNotice);
 	ui->CommentsEdit->setText(mOptions->Properties.mComments);
 
 	const swVector3 Dimensions = Options->BoundingBox.Max - Options->BoundingBox.Min;
-	QString Format = tr("Metric: %1 x %2 x %3 cm\nImperial: %4 x %5 x %6 inches\nLDraw: %7 x %8 x %9 ldu");
-	QString Measurements = Format.arg(swFormatDoubleLocalized(Dimensions.x * 0.04, locale(), 'f', 2), swFormatDoubleLocalized(Dimensions.y * 0.04, locale(), 'f', 2), swFormatDoubleLocalized(Dimensions.z * 0.04, locale(), 'f', 2),
-	                                  swFormatDoubleLocalized(Dimensions.x / 64.0, locale(), 'f', 2), swFormatDoubleLocalized(Dimensions.y / 64.0, locale(), 'f', 2), swFormatDoubleLocalized(Dimensions.z / 64.0, locale(), 'f', 2),
-	                                  swFormatDoubleLocalized(Dimensions.x, locale(), 'f', 2), swFormatDoubleLocalized(Dimensions.y, locale(), 'f', 2), swFormatDoubleLocalized(Dimensions.z, locale(), 'f', 2));
-
-	ui->MeasurementsLabel->setText(Measurements);
+	ui->MeasurementsLabel->setText(swGetMeasurementsText(Dimensions, locale()));
 
 	const swPartsList& PartsList = mOptions->PartsList;
 
@@ -342,11 +344,7 @@ swPropertiesDialog::swPropertiesDialog(QWidget* Parent, swPropertiesDialogOption
 
 	// unlisted parts add nothing and are counted
 	std::vector<std::optional<double>> InfoWeights(PartsList.size());
-	double Weight = 0.0;
-	int WeightMissing = 0;
 
-	// grams to ounces
-	constexpr double WeightOunces = 0.03527396;
 	swThumbnailManager* ThumbnailManager = swGetPartsLibrary()->GetThumbnailManager();
 
 	connect(ThumbnailManager, &swThumbnailManager::ThumbnailReady, this, &swPropertiesDialog::ThumbnailReady);
@@ -389,12 +387,7 @@ swPropertiesDialog::swPropertiesDialog(QWidget* Parent, swPropertiesDialogOption
 		}
 
 		if (const std::optional<double> PartWeight = swGetBrickLinkWeight(PartData))
-		{
 			InfoWeights[Row] = *PartWeight * InfoTotals[Row];
-			Weight += *InfoWeights[Row];
-		}
-		else
-			WeightMissing += InfoTotals[Row];
 
 		// thumbnail in the most used color
 		auto [ThumbnailId, Thumbnail] = ThumbnailManager->RequestThumbnail(const_cast<swPartData*>(PartData), ThumbnailColor, ThumbnailSize, devicePixelRatioF());
@@ -409,6 +402,9 @@ swPropertiesDialog::swPropertiesDialog(QWidget* Parent, swPropertiesDialogOption
 
 		Row++;
 	}
+
+	int WeightMissing;
+	const double Weight = swGetPartsListWeight(PartsList, WeightMissing);
 
 	swPartsTableWidgetItem* Item = new swPartsTableWidgetItem(tr("Total"));
 	Item->mLast = true;
@@ -454,7 +450,7 @@ swPropertiesDialog::swPropertiesDialog(QWidget* Parent, swPropertiesDialogOption
 	PartsTable->setItem((int)InfoTotals.size(), ColorCount + 4, Item);
 
 	// weight column in the chosen units
-	const auto UpdateWeightColumn = [this, PartsTable, WeightOunces, Column = ColorCount + 4]()
+	const auto UpdateWeightColumn = [this, PartsTable, Column = ColorCount + 4]()
 	{
 		const bool Imperial = ui->WeightUnitCombo->currentIndex() == 1;
 
@@ -466,7 +462,7 @@ swPropertiesDialog::swPropertiesDialog(QWidget* Parent, swPropertiesDialogOption
 			if (Grams < 0.0)
 				WeightItem->setText(tr("N/A"));
 			else if (Imperial)
-				WeightItem->setText(tr("%1 oz").arg(swFormatDoubleLocalized(Grams * WeightOunces, locale(), 'f', 2)));
+				WeightItem->setText(tr("%1 oz").arg(swFormatDoubleLocalized(Grams * SW_GRAMS_TO_OUNCES, locale(), 'f', 2)));
 			else
 				WeightItem->setText(tr("%1 g").arg(swFormatDoubleLocalized(Grams, locale(), 'f', 2)));
 		}
@@ -477,12 +473,7 @@ swPropertiesDialog::swPropertiesDialog(QWidget* Parent, swPropertiesDialogOption
 
 	ui->PartsTable->FreezePartColumns();
 
-	QString WeightText = tr("Metric: %1 g\nImperial: %2 oz\nParts: %3").arg(swFormatDoubleLocalized(Weight, locale(), 'f', 2), swFormatDoubleLocalized(Weight * WeightOunces, locale(), 'f', 2), swFormatIntegerLocalized(Total, locale()));
-
-	if (WeightMissing)
-		WeightText.append((WeightMissing == 1 ? tr("\nN/A: %1 part") : tr("\nN/A: %1 parts")).arg(swFormatIntegerLocalized(WeightMissing, locale())));
-
-	ui->WeightLabel->setText(WeightText);
+	ui->WeightLabel->setText(swGetWeightText(Weight, Total, WeightMissing, locale()));
 
 	ui->PartsCountLabel->setText(tr("Unique parts: %1 - Total parts: %2").arg(swFormatIntegerLocalized(UniqueCount, locale()), swFormatIntegerLocalized(Total, locale())));
 
@@ -564,6 +555,13 @@ void swPropertiesDialog::accept()
 {
 	mOptions->Properties.mDescription = ui->DescriptionEdit->text();
 	mOptions->Properties.mAuthor = ui->AuthorEdit->text();
+	mOptions->Properties.mProductId = ui->ProductIdEdit->text();
+	mOptions->Properties.mVersion = ui->VersionEdit->text();
+	mOptions->Properties.mPublicationDate = ui->PublicationDateEdit->text();
+	mOptions->Properties.mUrl = ui->UrlEdit->text();
+	mOptions->Properties.mContact = ui->ContactEdit->text();
+	mOptions->Properties.mCopyright = ui->CopyrightEdit->text();
+	mOptions->Properties.mNotice = ui->NoticeEdit->text();
 	mOptions->Properties.mComments = ui->CommentsEdit->toPlainText();
 
 	QDialog::accept();

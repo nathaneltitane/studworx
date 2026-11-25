@@ -1170,10 +1170,6 @@ void swApplication::ShowPreferencesDialog()
 	Options.BlenderVersion = swGetProfileString(SW_PROFILE_BLENDER_VERSION);
 	Options.LGEOPath = swGetProfileString(SW_PROFILE_POVRAY_LGEO_PATH);
 	Options.RebrickableApiKey = swGetProfileString(SW_PROFILE_REBRICKABLE_API_KEY);
-	Options.DefaultAuthorName = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_NAME);
-	Options.DefaultAuthorEmail = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_EMAIL);
-	Options.DefaultAuthorComment = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_COMMENT);
-	Options.DefaultAuthorSplitter = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_SPLITTER);
 	Options.DefaultTemplate = swGetProfileString(SW_PROFILE_DEFAULT_TEMPLATE);
 	Options.Language = swGetProfileString(SW_PROFILE_LANGUAGE);
 	Options.Instructions.Load();
@@ -1250,10 +1246,6 @@ void swApplication::ShowPreferencesDialog()
 	if (PartsRenderingChanged && gMainWindow && gMainWindow->GetPartSelectionWidget())
 		gMainWindow->GetPartSelectionWidget()->UpdateThumbnails();
 
-	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_NAME, Options.DefaultAuthorName);
-	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_EMAIL, Options.DefaultAuthorEmail);
-	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_COMMENT, Options.DefaultAuthorComment);
-	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_SPLITTER, Options.DefaultAuthorSplitter);
 	swSetProfileString(SW_PROFILE_DEFAULT_TEMPLATE, Options.DefaultTemplate);
 	swSetProfileString(SW_PROFILE_PARTS_LIBRARY, Options.LibraryPath);
 	swSetProfileString(SW_PROFILE_UNOFFICIAL_LIBRARY, Options.UnofficialLibraryPath);

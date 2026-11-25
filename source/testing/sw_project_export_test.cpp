@@ -311,7 +311,7 @@ void swTests::HTMLExportUsesModelFolder()
 
 	QFile Model(Folder.filePath("brick.ldr"));
 	QVERIFY(Model.open(QIODevice::WriteOnly));
-	Model.write("0 Test\r\n0 !SW PROPERTY INSTRUCTION STEP_IMAGE_CORNER_RADIUS 24\r\n1 4 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n");
+	Model.write("0 Test\r\n0 !SW PROPERTY INSTRUCTION STEP IMAGE_CORNER_RADIUS 24\r\n1 4 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n");
 	Model.close();
 
 	QDir Output(Folder.filePath("output"));
@@ -456,4 +456,301 @@ void swTests::InstructionsExportPages()
 	QVERIFY2(Pages.size() > 1, qPrintable(Pages.join(' ')));
 	QCOMPARE(Pages.first(), QString("brick-page-01.png"));
 	QCOMPARE(QImage(Folder.filePath("pages/" + Pages.first())).size(), QSize(480, 240));
+}
+
+// Exports the back cover of two models that differ only in the product ID. The Publication URL text uses %id, so the pages differ only when the code is filled.
+void swTests::InstructionsFillsPublicationCodes()
+{
+	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
+	const QString Binary = Environment.value("SW_TEST_BINARY");
+
+	if (Binary.isEmpty())
+		QSKIP("SW_TEST_BINARY is not set");
+
+	QTemporaryDir Folder;
+	QVERIFY(Folder.isValid());
+
+	QProcessEnvironment ExportEnvironment = Environment;
+	ExportEnvironment.insert("XDG_CONFIG_HOME", Folder.filePath("config"));
+	ExportEnvironment.insert("XDG_DATA_HOME", Folder.filePath("data"));
+	ExportEnvironment.insert("XDG_CACHE_HOME", Folder.filePath("cache"));
+
+	if (Environment.value("SW_TEST_NATIVE_DISPLAY") != QLatin1String("1"))
+		ExportEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
+
+	QImage Backs[2];
+
+	for (int Index = 0; Index < 2; Index++)
+	{
+		const QString Name = QString("model%1").arg(Index);
+		QFile Model(Folder.filePath(Name + ".ldr"));
+		QVERIFY(Model.open(QIODevice::WriteOnly));
+		Model.write("0 Test\r\n0 !SW PAGE_SETUP INSTRUCTION 480 240 16 16 16 16 UNITS 0 0\r\n0 !SW PROPERTY INSTRUCTION COVER SHOW_BACK TRUE\r\n0 !SW PROPERTY INSTRUCTION COVER BACK SHOW_URL TRUE\r\n");
+		Model.write("0 !SW PROPERTY INSTRUCTION COVER BACK URL_TEXT WEB // %id\r\n");
+		Model.write(QString("0 !SW PRODUCT_ID MODEL SW-000%1\r\n").arg(Index + 1).toUtf8());
+		Model.write("1 4 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n");
+		Model.close();
+
+		QProcess Export;
+		Export.setProcessEnvironment(ExportEnvironment);
+		Export.setProcessChannelMode(QProcess::MergedChannels);
+		Export.start(Binary, { Model.fileName(), "--export-pages", Folder.filePath(Name + "pages") });
+		QVERIFY2(Export.waitForFinished(120000), "the pages were not saved");
+		QVERIFY2(Export.exitCode() == 0, Export.readAll().constData());
+
+		const QStringList Pages = QDir(Folder.filePath(Name + "pages")).entryList({ "*.png" }, QDir::Files, QDir::Name);
+		QVERIFY(!Pages.isEmpty());
+		Backs[Index] = QImage(Folder.filePath(Name + "pages/" + Pages.last()));
+		QVERIFY(!Backs[Index].isNull());
+	}
+
+	QVERIFY2(Backs[0] != Backs[1], "the %id code was not filled");
+}
+
+// Exports three models that differ only in a publication text. One on the front cover must change the first page only, one on the back cover the last page only.
+void swTests::InstructionsPublicationPagesFollowChoice()
+{
+	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
+	const QString Binary = Environment.value("SW_TEST_BINARY");
+
+	if (Binary.isEmpty())
+		QSKIP("SW_TEST_BINARY is not set");
+
+	QTemporaryDir Folder;
+	QVERIFY(Folder.isValid());
+
+	QProcessEnvironment ExportEnvironment = Environment;
+	ExportEnvironment.insert("XDG_CONFIG_HOME", Folder.filePath("config"));
+	ExportEnvironment.insert("XDG_DATA_HOME", Folder.filePath("data"));
+	ExportEnvironment.insert("XDG_CACHE_HOME", Folder.filePath("cache"));
+
+	if (Environment.value("SW_TEST_NATIVE_DISPLAY") != QLatin1String("1"))
+		ExportEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
+
+	// none, front product id, back version, front measurements, back weight, back comments
+	const QStringList Extras =
+	{
+		QString(),
+		"0 !SW PROPERTY INSTRUCTION COVER FRONT SHOW_PRODUCT_ID TRUE\r\n0 !SW PROPERTY INSTRUCTION COVER FRONT PRODUCT_ID_TEXT SAMPLE\r\n",
+		"0 !SW PROPERTY INSTRUCTION COVER BACK SHOW_VERSION TRUE\r\n0 !SW PROPERTY INSTRUCTION COVER BACK VERSION_TEXT SAMPLE\r\n",
+		"0 !SW PROPERTY INSTRUCTION COVER FRONT SHOW_MEASUREMENTS TRUE\r\n",
+		"0 !SW PROPERTY INSTRUCTION COVER BACK SHOW_WEIGHT TRUE\r\n",
+		"0 !SW PROPERTY INSTRUCTION COVER BACK SHOW_COMMENTS TRUE\r\n0 !SW COMMENT MODEL SAMPLE\r\n"
+	};
+
+	QImage Firsts[6];
+	QImage Lasts[6];
+
+	for (int Index = 0; Index < Extras.size(); Index++)
+	{
+		const QString Name = QString("model%1").arg(Index);
+		QFile Model(Folder.filePath(Name + ".ldr"));
+		QVERIFY(Model.open(QIODevice::WriteOnly));
+		Model.write("0 Test\r\n0 !SW PAGE_SETUP INSTRUCTION 480 240 16 16 16 16 UNITS 0 0\r\n0 !SW PROPERTY INSTRUCTION COVER SHOW_BACK TRUE\r\n");
+		Model.write(Extras[Index].toUtf8());
+		Model.write("1 4 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n");
+		Model.close();
+
+		QProcess Export;
+		Export.setProcessEnvironment(ExportEnvironment);
+		Export.setProcessChannelMode(QProcess::MergedChannels);
+		Export.start(Binary, { Model.fileName(), "--export-pages", Folder.filePath(Name + "pages") });
+		QVERIFY2(Export.waitForFinished(120000), "the pages were not saved");
+		QVERIFY2(Export.exitCode() == 0, Export.readAll().constData());
+
+		const QStringList Pages = QDir(Folder.filePath(Name + "pages")).entryList({ "*.png" }, QDir::Files, QDir::Name);
+		QVERIFY(Pages.size() > 1);
+		Firsts[Index] = QImage(Folder.filePath(Name + "pages/" + Pages.first()));
+		Lasts[Index] = QImage(Folder.filePath(Name + "pages/" + Pages.last()));
+		QVERIFY(!Firsts[Index].isNull() && !Lasts[Index].isNull());
+	}
+
+	QVERIFY2(Firsts[1] != Firsts[0] && Lasts[1] == Lasts[0], "the front text is not only on the cover");
+	QVERIFY2(Firsts[2] == Firsts[0] && Lasts[2] != Lasts[0], "the back text is not only on the back cover");
+	QVERIFY2(Firsts[3] != Firsts[0] && Lasts[3] == Lasts[0], "the measurements are not only on the cover");
+
+	for (int Index = 4; Index < 6; Index++)
+		QVERIFY2(Firsts[Index] == Firsts[0] && Lasts[Index] != Lasts[0], qPrintable(QString("model %1 text is not only on the back cover").arg(Index)));
+}
+
+// Exports models whose cover texts differ only in a model field or code. %comments, %size and %weight must fill in.
+void swTests::InstructionsFillsSummaryCodes()
+{
+	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
+	const QString Binary = Environment.value("SW_TEST_BINARY");
+
+	if (Binary.isEmpty())
+		QSKIP("SW_TEST_BINARY is not set");
+
+	QTemporaryDir Folder;
+	QVERIFY(Folder.isValid());
+	QVERIFY(QDir(Folder.path()).mkpath("library/parts"));
+
+	QFile Brick(Folder.filePath("library/parts/3001.dat"));
+	QVERIFY(Brick.open(QIODevice::WriteOnly));
+	Brick.write("0 Brick  2 x  4\r\n0 Name: 3001.dat\r\n4 16 -40 0 -20 40 0 -20 40 0 20 -40 0 20\r\n");
+	Brick.close();
+
+	QProcessEnvironment ExportEnvironment = Environment;
+	ExportEnvironment.insert("XDG_CONFIG_HOME", Folder.filePath("config"));
+	ExportEnvironment.insert("XDG_DATA_HOME", Folder.filePath("data"));
+	ExportEnvironment.insert("XDG_CACHE_HOME", Folder.filePath("cache"));
+
+	if (Environment.value("SW_TEST_NATIVE_DISPLAY") != QLatin1String("1"))
+		ExportEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
+
+	// the cover or back cover of a model with extra lines and parts
+	const auto Export = [&](const QString& Name, const QString& Lines, const QString& Parts, bool Last) -> QImage
+	{
+		QFile Model(Folder.filePath(Name + ".ldr"));
+		Model.open(QIODevice::WriteOnly);
+		Model.write("0 Test\r\n0 !SW PAGE_SETUP INSTRUCTION 480 240 16 16 16 16 UNITS 0 0\r\n0 !SW PROPERTY INSTRUCTION COVER SHOW_BACK TRUE\r\n");
+		Model.write((Lines + Parts).toUtf8());
+		Model.close();
+
+		QProcess Process;
+		Process.setProcessEnvironment(ExportEnvironment);
+		Process.setProcessChannelMode(QProcess::MergedChannels);
+		Process.start(Binary, { "--library", Folder.filePath("library"), Model.fileName(), "--export-pages", Folder.filePath(Name + "pages") });
+		Process.waitForFinished(120000);
+
+		const QStringList Pages = QDir(Folder.filePath(Name + "pages")).entryList({ "*.png" }, QDir::Files, QDir::Name);
+
+		return Pages.isEmpty() ? QImage() : QImage(Folder.filePath(Name + "pages/" + (Last ? Pages.last() : Pages.first())));
+	};
+
+	const QString Part = "1 4 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n";
+	const QString MovedPart = "1 4 200 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n";
+
+	// each code on the back cover with the model field that changes it
+	const struct
+	{
+		QString Code;
+		QString Different;
+		QString Parts[2];
+	} Cases[] =
+	{
+		{ "%comments", "0 !SW COMMENT MODEL SAMPLE\r\n", { Part, Part } },
+		{ "%size", QString(), { Part, Part + MovedPart } },
+		{ "%weight", QString(), { Part, Part + Part } }
+	};
+
+	for (const auto& Case : Cases)
+	{
+		const QString Lines = "0 !SW PROPERTY INSTRUCTION COVER BACK SHOW_URL TRUE\r\n0 !SW PROPERTY INSTRUCTION COVER BACK URL_TEXT " + Case.Code + "\r\n";
+		const QImage First = Export("first", Lines, Case.Parts[0], true);
+		const QImage Second = Export("second", Lines + Case.Different, Case.Parts[1], true);
+
+		QVERIFY2(!First.isNull() && !Second.isNull(), qPrintable(Case.Code + " did not export"));
+		QVERIFY2(First != Second, qPrintable(Case.Code + " was not filled"));
+	}
+}
+
+// Exports models with the same element on both covers. Each cover must draw its own text.
+void swTests::InstructionsCoverElementsPerCover()
+{
+	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
+	const QString Binary = Environment.value("SW_TEST_BINARY");
+
+	if (Binary.isEmpty())
+		QSKIP("SW_TEST_BINARY is not set");
+
+	QTemporaryDir Folder;
+	QVERIFY(Folder.isValid());
+
+	QProcessEnvironment ExportEnvironment = Environment;
+	ExportEnvironment.insert("XDG_CONFIG_HOME", Folder.filePath("config"));
+	ExportEnvironment.insert("XDG_DATA_HOME", Folder.filePath("data"));
+	ExportEnvironment.insert("XDG_CACHE_HOME", Folder.filePath("cache"));
+
+	if (Environment.value("SW_TEST_NATIVE_DISPLAY") != QLatin1String("1"))
+		ExportEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
+
+	// first and last page of a model with a title on each cover
+	const auto Export = [&](const QString& Name, const QString& Front, const QString& Back, QImage Pages[2])
+	{
+		QFile Model(Folder.filePath(Name + ".ldr"));
+		Model.open(QIODevice::WriteOnly);
+		Model.write("0 Test\r\n0 !SW PAGE_SETUP INSTRUCTION 480 240 16 16 16 16 UNITS 0 0\r\n0 !SW PROPERTY INSTRUCTION COVER SHOW_BACK TRUE\r\n0 !SW PROPERTY INSTRUCTION COVER BACK SHOW_TITLE TRUE\r\n");
+		Model.write(("0 !SW PROPERTY INSTRUCTION COVER FRONT TITLE_TEXT " + Front + "\r\n0 !SW PROPERTY INSTRUCTION COVER BACK TITLE_TEXT " + Back + "\r\n1 4 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n").toUtf8());
+		Model.close();
+
+		QProcess Process;
+		Process.setProcessEnvironment(ExportEnvironment);
+		Process.setProcessChannelMode(QProcess::MergedChannels);
+		Process.start(Binary, { Model.fileName(), "--export-pages", Folder.filePath(Name + "pages") });
+		Process.waitForFinished(120000);
+
+		const QStringList Files = QDir(Folder.filePath(Name + "pages")).entryList({ "*.png" }, QDir::Files, QDir::Name);
+
+		if (!Files.isEmpty())
+		{
+			Pages[0] = QImage(Folder.filePath(Name + "pages/" + Files.first()));
+			Pages[1] = QImage(Folder.filePath(Name + "pages/" + Files.last()));
+		}
+	};
+
+	QImage Base[2], OtherBack[2], OtherFront[2];
+	Export("base", "ONE", "TWO", Base);
+	Export("back", "ONE", "THREE", OtherBack);
+	Export("front", "FOUR", "TWO", OtherFront);
+
+	QVERIFY(!Base[0].isNull() && !Base[1].isNull() && !OtherBack[1].isNull() && !OtherFront[0].isNull());
+	QVERIFY2(Base[0] == OtherBack[0], "the back title changed the front cover");
+	QVERIFY2(Base[1] != OtherBack[1], "the back title was not drawn");
+	QVERIFY2(Base[0] != OtherFront[0], "the front title was not drawn");
+	QVERIFY2(Base[1] == OtherFront[1], "the front title changed the back cover");
+}
+
+// Exports a cover with a placed product ID, then again with the comments shown in the same cell. The product ID must not move.
+void swTests::InstructionsCoverPlacedElementStays()
+{
+	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
+	const QString Binary = Environment.value("SW_TEST_BINARY");
+
+	if (Binary.isEmpty())
+		QSKIP("SW_TEST_BINARY is not set");
+
+	QTemporaryDir Folder;
+	QVERIFY(Folder.isValid());
+
+	QProcessEnvironment ExportEnvironment = Environment;
+	ExportEnvironment.insert("XDG_CONFIG_HOME", Folder.filePath("config"));
+	ExportEnvironment.insert("XDG_DATA_HOME", Folder.filePath("data"));
+	ExportEnvironment.insert("XDG_CACHE_HOME", Folder.filePath("cache"));
+
+	if (Environment.value("SW_TEST_NATIVE_DISPLAY") != QLatin1String("1"))
+		ExportEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
+
+	// front cover with the placed product id
+	const auto Export = [&](const QString& Name, const QString& Extra)
+	{
+		QFile Model(Folder.filePath(Name + ".ldr"));
+		Model.open(QIODevice::WriteOnly);
+		Model.write("0 Test\r\n0 !SW PAGE_SETUP INSTRUCTION 480 240 16 16 16 16 UNITS 0 0\r\n0 !SW PROPERTY INSTRUCTION COVER FRONT SHOW_TITLE FALSE\r\n0 !SW PROPERTY INSTRUCTION COVER FRONT SHOW_IMAGE FALSE\r\n");
+		Model.write(("0 !SW PROPERTY INSTRUCTION COVER FRONT SHOW_PRODUCT_ID TRUE\r\n0 !SW PROPERTY INSTRUCTION COVER FRONT PRODUCT_ID_TEXT AAAA\r\n0 !SW OFFSET INSTRUCTION COVER_FRONT_PRODUCT_ID \"" + Name + ".ldr\" 0 0 -40\r\n" + Extra + "1 4 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n").toUtf8());
+		Model.close();
+
+		QProcess Process;
+		Process.setProcessEnvironment(ExportEnvironment);
+		Process.setProcessChannelMode(QProcess::MergedChannels);
+		Process.start(Binary, { Model.fileName(), "--export-pages", Folder.filePath(Name + "pages") });
+		Process.waitForFinished(120000);
+
+		const QStringList Files = QDir(Folder.filePath(Name + "pages")).entryList({ "*.png" }, QDir::Files, QDir::Name);
+
+		return Files.isEmpty() ? QImage() : QImage(Folder.filePath(Name + "pages/" + Files.first()));
+	};
+
+	const QImage Alone = Export("alone", QString());
+	const QImage Shared = Export("shared", "0 !SW PROPERTY INSTRUCTION COVER FRONT SHOW_COMMENTS TRUE\r\n0 !SW PROPERTY INSTRUCTION COVER FRONT COMMENTS_TEXT BBBB\r\n");
+
+	QVERIFY(!Alone.isNull() && !Shared.isNull() && Alone.size() == Shared.size());
+	QVERIFY2(Alone != Shared, "the comments were not drawn");
+
+	// every product id pixel is still there
+	for (int Y = 0; Y < Alone.height(); Y++)
+		for (int X = 0; X < Alone.width(); X++)
+			if (Alone.pixel(X, Y) != Alone.pixel(0, 0) && Shared.pixel(X, Y) != Alone.pixel(X, Y))
+				QFAIL("the placed product id moved when the comments were shown");
 }

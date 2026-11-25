@@ -24,7 +24,7 @@
      </property>
      <widget class="QWidget" name="tabGeneral">
       <property name="whatsThis">
-       <string>&lt;p&gt;&lt;b&gt;General Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the library, configuration and renderer paths, the online service keys, the author of new models, and how StudWorx starts, opens, exports and edits models. Bundled copies of the color, minifigure and other data files are used until you set your own.&lt;/p&gt;</string>
+       <string>&lt;p&gt;&lt;b&gt;General Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the library, configuration and renderer paths, the online service keys and how StudWorx starts, opens, exports and edits models. Bundled copies of the color, minifigure and other data files are used until you set your own.&lt;/p&gt;</string>
       </property>
       <attribute name="title">
        <string>General</string>
@@ -592,136 +592,6 @@
         </widget>
        </item>
        <item row="2" column="0" colspan="2">
-        <widget class="QGroupBox" name="AuthorGroup">
-         <property name="whatsThis">
-          <string>&lt;p&gt;&lt;b&gt;Author&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The author of new models is built from its name, email address and comment, joined by the author line splitter. Empty parts are left out, and the Author Line field shows the result. For example, Jane Doe, jane@example.com and All rights reserved joined by &amp;quot; | &amp;quot; give Jane Doe | jane@example.com | All rights reserved.&lt;/p&gt;&lt;p&gt;The author of an open model is changed in its properties.&lt;/p&gt;</string>
-         </property>
-         <property name="title">
-          <string>Author</string>
-         </property>
-         <layout class="QGridLayout" name="AuthorLayout">
-          <item row="0" column="0">
-           <widget class="QLabel" name="AuthorNameLabel">
-            <property name="toolTip">
-             <string>Set the name credited as the author of new models.</string>
-            </property>
-            <property name="text">
-             <string>Author Name</string>
-            </property>
-            <property name="buddy">
-             <cstring>AuthorName</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLineEdit" name="AuthorName">
-            <property name="accessibleName">
-             <string>Author Name</string>
-            </property>
-            <property name="toolTip">
-             <string>Set the name credited as the author of new models.</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="AuthorCommentLabel">
-            <property name="toolTip">
-             <string>Set a comment added to the author of new models, such as All rights reserved.</string>
-            </property>
-            <property name="text">
-             <string>Author Comment</string>
-            </property>
-            <property name="buddy">
-             <cstring>AuthorComment</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLineEdit" name="AuthorComment">
-            <property name="accessibleName">
-             <string>Author Comment</string>
-            </property>
-            <property name="toolTip">
-             <string>Set a comment added to the author of new models, such as All rights reserved.</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="AuthorEmailLabel">
-            <property name="toolTip">
-             <string>Set the email address added to the author of new models.</string>
-            </property>
-            <property name="text">
-             <string>Author Email Address</string>
-            </property>
-            <property name="buddy">
-             <cstring>AuthorEmail</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLineEdit" name="AuthorEmail">
-            <property name="accessibleName">
-             <string>Author Email Address</string>
-            </property>
-            <property name="toolTip">
-             <string>Set the email address added to the author of new models.</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="AuthorSplitterLabel">
-            <property name="toolTip">
-             <string>Set the text placed between the parts of the author line, spaces included.</string>
-            </property>
-            <property name="text">
-             <string>Author Line Splitter</string>
-            </property>
-            <property name="buddy">
-             <cstring>AuthorSplitter</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QLineEdit" name="AuthorSplitter">
-            <property name="accessibleName">
-             <string>Author Line Splitter</string>
-            </property>
-            <property name="toolTip">
-             <string>Set the text placed between the parts of the author line, spaces included.</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="AuthorPreviewLabel">
-            <property name="toolTip">
-             <string>Shows the author line written into new models.</string>
-            </property>
-            <property name="text">
-             <string>Author Line</string>
-            </property>
-            <property name="buddy">
-             <cstring>AuthorPreview</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <widget class="QLineEdit" name="AuthorPreview">
-            <property name="accessibleName">
-             <string>Author Line</string>
-            </property>
-            <property name="toolTip">
-             <string>Shows the author line written into new models.</string>
-            </property>
-            <property name="readOnly">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="3" column="0" colspan="2">
         <widget class="QGroupBox" name="ApplicationGroup">
          <property name="title">
           <string>Application</string>
@@ -804,7 +674,7 @@
          </layout>
         </widget>
        </item>
-       <item row="4" column="0" colspan="2">
+       <item row="3" column="0" colspan="2">
         <widget class="QGroupBox" name="StartupGroup">
          <property name="title">
           <string>Startup</string>
@@ -859,7 +729,7 @@
          </layout>
         </widget>
        </item>
-       <item row="5" column="0" colspan="2">
+       <item row="4" column="0" colspan="2">
         <widget class="QGroupBox" name="FilesGroup">
          <property name="whatsThis">
           <string>&lt;p&gt;&lt;b&gt;Files&lt;/b&gt;&lt;/p&gt;&lt;p&gt;These options control how model files are opened and reloaded.&lt;/p&gt;</string>
@@ -1001,7 +871,7 @@
          </layout>
         </widget>
        </item>
-       <item row="6" column="0" colspan="2">
+       <item row="5" column="0" colspan="2">
         <widget class="QGroupBox" name="ExportGroup">
          <property name="title">
           <string>Export</string>
@@ -1066,7 +936,7 @@
          </layout>
         </widget>
        </item>
-       <item row="7" column="0" colspan="2">
+       <item row="6" column="0" colspan="2">
         <widget class="QGroupBox" name="EditingGroup">
          <property name="title">
           <string>Editing</string>
@@ -1218,7 +1088,7 @@
          </layout>
         </widget>
        </item>
-       <item row="8" column="0" colspan="2">
+       <item row="7" column="0" colspan="2">
         <widget class="QGroupBox" name="JointsGroup">
          <property name="title">
           <string>Joints</string>
@@ -1347,7 +1217,7 @@
          </layout>
         </widget>
        </item>
-       <item row="9" column="0" colspan="2">
+       <item row="8" column="0" colspan="2">
         <widget class="QGroupBox" name="FlexiblePartsGroup">
          <property name="title">
           <string>Flexible Parts</string>
@@ -5883,11 +5753,6 @@
   <tabstop>DefaultTemplateBrowseButton</tabstop>
   <tabstop>RebrickableApiKeyEdit</tabstop>
   <tabstop>RebrickableApiKeyButton</tabstop>
-  <tabstop>AuthorName</tabstop>
-  <tabstop>AuthorEmail</tabstop>
-  <tabstop>AuthorComment</tabstop>
-  <tabstop>AuthorSplitter</tabstop>
-  <tabstop>AuthorPreview</tabstop>
   <tabstop>ColorTheme</tabstop>
   <tabstop>Language</tabstop>
   <tabstop>autoLoadMostRecent</tabstop>

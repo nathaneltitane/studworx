@@ -3,7 +3,7 @@
  <class>swPropertiesDialog</class>
  <widget class="QDialog" name="swPropertiesDialog">
   <property name="whatsThis">
-   <string>&lt;p&gt;&lt;b&gt;Model Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit the current model's author, description, and comments on the Summary tab. Measurements and Parts provide read-only information. Choose OK to apply the metadata changes, or Cancel to discard them.&lt;/p&gt;</string>
+   <string>&lt;p&gt;&lt;b&gt;Model Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit the current model's publication details and comments on the Summary tab. Measurements and Parts provide read-only information. Choose OK to apply the metadata changes, or Cancel to discard them.&lt;/p&gt;</string>
   </property>
   <property name="geometry">
    <rect>
@@ -24,7 +24,7 @@
      </property>
      <widget class="QWidget" name="tabSummary">
       <property name="whatsThis">
-       <string>&lt;p&gt;&lt;b&gt;Model Summary&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Author, description, and comments are stored in the model file when you save it. Measurements show its overall size.&lt;/p&gt;</string>
+       <string>&lt;p&gt;&lt;b&gt;Model Summary&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Publication details and notes are stored in the model file when you save it. Measurements show its overall size.&lt;/p&gt;</string>
       </property>
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -36,82 +36,257 @@
        <string>Summary</string>
       </attribute>
       <layout class="QFormLayout" name="formLayout_3">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label">
-         <property name="buddy">
-          <cstring>AuthorEdit</cstring>
+       <item row="0" column="0" colspan="2">
+        <widget class="QGroupBox" name="PublicationGroup">
+         <property name="title">
+          <string>Publication</string>
          </property>
-         <property name="toolTip">
-          <string>Enter the author credited in this model.</string>
-         </property>
-         <property name="text">
-          <string>Author</string>
-         </property>
+         <layout class="QFormLayout" name="publicationLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="DescriptionLabel">
+            <property name="buddy">
+             <cstring>DescriptionEdit</cstring>
+            </property>
+            <property name="toolTip">
+             <string>Enter the title of this model.</string>
+            </property>
+            <property name="text">
+             <string>Title</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="DescriptionEdit">
+            <property name="toolTip">
+             <string>Enter the title of this model.</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;p&gt;&lt;b&gt;Title&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The title of this model, shown on the instructions cover. Use %title to show it in any instructions text.&lt;/p&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="AuthorLabel">
+            <property name="buddy">
+             <cstring>AuthorEdit</cstring>
+            </property>
+            <property name="toolTip">
+             <string>Enter the author credited in this model.</string>
+            </property>
+            <property name="text">
+             <string>Author</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="AuthorEdit">
+            <property name="toolTip">
+             <string>Enter the author credited in this model.</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;p&gt;&lt;b&gt;Author&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The author credited in this model. Use %author to show it in any instructions text.&lt;/p&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="ProductIdLabel">
+            <property name="buddy">
+             <cstring>ProductIdEdit</cstring>
+            </property>
+            <property name="toolTip">
+             <string>Enter the product number of this model.</string>
+            </property>
+            <property name="text">
+             <string>Product ID</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="ProductIdEdit">
+            <property name="toolTip">
+             <string>Enter the product number of this model.</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;p&gt;&lt;b&gt;Product ID&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The product number of this model. Use %id to show it in any instructions text.&lt;/p&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="VersionLabel">
+            <property name="buddy">
+             <cstring>VersionEdit</cstring>
+            </property>
+            <property name="toolTip">
+             <string>Enter the version of this model.</string>
+            </property>
+            <property name="text">
+             <string>Version</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="VersionEdit">
+            <property name="toolTip">
+             <string>Enter the version of this model.</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;p&gt;&lt;b&gt;Version&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The version of this model. Use %version to show it in any instructions text.&lt;/p&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="PublicationDateLabel">
+            <property name="buddy">
+             <cstring>PublicationDateEdit</cstring>
+            </property>
+            <property name="toolTip">
+             <string>Enter the date this model was published.</string>
+            </property>
+            <property name="text">
+             <string>Publication Date</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="PublicationDateEdit">
+            <property name="toolTip">
+             <string>Enter the date this model was published.</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;p&gt;&lt;b&gt;Publication Date&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The date this model was published, typed as you want it shown. Use %date to show it in any instructions text.&lt;/p&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="UrlLabel">
+            <property name="buddy">
+             <cstring>UrlEdit</cstring>
+            </property>
+            <property name="toolTip">
+             <string>Enter the web address of this model.</string>
+            </property>
+            <property name="text">
+             <string>URL</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="UrlEdit">
+            <property name="toolTip">
+             <string>Enter the web address of this model.</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;p&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The web address of this model. Use %url to show it in any instructions text, the Publication URL box shows it by default.&lt;/p&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="ContactLabel">
+            <property name="buddy">
+             <cstring>ContactEdit</cstring>
+            </property>
+            <property name="toolTip">
+             <string>Enter how to reach the publisher.</string>
+            </property>
+            <property name="text">
+             <string>Contact</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="ContactEdit">
+            <property name="toolTip">
+             <string>Enter how to reach the publisher.</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;p&gt;&lt;b&gt;Contact&lt;/b&gt;&lt;/p&gt;&lt;p&gt;How to reach the publisher, such as an email address. Use %contact to show it in any instructions text.&lt;/p&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="CopyrightLabel">
+            <property name="buddy">
+             <cstring>CopyrightEdit</cstring>
+            </property>
+            <property name="toolTip">
+             <string>Enter the copyright or license of this model.</string>
+            </property>
+            <property name="text">
+             <string>Copyright</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLineEdit" name="CopyrightEdit">
+            <property name="toolTip">
+             <string>Enter the copyright or license of this model.</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;p&gt;&lt;b&gt;Copyright&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The copyright or license of this model, saved as the LDraw license line. Use %copyright to show it in any instructions text.&lt;/p&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="NoticeLabel">
+            <property name="buddy">
+             <cstring>NoticeEdit</cstring>
+            </property>
+            <property name="toolTip">
+             <string>Enter a legal or trademark notice.</string>
+            </property>
+            <property name="text">
+             <string>Notice</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="1">
+           <widget class="QLineEdit" name="NoticeEdit">
+            <property name="toolTip">
+             <string>Enter a legal or trademark notice.</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;p&gt;&lt;b&gt;Notice&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A legal or trademark notice for this model. Use %notice to show it in any instructions text.&lt;/p&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="AuthorEdit">
-         <property name="toolTip">
-          <string>Enter the author credited in this model.</string>
+       <item row="1" column="0" colspan="2">
+        <widget class="QGroupBox" name="NotesGroup">
+         <property name="title">
+          <string>Notes</string>
          </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_3">
-         <property name="buddy">
-          <cstring>DescriptionEdit</cstring>
-         </property>
-         <property name="toolTip">
-          <string>Enter a short description of this model.</string>
-         </property>
-         <property name="text">
-          <string>Description</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="DescriptionEdit">
-         <property name="toolTip">
-          <string>Enter a short description of this model.</string>
-         </property>
+         <layout class="QVBoxLayout" name="notesLayout">
+          <item>
+           <widget class="QTextEdit" name="CommentsEdit">
+            <property name="toolTip">
+             <string>Enter plain-text notes to store with this model.</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;p&gt;&lt;b&gt;Comments&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Plain-text notes stored with this model. Use %comments to show them in any instructions text.&lt;/p&gt;</string>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="acceptRichText">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item row="2" column="0">
-        <widget class="QLabel" name="label_2">
-         <property name="buddy">
-          <cstring>CommentsEdit</cstring>
-         </property>
-         <property name="toolTip">
-          <string>Enter plain-text notes to store with this model.</string>
-         </property>
-         <property name="text">
-          <string>Comments</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QTextEdit" name="CommentsEdit">
-         <property name="toolTip">
-          <string>Enter plain-text notes to store with this model.</string>
-         </property>
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="acceptRichText">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
         <widget class="QLabel" name="label_4">
          <property name="toolTip">
           <string>Overall model dimensions along the X, Y, and Z axes.</string>
          </property>
          <property name="whatsThis">
-          <string>&lt;p&gt;&lt;b&gt;Model Measurements&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The dimensions of the model's bounding box are shown in centimeters, inches, and LDraw units (ldu). The values are read-only and include parts across all steps.&lt;/p&gt;</string>
+          <string>&lt;p&gt;&lt;b&gt;Model Measurements&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The dimensions of the model's bounding box are shown in centimeters, inches, and LDraw units (ldu). The values are read-only and include parts across all steps. Use %size to show them in any instructions text.&lt;/p&gt;</string>
          </property>
          <property name="text">
           <string>Measurements</string>
@@ -121,13 +296,13 @@
          </property>
         </widget>
        </item>
-       <item row="3" column="1">
+       <item row="2" column="1">
         <widget class="QLabel" name="MeasurementsLabel">
          <property name="toolTip">
           <string>Overall model dimensions along the X, Y, and Z axes.</string>
          </property>
          <property name="whatsThis">
-          <string>&lt;p&gt;&lt;b&gt;Model Measurements&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The dimensions of the model's bounding box are shown in centimeters, inches, and LDraw units (ldu). The values are read-only and include parts across all steps.&lt;/p&gt;</string>
+          <string>&lt;p&gt;&lt;b&gt;Model Measurements&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The dimensions of the model's bounding box are shown in centimeters, inches, and LDraw units (ldu). The values are read-only and include parts across all steps. Use %size to show them in any instructions text.&lt;/p&gt;</string>
          </property>
          <property name="accessibleName">
           <string>Model Measurements</string>
@@ -137,13 +312,13 @@
          </property>
         </widget>
        </item>
-       <item row="4" column="0">
+       <item row="3" column="0">
         <widget class="QLabel" name="label_5">
          <property name="toolTip">
           <string>Total model weight from the BrickLink catalog.</string>
          </property>
          <property name="whatsThis">
-          <string>&lt;p&gt;&lt;b&gt;Model Weight&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The total weight in grams and ounces of every part across all steps, from the BrickLink part weights. Parts without a known weight are counted as N/A and add nothing to the total.&lt;/p&gt;</string>
+          <string>&lt;p&gt;&lt;b&gt;Model Weight&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The total weight in grams and ounces of every part across all steps, from the BrickLink part weights. Parts without a known weight are counted as N/A and add nothing to the total. Use %weight to show it in any instructions text.&lt;/p&gt;</string>
          </property>
          <property name="text">
           <string>Weight</string>
@@ -153,13 +328,13 @@
          </property>
         </widget>
        </item>
-       <item row="4" column="1">
+       <item row="3" column="1">
         <widget class="QLabel" name="WeightLabel">
          <property name="toolTip">
           <string>Total model weight from the BrickLink catalog.</string>
          </property>
          <property name="whatsThis">
-          <string>&lt;p&gt;&lt;b&gt;Model Weight&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The total weight in grams and ounces of every part across all steps, from the BrickLink part weights. Parts without a known weight are counted as N/A and add nothing to the total.&lt;/p&gt;</string>
+          <string>&lt;p&gt;&lt;b&gt;Model Weight&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The total weight in grams and ounces of every part across all steps, from the BrickLink part weights. Parts without a known weight are counted as N/A and add nothing to the total. Use %weight to show it in any instructions text.&lt;/p&gt;</string>
          </property>
          <property name="accessibleName">
           <string>Model Weight</string>
@@ -299,8 +474,15 @@
  <tabstops>
   <tabstop>tabWidget</tabstop>
   <tabstop>buttonBox</tabstop>
-  <tabstop>AuthorEdit</tabstop>
   <tabstop>DescriptionEdit</tabstop>
+  <tabstop>AuthorEdit</tabstop>
+  <tabstop>ProductIdEdit</tabstop>
+  <tabstop>VersionEdit</tabstop>
+  <tabstop>PublicationDateEdit</tabstop>
+  <tabstop>UrlEdit</tabstop>
+  <tabstop>ContactEdit</tabstop>
+  <tabstop>CopyrightEdit</tabstop>
+  <tabstop>NoticeEdit</tabstop>
   <tabstop>CommentsEdit</tabstop>
   <tabstop>PartsTable</tabstop>
   <tabstop>ExportBrickLinkButton</tabstop>

@@ -73,6 +73,7 @@ protected:
 	{
 		Document,
 		Cover,
+		Publication,
 		Page,
 		Header,
 		Footer,
@@ -109,10 +110,8 @@ protected:
 		StepNumber,
 		PartsList,
 		PageNumber,
-		CoverTitle,
-		CoverAuthor,
+		Publication,
 		CoverImage,
-		CoverPartCount,
 		BillOfMaterialsPartCount,
 		PagePartCount,
 		SubmodelPreview,
@@ -176,6 +175,7 @@ protected:
 	void SetThumbnailPageScope(bool PageOnly);
 	void DividerPresetClicked(int Preset);
 	void SetBoxElement(swInstructionsBoxElement Element);
+	void SetPublicationCover(bool Back);
 
 	void UpdateWidget();
 	void UpdateEditors();
@@ -221,6 +221,8 @@ protected:
 	QComboBox* mBoxElementComboBox = nullptr;
 	swInstructionsBoxElement mBoxElement = swInstructionsBoxElement::StepImage;
 	std::array<std::vector<QWidget*>, static_cast<int>(swInstructionsBoxElement::Count)> mBoxRows;
+	std::array<std::vector<QWidget*>, 2> mPublicationRows;
+	QComboBox* mPublicationCoverComboBox = nullptr;
 	QVBoxLayout* mCategoriesLayout = nullptr;
 	QScrollArea* mScrollArea = nullptr;
 };

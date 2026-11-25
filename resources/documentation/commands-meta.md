@@ -160,7 +160,14 @@ Each light property takes the `_KEY` form when animated.
 
 | Command | Handling | Use |
 | --- | --- | --- |
-| `0 !SW COMMENT MODEL <text>` | Read, Write | model comment, one line each |
+| `0 !SW COMMENT MODEL <text>` | Read, Write | model comment, one line each, `%comments` in instructions texts |
+| `0 !SW PRODUCT_ID MODEL <text>` | Read, Write | product number of the model, `%id` in instructions texts |
+| `0 !SW VERSION MODEL <text>` | Read, Write | version of the model, `%version` in instructions texts |
+| `0 !SW PUBLICATION_DATE MODEL <text>` | Read, Write | publication date as free text, `%date` in instructions texts |
+| `0 !SW URL MODEL <text>` | Read, Write | web address of the model, `%url` in instructions texts and the automatic Publication URL |
+| `0 !SW CONTACT MODEL <text>` | Read, Write | how to reach the publisher, `%contact` in instructions texts |
+| `0 !SW NOTICE MODEL <text>` | Read, Write | legal or trademark notice of the model, `%notice` in instructions texts |
+| `0 !LICENSE <text>` | Read, Write | copyright or license of the model, written after `0 Author:`, `%copyright` in instructions texts |
 | `0 !SW AUTHOR MODEL <name>` | Read | author, written as `0 Author:` |
 | `0 !SW DESCRIPTION MODEL <text>` | Read | description, written as the first line |
 | `0 !SW ASSET_SOURCE MODEL <base64 path>` | Read, Write | folder searched for embedded file sources |
@@ -187,37 +194,298 @@ Each light property takes the `_KEY` form when animated.
 
 ### Instruction
 
-Instructions settings, written in the main model header. Models are quoted file names, `-` for none. Steps are `STEP <model> <step>`, pages `<STEPS|COVER|BILL_OF_MATERIALS|BLANK|BACK_COVER> <model> <step> <rank>` and page elements `<element> <model> <step>`, with the element `NONE`, `STEP_NUMBER`, `PARTS_LIST`, `COVER_TITLE`, `COVER_AUTHOR`, `BILL_OF_MATERIALS`, `STEP_IMAGE`, `COVER_IMAGE`, `PAGE_NUMBER`, `NOTICE`, `POINTER`, `COVER_PART_COUNT`, `BILL_OF_MATERIALS_PART_COUNT`, `PAGE_PART_COUNT`, `SUBMODEL_PREVIEW`, `SUBMODEL_PREVIEW_PART_COUNT`, `PARTS_LIST_QUANTITY` or `IMAGE`. Values are `TRUE`/`FALSE`, numbers, `#RRGGBBAA` colors or text to the end of the line, with `\\`, `\"` and `\n` escaped.
+Instructions settings, written in the main model header. Models are quoted file names, `-` for none. Steps are `STEP <model> <step>`, pages `<STEPS|COVER|BILL_OF_MATERIALS|BLANK|BACK_COVER> <model> <step> <rank>` and page elements `<element> <model> <step>`, with the element `NONE`, `STEP_NUMBER`, `PARTS_LIST`, `COVER_TITLE`, `COVER_AUTHOR`, `BILL_OF_MATERIALS`, `STEP_IMAGE`, `COVER_IMAGE`, `PAGE_NUMBER`, `NOTICE`, `POINTER`, `COVER_PART_COUNT`, `BILL_OF_MATERIALS PART_COUNT`, `PAGE_PART_COUNT`, `SUBMODEL_PREVIEW`, `STEP SUBMODEL_PREVIEW_PART_COUNT`, `STEP PARTS_LIST_QUANTITY`, `IMAGE`, `PUBLICATION_URL`, `PRODUCT_ID`, `VERSION`, `PUBLICATION_DATE`, `CONTACT`, `COPYRIGHT`, `PUBLICATION_NOTICE`, `MEASUREMENTS`, `WEIGHT` or `COMMENTS`. Values are `TRUE`/`FALSE`, numbers, `#RRGGBBAA` colors or text to the end of the line, with `\\`, `\"` and `\n` escaped.
 
 | Command | Handling | Use |
 | --- | --- | --- |
-| Template | Read | a model file holding `PROPERTY`, `STEPS_PER_PAGE` and `IMAGE` lines, written by Save Template; Apply Template copies them into the model, and the Default Template of the preferences applies them under every model, whose own lines win |
-| `0 !SW PROPERTY INSTRUCTION <name> <value>` | Read, Write | document property, such as `STEP_NUMBER_BORDER_WIDTH 3` or `COVER_TITLE_FILE title.txt`; `COVER_TITLE`, `COVER_AUTHOR` and `BILL_OF_MATERIALS_TITLE` take `_TEXT` and `_FILE`, the file wins over the text, and files are relative to the model file |
-| `0 !SW PROPERTY INSTRUCTION USE_DOCUMENT_FONT <TRUE\|FALSE>` | Read, Write | give all text the typeface of `DOCUMENT_FONT`, each text keeps its own size, default `FALSE`; `USE_DOCUMENT_FONT_SIZE` gives all text the size of `DOCUMENT_FONT` and each text keeps its typeface. A file with `USE_DOCUMENT_FONT TRUE` and no `USE_DOCUMENT_FONT_SIZE` line uses both |
-| `0 !SW PROPERTY INSTRUCTION SHOW_COVER_PART_COUNT <TRUE\|FALSE>` | Read, Write | show the part count of the whole model on the cover, default `FALSE`; `SHOW_BILL_OF_MATERIALS_PART_COUNT` does the same under the bill of materials title and `SHOW_PAGE_PART_COUNT` shows the new parts of the steps on each step page |
-| `0 !SW PROPERTY INSTRUCTION PART_COUNT_TEXT <text>` | Read, Write | text of all part counts and submodel previews with `%1` for the number, default `%1 PIECES`; `PART_COUNT_FILE` takes a text file relative to the model file that wins over the text |
-| `0 !SW PROPERTY INSTRUCTION PART_COUNT_FONT <font>` | Read, Write | font of the cover and bill of materials part count, the bill of materials one in the size of the `BILL_OF_MATERIALS_TITLE_FONT`, `PART_COUNT_COLOR` is its color; `PAGE_PART_COUNT_FONT` and `PAGE_PART_COUNT_COLOR` style the step page count and the submodel preview count |
-| `0 !SW PROPERTY INSTRUCTION PART_COUNT_PLACEMENT <0-24>` | Read, Write | placement of the cover part count, `BILL_OF_MATERIALS_PART_COUNT_PLACEMENT` (top right, beside the title, or past the title when they meet) and `PAGE_PART_COUNT_PLACEMENT` place the others, and `SUBMODEL_PREVIEW_PLACEMENT` the preview; on the page, the outer cells 0-4, 5, 9, 10, 14, 15, 19 and 20-24 put these, the cover texts and the page number against the paper edge; `SUBMODEL_PREVIEW_PART_COUNT_PLACEMENT` places the preview count around the preview, default `22`, and `PARTS_LIST_QUANTITY_PLACEMENT` each parts list quantity around its part, default `21`, inner cells inside, outer cells outside |
-| `0 !SW PROPERTY INSTRUCTION PART_COUNT_<MARGIN\|PADDING\|BORDER_WIDTH\|BORDER_COLOR\|BACKGROUND_COLOR\|CORNER_RADIUS> <value>` | Read, Write | box of the part counts, `SUBMODEL_PREVIEW_` takes the same suffixes for the box of the submodel preview |
-| `0 !SW PROPERTY INSTRUCTION SHOW_SUBMODEL_PREVIEW <TRUE\|FALSE>` | Read, Write | show the finished submodel with its part count on the first page of each submodel, default `FALSE`; `SUBMODEL_PREVIEW_MODEL_SIZE` is the longest side of its model in points, default `0` fits it to its box |
-| `0 !SW PROPERTY INSTRUCTION FINAL_MODEL_MARGIN <value>` | Read, Write | box of the final model area: `FINAL_MODEL_MARGIN`, `FINAL_MODEL_PADDING`, `FINAL_MODEL_BORDER_WIDTH`, `FINAL_MODEL_BORDER_COLOR`, `FINAL_MODEL_CORNER_RADIUS` and `FINAL_MODEL_BACKGROUND_COLOR`, and a page can have its own background; default `0`, black and transparent |
-| `0 !SW PROPERTY INSTRUCTION STEP_MARGIN <value>` | Read, Write | box of each step area: `STEP_MARGIN`, `STEP_PADDING`, `STEP_BORDER_WIDTH`, `STEP_BORDER_COLOR`, `STEP_CORNER_RADIUS`, and `STEP_BACKGROUND_COLOR` as its background color, default `0`, black and transparent |
-| `0 !SW PROPERTY INSTRUCTION SHOW_FINAL_MODEL_PAGE <TRUE\|FALSE>` | Read, Write | close the main model steps with a page showing the finished model, default `TRUE` |
-| `0 !SW PROPERTY INSTRUCTION SHOW_BACK_COVER <TRUE\|FALSE>` | Read, Write | end the instructions with a back cover after the bill of materials, default `TRUE`, blank until it gets images |
+| Template | Read | a model file holding `PROPERTY`, `STEPS_PER_PAGE`, `IMAGE` and `NOTICE` lines, written by Save Template; Apply Template copies them into the model, and the Default Template of the preferences applies them under every model, whose own lines win |
+| `0 !SW PROPERTY INSTRUCTION <name> <value>` | Read, Write | document property, the scope words first and then the element and field, such as `STEP NUMBER_BORDER_WIDTH 3` or `COVER FRONT TITLE_TEXT MODEL // TITLE`; the scopes are `COVER FRONT`, `COVER BACK`, `STEP`, `PAGE`, `BILL_OF_MATERIALS`, `BAND <HEADER\|FOOTER\|LEFT\|RIGHT>`, `DOCUMENT`, `NOTICE`, `IMAGE`, `WATERMARK`, `POINTER` and `PART_COUNT`, the old unscoped names are not read, the full list of old and new names is under Property Names; each cover has its own `<element>_<field>` set for `TITLE`, `AUTHOR`, `PRODUCT_ID`, `VERSION`, `PUBLICATION_DATE`, `URL`, `CONTACT`, `COPYRIGHT`, `NOTICE`, `COMMENTS`, `MEASUREMENTS`, `WEIGHT` and `PIECES`, the fields being `TEXT`, `FONT`, `COLOR`, `PLACEMENT`, `ALIGNMENT`, `VERTICAL_ALIGNMENT`, `MARGIN`, `PADDING`, `BORDER_WIDTH`, `BORDER_COLOR`, `BACKGROUND_COLOR` and `CORNER_RADIUS`, and `SHOW_<element>` shows it, only the front title and author show by default; empty texts show the model field, the author always shows the model author, `PIECES` the part count of the whole model, and `BILL_OF_MATERIALS TITLE_TEXT` takes `TITLE_FILE` too, the file wins over the text and is relative to the model file; `%size`, `%weight` and `%comments` fill in the measurements, weight and comments |
+| `0 !SW PROPERTY INSTRUCTION DOCUMENT USE_FONT <TRUE\|FALSE>` | Read, Write | give all text the typeface of `DOCUMENT FONT`, each text keeps its own size, default `FALSE`; `DOCUMENT USE_FONT_SIZE` gives all text the size of `DOCUMENT FONT` and each text keeps its typeface. A file with `DOCUMENT USE_FONT TRUE` and no `DOCUMENT USE_FONT_SIZE` line uses both |
+| `0 !SW PROPERTY INSTRUCTION COVER FRONT SHOW_PIECES <TRUE\|FALSE>` | Read, Write | show the part count of the whole model on the front cover, default `FALSE`, `COVER BACK SHOW_PIECES` on the back cover; `BILL_OF_MATERIALS SHOW_PART_COUNT` shows it under the bill of materials title and `PAGE SHOW_PART_COUNT` shows the new parts of the steps on each step page |
+| `0 !SW PROPERTY INSTRUCTION PART_COUNT TEXT <text>` | Read, Write | text of all part counts and submodel previews with `%1` for the number, default `%1 PIECES`; `PART_COUNT FILE` takes a text file relative to the model file that wins over the text |
+| `0 !SW PROPERTY INSTRUCTION PART_COUNT FONT <font>` | Read, Write | font of the bill of materials part count, in the size of the `BILL_OF_MATERIALS TITLE_FONT`, `PART_COUNT COLOR` is its color; `PAGE PART_COUNT_FONT` and `PAGE PART_COUNT_COLOR` style the step page count and the submodel preview count |
+| `0 !SW PROPERTY INSTRUCTION BILL_OF_MATERIALS PART_COUNT_PLACEMENT <0-24>` | Read, Write | placement of the bill of materials part count (top right, beside the title, or past the title when they meet), and `PAGE PART_COUNT_PLACEMENT` places the step page count, and `STEP SUBMODEL_PREVIEW_PLACEMENT` the preview; on the page, the outer cells 0-4, 5, 9, 10, 14, 15, 19 and 20-24 put these, the cover elements and the page number against the paper edge; `STEP SUBMODEL_PREVIEW_PART_COUNT_PLACEMENT` places the preview count around the preview, default `22`, and `STEP PARTS_LIST_QUANTITY_PLACEMENT` each parts list quantity around its part, default `21`, inner cells inside, outer cells outside |
+| `0 !SW PROPERTY INSTRUCTION STEP SUBMODEL_PREVIEW_<MARGIN\|PADDING\|BORDER_WIDTH\|BORDER_COLOR\|BACKGROUND_COLOR\|CORNER_RADIUS> <value>` | Read, Write | box of the submodel preview |
+| `0 !SW PROPERTY INSTRUCTION STEP SHOW_SUBMODEL_PREVIEW <TRUE\|FALSE>` | Read, Write | show the finished submodel with its part count on the first page of each submodel, default `FALSE`; `STEP SUBMODEL_PREVIEW_MODEL_SIZE` is the longest side of its model in points, default `0` fits it to its box |
+| `0 !SW PROPERTY INSTRUCTION STEP FINAL_MODEL_MARGIN <value>` | Read, Write | box of the final model area: `STEP FINAL_MODEL_MARGIN`, `STEP FINAL_MODEL_PADDING`, `STEP FINAL_MODEL_BORDER_WIDTH`, `STEP FINAL_MODEL_BORDER_COLOR`, `STEP FINAL_MODEL_CORNER_RADIUS` and `STEP FINAL_MODEL_BACKGROUND_COLOR`, and a page can have its own background; default `0`, black and transparent |
+| `0 !SW PROPERTY INSTRUCTION STEP AREA_MARGIN <value>` | Read, Write | box of each step area: `STEP AREA_MARGIN`, `STEP AREA_PADDING`, `STEP AREA_BORDER_WIDTH`, `STEP AREA_BORDER_COLOR`, `STEP AREA_CORNER_RADIUS`, and `STEP BACKGROUND_COLOR` as its background color, default `0`, black and transparent |
+| `0 !SW PROPERTY INSTRUCTION STEP SHOW_FINAL_MODEL_PAGE <TRUE\|FALSE>` | Read, Write | close the main model steps with a page showing the finished model, default `TRUE` |
+| `0 !SW PROPERTY INSTRUCTION COVER SHOW_BACK <TRUE\|FALSE>` | Read, Write | end the instructions with a back cover after the bill of materials, default `TRUE`, blank until it gets images |
 | `0 !SW PAGE_PROPERTY INSTRUCTION STEP <model> <step> <name> <value>` | Read, Write | property of the page starting at the step |
-| `0 !SW STEPS_PER_PAGE INSTRUCTION <rows> <columns> [VERTICAL] [FINAL_MODEL]` | Read, Write | steps per page, filled down instead of across, with the finished model in the room left; a full last page adds no extra page and the final model page is left out; old files may still have `FINAL_MODEL_COLOR`, read and ignored, the final model takes the Page Background color until it has its own |
+| `0 !SW STEPS_PER_PAGE INSTRUCTION <rows> <columns> [VERTICAL] [FINAL_MODEL]` | Read, Write | steps per page, filled down instead of across, with the finished model in the room left; a full last page adds no extra page and the final model page is left out; old files may still have `STEP FINAL_MODEL_COLOR`, read and ignored, the final model takes the Page Background color until it has its own |
 | `0 !SW PAGE_STEPS_PER_PAGE INSTRUCTION STEP <model> <step> <rows> <columns> [VERTICAL] [FINAL_MODEL]` | Read, Write | steps per page from the step on, same words as above |
 | `0 !SW BLANK_PAGE INSTRUCTION STEP <model> <step>` | Read, Write | blank page before the step |
 | `0 !SW OFFSET INSTRUCTION <element> <model> <step> <x> <y>` | Read, Write | element moved from its place |
 | `0 !SW LOCK INSTRUCTION <element> <model> <step> <x> <y>` | Read, Write | element locked at a position |
 | `0 !SW NOTICE INSTRUCTION <id> PAGE <page> POSITION <x> <y> [FILE "<file>"] TEXT <text>` | Read, Write | notice on a page, the text file wins over the text |
 | `0 !SW IMAGE INSTRUCTION <id> <NONE\|FRONT\|BACK\|BOTH> PLACEMENT <0-24> SIZE <1-100> FILE "<file>"` | Read, Write | linked image on the front cover, the back cover or both, like a logo, placed on the page grid with the outer cells against the paper edge, its width in percent of the page width, the file relative to the model file; `NONE` hides an image of the default template |
-| `0 !SW PROPERTY INSTRUCTION SHOW_HEADER_BAND <TRUE\|FALSE>` | Read, Write | show the header band on the step and blank pages, default `FALSE`; `SHOW_FOOTER_BAND`, `SHOW_LEFT_BAND` and `SHOW_RIGHT_BAND` do the same for the other edges, `HEADER_BAND_SIZE` is the band thickness from the paper edge, default `72`, `HEADER_BAND_COLOR` its `#RRGGBBAA` background color, default transparent, and `HEADER_BAND_RESERVE` keeps the page content clear of it, default `TRUE`; the other edges have `FOOTER_BAND_SIZE`, `LEFT_BAND_SIZE`, `RIGHT_BAND_SIZE`, `FOOTER_BAND_COLOR`, `LEFT_BAND_COLOR`, `RIGHT_BAND_COLOR`, `FOOTER_BAND_RESERVE`, `LEFT_BAND_RESERVE` and `RIGHT_BAND_RESERVE`; every band is a box, with `HEADER_BAND_MARGIN`, `HEADER_BAND_PADDING`, `HEADER_BAND_BORDER_WIDTH`, `HEADER_BAND_BORDER_COLOR`, `HEADER_BAND_CORNER_RADIUS`, and the same five for the other bands: `FOOTER_BAND_MARGIN`, `FOOTER_BAND_PADDING`, `FOOTER_BAND_BORDER_WIDTH`, `FOOTER_BAND_BORDER_COLOR`, `FOOTER_BAND_CORNER_RADIUS`, `LEFT_BAND_MARGIN`, `LEFT_BAND_PADDING`, `LEFT_BAND_BORDER_WIDTH`, `LEFT_BAND_BORDER_COLOR`, `LEFT_BAND_CORNER_RADIUS`, `RIGHT_BAND_MARGIN`, `RIGHT_BAND_PADDING`, `RIGHT_BAND_BORDER_WIDTH`, `RIGHT_BAND_BORDER_COLOR` and `RIGHT_BAND_CORNER_RADIUS`, all default `0` and black; a page can have its own values |
-| `0 !SW PROPERTY INSTRUCTION SHOW_WATERMARK <TRUE\|FALSE>` | Read, Write | show the watermark on the page, default `TRUE`, a page can hide it; `WATERMARK_FONT` and `WATERMARK_TEXT_COLOR` set the watermark text, default Arial 16 and `#00000040`, the color alpha sets how strongly the text shows; `WATERMARK_OPACITY` is the watermark image opacity in percent, default `25`; `WATERMARK_ROTATION` turns watermarks around their center in degrees, default `0`; the watermark is a box with `WATERMARK_MARGIN`, `WATERMARK_PADDING`, `WATERMARK_BORDER_WIDTH`, `WATERMARK_BORDER_COLOR`, `WATERMARK_CORNER_RADIUS` and `WATERMARK_BACKGROUND_COLOR`, default `0`, black and transparent |
-| `0 !SW PROPERTY INSTRUCTION SHOW_BILL_OF_MATERIALS_TITLE <TRUE\|FALSE>` | Read, Write | show the title of the bill of materials; the bill of materials keeps its own settings apart from the steps: `BILL_OF_MATERIALS_TITLE_PLACEMENT` places the title, `BILL_OF_MATERIALS_FONT` and `BILL_OF_MATERIALS_TEXT_COLOR` style the list text, `BILL_OF_MATERIALS_SHOW_COUNTS`, `BILL_OF_MATERIALS_SORT_ORDER`, `BILL_OF_MATERIALS_LAYOUT`, `BILL_OF_MATERIALS_ALIGNMENT`, `BILL_OF_MATERIALS_THUMBNAIL_SIZE` and `BILL_OF_MATERIALS_COUNT_PLACEMENT` work like their `PARTS_LIST_` versions; the title box is `BILL_OF_MATERIALS_TITLE_MARGIN`, `BILL_OF_MATERIALS_TITLE_PADDING`, `BILL_OF_MATERIALS_TITLE_BORDER_WIDTH`, `BILL_OF_MATERIALS_TITLE_BORDER_COLOR`, `BILL_OF_MATERIALS_TITLE_CORNER_RADIUS`, `BILL_OF_MATERIALS_TITLE_BACKGROUND_COLOR`, the list box `BILL_OF_MATERIALS_LIST_MARGIN`, `BILL_OF_MATERIALS_LIST_PADDING`, `BILL_OF_MATERIALS_LIST_BORDER_WIDTH`, `BILL_OF_MATERIALS_LIST_BORDER_COLOR`, `BILL_OF_MATERIALS_LIST_CORNER_RADIUS`, `BILL_OF_MATERIALS_LIST_BACKGROUND_COLOR`, the quantity box `BILL_OF_MATERIALS_QUANTITY_MARGIN`, `BILL_OF_MATERIALS_QUANTITY_PADDING`, `BILL_OF_MATERIALS_QUANTITY_BORDER_WIDTH`, `BILL_OF_MATERIALS_QUANTITY_BORDER_COLOR`, `BILL_OF_MATERIALS_QUANTITY_CORNER_RADIUS`, `BILL_OF_MATERIALS_QUANTITY_BACKGROUND_COLOR` and the part count box `BILL_OF_MATERIALS_PART_COUNT_MARGIN`, `BILL_OF_MATERIALS_PART_COUNT_PADDING`, `BILL_OF_MATERIALS_PART_COUNT_BORDER_WIDTH`, `BILL_OF_MATERIALS_PART_COUNT_BORDER_COLOR`, `BILL_OF_MATERIALS_PART_COUNT_CORNER_RADIUS`, `BILL_OF_MATERIALS_PART_COUNT_BACKGROUND_COLOR`; a file without them takes the step values |
-| `0 !SW PROPERTY INSTRUCTION LOCK_HOME_VIEW <TRUE\|FALSE>` | Read, Write | draw every model from the home view instead of the model view, default `FALSE`, a step with its own step view keeps it |
-| `0 !SW NOTICE INSTRUCTION <id> SHOW <HEADER\|FOOTER\|LEFT\|RIGHT\|WATERMARK> POSITION <x> <y> [FILE "<file>"] TEXT <text>` | Read, Write | notice repeated on every step page in a band or as the watermark, the position is relative to the band, `%page` and `%title` in the text fill in the page number and the model title; images also take `HEADER`, `FOOTER`, `LEFT`, `RIGHT` and `WATERMARK` as their pages |
+| `0 !SW PROPERTY INSTRUCTION BAND HEADER SHOW <TRUE\|FALSE>` | Read, Write | show the header band on the step and blank pages, default `FALSE`; `BAND FOOTER SHOW`, `BAND LEFT SHOW` and `BAND RIGHT SHOW` do the same for the other edges, `BAND HEADER SIZE` is the band thickness from the paper edge, default `72`, `BAND HEADER COLOR` its `#RRGGBBAA` background color, default transparent, and `BAND HEADER RESERVE` keeps the page content clear of it, default `TRUE`; the other edges have `BAND FOOTER SIZE`, `BAND LEFT SIZE`, `BAND RIGHT SIZE`, `BAND FOOTER COLOR`, `BAND LEFT COLOR`, `BAND RIGHT COLOR`, `BAND FOOTER RESERVE`, `BAND LEFT RESERVE` and `BAND RIGHT RESERVE`; every band is a box, with `BAND HEADER MARGIN`, `BAND HEADER PADDING`, `BAND HEADER BORDER_WIDTH`, `BAND HEADER BORDER_COLOR`, `BAND HEADER CORNER_RADIUS`, and the same five for the other bands: `BAND FOOTER MARGIN`, `BAND FOOTER PADDING`, `BAND FOOTER BORDER_WIDTH`, `BAND FOOTER BORDER_COLOR`, `BAND FOOTER CORNER_RADIUS`, `BAND LEFT MARGIN`, `BAND LEFT PADDING`, `BAND LEFT BORDER_WIDTH`, `BAND LEFT BORDER_COLOR`, `BAND LEFT CORNER_RADIUS`, `BAND RIGHT MARGIN`, `BAND RIGHT PADDING`, `BAND RIGHT BORDER_WIDTH`, `BAND RIGHT BORDER_COLOR` and `BAND RIGHT CORNER_RADIUS`, all default `0` and black; a page can have its own values |
+| `0 !SW PROPERTY INSTRUCTION WATERMARK SHOW <TRUE\|FALSE>` | Read, Write | show the watermark on the page, default `TRUE`, a page can hide it; `WATERMARK FONT` and `WATERMARK TEXT_COLOR` set the watermark text, default Arial 16 and `#00000040`, the color alpha sets how strongly the text shows; `WATERMARK OPACITY` is the watermark image opacity in percent, default `25`; `WATERMARK ROTATION` turns watermarks around their center in degrees, default `0`; the watermark is a box with `WATERMARK MARGIN`, `WATERMARK PADDING`, `WATERMARK BORDER_WIDTH`, `WATERMARK BORDER_COLOR`, `WATERMARK CORNER_RADIUS` and `WATERMARK BACKGROUND_COLOR`, default `0`, black and transparent |
+| `0 !SW PROPERTY INSTRUCTION BILL_OF_MATERIALS SHOW_TITLE <TRUE\|FALSE>` | Read, Write | show the title of the bill of materials; the bill of materials keeps its own settings apart from the steps: `BILL_OF_MATERIALS TITLE_PLACEMENT` places the title, `BILL_OF_MATERIALS FONT` and `BILL_OF_MATERIALS TEXT_COLOR` style the list text, `BILL_OF_MATERIALS SHOW_COUNTS`, `BILL_OF_MATERIALS SORT_ORDER`, `BILL_OF_MATERIALS LAYOUT`, `BILL_OF_MATERIALS ALIGNMENT`, `BILL_OF_MATERIALS THUMBNAIL_SIZE` and `BILL_OF_MATERIALS COUNT_PLACEMENT` work like their `STEP PARTS_LIST_` versions; the title box is `BILL_OF_MATERIALS TITLE_MARGIN`, `BILL_OF_MATERIALS TITLE_PADDING`, `BILL_OF_MATERIALS TITLE_BORDER_WIDTH`, `BILL_OF_MATERIALS TITLE_BORDER_COLOR`, `BILL_OF_MATERIALS TITLE_CORNER_RADIUS`, `BILL_OF_MATERIALS TITLE_BACKGROUND_COLOR`, the list box `BILL_OF_MATERIALS LIST_MARGIN`, `BILL_OF_MATERIALS LIST_PADDING`, `BILL_OF_MATERIALS LIST_BORDER_WIDTH`, `BILL_OF_MATERIALS LIST_BORDER_COLOR`, `BILL_OF_MATERIALS LIST_CORNER_RADIUS`, `BILL_OF_MATERIALS LIST_BACKGROUND_COLOR`, the quantity box `BILL_OF_MATERIALS QUANTITY_MARGIN`, `BILL_OF_MATERIALS QUANTITY_PADDING`, `BILL_OF_MATERIALS QUANTITY_BORDER_WIDTH`, `BILL_OF_MATERIALS QUANTITY_BORDER_COLOR`, `BILL_OF_MATERIALS QUANTITY_CORNER_RADIUS`, `BILL_OF_MATERIALS QUANTITY_BACKGROUND_COLOR` and the part count box `BILL_OF_MATERIALS PART_COUNT_MARGIN`, `BILL_OF_MATERIALS PART_COUNT_PADDING`, `BILL_OF_MATERIALS PART_COUNT_BORDER_WIDTH`, `BILL_OF_MATERIALS PART_COUNT_BORDER_COLOR`, `BILL_OF_MATERIALS PART_COUNT_CORNER_RADIUS`, `BILL_OF_MATERIALS PART_COUNT_BACKGROUND_COLOR`; a file without them takes the step values |
+| `0 !SW PROPERTY INSTRUCTION DOCUMENT LOCK_HOME_VIEW <TRUE\|FALSE>` | Read, Write | draw every model from the home view instead of the model view, default `FALSE`, a step with its own step view keeps it |
+| `0 !SW NOTICE INSTRUCTION <id> SHOW <FRONT\|BACK\|HEADER\|FOOTER\|LEFT\|RIGHT\|WATERMARK> POSITION <x> <y> [FILE "<file>"] TEXT <text>` | Read, Write | notice repeated on every step page in a band or as the watermark, or on the front or back cover, the position is relative to the band, `%page` and `%title` in the text fill in the page number and the model title; images also take `HEADER`, `FOOTER`, `LEFT`, `RIGHT` and `WATERMARK` as their pages |
 | `0 !SW POINTER INSTRUCTION <id> PAGE <page> SOURCE <element> ANCHOR <AUTO\|0-7> STYLE <DEFAULT\|LINE\|WEDGE\|L_SHAPE\|Z_SHAPE\|U_SHAPE> TIP <DEFAULT\|ARROW\|DOT\|HOLLOW_DOT> TARGET <POINT\|ELEMENT\|PART> <element> PART <index> POSITION <x> <y> [AT <fx> <fy>] [BEND <0-1>] [REACH <length>]` | Read, Write | pointer from an element border to a point, element or part; `AT` is where the tip sits on its target element as a fraction of its box, `BEND` where the Z shape bends from base to tip, `REACH` how far the U shape reaches out |
+
+### Property Names
+
+Every `PROPERTY INSTRUCTION` name starts with its scope words. The names before this form are not read. The cover elements were `COVER_TITLE_<field>`, `COVER_AUTHOR_<field>`, `SHOW_COVER_TITLE`, `SHOW_COVER_AUTHOR`, and `<element>_<field>`, `SHOW_<element>` and `<element>_PAGE` for the publication texts; each is now `COVER FRONT <element>_<field>` or `COVER BACK <element>_<field>` by its page, the old URL element being `URL`, the old publication notice `NOTICE` and the old cover part count `PIECES`. `SHOW_COVER_PART_COUNT` is `COVER FRONT SHOW_PIECES`, and `PART_COUNT_PLACEMENT` and the part count box names went with the cover part count.
+
+| Old name | New name |
+| --- | --- |
+| `SHOW_STEP_NUMBER` | `STEP SHOW_NUMBER` |
+| `SHOW_STEP_PARTS_LIST` | `STEP SHOW_PARTS_LIST` |
+| `STEP_NUMBER_FONT` | `STEP NUMBER_FONT` |
+| `STEP_NUMBER_COLOR` | `STEP NUMBER_COLOR` |
+| `STEP_BACKGROUND_COLOR` | `STEP BACKGROUND_COLOR` |
+| `PARTS_LIST_BACKGROUND_COLOR` | `STEP PARTS_LIST_BACKGROUND_COLOR` |
+| `PARTS_LIST_FONT` | `STEP PARTS_LIST_FONT` |
+| `PARTS_LIST_TEXT_COLOR` | `STEP PARTS_LIST_TEXT_COLOR` |
+| `PARTS_LIST_BORDER_COLOR` | `STEP PARTS_LIST_BORDER_COLOR` |
+| `PARTS_LIST_BORDER_WIDTH` | `STEP PARTS_LIST_BORDER_WIDTH` |
+| `PARTS_LIST_SHOW_COUNTS` | `STEP PARTS_LIST_SHOW_COUNTS` |
+| `PARTS_LIST_SORT_ORDER` | `STEP PARTS_LIST_SORT_ORDER` |
+| `SHOW_STEP_DIVIDERS` | `STEP SHOW_DIVIDERS` |
+| `STEP_DIVIDER_COLOR` | `STEP DIVIDER_COLOR` |
+| `STEP_DIVIDER_WIDTH` | `STEP DIVIDER_WIDTH` |
+| `SHOW_BILL_OF_MATERIALS` | `BILL_OF_MATERIALS SHOW` |
+| `USE_DOCUMENT_FONT` | `DOCUMENT USE_FONT` |
+| `USE_DOCUMENT_FONT_SIZE` | `DOCUMENT USE_FONT_SIZE` |
+| `DOCUMENT_FONT` | `DOCUMENT FONT` |
+| `SHOW_COVER_PAGE` | `COVER SHOW_FRONT` |
+| `PAGE_BACKGROUND_COLOR` | `PAGE BACKGROUND_COLOR` |
+| `STEP_NUMBER_PLACEMENT` | `STEP NUMBER_PLACEMENT` |
+| `STEP_NUMBER_ANCHOR` | `STEP NUMBER_ANCHOR` |
+| `PARTS_LIST_PLACEMENT` | `STEP PARTS_LIST_PLACEMENT` |
+| `PARTS_LIST_ANCHOR` | `STEP PARTS_LIST_ANCHOR` |
+| `BILL_OF_MATERIALS_PLACEMENT` | `BILL_OF_MATERIALS PLACEMENT` |
+| `PARTS_LIST_THUMBNAIL_SIZE` | `STEP PARTS_LIST_THUMBNAIL_SIZE` |
+| `PARTS_LIST_THUMBNAIL_BACKGROUND_COLOR` | `STEP PARTS_LIST_THUMBNAIL_BACKGROUND_COLOR` |
+| `COVER_IMAGE_PLACEMENT` | `COVER FRONT IMAGE_PLACEMENT` |
+| `STEP_IMAGE_PLACEMENT` | `STEP IMAGE_PLACEMENT` |
+| `COVER_BACKGROUND_COLOR` | `COVER BACKGROUND_COLOR` |
+| `BILL_OF_MATERIALS_BACKGROUND_COLOR` | `BILL_OF_MATERIALS BACKGROUND_COLOR` |
+| `SHOW_COVER_BLANK_PAGE` | `PAGE SHOW_COVER_BLANK_PAGE` |
+| `SHOW_BILL_OF_MATERIALS_BLANK_PAGE` | `PAGE SHOW_BILL_OF_MATERIALS_BLANK_PAGE` |
+| `USE_DOCUMENT_UNITS` | `DOCUMENT USE_UNITS` |
+| `DOCUMENT_UNITS` | `DOCUMENT UNITS` |
+| `SHOW_PAGE_NUMBER` | `PAGE SHOW_NUMBER` |
+| `PAGE_NUMBER_FORMAT` | `PAGE NUMBER_FORMAT` |
+| `PAGE_NUMBER_FONT` | `PAGE NUMBER_FONT` |
+| `PAGE_NUMBER_COLOR` | `PAGE NUMBER_COLOR` |
+| `PAGE_NUMBER_PLACEMENT` | `PAGE NUMBER_PLACEMENT` |
+| `SHOW_PAGE_NUMBER_ALL_PAGES` | `PAGE SHOW_NUMBER_ALL_PAGES` |
+| `STEP_IMAGE_MARGIN` | `STEP IMAGE_MARGIN` |
+| `STEP_IMAGE_PADDING` | `STEP IMAGE_PADDING` |
+| `STEP_IMAGE_BORDER_WIDTH` | `STEP IMAGE_BORDER_WIDTH` |
+| `STEP_IMAGE_BORDER_COLOR` | `STEP IMAGE_BORDER_COLOR` |
+| `STEP_IMAGE_BACKGROUND_COLOR` | `STEP IMAGE_BACKGROUND_COLOR` |
+| `STEP_NUMBER_MARGIN` | `STEP NUMBER_MARGIN` |
+| `STEP_NUMBER_PADDING` | `STEP NUMBER_PADDING` |
+| `STEP_NUMBER_BORDER_WIDTH` | `STEP NUMBER_BORDER_WIDTH` |
+| `STEP_NUMBER_BORDER_COLOR` | `STEP NUMBER_BORDER_COLOR` |
+| `STEP_NUMBER_BACKGROUND_COLOR` | `STEP NUMBER_BACKGROUND_COLOR` |
+| `PARTS_LIST_MARGIN` | `STEP PARTS_LIST_MARGIN` |
+| `PARTS_LIST_PADDING` | `STEP PARTS_LIST_PADDING` |
+| `PAGE_NUMBER_MARGIN` | `PAGE NUMBER_MARGIN` |
+| `PAGE_NUMBER_PADDING` | `PAGE NUMBER_PADDING` |
+| `PAGE_NUMBER_BORDER_WIDTH` | `PAGE NUMBER_BORDER_WIDTH` |
+| `PAGE_NUMBER_BORDER_COLOR` | `PAGE NUMBER_BORDER_COLOR` |
+| `PAGE_NUMBER_BACKGROUND_COLOR` | `PAGE NUMBER_BACKGROUND_COLOR` |
+| `COVER_IMAGE_MARGIN` | `COVER FRONT IMAGE_MARGIN` |
+| `COVER_IMAGE_PADDING` | `COVER FRONT IMAGE_PADDING` |
+| `COVER_IMAGE_BORDER_WIDTH` | `COVER FRONT IMAGE_BORDER_WIDTH` |
+| `COVER_IMAGE_BORDER_COLOR` | `COVER FRONT IMAGE_BORDER_COLOR` |
+| `COVER_IMAGE_BACKGROUND_COLOR` | `COVER FRONT IMAGE_BACKGROUND_COLOR` |
+| `NOTICE_FONT` | `NOTICE FONT` |
+| `NOTICE_TEXT_COLOR` | `NOTICE TEXT_COLOR` |
+| `NOTICE_MARGIN` | `NOTICE MARGIN` |
+| `NOTICE_PADDING` | `NOTICE PADDING` |
+| `NOTICE_BORDER_WIDTH` | `NOTICE BORDER_WIDTH` |
+| `NOTICE_BORDER_COLOR` | `NOTICE BORDER_COLOR` |
+| `NOTICE_BACKGROUND_COLOR` | `NOTICE BACKGROUND_COLOR` |
+| `POINTER_STYLE` | `POINTER STYLE` |
+| `POINTER_TIP` | `POINTER TIP` |
+| `POINTER_COLOR` | `POINTER COLOR` |
+| `POINTER_WIDTH` | `POINTER WIDTH` |
+| `POINTER_TIP_SIZE` | `POINTER TIP_SIZE` |
+| `PARTS_LIST_LAYOUT` | `STEP PARTS_LIST_LAYOUT` |
+| `PARTS_LIST_ALIGNMENT` | `STEP PARTS_LIST_ALIGNMENT` |
+| `MODEL_PROJECTION` | `DOCUMENT PROJECTION` |
+| `FADE_PREVIOUS_STEPS` | `STEP FADE_PREVIOUS_STEPS` |
+| `FADE_COLOR` | `STEP FADE_COLOR` |
+| `HIGHLIGHT_NEW_PARTS` | `STEP HIGHLIGHT_NEW_PARTS` |
+| `HIGHLIGHT_COLOR` | `STEP HIGHLIGHT_COLOR` |
+| `STEP_IMAGE_CORNER_RADIUS` | `STEP IMAGE_CORNER_RADIUS` |
+| `STEP_NUMBER_CORNER_RADIUS` | `STEP NUMBER_CORNER_RADIUS` |
+| `PARTS_LIST_CORNER_RADIUS` | `STEP PARTS_LIST_CORNER_RADIUS` |
+| `PAGE_NUMBER_CORNER_RADIUS` | `PAGE NUMBER_CORNER_RADIUS` |
+| `COVER_IMAGE_CORNER_RADIUS` | `COVER FRONT IMAGE_CORNER_RADIUS` |
+| `NOTICE_CORNER_RADIUS` | `NOTICE CORNER_RADIUS` |
+| `BILL_OF_MATERIALS_TITLE_FONT` | `BILL_OF_MATERIALS TITLE_FONT` |
+| `BILL_OF_MATERIALS_TITLE_COLOR` | `BILL_OF_MATERIALS TITLE_COLOR` |
+| `SUBMODEL_BACKGROUND_COLOR` | `STEP SUBMODEL_BACKGROUND_COLOR` |
+| `STEP_MODEL_SIZE` | `STEP MODEL_SIZE` |
+| `COVER_MODEL_SIZE` | `COVER FRONT MODEL_SIZE` |
+| `BILL_OF_MATERIALS_TITLE_TEXT` | `BILL_OF_MATERIALS TITLE_TEXT` |
+| `BILL_OF_MATERIALS_TITLE_FILE` | `BILL_OF_MATERIALS TITLE_FILE` |
+| `STEP_DIVIDER_MARGIN` | `STEP DIVIDER_MARGIN` |
+| `STEP_DIVIDER_PADDING` | `STEP DIVIDER_PADDING` |
+| `STEP_DIVIDER_ROUNDED` | `STEP DIVIDER_ROUNDED` |
+| `STEP_DIVIDER_HORIZONTAL` | `STEP DIVIDER_HORIZONTAL` |
+| `STEP_DIVIDER_VERTICAL` | `STEP DIVIDER_VERTICAL` |
+| `HIGHLIGHT_WIDTH` | `STEP HIGHLIGHT_WIDTH` |
+| `FINAL_MODEL_BORDER_WIDTH` | `STEP FINAL_MODEL_BORDER_WIDTH` |
+| `FINAL_MODEL_BORDER_COLOR` | `STEP FINAL_MODEL_BORDER_COLOR` |
+| `FINAL_MODEL_MARGIN` | `STEP FINAL_MODEL_MARGIN` |
+| `BILL_OF_MATERIALS_SHOW_PART_IDS` | `BILL_OF_MATERIALS SHOW_PART_IDS` |
+| `BILL_OF_MATERIALS_SHOW_PART_COUNT` | `BILL_OF_MATERIALS SHOW_PART_COUNT` |
+| `SHOW_PAGE_PART_COUNT` | `PAGE SHOW_PART_COUNT` |
+| `PART_COUNT_TEXT` | `PART_COUNT TEXT` |
+| `PART_COUNT_FILE` | `PART_COUNT FILE` |
+| `PART_COUNT_FONT` | `PART_COUNT FONT` |
+| `PART_COUNT_COLOR` | `PART_COUNT COLOR` |
+| `PAGE_PART_COUNT_FONT` | `PAGE PART_COUNT_FONT` |
+| `PAGE_PART_COUNT_COLOR` | `PAGE PART_COUNT_COLOR` |
+| `BILL_OF_MATERIALS_PART_COUNT_PLACEMENT` | `BILL_OF_MATERIALS PART_COUNT_PLACEMENT` |
+| `PAGE_PART_COUNT_PLACEMENT` | `PAGE PART_COUNT_PLACEMENT` |
+| `SHOW_SUBMODEL_PREVIEW` | `STEP SHOW_SUBMODEL_PREVIEW` |
+| `SUBMODEL_PREVIEW_MODEL_SIZE` | `STEP SUBMODEL_PREVIEW_MODEL_SIZE` |
+| `SUBMODEL_PREVIEW_PLACEMENT` | `STEP SUBMODEL_PREVIEW_PLACEMENT` |
+| `SUBMODEL_PREVIEW_MARGIN` | `STEP SUBMODEL_PREVIEW_MARGIN` |
+| `SUBMODEL_PREVIEW_PADDING` | `STEP SUBMODEL_PREVIEW_PADDING` |
+| `SUBMODEL_PREVIEW_BORDER_WIDTH` | `STEP SUBMODEL_PREVIEW_BORDER_WIDTH` |
+| `SUBMODEL_PREVIEW_BORDER_COLOR` | `STEP SUBMODEL_PREVIEW_BORDER_COLOR` |
+| `SUBMODEL_PREVIEW_BACKGROUND_COLOR` | `STEP SUBMODEL_PREVIEW_BACKGROUND_COLOR` |
+| `SUBMODEL_PREVIEW_CORNER_RADIUS` | `STEP SUBMODEL_PREVIEW_CORNER_RADIUS` |
+| `SUBMODEL_PREVIEW_PART_COUNT_PLACEMENT` | `STEP SUBMODEL_PREVIEW_PART_COUNT_PLACEMENT` |
+| `PARTS_LIST_QUANTITY_PLACEMENT` | `STEP PARTS_LIST_QUANTITY_PLACEMENT` |
+| `SHOW_BACK_COVER` | `COVER SHOW_BACK` |
+| `SHOW_HEADER_BAND` | `BAND HEADER SHOW` |
+| `SHOW_FOOTER_BAND` | `BAND FOOTER SHOW` |
+| `SHOW_LEFT_BAND` | `BAND LEFT SHOW` |
+| `SHOW_RIGHT_BAND` | `BAND RIGHT SHOW` |
+| `HEADER_BAND_SIZE` | `BAND HEADER SIZE` |
+| `FOOTER_BAND_SIZE` | `BAND FOOTER SIZE` |
+| `LEFT_BAND_SIZE` | `BAND LEFT SIZE` |
+| `RIGHT_BAND_SIZE` | `BAND RIGHT SIZE` |
+| `HEADER_BAND_COLOR` | `BAND HEADER COLOR` |
+| `FOOTER_BAND_COLOR` | `BAND FOOTER COLOR` |
+| `LEFT_BAND_COLOR` | `BAND LEFT COLOR` |
+| `RIGHT_BAND_COLOR` | `BAND RIGHT COLOR` |
+| `HEADER_BAND_RESERVE` | `BAND HEADER RESERVE` |
+| `FOOTER_BAND_RESERVE` | `BAND FOOTER RESERVE` |
+| `LEFT_BAND_RESERVE` | `BAND LEFT RESERVE` |
+| `RIGHT_BAND_RESERVE` | `BAND RIGHT RESERVE` |
+| `SHOW_WATERMARK` | `WATERMARK SHOW` |
+| `WATERMARK_OPACITY` | `WATERMARK OPACITY` |
+| `STEP_NUMBER_ALIGNMENT` | `STEP NUMBER_ALIGNMENT` |
+| `STEP_NUMBER_VERTICAL_ALIGNMENT` | `STEP NUMBER_VERTICAL_ALIGNMENT` |
+| `BILL_OF_MATERIALS_TITLE_ALIGNMENT` | `BILL_OF_MATERIALS TITLE_ALIGNMENT` |
+| `BILL_OF_MATERIALS_TITLE_VERTICAL_ALIGNMENT` | `BILL_OF_MATERIALS TITLE_VERTICAL_ALIGNMENT` |
+| `PAGE_NUMBER_ALIGNMENT` | `PAGE NUMBER_ALIGNMENT` |
+| `PAGE_NUMBER_VERTICAL_ALIGNMENT` | `PAGE NUMBER_VERTICAL_ALIGNMENT` |
+| `PART_COUNT_ALIGNMENT` | `PART_COUNT ALIGNMENT` |
+| `PART_COUNT_VERTICAL_ALIGNMENT` | `PART_COUNT VERTICAL_ALIGNMENT` |
+| `NOTICE_ALIGNMENT` | `NOTICE ALIGNMENT` |
+| `NOTICE_VERTICAL_ALIGNMENT` | `NOTICE VERTICAL_ALIGNMENT` |
+| `SHOW_COVER_IMAGE` | `COVER FRONT SHOW_IMAGE` |
+| `IMAGE_MARGIN` | `IMAGE MARGIN` |
+| `IMAGE_PADDING` | `IMAGE PADDING` |
+| `IMAGE_BORDER_WIDTH` | `IMAGE BORDER_WIDTH` |
+| `IMAGE_BORDER_COLOR` | `IMAGE BORDER_COLOR` |
+| `IMAGE_BACKGROUND_COLOR` | `IMAGE BACKGROUND_COLOR` |
+| `IMAGE_CORNER_RADIUS` | `IMAGE CORNER_RADIUS` |
+| `POINTER_BEND_RADIUS` | `POINTER BEND_RADIUS` |
+| `SHOW_FINAL_MODEL_PAGE` | `STEP SHOW_FINAL_MODEL_PAGE` |
+| `BLANK_PAGE_BACKGROUND_COLOR` | `PAGE BLANK_BACKGROUND_COLOR` |
+| `PARTS_LIST_QUANTITY_MARGIN` | `STEP PARTS_LIST_QUANTITY_MARGIN` |
+| `PARTS_LIST_QUANTITY_PADDING` | `STEP PARTS_LIST_QUANTITY_PADDING` |
+| `PARTS_LIST_QUANTITY_BORDER_WIDTH` | `STEP PARTS_LIST_QUANTITY_BORDER_WIDTH` |
+| `PARTS_LIST_QUANTITY_BORDER_COLOR` | `STEP PARTS_LIST_QUANTITY_BORDER_COLOR` |
+| `PARTS_LIST_QUANTITY_BACKGROUND_COLOR` | `STEP PARTS_LIST_QUANTITY_BACKGROUND_COLOR` |
+| `PARTS_LIST_QUANTITY_CORNER_RADIUS` | `STEP PARTS_LIST_QUANTITY_CORNER_RADIUS` |
+| `FINAL_MODEL_PADDING` | `STEP FINAL_MODEL_PADDING` |
+| `FINAL_MODEL_CORNER_RADIUS` | `STEP FINAL_MODEL_CORNER_RADIUS` |
+| `STEP_MARGIN` | `STEP AREA_MARGIN` |
+| `STEP_PADDING` | `STEP AREA_PADDING` |
+| `STEP_BORDER_WIDTH` | `STEP AREA_BORDER_WIDTH` |
+| `STEP_BORDER_COLOR` | `STEP AREA_BORDER_COLOR` |
+| `STEP_CORNER_RADIUS` | `STEP AREA_CORNER_RADIUS` |
+| `FINAL_MODEL_BACKGROUND_COLOR` | `STEP FINAL_MODEL_BACKGROUND_COLOR` |
+| `HEADER_BAND_MARGIN` | `BAND HEADER MARGIN` |
+| `HEADER_BAND_PADDING` | `BAND HEADER PADDING` |
+| `HEADER_BAND_BORDER_WIDTH` | `BAND HEADER BORDER_WIDTH` |
+| `HEADER_BAND_BORDER_COLOR` | `BAND HEADER BORDER_COLOR` |
+| `HEADER_BAND_CORNER_RADIUS` | `BAND HEADER CORNER_RADIUS` |
+| `FOOTER_BAND_MARGIN` | `BAND FOOTER MARGIN` |
+| `FOOTER_BAND_PADDING` | `BAND FOOTER PADDING` |
+| `FOOTER_BAND_BORDER_WIDTH` | `BAND FOOTER BORDER_WIDTH` |
+| `FOOTER_BAND_BORDER_COLOR` | `BAND FOOTER BORDER_COLOR` |
+| `FOOTER_BAND_CORNER_RADIUS` | `BAND FOOTER CORNER_RADIUS` |
+| `LEFT_BAND_MARGIN` | `BAND LEFT MARGIN` |
+| `LEFT_BAND_PADDING` | `BAND LEFT PADDING` |
+| `LEFT_BAND_BORDER_WIDTH` | `BAND LEFT BORDER_WIDTH` |
+| `LEFT_BAND_BORDER_COLOR` | `BAND LEFT BORDER_COLOR` |
+| `LEFT_BAND_CORNER_RADIUS` | `BAND LEFT CORNER_RADIUS` |
+| `RIGHT_BAND_MARGIN` | `BAND RIGHT MARGIN` |
+| `RIGHT_BAND_PADDING` | `BAND RIGHT PADDING` |
+| `RIGHT_BAND_BORDER_WIDTH` | `BAND RIGHT BORDER_WIDTH` |
+| `RIGHT_BAND_BORDER_COLOR` | `BAND RIGHT BORDER_COLOR` |
+| `RIGHT_BAND_CORNER_RADIUS` | `BAND RIGHT CORNER_RADIUS` |
+| `WATERMARK_MARGIN` | `WATERMARK MARGIN` |
+| `WATERMARK_PADDING` | `WATERMARK PADDING` |
+| `WATERMARK_BORDER_WIDTH` | `WATERMARK BORDER_WIDTH` |
+| `WATERMARK_BORDER_COLOR` | `WATERMARK BORDER_COLOR` |
+| `WATERMARK_CORNER_RADIUS` | `WATERMARK CORNER_RADIUS` |
+| `WATERMARK_BACKGROUND_COLOR` | `WATERMARK BACKGROUND_COLOR` |
+| `LOCK_HOME_VIEW` | `DOCUMENT LOCK_HOME_VIEW` |
+| `WATERMARK_FONT` | `WATERMARK FONT` |
+| `WATERMARK_TEXT_COLOR` | `WATERMARK TEXT_COLOR` |
+| `WATERMARK_ROTATION` | `WATERMARK ROTATION` |
+| `SHOW_BILL_OF_MATERIALS_TITLE` | `BILL_OF_MATERIALS SHOW_TITLE` |
+| `BILL_OF_MATERIALS_TITLE_PLACEMENT` | `BILL_OF_MATERIALS TITLE_PLACEMENT` |
+| `BILL_OF_MATERIALS_FONT` | `BILL_OF_MATERIALS FONT` |
+| `BILL_OF_MATERIALS_TEXT_COLOR` | `BILL_OF_MATERIALS TEXT_COLOR` |
+| `BILL_OF_MATERIALS_SHOW_COUNTS` | `BILL_OF_MATERIALS SHOW_COUNTS` |
+| `BILL_OF_MATERIALS_SORT_ORDER` | `BILL_OF_MATERIALS SORT_ORDER` |
+| `BILL_OF_MATERIALS_LAYOUT` | `BILL_OF_MATERIALS LAYOUT` |
+| `BILL_OF_MATERIALS_ALIGNMENT` | `BILL_OF_MATERIALS ALIGNMENT` |
+| `BILL_OF_MATERIALS_THUMBNAIL_SIZE` | `BILL_OF_MATERIALS THUMBNAIL_SIZE` |
+| `BILL_OF_MATERIALS_COUNT_PLACEMENT` | `BILL_OF_MATERIALS COUNT_PLACEMENT` |
+| `BILL_OF_MATERIALS_TITLE_MARGIN` | `BILL_OF_MATERIALS TITLE_MARGIN` |
+| `BILL_OF_MATERIALS_TITLE_PADDING` | `BILL_OF_MATERIALS TITLE_PADDING` |
+| `BILL_OF_MATERIALS_TITLE_BORDER_WIDTH` | `BILL_OF_MATERIALS TITLE_BORDER_WIDTH` |
+| `BILL_OF_MATERIALS_TITLE_BORDER_COLOR` | `BILL_OF_MATERIALS TITLE_BORDER_COLOR` |
+| `BILL_OF_MATERIALS_TITLE_CORNER_RADIUS` | `BILL_OF_MATERIALS TITLE_CORNER_RADIUS` |
+| `BILL_OF_MATERIALS_TITLE_BACKGROUND_COLOR` | `BILL_OF_MATERIALS TITLE_BACKGROUND_COLOR` |
+| `BILL_OF_MATERIALS_LIST_MARGIN` | `BILL_OF_MATERIALS LIST_MARGIN` |
+| `BILL_OF_MATERIALS_LIST_PADDING` | `BILL_OF_MATERIALS LIST_PADDING` |
+| `BILL_OF_MATERIALS_LIST_BORDER_WIDTH` | `BILL_OF_MATERIALS LIST_BORDER_WIDTH` |
+| `BILL_OF_MATERIALS_LIST_BORDER_COLOR` | `BILL_OF_MATERIALS LIST_BORDER_COLOR` |
+| `BILL_OF_MATERIALS_LIST_CORNER_RADIUS` | `BILL_OF_MATERIALS LIST_CORNER_RADIUS` |
+| `BILL_OF_MATERIALS_LIST_BACKGROUND_COLOR` | `BILL_OF_MATERIALS LIST_BACKGROUND_COLOR` |
+| `BILL_OF_MATERIALS_QUANTITY_MARGIN` | `BILL_OF_MATERIALS QUANTITY_MARGIN` |
+| `BILL_OF_MATERIALS_QUANTITY_PADDING` | `BILL_OF_MATERIALS QUANTITY_PADDING` |
+| `BILL_OF_MATERIALS_QUANTITY_BORDER_WIDTH` | `BILL_OF_MATERIALS QUANTITY_BORDER_WIDTH` |
+| `BILL_OF_MATERIALS_QUANTITY_BORDER_COLOR` | `BILL_OF_MATERIALS QUANTITY_BORDER_COLOR` |
+| `BILL_OF_MATERIALS_QUANTITY_CORNER_RADIUS` | `BILL_OF_MATERIALS QUANTITY_CORNER_RADIUS` |
+| `BILL_OF_MATERIALS_QUANTITY_BACKGROUND_COLOR` | `BILL_OF_MATERIALS QUANTITY_BACKGROUND_COLOR` |
+| `BILL_OF_MATERIALS_PART_COUNT_MARGIN` | `BILL_OF_MATERIALS PART_COUNT_MARGIN` |
+| `BILL_OF_MATERIALS_PART_COUNT_PADDING` | `BILL_OF_MATERIALS PART_COUNT_PADDING` |
+| `BILL_OF_MATERIALS_PART_COUNT_BORDER_WIDTH` | `BILL_OF_MATERIALS PART_COUNT_BORDER_WIDTH` |
+| `BILL_OF_MATERIALS_PART_COUNT_BORDER_COLOR` | `BILL_OF_MATERIALS PART_COUNT_BORDER_COLOR` |
+| `BILL_OF_MATERIALS_PART_COUNT_CORNER_RADIUS` | `BILL_OF_MATERIALS PART_COUNT_CORNER_RADIUS` |
+| `BILL_OF_MATERIALS_PART_COUNT_BACKGROUND_COLOR` | `BILL_OF_MATERIALS PART_COUNT_BACKGROUND_COLOR` |
+| `ASSEMBLY_BACKGROUND_COLOR` | `STEP ASSEMBLY_BACKGROUND_COLOR` |
+| `STEP_DIVIDER_FINAL_MODEL` | `STEP DIVIDER_FINAL_MODEL` |
+| `COMPLETION_BACKGROUND_COLOR` | `STEP COMPLETION_BACKGROUND_COLOR` |
+| `COMPLETION_MARGIN` | `STEP COMPLETION_MARGIN` |
+| `COMPLETION_PADDING` | `STEP COMPLETION_PADDING` |
+| `COMPLETION_BORDER_WIDTH` | `STEP COMPLETION_BORDER_WIDTH` |
+| `COMPLETION_BORDER_COLOR` | `STEP COMPLETION_BORDER_COLOR` |
+| `COMPLETION_CORNER_RADIUS` | `STEP COMPLETION_CORNER_RADIUS` |
+| `COMPLETION_BOX_BACKGROUND_COLOR` | `STEP COMPLETION_BOX_BACKGROUND_COLOR` |
+| `PLI_RESERVE_AREA` | `STEP PARTS_LIST_RESERVE_AREA` |
 
 ### Group
 

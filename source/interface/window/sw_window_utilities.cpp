@@ -355,6 +355,27 @@ std::optional<float> swParseFloatLocalized(const QString& Value, QLocale Locale)
 	return Number;
 }
 
+// use to show the model size in cm, inches and ldu
+QString swGetMeasurementsText(const swVector3& Dimensions, QLocale Locale)
+{
+	const QString Format = QCoreApplication::translate("swPropertiesDialog", "Metric: %1 x %2 x %3 cm\nImperial: %4 x %5 x %6 inches\nLDraw: %7 x %8 x %9 ldu");
+
+	return Format.arg(swFormatDoubleLocalized(Dimensions.x * 0.04, Locale, 'f', 2), swFormatDoubleLocalized(Dimensions.y * 0.04, Locale, 'f', 2), swFormatDoubleLocalized(Dimensions.z * 0.04, Locale, 'f', 2),
+	                  swFormatDoubleLocalized(Dimensions.x / 64.0, Locale, 'f', 2), swFormatDoubleLocalized(Dimensions.y / 64.0, Locale, 'f', 2), swFormatDoubleLocalized(Dimensions.z / 64.0, Locale, 'f', 2),
+	                  swFormatDoubleLocalized(Dimensions.x, Locale, 'f', 2), swFormatDoubleLocalized(Dimensions.y, Locale, 'f', 2), swFormatDoubleLocalized(Dimensions.z, Locale, 'f', 2));
+}
+
+// use to show the model weight in grams and ounces
+QString swGetWeightText(double Grams, int Parts, int Missing, QLocale Locale)
+{
+	QString Text = QCoreApplication::translate("swPropertiesDialog", "Metric: %1 g\nImperial: %2 oz\nParts: %3").arg(swFormatDoubleLocalized(Grams, Locale, 'f', 2), swFormatDoubleLocalized(Grams * SW_GRAMS_TO_OUNCES, Locale, 'f', 2), swFormatIntegerLocalized(Parts, Locale));
+
+	if (Missing)
+		Text.append((Missing == 1 ? QCoreApplication::translate("swPropertiesDialog", "\nN/A: %1 part") : QCoreApplication::translate("swPropertiesDialog", "\nN/A: %1 parts")).arg(swFormatIntegerLocalized(Missing, Locale)));
+
+	return Text;
+}
+
 #ifdef Q_OS_WIN
 
 int swTerminateChildProcess(QWidget* Parent, const qint64 Pid, const qint64 Ppid)

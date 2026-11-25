@@ -5,6 +5,15 @@
 
   - Command line: --export-pages saves each instruction page as a PNG picture at the page setup size
   - Command line: the pictures are named after the model and page number, and saved beside the model or in a folder you name
+  - Properties: the Summary tab has a Publication group with title, author, product ID, version, publication date, URL, contact, copyright and notice, saved in the model file
+  - Instructions: the front and back cover each have their own Title, Author, Product ID, Version, Publication Date, URL, Contact, Copyright, Notice, Comments, Measurements, Weight and Pieces, the Publication group picks the cover to edit, and Pieces is the part count of the whole model
+  - Preferences: the Author group is gone, the author of a model lives in Model Properties > Summary
+  - Instructions: placed cover texts stay put when others are shown or hidden
+  - Instructions: the placement tool places every element, pointer tips too
+  - Instructions: texts are selected with one click anywhere on them, and pages no longer stall while clicking
+  - Instructions: the Author shows only the Summary author, and the file properties of every instructions setting start with their scope, like COVER FRONT TITLE_FONT or STEP NUMBER_FONT, the old names are no longer read
+  - Instructions: templates keep the notices of the covers, bands and watermark, and a model applying one shows them
+  - Instructions: texts fill in %title, %author, %id, %version, %date, %url, %contact, %copyright, %notice, %size, %weight and %comments from the model, and the Publication URL shows the model URL by default
 
   </details>
 
@@ -19,6 +28,7 @@
   - Instructions: On This Page Only keeps a band on the current page and clears it from the other pages
   - Instructions: Delete hides a selected title, cover image, part count, step number, parts list or page number and resets its position
   - Instructions: Show Title and Show Model Image turn the cover title and the finished model on and off
+  - Instructions: the Publication group shows the title, author, product ID, version, publication date, URL, contact, copyright, notice, measurements, weight and comments on the front or back cover, each with its own font, color, placement and box, empty texts show the model properties
   - Instructions: images grow to 500 percent of the page width and can run past the paper edge
   - Instructions: pointers can be a line, an L, Z or U shape with rounded bends, or a callout wedge, end in an arrow, a dot or a hollow dot, and their bend and reach are dragged on the page
   - Instructions: titles, part counts, step and page numbers and notices line up left, centered or right and top, middle or bottom in a box sized with Edit Size

@@ -258,14 +258,21 @@ static const char swHTMLScript[] = R"(
 static std::vector<swInstructionsPropertyType> swGetHTMLOverrideColorTypes(int Row)
 {
 	// rows in the order of the export dialog, then box border and box background
-	static const swInstructionsPropertyType RowTypes[] = { swInstructionsPropertyType::PageBackgroundColor, swInstructionsPropertyType::CoverBackgroundColor, swInstructionsPropertyType::BillOfMaterialsBackgroundColor, swInstructionsPropertyType::CoverTitleColor, swInstructionsPropertyType::NoticeTextColor, swInstructionsPropertyType::FadeColor, swInstructionsPropertyType::HighlightColor, swInstructionsPropertyType::StepBackgroundColor, swInstructionsPropertyType::StepNumberColor, swInstructionsPropertyType::PageNumberColor, swInstructionsPropertyType::PLITextColor, swInstructionsPropertyType::StepDividerColor, swInstructionsPropertyType::PointerColor };
+	static const swInstructionsPropertyType RowTypes[] = { swInstructionsPropertyType::PageBackgroundColor, swInstructionsPropertyType::CoverBackgroundColor, swInstructionsPropertyType::BillOfMaterialsBackgroundColor, swGetPublicationType(swGetPublicationElements()[0], swInstructionsPublicationField::Color), swInstructionsPropertyType::NoticeTextColor, swInstructionsPropertyType::FadeColor, swInstructionsPropertyType::HighlightColor, swInstructionsPropertyType::StepBackgroundColor, swInstructionsPropertyType::StepNumberColor, swInstructionsPropertyType::PageNumberColor, swInstructionsPropertyType::PLITextColor, swInstructionsPropertyType::StepDividerColor, swInstructionsPropertyType::PointerColor };
 
 	// some rows also color the submodel pages, the author and the parts list title
 	if (Row < static_cast<int>(std::size(RowTypes)) && RowTypes[Row] == swInstructionsPropertyType::PageBackgroundColor)
 		return { RowTypes[Row], swInstructionsPropertyType::SubmodelBackgroundColor, swInstructionsPropertyType::AssemblyBackgroundColor, swInstructionsPropertyType::BlankPageBackgroundColor };
 
-	if (Row < static_cast<int>(std::size(RowTypes)) && RowTypes[Row] == swInstructionsPropertyType::CoverTitleColor)
-		return { RowTypes[Row], swInstructionsPropertyType::CoverAuthorColor, swInstructionsPropertyType::PartCountColor };
+	if (Row < static_cast<int>(std::size(RowTypes)) && RowTypes[Row] == RowTypes[3])
+	{
+		std::vector<swInstructionsPropertyType> Types = { swInstructionsPropertyType::PartCountColor };
+
+		for (const swInstructionsPublicationElement& Publication : swGetPublicationElements())
+			Types.push_back(swGetPublicationType(Publication, swInstructionsPublicationField::Color));
+
+		return Types;
+	}
 
 	if (Row < static_cast<int>(std::size(RowTypes)) && RowTypes[Row] == swInstructionsPropertyType::PageNumberColor)
 		return { RowTypes[Row], swInstructionsPropertyType::PagePartCountColor };

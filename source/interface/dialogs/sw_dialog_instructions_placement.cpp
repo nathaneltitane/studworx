@@ -258,6 +258,9 @@ void swInstructionsPlacementWidget::SelectionChanged(QGraphicsItem* FocusItem, i
 
 swInstructionsPropertyType swInstructionsPlacementWidget::GetPlacementType() const
 {
+	if (const swInstructionsPublicationElement* Publication = swFindPublicationElement(mElement))
+		return swGetPublicationType(*Publication, swInstructionsPublicationField::Placement);
+
 	switch (mElement)
 	{
 	case swInstructionsPlacementElement::StepNumber:
@@ -265,12 +268,6 @@ swInstructionsPropertyType swInstructionsPlacementWidget::GetPlacementType() con
 
 	case swInstructionsPlacementElement::PartsList:
 		return swInstructionsPropertyType::PLIPlacement;
-
-	case swInstructionsPlacementElement::CoverTitle:
-		return swInstructionsPropertyType::CoverTitlePlacement;
-
-	case swInstructionsPlacementElement::CoverAuthor:
-		return swInstructionsPropertyType::CoverAuthorPlacement;
 
 	case swInstructionsPlacementElement::BillOfMaterials:
 		return swInstructionsPropertyType::BillOfMaterialsPlacement;
@@ -283,9 +280,6 @@ swInstructionsPropertyType swInstructionsPlacementWidget::GetPlacementType() con
 
 	case swInstructionsPlacementElement::PageNumber:
 		return swInstructionsPropertyType::PageNumberPlacement;
-
-	case swInstructionsPlacementElement::CoverPartCount:
-		return swInstructionsPropertyType::PartCountPlacement;
 
 	case swInstructionsPlacementElement::BillOfMaterialsPartCount:
 		return swInstructionsPropertyType::BillOfMaterialsPartCountPlacement;
@@ -306,6 +300,7 @@ swInstructionsPropertyType swInstructionsPlacementWidget::GetPlacementType() con
 	case swInstructionsPlacementElement::Image:
 	case swInstructionsPlacementElement::Pointer:
 	case swInstructionsPlacementElement::None:
+	default:
 		break;
 	}
 
@@ -325,13 +320,10 @@ swInstructionsPropertyType swInstructionsPlacementWidget::GetAnchorType() const
 	case swInstructionsPlacementElement::PartsList:
 		return swInstructionsPropertyType::PLIAnchor;
 
-	case swInstructionsPlacementElement::CoverTitle:
-	case swInstructionsPlacementElement::CoverAuthor:
 	case swInstructionsPlacementElement::BillOfMaterials:
 	case swInstructionsPlacementElement::StepImage:
 	case swInstructionsPlacementElement::CoverImage:
 	case swInstructionsPlacementElement::PageNumber:
-	case swInstructionsPlacementElement::CoverPartCount:
 	case swInstructionsPlacementElement::BillOfMaterialsPartCount:
 	case swInstructionsPlacementElement::PagePartCount:
 	case swInstructionsPlacementElement::SubmodelPreview:
@@ -341,6 +333,7 @@ swInstructionsPropertyType swInstructionsPlacementWidget::GetAnchorType() const
 	case swInstructionsPlacementElement::Image:
 	case swInstructionsPlacementElement::Pointer:
 	case swInstructionsPlacementElement::None:
+	default:
 		break;
 	}
 
@@ -397,9 +390,8 @@ void swInstructionsPlacementWidget::PlacementClicked(int Placement)
 		mInstructions->SetImage(Changed);
 	}
 
-	// notices move to the cell
-
-	if (mElement == swInstructionsPlacementElement::Notice)
+	// notices and pointer tips move to the cell
+	if (mElement == swInstructionsPlacementElement::Notice || mElement == swInstructionsPlacementElement::Pointer)
 		emit PlaceElement(Placement);
 
 	// drop the dragged position
@@ -487,7 +479,7 @@ void swInstructionsPlacementWidget::UpdateControls()
 	// locked elements stay put
 	const bool Locked = mInstructions->IsElementLocked(mElementKey);
 	const swInstructionsImage* Image = mElement == swInstructionsPlacementElement::Image ? mInstructions->FindImage(static_cast<int>(std::get<2>(mElementKey))) : nullptr;
-	const bool Notice = mElement == swInstructionsPlacementElement::Notice;
+	const bool Notice = mElement == swInstructionsPlacementElement::Notice || mElement == swInstructionsPlacementElement::Pointer;
 	const bool Active = (GetPlacementType() != swInstructionsPropertyType::Count || Image || Notice) && !Locked;
 
 	// notices return to where added
@@ -511,14 +503,6 @@ void swInstructionsPlacementWidget::UpdateControls()
 		mElementLabel->setText(tr("Parts List"));
 		break;
 
-	case swInstructionsPlacementElement::CoverTitle:
-		mElementLabel->setText(tr("Cover Title"));
-		break;
-
-	case swInstructionsPlacementElement::CoverAuthor:
-		mElementLabel->setText(tr("Cover Author"));
-		break;
-
 	case swInstructionsPlacementElement::BillOfMaterials:
 		mElementLabel->setText(tr("Bill of Materials"));
 		break;
@@ -535,7 +519,6 @@ void swInstructionsPlacementWidget::UpdateControls()
 		mElementLabel->setText(tr("Page Number"));
 		break;
 
-	case swInstructionsPlacementElement::CoverPartCount:
 	case swInstructionsPlacementElement::BillOfMaterialsPartCount:
 	case swInstructionsPlacementElement::PagePartCount:
 	case swInstructionsPlacementElement::SubmodelPreviewPartCount:
@@ -564,6 +547,11 @@ void swInstructionsPlacementWidget::UpdateControls()
 
 	case swInstructionsPlacementElement::None:
 		mElementLabel->setText(tr("No Element Selected"));
+		break;
+
+	default:
+		if (const swInstructionsPublicationElement* Publication = swFindPublicationElement(mElement))
+			mElementLabel->setText(swGetPublicationName(*Publication));
 		break;
 	}
 
@@ -594,7 +582,7 @@ void swInstructionsPlacementWidget::UpdateControls()
 
 	// page elements take the paper edge, child labels go all around
 	const bool ChildLabel = mElement == swInstructionsPlacementElement::SubmodelPreviewPartCount || mElement == swInstructionsPlacementElement::PartsListCount;
-	const bool PageEdge = ChildLabel || Image || Notice || (Inside && (mElement == swInstructionsPlacementElement::CoverTitle || mElement == swInstructionsPlacementElement::CoverAuthor || mElement == swInstructionsPlacementElement::CoverPartCount || mElement == swInstructionsPlacementElement::BillOfMaterialsPartCount || mElement == swInstructionsPlacementElement::PagePartCount || mElement == swInstructionsPlacementElement::SubmodelPreview || mElement == swInstructionsPlacementElement::PageNumber));
+	const bool PageEdge = ChildLabel || Image || Notice || (Inside && (swFindPublicationElement(mElement) || mElement == swInstructionsPlacementElement::BillOfMaterialsPartCount || mElement == swInstructionsPlacementElement::PagePartCount || mElement == swInstructionsPlacementElement::SubmodelPreview || mElement == swInstructionsPlacementElement::PageNumber));
 
 	// notices keep a free position
 

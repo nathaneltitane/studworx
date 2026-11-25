@@ -61,6 +61,28 @@ enum class swInstructionsPropertyMode
 	StepOnly
 };
 
+// Both covers show the same elements, each with its own set of properties.
+enum class swInstructionsCoverElement
+{
+	Title,
+	Author,
+	ProductId,
+	Version,
+	PublicationDate,
+	Url,
+	Contact,
+	Copyright,
+	PublicationNotice,
+	Comments,
+	Measurements,
+	Weight,
+	Pieces
+};
+
+constexpr int SW_COVER_ELEMENT_COUNT = 13;
+constexpr int SW_COVER_FIELD_COUNT = 13;
+constexpr int SW_COVER_PROPERTY_COUNT = 2 * SW_COVER_ELEMENT_COUNT * SW_COVER_FIELD_COUNT;
+
 enum class swInstructionsPropertyType
 {
 	ShowStepNumber,
@@ -85,19 +107,14 @@ enum class swInstructionsPropertyType
 	UseDocumentFontSize,
 	DocumentFont,
 	ShowCoverPage,
-	CoverTitleFont,
-	CoverTitleColor,
-	ShowCoverAuthor,
 	PageBackgroundColor,
 	StepNumberPlacement,
 	StepNumberAnchor,
 	PLIPlacement,
 	PLIAnchor,
-	CoverTitlePlacement,
 	BillOfMaterialsPlacement,
 	PLIThumbnailSize,
 	PLIThumbnailBackgroundColor, // read as parts list background
-	CoverAuthorPlacement,
 	CoverImagePlacement,
 	StepImagePlacement,
 	CoverBackgroundColor,
@@ -129,16 +146,6 @@ enum class swInstructionsPropertyType
 	PageNumberBorderWidth,
 	PageNumberBorderColor,
 	PageNumberBackgroundColor,
-	CoverTitleMargin,
-	CoverTitlePadding,
-	CoverTitleBorderWidth,
-	CoverTitleBorderColor,
-	CoverTitleBackgroundColor,
-	CoverAuthorMargin,
-	CoverAuthorPadding,
-	CoverAuthorBorderWidth,
-	CoverAuthorBorderColor,
-	CoverAuthorBackgroundColor,
 	CoverImageMargin,
 	CoverImagePadding,
 	CoverImageBorderWidth,
@@ -167,21 +174,13 @@ enum class swInstructionsPropertyType
 	StepNumberCornerRadius,
 	PLICornerRadius,
 	PageNumberCornerRadius,
-	CoverTitleCornerRadius,
-	CoverAuthorCornerRadius,
 	CoverImageCornerRadius,
 	NoticeCornerRadius,
 	BillOfMaterialsTitleFont,
-	CoverAuthorFont,
 	BillOfMaterialsTitleColor,
-	CoverAuthorColor,
 	SubmodelBackgroundColor,
 	StepImageSize,
 	CoverImageSize,
-	CoverTitleText,
-	CoverTitleFile,
-	CoverAuthorText,
-	CoverAuthorFile,
 	BillOfMaterialsTitleText,
 	BillOfMaterialsTitleFile,
 	StepDividerMargin,
@@ -194,7 +193,6 @@ enum class swInstructionsPropertyType
 	FinalModelBorderColor,
 	FinalModelMargin,
 	BillOfMaterialsShowPartIds,
-	ShowCoverPartCount,
 	ShowBillOfMaterialsPartCount,
 	ShowPagePartCount,
 	PartCountText,
@@ -203,15 +201,8 @@ enum class swInstructionsPropertyType
 	PartCountColor,
 	PagePartCountFont,
 	PagePartCountColor,
-	PartCountPlacement,
 	BillOfMaterialsPartCountPlacement,
 	PagePartCountPlacement,
-	PartCountMargin,
-	PartCountPadding,
-	PartCountBorderWidth,
-	PartCountBorderColor,
-	PartCountBackgroundColor,
-	PartCountCornerRadius,
 	ShowSubmodelPreview,
 	SubmodelPreviewSize,
 	SubmodelPreviewPlacement,
@@ -252,13 +243,8 @@ enum class swInstructionsPropertyType
 	PageNumberVerticalAlignment,
 	PartCountAlignment,
 	PartCountVerticalAlignment,
-	CoverTitleAlignment,
-	CoverTitleVerticalAlignment,
-	CoverAuthorAlignment,
-	CoverAuthorVerticalAlignment,
 	NoticeAlignment,
 	NoticeVerticalAlignment,
-	ShowCoverTitle,
 	ShowCoverImage,
 	ImageMargin,
 	ImagePadding,
@@ -357,7 +343,8 @@ enum class swInstructionsPropertyType
 	CompletionCornerRadius,
 	CompletionBoxBackgroundColor,
 	PLIReserveArea,
-	Count
+	CoverElements,
+	Count = CoverElements + SW_COVER_PROPERTY_COUNT
 };
 
 // The page number with or without count.
@@ -374,11 +361,8 @@ enum class swInstructionsBoxElement
 	StepNumber,
 	PartsList,
 	PageNumber,
-	CoverTitle,
-	CoverAuthor,
 	CoverImage,
 	Notice,
-	PartCount,
 	SubmodelPreview,
 	Image,
 	PartsListQuantity,
@@ -394,6 +378,32 @@ enum class swInstructionsBoxElement
 	BillOfMaterialsQuantity,
 	BillOfMaterialsPartCount,
 	Completion,
+	CoverFrontTitle,
+	CoverFrontAuthor,
+	CoverFrontProductId,
+	CoverFrontVersion,
+	CoverFrontPublicationDate,
+	CoverFrontUrl,
+	CoverFrontContact,
+	CoverFrontCopyright,
+	CoverFrontPublicationNotice,
+	CoverFrontComments,
+	CoverFrontMeasurements,
+	CoverFrontWeight,
+	CoverFrontPieces,
+	CoverBackTitle,
+	CoverBackAuthor,
+	CoverBackProductId,
+	CoverBackVersion,
+	CoverBackPublicationDate,
+	CoverBackUrl,
+	CoverBackContact,
+	CoverBackCopyright,
+	CoverBackPublicationNotice,
+	CoverBackComments,
+	CoverBackMeasurements,
+	CoverBackWeight,
+	CoverBackPieces,
 	Count
 };
 
@@ -511,22 +521,88 @@ enum class swInstructionsPlacementElement
 	None,
 	StepNumber,
 	PartsList,
-	CoverTitle,
-	CoverAuthor,
 	BillOfMaterials,
 	StepImage,
 	CoverImage,
 	PageNumber,
 	Notice,
 	Pointer,
-	CoverPartCount,
 	BillOfMaterialsPartCount,
 	PagePartCount,
 	SubmodelPreview,
 	SubmodelPreviewPartCount,
 	PartsListCount,
-	Image
+	Image,
+	CoverFrontTitle,
+	CoverFrontAuthor,
+	CoverFrontProductId,
+	CoverFrontVersion,
+	CoverFrontPublicationDate,
+	CoverFrontUrl,
+	CoverFrontContact,
+	CoverFrontCopyright,
+	CoverFrontPublicationNotice,
+	CoverFrontComments,
+	CoverFrontMeasurements,
+	CoverFrontWeight,
+	CoverFrontPieces,
+	CoverBackTitle,
+	CoverBackAuthor,
+	CoverBackProductId,
+	CoverBackVersion,
+	CoverBackPublicationDate,
+	CoverBackUrl,
+	CoverBackContact,
+	CoverBackCopyright,
+	CoverBackPublicationNotice,
+	CoverBackComments,
+	CoverBackMeasurements,
+	CoverBackWeight,
+	CoverBackPieces
 };
+
+// The publication texts share one set of properties.
+enum class swInstructionsPublicationField
+{
+	Show,
+	Text,
+	Font,
+	Color,
+	Placement,
+	Alignment,
+	VerticalAlignment,
+	Margin,
+	Padding,
+	BorderWidth,
+	BorderColor,
+	BackgroundColor,
+	CornerRadius
+};
+
+struct swInstructionsPublicationElement
+{
+	swInstructionsPlacementElement Element;
+	swInstructionsBoxElement Box;
+	swInstructionsPropertyType Show;
+	swInstructionsCoverElement Kind;
+	bool Back;
+};
+
+// Gets the cover elements, front first.
+const std::vector<swInstructionsPublicationElement>& swGetPublicationElements();
+
+// Gets a property of a cover element.
+inline swInstructionsPropertyType swGetPublicationType(const swInstructionsPublicationElement& Publication, swInstructionsPublicationField Field)
+{
+	return static_cast<swInstructionsPropertyType>(static_cast<int>(Publication.Show) + static_cast<int>(Field));
+}
+
+// Finds the cover element of a placement element.
+const swInstructionsPublicationElement* swFindPublicationElement(swInstructionsPlacementElement Element);
+
+// use to name a cover element, with and without its cover
+QString swGetPublicationKindName(const swInstructionsPublicationElement& Publication);
+QString swGetPublicationName(const swInstructionsPublicationElement& Publication);
 
 // Moved elements keep their offset.
 using swInstructionsElementKey = std::tuple<swInstructionsPlacementElement, swModel*, swStep>;
@@ -708,6 +784,10 @@ public:
 	void SetDefaultText(swInstructionsPropertyType Type, const QString& Text);
 	QString GetTextProperty(swInstructionsPropertyType Type) const;
 	QString GetSourcedText(swInstructionsPropertyType TextType, swInstructionsPropertyType FileType, const QString& Automatic) const;
+	QString GetTypedText(swInstructionsPropertyType TextType, const QString& Automatic) const;
+	QString GetModelFieldText(const swModel* Model, swInstructionsPlacementElement Element) const;
+	QString GetModelTitle(const swModel* Model) const;
+	QString FillModelCodes(QString Text) const;
 
 	// The model the instructions are made for.
 	swModel* GetMainModel() const;

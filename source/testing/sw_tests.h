@@ -62,6 +62,14 @@ private slots:
 	void InstructionsPartCountsRoundTrip();
 	void InstructionsBillOfMaterialsCopiesSteps();
 	void InstructionsPointersRoundTrip();
+	void InstructionsPublicationUrlRoundTrip();
+	void ModelPublicationRoundTrip();
+	void InstructionsTemplateKeepsNotices();
+	void InstructionsFillsPublicationCodes();
+	void InstructionsPublicationPagesFollowChoice();
+	void InstructionsCoverElementsPerCover();
+	void InstructionsCoverPlacedElementStays();
+	void InstructionsFillsSummaryCodes();
 	void InstructionsBandsAreNamed();
 	void MenusNameEveryCommand();
 	void InterfaceUsesPaintedIcons();

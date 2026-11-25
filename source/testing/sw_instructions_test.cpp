@@ -19,7 +19,7 @@ void swTests::InstructionsPartCountsAreNamed()
 	QVERIFY(!FileSource.isEmpty());
 	QVERIFY(!Documentation.isEmpty());
 
-	const QStringList Names = { "SHOW_COVER_PART_COUNT", "SHOW_BILL_OF_MATERIALS_PART_COUNT", "SHOW_PAGE_PART_COUNT", "PART_COUNT_TEXT", "PART_COUNT_FILE", "PART_COUNT_FONT", "PART_COUNT_COLOR", "PAGE_PART_COUNT_FONT", "PAGE_PART_COUNT_COLOR", "PART_COUNT_PLACEMENT", "BILL_OF_MATERIALS_PART_COUNT_PLACEMENT", "PAGE_PART_COUNT_PLACEMENT", "SHOW_SUBMODEL_PREVIEW", "SUBMODEL_PREVIEW_MODEL_SIZE", "SUBMODEL_PREVIEW_PLACEMENT", "COVER_PART_COUNT", "BILL_OF_MATERIALS_PART_COUNT", "PAGE_PART_COUNT", "SUBMODEL_PREVIEW", "SUBMODEL_PREVIEW_PART_COUNT_PLACEMENT", "PARTS_LIST_QUANTITY_PLACEMENT", "SUBMODEL_PREVIEW_PART_COUNT", "PARTS_LIST_QUANTITY", "SHOW_BACK_COVER", "BACK_COVER", "IMAGE", "USE_DOCUMENT_FONT", "USE_DOCUMENT_FONT_SIZE", "DOCUMENT_FONT" };
+	const QStringList Names = { "BILL_OF_MATERIALS SHOW_PART_COUNT", "PAGE SHOW_PART_COUNT", "PART_COUNT TEXT", "PART_COUNT FILE", "PART_COUNT FONT", "PART_COUNT COLOR", "PAGE PART_COUNT_FONT", "PAGE PART_COUNT_COLOR", "BILL_OF_MATERIALS PART_COUNT_PLACEMENT", "PAGE PART_COUNT_PLACEMENT", "STEP SHOW_SUBMODEL_PREVIEW", "STEP SUBMODEL_PREVIEW_MODEL_SIZE", "STEP SUBMODEL_PREVIEW_PLACEMENT", "BILL_OF_MATERIALS_PART_COUNT", "STEP SUBMODEL_PREVIEW_PART_COUNT_PLACEMENT", "STEP PARTS_LIST_QUANTITY_PLACEMENT", "SUBMODEL_PREVIEW_PART_COUNT", "PARTS_LIST_QUANTITY", "COVER SHOW_BACK", "DOCUMENT USE_FONT", "DOCUMENT USE_FONT_SIZE", "DOCUMENT FONT" };
 	QStringList Missing;
 
 	for (const QString& Name : Names)
@@ -35,7 +35,7 @@ void swTests::InstructionsPartCountsDefaultOff()
 	const QString Source = ReadInstructionsSource(QStringLiteral("source/transput/sw_instructions.cpp"));
 	QVERIFY(!Source.isEmpty());
 
-	const QStringList Toggles = { "ShowCoverPartCount", "ShowBillOfMaterialsPartCount", "ShowPagePartCount", "ShowSubmodelPreview" };
+	const QStringList Toggles = { "ShowBillOfMaterialsPartCount", "ShowPagePartCount", "ShowSubmodelPreview" };
 
 	for (const QString& Toggle : Toggles)
 		QVERIFY2(Source.contains(QStringLiteral("swInstructionsPropertyType::%1)].Value = false;").arg(Toggle)), qPrintable(Toggle));
@@ -66,15 +66,15 @@ void swTests::InstructionsPartCountsRoundTrip()
 	QFile Model(Folder.filePath("model.mpd"));
 	QVERIFY(Model.open(QIODevice::WriteOnly));
 	Model.write("0 FILE main.ldr\r\n0 main\r\n"
-		"0 !SW PROPERTY INSTRUCTION SHOW_COVER_PART_COUNT TRUE\r\n"
-		"0 !SW PROPERTY INSTRUCTION PART_COUNT_TEXT %1 PARTS\r\n"
-		"0 !SW PROPERTY INSTRUCTION SHOW_SUBMODEL_PREVIEW TRUE\r\n"
-		"0 !SW PROPERTY INSTRUCTION SUBMODEL_PREVIEW_PLACEMENT 6\r\n"
-		"0 !SW PROPERTY INSTRUCTION SHOW_BACK_COVER FALSE\r\n"
-		"0 !SW PROPERTY INSTRUCTION USE_DOCUMENT_FONT TRUE\r\n"
-		"0 !SW PROPERTY INSTRUCTION SHOW_HEADER_BAND TRUE\r\n"
-		"0 !SW PROPERTY INSTRUCTION BLANK_PAGE_BACKGROUND_COLOR #FF000080\r\n"
-		"0 !SW PROPERTY INSTRUCTION PARTS_LIST_QUANTITY_PADDING 3\r\n"
+		"0 !SW PROPERTY INSTRUCTION COVER FRONT SHOW_PIECES TRUE\r\n"
+		"0 !SW PROPERTY INSTRUCTION PART_COUNT TEXT %1 PARTS\r\n"
+		"0 !SW PROPERTY INSTRUCTION STEP SHOW_SUBMODEL_PREVIEW TRUE\r\n"
+		"0 !SW PROPERTY INSTRUCTION STEP SUBMODEL_PREVIEW_PLACEMENT 6\r\n"
+		"0 !SW PROPERTY INSTRUCTION COVER SHOW_BACK FALSE\r\n"
+		"0 !SW PROPERTY INSTRUCTION DOCUMENT USE_FONT TRUE\r\n"
+		"0 !SW PROPERTY INSTRUCTION BAND HEADER SHOW TRUE\r\n"
+		"0 !SW PROPERTY INSTRUCTION PAGE BLANK_BACKGROUND_COLOR #FF000080\r\n"
+		"0 !SW PROPERTY INSTRUCTION STEP PARTS_LIST_QUANTITY_PADDING 3\r\n"
 		"0 !SW NOTICE INSTRUCTION 1 SHOW FOOTER POSITION 10 5 TEXT PAGE %page\r\n"
 		"0 !SW IMAGE INSTRUCTION 2 BOTH PLACEMENT 3 SIZE 40 FILE \"logo.png\"\r\n"
 		"1 16 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n"
@@ -103,16 +103,16 @@ void swTests::InstructionsPartCountsRoundTrip()
 
 	const QStringList Lines = QString::fromUtf8(Saved.readAll()).split("\r\n").filter("INSTRUCTION");
 
-	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION SHOW_COVER_PART_COUNT TRUE"));
-	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION PART_COUNT_TEXT %1 PARTS"));
-	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION SHOW_SUBMODEL_PREVIEW TRUE"));
-	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION SUBMODEL_PREVIEW_PLACEMENT 6"));
-	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION SHOW_BACK_COVER FALSE"));
-	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION USE_DOCUMENT_FONT TRUE"));
-	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION BLANK_PAGE_BACKGROUND_COLOR #FF000080"));
-	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION PARTS_LIST_QUANTITY_PADDING 3"));
+	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION COVER FRONT SHOW_PIECES TRUE"));
+	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION PART_COUNT TEXT %1 PARTS"));
+	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION STEP SHOW_SUBMODEL_PREVIEW TRUE"));
+	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION STEP SUBMODEL_PREVIEW_PLACEMENT 6"));
+	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION COVER SHOW_BACK FALSE"));
+	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION DOCUMENT USE_FONT TRUE"));
+	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION PAGE BLANK_BACKGROUND_COLOR #FF000080"));
+	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION STEP PARTS_LIST_QUANTITY_PADDING 3"));
 	QVERIFY(Lines.contains("0 !SW IMAGE INSTRUCTION 2 BOTH PLACEMENT 3 SIZE 40 FILE \"logo.png\""));
-	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION SHOW_HEADER_BAND TRUE"));
+	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION BAND HEADER SHOW TRUE"));
 	QVERIFY(Lines.contains("0 !SW NOTICE INSTRUCTION 1 SHOW FOOTER POSITION 10 5 TEXT PAGE %page"));
 }
 
@@ -138,9 +138,9 @@ void swTests::InstructionsBillOfMaterialsCopiesSteps()
 	QFile Model(Folder.filePath("model.ldr"));
 	QVERIFY(Model.open(QIODevice::WriteOnly));
 	Model.write("0 main\r\n"
-		"0 !SW PROPERTY INSTRUCTION PARTS_LIST_QUANTITY_PADDING 3\r\n"
-		"0 !SW PROPERTY INSTRUCTION PARTS_LIST_SORT_ORDER 1\r\n"
-		"0 !SW PROPERTY INSTRUCTION BILL_OF_MATERIALS_SORT_ORDER 0\r\n"
+		"0 !SW PROPERTY INSTRUCTION STEP PARTS_LIST_QUANTITY_PADDING 3\r\n"
+		"0 !SW PROPERTY INSTRUCTION STEP PARTS_LIST_SORT_ORDER 1\r\n"
+		"0 !SW PROPERTY INSTRUCTION BILL_OF_MATERIALS SORT_ORDER 0\r\n"
 		"0 !SW STEPS_PER_PAGE INSTRUCTION 1 2 FINAL_MODEL FINAL_MODEL_COLOR\r\n"
 		"1 16 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n");
 	Model.close();
@@ -162,10 +162,10 @@ void swTests::InstructionsBillOfMaterialsCopiesSteps()
 
 	const QStringList Lines = QString::fromUtf8(Saved.readAll()).split("\r\n").filter("INSTRUCTION");
 
-	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION PARTS_LIST_QUANTITY_PADDING 3"));
-	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION BILL_OF_MATERIALS_QUANTITY_PADDING 3"));
-	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION PARTS_LIST_SORT_ORDER 1"));
-	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION BILL_OF_MATERIALS_SORT_ORDER 0"));
+	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION STEP PARTS_LIST_QUANTITY_PADDING 3"));
+	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION BILL_OF_MATERIALS QUANTITY_PADDING 3"));
+	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION STEP PARTS_LIST_SORT_ORDER 1"));
+	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION BILL_OF_MATERIALS SORT_ORDER 0"));
 
 	// the old final model color follows the page
 	QVERIFY(Lines.contains("0 !SW STEPS_PER_PAGE INSTRUCTION 1 2 FINAL_MODEL"));
@@ -192,7 +192,7 @@ void swTests::InstructionsPointersRoundTrip()
 
 	const QStringList Pointers =
 	{
-		"0 !SW PROPERTY INSTRUCTION POINTER_BEND_RADIUS 6",
+		"0 !SW PROPERTY INSTRUCTION POINTER BEND_RADIUS 6",
 		"0 !SW POINTER INSTRUCTION 1 PAGE STEPS \"main.ldr\" 1 0 SOURCE STEP_NUMBER \"main.ldr\" 1 ANCHOR 3 STYLE L_SHAPE TIP HOLLOW_DOT TARGET ELEMENT PARTS_LIST \"main.ldr\" 1 PART -1 POSITION 100 50 AT 0.25 0.75",
 		"0 !SW POINTER INSTRUCTION 2 PAGE STEPS \"main.ldr\" 1 0 SOURCE STEP_NUMBER \"main.ldr\" 1 ANCHOR 5 STYLE Z_SHAPE TIP DOT TARGET POINT NONE - 0 PART -1 POSITION 120 80 BEND 0.3",
 		"0 !SW POINTER INSTRUCTION 3 PAGE STEPS \"main.ldr\" 1 0 SOURCE STEP_NUMBER \"main.ldr\" 1 ANCHOR 1 STYLE U_SHAPE TIP ARROW TARGET POINT NONE - 0 PART -1 POSITION 140 20 REACH 42.5"
@@ -226,6 +226,199 @@ void swTests::InstructionsPointersRoundTrip()
 		QVERIFY2(Lines.contains(Pointer), qPrintable(Pointer + "\nsaved:\n" + Lines.join("\n")));
 }
 
+// Saves a model with every element of both covers set, with the StudWorx binary. The texts and toggles must come back, and the template reader must take any property line.
+void swTests::InstructionsPublicationUrlRoundTrip()
+{
+	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
+	const QString Binary = Environment.value("SW_TEST_BINARY");
+
+	if (Binary.isEmpty())
+		QSKIP("SW_TEST_BINARY is not set");
+
+	const QString FileSource = ReadInstructionsSource(QStringLiteral("source/transput/sw_instructions_file.cpp"));
+	QVERIFY(FileSource.contains(QStringLiteral("(PROPERTY|STEPS_PER_PAGE|IMAGE|NOTICE)")));
+
+	QTemporaryDir Folder;
+	QVERIFY(Folder.isValid());
+	QVERIFY(QDir(Folder.path()).mkpath("library/parts"));
+
+	QFile Part(Folder.filePath("library/parts/3001.dat"));
+	QVERIFY(Part.open(QIODevice::WriteOnly));
+	Part.write("0 Brick  2 x  4\r\n0 Name: 3001.dat\r\n4 16 -40 0 -20 40 0 -20 40 0 20 -40 0 20\r\n");
+	Part.close();
+
+	// every element of both covers shows, or hides when shown by default, and writes its text
+	QStringList Properties;
+
+	for (const QString& Cover : { "FRONT", "BACK" })
+		for (const QString& Name : { "TITLE", "AUTHOR", "PRODUCT_ID", "VERSION", "PUBLICATION_DATE", "URL", "CONTACT", "COPYRIGHT", "NOTICE", "COMMENTS", "MEASUREMENTS", "WEIGHT", "PIECES" })
+		{
+			const bool Default = Cover == QLatin1String("FRONT") && (Name == QLatin1String("TITLE") || Name == QLatin1String("AUTHOR"));
+
+			Properties << QString("0 !SW PROPERTY INSTRUCTION COVER %1 SHOW_%2 %3").arg(Cover, Name, Default ? "FALSE" : "TRUE") << QString("0 !SW PROPERTY INSTRUCTION COVER %1 %2_TEXT %1 // %2").arg(Cover, Name);
+		}
+
+	QFile Model(Folder.filePath("model.mpd"));
+	QVERIFY(Model.open(QIODevice::WriteOnly));
+	Model.write("0 FILE main.ldr\r\n0 main\r\n");
+	Model.write((Properties.join("\r\n") + "\r\n").toUtf8());
+	Model.write("1 16 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n0 NOFILE\r\n");
+	Model.close();
+
+	QProcessEnvironment SaveEnvironment = Environment;
+	SaveEnvironment.insert("XDG_CONFIG_HOME", Folder.filePath("config"));
+	SaveEnvironment.insert("XDG_DATA_HOME", Folder.filePath("data"));
+	SaveEnvironment.insert("XDG_CACHE_HOME", Folder.filePath("cache"));
+	SaveEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
+
+	QProcess Save;
+	Save.setProcessEnvironment(SaveEnvironment);
+	Save.setProcessChannelMode(QProcess::MergedChannels);
+	Save.start(Binary, { "--library", Folder.filePath("library"), Model.fileName(), "--flatten", Folder.filePath("saved.mpd") });
+	QVERIFY(Save.waitForFinished(120000));
+
+	QFile Saved(Folder.filePath("saved.mpd"));
+	QVERIFY(Saved.open(QIODevice::ReadOnly));
+
+	const QStringList Lines = QString::fromUtf8(Saved.readAll()).split("\r\n").filter("INSTRUCTION");
+
+	for (const QString& Property : Properties)
+		QVERIFY2(Lines.contains(Property), qPrintable(Property + "\nsaved:\n" + Lines.join("\n")));
+}
+
+// Saves a model with every publication line and the license line, with the StudWorx binary. Each line must come back.
+void swTests::ModelPublicationRoundTrip()
+{
+	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
+	const QString Binary = Environment.value("SW_TEST_BINARY");
+
+	if (Binary.isEmpty())
+		QSKIP("SW_TEST_BINARY is not set");
+
+	QTemporaryDir Folder;
+	QVERIFY(Folder.isValid());
+
+	const QStringList Lines =
+	{
+		"0 !LICENSE Sample License",
+		"0",
+		"0 !SW PRODUCT_ID MODEL SW-0001",
+		"0 !SW VERSION MODEL 1.2",
+		"0 !SW PUBLICATION_DATE MODEL Spring 2026",
+		"0 !SW URL MODEL HTTPS://EXAMPLE.COM/MODELS/TEST",
+		"0 !SW CONTACT MODEL INFO@EXAMPLE.COM",
+		"0 !SW NOTICE MODEL Sample Notice"
+	};
+
+	QFile Model(Folder.filePath("model.ldr"));
+	QVERIFY(Model.open(QIODevice::WriteOnly));
+	Model.write("0 Test\r\n0 Name: model.ldr\r\n0 Author: Sample Author\r\n");
+	Model.write((Lines.join("\r\n") + "\r\n").toUtf8());
+	Model.write("1 4 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n");
+	Model.close();
+
+	QProcessEnvironment SaveEnvironment = Environment;
+	SaveEnvironment.insert("XDG_CONFIG_HOME", Folder.filePath("config"));
+	SaveEnvironment.insert("XDG_DATA_HOME", Folder.filePath("data"));
+	SaveEnvironment.insert("XDG_CACHE_HOME", Folder.filePath("cache"));
+	SaveEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
+
+	QProcess Save;
+	Save.setProcessEnvironment(SaveEnvironment);
+	Save.setProcessChannelMode(QProcess::MergedChannels);
+	Save.start(Binary, { Model.fileName(), "--flatten", Folder.filePath("saved.mpd") });
+	QVERIFY(Save.waitForFinished(120000));
+
+	QFile Saved(Folder.filePath("saved.mpd"));
+	QVERIFY(Saved.open(QIODevice::ReadOnly));
+
+	const QStringList SavedLines = QString::fromUtf8(Saved.readAll()).split("\r\n");
+
+	for (const QString& Line : Lines)
+		QVERIFY2(SavedLines.count(Line) == 1, qPrintable(Line + "\nsaved:\n" + SavedLines.join("\n")));
+
+	// the lone 0 sits right after the header
+	QCOMPARE(SavedLines.indexOf(QStringLiteral("0")), SavedLines.indexOf(Lines.first()) + 1);
+}
+
+// Applies a template with a front cover, a back cover and a footer notice, set as the default template, to a fresh model with the StudWorx binary. All three must come back as saved lines, and the covers must draw them. Save Template maps cover page notices to these lines in sw_instructions_file.cpp, the dialog is not reachable here.
+void swTests::InstructionsTemplateKeepsNotices()
+{
+	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
+	const QString Binary = Environment.value("SW_TEST_BINARY");
+
+	if (Binary.isEmpty())
+		QSKIP("SW_TEST_BINARY is not set");
+
+	const QString FileSource = ReadInstructionsSource(QStringLiteral("source/transput/sw_instructions_file.cpp"));
+	QVERIFY(FileSource.contains(QStringLiteral("PageType == swInstructionsPageType::Cover ? swInstructionsImagePages::Front : swInstructionsImagePages::Back")));
+	QVERIFY(FileSource.contains(QStringLiteral("(PROPERTY|STEPS_PER_PAGE|IMAGE|NOTICE)")));
+
+	QTemporaryDir Folder;
+	QVERIFY(Folder.isValid());
+	QVERIFY(QDir(Folder.path()).mkpath("config/StudWorx"));
+	QVERIFY(QDir(Folder.path()).mkpath("plain/StudWorx"));
+
+	const QStringList Notices =
+	{
+		"0 !SW NOTICE INSTRUCTION 1 SHOW FRONT POSITION 100 50 TEXT FRONT NOTICE",
+		"0 !SW NOTICE INSTRUCTION 2 SHOW BACK POSITION 100 50 TEXT BACK NOTICE",
+		"0 !SW NOTICE INSTRUCTION 3 SHOW FOOTER POSITION 10 5 TEXT FOOTER NOTICE"
+	};
+
+	QFile Template(Folder.filePath("template.ldr"));
+	QVERIFY(Template.open(QIODevice::WriteOnly));
+	Template.write("0 Instructions Template\n0 Name: template.ldr\n");
+	Template.write((Notices.join("\n") + "\n").toUtf8());
+	Template.close();
+
+	QFile Settings(Folder.filePath("config/StudWorx/StudWorx.conf"));
+	QVERIFY(Settings.open(QIODevice::WriteOnly));
+	Settings.write(QString("[Defaults]\nTemplate=%1\n").arg(Template.fileName()).toUtf8());
+	Settings.close();
+
+	QFile Model(Folder.filePath("brick.ldr"));
+	QVERIFY(Model.open(QIODevice::WriteOnly));
+	Model.write("0 Test\r\n0 !SW PAGE_SETUP INSTRUCTION 480 240 16 16 16 16 UNITS 0 0\r\n0 !SW PROPERTY INSTRUCTION COVER SHOW_BACK TRUE\r\n1 4 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n");
+	Model.close();
+
+	QStringList ConfigFolders = { "config", "plain" };
+	QImage Pages[2][2];
+
+	for (int Run = 0; Run < 2; Run++)
+	{
+		QProcessEnvironment RunEnvironment = Environment;
+		RunEnvironment.insert("XDG_CONFIG_HOME", Folder.filePath(ConfigFolders[Run]));
+		RunEnvironment.insert("XDG_DATA_HOME", Folder.filePath("data"));
+		RunEnvironment.insert("XDG_CACHE_HOME", Folder.filePath("cache"));
+
+		if (Environment.value("SW_TEST_NATIVE_DISPLAY") != QLatin1String("1"))
+			RunEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
+
+		QProcess Export;
+		Export.setProcessEnvironment(RunEnvironment);
+		Export.setProcessChannelMode(QProcess::MergedChannels);
+		Export.start(Binary, { Model.fileName(), "--resave", Folder.filePath(QString("saved%1.ldr").arg(Run)), "--export-pages", Folder.filePath(QString("pages%1").arg(Run)) });
+		QVERIFY2(Export.waitForFinished(120000), "the model was not saved");
+		QVERIFY2(Export.exitCode() == 0, Export.readAll().constData());
+
+		const QStringList Names = QDir(Folder.filePath(QString("pages%1").arg(Run))).entryList({ "*.png" }, QDir::Files, QDir::Name);
+		QVERIFY(Names.size() > 1);
+		Pages[Run][0] = QImage(Folder.filePath(QString("pages%1/").arg(Run) + Names.first()));
+		Pages[Run][1] = QImage(Folder.filePath(QString("pages%1/").arg(Run) + Names.last()));
+	}
+
+	QFile Saved(Folder.filePath("saved0.ldr"));
+	QVERIFY(Saved.open(QIODevice::ReadOnly));
+	const QStringList Lines = QString::fromUtf8(Saved.readAll()).split(QRegularExpression("\r?\n"));
+
+	for (const QString& Notice : Notices)
+		QVERIFY2(Lines.contains(Notice), qPrintable(Notice + "\nsaved:\n" + Lines.join("\n")));
+
+	QVERIFY2(Pages[0][0] != Pages[1][0], "the front cover notice was not drawn");
+	QVERIFY2(Pages[0][1] != Pages[1][1], "the back cover notice was not drawn");
+}
+
 // The band and watermark names must be known to the file reader and listed in the meta documentation.
 void swTests::InstructionsBandsAreNamed()
 {
@@ -234,7 +427,7 @@ void swTests::InstructionsBandsAreNamed()
 	QVERIFY(!FileSource.isEmpty());
 	QVERIFY(!Documentation.isEmpty());
 
-	const QStringList Names = { "LOCK_HOME_VIEW", "SHOW_HEADER_BAND", "SHOW_FOOTER_BAND", "SHOW_LEFT_BAND", "SHOW_RIGHT_BAND", "HEADER_BAND_SIZE", "FOOTER_BAND_SIZE", "LEFT_BAND_SIZE", "RIGHT_BAND_SIZE", "HEADER_BAND_COLOR", "FOOTER_BAND_COLOR", "LEFT_BAND_COLOR", "RIGHT_BAND_COLOR", "HEADER_BAND_RESERVE", "FOOTER_BAND_RESERVE", "LEFT_BAND_RESERVE", "RIGHT_BAND_RESERVE", "SHOW_WATERMARK", "WATERMARK_OPACITY", "WATERMARK_FONT", "WATERMARK_TEXT_COLOR", "WATERMARK_ROTATION", "HEADER", "FOOTER", "WATERMARK", "FINAL_MODEL_PADDING", "FINAL_MODEL_CORNER_RADIUS", "FINAL_MODEL_BACKGROUND_COLOR", "STEP_MARGIN", "STEP_PADDING", "STEP_BORDER_WIDTH", "STEP_BORDER_COLOR", "STEP_CORNER_RADIUS", "HEADER_BAND_MARGIN", "HEADER_BAND_PADDING", "HEADER_BAND_BORDER_WIDTH", "HEADER_BAND_BORDER_COLOR", "HEADER_BAND_CORNER_RADIUS", "FOOTER_BAND_MARGIN", "FOOTER_BAND_PADDING", "FOOTER_BAND_BORDER_WIDTH", "FOOTER_BAND_BORDER_COLOR", "FOOTER_BAND_CORNER_RADIUS", "LEFT_BAND_MARGIN", "LEFT_BAND_PADDING", "LEFT_BAND_BORDER_WIDTH", "LEFT_BAND_BORDER_COLOR", "LEFT_BAND_CORNER_RADIUS", "RIGHT_BAND_MARGIN", "RIGHT_BAND_PADDING", "RIGHT_BAND_BORDER_WIDTH", "RIGHT_BAND_BORDER_COLOR", "RIGHT_BAND_CORNER_RADIUS", "WATERMARK_MARGIN", "WATERMARK_PADDING", "WATERMARK_BORDER_WIDTH", "WATERMARK_BORDER_COLOR", "WATERMARK_CORNER_RADIUS", "WATERMARK_BACKGROUND_COLOR", "SHOW_BILL_OF_MATERIALS_TITLE", "BILL_OF_MATERIALS_TITLE_PLACEMENT", "BILL_OF_MATERIALS_FONT", "BILL_OF_MATERIALS_TEXT_COLOR", "BILL_OF_MATERIALS_SHOW_COUNTS", "BILL_OF_MATERIALS_SORT_ORDER", "BILL_OF_MATERIALS_LAYOUT", "BILL_OF_MATERIALS_ALIGNMENT", "BILL_OF_MATERIALS_THUMBNAIL_SIZE", "BILL_OF_MATERIALS_COUNT_PLACEMENT", "BILL_OF_MATERIALS_TITLE_MARGIN", "BILL_OF_MATERIALS_TITLE_PADDING", "BILL_OF_MATERIALS_TITLE_BORDER_WIDTH", "BILL_OF_MATERIALS_TITLE_BORDER_COLOR", "BILL_OF_MATERIALS_TITLE_CORNER_RADIUS", "BILL_OF_MATERIALS_TITLE_BACKGROUND_COLOR", "BILL_OF_MATERIALS_LIST_MARGIN", "BILL_OF_MATERIALS_LIST_PADDING", "BILL_OF_MATERIALS_LIST_BORDER_WIDTH", "BILL_OF_MATERIALS_LIST_BORDER_COLOR", "BILL_OF_MATERIALS_LIST_CORNER_RADIUS", "BILL_OF_MATERIALS_LIST_BACKGROUND_COLOR", "BILL_OF_MATERIALS_QUANTITY_MARGIN", "BILL_OF_MATERIALS_QUANTITY_PADDING", "BILL_OF_MATERIALS_QUANTITY_BORDER_WIDTH", "BILL_OF_MATERIALS_QUANTITY_BORDER_COLOR", "BILL_OF_MATERIALS_QUANTITY_CORNER_RADIUS", "BILL_OF_MATERIALS_QUANTITY_BACKGROUND_COLOR", "BILL_OF_MATERIALS_PART_COUNT_MARGIN", "BILL_OF_MATERIALS_PART_COUNT_PADDING", "BILL_OF_MATERIALS_PART_COUNT_BORDER_WIDTH", "BILL_OF_MATERIALS_PART_COUNT_BORDER_COLOR", "BILL_OF_MATERIALS_PART_COUNT_CORNER_RADIUS", "BILL_OF_MATERIALS_PART_COUNT_BACKGROUND_COLOR" };
+	const QStringList Names = { "DOCUMENT LOCK_HOME_VIEW", "BAND HEADER SHOW", "BAND FOOTER SHOW", "BAND LEFT SHOW", "BAND RIGHT SHOW", "BAND HEADER SIZE", "BAND FOOTER SIZE", "BAND LEFT SIZE", "BAND RIGHT SIZE", "BAND HEADER COLOR", "BAND FOOTER COLOR", "BAND LEFT COLOR", "BAND RIGHT COLOR", "BAND HEADER RESERVE", "BAND FOOTER RESERVE", "BAND LEFT RESERVE", "BAND RIGHT RESERVE", "WATERMARK SHOW", "WATERMARK OPACITY", "WATERMARK FONT", "WATERMARK TEXT_COLOR", "WATERMARK ROTATION", "HEADER", "FOOTER", "WATERMARK", "STEP FINAL_MODEL_PADDING", "STEP FINAL_MODEL_CORNER_RADIUS", "STEP FINAL_MODEL_BACKGROUND_COLOR", "STEP AREA_MARGIN", "STEP AREA_PADDING", "STEP AREA_BORDER_WIDTH", "STEP AREA_BORDER_COLOR", "STEP AREA_CORNER_RADIUS", "BAND HEADER MARGIN", "BAND HEADER PADDING", "BAND HEADER BORDER_WIDTH", "BAND HEADER BORDER_COLOR", "BAND HEADER CORNER_RADIUS", "BAND FOOTER MARGIN", "BAND FOOTER PADDING", "BAND FOOTER BORDER_WIDTH", "BAND FOOTER BORDER_COLOR", "BAND FOOTER CORNER_RADIUS", "BAND LEFT MARGIN", "BAND LEFT PADDING", "BAND LEFT BORDER_WIDTH", "BAND LEFT BORDER_COLOR", "BAND LEFT CORNER_RADIUS", "BAND RIGHT MARGIN", "BAND RIGHT PADDING", "BAND RIGHT BORDER_WIDTH", "BAND RIGHT BORDER_COLOR", "BAND RIGHT CORNER_RADIUS", "WATERMARK MARGIN", "WATERMARK PADDING", "WATERMARK BORDER_WIDTH", "WATERMARK BORDER_COLOR", "WATERMARK CORNER_RADIUS", "WATERMARK BACKGROUND_COLOR", "BILL_OF_MATERIALS SHOW_TITLE", "BILL_OF_MATERIALS TITLE_PLACEMENT", "BILL_OF_MATERIALS FONT", "BILL_OF_MATERIALS TEXT_COLOR", "BILL_OF_MATERIALS SHOW_COUNTS", "BILL_OF_MATERIALS SORT_ORDER", "BILL_OF_MATERIALS LAYOUT", "BILL_OF_MATERIALS ALIGNMENT", "BILL_OF_MATERIALS THUMBNAIL_SIZE", "BILL_OF_MATERIALS COUNT_PLACEMENT", "BILL_OF_MATERIALS TITLE_MARGIN", "BILL_OF_MATERIALS TITLE_PADDING", "BILL_OF_MATERIALS TITLE_BORDER_WIDTH", "BILL_OF_MATERIALS TITLE_BORDER_COLOR", "BILL_OF_MATERIALS TITLE_CORNER_RADIUS", "BILL_OF_MATERIALS TITLE_BACKGROUND_COLOR", "BILL_OF_MATERIALS LIST_MARGIN", "BILL_OF_MATERIALS LIST_PADDING", "BILL_OF_MATERIALS LIST_BORDER_WIDTH", "BILL_OF_MATERIALS LIST_BORDER_COLOR", "BILL_OF_MATERIALS LIST_CORNER_RADIUS", "BILL_OF_MATERIALS LIST_BACKGROUND_COLOR", "BILL_OF_MATERIALS QUANTITY_MARGIN", "BILL_OF_MATERIALS QUANTITY_PADDING", "BILL_OF_MATERIALS QUANTITY_BORDER_WIDTH", "BILL_OF_MATERIALS QUANTITY_BORDER_COLOR", "BILL_OF_MATERIALS QUANTITY_CORNER_RADIUS", "BILL_OF_MATERIALS QUANTITY_BACKGROUND_COLOR", "BILL_OF_MATERIALS PART_COUNT_MARGIN", "BILL_OF_MATERIALS PART_COUNT_PADDING", "BILL_OF_MATERIALS PART_COUNT_BORDER_WIDTH", "BILL_OF_MATERIALS PART_COUNT_BORDER_COLOR", "BILL_OF_MATERIALS PART_COUNT_CORNER_RADIUS", "BILL_OF_MATERIALS PART_COUNT_BACKGROUND_COLOR" };
 	QStringList Missing;
 
 	for (const QString& Name : Names)

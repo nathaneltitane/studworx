@@ -383,10 +383,6 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	}
 
 	ui->RebrickableApiKeyButton->setMinimumWidth(ui->ColorConfigBrowseButton->sizeHint().width() + ButtonSpacing + UpdateButtonWidth);
-	connect(ui->AuthorName, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
-	connect(ui->AuthorEmail, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
-	connect(ui->AuthorComment, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
-	connect(ui->AuthorSplitter, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
 	connect(ui->ColorTheme, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &swPreferencesDialog::ColorThemeCurrentIndexChanged);
 	connect(ui->AutomateEdgeColor, &QCheckBox::toggled, this, &swPreferencesDialog::AutomateEdgeColorToggled);
 	connect(ui->EdgeContrastSlider, &QSlider::valueChanged, this, &swPreferencesDialog::EdgeColorSliderValueChanged);
@@ -517,11 +513,6 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->lgeoPath->setText(mOptions->LGEOPath);
 	ui->DefaultTemplateEdit->setText(mOptions->DefaultTemplate);
 	ui->RebrickableApiKeyEdit->setText(mOptions->RebrickableApiKey);
-	ui->AuthorName->setText(mOptions->DefaultAuthorName);
-	ui->AuthorEmail->setText(mOptions->DefaultAuthorEmail);
-	ui->AuthorComment->setText(mOptions->DefaultAuthorComment);
-	ui->AuthorSplitter->setText(mOptions->DefaultAuthorSplitter);
-	AuthorChanged();
 
 	connect(ui->mouseSensitivity, &QSlider::valueChanged, ui->MouseSensitivityLabel, [this](int Value)
 	{
@@ -963,10 +954,6 @@ void swPreferencesDialog::accept()
 	mOptions->LGEOPath = ui->lgeoPath->text();
 	mOptions->DefaultTemplate = ui->DefaultTemplateEdit->text();
 	mOptions->RebrickableApiKey = ui->RebrickableApiKeyEdit->text().trimmed();
-	mOptions->DefaultAuthorName = ui->AuthorName->text();
-	mOptions->DefaultAuthorEmail = ui->AuthorEmail->text();
-	mOptions->DefaultAuthorComment = ui->AuthorComment->text();
-	mOptions->DefaultAuthorSplitter = ui->AuthorSplitter->text();
 	mOptions->Preferences.mMouseSensitivity = ui->mouseSensitivity->value();
 	mOptions->Preferences.mColorTheme = static_cast<swColorTheme>(ui->ColorTheme->currentIndex());
 	mOptions->Preferences.mAutomateEdgeColor = ui->AutomateEdgeColor->isChecked();
@@ -1406,11 +1393,6 @@ void swPreferencesDialog::DefaultTemplateBrowseClicked()
 
 	if (!Result.isEmpty())
 		ui->DefaultTemplateEdit->setText(QDir::toNativeSeparators(Result));
-}
-
-void swPreferencesDialog::AuthorChanged()
-{
-	ui->AuthorPreview->setText(swModelProperties::CombineAuthor(ui->AuthorName->text(), ui->AuthorEmail->text(), ui->AuthorComment->text(), ui->AuthorSplitter->text()));
 }
 
 void swPreferencesDialog::ColorThemeCurrentIndexChanged(int Index)

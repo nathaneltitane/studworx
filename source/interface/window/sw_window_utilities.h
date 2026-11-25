@@ -11,11 +11,16 @@ constexpr int SW_MAXIMUM_IMAGE_DIMENSION = 32768;
 constexpr int SW_MAXIMUM_GRID_LINE_SPACING = 100;
 constexpr int SW_MAXIMUM_AREA_LIGHT_GRID = 64;
 
+// grams to ounces
+constexpr double SW_GRAMS_TO_OUNCES = 0.03527396;
+
 QString swFormatValue(float Value, int Precision);
 QString swFormatFloatLocalized(float Value, QLocale Locale);
 QString swFormatDoubleLocalized(double Value, QLocale Locale, char Format, int Precision);
 QString swFormatIntegerLocalized(qlonglong Value, QLocale Locale);
 std::optional<float> swParseFloatLocalized(const QString& Value, QLocale Locale);
+QString swGetMeasurementsText(const swVector3& Dimensions, QLocale Locale);
+QString swGetWeightText(double Grams, int Parts, int Missing, QLocale Locale);
 
 void swSetupDialogHelp(QDialog* Dialog);
 void swSetupWidgetHelp(QWidget* Root);

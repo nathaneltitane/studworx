@@ -35,28 +35,24 @@ static bool swIsMetaCommand(const QString& Token)
 
 void swModelProperties::LoadDefaults()
 {
-	mAuthor = CombineAuthor(swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_NAME), swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_EMAIL), swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_COMMENT), swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_SPLITTER));
 	mAmbientColor = swVector3FromColor(swGetProfileUnsignedInteger(SW_PROFILE_DEFAULT_AMBIENT_COLOR));
 }
+
+// publication texts saved as model lines
+static const struct
+{
+	QLatin1String Name;
+	QString swModelProperties::* Member;
+} gModelTexts[] =
+{
+	{ QLatin1String("PRODUCT_ID"), &swModelProperties::mProductId }, { QLatin1String("VERSION"), &swModelProperties::mVersion },
+	{ QLatin1String("PUBLICATION_DATE"), &swModelProperties::mPublicationDate }, { QLatin1String("URL"), &swModelProperties::mUrl },
+	{ QLatin1String("CONTACT"), &swModelProperties::mContact }, { QLatin1String("NOTICE"), &swModelProperties::mNotice }
+};
 
 void swModelProperties::SaveDefaults()
 {
 	swSetProfileUnsignedInteger(SW_PROFILE_DEFAULT_AMBIENT_COLOR, swColorFromVector3(mAmbientColor));
-}
-
-QString swModelProperties::CombineAuthor(const QString& Name, const QString& Email, const QString& Comment, const QString& Splitter)
-{
-	QStringList Parts;
-
-	for (const QString& Part : { Name, Email, Comment })
-	{
-		const QString Trimmed = Part.trimmed();
-
-		if (!Trimmed.isEmpty())
-			Parts.append(Trimmed);
-	}
-
-	return Parts.join(Splitter);
 }
 
 void swModelProperties::SaveLDraw(QTextStream& Stream) const
@@ -66,6 +62,16 @@ void swModelProperties::SaveLDraw(QTextStream& Stream) const
 	Stream << QLatin1String("0 ") << mDescription << LineEnding;
 	Stream << QLatin1String("0 Name: ") << mModelName << LineEnding;
 	Stream << QLatin1String("0 Author: ") << mAuthor << LineEnding;
+
+	if (!mCopyright.isEmpty())
+		Stream << QLatin1String("0 !LICENSE ") << mCopyright << LineEnding;
+
+	// separator ends the header
+	Stream << QLatin1String("0") << LineEnding;
+
+	for (const auto& Text : gModelTexts)
+		if (!(this->*Text.Member).isEmpty())
+			Stream << QLatin1String("0 !SW ") << Text.Name << QLatin1String(" MODEL ") << this->*Text.Member << LineEnding;
 
 	if (!mComments.isEmpty())
 	{
@@ -101,6 +107,12 @@ bool swModelProperties::ParseLDrawHeader(QString Line, bool FirstLine)
 		return true;
 	}
 
+	if (Token == QLatin1String("!LICENSE"))
+	{
+		mCopyright = LineStream.readLine().mid(1);
+		return true;
+	}
+
 	if (FirstLine)
 	{
 		LineStream.seek(StartPos);
@@ -127,6 +139,10 @@ void swModelProperties::ParseLDrawLine(QTextStream& Stream)
 			mComments += '\n';
 		mComments += Comment;
 	}
+	else
+		for (const auto& Text : gModelTexts)
+			if (Token == Text.Name)
+				this->*Text.Member = Stream.readLine().mid(1);
 }
 
 void swPOVRayOptions::ParseLDrawLine(QTextStream& LineStream)
@@ -484,6 +500,9 @@ void swModel::LoadLDraw(QIODevice& Device, Project* Project)
 	mProperties.mAuthor.clear();
 	mProperties.mDescription.clear();
 	mProperties.mComments.clear();
+	mProperties.mCopyright.clear();
+	for (const auto& Text : gModelTexts)
+		(mProperties.*Text.Member).clear();
 	mProperties.mStepViews.clear();
 	mAssetSourceDirectories.clear();
 	mInstructionLines.clear();
@@ -522,6 +541,13 @@ void swModel::LoadLDraw(QIODevice& Device, Project* Project)
 			else if (Token == QLatin1String("NOFILE") || Token == QLatin1String("!DATA"))
 			{
 				break;
+			}
+
+			// separator is rewritten on save
+			if (ReadingHeader && !FirstLine && Line.trimmed() == QLatin1String("0"))
+			{
+				ReadingHeader = false;
+				continue;
 			}
 
 			if (ReadingHeader)

@@ -1,3 +1,5 @@
+#include <QCoreApplication>
+
 #include "sw_global.h"
 #include "sw_instructions.h"
 #include "sw_project.h"
@@ -8,6 +10,7 @@
 #include "sw_profile.h"
 #include "sw_window_main.h"
 #include "sw_window_utilities.h"
+#include "sw_bricklink.h"
 
 const float swInstructions::mDisplayDPI = 72.0f;
 const swInstructionsStepKey swInstructions::mCoverBlankKey = { nullptr, 0 };
@@ -53,8 +56,57 @@ QString swGetPageUnitSuffix(swInstructionsPageUnits Units)
 	return QString();
 }
 
+const std::vector<swInstructionsPublicationElement>& swGetPublicationElements()
+{
+	static const std::vector<swInstructionsPublicationElement> Elements = []
+	{
+		std::vector<swInstructionsPublicationElement> Result;
+		const int FirstElement = static_cast<int>(swInstructionsPlacementElement::CoverFrontTitle);
+		const int FirstBox = static_cast<int>(swInstructionsBoxElement::CoverFrontTitle);
+
+		for (int Index = 0; Index < 2 * SW_COVER_ELEMENT_COUNT; Index++)
+			Result.push_back({ static_cast<swInstructionsPlacementElement>(FirstElement + Index), static_cast<swInstructionsBoxElement>(FirstBox + Index), static_cast<swInstructionsPropertyType>(static_cast<int>(swInstructionsPropertyType::CoverElements) + Index * SW_COVER_FIELD_COUNT), static_cast<swInstructionsCoverElement>(Index % SW_COVER_ELEMENT_COUNT), Index >= SW_COVER_ELEMENT_COUNT });
+
+		return Result;
+	}();
+
+	return Elements;
+}
+
+QString swGetPublicationKindName(const swInstructionsPublicationElement& Publication)
+{
+	static const char* const Names[] =
+	{
+		QT_TRANSLATE_NOOP("swInstructions", "Title"), QT_TRANSLATE_NOOP("swInstructions", "Author"), QT_TRANSLATE_NOOP("swInstructions", "Product ID"), QT_TRANSLATE_NOOP("swInstructions", "Version"),
+		QT_TRANSLATE_NOOP("swInstructions", "Publication Date"), QT_TRANSLATE_NOOP("swInstructions", "Publication URL"), QT_TRANSLATE_NOOP("swInstructions", "Contact"), QT_TRANSLATE_NOOP("swInstructions", "Copyright"),
+		QT_TRANSLATE_NOOP("swInstructions", "Publication Notice"), QT_TRANSLATE_NOOP("swInstructions", "Comments"), QT_TRANSLATE_NOOP("swInstructions", "Measurements"), QT_TRANSLATE_NOOP("swInstructions", "Weight"),
+		QT_TRANSLATE_NOOP("swInstructions", "Pieces")
+	};
+
+	return QCoreApplication::translate("swInstructions", Names[static_cast<int>(Publication.Kind)]);
+}
+
+QString swGetPublicationName(const swInstructionsPublicationElement& Publication)
+{
+	return (Publication.Back ? QCoreApplication::translate("swInstructions", "Back Cover") : QCoreApplication::translate("swInstructions", "Front Cover")) + QLatin1Char(' ') + swGetPublicationKindName(Publication);
+}
+
+const swInstructionsPublicationElement* swFindPublicationElement(swInstructionsPlacementElement Element)
+{
+	for (const swInstructionsPublicationElement& Publication : swGetPublicationElements())
+		if (Publication.Element == Element)
+			return &Publication;
+
+	return nullptr;
+}
+
 swInstructionsBoxTypes swGetBoxTypes(swInstructionsBoxElement Element)
 {
+	// cover elements share one layout
+	for (const swInstructionsPublicationElement& Publication : swGetPublicationElements())
+		if (Publication.Box == Element)
+			return { swGetPublicationType(Publication, swInstructionsPublicationField::Margin), swGetPublicationType(Publication, swInstructionsPublicationField::Padding), swGetPublicationType(Publication, swInstructionsPublicationField::BorderWidth), swGetPublicationType(Publication, swInstructionsPublicationField::CornerRadius), swGetPublicationType(Publication, swInstructionsPublicationField::BorderColor), swGetPublicationType(Publication, swInstructionsPublicationField::BackgroundColor) };
+
 	switch (Element)
 	{
 	case swInstructionsBoxElement::StepImage:
@@ -69,17 +121,8 @@ swInstructionsBoxTypes swGetBoxTypes(swInstructionsBoxElement Element)
 	case swInstructionsBoxElement::PageNumber:
 		return { swInstructionsPropertyType::PageNumberMargin, swInstructionsPropertyType::PageNumberPadding, swInstructionsPropertyType::PageNumberBorderWidth, swInstructionsPropertyType::PageNumberCornerRadius, swInstructionsPropertyType::PageNumberBorderColor, swInstructionsPropertyType::PageNumberBackgroundColor };
 
-	case swInstructionsBoxElement::CoverTitle:
-		return { swInstructionsPropertyType::CoverTitleMargin, swInstructionsPropertyType::CoverTitlePadding, swInstructionsPropertyType::CoverTitleBorderWidth, swInstructionsPropertyType::CoverTitleCornerRadius, swInstructionsPropertyType::CoverTitleBorderColor, swInstructionsPropertyType::CoverTitleBackgroundColor };
-
-	case swInstructionsBoxElement::CoverAuthor:
-		return { swInstructionsPropertyType::CoverAuthorMargin, swInstructionsPropertyType::CoverAuthorPadding, swInstructionsPropertyType::CoverAuthorBorderWidth, swInstructionsPropertyType::CoverAuthorCornerRadius, swInstructionsPropertyType::CoverAuthorBorderColor, swInstructionsPropertyType::CoverAuthorBackgroundColor };
-
 	case swInstructionsBoxElement::CoverImage:
 		return { swInstructionsPropertyType::CoverImageMargin, swInstructionsPropertyType::CoverImagePadding, swInstructionsPropertyType::CoverImageBorderWidth, swInstructionsPropertyType::CoverImageCornerRadius, swInstructionsPropertyType::CoverImageBorderColor, swInstructionsPropertyType::CoverImageBackgroundColor };
-
-	case swInstructionsBoxElement::PartCount:
-		return { swInstructionsPropertyType::PartCountMargin, swInstructionsPropertyType::PartCountPadding, swInstructionsPropertyType::PartCountBorderWidth, swInstructionsPropertyType::PartCountCornerRadius, swInstructionsPropertyType::PartCountBorderColor, swInstructionsPropertyType::PartCountBackgroundColor };
 
 	case swInstructionsBoxElement::SubmodelPreview:
 		return { swInstructionsPropertyType::SubmodelPreviewMargin, swInstructionsPropertyType::SubmodelPreviewPadding, swInstructionsPropertyType::SubmodelPreviewBorderWidth, swInstructionsPropertyType::SubmodelPreviewCornerRadius, swInstructionsPropertyType::SubmodelPreviewBorderColor, swInstructionsPropertyType::SubmodelPreviewBackgroundColor };
@@ -127,7 +170,7 @@ swInstructionsBoxTypes swGetBoxTypes(swInstructionsBoxElement Element)
 	case swInstructionsBoxElement::Completion:
 		return { swInstructionsPropertyType::CompletionMargin, swInstructionsPropertyType::CompletionPadding, swInstructionsPropertyType::CompletionBorderWidth, swInstructionsPropertyType::CompletionCornerRadius, swInstructionsPropertyType::CompletionBorderColor, swInstructionsPropertyType::CompletionBoxBackgroundColor };
 
-	case swInstructionsBoxElement::Count:
+	default:
 		break;
 	}
 
@@ -155,8 +198,7 @@ const std::vector<std::pair<swInstructionsPropertyType, swInstructionsPropertyTy
 		const std::pair<swInstructionsBoxElement, swInstructionsBoxElement> Boxes[] = {
 			{ swInstructionsBoxElement::BillOfMaterialsTitle, swInstructionsBoxElement::StepNumber },
 			{ swInstructionsBoxElement::BillOfMaterialsList, swInstructionsBoxElement::PartsList },
-			{ swInstructionsBoxElement::BillOfMaterialsQuantity, swInstructionsBoxElement::PartsListQuantity },
-			{ swInstructionsBoxElement::BillOfMaterialsPartCount, swInstructionsBoxElement::PartCount }
+			{ swInstructionsBoxElement::BillOfMaterialsQuantity, swInstructionsBoxElement::PartsListQuantity }
 		};
 
 		for (const std::pair<swInstructionsBoxElement, swInstructionsBoxElement>& Box : Boxes)
@@ -310,12 +352,6 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::UseDocumentFontSize)].Value = false;
 	Properties[static_cast<int>(swInstructionsPropertyType::DocumentFont)].Value = QFont("Arial", 16).toString();
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowCoverPage)].Value = true;
-	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitleFont)].Value = QFont("Arial", 24).toString();
-	Properties[static_cast<int>(swInstructionsPropertyType::CoverAuthorFont)].Value = QFont("Arial", 24).toString();
-	Properties[static_cast<int>(swInstructionsPropertyType::CoverAuthorColor)].Value = SW_RGBA(0, 0, 0, 255);
-	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitleColor)].Value = SW_RGBA(0, 0, 0, 255);
-	Properties[static_cast<int>(swInstructionsPropertyType::ShowCoverAuthor)].Value = true;
-	Properties[static_cast<int>(swInstructionsPropertyType::ShowCoverTitle)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowCoverImage)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::PageBackgroundColor)].Value = SW_RGBA(255, 255, 255, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::SubmodelBackgroundColor)].Value = SW_RGBA(255, 255, 255, 255);
@@ -327,10 +363,6 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::CompletionBackgroundColor)].Value = SW_RGBA(0, 0, 0, 0);
 	Properties[static_cast<int>(swInstructionsPropertyType::StepImageSize)].Value = 0;
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverImageSize)].Value = 0;
-	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitleText)].Value = QString();
-	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitleFile)].Value = QString();
-	Properties[static_cast<int>(swInstructionsPropertyType::CoverAuthorText)].Value = QString();
-	Properties[static_cast<int>(swInstructionsPropertyType::CoverAuthorFile)].Value = QString();
 	Properties[static_cast<int>(swInstructionsPropertyType::BillOfMaterialsTitleText)].Value = QString();
 	Properties[static_cast<int>(swInstructionsPropertyType::BillOfMaterialsTitleFile)].Value = QString();
 
@@ -361,11 +393,9 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::PLIPlacement)].Value = SW_PLACEMENT_GRID_SIZE + SW_PLACEMENT_GRID_SIZE - 1;
 	Properties[static_cast<int>(swInstructionsPropertyType::PLIAnchor)].Value = static_cast<int>(swInstructionsPlacementAnchor::StepNumber);
 	Properties[static_cast<int>(swInstructionsPropertyType::PLIReserveArea)].Value = true;
-	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitlePlacement)].Value = SW_PLACEMENT_GRID_SIZE + 2;
 	Properties[static_cast<int>(swInstructionsPropertyType::BillOfMaterialsPlacement)].Value = SW_PLACEMENT_GRID_SIZE + 1;
 	Properties[static_cast<int>(swInstructionsPropertyType::PLIThumbnailSize)].Value = 300;
 	Properties[static_cast<int>(swInstructionsPropertyType::PLIThumbnailBackgroundColor)].Value = SW_RGBA(255, 255, 255, 0);
-	Properties[static_cast<int>(swInstructionsPropertyType::CoverAuthorPlacement)].Value = SW_PLACEMENT_GRID_SIZE + 2;
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverImagePlacement)].Value = SW_PLACEMENT_COUNT / 2;
 	Properties[static_cast<int>(swInstructionsPropertyType::StepImagePlacement)].Value = SW_PLACEMENT_COUNT / 2;
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverBackgroundColor)].Value = SW_RGBA(255, 255, 255, 255);
@@ -382,7 +412,6 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowPageNumberAllPages)].Value = false;
 
 	// part counts are off and read like the titles
-	Properties[static_cast<int>(swInstructionsPropertyType::ShowCoverPartCount)].Value = false;
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowBillOfMaterialsPartCount)].Value = false;
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowPagePartCount)].Value = false;
 	Properties[static_cast<int>(swInstructionsPropertyType::PartCountText)].Value = QString();
@@ -391,7 +420,6 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::PartCountColor)].Value = SW_RGBA(0, 0, 0, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::PagePartCountFont)].Value = QFont("Arial", 16).toString();
 	Properties[static_cast<int>(swInstructionsPropertyType::PagePartCountColor)].Value = SW_RGBA(0, 0, 0, 255);
-	Properties[static_cast<int>(swInstructionsPropertyType::PartCountPlacement)].Value = SW_PLACEMENT_COUNT - SW_PLACEMENT_GRID_SIZE - 4;
 	Properties[static_cast<int>(swInstructionsPropertyType::BillOfMaterialsPartCountPlacement)].Value = SW_PLACEMENT_GRID_SIZE + 3;
 	Properties[static_cast<int>(swInstructionsPropertyType::PagePartCountPlacement)].Value = SW_PLACEMENT_COUNT - SW_PLACEMENT_GRID_SIZE - 4;
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowSubmodelPreview)].Value = false;
@@ -414,22 +442,26 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::WatermarkTextColor)].Value = SW_RGBA(0, 0, 0, 64);
 	Properties[static_cast<int>(swInstructionsPropertyType::WatermarkRotation)].Value = 0;
 
-	// texts start left and middle, cover texts centered
+	// texts start left and middle
 	for (int Type = static_cast<int>(swInstructionsPropertyType::StepNumberAlignment); Type <= static_cast<int>(swInstructionsPropertyType::NoticeAlignment); Type += 2)
 	{
 		Properties[Type].Value = 0;
 		Properties[Type + 1].Value = 1;
 	}
 
-	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitleAlignment)].Value = 1;
-	Properties[static_cast<int>(swInstructionsPropertyType::CoverAuthorAlignment)].Value = 1;
+	// cover texts start centered
+	for (const swInstructionsPublicationElement& Publication : swGetPublicationElements())
+	{
+		Properties[static_cast<int>(swGetPublicationType(Publication, swInstructionsPublicationField::Alignment))].Value = 1;
+		Properties[static_cast<int>(swGetPublicationType(Publication, swInstructionsPublicationField::VerticalAlignment))].Value = 1;
+	}
 
 	// boxes keep the former spacing
 	for (int Element = 0; Element < static_cast<int>(swInstructionsBoxElement::Count); Element++)
 	{
 		const swInstructionsBoxTypes BoxTypes = swGetBoxTypes(static_cast<swInstructionsBoxElement>(Element));
 
-		const bool PageBox = Element >= static_cast<int>(swInstructionsBoxElement::FinalModel);
+		const bool PageBox = Element >= static_cast<int>(swInstructionsBoxElement::FinalModel) && Element < static_cast<int>(swInstructionsBoxElement::CoverFrontTitle);
 		const swInstructionsBoxElement BoxElement = static_cast<swInstructionsBoxElement>(Element);
 
 		Properties[static_cast<int>(BoxTypes.Margin)].Value = PageBox ? 0 : 6;
@@ -496,11 +528,31 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	// the back cover starts blank
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowBackCover)].Value = true;
 
+	// cover texts start hidden except the front title and author
+	for (const swInstructionsPublicationElement& Publication : swGetPublicationElements())
+	{
+		const bool Heading = Publication.Kind == swInstructionsCoverElement::Title || Publication.Kind == swInstructionsCoverElement::Author;
+
+		Properties[static_cast<int>(Publication.Show)].Value = Heading && !Publication.Back;
+		Properties[static_cast<int>(swGetPublicationType(Publication, swInstructionsPublicationField::Text))].Value = QString();
+		Properties[static_cast<int>(swGetPublicationType(Publication, swInstructionsPublicationField::Font))].Value = QFont("Arial", 24).toString();
+		Properties[static_cast<int>(swGetPublicationType(Publication, swInstructionsPublicationField::Color))].Value = SW_RGBA(0, 0, 0, 255);
+
+		// headings sit in the middle row, other texts stack along the bottom edge
+		int Placement = Heading ? SW_PLACEMENT_GRID_SIZE + 2 : SW_PLACEMENT_COUNT - SW_PLACEMENT_GRID_SIZE + 2;
+
+		// pieces keep the bottom left corner
+		if (Publication.Kind == swInstructionsCoverElement::Pieces)
+			Placement = SW_PLACEMENT_COUNT - SW_PLACEMENT_GRID_SIZE - 4;
+
+		Properties[static_cast<int>(swGetPublicationType(Publication, swInstructionsPublicationField::Placement))].Value = Placement;
+	}
+
 	// the bill of materials copies the steps
 	for (const std::pair<swInstructionsPropertyType, swInstructionsPropertyType>& Source : swGetBillOfMaterialsSources())
 		Properties[static_cast<int>(Source.first)].Value = Properties[static_cast<int>(Source.second)].Value;
 
-	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 290, "Missing default property");
+	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 592, "Missing default property");
 
 	return Properties;
 }
@@ -1631,17 +1683,30 @@ QString swInstructions::GetSourcedText(swInstructionsPropertyType TextType, swIn
 {
 	const QString FileText = GetFileText(GetTextProperty(FileType));
 
-	if (!FileText.isEmpty())
-		return FileText;
+	return FillModelCodes(FileText.isEmpty() ? GetTypedText(TextType, Automatic) : FileText);
+}
 
+// the typed text wins over the automatic text
+QString swInstructions::GetTypedText(swInstructionsPropertyType TextType, const QString& Automatic) const
+{
 	const QString Text = GetTextProperty(TextType);
 
 	return Text.isEmpty() ? Automatic : Text;
 }
 
-swModel* swInstructions::GetMainModel() const
+// use to get the automatic title
+QString swInstructions::GetModelTitle(const swModel* Model) const
 {
-	return mProject ? mProject->GetMainModel() : nullptr;
+	const swModelProperties& Properties = Model->GetProperties();
+	QString Title = Properties.mDescription.trimmed();
+
+	if (Title.isEmpty())
+		Title = Properties.mModelName.trimmed();
+
+	if (Title.isEmpty())
+		Title = QFileInfo(Properties.mFileName).completeBaseName();
+
+	return Title;
 }
 
 static int swGetPartsListTotal(const swPartsList& PartsList)
@@ -1653,6 +1718,106 @@ static int swGetPartsListTotal(const swPartsList& PartsList)
 			Total += ColorEntry.second;
 
 	return Total;
+}
+
+// use to show the model size and weight like the summary
+static QString swGetModelSizeText(const swModel* Model)
+{
+	const swBoundingBox Bounds = Model->GetAllPartsBoundingBox();
+
+	return swGetMeasurementsText(Bounds.Max - Bounds.Min, QLocale());
+}
+
+static QString swGetModelWeightText(const swModel* Model)
+{
+	swPartsList PartsList;
+	Model->GetPartsList(gDefaultColor, true, false, PartsList);
+
+	int Missing;
+	const double Weight = swGetPartsListWeight(PartsList, Missing);
+
+	return swGetWeightText(Weight, swGetPartsListTotal(PartsList), Missing, QLocale());
+}
+
+// use to get the model field a publication text shows
+QString swInstructions::GetModelFieldText(const swModel* Model, swInstructionsPlacementElement Element) const
+{
+	const swModelProperties& Properties = Model->GetProperties();
+
+	const swInstructionsPublicationElement* Publication = swFindPublicationElement(Element);
+
+	switch (Publication ? Publication->Kind : swInstructionsCoverElement::Url)
+	{
+	case swInstructionsCoverElement::Title:
+		return GetModelTitle(Model);
+
+	case swInstructionsCoverElement::Author:
+		return Properties.mAuthor.trimmed();
+
+	case swInstructionsCoverElement::ProductId:
+		return Properties.mProductId;
+
+	case swInstructionsCoverElement::Version:
+		return Properties.mVersion;
+
+	case swInstructionsCoverElement::PublicationDate:
+		return Properties.mPublicationDate;
+
+	case swInstructionsCoverElement::Contact:
+		return Properties.mContact;
+
+	case swInstructionsCoverElement::Copyright:
+		return Properties.mCopyright;
+
+	case swInstructionsCoverElement::PublicationNotice:
+		return Properties.mNotice;
+
+	case swInstructionsCoverElement::Comments:
+		return Properties.mComments.trimmed();
+
+	case swInstructionsCoverElement::Measurements:
+		return swGetModelSizeText(Model);
+
+	case swInstructionsCoverElement::Weight:
+		return swGetModelWeightText(Model);
+
+	case swInstructionsCoverElement::Pieces:
+		return GetPartCountText(GetModelPartCount(Model));
+
+	case swInstructionsCoverElement::Url:
+		break;
+	}
+
+	return Properties.mUrl;
+}
+
+// use to fill the publication codes of a text
+QString swInstructions::FillModelCodes(QString Text) const
+{
+	const swModel* Model = GetMainModel();
+
+	if (Model && Text.contains(QLatin1Char('%')))
+	{
+		const swModelProperties& Properties = Model->GetProperties();
+
+		Text.replace(QLatin1String("%title"), GetModelTitle(Model)).replace(QLatin1String("%author"), Properties.mAuthor.trimmed()).replace(QLatin1String("%id"), Properties.mProductId).replace(QLatin1String("%version"), Properties.mVersion)
+			.replace(QLatin1String("%date"), Properties.mPublicationDate).replace(QLatin1String("%url"), Properties.mUrl).replace(QLatin1String("%contact"), Properties.mContact)
+			.replace(QLatin1String("%copyright"), Properties.mCopyright).replace(QLatin1String("%notice"), Properties.mNotice).replace(QLatin1String("%comments"), Properties.mComments.trimmed());
+
+		// size and weight are worked out when asked for
+		if (Text.contains(QLatin1String("%size")))
+			Text.replace(QLatin1String("%size"), swGetModelSizeText(Model));
+
+		if (Text.contains(QLatin1String("%weight")))
+			Text.replace(QLatin1String("%weight"), swGetModelWeightText(Model));
+	}
+
+	return Text;
+}
+
+swModel* swInstructions::GetMainModel() const
+{
+	return mProject ? mProject->GetMainModel() : nullptr;
 }
 
 int swInstructions::GetModelPartCount(const swModel* Model)
@@ -1697,6 +1862,13 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 		return;
 	}
 
+	// cover texts redraw the covers
+	if (Type >= swInstructionsPropertyType::CoverElements)
+	{
+		emit PageLayoutChanged();
+		return;
+	}
+
 	// dividers and lists change the layout
 	switch (Type)
 	{
@@ -1718,12 +1890,6 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::UseDocumentFont:
 	case swInstructionsPropertyType::UseDocumentFontSize:
 	case swInstructionsPropertyType::DocumentFont:
-	case swInstructionsPropertyType::CoverTitleFont:
-	case swInstructionsPropertyType::CoverAuthorFont:
-	case swInstructionsPropertyType::CoverTitleColor:
-	case swInstructionsPropertyType::CoverAuthorColor:
-	case swInstructionsPropertyType::ShowCoverAuthor:
-	case swInstructionsPropertyType::ShowCoverTitle:
 	case swInstructionsPropertyType::ShowCoverImage:
 	case swInstructionsPropertyType::StepNumberAlignment:
 	case swInstructionsPropertyType::StepNumberVerticalAlignment:
@@ -1733,10 +1899,6 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::PageNumberVerticalAlignment:
 	case swInstructionsPropertyType::PartCountAlignment:
 	case swInstructionsPropertyType::PartCountVerticalAlignment:
-	case swInstructionsPropertyType::CoverTitleAlignment:
-	case swInstructionsPropertyType::CoverTitleVerticalAlignment:
-	case swInstructionsPropertyType::CoverAuthorAlignment:
-	case swInstructionsPropertyType::CoverAuthorVerticalAlignment:
 	case swInstructionsPropertyType::NoticeAlignment:
 	case swInstructionsPropertyType::NoticeVerticalAlignment:
 	case swInstructionsPropertyType::PageBackgroundColor:
@@ -1769,9 +1931,7 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::PLIPlacement:
 	case swInstructionsPropertyType::PLIAnchor:
 	case swInstructionsPropertyType::PLIReserveArea:
-	case swInstructionsPropertyType::CoverTitlePlacement:
 	case swInstructionsPropertyType::BillOfMaterialsPlacement:
-	case swInstructionsPropertyType::CoverAuthorPlacement:
 	case swInstructionsPropertyType::CoverImagePlacement:
 	case swInstructionsPropertyType::StepImagePlacement:
 	case swInstructionsPropertyType::StepBackgroundColor:
@@ -1801,16 +1961,6 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::PageNumberBorderWidth:
 	case swInstructionsPropertyType::PageNumberBorderColor:
 	case swInstructionsPropertyType::PageNumberBackgroundColor:
-	case swInstructionsPropertyType::CoverTitleMargin:
-	case swInstructionsPropertyType::CoverTitlePadding:
-	case swInstructionsPropertyType::CoverTitleBorderWidth:
-	case swInstructionsPropertyType::CoverTitleBorderColor:
-	case swInstructionsPropertyType::CoverTitleBackgroundColor:
-	case swInstructionsPropertyType::CoverAuthorMargin:
-	case swInstructionsPropertyType::CoverAuthorPadding:
-	case swInstructionsPropertyType::CoverAuthorBorderWidth:
-	case swInstructionsPropertyType::CoverAuthorBorderColor:
-	case swInstructionsPropertyType::CoverAuthorBackgroundColor:
 	case swInstructionsPropertyType::CoverImageMargin:
 	case swInstructionsPropertyType::CoverImagePadding:
 	case swInstructionsPropertyType::CoverImageBorderWidth:
@@ -1833,19 +1983,12 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::StepNumberCornerRadius:
 	case swInstructionsPropertyType::PLICornerRadius:
 	case swInstructionsPropertyType::PageNumberCornerRadius:
-	case swInstructionsPropertyType::CoverTitleCornerRadius:
-	case swInstructionsPropertyType::CoverAuthorCornerRadius:
 	case swInstructionsPropertyType::CoverImageCornerRadius:
 	case swInstructionsPropertyType::NoticeCornerRadius:
 	case swInstructionsPropertyType::BillOfMaterialsTitleFont:
 	case swInstructionsPropertyType::BillOfMaterialsTitleColor:
-	case swInstructionsPropertyType::CoverTitleText:
-	case swInstructionsPropertyType::CoverTitleFile:
-	case swInstructionsPropertyType::CoverAuthorText:
-	case swInstructionsPropertyType::CoverAuthorFile:
 	case swInstructionsPropertyType::BillOfMaterialsTitleText:
 	case swInstructionsPropertyType::BillOfMaterialsTitleFile:
-	case swInstructionsPropertyType::ShowCoverPartCount:
 	case swInstructionsPropertyType::ShowBillOfMaterialsPartCount:
 	case swInstructionsPropertyType::ShowPagePartCount:
 	case swInstructionsPropertyType::PartCountText:
@@ -1854,15 +1997,8 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::PartCountColor:
 	case swInstructionsPropertyType::PagePartCountFont:
 	case swInstructionsPropertyType::PagePartCountColor:
-	case swInstructionsPropertyType::PartCountPlacement:
 	case swInstructionsPropertyType::BillOfMaterialsPartCountPlacement:
 	case swInstructionsPropertyType::PagePartCountPlacement:
-	case swInstructionsPropertyType::PartCountMargin:
-	case swInstructionsPropertyType::PartCountPadding:
-	case swInstructionsPropertyType::PartCountBorderWidth:
-	case swInstructionsPropertyType::PartCountBorderColor:
-	case swInstructionsPropertyType::PartCountBackgroundColor:
-	case swInstructionsPropertyType::PartCountCornerRadius:
 	case swInstructionsPropertyType::ShowSubmodelPreview:
 	case swInstructionsPropertyType::SubmodelPreviewSize:
 	case swInstructionsPropertyType::SubmodelPreviewPlacement:

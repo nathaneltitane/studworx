@@ -1186,15 +1186,17 @@
 			</div>
 
 			<ul class="points">
-				<li><b>Pages.</b> Instructions get a front cover with title and author, a parts list, a back cover and any number of steps per page, filled by row or column, each page with its own background, plus a Completion page for the finished model, which can fill the room after the last step, with its own color, box, border and margin. Titles, notices and part counts take your own text or a text file.</li>
+				<li><b>Pages.</b> Instructions get a front cover with title and author, a parts list, a back cover and any number of steps per page, filled by row or column, each page with its own background, plus a Completion page for the finished model, which can fill the room after the last step, with its own color, box, border and margin. Titles, notices and part counts take your own text or a text file, and the back cover can show a publication URL.</li>
 				<li><b>Element inspector.</b> Like a web browser&#x27;s inspector, it shows the space around and inside every page element, so you can line things up. Show Boundaries draws thin lines on the edges of every element, the outer edge only, the margin and padding, or every edge, and Layout Areas outlines the step areas, parts strips and dividers, each in its own color. It never prints.</li>
 				<li><b>Elements.</b> Every page element, like page numbers or the parts list, can have its own colors, fonts, border, rounded corners and background. Texts line up left, centered or right and top, middle or bottom in a box you size. Notices and pointers draw attention to parts and steps, pointers drawn as a line, an L, Z or U shape with rounded bends, or a callout wedge.</li>
 				<li><b>Placement.</b> Drag every page element <a href="#where">where</a> you want it, or lock it in place. Elements snap to a page grid, or to the edges and centers of the page and the other elements. Cover texts, part counts and page numbers can also sit right against the paper edge. Click a parts list quantity or the preview count to place it around its picture.</li>
+				<li><b>Images and templates.</b> Put your own pictures, like a logo, on the front or back cover. Save the look of your instructions, with their cover, band and watermark notices, as a template and apply it to any model, or pick a default template that every model starts from. One typeface, one text size, or both can cover the whole document.</li>
 				<li><b>Page bar.</b> Undo and redo changes, turn the instruction pages with the buttons, the page box or the mouse wheel, show one page or two side by side or stacked, jump to the front cover, the bill of materials or the back cover, type a page number, and insert or remove blank pages and empty steps.</li>
+				<li><b>Publication.</b> Show the title, author, product ID, version, publication date, URL, contact, copyright, notice, size, weight and comments of the model on the front or back cover, each cover with its own set, and Pieces for the whole part count, each with its own font, color, placement and box.</li>
 				<li><b>Style.</b> Choose the font, how steps are divided, with dividers that get their own margins and rounded ends, how big and how the model is drawn, and how the parts list looks and is sorted. Reserve Parts Area keeps a strip for the parts list so the model never runs under it.</li>
-				<li><b>Images and templates.</b> Put your own pictures, like a logo, on the front or back cover. Save the look of your instructions as a template and apply it to any model, or pick a default template that every model starts from. One typeface, one text size, or both can cover the whole document.</li>
 				<li><b>Assembly and watermark.</b> Pages that finish a submodel get the assembly color, steps that only place a submodel are skipped, and a watermark can run across every page in your font, color and angle. Lock to Home View draws pages from the home view unless a step view turns it.</li>
 				<li><b>Editor, Export HTML and Print.</b> An Editor panel to read and edit the model file text, whose height snaps to whole lines so no line is ever cut off, Export HTML for the instruction pages, and a built-in Print panel that prints on paper or to a PDF file, also from the command line.</li>
+				<li><b>Publication codes.</b> Any instructions text can use %title, %author, %id, %version, %date, %url, %contact, %copyright, %notice, %size, %weight and %comments, filled from the model properties, so one template fits every model.</li>
 				<li><b>Part counts.</b> The cover, the bill of materials and every step page can show how many parts they take, and each submodel can start with a picture of it finished and its part count.</li>
 				<li><b>Moving elements.</b> A click only selects, an element moves once you drag it, the arrow keys nudge it one grid division at a time, and Reset Position puts it back.</li>
 				<li><b>Rulers.</b> Rulers along the page measure it in your units, show the margins, and follow the pointer with a small arrow.</li>
@@ -1297,7 +1299,7 @@
 			</div>
 
 			<ul class="points">
-				<li><b>Properties.</b> Lists every part of the model with its ID, picture, count and weight, plus the size and weight of the whole model, in metric or imperial. Export the list for BrickLink or as a spreadsheet.</li>
+				<li><b>Properties.</b> Keeps the publication details of the model, title, author, product ID, version, publication date, URL, contact, copyright and notice, saved in the model file. Lists every part of the model with its ID, picture, count and weight, plus the size and weight of the whole model, in metric or imperial. Export the list for BrickLink or as a spreadsheet.</li>
 				<li><b>Submodels.</b> Group parts into submodels you can reuse, open them on their own, or melt them back into plain parts, from the menu or the command line.</li>
 				<li><b>Submodels list.</b> Create, rename, duplicate and delete submodels, set the active one, and export them as separate LDraw <a href="#files">files</a>.</li>
 				<li><b>In-place editing.</b> Edit a submodel inside its parent. A path bar shows <a href="#where">where</a> you are, and its buttons go back to each model.</li>
@@ -1722,7 +1724,14 @@
 						</thead>
 
 						<tbody>
-							<tr><td><code>0 !SW COMMENT MODEL &lt;text&gt;</code></td><td>Read, Write</td><td>model comment, one line each</td></tr>
+							<tr><td><code>0 !SW COMMENT MODEL &lt;text&gt;</code></td><td>Read, Write</td><td>model comment, one line each, <code>%comments</code> in <a href="#instructions">instructions</a> texts</td></tr>
+							<tr><td><code>0 !SW PRODUCT_ID MODEL &lt;text&gt;</code></td><td>Read, Write</td><td>product number of the model, <code>%id</code> in instructions texts</td></tr>
+							<tr><td><code>0 !SW VERSION MODEL &lt;text&gt;</code></td><td>Read, Write</td><td>version of the model, <code>%version</code> in instructions texts</td></tr>
+							<tr><td><code>0 !SW PUBLICATION_DATE MODEL &lt;text&gt;</code></td><td>Read, Write</td><td>publication date as free text, <code>%date</code> in instructions texts</td></tr>
+							<tr><td><code>0 !SW URL MODEL &lt;text&gt;</code></td><td>Read, Write</td><td>web address of the model, <code>%url</code> in instructions texts and the automatic Publication URL</td></tr>
+							<tr><td><code>0 !SW CONTACT MODEL &lt;text&gt;</code></td><td>Read, Write</td><td>how to reach the publisher, <code>%contact</code> in instructions texts</td></tr>
+							<tr><td><code>0 !SW NOTICE MODEL &lt;text&gt;</code></td><td>Read, Write</td><td>legal or trademark notice of the model, <code>%notice</code> in instructions texts</td></tr>
+							<tr><td><code>0 !LICENSE &lt;text&gt;</code></td><td>Read, Write</td><td>copyright or license of the model, written after <code>0 Author:</code>, <code>%copyright</code> in instructions texts</td></tr>
 							<tr><td><code>0 !SW AUTHOR MODEL &lt;name&gt;</code></td><td>Read</td><td>author, written as <code>0 Author:</code></td></tr>
 							<tr><td><code>0 !SW DESCRIPTION MODEL &lt;text&gt;</code></td><td>Read</td><td>description, written as the first line</td></tr>
 							<tr><td><code>0 !SW ASSET_SOURCE MODEL &lt;base64 path&gt;</code></td><td>Read, Write</td><td>folder searched for embedded file sources</td></tr>
@@ -1759,7 +1768,7 @@
 				</div>
 
 				<h3 id="meta-instruction">Instruction</h3>
-				<p><a href="#instructions">Instructions</a> settings, written in the main model header. Models are quoted file names, <code>-</code> for none. <a href="#steps">Steps</a> are <code>STEP &lt;model&gt; &lt;step&gt;</code>, pages <code>&lt;STEPS|COVER|BILL_OF_MATERIALS|BLANK|BACK_COVER&gt; &lt;model&gt; &lt;step&gt; &lt;rank&gt;</code> and page elements <code>&lt;element&gt; &lt;model&gt; &lt;step&gt;</code>, with the element <code>NONE</code>, <code>STEP_NUMBER</code>, <code>PARTS_LIST</code>, <code>COVER_TITLE</code>, <code>COVER_AUTHOR</code>, <code>BILL_OF_MATERIALS</code>, <code>STEP_IMAGE</code>, <code>COVER_IMAGE</code>, <code>PAGE_NUMBER</code>, <code>NOTICE</code>, <code>POINTER</code>, <code>COVER_PART_COUNT</code>, <code>BILL_OF_MATERIALS_PART_COUNT</code>, <code>PAGE_PART_COUNT</code>, <code>SUBMODEL_PREVIEW</code>, <code>SUBMODEL_PREVIEW_PART_COUNT</code>, <code>PARTS_LIST_QUANTITY</code> or <code>IMAGE</code>. Values are <code>TRUE</code>/<code>FALSE</code>, numbers, <code>#RRGGBBAA</code> colors or text to the end of the line, with <code>\\</code>, <code>\&quot;</code> and <code>\n</code> escaped.</p>
+				<p>Instructions settings, written in the main model header. Models are quoted file names, <code>-</code> for none. <a href="#steps">Steps</a> are <code>STEP &lt;model&gt; &lt;step&gt;</code>, pages <code>&lt;STEPS|COVER|BILL_OF_MATERIALS|BLANK|BACK_COVER&gt; &lt;model&gt; &lt;step&gt; &lt;rank&gt;</code> and page elements <code>&lt;element&gt; &lt;model&gt; &lt;step&gt;</code>, with the element <code>NONE</code>, <code>STEP_NUMBER</code>, <code>PARTS_LIST</code>, <code>COVER_TITLE</code>, <code>COVER_AUTHOR</code>, <code>BILL_OF_MATERIALS</code>, <code>STEP_IMAGE</code>, <code>COVER_IMAGE</code>, <code>PAGE_NUMBER</code>, <code>NOTICE</code>, <code>POINTER</code>, <code>COVER_PART_COUNT</code>, <code>BILL_OF_MATERIALS PART_COUNT</code>, <code>PAGE_PART_COUNT</code>, <code>SUBMODEL_PREVIEW</code>, <code>STEP SUBMODEL_PREVIEW_PART_COUNT</code>, <code>STEP PARTS_LIST_QUANTITY</code>, <code>IMAGE</code>, <code>PUBLICATION_URL</code>, <code>PRODUCT_ID</code>, <code>VERSION</code>, <code>PUBLICATION_DATE</code>, <code>CONTACT</code>, <code>COPYRIGHT</code>, <code>PUBLICATION_NOTICE</code>, <code>MEASUREMENTS</code>, <code>WEIGHT</code> or <code>COMMENTS</code>. Values are <code>TRUE</code>/<code>FALSE</code>, numbers, <code>#RRGGBBAA</code> colors or text to the end of the line, with <code>\\</code>, <code>\&quot;</code> and <code>\n</code> escaped.</p>
 
 				<div class="table">
 					<table>
@@ -1768,33 +1777,301 @@
 						</thead>
 
 						<tbody>
-							<tr><td>Template</td><td>Read</td><td>a model file holding <code>PROPERTY</code>, <code>STEPS_PER_PAGE</code> and <code>IMAGE</code> lines, written by Save Template; Apply Template copies them into the model, and the Default Template of the <a href="#preferences">preferences</a> applies them under every model, whose own lines win</td></tr>
-							<tr><td><code>0 !SW PROPERTY INSTRUCTION &lt;name&gt; &lt;value&gt;</code></td><td>Read, Write</td><td>document property, such as <code>STEP_NUMBER_BORDER_WIDTH 3</code> or <code>COVER_TITLE_FILE title.txt</code>; <code>COVER_TITLE</code>, <code>COVER_AUTHOR</code> and <code>BILL_OF_MATERIALS_TITLE</code> take <code>_TEXT</code> and <code>_FILE</code>, the file wins over the text, and <a href="#files">files</a> are relative to the model file</td></tr>
-							<tr><td><code>0 !SW PROPERTY INSTRUCTION USE_DOCUMENT_FONT &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>give all text the typeface of <code>DOCUMENT_FONT</code>, each text keeps its own size, default <code>FALSE</code>; <code>USE_DOCUMENT_FONT_SIZE</code> gives all text the size of <code>DOCUMENT_FONT</code> and each text keeps its typeface. A file with <code>USE_DOCUMENT_FONT TRUE</code> and no <code>USE_DOCUMENT_FONT_SIZE</code> line uses both</td></tr>
-							<tr><td><code>0 !SW PROPERTY INSTRUCTION SHOW_COVER_PART_COUNT &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>show the part count of the whole model on the cover, default <code>FALSE</code>; <code>SHOW_BILL_OF_MATERIALS_PART_COUNT</code> does the same under the bill of materials title and <code>SHOW_PAGE_PART_COUNT</code> shows the new parts of the steps on each step page</td></tr>
-							<tr><td><code>0 !SW PROPERTY INSTRUCTION PART_COUNT_TEXT &lt;text&gt;</code></td><td>Read, Write</td><td>text of all part counts and submodel previews with <code>%1</code> for the number, default <code>%1 PIECES</code>; <code>PART_COUNT_FILE</code> takes a text file relative to the model file that wins over the text</td></tr>
-							<tr><td><code>0 !SW PROPERTY INSTRUCTION PART_COUNT_FONT &lt;font&gt;</code></td><td>Read, Write</td><td>font of the cover and bill of materials part count, the bill of materials one in the size of the <code>BILL_OF_MATERIALS_TITLE_FONT</code>, <code>PART_COUNT_COLOR</code> is its color; <code>PAGE_PART_COUNT_FONT</code> and <code>PAGE_PART_COUNT_COLOR</code> style the step page count and the submodel preview count</td></tr>
-							<tr><td><code>0 !SW PROPERTY INSTRUCTION PART_COUNT_PLACEMENT &lt;0-24&gt;</code></td><td>Read, Write</td><td>placement of the cover part count, <code>BILL_OF_MATERIALS_PART_COUNT_PLACEMENT</code> (top right, beside the title, or past the title when they meet) and <code>PAGE_PART_COUNT_PLACEMENT</code> place the others, and <code>SUBMODEL_PREVIEW_PLACEMENT</code> the preview; on the page, the outer cells 0-4, 5, 9, 10, 14, 15, 19 and 20-24 put these, the cover texts and the page number against the paper edge; <code>SUBMODEL_PREVIEW_PART_COUNT_PLACEMENT</code> places the preview count around the preview, default <code>22</code>, and <code>PARTS_LIST_QUANTITY_PLACEMENT</code> each parts list quantity around its part, default <code>21</code>, inner cells inside, outer cells outside</td></tr>
-							<tr><td><code>0 !SW PROPERTY INSTRUCTION PART_COUNT_&lt;MARGIN|PADDING|BORDER_WIDTH|BORDER_COLOR|BACKGROUND_COLOR|CORNER_RADIUS&gt; &lt;value&gt;</code></td><td>Read, Write</td><td>box of the part counts, <code>SUBMODEL_PREVIEW_</code> takes the same suffixes for the box of the submodel preview</td></tr>
-							<tr><td><code>0 !SW PROPERTY INSTRUCTION SHOW_SUBMODEL_PREVIEW &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>show the finished submodel with its part count on the first page of each submodel, default <code>FALSE</code>; <code>SUBMODEL_PREVIEW_MODEL_SIZE</code> is the longest side of its model in points, default <code>0</code> fits it to its box</td></tr>
-							<tr><td><code>0 !SW PROPERTY INSTRUCTION FINAL_MODEL_MARGIN &lt;value&gt;</code></td><td>Read, Write</td><td>box of the final model area: <code>FINAL_MODEL_MARGIN</code>, <code>FINAL_MODEL_PADDING</code>, <code>FINAL_MODEL_BORDER_WIDTH</code>, <code>FINAL_MODEL_BORDER_COLOR</code>, <code>FINAL_MODEL_CORNER_RADIUS</code> and <code>FINAL_MODEL_BACKGROUND_COLOR</code>, and a page can have its own background; default <code>0</code>, black and transparent</td></tr>
-							<tr><td><code>0 !SW PROPERTY INSTRUCTION STEP_MARGIN &lt;value&gt;</code></td><td>Read, Write</td><td>box of each step area: <code>STEP_MARGIN</code>, <code>STEP_PADDING</code>, <code>STEP_BORDER_WIDTH</code>, <code>STEP_BORDER_COLOR</code>, <code>STEP_CORNER_RADIUS</code>, and <code>STEP_BACKGROUND_COLOR</code> as its background color, default <code>0</code>, black and transparent</td></tr>
-							<tr><td><code>0 !SW PROPERTY INSTRUCTION SHOW_FINAL_MODEL_PAGE &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>close the main model steps with a page showing the finished model, default <code>TRUE</code></td></tr>
-							<tr><td><code>0 !SW PROPERTY INSTRUCTION SHOW_BACK_COVER &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>end the instructions with a back cover after the bill of materials, default <code>TRUE</code>, blank until it gets images</td></tr>
+							<tr><td>Template</td><td>Read</td><td>a model file holding <code>PROPERTY</code>, <code>STEPS_PER_PAGE</code>, <code>IMAGE</code> and <code>NOTICE</code> lines, written by Save Template; Apply Template copies them into the model, and the Default Template of the <a href="#preferences">preferences</a> applies them under every model, whose own lines win</td></tr>
+							<tr><td><code>0 !SW PROPERTY INSTRUCTION &lt;name&gt; &lt;value&gt;</code></td><td>Read, Write</td><td>document property, the scope words first and then the element and field, such as <code>STEP NUMBER_BORDER_WIDTH 3</code> or <code>COVER FRONT TITLE_TEXT MODEL // TITLE</code>; the scopes are <code>COVER FRONT</code>, <code>COVER BACK</code>, <code>STEP</code>, <code>PAGE</code>, <code>BILL_OF_MATERIALS</code>, <code>BAND &lt;HEADER|FOOTER|LEFT|RIGHT&gt;</code>, <code>DOCUMENT</code>, <code>NOTICE</code>, <code>IMAGE</code>, <code>WATERMARK</code>, <code>POINTER</code> and <code>PART_COUNT</code>, the old unscoped names are not read, the full list of old and new names is under Property Names; each cover has its own <code>&lt;element&gt;_&lt;field&gt;</code> set for <code>TITLE</code>, <code>AUTHOR</code>, <code>PRODUCT_ID</code>, <code>VERSION</code>, <code>PUBLICATION_DATE</code>, <code>URL</code>, <code>CONTACT</code>, <code>COPYRIGHT</code>, <code>NOTICE</code>, <code>COMMENTS</code>, <code>MEASUREMENTS</code>, <code>WEIGHT</code> and <code>PIECES</code>, the fields being <code>TEXT</code>, <code>FONT</code>, <code>COLOR</code>, <code>PLACEMENT</code>, <code>ALIGNMENT</code>, <code>VERTICAL_ALIGNMENT</code>, <code>MARGIN</code>, <code>PADDING</code>, <code>BORDER_WIDTH</code>, <code>BORDER_COLOR</code>, <code>BACKGROUND_COLOR</code> and <code>CORNER_RADIUS</code>, and <code>SHOW_&lt;element&gt;</code> shows it, only the front title and author show by default; empty texts show the model field, the author always shows the model author, <code>PIECES</code> the part count of the whole model, and <code>BILL_OF_MATERIALS TITLE_TEXT</code> takes <code>TITLE_FILE</code> too, the file wins over the text and is relative to the model file; <code>%size</code>, <code>%weight</code> and <code>%comments</code> fill in the measurements, weight and comments</td></tr>
+							<tr><td><code>0 !SW PROPERTY INSTRUCTION DOCUMENT USE_FONT &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>give all text the typeface of <code>DOCUMENT FONT</code>, each text keeps its own size, default <code>FALSE</code>; <code>DOCUMENT USE_FONT_SIZE</code> gives all text the size of <code>DOCUMENT FONT</code> and each text keeps its typeface. A file with <code>DOCUMENT USE_FONT TRUE</code> and no <code>DOCUMENT USE_FONT_SIZE</code> line uses both</td></tr>
+							<tr><td><code>0 !SW PROPERTY INSTRUCTION COVER FRONT SHOW_PIECES &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>show the part count of the whole model on the front cover, default <code>FALSE</code>, <code>COVER BACK SHOW_PIECES</code> on the back cover; <code>BILL_OF_MATERIALS SHOW_PART_COUNT</code> shows it under the bill of materials title and <code>PAGE SHOW_PART_COUNT</code> shows the new parts of the steps on each step page</td></tr>
+							<tr><td><code>0 !SW PROPERTY INSTRUCTION PART_COUNT TEXT &lt;text&gt;</code></td><td>Read, Write</td><td>text of all part counts and submodel previews with <code>%1</code> for the number, default <code>%1 PIECES</code>; <code>PART_COUNT FILE</code> takes a text file relative to the model file that wins over the text</td></tr>
+							<tr><td><code>0 !SW PROPERTY INSTRUCTION PART_COUNT FONT &lt;font&gt;</code></td><td>Read, Write</td><td>font of the bill of materials part count, in the size of the <code>BILL_OF_MATERIALS TITLE_FONT</code>, <code>PART_COUNT COLOR</code> is its color; <code>PAGE PART_COUNT_FONT</code> and <code>PAGE PART_COUNT_COLOR</code> style the step page count and the submodel preview count</td></tr>
+							<tr><td><code>0 !SW PROPERTY INSTRUCTION BILL_OF_MATERIALS PART_COUNT_PLACEMENT &lt;0-24&gt;</code></td><td>Read, Write</td><td>placement of the bill of materials part count (top right, beside the title, or past the title when they meet), and <code>PAGE PART_COUNT_PLACEMENT</code> places the step page count, and <code>STEP SUBMODEL_PREVIEW_PLACEMENT</code> the preview; on the page, the outer cells 0-4, 5, 9, 10, 14, 15, 19 and 20-24 put these, the cover elements and the page number against the paper edge; <code>STEP SUBMODEL_PREVIEW_PART_COUNT_PLACEMENT</code> places the preview count around the preview, default <code>22</code>, and <code>STEP PARTS_LIST_QUANTITY_PLACEMENT</code> each parts list quantity around its part, default <code>21</code>, inner cells inside, outer cells outside</td></tr>
+							<tr><td><code>0 !SW PROPERTY INSTRUCTION STEP SUBMODEL_PREVIEW_&lt;MARGIN|PADDING|BORDER_WIDTH|BORDER_COLOR|BACKGROUND_COLOR|CORNER_RADIUS&gt; &lt;value&gt;</code></td><td>Read, Write</td><td>box of the submodel preview</td></tr>
+							<tr><td><code>0 !SW PROPERTY INSTRUCTION STEP SHOW_SUBMODEL_PREVIEW &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>show the finished submodel with its part count on the first page of each submodel, default <code>FALSE</code>; <code>STEP SUBMODEL_PREVIEW_MODEL_SIZE</code> is the longest side of its model in points, default <code>0</code> fits it to its box</td></tr>
+							<tr><td><code>0 !SW PROPERTY INSTRUCTION STEP FINAL_MODEL_MARGIN &lt;value&gt;</code></td><td>Read, Write</td><td>box of the final model area: <code>STEP FINAL_MODEL_MARGIN</code>, <code>STEP FINAL_MODEL_PADDING</code>, <code>STEP FINAL_MODEL_BORDER_WIDTH</code>, <code>STEP FINAL_MODEL_BORDER_COLOR</code>, <code>STEP FINAL_MODEL_CORNER_RADIUS</code> and <code>STEP FINAL_MODEL_BACKGROUND_COLOR</code>, and a page can have its own background; default <code>0</code>, black and transparent</td></tr>
+							<tr><td><code>0 !SW PROPERTY INSTRUCTION STEP AREA_MARGIN &lt;value&gt;</code></td><td>Read, Write</td><td>box of each step area: <code>STEP AREA_MARGIN</code>, <code>STEP AREA_PADDING</code>, <code>STEP AREA_BORDER_WIDTH</code>, <code>STEP AREA_BORDER_COLOR</code>, <code>STEP AREA_CORNER_RADIUS</code>, and <code>STEP BACKGROUND_COLOR</code> as its background color, default <code>0</code>, black and transparent</td></tr>
+							<tr><td><code>0 !SW PROPERTY INSTRUCTION STEP SHOW_FINAL_MODEL_PAGE &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>close the main model steps with a page showing the finished model, default <code>TRUE</code></td></tr>
+							<tr><td><code>0 !SW PROPERTY INSTRUCTION COVER SHOW_BACK &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>end the instructions with a back cover after the bill of materials, default <code>TRUE</code>, blank until it gets images</td></tr>
 							<tr><td><code>0 !SW PAGE_PROPERTY INSTRUCTION STEP &lt;model&gt; &lt;step&gt; &lt;name&gt; &lt;value&gt;</code></td><td>Read, Write</td><td>property of the page starting at the step</td></tr>
-							<tr><td><code>0 !SW STEPS_PER_PAGE INSTRUCTION &lt;rows&gt; &lt;columns&gt; [VERTICAL] [FINAL_MODEL]</code></td><td>Read, Write</td><td>steps per page, filled down instead of across, with the finished model in the room left; a full last page adds no extra page and the final model page is left out; old files may still have <code>FINAL_MODEL_COLOR</code>, read and ignored, the final model takes the Page Background color until it has its own</td></tr>
+							<tr><td><code>0 !SW STEPS_PER_PAGE INSTRUCTION &lt;rows&gt; &lt;columns&gt; [VERTICAL] [FINAL_MODEL]</code></td><td>Read, Write</td><td>steps per page, filled down instead of across, with the finished model in the room left; a full last page adds no extra page and the final model page is left out; old <a href="#files">files</a> may still have <code>STEP FINAL_MODEL_COLOR</code>, read and ignored, the final model takes the Page Background color until it has its own</td></tr>
 							<tr><td><code>0 !SW PAGE_STEPS_PER_PAGE INSTRUCTION STEP &lt;model&gt; &lt;step&gt; &lt;rows&gt; &lt;columns&gt; [VERTICAL] [FINAL_MODEL]</code></td><td>Read, Write</td><td>steps per page from the step on, same words as above</td></tr>
 							<tr><td><code>0 !SW BLANK_PAGE INSTRUCTION STEP &lt;model&gt; &lt;step&gt;</code></td><td>Read, Write</td><td>blank page before the step</td></tr>
 							<tr><td><code>0 !SW OFFSET INSTRUCTION &lt;element&gt; &lt;model&gt; &lt;step&gt; &lt;x&gt; &lt;y&gt;</code></td><td>Read, Write</td><td>element moved from its place</td></tr>
 							<tr><td><code>0 !SW LOCK INSTRUCTION &lt;element&gt; &lt;model&gt; &lt;step&gt; &lt;x&gt; &lt;y&gt;</code></td><td>Read, Write</td><td>element locked at a position</td></tr>
 							<tr><td><code>0 !SW NOTICE INSTRUCTION &lt;id&gt; PAGE &lt;page&gt; POSITION &lt;x&gt; &lt;y&gt; [FILE &quot;&lt;file&gt;&quot;] TEXT &lt;text&gt;</code></td><td>Read, Write</td><td>notice on a page, the text file wins over the text</td></tr>
 							<tr><td><code>0 !SW IMAGE INSTRUCTION &lt;id&gt; &lt;NONE|FRONT|BACK|BOTH&gt; PLACEMENT &lt;0-24&gt; SIZE &lt;1-100&gt; FILE &quot;&lt;file&gt;&quot;</code></td><td>Read, Write</td><td>linked image on the front cover, the back cover or both, like a logo, placed on the page grid with the outer cells against the paper edge, its width in percent of the page width, the file relative to the model file; <code>NONE</code> hides an image of the default template</td></tr>
-							<tr><td><code>0 !SW PROPERTY INSTRUCTION SHOW_HEADER_BAND &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>show the header band on the step and blank pages, default <code>FALSE</code>; <code>SHOW_FOOTER_BAND</code>, <code>SHOW_LEFT_BAND</code> and <code>SHOW_RIGHT_BAND</code> do the same for the other edges, <code>HEADER_BAND_SIZE</code> is the band thickness from the paper edge, default <code>72</code>, <code>HEADER_BAND_COLOR</code> its <code>#RRGGBBAA</code> background color, default transparent, and <code>HEADER_BAND_RESERVE</code> keeps the page content clear of it, default <code>TRUE</code>; the other edges have <code>FOOTER_BAND_SIZE</code>, <code>LEFT_BAND_SIZE</code>, <code>RIGHT_BAND_SIZE</code>, <code>FOOTER_BAND_COLOR</code>, <code>LEFT_BAND_COLOR</code>, <code>RIGHT_BAND_COLOR</code>, <code>FOOTER_BAND_RESERVE</code>, <code>LEFT_BAND_RESERVE</code> and <code>RIGHT_BAND_RESERVE</code>; every band is a box, with <code>HEADER_BAND_MARGIN</code>, <code>HEADER_BAND_PADDING</code>, <code>HEADER_BAND_BORDER_WIDTH</code>, <code>HEADER_BAND_BORDER_COLOR</code>, <code>HEADER_BAND_CORNER_RADIUS</code>, and the same five for the other bands: <code>FOOTER_BAND_MARGIN</code>, <code>FOOTER_BAND_PADDING</code>, <code>FOOTER_BAND_BORDER_WIDTH</code>, <code>FOOTER_BAND_BORDER_COLOR</code>, <code>FOOTER_BAND_CORNER_RADIUS</code>, <code>LEFT_BAND_MARGIN</code>, <code>LEFT_BAND_PADDING</code>, <code>LEFT_BAND_BORDER_WIDTH</code>, <code>LEFT_BAND_BORDER_COLOR</code>, <code>LEFT_BAND_CORNER_RADIUS</code>, <code>RIGHT_BAND_MARGIN</code>, <code>RIGHT_BAND_PADDING</code>, <code>RIGHT_BAND_BORDER_WIDTH</code>, <code>RIGHT_BAND_BORDER_COLOR</code> and <code>RIGHT_BAND_CORNER_RADIUS</code>, all default <code>0</code> and black; a page can have its own values</td></tr>
-							<tr><td><code>0 !SW PROPERTY INSTRUCTION SHOW_WATERMARK &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>show the watermark on the page, default <code>TRUE</code>, a page can hide it; <code>WATERMARK_FONT</code> and <code>WATERMARK_TEXT_COLOR</code> set the watermark text, default Arial 16 and <code>#00000040</code>, the color alpha sets how strongly the text shows; <code>WATERMARK_OPACITY</code> is the watermark image opacity in percent, default <code>25</code>; <code>WATERMARK_ROTATION</code> turns watermarks around their center in degrees, default <code>0</code>; the watermark is a box with <code>WATERMARK_MARGIN</code>, <code>WATERMARK_PADDING</code>, <code>WATERMARK_BORDER_WIDTH</code>, <code>WATERMARK_BORDER_COLOR</code>, <code>WATERMARK_CORNER_RADIUS</code> and <code>WATERMARK_BACKGROUND_COLOR</code>, default <code>0</code>, black and transparent</td></tr>
-							<tr><td><code>0 !SW PROPERTY INSTRUCTION SHOW_BILL_OF_MATERIALS_TITLE &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>show the title of the bill of materials; the bill of materials keeps its own settings apart from the steps: <code>BILL_OF_MATERIALS_TITLE_PLACEMENT</code> places the title, <code>BILL_OF_MATERIALS_FONT</code> and <code>BILL_OF_MATERIALS_TEXT_COLOR</code> style the list text, <code>BILL_OF_MATERIALS_SHOW_COUNTS</code>, <code>BILL_OF_MATERIALS_SORT_ORDER</code>, <code>BILL_OF_MATERIALS_LAYOUT</code>, <code>BILL_OF_MATERIALS_ALIGNMENT</code>, <code>BILL_OF_MATERIALS_THUMBNAIL_SIZE</code> and <code>BILL_OF_MATERIALS_COUNT_PLACEMENT</code> work like their <code>PARTS_LIST_</code> versions; the title box is <code>BILL_OF_MATERIALS_TITLE_MARGIN</code>, <code>BILL_OF_MATERIALS_TITLE_PADDING</code>, <code>BILL_OF_MATERIALS_TITLE_BORDER_WIDTH</code>, <code>BILL_OF_MATERIALS_TITLE_BORDER_COLOR</code>, <code>BILL_OF_MATERIALS_TITLE_CORNER_RADIUS</code>, <code>BILL_OF_MATERIALS_TITLE_BACKGROUND_COLOR</code>, the list box <code>BILL_OF_MATERIALS_LIST_MARGIN</code>, <code>BILL_OF_MATERIALS_LIST_PADDING</code>, <code>BILL_OF_MATERIALS_LIST_BORDER_WIDTH</code>, <code>BILL_OF_MATERIALS_LIST_BORDER_COLOR</code>, <code>BILL_OF_MATERIALS_LIST_CORNER_RADIUS</code>, <code>BILL_OF_MATERIALS_LIST_BACKGROUND_COLOR</code>, the quantity box <code>BILL_OF_MATERIALS_QUANTITY_MARGIN</code>, <code>BILL_OF_MATERIALS_QUANTITY_PADDING</code>, <code>BILL_OF_MATERIALS_QUANTITY_BORDER_WIDTH</code>, <code>BILL_OF_MATERIALS_QUANTITY_BORDER_COLOR</code>, <code>BILL_OF_MATERIALS_QUANTITY_CORNER_RADIUS</code>, <code>BILL_OF_MATERIALS_QUANTITY_BACKGROUND_COLOR</code> and the part count box <code>BILL_OF_MATERIALS_PART_COUNT_MARGIN</code>, <code>BILL_OF_MATERIALS_PART_COUNT_PADDING</code>, <code>BILL_OF_MATERIALS_PART_COUNT_BORDER_WIDTH</code>, <code>BILL_OF_MATERIALS_PART_COUNT_BORDER_COLOR</code>, <code>BILL_OF_MATERIALS_PART_COUNT_CORNER_RADIUS</code>, <code>BILL_OF_MATERIALS_PART_COUNT_BACKGROUND_COLOR</code>; a file without them takes the step values</td></tr>
-							<tr><td><code>0 !SW PROPERTY INSTRUCTION LOCK_HOME_VIEW &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>draw every model from the home view instead of the model view, default <code>FALSE</code>, a step with its own step view keeps it</td></tr>
-							<tr><td><code>0 !SW NOTICE INSTRUCTION &lt;id&gt; SHOW &lt;HEADER|FOOTER|LEFT|RIGHT|WATERMARK&gt; POSITION &lt;x&gt; &lt;y&gt; [FILE &quot;&lt;file&gt;&quot;] TEXT &lt;text&gt;</code></td><td>Read, Write</td><td>notice repeated on every step page in a band or as the watermark, the position is relative to the band, <code>%page</code> and <code>%title</code> in the text fill in the page number and the model title; images also take <code>HEADER</code>, <code>FOOTER</code>, <code>LEFT</code>, <code>RIGHT</code> and <code>WATERMARK</code> as their pages</td></tr>
+							<tr><td><code>0 !SW PROPERTY INSTRUCTION BAND HEADER SHOW &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>show the header band on the step and blank pages, default <code>FALSE</code>; <code>BAND FOOTER SHOW</code>, <code>BAND LEFT SHOW</code> and <code>BAND RIGHT SHOW</code> do the same for the other edges, <code>BAND HEADER SIZE</code> is the band thickness from the paper edge, default <code>72</code>, <code>BAND HEADER COLOR</code> its <code>#RRGGBBAA</code> background color, default transparent, and <code>BAND HEADER RESERVE</code> keeps the page content clear of it, default <code>TRUE</code>; the other edges have <code>BAND FOOTER SIZE</code>, <code>BAND LEFT SIZE</code>, <code>BAND RIGHT SIZE</code>, <code>BAND FOOTER COLOR</code>, <code>BAND LEFT COLOR</code>, <code>BAND RIGHT COLOR</code>, <code>BAND FOOTER RESERVE</code>, <code>BAND LEFT RESERVE</code> and <code>BAND RIGHT RESERVE</code>; every band is a box, with <code>BAND HEADER MARGIN</code>, <code>BAND HEADER PADDING</code>, <code>BAND HEADER BORDER_WIDTH</code>, <code>BAND HEADER BORDER_COLOR</code>, <code>BAND HEADER CORNER_RADIUS</code>, and the same five for the other bands: <code>BAND FOOTER MARGIN</code>, <code>BAND FOOTER PADDING</code>, <code>BAND FOOTER BORDER_WIDTH</code>, <code>BAND FOOTER BORDER_COLOR</code>, <code>BAND FOOTER CORNER_RADIUS</code>, <code>BAND LEFT MARGIN</code>, <code>BAND LEFT PADDING</code>, <code>BAND LEFT BORDER_WIDTH</code>, <code>BAND LEFT BORDER_COLOR</code>, <code>BAND LEFT CORNER_RADIUS</code>, <code>BAND RIGHT MARGIN</code>, <code>BAND RIGHT PADDING</code>, <code>BAND RIGHT BORDER_WIDTH</code>, <code>BAND RIGHT BORDER_COLOR</code> and <code>BAND RIGHT CORNER_RADIUS</code>, all default <code>0</code> and black; a page can have its own values</td></tr>
+							<tr><td><code>0 !SW PROPERTY INSTRUCTION WATERMARK SHOW &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>show the watermark on the page, default <code>TRUE</code>, a page can hide it; <code>WATERMARK FONT</code> and <code>WATERMARK TEXT_COLOR</code> set the watermark text, default Arial 16 and <code>#00000040</code>, the color alpha sets how strongly the text shows; <code>WATERMARK OPACITY</code> is the watermark image opacity in percent, default <code>25</code>; <code>WATERMARK ROTATION</code> turns watermarks around their center in degrees, default <code>0</code>; the watermark is a box with <code>WATERMARK MARGIN</code>, <code>WATERMARK PADDING</code>, <code>WATERMARK BORDER_WIDTH</code>, <code>WATERMARK BORDER_COLOR</code>, <code>WATERMARK CORNER_RADIUS</code> and <code>WATERMARK BACKGROUND_COLOR</code>, default <code>0</code>, black and transparent</td></tr>
+							<tr><td><code>0 !SW PROPERTY INSTRUCTION BILL_OF_MATERIALS SHOW_TITLE &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>show the title of the bill of materials; the bill of materials keeps its own settings apart from the steps: <code>BILL_OF_MATERIALS TITLE_PLACEMENT</code> places the title, <code>BILL_OF_MATERIALS FONT</code> and <code>BILL_OF_MATERIALS TEXT_COLOR</code> style the list text, <code>BILL_OF_MATERIALS SHOW_COUNTS</code>, <code>BILL_OF_MATERIALS SORT_ORDER</code>, <code>BILL_OF_MATERIALS LAYOUT</code>, <code>BILL_OF_MATERIALS ALIGNMENT</code>, <code>BILL_OF_MATERIALS THUMBNAIL_SIZE</code> and <code>BILL_OF_MATERIALS COUNT_PLACEMENT</code> work like their <code>STEP PARTS_LIST_</code> versions; the title box is <code>BILL_OF_MATERIALS TITLE_MARGIN</code>, <code>BILL_OF_MATERIALS TITLE_PADDING</code>, <code>BILL_OF_MATERIALS TITLE_BORDER_WIDTH</code>, <code>BILL_OF_MATERIALS TITLE_BORDER_COLOR</code>, <code>BILL_OF_MATERIALS TITLE_CORNER_RADIUS</code>, <code>BILL_OF_MATERIALS TITLE_BACKGROUND_COLOR</code>, the list box <code>BILL_OF_MATERIALS LIST_MARGIN</code>, <code>BILL_OF_MATERIALS LIST_PADDING</code>, <code>BILL_OF_MATERIALS LIST_BORDER_WIDTH</code>, <code>BILL_OF_MATERIALS LIST_BORDER_COLOR</code>, <code>BILL_OF_MATERIALS LIST_CORNER_RADIUS</code>, <code>BILL_OF_MATERIALS LIST_BACKGROUND_COLOR</code>, the quantity box <code>BILL_OF_MATERIALS QUANTITY_MARGIN</code>, <code>BILL_OF_MATERIALS QUANTITY_PADDING</code>, <code>BILL_OF_MATERIALS QUANTITY_BORDER_WIDTH</code>, <code>BILL_OF_MATERIALS QUANTITY_BORDER_COLOR</code>, <code>BILL_OF_MATERIALS QUANTITY_CORNER_RADIUS</code>, <code>BILL_OF_MATERIALS QUANTITY_BACKGROUND_COLOR</code> and the part count box <code>BILL_OF_MATERIALS PART_COUNT_MARGIN</code>, <code>BILL_OF_MATERIALS PART_COUNT_PADDING</code>, <code>BILL_OF_MATERIALS PART_COUNT_BORDER_WIDTH</code>, <code>BILL_OF_MATERIALS PART_COUNT_BORDER_COLOR</code>, <code>BILL_OF_MATERIALS PART_COUNT_CORNER_RADIUS</code>, <code>BILL_OF_MATERIALS PART_COUNT_BACKGROUND_COLOR</code>; a file without them takes the step values</td></tr>
+							<tr><td><code>0 !SW PROPERTY INSTRUCTION DOCUMENT LOCK_HOME_VIEW &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>draw every model from the home view instead of the model view, default <code>FALSE</code>, a step with its own step view keeps it</td></tr>
+							<tr><td><code>0 !SW NOTICE INSTRUCTION &lt;id&gt; SHOW &lt;FRONT|BACK|HEADER|FOOTER|LEFT|RIGHT|WATERMARK&gt; POSITION &lt;x&gt; &lt;y&gt; [FILE &quot;&lt;file&gt;&quot;] TEXT &lt;text&gt;</code></td><td>Read, Write</td><td>notice repeated on every step page in a band or as the watermark, or on the front or back cover, the position is relative to the band, <code>%page</code> and <code>%title</code> in the text fill in the page number and the model title; images also take <code>HEADER</code>, <code>FOOTER</code>, <code>LEFT</code>, <code>RIGHT</code> and <code>WATERMARK</code> as their pages</td></tr>
 							<tr><td><code>0 !SW POINTER INSTRUCTION &lt;id&gt; PAGE &lt;page&gt; SOURCE &lt;element&gt; ANCHOR &lt;AUTO|0-7&gt; STYLE &lt;DEFAULT|LINE|WEDGE|L_SHAPE|Z_SHAPE|U_SHAPE&gt; TIP &lt;DEFAULT|ARROW|DOT|HOLLOW_DOT&gt; TARGET &lt;POINT|ELEMENT|PART&gt; &lt;element&gt; PART &lt;index&gt; POSITION &lt;x&gt; &lt;y&gt; [AT &lt;fx&gt; &lt;fy&gt;] [BEND &lt;0-1&gt;] [REACH &lt;length&gt;]</code></td><td>Read, Write</td><td>pointer from an element border to a point, element or part; <code>AT</code> is <a href="#where">where</a> the tip sits on its target element as a fraction of its box, <code>BEND</code> where the Z shape bends from base to tip, <code>REACH</code> how far the U shape reaches out</td></tr>
+						</tbody>
+					</table>
+				</div>
+
+				<h3 id="meta-property-names">Property Names</h3>
+				<p>Every <code>PROPERTY INSTRUCTION</code> name starts with its scope words. The names before this form are not read. The cover elements were <code>COVER_TITLE_&lt;field&gt;</code>, <code>COVER_AUTHOR_&lt;field&gt;</code>, <code>SHOW_COVER_TITLE</code>, <code>SHOW_COVER_AUTHOR</code>, and <code>&lt;element&gt;_&lt;field&gt;</code>, <code>SHOW_&lt;element&gt;</code> and <code>&lt;element&gt;_PAGE</code> for the publication texts; each is now <code>COVER FRONT &lt;element&gt;_&lt;field&gt;</code> or <code>COVER BACK &lt;element&gt;_&lt;field&gt;</code> by its page, the old URL element being <code>URL</code>, the old publication notice <code>NOTICE</code> and the old cover part count <code>PIECES</code>. <code>SHOW_COVER_PART_COUNT</code> is <code>COVER FRONT SHOW_PIECES</code>, and <code>PART_COUNT_PLACEMENT</code> and the part count box names went with the cover part count.</p>
+
+				<div class="table">
+					<table>
+						<thead>
+							<tr><th>Old name</th><th>New name</th></tr>
+						</thead>
+
+						<tbody>
+							<tr><td><code>SHOW_STEP_NUMBER</code></td><td><code>STEP SHOW_NUMBER</code></td></tr>
+							<tr><td><code>SHOW_STEP_PARTS_LIST</code></td><td><code>STEP SHOW_PARTS_LIST</code></td></tr>
+							<tr><td><code>STEP_NUMBER_FONT</code></td><td><code>STEP NUMBER_FONT</code></td></tr>
+							<tr><td><code>STEP_NUMBER_COLOR</code></td><td><code>STEP NUMBER_COLOR</code></td></tr>
+							<tr><td><code>STEP_BACKGROUND_COLOR</code></td><td><code>STEP BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>PARTS_LIST_BACKGROUND_COLOR</code></td><td><code>STEP PARTS_LIST_BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>PARTS_LIST_FONT</code></td><td><code>STEP PARTS_LIST_FONT</code></td></tr>
+							<tr><td><code>PARTS_LIST_TEXT_COLOR</code></td><td><code>STEP PARTS_LIST_TEXT_COLOR</code></td></tr>
+							<tr><td><code>PARTS_LIST_BORDER_COLOR</code></td><td><code>STEP PARTS_LIST_BORDER_COLOR</code></td></tr>
+							<tr><td><code>PARTS_LIST_BORDER_WIDTH</code></td><td><code>STEP PARTS_LIST_BORDER_WIDTH</code></td></tr>
+							<tr><td><code>PARTS_LIST_SHOW_COUNTS</code></td><td><code>STEP PARTS_LIST_SHOW_COUNTS</code></td></tr>
+							<tr><td><code>PARTS_LIST_SORT_ORDER</code></td><td><code>STEP PARTS_LIST_SORT_ORDER</code></td></tr>
+							<tr><td><code>SHOW_STEP_DIVIDERS</code></td><td><code>STEP SHOW_DIVIDERS</code></td></tr>
+							<tr><td><code>STEP_DIVIDER_COLOR</code></td><td><code>STEP DIVIDER_COLOR</code></td></tr>
+							<tr><td><code>STEP_DIVIDER_WIDTH</code></td><td><code>STEP DIVIDER_WIDTH</code></td></tr>
+							<tr><td><code>SHOW_BILL_OF_MATERIALS</code></td><td><code>BILL_OF_MATERIALS SHOW</code></td></tr>
+							<tr><td><code>USE_DOCUMENT_FONT</code></td><td><code>DOCUMENT USE_FONT</code></td></tr>
+							<tr><td><code>USE_DOCUMENT_FONT_SIZE</code></td><td><code>DOCUMENT USE_FONT_SIZE</code></td></tr>
+							<tr><td><code>DOCUMENT_FONT</code></td><td><code>DOCUMENT FONT</code></td></tr>
+							<tr><td><code>SHOW_COVER_PAGE</code></td><td><code>COVER SHOW_FRONT</code></td></tr>
+							<tr><td><code>PAGE_BACKGROUND_COLOR</code></td><td><code>PAGE BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>STEP_NUMBER_PLACEMENT</code></td><td><code>STEP NUMBER_PLACEMENT</code></td></tr>
+							<tr><td><code>STEP_NUMBER_ANCHOR</code></td><td><code>STEP NUMBER_ANCHOR</code></td></tr>
+							<tr><td><code>PARTS_LIST_PLACEMENT</code></td><td><code>STEP PARTS_LIST_PLACEMENT</code></td></tr>
+							<tr><td><code>PARTS_LIST_ANCHOR</code></td><td><code>STEP PARTS_LIST_ANCHOR</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_PLACEMENT</code></td><td><code>BILL_OF_MATERIALS PLACEMENT</code></td></tr>
+							<tr><td><code>PARTS_LIST_THUMBNAIL_SIZE</code></td><td><code>STEP PARTS_LIST_THUMBNAIL_SIZE</code></td></tr>
+							<tr><td><code>PARTS_LIST_THUMBNAIL_BACKGROUND_COLOR</code></td><td><code>STEP PARTS_LIST_THUMBNAIL_BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>COVER_IMAGE_PLACEMENT</code></td><td><code>COVER FRONT IMAGE_PLACEMENT</code></td></tr>
+							<tr><td><code>STEP_IMAGE_PLACEMENT</code></td><td><code>STEP IMAGE_PLACEMENT</code></td></tr>
+							<tr><td><code>COVER_BACKGROUND_COLOR</code></td><td><code>COVER BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_BACKGROUND_COLOR</code></td><td><code>BILL_OF_MATERIALS BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>SHOW_COVER_BLANK_PAGE</code></td><td><code>PAGE SHOW_COVER_BLANK_PAGE</code></td></tr>
+							<tr><td><code>SHOW_BILL_OF_MATERIALS_BLANK_PAGE</code></td><td><code>PAGE SHOW_BILL_OF_MATERIALS_BLANK_PAGE</code></td></tr>
+							<tr><td><code>USE_DOCUMENT_UNITS</code></td><td><code>DOCUMENT USE_UNITS</code></td></tr>
+							<tr><td><code>DOCUMENT_UNITS</code></td><td><code>DOCUMENT UNITS</code></td></tr>
+							<tr><td><code>SHOW_PAGE_NUMBER</code></td><td><code>PAGE SHOW_NUMBER</code></td></tr>
+							<tr><td><code>PAGE_NUMBER_FORMAT</code></td><td><code>PAGE NUMBER_FORMAT</code></td></tr>
+							<tr><td><code>PAGE_NUMBER_FONT</code></td><td><code>PAGE NUMBER_FONT</code></td></tr>
+							<tr><td><code>PAGE_NUMBER_COLOR</code></td><td><code>PAGE NUMBER_COLOR</code></td></tr>
+							<tr><td><code>PAGE_NUMBER_PLACEMENT</code></td><td><code>PAGE NUMBER_PLACEMENT</code></td></tr>
+							<tr><td><code>SHOW_PAGE_NUMBER_ALL_PAGES</code></td><td><code>PAGE SHOW_NUMBER_ALL_PAGES</code></td></tr>
+							<tr><td><code>STEP_IMAGE_MARGIN</code></td><td><code>STEP IMAGE_MARGIN</code></td></tr>
+							<tr><td><code>STEP_IMAGE_PADDING</code></td><td><code>STEP IMAGE_PADDING</code></td></tr>
+							<tr><td><code>STEP_IMAGE_BORDER_WIDTH</code></td><td><code>STEP IMAGE_BORDER_WIDTH</code></td></tr>
+							<tr><td><code>STEP_IMAGE_BORDER_COLOR</code></td><td><code>STEP IMAGE_BORDER_COLOR</code></td></tr>
+							<tr><td><code>STEP_IMAGE_BACKGROUND_COLOR</code></td><td><code>STEP IMAGE_BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>STEP_NUMBER_MARGIN</code></td><td><code>STEP NUMBER_MARGIN</code></td></tr>
+							<tr><td><code>STEP_NUMBER_PADDING</code></td><td><code>STEP NUMBER_PADDING</code></td></tr>
+							<tr><td><code>STEP_NUMBER_BORDER_WIDTH</code></td><td><code>STEP NUMBER_BORDER_WIDTH</code></td></tr>
+							<tr><td><code>STEP_NUMBER_BORDER_COLOR</code></td><td><code>STEP NUMBER_BORDER_COLOR</code></td></tr>
+							<tr><td><code>STEP_NUMBER_BACKGROUND_COLOR</code></td><td><code>STEP NUMBER_BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>PARTS_LIST_MARGIN</code></td><td><code>STEP PARTS_LIST_MARGIN</code></td></tr>
+							<tr><td><code>PARTS_LIST_PADDING</code></td><td><code>STEP PARTS_LIST_PADDING</code></td></tr>
+							<tr><td><code>PAGE_NUMBER_MARGIN</code></td><td><code>PAGE NUMBER_MARGIN</code></td></tr>
+							<tr><td><code>PAGE_NUMBER_PADDING</code></td><td><code>PAGE NUMBER_PADDING</code></td></tr>
+							<tr><td><code>PAGE_NUMBER_BORDER_WIDTH</code></td><td><code>PAGE NUMBER_BORDER_WIDTH</code></td></tr>
+							<tr><td><code>PAGE_NUMBER_BORDER_COLOR</code></td><td><code>PAGE NUMBER_BORDER_COLOR</code></td></tr>
+							<tr><td><code>PAGE_NUMBER_BACKGROUND_COLOR</code></td><td><code>PAGE NUMBER_BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>COVER_IMAGE_MARGIN</code></td><td><code>COVER FRONT IMAGE_MARGIN</code></td></tr>
+							<tr><td><code>COVER_IMAGE_PADDING</code></td><td><code>COVER FRONT IMAGE_PADDING</code></td></tr>
+							<tr><td><code>COVER_IMAGE_BORDER_WIDTH</code></td><td><code>COVER FRONT IMAGE_BORDER_WIDTH</code></td></tr>
+							<tr><td><code>COVER_IMAGE_BORDER_COLOR</code></td><td><code>COVER FRONT IMAGE_BORDER_COLOR</code></td></tr>
+							<tr><td><code>COVER_IMAGE_BACKGROUND_COLOR</code></td><td><code>COVER FRONT IMAGE_BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>NOTICE_FONT</code></td><td><code>NOTICE FONT</code></td></tr>
+							<tr><td><code>NOTICE_TEXT_COLOR</code></td><td><code>NOTICE TEXT_COLOR</code></td></tr>
+							<tr><td><code>NOTICE_MARGIN</code></td><td><code>NOTICE MARGIN</code></td></tr>
+							<tr><td><code>NOTICE_PADDING</code></td><td><code>NOTICE PADDING</code></td></tr>
+							<tr><td><code>NOTICE_BORDER_WIDTH</code></td><td><code>NOTICE BORDER_WIDTH</code></td></tr>
+							<tr><td><code>NOTICE_BORDER_COLOR</code></td><td><code>NOTICE BORDER_COLOR</code></td></tr>
+							<tr><td><code>NOTICE_BACKGROUND_COLOR</code></td><td><code>NOTICE BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>POINTER_STYLE</code></td><td><code>POINTER STYLE</code></td></tr>
+							<tr><td><code>POINTER_TIP</code></td><td><code>POINTER TIP</code></td></tr>
+							<tr><td><code>POINTER_COLOR</code></td><td><code>POINTER COLOR</code></td></tr>
+							<tr><td><code>POINTER_WIDTH</code></td><td><code>POINTER WIDTH</code></td></tr>
+							<tr><td><code>POINTER_TIP_SIZE</code></td><td><code>POINTER TIP_SIZE</code></td></tr>
+							<tr><td><code>PARTS_LIST_LAYOUT</code></td><td><code>STEP PARTS_LIST_LAYOUT</code></td></tr>
+							<tr><td><code>PARTS_LIST_ALIGNMENT</code></td><td><code>STEP PARTS_LIST_ALIGNMENT</code></td></tr>
+							<tr><td><code>MODEL_PROJECTION</code></td><td><code>DOCUMENT PROJECTION</code></td></tr>
+							<tr><td><code>FADE_PREVIOUS_STEPS</code></td><td><code>STEP FADE_PREVIOUS_STEPS</code></td></tr>
+							<tr><td><code>FADE_COLOR</code></td><td><code>STEP FADE_COLOR</code></td></tr>
+							<tr><td><code>HIGHLIGHT_NEW_PARTS</code></td><td><code>STEP HIGHLIGHT_NEW_PARTS</code></td></tr>
+							<tr><td><code>HIGHLIGHT_COLOR</code></td><td><code>STEP HIGHLIGHT_COLOR</code></td></tr>
+							<tr><td><code>STEP_IMAGE_CORNER_RADIUS</code></td><td><code>STEP IMAGE_CORNER_RADIUS</code></td></tr>
+							<tr><td><code>STEP_NUMBER_CORNER_RADIUS</code></td><td><code>STEP NUMBER_CORNER_RADIUS</code></td></tr>
+							<tr><td><code>PARTS_LIST_CORNER_RADIUS</code></td><td><code>STEP PARTS_LIST_CORNER_RADIUS</code></td></tr>
+							<tr><td><code>PAGE_NUMBER_CORNER_RADIUS</code></td><td><code>PAGE NUMBER_CORNER_RADIUS</code></td></tr>
+							<tr><td><code>COVER_IMAGE_CORNER_RADIUS</code></td><td><code>COVER FRONT IMAGE_CORNER_RADIUS</code></td></tr>
+							<tr><td><code>NOTICE_CORNER_RADIUS</code></td><td><code>NOTICE CORNER_RADIUS</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_TITLE_FONT</code></td><td><code>BILL_OF_MATERIALS TITLE_FONT</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_TITLE_COLOR</code></td><td><code>BILL_OF_MATERIALS TITLE_COLOR</code></td></tr>
+							<tr><td><code>SUBMODEL_BACKGROUND_COLOR</code></td><td><code>STEP SUBMODEL_BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>STEP_MODEL_SIZE</code></td><td><code>STEP MODEL_SIZE</code></td></tr>
+							<tr><td><code>COVER_MODEL_SIZE</code></td><td><code>COVER FRONT MODEL_SIZE</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_TITLE_TEXT</code></td><td><code>BILL_OF_MATERIALS TITLE_TEXT</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_TITLE_FILE</code></td><td><code>BILL_OF_MATERIALS TITLE_FILE</code></td></tr>
+							<tr><td><code>STEP_DIVIDER_MARGIN</code></td><td><code>STEP DIVIDER_MARGIN</code></td></tr>
+							<tr><td><code>STEP_DIVIDER_PADDING</code></td><td><code>STEP DIVIDER_PADDING</code></td></tr>
+							<tr><td><code>STEP_DIVIDER_ROUNDED</code></td><td><code>STEP DIVIDER_ROUNDED</code></td></tr>
+							<tr><td><code>STEP_DIVIDER_HORIZONTAL</code></td><td><code>STEP DIVIDER_HORIZONTAL</code></td></tr>
+							<tr><td><code>STEP_DIVIDER_VERTICAL</code></td><td><code>STEP DIVIDER_VERTICAL</code></td></tr>
+							<tr><td><code>HIGHLIGHT_WIDTH</code></td><td><code>STEP HIGHLIGHT_WIDTH</code></td></tr>
+							<tr><td><code>FINAL_MODEL_BORDER_WIDTH</code></td><td><code>STEP FINAL_MODEL_BORDER_WIDTH</code></td></tr>
+							<tr><td><code>FINAL_MODEL_BORDER_COLOR</code></td><td><code>STEP FINAL_MODEL_BORDER_COLOR</code></td></tr>
+							<tr><td><code>FINAL_MODEL_MARGIN</code></td><td><code>STEP FINAL_MODEL_MARGIN</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_SHOW_PART_IDS</code></td><td><code>BILL_OF_MATERIALS SHOW_PART_IDS</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_SHOW_PART_COUNT</code></td><td><code>BILL_OF_MATERIALS SHOW_PART_COUNT</code></td></tr>
+							<tr><td><code>SHOW_PAGE_PART_COUNT</code></td><td><code>PAGE SHOW_PART_COUNT</code></td></tr>
+							<tr><td><code>PART_COUNT_TEXT</code></td><td><code>PART_COUNT TEXT</code></td></tr>
+							<tr><td><code>PART_COUNT_FILE</code></td><td><code>PART_COUNT FILE</code></td></tr>
+							<tr><td><code>PART_COUNT_FONT</code></td><td><code>PART_COUNT FONT</code></td></tr>
+							<tr><td><code>PART_COUNT_COLOR</code></td><td><code>PART_COUNT COLOR</code></td></tr>
+							<tr><td><code>PAGE_PART_COUNT_FONT</code></td><td><code>PAGE PART_COUNT_FONT</code></td></tr>
+							<tr><td><code>PAGE_PART_COUNT_COLOR</code></td><td><code>PAGE PART_COUNT_COLOR</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_PART_COUNT_PLACEMENT</code></td><td><code>BILL_OF_MATERIALS PART_COUNT_PLACEMENT</code></td></tr>
+							<tr><td><code>PAGE_PART_COUNT_PLACEMENT</code></td><td><code>PAGE PART_COUNT_PLACEMENT</code></td></tr>
+							<tr><td><code>SHOW_SUBMODEL_PREVIEW</code></td><td><code>STEP SHOW_SUBMODEL_PREVIEW</code></td></tr>
+							<tr><td><code>SUBMODEL_PREVIEW_MODEL_SIZE</code></td><td><code>STEP SUBMODEL_PREVIEW_MODEL_SIZE</code></td></tr>
+							<tr><td><code>SUBMODEL_PREVIEW_PLACEMENT</code></td><td><code>STEP SUBMODEL_PREVIEW_PLACEMENT</code></td></tr>
+							<tr><td><code>SUBMODEL_PREVIEW_MARGIN</code></td><td><code>STEP SUBMODEL_PREVIEW_MARGIN</code></td></tr>
+							<tr><td><code>SUBMODEL_PREVIEW_PADDING</code></td><td><code>STEP SUBMODEL_PREVIEW_PADDING</code></td></tr>
+							<tr><td><code>SUBMODEL_PREVIEW_BORDER_WIDTH</code></td><td><code>STEP SUBMODEL_PREVIEW_BORDER_WIDTH</code></td></tr>
+							<tr><td><code>SUBMODEL_PREVIEW_BORDER_COLOR</code></td><td><code>STEP SUBMODEL_PREVIEW_BORDER_COLOR</code></td></tr>
+							<tr><td><code>SUBMODEL_PREVIEW_BACKGROUND_COLOR</code></td><td><code>STEP SUBMODEL_PREVIEW_BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>SUBMODEL_PREVIEW_CORNER_RADIUS</code></td><td><code>STEP SUBMODEL_PREVIEW_CORNER_RADIUS</code></td></tr>
+							<tr><td><code>SUBMODEL_PREVIEW_PART_COUNT_PLACEMENT</code></td><td><code>STEP SUBMODEL_PREVIEW_PART_COUNT_PLACEMENT</code></td></tr>
+							<tr><td><code>PARTS_LIST_QUANTITY_PLACEMENT</code></td><td><code>STEP PARTS_LIST_QUANTITY_PLACEMENT</code></td></tr>
+							<tr><td><code>SHOW_BACK_COVER</code></td><td><code>COVER SHOW_BACK</code></td></tr>
+							<tr><td><code>SHOW_HEADER_BAND</code></td><td><code>BAND HEADER SHOW</code></td></tr>
+							<tr><td><code>SHOW_FOOTER_BAND</code></td><td><code>BAND FOOTER SHOW</code></td></tr>
+							<tr><td><code>SHOW_LEFT_BAND</code></td><td><code>BAND LEFT SHOW</code></td></tr>
+							<tr><td><code>SHOW_RIGHT_BAND</code></td><td><code>BAND RIGHT SHOW</code></td></tr>
+							<tr><td><code>HEADER_BAND_SIZE</code></td><td><code>BAND HEADER SIZE</code></td></tr>
+							<tr><td><code>FOOTER_BAND_SIZE</code></td><td><code>BAND FOOTER SIZE</code></td></tr>
+							<tr><td><code>LEFT_BAND_SIZE</code></td><td><code>BAND LEFT SIZE</code></td></tr>
+							<tr><td><code>RIGHT_BAND_SIZE</code></td><td><code>BAND RIGHT SIZE</code></td></tr>
+							<tr><td><code>HEADER_BAND_COLOR</code></td><td><code>BAND HEADER COLOR</code></td></tr>
+							<tr><td><code>FOOTER_BAND_COLOR</code></td><td><code>BAND FOOTER COLOR</code></td></tr>
+							<tr><td><code>LEFT_BAND_COLOR</code></td><td><code>BAND LEFT COLOR</code></td></tr>
+							<tr><td><code>RIGHT_BAND_COLOR</code></td><td><code>BAND RIGHT COLOR</code></td></tr>
+							<tr><td><code>HEADER_BAND_RESERVE</code></td><td><code>BAND HEADER RESERVE</code></td></tr>
+							<tr><td><code>FOOTER_BAND_RESERVE</code></td><td><code>BAND FOOTER RESERVE</code></td></tr>
+							<tr><td><code>LEFT_BAND_RESERVE</code></td><td><code>BAND LEFT RESERVE</code></td></tr>
+							<tr><td><code>RIGHT_BAND_RESERVE</code></td><td><code>BAND RIGHT RESERVE</code></td></tr>
+							<tr><td><code>SHOW_WATERMARK</code></td><td><code>WATERMARK SHOW</code></td></tr>
+							<tr><td><code>WATERMARK_OPACITY</code></td><td><code>WATERMARK OPACITY</code></td></tr>
+							<tr><td><code>STEP_NUMBER_ALIGNMENT</code></td><td><code>STEP NUMBER_ALIGNMENT</code></td></tr>
+							<tr><td><code>STEP_NUMBER_VERTICAL_ALIGNMENT</code></td><td><code>STEP NUMBER_VERTICAL_ALIGNMENT</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_TITLE_ALIGNMENT</code></td><td><code>BILL_OF_MATERIALS TITLE_ALIGNMENT</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_TITLE_VERTICAL_ALIGNMENT</code></td><td><code>BILL_OF_MATERIALS TITLE_VERTICAL_ALIGNMENT</code></td></tr>
+							<tr><td><code>PAGE_NUMBER_ALIGNMENT</code></td><td><code>PAGE NUMBER_ALIGNMENT</code></td></tr>
+							<tr><td><code>PAGE_NUMBER_VERTICAL_ALIGNMENT</code></td><td><code>PAGE NUMBER_VERTICAL_ALIGNMENT</code></td></tr>
+							<tr><td><code>PART_COUNT_ALIGNMENT</code></td><td><code>PART_COUNT ALIGNMENT</code></td></tr>
+							<tr><td><code>PART_COUNT_VERTICAL_ALIGNMENT</code></td><td><code>PART_COUNT VERTICAL_ALIGNMENT</code></td></tr>
+							<tr><td><code>NOTICE_ALIGNMENT</code></td><td><code>NOTICE ALIGNMENT</code></td></tr>
+							<tr><td><code>NOTICE_VERTICAL_ALIGNMENT</code></td><td><code>NOTICE VERTICAL_ALIGNMENT</code></td></tr>
+							<tr><td><code>SHOW_COVER_IMAGE</code></td><td><code>COVER FRONT SHOW_IMAGE</code></td></tr>
+							<tr><td><code>IMAGE_MARGIN</code></td><td><code>IMAGE MARGIN</code></td></tr>
+							<tr><td><code>IMAGE_PADDING</code></td><td><code>IMAGE PADDING</code></td></tr>
+							<tr><td><code>IMAGE_BORDER_WIDTH</code></td><td><code>IMAGE BORDER_WIDTH</code></td></tr>
+							<tr><td><code>IMAGE_BORDER_COLOR</code></td><td><code>IMAGE BORDER_COLOR</code></td></tr>
+							<tr><td><code>IMAGE_BACKGROUND_COLOR</code></td><td><code>IMAGE BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>IMAGE_CORNER_RADIUS</code></td><td><code>IMAGE CORNER_RADIUS</code></td></tr>
+							<tr><td><code>POINTER_BEND_RADIUS</code></td><td><code>POINTER BEND_RADIUS</code></td></tr>
+							<tr><td><code>SHOW_FINAL_MODEL_PAGE</code></td><td><code>STEP SHOW_FINAL_MODEL_PAGE</code></td></tr>
+							<tr><td><code>BLANK_PAGE_BACKGROUND_COLOR</code></td><td><code>PAGE BLANK_BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>PARTS_LIST_QUANTITY_MARGIN</code></td><td><code>STEP PARTS_LIST_QUANTITY_MARGIN</code></td></tr>
+							<tr><td><code>PARTS_LIST_QUANTITY_PADDING</code></td><td><code>STEP PARTS_LIST_QUANTITY_PADDING</code></td></tr>
+							<tr><td><code>PARTS_LIST_QUANTITY_BORDER_WIDTH</code></td><td><code>STEP PARTS_LIST_QUANTITY_BORDER_WIDTH</code></td></tr>
+							<tr><td><code>PARTS_LIST_QUANTITY_BORDER_COLOR</code></td><td><code>STEP PARTS_LIST_QUANTITY_BORDER_COLOR</code></td></tr>
+							<tr><td><code>PARTS_LIST_QUANTITY_BACKGROUND_COLOR</code></td><td><code>STEP PARTS_LIST_QUANTITY_BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>PARTS_LIST_QUANTITY_CORNER_RADIUS</code></td><td><code>STEP PARTS_LIST_QUANTITY_CORNER_RADIUS</code></td></tr>
+							<tr><td><code>FINAL_MODEL_PADDING</code></td><td><code>STEP FINAL_MODEL_PADDING</code></td></tr>
+							<tr><td><code>FINAL_MODEL_CORNER_RADIUS</code></td><td><code>STEP FINAL_MODEL_CORNER_RADIUS</code></td></tr>
+							<tr><td><code>STEP_MARGIN</code></td><td><code>STEP AREA_MARGIN</code></td></tr>
+							<tr><td><code>STEP_PADDING</code></td><td><code>STEP AREA_PADDING</code></td></tr>
+							<tr><td><code>STEP_BORDER_WIDTH</code></td><td><code>STEP AREA_BORDER_WIDTH</code></td></tr>
+							<tr><td><code>STEP_BORDER_COLOR</code></td><td><code>STEP AREA_BORDER_COLOR</code></td></tr>
+							<tr><td><code>STEP_CORNER_RADIUS</code></td><td><code>STEP AREA_CORNER_RADIUS</code></td></tr>
+							<tr><td><code>FINAL_MODEL_BACKGROUND_COLOR</code></td><td><code>STEP FINAL_MODEL_BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>HEADER_BAND_MARGIN</code></td><td><code>BAND HEADER MARGIN</code></td></tr>
+							<tr><td><code>HEADER_BAND_PADDING</code></td><td><code>BAND HEADER PADDING</code></td></tr>
+							<tr><td><code>HEADER_BAND_BORDER_WIDTH</code></td><td><code>BAND HEADER BORDER_WIDTH</code></td></tr>
+							<tr><td><code>HEADER_BAND_BORDER_COLOR</code></td><td><code>BAND HEADER BORDER_COLOR</code></td></tr>
+							<tr><td><code>HEADER_BAND_CORNER_RADIUS</code></td><td><code>BAND HEADER CORNER_RADIUS</code></td></tr>
+							<tr><td><code>FOOTER_BAND_MARGIN</code></td><td><code>BAND FOOTER MARGIN</code></td></tr>
+							<tr><td><code>FOOTER_BAND_PADDING</code></td><td><code>BAND FOOTER PADDING</code></td></tr>
+							<tr><td><code>FOOTER_BAND_BORDER_WIDTH</code></td><td><code>BAND FOOTER BORDER_WIDTH</code></td></tr>
+							<tr><td><code>FOOTER_BAND_BORDER_COLOR</code></td><td><code>BAND FOOTER BORDER_COLOR</code></td></tr>
+							<tr><td><code>FOOTER_BAND_CORNER_RADIUS</code></td><td><code>BAND FOOTER CORNER_RADIUS</code></td></tr>
+							<tr><td><code>LEFT_BAND_MARGIN</code></td><td><code>BAND LEFT MARGIN</code></td></tr>
+							<tr><td><code>LEFT_BAND_PADDING</code></td><td><code>BAND LEFT PADDING</code></td></tr>
+							<tr><td><code>LEFT_BAND_BORDER_WIDTH</code></td><td><code>BAND LEFT BORDER_WIDTH</code></td></tr>
+							<tr><td><code>LEFT_BAND_BORDER_COLOR</code></td><td><code>BAND LEFT BORDER_COLOR</code></td></tr>
+							<tr><td><code>LEFT_BAND_CORNER_RADIUS</code></td><td><code>BAND LEFT CORNER_RADIUS</code></td></tr>
+							<tr><td><code>RIGHT_BAND_MARGIN</code></td><td><code>BAND RIGHT MARGIN</code></td></tr>
+							<tr><td><code>RIGHT_BAND_PADDING</code></td><td><code>BAND RIGHT PADDING</code></td></tr>
+							<tr><td><code>RIGHT_BAND_BORDER_WIDTH</code></td><td><code>BAND RIGHT BORDER_WIDTH</code></td></tr>
+							<tr><td><code>RIGHT_BAND_BORDER_COLOR</code></td><td><code>BAND RIGHT BORDER_COLOR</code></td></tr>
+							<tr><td><code>RIGHT_BAND_CORNER_RADIUS</code></td><td><code>BAND RIGHT CORNER_RADIUS</code></td></tr>
+							<tr><td><code>WATERMARK_MARGIN</code></td><td><code>WATERMARK MARGIN</code></td></tr>
+							<tr><td><code>WATERMARK_PADDING</code></td><td><code>WATERMARK PADDING</code></td></tr>
+							<tr><td><code>WATERMARK_BORDER_WIDTH</code></td><td><code>WATERMARK BORDER_WIDTH</code></td></tr>
+							<tr><td><code>WATERMARK_BORDER_COLOR</code></td><td><code>WATERMARK BORDER_COLOR</code></td></tr>
+							<tr><td><code>WATERMARK_CORNER_RADIUS</code></td><td><code>WATERMARK CORNER_RADIUS</code></td></tr>
+							<tr><td><code>WATERMARK_BACKGROUND_COLOR</code></td><td><code>WATERMARK BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>LOCK_HOME_VIEW</code></td><td><code>DOCUMENT LOCK_HOME_VIEW</code></td></tr>
+							<tr><td><code>WATERMARK_FONT</code></td><td><code>WATERMARK FONT</code></td></tr>
+							<tr><td><code>WATERMARK_TEXT_COLOR</code></td><td><code>WATERMARK TEXT_COLOR</code></td></tr>
+							<tr><td><code>WATERMARK_ROTATION</code></td><td><code>WATERMARK ROTATION</code></td></tr>
+							<tr><td><code>SHOW_BILL_OF_MATERIALS_TITLE</code></td><td><code>BILL_OF_MATERIALS SHOW_TITLE</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_TITLE_PLACEMENT</code></td><td><code>BILL_OF_MATERIALS TITLE_PLACEMENT</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_FONT</code></td><td><code>BILL_OF_MATERIALS FONT</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_TEXT_COLOR</code></td><td><code>BILL_OF_MATERIALS TEXT_COLOR</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_SHOW_COUNTS</code></td><td><code>BILL_OF_MATERIALS SHOW_COUNTS</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_SORT_ORDER</code></td><td><code>BILL_OF_MATERIALS SORT_ORDER</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_LAYOUT</code></td><td><code>BILL_OF_MATERIALS LAYOUT</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_ALIGNMENT</code></td><td><code>BILL_OF_MATERIALS ALIGNMENT</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_THUMBNAIL_SIZE</code></td><td><code>BILL_OF_MATERIALS THUMBNAIL_SIZE</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_COUNT_PLACEMENT</code></td><td><code>BILL_OF_MATERIALS COUNT_PLACEMENT</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_TITLE_MARGIN</code></td><td><code>BILL_OF_MATERIALS TITLE_MARGIN</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_TITLE_PADDING</code></td><td><code>BILL_OF_MATERIALS TITLE_PADDING</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_TITLE_BORDER_WIDTH</code></td><td><code>BILL_OF_MATERIALS TITLE_BORDER_WIDTH</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_TITLE_BORDER_COLOR</code></td><td><code>BILL_OF_MATERIALS TITLE_BORDER_COLOR</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_TITLE_CORNER_RADIUS</code></td><td><code>BILL_OF_MATERIALS TITLE_CORNER_RADIUS</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_TITLE_BACKGROUND_COLOR</code></td><td><code>BILL_OF_MATERIALS TITLE_BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_LIST_MARGIN</code></td><td><code>BILL_OF_MATERIALS LIST_MARGIN</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_LIST_PADDING</code></td><td><code>BILL_OF_MATERIALS LIST_PADDING</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_LIST_BORDER_WIDTH</code></td><td><code>BILL_OF_MATERIALS LIST_BORDER_WIDTH</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_LIST_BORDER_COLOR</code></td><td><code>BILL_OF_MATERIALS LIST_BORDER_COLOR</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_LIST_CORNER_RADIUS</code></td><td><code>BILL_OF_MATERIALS LIST_CORNER_RADIUS</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_LIST_BACKGROUND_COLOR</code></td><td><code>BILL_OF_MATERIALS LIST_BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_QUANTITY_MARGIN</code></td><td><code>BILL_OF_MATERIALS QUANTITY_MARGIN</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_QUANTITY_PADDING</code></td><td><code>BILL_OF_MATERIALS QUANTITY_PADDING</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_QUANTITY_BORDER_WIDTH</code></td><td><code>BILL_OF_MATERIALS QUANTITY_BORDER_WIDTH</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_QUANTITY_BORDER_COLOR</code></td><td><code>BILL_OF_MATERIALS QUANTITY_BORDER_COLOR</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_QUANTITY_CORNER_RADIUS</code></td><td><code>BILL_OF_MATERIALS QUANTITY_CORNER_RADIUS</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_QUANTITY_BACKGROUND_COLOR</code></td><td><code>BILL_OF_MATERIALS QUANTITY_BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_PART_COUNT_MARGIN</code></td><td><code>BILL_OF_MATERIALS PART_COUNT_MARGIN</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_PART_COUNT_PADDING</code></td><td><code>BILL_OF_MATERIALS PART_COUNT_PADDING</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_PART_COUNT_BORDER_WIDTH</code></td><td><code>BILL_OF_MATERIALS PART_COUNT_BORDER_WIDTH</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_PART_COUNT_BORDER_COLOR</code></td><td><code>BILL_OF_MATERIALS PART_COUNT_BORDER_COLOR</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_PART_COUNT_CORNER_RADIUS</code></td><td><code>BILL_OF_MATERIALS PART_COUNT_CORNER_RADIUS</code></td></tr>
+							<tr><td><code>BILL_OF_MATERIALS_PART_COUNT_BACKGROUND_COLOR</code></td><td><code>BILL_OF_MATERIALS PART_COUNT_BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>ASSEMBLY_BACKGROUND_COLOR</code></td><td><code>STEP ASSEMBLY_BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>STEP_DIVIDER_FINAL_MODEL</code></td><td><code>STEP DIVIDER_FINAL_MODEL</code></td></tr>
+							<tr><td><code>COMPLETION_BACKGROUND_COLOR</code></td><td><code>STEP COMPLETION_BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>COMPLETION_MARGIN</code></td><td><code>STEP COMPLETION_MARGIN</code></td></tr>
+							<tr><td><code>COMPLETION_PADDING</code></td><td><code>STEP COMPLETION_PADDING</code></td></tr>
+							<tr><td><code>COMPLETION_BORDER_WIDTH</code></td><td><code>STEP COMPLETION_BORDER_WIDTH</code></td></tr>
+							<tr><td><code>COMPLETION_BORDER_COLOR</code></td><td><code>STEP COMPLETION_BORDER_COLOR</code></td></tr>
+							<tr><td><code>COMPLETION_CORNER_RADIUS</code></td><td><code>STEP COMPLETION_CORNER_RADIUS</code></td></tr>
+							<tr><td><code>COMPLETION_BOX_BACKGROUND_COLOR</code></td><td><code>STEP COMPLETION_BOX_BACKGROUND_COLOR</code></td></tr>
+							<tr><td><code>PLI_RESERVE_AREA</code></td><td><code>STEP PARTS_LIST_RESERVE_AREA</code></td></tr>
 						</tbody>
 					</table>
 				</div>
@@ -2021,7 +2298,7 @@
 				<h2>HELP // EVERY &quot;WHAT&#x27;S THIS?&quot; ENTRY</h2>
 			</header>
 
-			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 475 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
+			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 485 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
 			<div class="search-tools">
 				<input id="search" type="search" placeholder="Search help" aria-label="Search help">
@@ -2108,6 +2385,15 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<ul>
 					<li>Command line: --export-pages saves each instruction page as a PNG picture at the page setup size</li>
 					<li>Command line: the pictures are named after the model and page number, and saved beside the model or in a folder you name</li>
+					<li>Properties: the Summary tab has a Publication group with title, author, product ID, version, publication date, URL, contact, copyright and notice, saved in the model file</li>
+					<li><a href="#instructions">Instructions</a>: the front and back cover each have their own Title, Author, Product ID, Version, Publication Date, URL, Contact, Copyright, Notice, Comments, Measurements, Weight and Pieces, the Publication group picks the cover to edit, and Pieces is the part count of the whole model</li>
+					<li><a href="#preferences">Preferences</a>: the Author group is gone, the author of a model lives in Model Properties &gt; Summary</li>
+					<li>Instructions: placed cover texts stay put when others are shown or hidden</li>
+					<li>Instructions: the placement tool places every element, pointer tips too</li>
+					<li>Instructions: texts are selected with one click anywhere on them, and pages no longer stall while clicking</li>
+					<li>Instructions: the Author shows only the Summary author, and the file properties of every instructions setting start with their scope, like COVER FRONT TITLE_FONT or STEP NUMBER_FONT, the old names are no longer read</li>
+					<li>Instructions: templates keep the notices of the covers, bands and watermark, and a model applying one shows them</li>
+					<li>Instructions: texts fill in %title, %author, %id, %version, %date, %url, %contact, %copyright, %notice, %size, %weight and %comments from the model, and the Publication URL shows the model URL by default</li>
 				</ul>
 			</details>
 
@@ -2115,7 +2401,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<summary>2026-11-23</summary>
 
 				<ul>
-					<li><a href="#instructions">Instructions</a>: the final model, step areas, bands and watermark are boxes with margin, padding, border, corner radius and background like every other element</li>
+					<li>Instructions: the final model, step areas, bands and watermark are boxes with margin, padding, border, corner radius and background like every other element</li>
 					<li>Instructions: bands now start at the paper edge, not inside the page margins</li>
 					<li>Instructions: Reserve Space only moves the page content when a band reaches past the margin</li>
 					<li>Instructions: the model keeps its own page size, margins and units, opening it no longer brings back the default paper</li>
@@ -2123,6 +2409,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Instructions: On This Page Only keeps a band on the current page and clears it from the other pages</li>
 					<li>Instructions: Delete hides a selected title, cover <a href="#image">image</a>, part count, step number, parts list or page number and resets its position</li>
 					<li>Instructions: Show Title and Show Model Image turn the cover title and the finished model on and off</li>
+					<li>Instructions: the Publication group shows the title, author, product ID, version, publication date, URL, contact, copyright, notice, measurements, weight and comments on the front or back cover, each with its own font, color, placement and box, empty texts show the model properties</li>
 					<li>Instructions: images grow to 500 percent of the page width and can run past the paper edge</li>
 					<li>Instructions: pointers can be a line, an L, Z or U shape with rounded bends, or a callout wedge, end in an arrow, a dot or a hollow dot, and their bend and reach are dragged on the page</li>
 					<li>Instructions: titles, part counts, step and page numbers and notices line up left, centered or right and top, middle or bottom in a box sized with Edit Size</li>
@@ -2132,7 +2419,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Instructions: a click only selects, an element moves and the pointer changes only once the mouse moves with the button held</li>
 					<li>Instructions: the Properties panel keeps one width, selecting an element no longer shifts or resizes the page</li>
 					<li>Instructions: boxes with a background color no longer show a faint line around the parts list or <a href="#where">where</a> they overlap</li>
-					<li><a href="#preferences">Preferences</a>: units like px, s, studs and plates sit in a label beside their field, like the page units</li>
+					<li>Preferences: units like px, s, studs and plates sit in a label beside their field, like the page units</li>
 					<li>Instructions: Blank Page Background colors every blank page, the inserted ones and those after the cover and before the bill of materials</li>
 					<li>Instructions: the parts list quantities have their own box, margin, padding, border, corners and background, and stay selected when placed</li>
 					<li>Instructions: band settings grey out while the band is hidden</li>
@@ -2339,10 +2626,9 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Part Palettes","title":"Delete Palette","paragraphs":["Remove the selected palette and its list of part choices. Library parts and parts already used in models are not deleted. At least one palette must remain."]},
 				{"group":"Part Palettes","title":"Import Palette","paragraphs":["Open Import Set Inventory to search for a set and download its inventory. The new palette uses the set description as its name.","The palette stores part IDs; inventory colors and quantities are not stored. An internet connection is required."]},
 				{"group":"Preferences","title":"Preferences","paragraphs":["Configure the application, rendering, views, interface, part categories, and keyboard and mouse shortcuts. Choose OK to save the changes or Cancel to discard edits in Preferences. Language and antialiasing changes, and clearing the parts library, require restarting StudWorx.","Export buttons write files immediately."]},
-				{"group":"Preferences","title":"General Preferences","paragraphs":["Set the library, configuration and renderer paths, the online service keys, the author of new models, and how StudWorx starts, opens, exports and edits models. Bundled copies of the color, minifigure and other data files are used until you set your own."]},
+				{"group":"Preferences","title":"General Preferences","paragraphs":["Set the library, configuration and renderer paths, the online service keys and how StudWorx starts, opens, exports and edits models. Bundled copies of the color, minifigure and other data files are used until you set your own."]},
 				{"group":"Preferences","title":"Blender Executable","paragraphs":["Set the Blender program used by Blender Render and Open in Blender. StudWorx runs it once when you choose OK to check that it works, and brings its own LDraw import and render add-ons, so nothing needs to be installed in Blender. The render settings are in the panels of the Blender Render window."]},
 				{"group":"Preferences","title":"Online Services","paragraphs":["Keys for the online services StudWorx downloads from. The Rebrickable API key updates the BrickLink mapping and searches set inventories. It is free from your account settings at rebrickable.com, Get Key opens its page.","Leave it empty to be asked the first time it is needed. A key Rebrickable rejects is cleared so you are asked again."]},
-				{"group":"Preferences","title":"Author","paragraphs":["The author of new models is built from its name, email address and comment, joined by the author line splitter. Empty parts are left out, and the Author Line field shows the result. For example, Jane Doe, jane@example.com and All rights reserved joined by \" | \" give Jane Doe | jane@example.com | All rights reserved.","The author of an open model is changed in its properties."]},
 				{"group":"Preferences","title":"Files","paragraphs":["These options control how model files are opened and reloaded."]},
 				{"group":"Preferences","title":"Rendering Preferences","paragraphs":["Control the display quality, stud style, shading and lighting, edge lines, part colors, and step fading and highlighting. The step and highlight colors are set on the Interface page. Some options are unavailable when the graphics system does not support them."]},
 				{"group":"Preferences","title":"Highlight Style","paragraphs":["Choose how selected parts and parts added in the current step are highlighted in the viewport. Outline uses fading outlines in the selection, focus, or new-part highlight color. Selected parts also receive a faint fill over obscured portions. Tint and Edges uses tinted faces and colored edges for selection, and colored edges for new parts.","New-part highlighting requires Highlight New Parts. Wireframe views, image exports, and systems without outline support use Tint and Edges."]},
@@ -2356,10 +2642,20 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Preferences","title":"Key Sequence","paragraphs":["Click here and press the key combination you want to assign. Function keys, including F1, are recorded as shortcut candidates in this field. Use the \"What's This?\" button in the title bar for guidance. Assign asks before replacing a shortcut already used by another command."]},
 				{"group":"Preferences","title":"Mouse Shortcuts","paragraphs":["Select a tool, click the Mouse Sequence field with the button and modifiers to use, then choose Assign. Each tool can have two shortcuts; a new assignment becomes the primary shortcut. Remove clears the primary shortcut and promotes the secondary shortcut. Choose OK in Preferences to save changes."]},
 				{"group":"Preferences","title":"Mouse Sequence","paragraphs":["Click here with the mouse button you want to assign while holding any Control, Alt or Shift modifiers. Assign makes it the primary shortcut of the selected tool and asks before replacing a shortcut already used by another tool."]},
-				{"group":"Model Properties","title":"Model Properties","paragraphs":["Edit the current model's author, description, and comments on the Summary tab. Measurements and Parts provide read-only information. Choose OK to apply the metadata changes, or Cancel to discard them."]},
-				{"group":"Model Properties","title":"Model Summary","paragraphs":["Author, description, and comments are stored in the model file when you save it. Measurements show its overall size."]},
-				{"group":"Model Properties","title":"Model Measurements","paragraphs":["The dimensions of the model's bounding box are shown in centimeters, inches, and LDraw units (ldu). The values are read-only and include parts across all steps."]},
-				{"group":"Model Properties","title":"Model Weight","paragraphs":["The total weight in grams and ounces of every part across all steps, from the BrickLink part weights. Parts without a known weight are counted as N/A and add nothing to the total."]},
+				{"group":"Model Properties","title":"Model Properties","paragraphs":["Edit the current model's publication details and comments on the Summary tab. Measurements and Parts provide read-only information. Choose OK to apply the metadata changes, or Cancel to discard them."]},
+				{"group":"Model Properties","title":"Model Summary","paragraphs":["Publication details and notes are stored in the model file when you save it. Measurements show its overall size."]},
+				{"group":"Model Properties","title":"Title","paragraphs":["The title of this model, shown on the instructions cover. Use %title to show it in any instructions text."]},
+				{"group":"Model Properties","title":"Author","paragraphs":["The author credited in this model. Use %author to show it in any instructions text."]},
+				{"group":"Model Properties","title":"Product ID","paragraphs":["The product number of this model. Use %id to show it in any instructions text."]},
+				{"group":"Model Properties","title":"Version","paragraphs":["The version of this model. Use %version to show it in any instructions text."]},
+				{"group":"Model Properties","title":"Publication Date","paragraphs":["The date this model was published, typed as you want it shown. Use %date to show it in any instructions text."]},
+				{"group":"Model Properties","title":"URL","paragraphs":["The web address of this model. Use %url to show it in any instructions text, the Publication URL box shows it by default."]},
+				{"group":"Model Properties","title":"Contact","paragraphs":["How to reach the publisher, such as an email address. Use %contact to show it in any instructions text."]},
+				{"group":"Model Properties","title":"Copyright","paragraphs":["The copyright or license of this model, saved as the LDraw license line. Use %copyright to show it in any instructions text."]},
+				{"group":"Model Properties","title":"Notice","paragraphs":["A legal or trademark notice for this model. Use %notice to show it in any instructions text."]},
+				{"group":"Model Properties","title":"Comments","paragraphs":["Plain-text notes stored with this model. Use %comments to show them in any instructions text."]},
+				{"group":"Model Properties","title":"Model Measurements","paragraphs":["The dimensions of the model's bounding box are shown in centimeters, inches, and LDraw units (ldu). The values are read-only and include parts across all steps. Use %size to show them in any instructions text."]},
+				{"group":"Model Properties","title":"Model Weight","paragraphs":["The total weight in grams and ounces of every part across all steps, from the BrickLink part weights. Parts without a known weight are counted as N/A and add nothing to the total. Use %weight to show it in any instructions text."]},
 				{"group":"Model Properties","title":"Parts","paragraphs":["The table counts parts across all steps, including parts inside submodels. The first column shows a thumbnail of each part in its most used color, and the ID column shows its number. Color columns show quantities, and totals summarize each part, each color, and the whole model. The Weight column shows the grams or ounces of each row, chosen with the units box below the table, from the BrickLink part weights, or N/A when unknown. Click a column heading to sort. The thumbnail, ID and part-name columns stay visible while you scroll horizontally. Counts cannot be edited here."]},
 				{"group":"Model Properties","title":"Weight Units","paragraphs":["Shows the Weight column in grams for Metric or ounces for Imperial. Sorting by weight is the same in both units."]},
 				{"group":"Model Properties","title":"Export BrickLink","paragraphs":["Saves the parts listed in this table as a BrickLink XML wanted list, the same format as File > Export > BrickLink. Only the model shown in this dialog and its submodels are included."]},
@@ -2417,12 +2713,13 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Instructions","title":"Print","paragraphs":["Print the instruction pages on a printer or to a PDF file. The pages are printed on paper matching the page setup, the pages panel shows how they look."]},
 				{"group":"Instructions","title":"Properties","paragraphs":["Edit how the instruction pages look. Every section starts folded, select an element on the page to open its section and fold the others. Right-click the page to add notices and pointers. Changes apply to all pages."]},
 				{"group":"Instructions","title":"Document","paragraphs":["One typeface and one font size for all text of the instructions, each usable on its own, and the projection of the step and cover models. The instructions settings, notices and pointers are saved in the model file, the page setup and grid in the preferences."]},
-				{"group":"Instructions","title":"Cover Pages","paragraphs":["The front cover shows the model title, its author and the finished model. The title comes from the model description, or its name when there is none, the author from the model properties. The final model page shows the finished model after the last step. The back cover closes the instructions and starts blank. Right click a cover to add an image, like a logo."]},
+				{"group":"Instructions","title":"Cover Pages","paragraphs":["The front cover shows the finished model. The final model page shows the finished model after the last step. The back cover closes the instructions and starts blank. Right click a cover to add an image, like a logo."]},
+				{"group":"Instructions","title":"Publication","paragraphs":["The title, author and publication details of the model, each shown on the front or back cover. Empty texts show the model properties of the same name, edited in Model Properties. Texts can use %title, %author, %id, %version, %date, %url, %contact, %copyright, %notice, %size, %weight and %comments."]},
 				{"group":"Instructions","title":"Page","paragraphs":["The background and the number of the step and blank pages. The background applies to all these pages, or only to the current page when it has its own, the cover and the bill of materials have their own backgrounds here too. The cover and blank pages are not numbered unless all pages are. Drag the number or use the Placement panel to move it on all pages."]},
-				{"group":"Instructions","title":"Header","paragraphs":["A strip along the top paper edge of the step and blank pages. Right click the band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. The band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group."]},
-				{"group":"Instructions","title":"Footer","paragraphs":["A strip along the bottom paper edge of the step and blank pages. Right click the band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. The band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group."]},
-				{"group":"Instructions","title":"Left Band","paragraphs":["A strip along the left paper edge of the step and blank pages. Right click a band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. A band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group."]},
-				{"group":"Instructions","title":"Right Band","paragraphs":["A strip along the right paper edge of the step and blank pages. Right click the band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. The band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group."]},
+				{"group":"Instructions","title":"Header","paragraphs":["A strip along the top paper edge of the step and blank pages. Right click the band on the page to add text or images, they repeat on every page. Texts can use %page, %title, %author, %id, %version, %date, %url, %contact, %copyright, %notice, %size, %weight and %comments, filled from the page and the model properties. The band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group."]},
+				{"group":"Instructions","title":"Footer","paragraphs":["A strip along the bottom paper edge of the step and blank pages. Right click the band on the page to add text or images, they repeat on every page. Texts can use %page, %title, %author, %id, %version, %date, %url, %contact, %copyright, %notice, %size, %weight and %comments, filled from the page and the model properties. The band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group."]},
+				{"group":"Instructions","title":"Left Band","paragraphs":["A strip along the left paper edge of the step and blank pages. Right click a band on the page to add text or images, they repeat on every page. Texts can use %page, %title, %author, %id, %version, %date, %url, %contact, %copyright, %notice, %size, %weight and %comments, filled from the page and the model properties. A band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group."]},
+				{"group":"Instructions","title":"Right Band","paragraphs":["A strip along the right paper edge of the step and blank pages. Right click the band on the page to add text or images, they repeat on every page. Texts can use %page, %title, %author, %id, %version, %date, %url, %contact, %copyright, %notice, %size, %weight and %comments, filled from the page and the model properties. The band can reserve its space so the page content stays clear of it. Its box, border and background are set in the Box group."]},
 				{"group":"Instructions","title":"Watermark","paragraphs":["Text or an image behind the page content, right click the page to add one. The text color alpha sets how strongly text shows, Image Opacity how strongly an image shows, its box, border and background are set in the Box group."]},
 				{"group":"Instructions","title":"Bill of Materials","paragraphs":["The last page, listing every part of the model under a Parts List title. Its title, list, quantities and part count have their own settings here and their own boxes in the Box group, so they never change the steps."]},
 				{"group":"Instructions","title":"Steps per Page","paragraphs":["The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model, a full last page already ends on it, and the separate final model page is then left out. The final model has its own box, with margin, padding, border, corner radius and background, set in the Box group, its background takes the Page Background color until you pick your own."]},

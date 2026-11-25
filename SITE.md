@@ -408,9 +408,11 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 
 - **Page setup.** Paper and screen presets, metric or imperial units, margins and orientation.
 - **Page bar.** Undo and redo changes, turn the instruction pages with the buttons, the page box or the mouse wheel, show one page or two side by side or stacked, jump to the front cover, the bill of materials or the back cover, type a page number, and insert or remove blank pages and empty steps.
-- **Pages.** Instructions get a front cover with title and author, a parts list, a back cover and any number of steps per page, filled by row or column, each page with its own background, plus a Completion page for the finished model, which can fill the room after the last step, with its own color, box, border and margin. Titles, notices and part counts take your own text or a text file.
+- **Pages.** Instructions get a front cover with title and author, a parts list, a back cover and any number of steps per page, filled by row or column, each page with its own background, plus a Completion page for the finished model, which can fill the room after the last step, with its own color, box, border and margin. Titles, notices and part counts take your own text or a text file, and the back cover can show a publication URL.
+- **Publication.** Show the title, author, product ID, version, publication date, URL, contact, copyright, notice, size, weight and comments of the model on the front or back cover, each cover with its own set, and Pieces for the whole part count, each with its own font, color, placement and box.
+- **Publication codes.** Any instructions text can use %title, %author, %id, %version, %date, %url, %contact, %copyright, %notice, %size, %weight and %comments, filled from the model properties, so one template fits every model.
 - **Assembly and watermark.** Pages that finish a submodel get the assembly color, steps that only place a submodel are skipped, and a watermark can run across every page in your font, color and angle. Lock to Home View draws pages from the home view unless a step view turns it.
-- **Images and templates.** Put your own pictures, like a logo, on the front or back cover. Save the look of your instructions as a template and apply it to any model, or pick a default template that every model starts from. One typeface, one text size, or both can cover the whole document.
+- **Images and templates.** Put your own pictures, like a logo, on the front or back cover. Save the look of your instructions, with their cover, band and watermark notices, as a template and apply it to any model, or pick a default template that every model starts from. One typeface, one text size, or both can cover the whole document.
 - **Part counts.** The cover, the bill of materials and every step page can show how many parts they take, and each submodel can start with a picture of it finished and its part count.
 - **Style.** Choose the font, how steps are divided, with dividers that get their own margins and rounded ends, how big and how the model is drawn, and how the parts list looks and is sorted. Reserve Parts Area keeps a strip for the parts list so the model never runs under it.
 - **Step images.** Parts new to each step are outlined, in the width and color you pick, and the earlier ones fade.
@@ -444,7 +446,7 @@ Large builds split into submodels that you can edit on their own or in place, in
 
 ![Editing a submodel in place](resources/images/models-feature-edit-in-place.png)
 
-- **Properties.** Lists every part of the model with its ID, picture, count and weight, plus the size and weight of the whole model, in metric or imperial. Export the list for BrickLink or as a spreadsheet.
+- **Properties.** Keeps the publication details of the model, title, author, product ID, version, publication date, URL, contact, copyright and notice, saved in the model file. Lists every part of the model with its ID, picture, count and weight, plus the size and weight of the whole model, in metric or imperial. Export the list for BrickLink or as a spreadsheet.
 - **Submodels.** Group parts into submodels you can reuse, open them on their own, or melt them back into plain parts, from the menu or the command line.
 - **Submodels list.** Create, rename, duplicate and delete submodels, set the active one, and export them as separate LDraw files.
 - **Models menu.** Switch between up to forty models of the file from the Models menu.

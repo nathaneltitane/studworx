@@ -43,8 +43,7 @@ bool swGetElementKey(const QGraphicsItem* Item, swInstructionsElementKey& Key)
 	}
 	else if (const swInstructionsCoverTextItem* TextItem = dynamic_cast<const swInstructionsCoverTextItem*>(Item))
 	{
-		const swInstructionsPlacementElement Element = TextItem->IsAuthor() ? swInstructionsPlacementElement::CoverAuthor : swInstructionsPlacementElement::CoverTitle;
-		Key = { Element, TextItem->GetModel(), 0 };
+		Key = { TextItem->GetElement(), TextItem->GetModel(), 0 };
 	}
 	else if (dynamic_cast<const swInstructionsPageNumberItem*>(Item))
 		Key = { swInstructionsPlacementElement::PageNumber, nullptr, 0 };
@@ -205,20 +204,11 @@ static bool swGetElementAlignment(const swInstructions* Instructions, const swIn
 		Type = swInstructionsPropertyType::PageNumberAlignment;
 		break;
 
-	case swInstructionsPlacementElement::CoverPartCount:
 	case swInstructionsPlacementElement::BillOfMaterialsPartCount:
 	case swInstructionsPlacementElement::PagePartCount:
 	case swInstructionsPlacementElement::SubmodelPreviewPartCount:
 		Type = swInstructionsPropertyType::PartCountAlignment;
 		Step = 0;
-		break;
-
-	case swInstructionsPlacementElement::CoverTitle:
-		Type = swInstructionsPropertyType::CoverTitleAlignment;
-		break;
-
-	case swInstructionsPlacementElement::CoverAuthor:
-		Type = swInstructionsPropertyType::CoverAuthorAlignment;
 		break;
 
 	case swInstructionsPlacementElement::Notice:
@@ -240,7 +230,15 @@ static bool swGetElementAlignment(const swInstructions* Instructions, const swIn
 	}
 
 	default:
-		return false;
+	{
+		const swInstructionsPublicationElement* Publication = swFindPublicationElement(std::get<0>(Key));
+
+		if (!Publication)
+			return false;
+
+		Type = swGetPublicationType(*Publication, swInstructionsPublicationField::Alignment);
+		break;
+	}
 	}
 
 	Alignment = Instructions->GetIntProperty(Type, Model, Step);
@@ -658,7 +656,9 @@ swInstructionsPartCountItem::swInstructionsPartCountItem(QGraphicsItem* Parent, 
 {
 	setFlags(SW_MOVABLE_ITEM_FLAGS);
 	setZValue(1.0);
-	SetBoxStyle(mInstructions->GetBoxStyle(Element == swInstructionsPlacementElement::BillOfMaterialsPartCount ? swInstructionsBoxElement::BillOfMaterialsPartCount : swInstructionsBoxElement::PartCount, mModel, 0));
+	// only the bill of materials count has a box
+	if (Element == swInstructionsPlacementElement::BillOfMaterialsPartCount)
+		SetBoxStyle(mInstructions->GetBoxStyle(swInstructionsBoxElement::BillOfMaterialsPartCount, mModel, 0));
 
 	// steps use the page number look
 	const bool PageCount = mElement == swInstructionsPlacementElement::PagePartCount || mElement == swInstructionsPlacementElement::SubmodelPreviewPartCount;
@@ -772,12 +772,13 @@ void swInstructionsPartsListItem::Update()
 	}
 }
 
-swInstructionsCoverTextItem::swInstructionsCoverTextItem(QGraphicsItem* Parent, swInstructions* Instructions, swModel* Model, bool Author)
-	: swInstructionsBoxItem(Parent), mInstructions(Instructions), mModel(Model), mAuthor(Author)
+swInstructionsCoverTextItem::swInstructionsCoverTextItem(QGraphicsItem* Parent, swInstructions* Instructions, swModel* Model, swInstructionsPlacementElement Element)
+	: swInstructionsBoxItem(Parent), mInstructions(Instructions), mModel(Model), mElement(Element)
 {
 	setFlags(SW_MOVABLE_ITEM_FLAGS);
 	setZValue(1.0);
-	SetBoxStyle(mInstructions->GetBoxStyle(Author ? swInstructionsBoxElement::CoverAuthor : swInstructionsBoxElement::CoverTitle, mModel, 0));
+	const swInstructionsPublicationElement* Publication = swFindPublicationElement(Element);
+	SetBoxStyle(mInstructions->GetBoxStyle(Publication->Box, mModel, 0));
 }
 
 QVariant swInstructionsCoverTextItem::itemChange(GraphicsItemChange Change, const QVariant& Value)
@@ -1952,7 +1953,7 @@ void swInstructionsPageWidget::PlaceElement(int Placement)
 	const QList<QGraphicsItem*> SelectedItems = scene()->selectedItems();
 	swInstructionsElementKey Key;
 
-	if (SelectedItems.size() != 1 || !mPage || !swGetElementKey(SelectedItems.front(), Key) || std::get<0>(Key) != swInstructionsPlacementElement::Notice || mInstructions->IsElementLocked(Key))
+	if (SelectedItems.size() != 1 || !mPage || !swGetElementKey(SelectedItems.front(), Key) || mInstructions->IsElementLocked(Key))
 		return;
 
 	// page cells, outer ones on the paper edge
@@ -1963,6 +1964,16 @@ void swInstructionsPageWidget::PlaceElement(int Placement)
 	QGraphicsItem* Item = SelectedItems.front();
 	const QRectF ItemRect = Item->mapRectToParent(Item->boundingRect());
 	const int Id = static_cast<int>(std::get<2>(Key));
+
+	// a pointer tip goes free on the cell point
+	if (std::get<0>(Key) == swInstructionsPlacementElement::Pointer)
+	{
+		mInstructions->SetPointerTarget(Id, swInstructionsPointerTarget::Point, swInstructionsElementKey(), -1, swGetPagePlacementPosition(mInstructions, MarginsRect, QSizeF(), Placement), QPointF(-1.0, -1.0));
+		return;
+	}
+
+	if (std::get<0>(Key) != swInstructionsPlacementElement::Notice)
+		return;
 	const swInstructionsNotice* Notice = mInstructions->FindNotice(Id);
 	const size_t PageIndex = static_cast<size_t>(mPage - mInstructions->mPages.data());
 	const int Band = Notice ? static_cast<int>(Notice->Pages) - static_cast<int>(swInstructionsImagePages::Header) : -1;
@@ -1983,25 +1994,10 @@ void swInstructionsPageWidget::PlaceElement(int Placement)
 	mInstructions->SetNoticePosition(Id, Item->pos() + Distance);
 }
 
-// use to get the title the cover shows
-static QString swGetModelTitle(const swInstructions* Instructions, const swModel* Model)
-{
-	const swModelProperties& Properties = Model->GetProperties();
-	QString Title = Properties.mDescription.trimmed();
-
-	if (Title.isEmpty())
-		Title = Properties.mModelName.trimmed();
-
-	if (Title.isEmpty())
-		Title = QFileInfo(Properties.mFileName).completeBaseName();
-
-	return Instructions->GetSourcedText(swInstructionsPropertyType::CoverTitleText, swInstructionsPropertyType::CoverTitleFile, Title);
-}
-
 // use to fill the page codes of a text
 static QString swFillPageCodes(const swInstructions* Instructions, size_t PageIndex, QString Text)
 {
-	return Text.replace(QLatin1String("%page"), swGetPageNumberText(Instructions, PageIndex)).replace(QLatin1String("%title"), swGetModelTitle(Instructions, Instructions->GetMainModel()));
+	return Instructions->FillModelCodes(Text.replace(QLatin1String("%page"), swGetPageNumberText(Instructions, PageIndex)));
 }
 
 // use to add a step area and its elements
@@ -2110,15 +2106,10 @@ static void swAddStepArea(swInstructions* Instructions, const swInstructionsStep
 // use to add the page elements
 static void swAddPageContent(swInstructions* Instructions, const swInstructionsPage* Page, QGraphicsScene* Scene, QGraphicsRectItem* PageItem, const QRectF& MarginsRect)
 {
-	if (Page->Type == swInstructionsPageType::Cover)
+	if (Page->Type == swInstructionsPageType::Cover || Page->Type == swInstructionsPageType::BackCover)
 	{
+		const bool BackCover = Page->Type == swInstructionsPageType::BackCover;
 		swModel* Model = Page->Model;
-		const swModelProperties& Properties = Model->GetProperties();
-		const QString Title = swGetModelTitle(Instructions, Model);
-
-		const QFont TitleFont = Instructions->GetFontProperty(swInstructionsPropertyType::CoverTitleFont, Model, 0);
-		const QColor TextColor = Instructions->GetColorProperty(swInstructionsPropertyType::CoverTitleColor, Model, 0);
-		const QColor AuthorColor = Instructions->GetColorProperty(swInstructionsPropertyType::CoverAuthorColor, Model, 0);
 
 		struct swCoverText
 		{
@@ -2129,14 +2120,14 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 
 		std::vector<swCoverText> CoverTexts;
 
-		auto AddCoverText = [&](const QString& Text, const QFont& Font, bool Author, swInstructionsPropertyType PlacementType)
+		auto AddCoverText = [&](const QString& Text, const QFont& Font, const QColor& Color, swInstructionsPlacementElement Element, swInstructionsPropertyType PlacementType)
 		{
 			const int Placement = qBound(0, Instructions->GetIntProperty(PlacementType, Model, 0), SW_PLACEMENT_COUNT - 1);
 
 			// wrapped lines follow the alignment property
-			swInstructionsCoverTextItem* Item = new swInstructionsCoverTextItem(PageItem, Instructions, Model, Author);
+			swInstructionsCoverTextItem* Item = new swInstructionsCoverTextItem(PageItem, Instructions, Model, Element);
 			Item->setFont(Font);
-			Item->setDefaultTextColor(Author ? AuthorColor : TextColor);
+			Item->setDefaultTextColor(Color);
 			Item->setPlainText(Text);
 
 			const qreal TextWidth = MarginsRect.width() - 2.0 * Item->GetBoxStyle().GetInset();
@@ -2147,46 +2138,37 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 			CoverTexts.push_back({ Item, Placement, Item->boundingRect().size() });
 		};
 
-		if (Instructions->GetBoolProperty(swInstructionsPropertyType::ShowCoverTitle, Model, 0))
-			AddCoverText(Title, TitleFont, false, swInstructionsPropertyType::CoverTitlePlacement);
-
-		const QString Author = Instructions->GetSourcedText(swInstructionsPropertyType::CoverAuthorText, swInstructionsPropertyType::CoverAuthorFile, Properties.mAuthor.trimmed());
-
-		if (!Author.isEmpty() && Instructions->GetBoolProperty(swInstructionsPropertyType::ShowCoverAuthor, Model, 0))
+		// each cover has its own elements
+		for (const swInstructionsPublicationElement& Publication : swGetPublicationElements())
 		{
-			AddCoverText(Author, Instructions->GetFontProperty(swInstructionsPropertyType::CoverAuthorFont, Model, 0), true, swInstructionsPropertyType::CoverAuthorPlacement);
+			if (!Instructions->GetBoolProperty(Publication.Show, Model, 0) || Publication.Back != BackCover)
+				continue;
+
+			const QString Text = Instructions->FillModelCodes(Instructions->GetTypedText(swGetPublicationType(Publication, swInstructionsPublicationField::Text), Instructions->GetModelFieldText(Model, Publication.Element))).trimmed();
+
+			if (!Text.isEmpty())
+				AddCoverText(Text, Instructions->GetFontProperty(swGetPublicationType(Publication, swInstructionsPublicationField::Font), Model, 0), Instructions->GetColorProperty(swGetPublicationType(Publication, swInstructionsPublicationField::Color), Model, 0), Publication.Element, swGetPublicationType(Publication, swInstructionsPublicationField::Placement));
 		}
 
-		// stack texts sharing a row
+		// each text sits on its own cell, so toggling one never moves another
 		qreal TopHeight = 0.0;
 		qreal BottomHeight = 0.0;
 
-		for (int Row = 0; Row < SW_PLACEMENT_GRID_SIZE; Row++)
+		for (const swCoverText& CoverText : CoverTexts)
 		{
-			qreal RowHeight = 0.0;
+			swPlaceElement(CoverText.Item, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, CoverText.Size, CoverText.Placement));
 
-			for (const swCoverText& CoverText : CoverTexts)
-				if (CoverText.Placement / SW_PLACEMENT_GRID_SIZE == Row)
-					RowHeight += CoverText.Size.height();
-
-			const qreal RowTop = swGetPagePlacementPosition(Instructions, MarginsRect, QSizeF(MarginsRect.width(), RowHeight), Row * SW_PLACEMENT_GRID_SIZE + 2).y();
-			qreal TextTop = RowTop;
-
-			for (const swCoverText& CoverText : CoverTexts)
-			{
-				if (CoverText.Placement / SW_PLACEMENT_GRID_SIZE != Row)
-					continue;
-
-				const QPointF Position = swGetPagePlacementPosition(Instructions, MarginsRect, CoverText.Size, CoverText.Placement);
-				swPlaceElement(CoverText.Item, Instructions, QPointF(Position.x(), TextTop));
-				TextTop += CoverText.Size.height();
-			}
+			// the model image leaves room for the inner rows
+			const int Row = CoverText.Placement / SW_PLACEMENT_GRID_SIZE;
 
 			if (Row == 1)
-				TopHeight = RowHeight;
+				TopHeight = qMax(TopHeight, CoverText.Size.height());
 			else if (Row == SW_PLACEMENT_GRID_SIZE - 2)
-				BottomHeight = RowHeight;
+				BottomHeight = qMax(BottomHeight, CoverText.Size.height());
 		}
+
+		if (BackCover)
+			return;
 
 		// place the finished model on the cover
 		const QRectF ImageRect = MarginsRect.adjusted(0.0, TopHeight, 0.0, -BottomHeight);
@@ -2205,14 +2187,6 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 
 			const int Placement = swGetValidPlacement(Instructions->GetIntProperty(swInstructionsPropertyType::CoverImagePlacement, Model, LastStep), true);
 			swPlaceElement(ModelImageItem, Instructions, swGetPlacementPosition(ImageRect, ModelImageItem->boundingRect().size(), Placement));
-		}
-
-		if (Instructions->GetBoolProperty(swInstructionsPropertyType::ShowCoverPartCount, Model, 0))
-		{
-			swInstructionsPartCountItem* CountItem = new swInstructionsPartCountItem(PageItem, Instructions, swInstructionsPlacementElement::CoverPartCount, Model, swInstructions::GetModelPartCount(Model));
-
-			const int CountPlacement = Instructions->GetIntProperty(swInstructionsPropertyType::PartCountPlacement, Model, 0);
-			swPlaceElement(CountItem, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, CountItem->boundingRect().size(), CountPlacement));
 		}
 
 		return;
@@ -2404,6 +2378,10 @@ static void swAddPageAnnotations(swInstructions* Instructions, size_t PageIndex,
 			Shown = Notice.PageKey == PageKey;
 		else if (Notice.Pages == swInstructionsImagePages::Watermark)
 			Shown = BandPage && Instructions->GetPageBoolProperty(PageIndex, swInstructionsPropertyType::ShowWatermark);
+		else if (Notice.Pages == swInstructionsImagePages::Front)
+			Shown = PageType == swInstructionsPageType::Cover;
+		else if (Notice.Pages == swInstructionsImagePages::Back)
+			Shown = PageType == swInstructionsPageType::BackCover;
 
 		if (!Shown)
 			continue;
@@ -2661,7 +2639,7 @@ void swUpdateInstructionsPageScene(swInstructions* Instructions, const swInstruc
 
 	new swInstructionsGuideItem(ContentRect, PageItem);
 
-	if (Page->Type != swInstructionsPageType::Blank && Page->Type != swInstructionsPageType::BackCover)
+	if (Page->Type != swInstructionsPageType::Blank)
 		swAddPageContent(Instructions, Page, Scene, PageItem, ContentRect);
 
 	if (Page->Type == swInstructionsPageType::Steps)
@@ -3084,21 +3062,21 @@ void swInstructionsPageWidget::RemoveSelectedElements()
 	}
 
 	// built in elements hide and reset
-	const std::map<swInstructionsPlacementElement, swInstructionsPropertyType> ShowTypes = {
+	std::map<swInstructionsPlacementElement, swInstructionsPropertyType> ShowTypes = {
 		{ swInstructionsPlacementElement::StepNumber, swInstructionsPropertyType::ShowStepNumber },
 		{ swInstructionsPlacementElement::PartsList, swInstructionsPropertyType::ShowStepPLI },
 		{ swInstructionsPlacementElement::PartsListCount, swInstructionsPropertyType::PLIShowCounts },
-		{ swInstructionsPlacementElement::CoverTitle, swInstructionsPropertyType::ShowCoverTitle },
-		{ swInstructionsPlacementElement::CoverAuthor, swInstructionsPropertyType::ShowCoverAuthor },
 		{ swInstructionsPlacementElement::CoverImage, swInstructionsPropertyType::ShowCoverImage },
 		{ swInstructionsPlacementElement::BillOfMaterials, swInstructionsPropertyType::ShowBillOfMaterials },
 		{ swInstructionsPlacementElement::PageNumber, swInstructionsPropertyType::ShowPageNumber },
-		{ swInstructionsPlacementElement::CoverPartCount, swInstructionsPropertyType::ShowCoverPartCount },
 		{ swInstructionsPlacementElement::BillOfMaterialsPartCount, swInstructionsPropertyType::ShowBillOfMaterialsPartCount },
 		{ swInstructionsPlacementElement::PagePartCount, swInstructionsPropertyType::ShowPagePartCount },
 		{ swInstructionsPlacementElement::SubmodelPreview, swInstructionsPropertyType::ShowSubmodelPreview },
 		{ swInstructionsPlacementElement::SubmodelPreviewPartCount, swInstructionsPropertyType::ShowSubmodelPreview }
 	};
+
+	for (const swInstructionsPublicationElement& Publication : swGetPublicationElements())
+		ShowTypes[Publication.Element] = Publication.Show;
 
 	for (const swInstructionsElementKey& Key : Keys)
 	{

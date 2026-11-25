@@ -434,7 +434,32 @@ protected:
 			mHitUpdating = false;
 		}
 
-		mHitRegion = QRegion(QBitmap::fromImage(Mask.createAlphaMask()));
+		// texts take clicks on their whole drawn area
+
+		if constexpr (!std::is_same_v<T, QGraphicsPixmapItem>)
+		{
+			mHitRegion = QRegion(QRegion(QBitmap::fromImage(Mask.createAlphaMask())).boundingRect());
+			mHitValid = true;
+			return;
+		}
+
+		// images use coarse cells, quick to test
+
+		constexpr int Cell = 8;
+		QImage Cells((Mask.width() + Cell - 1) / Cell, (Mask.height() + Cell - 1) / Cell, QImage::Format_Alpha8);
+		Cells.fill(0);
+
+		for (int Y = 0; Y < Mask.height(); Y++)
+		{
+			const QRgb* Line = reinterpret_cast<const QRgb*>(Mask.constScanLine(Y));
+			uchar* CellLine = Cells.scanLine(Y / Cell);
+
+			for (int X = 0; X < Mask.width(); X++)
+				if (qAlpha(Line[X]))
+					CellLine[X / Cell] = 255;
+		}
+
+		mHitRegion = QTransform::fromScale(Cell, Cell).map(QRegion(QBitmap::fromImage(Cells.createAlphaMask())));
 		mHitValid = true;
 	}
 
@@ -572,7 +597,7 @@ protected:
 	QVariant itemChange(GraphicsItemChange Change, const QVariant& Value) override;
 
 	swInstructions* mInstructions = nullptr;
-	swInstructionsPlacementElement mElement = swInstructionsPlacementElement::CoverPartCount;
+	swInstructionsPlacementElement mElement = swInstructionsPlacementElement::PagePartCount;
 	swModel* mModel = nullptr;
 };
 
@@ -650,16 +675,16 @@ protected:
 class swInstructionsCoverTextItem : public swInstructionsBoxItem<QGraphicsTextItem>
 {
 public:
-	swInstructionsCoverTextItem(QGraphicsItem* Parent, swInstructions* Instructions, swModel* Model, bool Author);
+	swInstructionsCoverTextItem(QGraphicsItem* Parent, swInstructions* Instructions, swModel* Model, swInstructionsPlacementElement Element);
 
 	swModel* GetModel() const
 	{
 		return mModel;
 	}
 
-	bool IsAuthor() const
+	swInstructionsPlacementElement GetElement() const
 	{
-		return mAuthor;
+		return mElement;
 	}
 
 protected:
@@ -667,7 +692,7 @@ protected:
 
 	swInstructions* mInstructions = nullptr;
 	swModel* mModel = nullptr;
-	bool mAuthor = false;
+	swInstructionsPlacementElement mElement = swInstructionsPlacementElement::CoverFrontTitle;
 };
 
 // A free text notice on a page.

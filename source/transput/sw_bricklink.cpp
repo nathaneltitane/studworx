@@ -306,6 +306,28 @@ QString swGetBrickLinkWeightText(const swPartData* PartData)
 	return Weight ? QObject::tr("%1 g").arg(QLocale::system().toString(*Weight)) : QObject::tr("N/A");
 }
 
+// use to total the part weights in grams, counting unlisted parts
+double swGetPartsListWeight(const swPartsList& PartsList, int& Missing)
+{
+	double Weight = 0.0;
+	Missing = 0;
+
+	for (const auto& PartEntry : PartsList)
+	{
+		int Count = 0;
+
+		for (const auto& ColorEntry : PartEntry.second)
+			Count += ColorEntry.second;
+
+		if (const std::optional<double> PartWeight = swGetBrickLinkWeight(PartEntry.first))
+			Weight += *PartWeight * Count;
+		else
+			Missing += Count;
+	}
+
+	return Weight;
+}
+
 // use to find the library part a bricklink number stands for
 swPartData* swFindBrickLinkLibraryPart(const QString& BrickLinkPart)
 {

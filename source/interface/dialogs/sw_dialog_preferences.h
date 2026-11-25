@@ -59,10 +59,6 @@ struct swPreferencesDialogOptions
 	QString BlenderVersion;
 	QString LGEOPath;
 	QString RebrickableApiKey;
-	QString DefaultAuthorName;
-	QString DefaultAuthorEmail;
-	QString DefaultAuthorComment;
-	QString DefaultAuthorSplitter;
 	QString DefaultTemplate;
 	QString Language;
 
@@ -135,7 +131,6 @@ private slots:
 	void LgeoPathBrowseClicked();
 	void LgeoPathDownloadButtonClicked();
 	void DefaultTemplateBrowseClicked();
-	void AuthorChanged();
 	void ColorThemeCurrentIndexChanged(int Index);
 	void ColorButtonClicked();
 	void AutomateEdgeColor();

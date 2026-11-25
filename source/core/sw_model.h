@@ -282,12 +282,13 @@ class swModelProperties
 public:
 	void LoadDefaults();
 	void SaveDefaults();
-	static QString CombineAuthor(const QString& Name, const QString& Email, const QString& Comment, const QString& Splitter);
 
 	bool operator==(const swModelProperties& Properties) const
 	{
 		if (mFileName != Properties.mFileName || mModelName != Properties.mModelName || mAuthor != Properties.mAuthor ||
-			mDescription != Properties.mDescription || mComments != Properties.mComments)
+			mDescription != Properties.mDescription || mComments != Properties.mComments ||
+			mProductId != Properties.mProductId || mVersion != Properties.mVersion || mPublicationDate != Properties.mPublicationDate ||
+			mUrl != Properties.mUrl || mContact != Properties.mContact || mNotice != Properties.mNotice || mCopyright != Properties.mCopyright)
 			return false;
 
 		if (mAmbientColor != Properties.mAmbientColor)
@@ -313,6 +314,13 @@ public:
 	QString mModelName;
 	QString mAuthor;
 	QString mComments;
+	QString mProductId;
+	QString mVersion;
+	QString mPublicationDate;
+	QString mUrl;
+	QString mContact;
+	QString mNotice;
+	QString mCopyright;
 
 	swVector3 mAmbientColor;
 	std::map<swStep, swStepView> mStepViews;
