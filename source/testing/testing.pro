@@ -24,6 +24,7 @@ SOURCES += \
 	../application/sw_commands.cpp \
 	../core/sw_connectivity.cpp \
 	../core/sw_object_property.cpp \
+	../core/sw_string.cpp \
 	../transput/sw_command_meta.cpp \
 	../library/sw_parser_shadow.cpp \
 	sw_command_meta_test.cpp \
@@ -40,6 +41,7 @@ SOURCES += \
 	sw_project_import_test.cpp \
 	sw_translation_test.cpp \
 	sw_renderer_povray_test.cpp \
+	sw_string_test.cpp \
 	sw_view_image_test.cpp \
 	main.cpp
 

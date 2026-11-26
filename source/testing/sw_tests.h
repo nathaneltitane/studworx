@@ -77,4 +77,5 @@ private slots:
 	void InterfaceUsesPaintedIcons();
 	void TranslationsMatchCompiledCatalogs();
 	void TranslationsKeepPlaceholders();
+	void TextCaseChangesLetters();
 };

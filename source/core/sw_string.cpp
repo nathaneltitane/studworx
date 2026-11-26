@@ -105,3 +105,38 @@ int swGetDefaultNameNumber(const QString& Name, const QString& Prefix)
 
 	return NumberString.left(Length).toInt();
 }
+
+// use to change text letter case
+QString swChangeTextCase(const QString& Text, swTextCase Case)
+{
+	if (Case == swTextCase::Upper)
+		return Text.toUpper();
+
+	QString Result = Text.toLower();
+
+	if (Case == swTextCase::Lower)
+		return Result;
+
+	// capitalize after a break
+
+	bool Capitalize = true;
+
+	for (int Index = 0; Index < Result.size(); Index++)
+	{
+		const QChar Character = Result.at(Index);
+
+		if (Character.isLetterOrNumber())
+		{
+			if (Capitalize)
+				Result[Index] = Character.toUpper();
+
+			Capitalize = false;
+		}
+		else if (Case == swTextCase::Title)
+			Capitalize = Character.isSpace() || Capitalize;
+		else if (Character == QLatin1Char('.') || Character == QLatin1Char('!') || Character == QLatin1Char('?'))
+			Capitalize = Index + 1 == Result.size() || Result.at(Index + 1).isSpace();
+	}
+
+	return Result;
+}

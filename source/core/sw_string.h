@@ -19,3 +19,13 @@ size_t swstrcat(char (&dest)[size], const char* source)
 
 QString swFormatDefaultName(const QString& Prefix, int Number);
 int swGetDefaultNameNumber(const QString& Name, const QString& Prefix);
+
+enum class swTextCase
+{
+	Upper,
+	Lower,
+	Sentence,
+	Title
+};
+
+QString swChangeTextCase(const QString& Text, swTextCase Case);

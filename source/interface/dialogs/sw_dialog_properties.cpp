@@ -8,6 +8,7 @@
 #include "sw_library.h"
 #include "sw_manager_thumbnail.h"
 #include "sw_dialog_export_bricklink.h"
+#include "sw_string.h"
 #include "sw_bricklink.h"
 #include "sw_project.h"
 
@@ -297,6 +298,8 @@ swPropertiesDialog::swPropertiesDialog(QWidget* Parent, swPropertiesDialogOption
 	ui->NoticeEdit->setText(mOptions->Properties.mNotice);
 	ui->CommentsEdit->setText(mOptions->Properties.mComments);
 
+	connect(ui->CaseApplyButton, &QPushButton::clicked, this, &swPropertiesDialog::ApplyCase);
+
 	const swVector3 Dimensions = Options->BoundingBox.Max - Options->BoundingBox.Min;
 	ui->MeasurementsLabel->setText(swGetMeasurementsText(Dimensions, locale()));
 
@@ -492,6 +495,15 @@ swPropertiesDialog::~swPropertiesDialog()
 		ThumbnailManager->ReleaseThumbnail(ThumbnailId);
 
 	delete ui;
+}
+
+// use to change publication text case
+void swPropertiesDialog::ApplyCase()
+{
+	const swTextCase Case = static_cast<swTextCase>(ui->CaseCombo->currentIndex());
+
+	for (QLineEdit* Edit : { ui->DescriptionEdit, ui->AuthorEdit, ui->ProductIdEdit, ui->VersionEdit, ui->PublicationDateEdit, ui->UrlEdit, ui->ContactEdit, ui->CopyrightEdit, ui->NoticeEdit })
+		Edit->setText(swChangeTextCase(Edit->text(), Case));
 }
 
 void swPropertiesDialog::ThumbnailReady(swPartThumbnailId ThumbnailId, QPixmap Pixmap)

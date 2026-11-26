@@ -28712,7 +28712,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">所用零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="287"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="288"/>
         <source>%1 Properties</source>
         <translation>%1 屬性</translation>
     </message>
@@ -28734,38 +28734,38 @@ LDraw: %7 x %8 x %9 ldu</source>
 LDraw：%7 x %8 x %9 ldu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="316"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="319"/>
         <source>Preview</source>
         <translation>預覽</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="317"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="320"/>
         <source>ID</source>
         <translation>編號</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="318"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="321"/>
         <source>Part</source>
         <translation>零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="329"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="409"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="332"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="412"/>
         <source>Total</source>
         <translation>總計</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="463"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="466"/>
         <source>N/A</source>
         <translation>不適用</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="465"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="468"/>
         <source>%1 oz</source>
         <translation>%1 oz</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="467"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="470"/>
         <source>%1 g</source>
         <translation>%1 g</translation>
     </message>
@@ -28793,23 +28793,23 @@ N/A: %1 parts</source>
 不適用：%1 個零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="478"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="481"/>
         <source>Unique parts: %1 - Total parts: %2</source>
         <translation>不重複零件：%1 - 零件總數：%2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="528"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="538"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="540"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="550"/>
         <source>Export BrickLink</source>
         <translation>匯出 BrickLink</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="528"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="540"/>
         <source>XML Files (*.xml);;All Files (*)</source>
         <translation>XML 檔案 (*.xml);;所有檔案 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="543"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="555"/>
         <source>CSV Files (*.csv);;All Files (*)</source>
         <translation>CSV 檔案 (*.csv);;所有檔案 (*)</translation>
     </message>
@@ -28818,8 +28818,8 @@ N/A: %1 parts</source>
         <translation type="obsolete">XML 檔案 (*.xml);;所有檔案 (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="543"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="551"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="555"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="563"/>
         <source>Export CSV</source>
         <translation>匯出 CSV</translation>
     </message>
@@ -28857,7 +28857,7 @@ N/A: %1 parts</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="511"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="523"/>
         <source>Parts</source>
         <translation>零件</translation>
     </message>
@@ -28925,7 +28925,7 @@ N/A: %1 parts</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="330"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="333"/>
         <source>Weight</source>
         <translation>重量</translation>
     </message>
@@ -29122,6 +29122,61 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Model Weight&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The total weight in grams and ounces of every part across all steps, from the BrickLink part weights. Parts without a known weight are counted as N/A and add nothing to the total. Use %weight to show it in any instructions text.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Change the letter case of every publication field.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Case</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Choose the letter case to apply to every publication field.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Case&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The letter case Apply gives every publication field: UPPERCASE, lowercase, Sentence case with a capital at the start of each sentence, or Title Case with a capital at the start of each word.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>UPPERCASE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>lowercase</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Sentence case</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Title Case</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Change every publication field to the chosen letter case.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Apply Case&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Rewrites the text of every publication field in the chosen letter case. Cancel the dialog to keep the old text.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

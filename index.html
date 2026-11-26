@@ -1299,7 +1299,7 @@
 			</div>
 
 			<ul class="points">
-				<li><b>Properties.</b> Keeps the publication details of the model, title, author, product ID, version, publication date, URL, contact, copyright and notice, saved in the model file. Lists every part of the model with its ID, picture, count and weight, plus the size and weight of the whole model, in metric or imperial. Export the list for BrickLink or as a spreadsheet.</li>
+				<li><b>Properties.</b> Keeps the publication details of the model, title, author, product ID, version, date, URL, contact, copyright and notice, saved in the model file, and turns them all UPPERCASE, lowercase, Sentence or Title Case at once. Lists every part of the model with its ID, picture, count and weight, plus the size and weight of the whole model, in metric or imperial. Export the list for BrickLink or as a spreadsheet.</li>
 				<li><b>Submodels.</b> Group parts into submodels you can reuse, open them on their own, or melt them back into plain parts, from the menu or the command line.</li>
 				<li><b>Submodels list.</b> Create, rename, duplicate and delete submodels, set the active one, and export them as separate LDraw <a href="#files">files</a>.</li>
 				<li><b>In-place editing.</b> Edit a submodel inside its parent. A path bar shows <a href="#where">where</a> you are, and its buttons go back to each model.</li>
@@ -1309,9 +1309,9 @@
 			</ul>
 
 			<div class="gallery scroll">
-				<figure style="--width-image: 960; --height-image: 561">
+				<figure style="--width-image: 960; --height-image: 857">
 					<button class="shot" data-full="resources/images/models-window-properties.png" aria-label="Enlarge Model properties">
-						<img src="resources/images/models-window-properties.png" alt="Model properties" width="960" height="561" loading="lazy">
+						<img src="resources/images/models-window-properties.png" alt="Model properties" width="960" height="857" loading="lazy">
 					</button>
 
 					<figcaption>Model properties</figcaption>
@@ -2299,7 +2299,7 @@
 				<h2>HELP // EVERY &quot;WHAT&#x27;S THIS?&quot; ENTRY</h2>
 			</header>
 
-			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 485 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
+			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 487 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
 			<div class="search-tools">
 				<input id="search" type="search" placeholder="Search help" aria-label="Search help">
@@ -2385,6 +2385,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 				<ul>
 					<li><a href="#instructions">Instructions</a>: images linked with ./ are found next to the model file, or from the folder StudWorx was started in</li>
+					<li>Properties: a Case row on the Summary tab turns every publication field UPPERCASE, lowercase, Sentence case or Title Case</li>
 				</ul>
 			</details>
 
@@ -2644,6 +2645,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Model Properties","title":"Contact","paragraphs":["How to reach the publisher, such as an email address. Use %contact to show it in any instructions text."]},
 				{"group":"Model Properties","title":"Copyright","paragraphs":["The copyright or license of this model, saved as the LDraw license line. Use %copyright to show it in any instructions text."]},
 				{"group":"Model Properties","title":"Notice","paragraphs":["A legal or trademark notice for this model. Use %notice to show it in any instructions text."]},
+				{"group":"Model Properties","title":"Case","paragraphs":["The letter case Apply gives every publication field: UPPERCASE, lowercase, Sentence case with a capital at the start of each sentence, or Title Case with a capital at the start of each word."]},
+				{"group":"Model Properties","title":"Apply Case","paragraphs":["Rewrites the text of every publication field in the chosen letter case. Cancel the dialog to keep the old text."]},
 				{"group":"Model Properties","title":"Comments","paragraphs":["Plain-text notes stored with this model. Use %comments to show them in any instructions text."]},
 				{"group":"Model Properties","title":"Model Measurements","paragraphs":["The dimensions of the model's bounding box are shown in centimeters, inches, and LDraw units (ldu). The values are read-only and include parts across all steps. Use %size to show them in any instructions text."]},
 				{"group":"Model Properties","title":"Model Weight","paragraphs":["The total weight in grams and ounces of every part across all steps, from the BrickLink part weights. Parts without a known weight are counted as N/A and add nothing to the total. Use %weight to show it in any instructions text."]},
@@ -3624,6 +3627,42 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				}
 
 			}, { passive: false } ) ;
+
+			// arrows mark side scrolling galleries
+
+			document.querySelectorAll ( '.gallery' ).forEach ( ( gallery ) => {
+
+				const frame = document.createElement ( 'div' ) ;
+
+				frame.className = 'gallery-frame' ;
+
+				gallery.before ( frame ) ;
+
+				frame.append ( gallery ) ;
+
+				frame.insertAdjacentHTML ( 'beforeend', '<span class="gallery-start" aria-hidden="true"></span><span class="gallery-end" aria-hidden="true"></span>' ) ;
+
+				// each arrow while more lies that way
+
+				function arrows_toggle ( ) {
+
+					const overflow = getComputedStyle ( gallery ).overflowX ;
+					const scrolls = ( overflow === 'auto' || overflow === 'scroll' ) && gallery.scrollWidth > gallery.clientWidth + 1 ;
+
+					frame.classList.toggle ( 'gallery-more-start', scrolls && gallery.scrollLeft > 1 ) ;
+					frame.classList.toggle ( 'gallery-more-end', scrolls && gallery.scrollLeft + gallery.clientWidth < gallery.scrollWidth - 1 ) ;
+
+				}
+
+				// pictures loading widen the strip
+
+				gallery.addEventListener ( 'load', arrows_toggle, true ) ;
+				gallery.addEventListener ( 'scroll', arrows_toggle, { passive: true } ) ;
+				window.addEventListener ( 'resize', arrows_toggle ) ;
+
+				arrows_toggle ( ) ;
+
+			} ) ;
 
 			const buttons_navigation = [ ...document.querySelectorAll ( '.navigation-button[href^="#"]' ) ] ;
 

@@ -4,6 +4,7 @@
   <summary>2026-11-26</summary>
 
   - Instructions: images linked with ./ are found next to the model file, or from the folder StudWorx was started in
+  - Properties: a Case row on the Summary tab turns every publication field UPPERCASE, lowercase, Sentence case or Title Case
 
   </details>
 

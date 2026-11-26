@@ -57,6 +57,7 @@ public slots:
 	void accept() override;
 
 protected slots:
+	void ApplyCase();
 	void ThumbnailReady(swPartThumbnailId ThumbnailId, QPixmap Pixmap);
 	void ExportBrickLink();
 	void ExportCSV();

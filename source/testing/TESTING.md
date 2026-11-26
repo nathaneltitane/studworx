@@ -22,6 +22,8 @@ the model named after the archive with spaces as underscores, fixed dates, and
 that `--kmz-geometry visible` drops the hidden box while `--kmz-geometry all` keeps it.
 A BrickLink export with no mapping file set must use the bundled mapping, so
 parts and colors leave as their current BrickLink numbers.
+The text case helper of the Properties dialog must give UPPERCASE, lowercase,
+Sentence case and Title Case, leaving symbols, numbers and email dots alone.
 A part whose description reads `~Moved to` must leave the BrickLink and CSV
 exports as the part it moved to, merged into one lot with it.
 Part exceptions given with `--bricklink-exceptions` must replace the mapping

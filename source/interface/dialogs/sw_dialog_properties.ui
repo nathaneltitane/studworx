@@ -249,6 +249,72 @@
             </property>
            </widget>
           </item>
+          <item row="9" column="0">
+           <widget class="QLabel" name="CaseLabel">
+            <property name="buddy">
+             <cstring>CaseCombo</cstring>
+            </property>
+            <property name="toolTip">
+             <string>Change the letter case of every publication field.</string>
+            </property>
+            <property name="text">
+             <string>Case</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="1">
+           <layout class="QHBoxLayout" name="CaseLayout">
+            <item>
+             <widget class="QComboBox" name="CaseCombo">
+              <property name="toolTip">
+               <string>Choose the letter case to apply to every publication field.</string>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;p&gt;&lt;b&gt;Case&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The letter case Apply gives every publication field: UPPERCASE, lowercase, Sentence case with a capital at the start of each sentence, or Title Case with a capital at the start of each word.&lt;/p&gt;</string>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <item>
+               <property name="text">
+                <string>UPPERCASE</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>lowercase</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Sentence case</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Title Case</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="CaseApplyButton">
+              <property name="toolTip">
+               <string>Change every publication field to the chosen letter case.</string>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;p&gt;&lt;b&gt;Apply Case&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Rewrites the text of every publication field in the chosen letter case. Cancel the dialog to keep the old text.&lt;/p&gt;</string>
+              </property>
+              <property name="text">
+               <string>Apply</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
          </layout>
         </widget>
        </item>
@@ -483,6 +549,8 @@
   <tabstop>ContactEdit</tabstop>
   <tabstop>CopyrightEdit</tabstop>
   <tabstop>NoticeEdit</tabstop>
+  <tabstop>CaseCombo</tabstop>
+  <tabstop>CaseApplyButton</tabstop>
   <tabstop>CommentsEdit</tabstop>
   <tabstop>PartsTable</tabstop>
   <tabstop>ExportBrickLinkButton</tabstop>

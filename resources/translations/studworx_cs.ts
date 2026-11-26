@@ -28617,7 +28617,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation type="vanished">Použité díly</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="287"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="288"/>
         <source>%1 Properties</source>
         <translation>%1 Vlastnosti</translation>
     </message>
@@ -28640,38 +28640,38 @@ Imperiální: %4 x %5 x %6 palců
 LDraw: %7 x %8 x %9 ldu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="316"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="319"/>
         <source>Preview</source>
         <translation>Náhled</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="317"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="320"/>
         <source>ID</source>
         <translation>ID</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="318"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="321"/>
         <source>Part</source>
         <translation>Díl</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="329"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="409"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="332"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="412"/>
         <source>Total</source>
         <translation>Celkem</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="463"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="466"/>
         <source>N/A</source>
         <translation>N/D</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="465"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="468"/>
         <source>%1 oz</source>
         <translation>%1 oz</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="467"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="470"/>
         <source>%1 g</source>
         <translation>%1 g</translation>
     </message>
@@ -28699,23 +28699,23 @@ N/A: %1 parts</source>
 N/A: %1 dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="478"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="481"/>
         <source>Unique parts: %1 - Total parts: %2</source>
         <translation>Jedinečné díly: %1 - Celkem dílů: %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="528"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="538"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="540"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="550"/>
         <source>Export BrickLink</source>
         <translation>Exportovat BrickLink</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="528"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="540"/>
         <source>XML Files (*.xml);;All Files (*)</source>
         <translation>Soubory XML (*.xml);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="543"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="555"/>
         <source>CSV Files (*.csv);;All Files (*)</source>
         <translation>Soubory CSV (*.csv);;Všechny soubory (*)</translation>
     </message>
@@ -28724,8 +28724,8 @@ N/A: %1 dílů</translation>
         <translation type="obsolete">XML soubory (*.xml);;všechny soubory (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="543"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="551"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="555"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="563"/>
         <source>Export CSV</source>
         <translation>Exportovat CSV</translation>
     </message>
@@ -28763,7 +28763,7 @@ N/A: %1 dílů</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="511"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="523"/>
         <source>Parts</source>
         <translation>Díly</translation>
     </message>
@@ -28831,7 +28831,7 @@ N/A: %1 dílů</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="330"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="333"/>
         <source>Weight</source>
         <translation>Hmotnost</translation>
     </message>
@@ -29029,6 +29029,61 @@ N/A: %1 dílů</translation>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Model Weight&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The total weight in grams and ounces of every part across all steps, from the BrickLink part weights. Parts without a known weight are counted as N/A and add nothing to the total. Use %weight to show it in any instructions text.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Change the letter case of every publication field.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Case</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Choose the letter case to apply to every publication field.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Case&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The letter case Apply gives every publication field: UPPERCASE, lowercase, Sentence case with a capital at the start of each sentence, or Title Case with a capital at the start of each word.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>UPPERCASE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>lowercase</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Sentence case</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Title Case</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Change every publication field to the chosen letter case.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Apply Case&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Rewrites the text of every publication field in the chosen letter case. Cancel the dialog to keep the old text.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Apply</source>
+        <translation type="unfinished">Použít</translation>
     </message>
 </context>
 <context>

@@ -446,7 +446,7 @@ Large builds split into submodels that you can edit on their own or in place, in
 
 ![Editing a submodel in place](resources/images/models-feature-edit-in-place.png)
 
-- **Properties.** Keeps the publication details of the model, title, author, product ID, version, publication date, URL, contact, copyright and notice, saved in the model file. Lists every part of the model with its ID, picture, count and weight, plus the size and weight of the whole model, in metric or imperial. Export the list for BrickLink or as a spreadsheet.
+- **Properties.** Keeps the publication details of the model, title, author, product ID, version, date, URL, contact, copyright and notice, saved in the model file, and turns them all UPPERCASE, lowercase, Sentence or Title Case at once. Lists every part of the model with its ID, picture, count and weight, plus the size and weight of the whole model, in metric or imperial. Export the list for BrickLink or as a spreadsheet.
 - **Submodels.** Group parts into submodels you can reuse, open them on their own, or melt them back into plain parts, from the menu or the command line.
 - **Submodels list.** Create, rename, duplicate and delete submodels, set the active one, and export them as separate LDraw files.
 - **Models menu.** Switch between up to forty models of the file from the Models menu.
