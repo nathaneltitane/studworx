@@ -201,6 +201,15 @@ static int swFindInstructionsName(const QLatin1String (&Names)[Count], const QSt
 	return -1;
 }
 
+// unit names in the order of swInstructionsPageUnits
+static const QLatin1String swInstructionsUnitNames[] =
+{
+	QLatin1String("PX"), QLatin1String("MM"), QLatin1String("CM"), QLatin1String("IN")
+};
+
+// use to write a property value, units as names
+static QString swWriteInstructionsPropertyValue(int Type, const QVariant& Value, const QVariant& DefaultValue);
+
 // use to keep free text on one line
 static QString swEscapeInstructionsText(const QString& Text)
 {
@@ -293,6 +302,16 @@ static QString swWriteInstructionsValue(const QVariant& Value, const QVariant& D
 	}
 }
 
+static QString swWriteInstructionsPropertyValue(int Type, const QVariant& Value, const QVariant& DefaultValue)
+{
+	const int Units = Value.toInt();
+
+	if (Type == static_cast<int>(swInstructionsPropertyType::DocumentUnits) && Units >= 0 && Units < static_cast<int>(std::size(swInstructionsUnitNames)))
+		return swInstructionsUnitNames[Units];
+
+	return swWriteInstructionsValue(Value, DefaultValue);
+}
+
 // use to read the meta command fields
 class swInstructionsCommandReader
 {
@@ -359,6 +378,27 @@ public:
 		const int Value = ReadToken().toInt(&Ok);
 		mValid &= Ok;
 		return Value;
+	}
+
+	// unit names, older files keep numbers
+	int ReadUnits()
+	{
+		const QString Token = ReadToken();
+		bool Ok = false;
+		int Units = swFindInstructionsName(swInstructionsUnitNames, Token);
+
+		if (Units == -1)
+			Units = Token.toInt(&Ok);
+		else
+			Ok = true;
+
+		if (!Ok || Units < 0 || Units >= static_cast<int>(std::size(swInstructionsUnitNames)))
+		{
+			mValid = false;
+			return 0;
+		}
+
+		return Units;
 	}
 
 	qreal ReadNumber()
@@ -655,8 +695,8 @@ void swInstructions::LoadCommandLines(const QStringList& CommandLines, bool Mode
 			PageSetup.MarginTop = Reader.ReadNumber();
 			PageSetup.MarginBottom = Reader.ReadNumber();
 			Reader.ReadKeyword("UNITS");
-			const int PageUnits = static_cast<int>(Reader.ReadNumber());
-			const int MarginUnits = static_cast<int>(Reader.ReadNumber());
+			const int PageUnits = Reader.ReadUnits();
+			const int MarginUnits = Reader.ReadUnits();
 
 			if (!Reader.IsValid() || PageSetup.Width < 1.0f || PageSetup.Height < 1.0f || PageSetup.MarginLeft + PageSetup.MarginRight >= PageSetup.Width || PageSetup.MarginTop + PageSetup.MarginBottom >= PageSetup.Height)
 				continue;
@@ -692,7 +732,7 @@ void swInstructions::LoadCommandLines(const QStringList& CommandLines, bool Mode
 			if (!Reader.IsValid() || (PageProperty && !IsPageProperty(static_cast<swInstructionsPropertyType>(Type))))
 				continue;
 
-			const QVariant Value = Reader.ReadValue(mDefaultProperties[Type].Value);
+			const QVariant Value = Type == static_cast<int>(swInstructionsPropertyType::DocumentUnits) ? QVariant(Reader.ReadUnits()) : Reader.ReadValue(mDefaultProperties[Type].Value);
 
 			if (!Reader.IsValid() || !swMapOldInstructionsProperty(Type, Value))
 				continue;
@@ -766,7 +806,19 @@ void swInstructions::LoadCommandLines(const QStringList& CommandLines, bool Mode
 				continue;
 
 			if (Command == QLatin1String("OFFSET"))
+			{
 				mElementOffsets[Key] = Position;
+
+				// the size it was placed with
+
+				if (Reader.ReadToken() == QLatin1String("SIZE"))
+				{
+					const QPointF Size = Reader.ReadPoint();
+
+					if (Reader.IsValid() && Size.x() > 0.0 && Size.y() > 0.0)
+						mPlacedSizes[Key] = QSizeF(Size.x(), Size.y());
+				}
+			}
 			else
 				mLockedPositions[Key] = Position;
 		}
@@ -814,7 +866,7 @@ void swInstructions::LoadCommandLines(const QStringList& CommandLines, bool Mode
 			if (!Reader.IsValid())
 				continue;
 
-			const QVariant Value = Reader.ReadValue(mDefaultProperties[Type].Value);
+			const QVariant Value = Type == static_cast<int>(swInstructionsPropertyType::DocumentUnits) ? QVariant(Reader.ReadUnits()) : Reader.ReadValue(mDefaultProperties[Type].Value);
 
 			if (Reader.IsValid() && swMapOldInstructionsProperty(Type, Value))
 			{
@@ -846,9 +898,18 @@ void swInstructions::LoadCommandLines(const QStringList& CommandLines, bool Mode
 
 			Reader.ReadKeyword("POSITION");
 			Notice.Position = Reader.ReadPoint();
-			// the text file comes before the text
+
+			// the size and file come before the text
 
 			QString Keyword = Reader.ReadToken();
+			QSizeF PlacedSize;
+
+			if (Keyword == QLatin1String("SIZE"))
+			{
+				const QPointF Size = Reader.ReadPoint();
+				PlacedSize = QSizeF(Size.x(), Size.y());
+				Keyword = Reader.ReadToken();
+			}
 
 			if (Keyword == QLatin1String("FILE"))
 			{
@@ -882,6 +943,13 @@ void swInstructions::LoadCommandLines(const QStringList& CommandLines, bool Mode
 				*NoticeIt = Notice;
 			else
 				mNotices.push_back(Notice);
+
+			const swInstructionsElementKey NoticeKey = { swInstructionsPlacementElement::Notice, nullptr, static_cast<swStep>(Notice.Id) };
+
+			if (PlacedSize.width() > 0.0 && PlacedSize.height() > 0.0)
+				mPlacedSizes[NoticeKey] = PlacedSize;
+			else
+				mPlacedSizes.erase(NoticeKey);
 
 			mNextNoticeId = qMax(mNextNoticeId, Notice.Id + 1);
 		}
@@ -1001,9 +1069,9 @@ static QString swWriteInstructionsImage(const swInstructionsImage& Image, const 
 }
 
 // use to write a notice line
-static QString swWriteInstructionsNotice(const swInstructionsNotice& Notice)
+static QString swWriteInstructionsNotice(const swInstructionsNotice& Notice, const QSizeF& Size)
 {
-	return QStringLiteral("NOTICE %1 ").arg(Notice.Id) + (Notice.Pages == swInstructionsImagePages::None ? QLatin1String("PAGE ") + swWriteInstructionsPageKey(Notice.PageKey) : QLatin1String("SHOW ") + gInstructionsImagePagesNames[static_cast<int>(Notice.Pages)]) + QLatin1String(" POSITION ") + swWriteInstructionsPoint(Notice.Position) + (Notice.File.isEmpty() ? QString() : QLatin1String(" FILE \"") + QString(Notice.File).remove(QLatin1Char('"')) + QLatin1Char('"')) + (Notice.Alignment < 0 ? QString() : QStringLiteral(" ALIGN %1 %2").arg(Notice.Alignment).arg(qMax(0, Notice.VerticalAlignment))) + QLatin1String(" TEXT ") + swEscapeInstructionsText(Notice.Text);
+	return QStringLiteral("NOTICE %1 ").arg(Notice.Id) + (Notice.Pages == swInstructionsImagePages::None ? QLatin1String("PAGE ") + swWriteInstructionsPageKey(Notice.PageKey) : QLatin1String("SHOW ") + gInstructionsImagePagesNames[static_cast<int>(Notice.Pages)]) + QLatin1String(" POSITION ") + swWriteInstructionsPoint(Notice.Position) + (Size.isValid() ? QLatin1String(" SIZE ") + swWriteInstructionsPoint(QPointF(Size.width(), Size.height())) : QString()) + (Notice.File.isEmpty() ? QString() : QLatin1String(" FILE \"") + QString(Notice.File).remove(QLatin1Char('"')) + QLatin1Char('"')) + (Notice.Alignment < 0 ? QString() : QStringLiteral(" ALIGN %1 %2").arg(Notice.Alignment).arg(qMax(0, Notice.VerticalAlignment))) + QLatin1String(" TEXT ") + swEscapeInstructionsText(Notice.Text);
 }
 
 // use to write the steps per page words
@@ -1100,7 +1168,7 @@ QStringList swInstructions::GetCommandLines(bool Template) const
 	const swInstructionsProperties& DefaultProperties = Template ? BuiltInProperties : mDefaultProperties;
 
 	// paper and units go with the model
-	CommandLines.append(QStringLiteral("PAGE_SETUP %1 %2 %3 %4 %5 %6 UNITS %7 %8").arg(mPageSetup.Width).arg(mPageSetup.Height).arg(mPageSetup.MarginLeft).arg(mPageSetup.MarginRight).arg(mPageSetup.MarginTop).arg(mPageSetup.MarginBottom).arg(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_PAGE_UNITS)).arg(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_MARGIN_UNITS)));
+	CommandLines.append(QStringLiteral("PAGE_SETUP %1 %2 %3 %4 %5 %6 UNITS %7 %8").arg(mPageSetup.Width).arg(mPageSetup.Height).arg(mPageSetup.MarginLeft).arg(mPageSetup.MarginRight).arg(mPageSetup.MarginTop).arg(mPageSetup.MarginBottom).arg(swWriteInstructionsPropertyValue(static_cast<int>(swInstructionsPropertyType::DocumentUnits), swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_PAGE_UNITS), 0)).arg(swWriteInstructionsPropertyValue(static_cast<int>(swInstructionsPropertyType::DocumentUnits), swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_MARGIN_UNITS), 0)));
 
 	// write changed properties only
 	for (int Type = 0; Type < static_cast<int>(swInstructionsPropertyType::Count); Type++)
@@ -1109,7 +1177,7 @@ QStringList swInstructions::GetCommandLines(bool Template) const
 		const QVariant& Value = mStepProperties[Type].Value;
 
 		if (swIsInstructionsPropertyWritten(mStepProperties, Type, DefaultValue))
-			CommandLines.append(QLatin1String("PROPERTY ") + swGetInstructionsPropertyNames().at(Type) + QLatin1Char(' ') + swWriteInstructionsValue(Value, DefaultValue));
+			CommandLines.append(QLatin1String("PROPERTY ") + swGetInstructionsPropertyNames().at(Type) + QLatin1Char(' ') + swWriteInstructionsPropertyValue(Type, Value, DefaultValue));
 	}
 
 	for (const std::pair<const swInstructionsStepKey, swInstructionsProperties>& PageProperties : mPagePropertyOverrides)
@@ -1119,7 +1187,7 @@ QStringList swInstructions::GetCommandLines(bool Template) const
 			const swInstructionsProperty& Property = PageProperties.second[Type];
 
 			if (Property.Mode != swInstructionsPropertyMode::NotSet)
-				CommandLines.append(QLatin1String("PAGE_PROPERTY STEP ") + swWriteInstructionsStepKey(PageProperties.first) + QLatin1Char(' ') + swGetInstructionsPropertyNames().at(Type) + QLatin1Char(' ') + swWriteInstructionsValue(Property.Value, DefaultProperties[Type].Value));
+				CommandLines.append(QLatin1String("PAGE_PROPERTY STEP ") + swWriteInstructionsStepKey(PageProperties.first) + QLatin1Char(' ') + swGetInstructionsPropertyNames().at(Type) + QLatin1Char(' ') + swWriteInstructionsPropertyValue(Type, Property.Value, DefaultProperties[Type].Value));
 		}
 	}
 
@@ -1133,7 +1201,11 @@ QStringList swInstructions::GetCommandLines(bool Template) const
 		CommandLines.append(QLatin1String("BLANK_PAGE STEP ") + swWriteInstructionsStepKey(BlankPage));
 
 	for (const std::pair<const swInstructionsElementKey, QPointF>& Offset : mElementOffsets)
-		CommandLines.append(QLatin1String("OFFSET ") + swWriteInstructionsElementKey(Offset.first) + QLatin1Char(' ') + swWriteInstructionsPoint(Offset.second));
+	{
+		const std::map<swInstructionsElementKey, QSizeF>::const_iterator PlacedSize = mPlacedSizes.find(Offset.first);
+
+		CommandLines.append(QLatin1String("OFFSET ") + swWriteInstructionsElementKey(Offset.first) + QLatin1Char(' ') + swWriteInstructionsPoint(Offset.second) + (PlacedSize != mPlacedSizes.end() ? QLatin1String(" SIZE ") + swWriteInstructionsPoint(QPointF(PlacedSize->second.width(), PlacedSize->second.height())) : QString()));
+	}
 
 	for (const std::pair<const swInstructionsElementKey, QSizeF>& Size : mElementSizes)
 		CommandLines.append(QLatin1String("SIZE ") + swWriteInstructionsElementKey(Size.first) + QLatin1Char(' ') + swWriteInstructionsPoint(QPointF(Size.second.width(), Size.second.height())));
@@ -1162,7 +1234,7 @@ QStringList swInstructions::GetCommandLines(bool Template) const
 			const QVariant& Value = Properties[Type].Value;
 
 			if (swIsInstructionsPropertyWritten(Properties, Type, DefaultValue))
-				CommandLines.append(QLatin1String("FREEZE_PAGE_PROPERTY PAGE ") + PageKeyText + QLatin1Char(' ') + swGetInstructionsPropertyNames().at(Type) + QLatin1Char(' ') + swWriteInstructionsValue(Value, DefaultValue));
+				CommandLines.append(QLatin1String("FREEZE_PAGE_PROPERTY PAGE ") + PageKeyText + QLatin1Char(' ') + swGetInstructionsPropertyNames().at(Type) + QLatin1Char(' ') + swWriteInstructionsPropertyValue(Type, Value, DefaultValue));
 		}
 	}
 
@@ -1175,10 +1247,9 @@ QStringList swInstructions::GetCommandLines(bool Template) const
 		if (Template && Notice.Pages == swInstructionsImagePages::None && (PageType == swInstructionsPageType::Cover || PageType == swInstructionsPageType::BackCover))
 			Notice.Pages = PageType == swInstructionsPageType::Cover ? swInstructionsImagePages::Front : swInstructionsImagePages::Back;
 
-		if (Template && !Notice.File.isEmpty())
-			Notice.File = GetFilePath(Notice.File);
+		const std::map<swInstructionsElementKey, QSizeF>::const_iterator PlacedSize = mPlacedSizes.find({ swInstructionsPlacementElement::Notice, nullptr, static_cast<swStep>(Notice.Id) });
 
-		CommandLines.append(swWriteInstructionsNotice(Notice));
+		CommandLines.append(swWriteInstructionsNotice(Notice, PlacedSize != mPlacedSizes.end() ? PlacedSize->second : QSizeF()));
 	}
 
 	for (const swInstructionsPointer& Pointer : mPointers)
@@ -1200,7 +1271,7 @@ QStringList swInstructions::GetCommandLines(bool Template) const
 
 	for (const swInstructionsImage& Image : mImages)
 		if (Template || !Image.Template)
-			CommandLines.append(swWriteInstructionsImage(Image, Template ? GetFilePath(Image.File) : Image.File));
+			CommandLines.append(swWriteInstructionsImage(Image, Image.File));
 
 	return CommandLines;
 }

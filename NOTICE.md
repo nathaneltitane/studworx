@@ -3,6 +3,8 @@
   <details open>
   <summary>2026-11-25</summary>
 
+  - Instructions: moved elements and notices keep the edge nearest their side, so they stay put when their content changes
+  - Instructions: page units are written as PX, MM, CM or IN in the model file
   - Properties: the Summary tab has a Publication group with title, author, product ID, version, publication date, URL, contact, copyright and notice, saved in the model file
   - Preferences: the Author group is gone, the author of a model lives in Model Properties > Summary
   - Instructions: the front and back cover each have their own Title, Author, Product ID, Version, Publication Date, URL, Contact, Copyright, Notice, Comments, Measurements, Weight and Pieces, and Pieces is the part count of the whole model

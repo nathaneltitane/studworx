@@ -43,7 +43,7 @@ void swInstructions::SetNoticeText(int Id, const QString& Text, const QString& F
 	}
 }
 
-void swInstructions::SetNoticePosition(int Id, const QPointF& Position)
+void swInstructions::SetNoticePosition(int Id, const QPointF& Position, const QSizeF& Size)
 {
 	const swInstructionsElementKey Key = { swInstructionsPlacementElement::Notice, nullptr, static_cast<swStep>(Id) };
 
@@ -55,6 +55,9 @@ void swInstructions::SetNoticePosition(int Id, const QPointF& Position)
 		// the placed spot replaces the moved one
 
 		const bool OffsetRemoved = mElementOffsets.erase(Key) > 0;
+
+		if (Size.isValid())
+			mPlacedSizes[Key] = Size;
 
 		if (Notice.Position == Position && !OffsetRemoved)
 			return;
@@ -78,6 +81,7 @@ void swInstructions::SetNoticePages(int Id, swInstructionsImagePages Pages, size
 		Notice.Position = Position;
 
 		mElementOffsets.erase({ swInstructionsPlacementElement::Notice, nullptr, static_cast<swStep>(Id) });
+		mPlacedSizes.erase({ swInstructionsPlacementElement::Notice, nullptr, static_cast<swStep>(Id) });
 
 		emit PageLayoutChanged();
 		return;

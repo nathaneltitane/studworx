@@ -218,6 +218,12 @@ void swTests::InstructionsLayoutIsAlwaysWritten()
 
 	const QStringList Old = Resave("old", "0 !SW PROPERTY INSTRUCTION COVER FRONT SHOW_PRODUCT_ID TRUE\r\n0 !SW PROPERTY INSTRUCTION COVER FRONT AUTHOR_PLACEMENT 18\r\n0 !SW OFFSET INSTRUCTION COVER_FRONT_PRODUCT_ID \"old.ldr\" 0 -20 -40\r\n");
 	const QStringList Fresh = Resave("fresh", QByteArray());
+	const QStringList Sized = Resave("sized", "0 !SW PAGE_SETUP INSTRUCTION 480 240 16 16 16 16 UNITS 2 0\r\n0 !SW OFFSET INSTRUCTION COVER_FRONT_COMMENTS - 0 -12.5 4 SIZE 120 30\r\n");
+
+	// units as names, sizes kept
+
+	QVERIFY(Sized.filter(QRegularExpression("^0 !SW PAGE_SETUP INSTRUCTION .* UNITS CM PX$")).size() == 1);
+	QVERIFY(Sized.contains("0 !SW OFFSET INSTRUCTION COVER_FRONT_COMMENTS - 0 -12.5 4 SIZE 120 30"));
 
 	QVERIFY(!Old.isEmpty() && !Fresh.isEmpty());
 

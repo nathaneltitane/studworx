@@ -303,6 +303,7 @@ void swInstructions::ReloadCommandLines()
 	mPagePropertyOverrides.clear();
 	mElementOffsets.clear();
 	mElementSizes.clear();
+	mPlacedSizes.clear();
 	mLockedPositions.clear();
 	mLockedPages.clear();
 	mFrozenPages.clear();
@@ -584,6 +585,7 @@ void swInstructions::ResetProperties()
 	mPagePropertyOverrides.clear();
 	mElementOffsets.clear();
 	mElementSizes.clear();
+	mPlacedSizes.clear();
 	mLockedPositions.clear();
 	CreatePages();
 
@@ -1037,12 +1039,27 @@ QPointF swInstructions::GetElementOffset(const swInstructionsElementKey& Key) co
 	return Offset->second;
 }
 
+QSizeF swInstructions::GetPlacedSize(const swInstructionsElementKey& Key, const QSizeF& Size) const
+{
+	// the first draw keeps older files in place
+
+	const std::map<swInstructionsElementKey, QSizeF>::const_iterator PlacedSize = mPlacedSizes.find(Key);
+
+	if (PlacedSize != mPlacedSizes.end())
+		return PlacedSize->second;
+
+	if (Size.isValid())
+		mPlacedSizes[Key] = Size;
+
+	return Size;
+}
+
 bool swInstructions::HasElementOffset(const swInstructionsElementKey& Key) const
 {
 	return mElementOffsets.find(Key) != mElementOffsets.end();
 }
 
-void swInstructions::SetElementOffsets(const std::map<swInstructionsElementKey, QPointF>& Offsets)
+void swInstructions::SetElementOffsets(const std::map<swInstructionsElementKey, QPointF>& Offsets, const std::map<swInstructionsElementKey, QSizeF>& Sizes)
 {
 	if (Offsets.empty())
 		return;
@@ -1054,6 +1071,14 @@ void swInstructions::SetElementOffsets(const std::map<swInstructionsElementKey, 
 			mElementOffsets.erase(Offset.first);
 		else
 			mElementOffsets[Offset.first] = Offset.second;
+	}
+
+	// moved elements remember their size
+
+	for (const std::pair<const swInstructionsElementKey, QSizeF>& Size : Sizes)
+	{
+		if (Size.second.isValid())
+			mPlacedSizes[Size.first] = Size.second;
 	}
 
 	emit PageLayoutChanged();

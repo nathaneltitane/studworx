@@ -6407,7 +6407,7 @@ File format is not recognized.</source>
         <translation>%1 失敗：%2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="868"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="926"/>
         <source>Create Parts List</source>
         <translation>建立零件清單</translation>
     </message>
@@ -15931,58 +15931,58 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>第 %1 頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="717"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="775"/>
         <source>Parts List</source>
         <translation>零件清單</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="727"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="785"/>
         <source>%1 / %2</source>
         <translation>%1 / %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="911"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="969"/>
         <source>Add Notice</source>
         <translation>新增通知</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="911"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="969"/>
         <source>Edit Notice</source>
         <translation>編輯通知</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="914"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="972"/>
         <source>Notice &amp;Text</source>
         <translation>注釋文字(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="920"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="978"/>
         <source>Text &amp;File</source>
         <translation>文字檔(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="923"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="981"/>
         <source>Text file used instead of the typed text, relative to the model file.</source>
         <translation>代替輸入文字使用的文字檔，相對於模型檔案。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="938"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="996"/>
         <source>Choose the text file.</source>
         <translation>選擇文字檔。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="928"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="952"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="986"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1010"/>
         <source>Choose Text File</source>
         <translation>選擇文字檔</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="938"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="996"/>
         <source>Remove the text file and go back to the typed text.</source>
         <translation>移除文字檔，恢復為輸入的文字。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="952"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1010"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation>文字檔 (*.txt);;所有檔案 (*)</translation>
     </message>
@@ -15991,7 +15991,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">通知文字</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_instructions.cpp" line="1841"/>
+        <location filename="../../source/transput/sw_instructions.cpp" line="1866"/>
         <source>%1 PIECES</source>
         <translation>%1 個零件</translation>
     </message>
@@ -16201,8 +16201,8 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsPageListWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4698"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4708"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4772"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4782"/>
         <source>Pages</source>
         <translation>頁面</translation>
     </message>
@@ -16211,32 +16211,32 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;頁面&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選取頁面即可顯示。在頁面上按一下滑鼠右鍵，可在其前後插入或移除空白頁。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4650"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4724"/>
         <source>Lock Page: keep every element where it is and refuse removal</source>
         <translation>鎖定頁面：讓每個元素保持原位並拒絕移除</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4651"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4725"/>
         <source>Freeze Page: keep the page settings when changes are made for all pages</source>
         <translation>凍結頁面：對所有頁面進行變更時保留此頁面的設定</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4699"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4773"/>
         <source>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a page to show it. Right-click a page to insert or remove blank pages around it.&lt;/p&gt;&lt;p&gt;Click the lock beside a page to keep its elements where they are. A locked page can&apos;t be removed.&lt;/p&gt;&lt;p&gt;Click the snowflake to freeze a page. It keeps its own copy of the settings, so changes for all pages skip it. Unfreeze it to follow the other pages again.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;頁面&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選取頁面即可顯示。在頁面上按一下滑鼠右鍵，可在其前後插入或移除空白頁。&lt;/p&gt;&lt;p&gt;按一下頁面旁的鎖，讓它的元素保持原位。鎖定的頁面無法移除。&lt;/p&gt;&lt;p&gt;按一下雪花凍結頁面。它會保留自己的一份設定，所以對所有頁面的變更會略過它。解凍後它會再次跟隨其他頁面。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4729"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4803"/>
         <source>Insert Blank Page Before</source>
         <translation>在前面插入空白頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4737"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4811"/>
         <source>Insert Blank Page After</source>
         <translation>在後面插入空白頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4745"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4819"/>
         <source>Remove Blank Page</source>
         <translation>移除空白頁</translation>
     </message>
@@ -16248,281 +16248,281 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsPageWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1848"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1906"/>
         <source>Units of the rulers, the page units or the document units when they are in use.</source>
         <translation>標尺的單位，使用中時為頁面單位或檔案單位。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3326"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3392"/>
         <source>Anchor</source>
         <translation>錨點</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3327"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3393"/>
         <source>Top Left</source>
         <translation>左上</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3327"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3561"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3393"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3627"/>
         <source>Top</source>
         <translation>上</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3327"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3393"/>
         <source>Top Right</source>
         <translation>右上</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3327"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3561"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3393"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3627"/>
         <source>Right</source>
         <translation>右</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3327"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3393"/>
         <source>Bottom Right</source>
         <translation>右下</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3327"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3561"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3393"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3627"/>
         <source>Bottom</source>
         <translation>下</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3327"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3393"/>
         <source>Bottom Left</source>
         <translation>左下</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3327"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3561"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3393"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3627"/>
         <source>Left</source>
         <translation>左</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3332"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3398"/>
         <source>Automatic</source>
         <translation>自動</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3358"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3550"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3424"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3616"/>
         <source>Default</source>
         <translation>預設</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3375"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3441"/>
         <source>Style</source>
         <translation>樣式</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3375"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3441"/>
         <source>Line</source>
         <translation>線條</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3375"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3441"/>
         <source>Callout Wedge</source>
         <translation>標註楔形</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3375"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3441"/>
         <source>L Shape</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3375"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3441"/>
         <source>Z Shape</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3375"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3441"/>
         <source>U Shape</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3380"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3446"/>
         <source>Tip</source>
         <translation>尖端</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3380"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3446"/>
         <source>Dot</source>
         <translation>點</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3380"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3446"/>
         <source>Arrow</source>
         <translation>箭頭</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3380"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3446"/>
         <source>Hollow Dot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3390"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3456"/>
         <source>Reset Bend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3402"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3468"/>
         <source>Remove Pointer</source>
         <translation>移除指標</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3412"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3478"/>
         <source>Add Notice...</source>
         <translation>新增通知...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3424"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3490"/>
         <source>Add Watermark Text...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3452"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3518"/>
         <source>Add Watermark Image...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3476"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3542"/>
         <source>Add Pointer</source>
         <translation>新增指標</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3555"/>
         <source>Remove Element</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3512"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3578"/>
         <source>This Page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3513"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3591"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3579"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3657"/>
         <source>Header Band</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3514"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3592"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3580"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3658"/>
         <source>Footer Band</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3515"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3593"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3581"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3659"/>
         <source>Left Band</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3516"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3594"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3582"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3660"/>
         <source>Right Band</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3517"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3595"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3583"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3661"/>
         <source>Watermark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3544"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3610"/>
         <source>Align</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3561"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3627"/>
         <source>Center</source>
         <translation type="unfinished">置中</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3561"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3627"/>
         <source>Middle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3624"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3690"/>
         <source>Edit Notice...</source>
         <translation>編輯通知...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3648"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3674"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3714"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3740"/>
         <source>Edit Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3713"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3779"/>
         <source>Copy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3714"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3780"/>
         <source>Paste</source>
         <translation type="unfinished">貼上</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3715"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3781"/>
         <source>Duplicate</source>
         <translation type="unfinished">複製</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3555"/>
         <source>Remove Notice</source>
         <translation>移除通知</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3435"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3501"/>
         <source>Images (*.png *.jpg *.jpeg *.svg *.bmp *.gif *.webp);;All Files (*)</source>
         <translation>影像 (*.png *.jpg *.jpeg *.svg *.bmp *.gif *.webp);;所有檔案 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3439"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3452"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3505"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3518"/>
         <source>Add Image...</source>
         <translation>新增影像...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3441"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3454"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3507"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3520"/>
         <source>Add Image</source>
         <translation>新增影像</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3637"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3703"/>
         <source>Change Image...</source>
         <translation>變更影像...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3639"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3705"/>
         <source>Change Image</source>
         <translation>變更影像</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3506"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3584"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3572"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3650"/>
         <source>Show On</source>
         <translation>顯示於</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3588"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3654"/>
         <source>Front Cover</source>
         <translation>封面</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3589"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3655"/>
         <source>Back Cover</source>
         <translation>封底</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3590"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3656"/>
         <source>Both Covers</source>
         <translation>封面與封底</translation>
     </message>
@@ -16539,7 +16539,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">寬度，佔頁面寬度的百分比：</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="3555"/>
         <source>Remove Image</source>
         <translation>移除影像</translation>
     </message>
@@ -19484,22 +19484,22 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsRulerWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4398"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4472"/>
         <source>Horizontal Ruler</source>
         <translation>水平標尺</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4399"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4473"/>
         <source>Horizontal position on the page in the page units, the arrow follows the pointer.</source>
         <translation>頁面上的水平位置（以頁面單位表示），箭頭跟隨指標</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4403"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4477"/>
         <source>Vertical Ruler</source>
         <translation>垂直標尺</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4404"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="4478"/>
         <source>Vertical position on the page in the page units, the arrow follows the pointer.</source>
         <translation>頁面上的垂直位置（以頁面單位表示），箭頭跟隨指標</translation>
     </message>

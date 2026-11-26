@@ -840,7 +840,8 @@ public:
 
 	QPointF GetElementOffset(const swInstructionsElementKey& Key) const;
 	bool HasElementOffset(const swInstructionsElementKey& Key) const;
-	void SetElementOffsets(const std::map<swInstructionsElementKey, QPointF>& Offsets);
+	void SetElementOffsets(const std::map<swInstructionsElementKey, QPointF>& Offsets, const std::map<swInstructionsElementKey, QSizeF>& Sizes = {});
+	QSizeF GetPlacedSize(const swInstructionsElementKey& Key, const QSizeF& Size) const;
 	void ResetElementOffset(const swInstructionsElementKey& Key);
 
 	// An invalid size fits the content.
@@ -865,7 +866,7 @@ public:
 	const swInstructionsNotice* FindNotice(int Id) const;
 	int AddNotice(size_t PageIndex, const QPointF& Position, const QString& Text, const QString& File = QString(), swInstructionsImagePages Pages = swInstructionsImagePages::None);
 	void SetNoticeText(int Id, const QString& Text, const QString& File);
-	void SetNoticePosition(int Id, const QPointF& Position);
+	void SetNoticePosition(int Id, const QPointF& Position, const QSizeF& Size = QSizeF());
 	void SetNoticePages(int Id, swInstructionsImagePages Pages, size_t PageIndex, const QPointF& Position);
 	void SetNoticeAlignment(int Id, int Alignment, int VerticalAlignment);
 	void RemoveNotice(int Id);
@@ -1090,6 +1091,9 @@ public:
 	std::map<swInstructionsStepKey, swInstructionsProperties> mPagePropertyOverrides;
 	std::map<swInstructionsElementKey, QPointF> mElementOffsets;
 	std::map<swInstructionsElementKey, QSizeF> mElementSizes;
+
+	// sizes of moved elements and notices when placed, kept on first draw
+	mutable std::map<swInstructionsElementKey, QSizeF> mPlacedSizes;
 	std::map<swInstructionsElementKey, QPointF> mLockedPositions;
 	std::map<swInstructionsPageKey, std::map<swInstructionsElementKey, QPointF>> mLockedPages;
 	std::map<swInstructionsPageKey, swInstructionsProperties> mFrozenPages;

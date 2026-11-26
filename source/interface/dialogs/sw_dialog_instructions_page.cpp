@@ -261,8 +261,35 @@ static void swRotateWatermark(QGraphicsItem* Item, const swInstructions* Instruc
 	Item->setRotation(Instructions->GetIntProperty(swInstructionsPropertyType::WatermarkRotation, nullptr, 0));
 }
 
-// use to place an element
-static void swPlaceElement(QGraphicsItem* Item, const swInstructions* Instructions, const QPointF& Position)
+// use to get the part of an element its cell holds in place
+static QPointF swGetPlacementGravity(int Placement, bool Page)
+{
+	auto GetGravity = [Page](int Cell)
+	{
+		switch (Cell)
+		{
+		case 0:
+			return Page ? 0.0 : 1.0;
+
+		case 1:
+			return 0.0;
+
+		case 2:
+			return 0.5;
+
+		case 3:
+			return 1.0;
+
+		default:
+			return Page ? 1.0 : 0.0;
+		}
+	};
+
+	return QPointF(GetGravity(Placement % SW_PLACEMENT_GRID_SIZE), GetGravity(Placement / SW_PLACEMENT_GRID_SIZE));
+}
+
+// use to place an element, moved ones keep the edge nearest their side
+static void swPlaceElement(QGraphicsItem* Item, const swInstructions* Instructions, const QPointF& Position, const QPointF& Gravity)
 {
 	swInstructionsElementKey Key;
 	swGetElementKey(Item, Key);
@@ -283,9 +310,40 @@ static void swPlaceElement(QGraphicsItem* Item, const swInstructions* Instructio
 	{
 		Item->setFlag(QGraphicsItem::ItemIsMovable, false);
 		Item->setPos(Instructions->GetLockedPosition(Key));
+		return;
 	}
-	else
-		Item->setPos(Position + Instructions->GetElementOffset(Key));
+
+	const QPointF Offset = Instructions->GetElementOffset(Key);
+
+	if (Offset.isNull() && std::get<0>(Key) != swInstructionsPlacementElement::Notice)
+	{
+		Item->setPos(Position);
+		return;
+	}
+
+	// the placed centre picks the side to hold
+
+	const QSizeF Size = Item->boundingRect().size();
+	const QSizeF PlacedSize = Instructions->GetPlacedSize(Key, Size);
+	const QRectF Region = Item->parentItem() ? Item->parentItem()->boundingRect() : QRectF(0.0, 0.0, Instructions->mPageSetup.Width, Instructions->mPageSetup.Height);
+
+	auto GetShift = [](qreal Start, qreal Length, qreal Place, qreal CellGravity, qreal PlacedLength, qreal ItemLength)
+	{
+		const qreal Center = Place + CellGravity * (ItemLength - PlacedLength) + PlacedLength / 2.0;
+		const qreal Side = Center < Start + Length / 3.0 ? 0.0 : (Center > Start + 2.0 * Length / 3.0 ? 1.0 : 0.5);
+
+		return (Side - CellGravity) * (PlacedLength - ItemLength);
+	};
+
+	const QPointF Place = Position + Offset;
+
+	Item->setPos(Place + QPointF(GetShift(Region.left(), Region.width(), Place.x(), Gravity.x(), PlacedSize.width(), Size.width()), GetShift(Region.top(), Region.height(), Place.y(), Gravity.y(), PlacedSize.height(), Size.height())));
+}
+
+// use to get the offset of a moved element from its placement
+static QPointF swGetMovedOffset(const QGraphicsItem* Item, const QPointF& Distance)
+{
+	return Item->pos() + Distance - Item->data(SW_PLACEMENT_POSITION_DATA).toPointF();
 }
 
 // use to get pixels per page point
@@ -1995,6 +2053,7 @@ void swInstructionsPageWidget::AlignSelection(int Placement, bool LastSelection)
 
 	const QRectF ReferenceRect = ReferenceIt->second->sceneBoundingRect();
 	std::map<swInstructionsElementKey, QPointF> Offsets;
+	std::map<swInstructionsElementKey, QSizeF> Sizes;
 
 	// locked elements keep their position
 	for (const swInstructionsElementKey& Key : mSelectionOrder)
@@ -2008,10 +2067,13 @@ void swInstructionsPageWidget::AlignSelection(int Placement, bool LastSelection)
 		const QPointF Distance = swGetPlacementPosition(ReferenceRect, ItemRect.size(), Placement) - ItemRect.topLeft();
 
 		if (!Distance.isNull())
-			Offsets[Key] = mInstructions->GetElementOffset(Key) + Distance;
+		{
+			Offsets[Key] = swGetMovedOffset(ItemIt->second, Distance);
+			Sizes[Key] = ItemIt->second->boundingRect().size();
+		}
 	}
 
-	mInstructions->SetElementOffsets(Offsets);
+	mInstructions->SetElementOffsets(Offsets, Sizes);
 }
 
 // use to get a band property of a band
@@ -2122,14 +2184,14 @@ void swInstructionsPageWidget::PlaceElement(int Placement)
 		const QRectF BandRect = swGetBandContentRect(mInstructions, PageIndex, Band);
 
 		if (!BandRect.isNull())
-			mInstructions->SetNoticePosition(Id, Item->pos() + swGetPlacementPosition(BandRect, ItemRect.size(), swGetValidPlacement(Placement, true)) - ItemRect.topLeft() - BandRect.topLeft());
+			mInstructions->SetNoticePosition(Id, Item->pos() + swGetPlacementPosition(BandRect, ItemRect.size(), swGetValidPlacement(Placement, true)) - ItemRect.topLeft() - BandRect.topLeft(), Item->boundingRect().size());
 
 		return;
 	}
 
 	const QPointF Distance = swGetPagePlacementPosition(mInstructions, MarginsRect, ItemRect.size(), Placement) - ItemRect.topLeft();
 
-	mInstructions->SetNoticePosition(Id, Item->pos() + Distance);
+	mInstructions->SetNoticePosition(Id, Item->pos() + Distance, Item->boundingRect().size());
 }
 
 // use to fill the page codes of a text
@@ -2232,20 +2294,20 @@ static void swAddStepArea(swInstructions* Instructions, const swInstructionsStep
 	StepImageItem->Update();
 
 	const int ImagePlacement = swGetValidPlacement(Instructions->GetIntProperty(swInstructionsPropertyType::StepImagePlacement, Step.Model, Step.Step), true);
-	swPlaceElement(StepImageItem, Instructions, swGetPlacementPosition(ImagePlaceRect, StepImageItem->boundingRect().size(), ImagePlacement));
+	swPlaceElement(StepImageItem, Instructions, swGetPlacementPosition(ImagePlaceRect, StepImageItem->boundingRect().size(), ImagePlacement), swGetPlacementGravity(ImagePlacement, false));
 
 	// place moved and locked elements first
 	if (NumberAnchor == swInstructionsPlacementAnchor::Area)
-		swPlaceElement(StepNumberItem, Instructions, NumberRect.topLeft());
+		swPlaceElement(StepNumberItem, Instructions, NumberRect.topLeft(), swGetPlacementGravity(NumberPlacement, false));
 
 	if (PartsAnchor == swInstructionsPlacementAnchor::Area)
-		swPlaceElement(PartsImageItem, Instructions, PartsRect.topLeft());
+		swPlaceElement(PartsImageItem, Instructions, PartsRect.topLeft(), swGetPlacementGravity(PartsPlacement, false));
 
 	if (NumberAnchor == swInstructionsPlacementAnchor::PartsList)
-		swPlaceElement(StepNumberItem, Instructions, swGetPlacementPosition(QRectF(PartsImageItem->pos(), PartsSize), NumberSize, NumberPlacement));
+		swPlaceElement(StepNumberItem, Instructions, swGetPlacementPosition(QRectF(PartsImageItem->pos(), PartsSize), NumberSize, NumberPlacement), swGetPlacementGravity(NumberPlacement, false));
 
 	if (PartsAnchor == swInstructionsPlacementAnchor::StepNumber)
-		swPlaceElement(PartsImageItem, Instructions, swGetPlacementPosition(QRectF(StepNumberItem->pos(), NumberSize), PartsSize, PartsPlacement));
+		swPlaceElement(PartsImageItem, Instructions, swGetPlacementPosition(QRectF(StepNumberItem->pos(), NumberSize), PartsSize, PartsPlacement), swGetPlacementGravity(PartsPlacement, false));
 }
 
 // use to add the page elements
@@ -2301,7 +2363,7 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 
 		for (const swCoverText& CoverText : CoverTexts)
 		{
-			swPlaceElement(CoverText.Item, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, CoverText.Size, CoverText.Placement));
+			swPlaceElement(CoverText.Item, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, CoverText.Size, CoverText.Placement), swGetPlacementGravity(CoverText.Placement, true));
 
 			// the model image leaves room for the inner rows
 			const int Row = CoverText.Placement / SW_PLACEMENT_GRID_SIZE;
@@ -2331,7 +2393,7 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 			ModelImageItem->Update();
 
 			const int Placement = swGetValidPlacement(Instructions->GetIntProperty(swInstructionsPropertyType::CoverImagePlacement, Model, LastStep), true);
-			swPlaceElement(ModelImageItem, Instructions, swGetPlacementPosition(ImageRect, ModelImageItem->boundingRect().size(), Placement));
+			swPlaceElement(ModelImageItem, Instructions, swGetPlacementPosition(ImageRect, ModelImageItem->boundingRect().size(), Placement), swGetPlacementGravity(Placement, false));
 		}
 
 		return;
@@ -2351,7 +2413,7 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 			const QSizeF TitleSize = TitleItem->boundingRect().size();
 			const int TitlePlacement = swGetValidPlacement(Instructions->GetIntProperty(swInstructionsPropertyType::BillOfMaterialsTitlePlacement, Page->Model, 0), true);
 			const QPointF TitlePosition = swGetPlacementPosition(MarginsRect, TitleSize, TitlePlacement);
-			swPlaceElement(TitleItem, Instructions, TitlePosition);
+			swPlaceElement(TitleItem, Instructions, TitlePosition, swGetPlacementGravity(TitlePlacement, false));
 			TitleRect = QRectF(TitlePosition, TitleSize);
 
 			if (TitlePosition.y() + TitleSize.height() / 2.0 < MarginsRect.center().y())
@@ -2368,12 +2430,16 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 
 			const int CountPlacement = Instructions->GetIntProperty(swInstructionsPropertyType::BillOfMaterialsPartCountPlacement, Page->Model, 0);
 			QPointF CountPosition = swGetPagePlacementPosition(Instructions, MarginsRect, CountSize, CountPlacement);
+			QPointF CountGravity = swGetPlacementGravity(CountPlacement, true);
 
 			// beside the title when it fits, else past it
 			if (QRectF(CountPosition, CountSize).intersects(TitleRect))
+			{
 				CountPosition = swGetPlacementPosition(PartsRect, CountSize, swGetValidPlacement(CountPlacement, true));
+				CountGravity = swGetPlacementGravity(swGetValidPlacement(CountPlacement, true), false);
+			}
 
-			swPlaceElement(CountItem, Instructions, CountPosition);
+			swPlaceElement(CountItem, Instructions, CountPosition, CountGravity);
 
 			if (CountPosition.y() + CountSize.height() / 2.0 < PartsRect.center().y())
 				PartsRect.setTop(qMax(PartsRect.top(), CountPosition.y() + CountSize.height()));
@@ -2387,7 +2453,7 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 		PartsImageItem->Update();
 
 		const int Placement = swGetValidPlacement(Instructions->GetIntProperty(swInstructionsPropertyType::BillOfMaterialsPlacement, Page->Model, 0), true);
-		swPlaceElement(PartsImageItem, Instructions, swGetPlacementPosition(PartsRect, PartsImageItem->boundingRect().size(), Placement));
+		swPlaceElement(PartsImageItem, Instructions, swGetPlacementPosition(PartsRect, PartsImageItem->boundingRect().size(), Placement), swGetPlacementGravity(Placement, false));
 
 		return;
 	}
@@ -2555,7 +2621,7 @@ static void swAddPageAnnotations(swInstructions* Instructions, size_t PageIndex,
 			swRotateWatermark(NoticeItem, Instructions);
 		}
 
-		swPlaceElement(NoticeItem, Instructions, BandRect.topLeft() + Notice.Position);
+		swPlaceElement(NoticeItem, Instructions, BandRect.topLeft() + Notice.Position, QPointF());
 	}
 
 	std::map<swInstructionsElementKey, QGraphicsItem*> ElementItems;
@@ -2669,10 +2735,10 @@ static void swAddPageImages(swInstructions* Instructions, const swInstructionsPa
 				ImageItem->SetBoxStyle(Instructions->GetPageBoxStyle(PageIndex, swInstructionsBoxElement::Watermark));
 				swRotateWatermark(ImageItem, Instructions);
 				ImageItem->setZValue(-1.0);
-				swPlaceElement(ImageItem, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, ImageItem->boundingRect().size(), Image.Placement));
+				swPlaceElement(ImageItem, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, ImageItem->boundingRect().size(), Image.Placement), swGetPlacementGravity(Image.Placement, true));
 			}
 			else
-				swPlaceElement(ImageItem, Instructions, swGetPlacementPosition(BandRect, ImageItem->boundingRect().size(), swGetValidPlacement(Image.Placement, true)));
+				swPlaceElement(ImageItem, Instructions, swGetPlacementPosition(BandRect, ImageItem->boundingRect().size(), swGetValidPlacement(Image.Placement, true)), swGetPlacementGravity(swGetValidPlacement(Image.Placement, true), false));
 
 			continue;
 		}
@@ -2681,7 +2747,7 @@ static void swAddPageImages(swInstructions* Instructions, const swInstructionsPa
 			continue;
 
 		swInstructionsImageItem* ImageItem = new swInstructionsImageItem(PageItem, Instructions, Image);
-		swPlaceElement(ImageItem, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, ImageItem->boundingRect().size(), Image.Placement));
+		swPlaceElement(ImageItem, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, ImageItem->boundingRect().size(), Image.Placement), swGetPlacementGravity(Image.Placement, true));
 	}
 }
 
@@ -2700,7 +2766,7 @@ static void swAddPageCounts(swInstructions* Instructions, const swInstructionsPa
 			swInstructionsPartCountItem* CountItem = new swInstructionsPartCountItem(PageItem, Instructions, swInstructionsPlacementElement::PagePartCount, nullptr, Count);
 
 			const int Placement = Instructions->GetIntProperty(swInstructionsPropertyType::PagePartCountPlacement, nullptr, 0);
-			swPlaceElement(CountItem, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, CountItem->boundingRect().size(), Placement));
+			swPlaceElement(CountItem, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, CountItem->boundingRect().size(), Placement), swGetPlacementGravity(Placement, true));
 		}
 	}
 
@@ -2733,8 +2799,8 @@ static void swAddPageCounts(swInstructions* Instructions, const swInstructionsPa
 	// both together stay on the page
 	const QRectF GroupRect = PreviewRect.united(QRectF(CountPosition, CountSize));
 	const int PreviewPlacement = Instructions->GetIntProperty(swInstructionsPropertyType::SubmodelPreviewPlacement, Model, LastStep);
-	swPlaceElement(PreviewItem, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, GroupRect.size(), PreviewPlacement) - GroupRect.topLeft());
-	swPlaceElement(CountItem, Instructions, CountPosition);
+	swPlaceElement(PreviewItem, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, GroupRect.size(), PreviewPlacement) - GroupRect.topLeft(), swGetPlacementGravity(PreviewPlacement, true));
+	swPlaceElement(CountItem, Instructions, CountPosition, swGetPlacementGravity(CountPlacement, false));
 }
 
 void swUpdateInstructionsPageScene(swInstructions* Instructions, const swInstructionsPage* Page, QGraphicsScene* Scene)
@@ -2779,7 +2845,7 @@ void swUpdateInstructionsPageScene(swInstructions* Instructions, const swInstruc
 		swInstructionsPageNumberItem* PageNumberItem = new swInstructionsPageNumberItem(PageItem, Instructions, PageIndex);
 
 		const int Placement = Instructions->GetIntProperty(swInstructionsPropertyType::PageNumberPlacement, nullptr, 0);
-		swPlaceElement(PageNumberItem, Instructions, swGetPagePlacementPosition(Instructions, ContentRect, PageNumberItem->boundingRect().size(), Placement));
+		swPlaceElement(PageNumberItem, Instructions, swGetPagePlacementPosition(Instructions, ContentRect, PageNumberItem->boundingRect().size(), Placement), swGetPlacementGravity(Placement, true));
 	}
 
 	new swInstructionsGuideItem(ContentRect, PageItem);
@@ -3858,6 +3924,7 @@ void swInstructionsPageWidget::NudgeSelection(int DirectionX, int DirectionY, bo
 	const qreal Step = FullUnit ? mInstructions->GetGridSize() : mInstructions->GetGridSnapSize();
 	const QPointF Distance(DirectionX * Step, DirectionY * Step);
 	std::map<swInstructionsElementKey, QPointF> Offsets;
+	std::map<swInstructionsElementKey, QSizeF> Sizes;
 	bool Moved = false;
 
 	// one redraw for the whole selection
@@ -3874,14 +3941,17 @@ void swInstructionsPageWidget::NudgeSelection(int DirectionX, int DirectionY, bo
 			if (mInstructions->IsElementLocked(Key))
 				mInstructions->LockElement(Key, mInstructions->GetLockedPosition(Key) + Distance);
 			else if (Item->flags() & QGraphicsItem::ItemIsMovable)
-				Offsets[Key] = mInstructions->GetElementOffset(Key) + Distance;
+			{
+				Offsets[Key] = swGetMovedOffset(Item, Distance);
+				Sizes[Key] = Item->boundingRect().size();
+			}
 			else
 				continue;
 
 			Moved = true;
 		}
 
-		mInstructions->SetElementOffsets(Offsets);
+		mInstructions->SetElementOffsets(Offsets, Sizes);
 	}
 
 	if (Moved)
@@ -3997,12 +4067,14 @@ void swInstructionsPageWidget::mouseReleaseEvent(QMouseEvent* Event)
 		const QPointF Distance = mResizeItem->pos() - mResizeStartPosition;
 		const bool HasKey = swGetElementKey(mResizeItem, Key);
 		const qreal Inset = dynamic_cast<swInstructionsBoxBase*>(mResizeItem)->GetBoxStyle().GetInset();
+		const QPointF Offset = swGetMovedOffset(mResizeItem, QPointF());
+		const QSizeF PlacedSize = mResizeItem->boundingRect().size();
 
 		mResizeItem = nullptr;
 		mResizeHandle = 0;
 
 		if (HasKey)
-			QTimer::singleShot(0, this, [this, Key, Size, Distance, Inset]()
+			QTimer::singleShot(0, this, [this, Key, Size, Distance, Inset, Offset, PlacedSize]()
 			{
 				{
 					const QSignalBlocker Blocker(mInstructions);
@@ -4021,7 +4093,7 @@ void swInstructionsPageWidget::mouseReleaseEvent(QMouseEvent* Event)
 					if (!Distance.isNull() && mInstructions->IsElementLocked(Key))
 						mInstructions->LockElement(Key, mInstructions->GetLockedPosition(Key) + Distance);
 					else if (!Distance.isNull())
-						mInstructions->SetElementOffsets({ { Key, mInstructions->GetElementOffset(Key) + Distance } });
+						mInstructions->SetElementOffsets({ { Key, Offset } }, { { Key, PlacedSize } });
 				}
 
 				emit mInstructions->PageLayoutChanged();
@@ -4033,6 +4105,7 @@ void swInstructionsPageWidget::mouseReleaseEvent(QMouseEvent* Event)
 	QGraphicsView::mouseReleaseEvent(Event);
 
 	std::map<swInstructionsElementKey, QPointF> Offsets;
+	std::map<swInstructionsElementKey, QSizeF> Sizes;
 
 	for (const std::pair<QGraphicsItem*, QPointF>& DragItem : mDragItems)
 	{
@@ -4042,7 +4115,8 @@ void swInstructionsPageWidget::mouseReleaseEvent(QMouseEvent* Event)
 		if (Distance.isNull() || !swGetElementKey(DragItem.first, Key))
 			continue;
 
-		Offsets[Key] = mInstructions->GetElementOffset(Key) + Distance;
+		Offsets[Key] = swGetMovedOffset(DragItem.first, QPointF());
+		Sizes[Key] = DragItem.first->boundingRect().size();
 	}
 
 	mDragItems.clear();
@@ -4051,9 +4125,9 @@ void swInstructionsPageWidget::mouseReleaseEvent(QMouseEvent* Event)
 		return;
 
 	// rebuild after the release
-	QTimer::singleShot(0, this, [this, Offsets]()
+	QTimer::singleShot(0, this, [this, Offsets, Sizes]()
 	{
-		mInstructions->SetElementOffsets(Offsets);
+		mInstructions->SetElementOffsets(Offsets, Sizes);
 	});
 }
 
