@@ -281,6 +281,11 @@ void swModel::SaveLDraw(QTextStream& Stream, bool SelectedOnly, swStep LastStep)
 			Stream << QLatin1String("0 !SW ") << Property << QLatin1String(" INSTRUCTION") << Arguments << LineEnding;
 		}
 
+		// separator ends the instructions
+
+		if (!mInstructionLines.isEmpty())
+			Stream << QLatin1String("0") << LineEnding;
+
 		// pose joint rotations in ldraw axes
 		for (const swPose& Pose : mPoses)
 			for (const swJointAngle& Joint : Pose.Joints)
@@ -511,6 +516,7 @@ void swModel::LoadLDraw(QIODevice& Device, Project* Project)
 	mCutawayShape = swCutawayShape::None;
 	bool ReadingHeader = true;
 	bool FirstLine = true;
+	bool AfterInstructions = false;
 
 	while (!Device.atEnd())
 	{
@@ -521,6 +527,11 @@ void swModel::LoadLDraw(QIODevice& Device, Project* Project)
 
 		QString Token;
 		LineStream >> Token;
+
+		// only right after the instructions
+
+		const bool InstructionsSeparator = AfterInstructions && Line.trimmed() == QLatin1String("0");
+		AfterInstructions = false;
 
 		if (Token == QLatin1String("0"))
 		{
@@ -549,6 +560,11 @@ void swModel::LoadLDraw(QIODevice& Device, Project* Project)
 				ReadingHeader = false;
 				continue;
 			}
+
+			// instructions separator too
+
+			if (InstructionsSeparator)
+				continue;
 
 			if (ReadingHeader)
 			{
@@ -701,6 +717,7 @@ void swModel::LoadLDraw(QIODevice& Device, Project* Project)
 			else if (Token == QLatin1String("INSTRUCTION"))
 			{
 				mInstructionLines.append(LineStream.readAll().trimmed());
+				AfterInstructions = true;
 			}
 			else if (Token == QLatin1String("GROUP"))
 			{

@@ -22047,12 +22047,12 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation>Die explodierte Kopie benötigt einen anderen Namen als die geöffnete Datei.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="804"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="821"/>
         <source>Model &apos;%1&apos;: reference to &apos;%2&apos; was ignored because it would create a circular reference.</source>
         <translation>Modell &apos;%1&apos;: Verweis auf &apos;%2&apos; wurde ignoriert, da dadurch ein Zirkelverweis erstellt würde.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="1093"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="1110"/>
         <location filename="../../source/core/sw_model_group.cpp" line="65"/>
         <source>Group </source>
         <translation>Gruppe </translation>

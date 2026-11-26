@@ -22035,12 +22035,12 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
         <translation>A cópia explodida precisa de um nome diferente do ficheiro aberto.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="804"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="821"/>
         <source>Model &apos;%1&apos;: reference to &apos;%2&apos; was ignored because it would create a circular reference.</source>
         <translation>Modelo &apos;%1&apos;: a referência a &apos;%2&apos; foi ignorada porque criaria uma referência circular.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="1093"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="1110"/>
         <location filename="../../source/core/sw_model_group.cpp" line="65"/>
         <source>Group </source>
         <translation>Grupo </translation>

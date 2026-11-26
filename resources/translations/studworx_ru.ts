@@ -22042,12 +22042,12 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Разнесённой копии нужно имя, отличное от имени открытого файла.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="804"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="821"/>
         <source>Model &apos;%1&apos;: reference to &apos;%2&apos; was ignored because it would create a circular reference.</source>
         <translation>Модель &apos;%1&apos;: ссылка на &apos;%2&apos; была проигнорирована, поскольку она создала бы циклическую ссылку.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="1093"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="1110"/>
         <location filename="../../source/core/sw_model_group.cpp" line="65"/>
         <source>Group </source>
         <translation>Группа </translation>

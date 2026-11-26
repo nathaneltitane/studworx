@@ -22243,12 +22243,12 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>分解副本的名稱必須不同於已開啟的檔案。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="804"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="821"/>
         <source>Model &apos;%1&apos;: reference to &apos;%2&apos; was ignored because it would create a circular reference.</source>
         <translation>模型 &apos;%1&apos;：因為會形成循環參照，已忽略對 &apos;%2&apos; 的參照。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="1093"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="1110"/>
         <location filename="../../source/core/sw_model_group.cpp" line="65"/>
         <source>Group </source>
         <translation>群組 </translation>

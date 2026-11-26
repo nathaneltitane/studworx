@@ -198,11 +198,11 @@ void swTests::InstructionsLayoutIsAlwaysWritten()
 
 	// saved instruction lines of a model
 
-	const auto Resave = [&](const QString& Name, const QByteArray& Lines)
+	const auto SaveText = [&](const QString& Name, const QByteArray& Text)
 	{
 		QFile Model(Folder.filePath(Name + ".ldr"));
 		Model.open(QIODevice::WriteOnly);
-		Model.write("0 main\r\n" + Lines + "1 16 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n");
+		Model.write(Text);
 		Model.close();
 
 		QProcess Save;
@@ -213,7 +213,12 @@ void swTests::InstructionsLayoutIsAlwaysWritten()
 
 		QFile Saved(Folder.filePath(Name + "saved.ldr"));
 
-		return Saved.open(QIODevice::ReadOnly) ? QString::fromUtf8(Saved.readAll()).split("\r\n").filter("INSTRUCTION") : QStringList();
+		return Saved.open(QIODevice::ReadOnly) ? Saved.readAll() : QByteArray();
+	};
+
+	const auto Resave = [&](const QString& Name, const QByteArray& Lines)
+	{
+		return QString::fromUtf8(SaveText(Name, "0 main\r\n" + Lines + "1 16 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n")).split("\r\n").filter("INSTRUCTION");
 	};
 
 	const QStringList Old = Resave("old", "0 !SW PROPERTY INSTRUCTION COVER FRONT SHOW_PRODUCT_ID TRUE\r\n0 !SW PROPERTY INSTRUCTION COVER FRONT AUTHOR_PLACEMENT 18\r\n0 !SW OFFSET INSTRUCTION COVER_FRONT_PRODUCT_ID \"old.ldr\" 0 -20 -40\r\n");
@@ -224,6 +229,16 @@ void swTests::InstructionsLayoutIsAlwaysWritten()
 
 	QVERIFY(Sized.filter(QRegularExpression("^0 !SW PAGE_SETUP INSTRUCTION .* UNITS CM PX$")).size() == 1);
 	QVERIFY(Sized.contains("0 !SW OFFSET INSTRUCTION COVER_FRONT_COMMENTS - 0 -12.5 4 SIZE 120 30"));
+
+	// one separator after the instructions
+
+	const QByteArray Once = SaveText("once", "0 main\r\n0 !SW PROPERTY INSTRUCTION COVER SHOW_BACK TRUE\r\n1 16 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n");
+	const QByteArray Twice = SaveText("twice", Once);
+	const QStringList OnceLines = QString::fromUtf8(Once).split(QRegularExpression("\r?\n"));
+	const qsizetype LastInstruction = OnceLines.lastIndexOf(QRegularExpression(".* INSTRUCTION .*"));
+
+	QVERIFY(LastInstruction != -1 && LastInstruction + 1 < OnceLines.size() && OnceLines.at(LastInstruction + 1) == "0");
+	QCOMPARE(Twice, Once);
 
 	QVERIFY(!Old.isEmpty() && !Fresh.isEmpty());
 

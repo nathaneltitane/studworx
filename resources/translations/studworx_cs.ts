@@ -22121,12 +22121,12 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Rozložená kopie potřebuje jiný název, než má otevřený soubor.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="804"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="821"/>
         <source>Model &apos;%1&apos;: reference to &apos;%2&apos; was ignored because it would create a circular reference.</source>
         <translation>Model &apos;%1&apos;: odkaz na &apos;%2&apos; byl ignorován, protože by vytvořil kruhový odkaz.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="1093"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="1110"/>
         <location filename="../../source/core/sw_model_group.cpp" line="65"/>
         <source>Group </source>
         <translation>Skupina </translation>

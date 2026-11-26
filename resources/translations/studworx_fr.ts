@@ -22041,12 +22041,12 @@ Choisir où l’enregistrer et télécharger le dernier %3 maintenant ?</transla
         <translation>La copie éclatée doit avoir un nom différent de celui du fichier ouvert.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="804"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="821"/>
         <source>Model &apos;%1&apos;: reference to &apos;%2&apos; was ignored because it would create a circular reference.</source>
         <translation>Modèle &apos;%1&apos;&#xa0;: la référence à &apos;%2&apos; a été ignorée car elle créerait une référence circulaire.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="1093"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="1110"/>
         <location filename="../../source/core/sw_model_group.cpp" line="65"/>
         <source>Group </source>
         <translation>Groupe </translation>
