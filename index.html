@@ -50,7 +50,7 @@
 					"description": "StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library.",
 					"applicationCategory": "DesignApplication",
 					"operatingSystem": "Linux, Windows, macOS",
-					"softwareVersion": "2026-11-25",
+					"softwareVersion": "2026-11-26",
 					"license": "https://www.gnu.org/licenses/gpl-3.0.html",
 					"downloadUrl": "https://github.com/nathaneltitane/studworx/releases/latest",
 					"image": "https://studworx.app/resources/social/social.png",
@@ -2324,11 +2324,11 @@
 					</thead>
 
 					<tbody>
-						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-25_amd64.deb / arm64.deb</td></tr>
-						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-25-x86_64.rpm / aarch64.rpm</td></tr>
-						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-25-x86_64.appimage / aarch64.appimage</td></tr>
-						<tr><td>Windows</td><td>studworx-windows-2026-11-25-x64.exe</td></tr>
-						<tr><td>macOS</td><td>studworx-macos-2026-11-25-universal.dmg</td></tr>
+						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-26_amd64.deb / arm64.deb</td></tr>
+						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-26-x86_64.rpm / aarch64.rpm</td></tr>
+						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-26-x86_64.appimage / aarch64.appimage</td></tr>
+						<tr><td>Windows</td><td>studworx-windows-2026-11-26-x64.exe</td></tr>
+						<tr><td>macOS</td><td>studworx-macos-2026-11-26-universal.dmg</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -2381,12 +2381,19 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
+				<summary>2026-11-26</summary>
+
+				<ul>
+					<li><a href="#instructions">Instructions</a>: images linked with ./ are found next to the model file, or from the folder StudWorx was started in</li>
+				</ul>
+			</details>
+
+			<details>
 				<summary>2026-11-25</summary>
 
 				<ul>
-					<li><a href="#instructions">Instructions</a>: moved elements and notices keep the edge nearest their side, so they stay put when their content changes</li>
+					<li>Instructions: moved elements and notices keep the edge nearest their side, so they stay put when their content changes</li>
 					<li>Instructions: page units are written as PX, MM, CM or IN in the model file</li>
-					<li>Instructions: images linked with ./ are found next to the model file, or from the folder StudWorx was started in</li>
 					<li><a href="#files">Files</a>: saved <a href="#models">models</a> space their header, license and instructions with empty 0 lines, write the author only when set, and end every submodel with 0 NOFILE and a blank line</li>
 					<li>Properties: the Summary tab has a Publication group with title, author, product ID, version, publication date, URL, contact, copyright and notice, saved in the model file</li>
 					<li><a href="#preferences">Preferences</a>: the Author group is gone, the author of a model lives in Model Properties &gt; Summary</li>
@@ -2519,21 +2526,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				</ul>
 			</details>
 
-			<details>
-				<summary>2026-11-19</summary>
-
-				<ul>
-					<li>Joints: Joint Mode with nothing selected, or from a right click on empty space, opens an overview of every joint, outlined and ringed; click an outlined part to open its joint</li>
-					<li>Preferences: the joint options have their own Joints group, with Joint Mode Start last</li>
-					<li>Preferences: Select Joints by Submodel, off by default, opens the nearest joint when you click anywhere on a jointed submodel in the joint overview</li>
-					<li>Mouse: the right button orbits only once the mouse moves, so a plain right click opens the right-click menu</li>
-					<li>Shading: menus list Default Lights, Flat and Wireframe, then Studio, Standard, Matte and Toon; Studio is the new default lighting style</li>
-					<li>Save Model Image: the preview plays the Joints motion from pose to pose, framed once so the model holds still</li>
-					<li>Train tracks: no crash when a track part is picked before the view draws it</li>
-					<li>Site: every image retaken from the installed build, with the joint overview, the Joints group in Preferences and Studio lighting</li>
-				</ul>
-			</details>
-
 			<p class="more"><a href="https://github.com/nathaneltitane/studworx/blob/main/NOTICE.md">Read every notice ›</a></p>
 		</section>
 
@@ -2544,7 +2536,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p>LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.</p>
 			<div class="authorship">
 				<a class="avatar" href="https://nathaneltitane.com" aria-label="N Λ T H Λ N E L"><img src="resources/avatar/avatar-bird.png" alt="" width="64" height="64"></a>
-				<p>Version // 2026-11-25<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://www.linkedin.com/in/nathaneltitane">LinkedIn</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
+				<p>Version // 2026-11-26<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://www.linkedin.com/in/nathaneltitane">LinkedIn</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
 			</div>
 		</div>
 
