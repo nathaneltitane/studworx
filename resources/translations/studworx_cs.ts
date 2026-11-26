@@ -15765,7 +15765,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Text upozornění</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_instructions.cpp" line="1866"/>
+        <location filename="../../source/transput/sw_instructions.cpp" line="1873"/>
         <source>%1 PIECES</source>
         <translation>%1 DÍLŮ</translation>
     </message>

@@ -15772,7 +15772,7 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
         <translation type="vanished">Texto do Aviso</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_instructions.cpp" line="1866"/>
+        <location filename="../../source/transput/sw_instructions.cpp" line="1873"/>
         <source>%1 PIECES</source>
         <translation>%1 PEÇAS</translation>
     </message>

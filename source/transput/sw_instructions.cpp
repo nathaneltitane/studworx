@@ -1677,13 +1677,20 @@ QString swInstructions::GetTextProperty(swInstructionsPropertyType Type) const
 	return mStepProperties[static_cast<int>(Type)].Value.toString();
 }
 
-// use to find a linked file, relative to the model file
+// use to find a linked file, model or working directory
 QString swInstructions::GetFilePath(const QString& FileName) const
 {
 	if (FileName.isEmpty() || !QFileInfo(FileName).isRelative() || !mProject || mProject->GetFileName().isEmpty())
 		return FileName;
 
-	return QFileInfo(mProject->GetFileName()).dir().filePath(FileName);
+	const QString ModelPath = QFileInfo(mProject->GetFileName()).dir().filePath(FileName);
+
+	// fall back to the working directory
+
+	if (!QFileInfo::exists(ModelPath) && QFileInfo::exists(FileName))
+		return QFileInfo(FileName).absoluteFilePath();
+
+	return ModelPath;
 }
 
 // use to read a text file, relative to the model file

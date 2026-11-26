@@ -5,6 +5,7 @@
 
   - Instructions: moved elements and notices keep the edge nearest their side, so they stay put when their content changes
   - Instructions: page units are written as PX, MM, CM or IN in the model file
+  - Instructions: images linked with ./ are found next to the model file, or from the folder StudWorx was started in
   - Files: saved models space their header, license and instructions with empty 0 lines, write the author only when set, and end every submodel with 0 NOFILE and a blank line
   - Properties: the Summary tab has a Publication group with title, author, product ID, version, publication date, URL, contact, copyright and notice, saved in the model file
   - Preferences: the Author group is gone, the author of a model lives in Model Properties > Summary

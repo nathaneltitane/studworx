@@ -40,6 +40,7 @@ private slots:
 	void HTMLExportUsesModelFolder();
 	void InstructionsExportPDF();
 	void InstructionsExportPages();
+	void InstructionsImageFallsBackToWorkingDirectory();
 	void FlattenReplacesNestedSubModels();
 	void AxisAlignedRotations_data();
 	void AxisAlignedRotations();

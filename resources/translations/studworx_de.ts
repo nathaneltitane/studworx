@@ -15727,7 +15727,7 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="vanished">Hinweistext</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_instructions.cpp" line="1866"/>
+        <location filename="../../source/transput/sw_instructions.cpp" line="1873"/>
         <source>%1 PIECES</source>
         <translation>%1 TEILE</translation>
     </message>

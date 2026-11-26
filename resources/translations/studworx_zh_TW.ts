@@ -15991,7 +15991,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">通知文字</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_instructions.cpp" line="1866"/>
+        <location filename="../../source/transput/sw_instructions.cpp" line="1873"/>
         <source>%1 PIECES</source>
         <translation>%1 個零件</translation>
     </message>

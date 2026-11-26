@@ -15772,7 +15772,7 @@ Choisir où l’enregistrer et télécharger le dernier %3 maintenant ?</transla
         <translation type="vanished">Texte de l’avis</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_instructions.cpp" line="1866"/>
+        <location filename="../../source/transput/sw_instructions.cpp" line="1873"/>
         <source>%1 PIECES</source>
         <translation>%1 PIÈCES</translation>
     </message>

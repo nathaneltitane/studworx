@@ -458,6 +458,61 @@ void swTests::InstructionsExportPages()
 	QCOMPARE(QImage(Folder.filePath("pages/" + Pages.first())).size(), QSize(480, 240));
 }
 
+// Exports the front cover of a model kept in a subfolder whose image is linked from the folder the export runs in, like a generated instructions copy.
+void swTests::InstructionsImageFallsBackToWorkingDirectory()
+{
+	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
+	const QString Binary = Environment.value("SW_TEST_BINARY");
+
+	if (Binary.isEmpty())
+		QSKIP("SW_TEST_BINARY is not set");
+
+	QTemporaryDir Folder;
+	QVERIFY(Folder.isValid());
+	QVERIFY(QDir(Folder.path()).mkpath("renders"));
+	QVERIFY(QDir(Folder.path()).mkpath("instructions"));
+
+	QImage Red(64, 64, QImage::Format_RGB32);
+	Red.fill(Qt::red);
+	QVERIFY(Red.save(Folder.filePath("renders/red.png")));
+
+	QFile Model(Folder.filePath("instructions/brick.ldr"));
+	QVERIFY(Model.open(QIODevice::WriteOnly));
+	Model.write("0 Test\r\n0 !SW PAGE_SETUP INSTRUCTION 480 240 16 16 16 16 UNITS 0 0\r\n0 !SW IMAGE INSTRUCTION 2 FRONT PLACEMENT 14 SIZE 100 FILE \"./renders/red.png\"\r\n1 4 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n");
+	Model.close();
+
+	QProcessEnvironment ExportEnvironment = Environment;
+	ExportEnvironment.insert("XDG_CONFIG_HOME", Folder.filePath("config"));
+	ExportEnvironment.insert("XDG_DATA_HOME", Folder.filePath("data"));
+	ExportEnvironment.insert("XDG_CACHE_HOME", Folder.filePath("cache"));
+
+	if (Environment.value("SW_TEST_NATIVE_DISPLAY") != QLatin1String("1"))
+		ExportEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
+
+	// export from the parent folder
+
+	QProcess Export;
+	Export.setProcessEnvironment(ExportEnvironment);
+	Export.setProcessChannelMode(QProcess::MergedChannels);
+	Export.setWorkingDirectory(Folder.path());
+	Export.start(Binary, { Model.fileName(), "--export-pages", Folder.filePath("pages") });
+	QVERIFY2(Export.waitForFinished(120000), "the pages were not saved");
+	QVERIFY2(Export.exitCode() == 0, Export.readAll().constData());
+
+	// the cover shows the image
+
+	const QImage Cover(Folder.filePath("pages/brick-page-01.png"));
+	QVERIFY(!Cover.isNull());
+	int RedPixels = 0;
+
+	for (int Y = 0; Y < Cover.height(); Y++)
+		for (int X = 0; X < Cover.width(); X++)
+			if (Cover.pixel(X, Y) == qRgb(255, 0, 0))
+				RedPixels++;
+
+	QVERIFY2(RedPixels > 100, qPrintable(QString::number(RedPixels)));
+}
+
 // Exports the back cover of two models that differ only in the product ID. The Publication URL text uses %id, so the pages differ only when the code is filled.
 void swTests::InstructionsFillsPublicationCodes()
 {
