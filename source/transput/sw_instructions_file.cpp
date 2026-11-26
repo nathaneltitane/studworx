@@ -1119,7 +1119,7 @@ QStringList swInstructions::ReadTemplateLines(const QString& FileName)
 	return CommandLines;
 }
 
-bool swInstructions::SaveTemplate(const QString& FileName) const
+bool swInstructions::SaveTemplate(const QString& FileName, bool UseCodes) const
 {
 	QFile File(FileName);
 
@@ -1131,8 +1131,35 @@ bool swInstructions::SaveTemplate(const QString& FileName) const
 	QTextStream Stream(&File);
 	Stream << "0 Instructions Template\n0 Name: " << QFileInfo(FileName).fileName() << "\n";
 
-	for (const QString& CommandLine : CommandLines)
+	// codes each model fills in
+
+	const std::pair<const char*, const char*> ModelCodes[] =
 	{
+		{ "%title", "MODEL TITLE" },
+		{ "%author", "AUTHOR" },
+		{ "%id", "PRODUCT ID" },
+		{ "%version", "VERSION" },
+		{ "%date", "PUBLICATION DATE" },
+		{ "%url", "WEB ADDRESS" },
+		{ "%contact", "CONTACT" },
+		{ "%copyright", "COPYRIGHT" },
+		{ "%notice", "NOTICE" },
+		{ "%comments", "COMMENTS" },
+		{ "%size", "MODEL SIZE" },
+		{ "%weight", "MODEL WEIGHT" },
+		{ "%page", "PAGE NUMBER, IN BANDS ONLY" }
+	};
+
+	Stream << "0\n0 // PUBLICATION VARIABLES - FILLED FROM EACH MODEL'S PROPERTIES:\n0\n";
+
+	for (const auto& [Code, Meaning] : ModelCodes)
+		Stream << "0 // " << QString::fromLatin1(Code).leftJustified(12) << Meaning << "\n";
+
+	Stream << "0\n";
+
+	for (const QString& StoredLine : CommandLines)
+	{
+		const QString CommandLine = UseCodes ? GetTemplateLine(StoredLine) : StoredLine;
 		const int CommandEnd = CommandLine.indexOf(QLatin1Char(' '));
 		Stream << "0 !SW " << CommandLine.left(CommandEnd) << " INSTRUCTION" << CommandLine.mid(CommandEnd) << "\n";
 	}
@@ -1140,6 +1167,85 @@ bool swInstructions::SaveTemplate(const QString& FileName) const
 	Stream.flush();
 
 	return File.error() == QFileDevice::NoError;
+}
+
+// use to make a line fit any model, its details as codes and its files from the model folder
+QString swInstructions::GetTemplateLine(const QString& CommandLine) const
+{
+	const swModel* Model = GetMainModel();
+
+	if (!Model)
+		return CommandLine;
+
+	const swModelProperties& Properties = Model->GetProperties();
+	std::vector<std::pair<QString, QLatin1String>> ModelCodes =
+	{
+		{ GetModelTitle(Model), QLatin1String("%title") },
+		{ Properties.mAuthor.trimmed(), QLatin1String("%author") },
+		{ Properties.mProductId, QLatin1String("%id") },
+		{ Properties.mVersion, QLatin1String("%version") },
+		{ Properties.mPublicationDate, QLatin1String("%date") },
+		{ Properties.mUrl, QLatin1String("%url") },
+		{ Properties.mContact, QLatin1String("%contact") },
+		{ Properties.mCopyright, QLatin1String("%copyright") },
+		{ Properties.mNotice, QLatin1String("%notice") },
+		{ Properties.mComments.trimmed(), QLatin1String("%comments") }
+	};
+
+	// longer details first, so a title holding the author stays whole
+	std::stable_sort(ModelCodes.begin(), ModelCodes.end(), [](const auto& First, const auto& Second) { return First.first.size() > Second.first.size(); });
+
+	auto CodeText = [&ModelCodes](QString Text)
+	{
+		for (const auto& [Value, Code] : ModelCodes)
+		{
+			// short details would match inside other words
+			if (Value.size() < 3)
+				continue;
+
+			const QRegularExpression ValueExpression(QLatin1String("(?<!\\w)") + QRegularExpression::escape(swEscapeInstructionsText(Value)) + QLatin1String("(?!\\w)"));
+			Text.replace(ValueExpression, Code);
+		}
+
+		return Text;
+	};
+
+	const QString ModelFolder = mProject && !mProject->GetFileName().isEmpty() ? QFileInfo(mProject->GetFileName()).absolutePath() : QString();
+
+	auto RelativeFile = [&ModelFolder](const QString& File)
+	{
+		if (ModelFolder.isEmpty() || !QFileInfo(File).isAbsolute() || !QDir::cleanPath(File).startsWith(ModelFolder + QLatin1Char('/')))
+			return File;
+
+		return QLatin1String("./") + QDir(ModelFolder).relativeFilePath(File);
+	};
+
+	// texts after TEXT, files in quotes after FILE, free text properties
+
+	const int TextStart = CommandLine.indexOf(QLatin1String(" TEXT "));
+
+	if (CommandLine.startsWith(QLatin1String("NOTICE ")) && TextStart >= 0)
+		return CommandLine.left(TextStart + 6) + CodeText(CommandLine.mid(TextStart + 6));
+
+	static const QRegularExpression FileExpression(QStringLiteral("^(IMAGE .* FILE \"|NOTICE .* FILE \")([^\"]*)(\".*)$"));
+	const QRegularExpressionMatch FileMatch = FileExpression.match(CommandLine);
+
+	if (FileMatch.hasMatch())
+		return FileMatch.captured(1) + RelativeFile(FileMatch.captured(2)) + FileMatch.captured(3);
+
+	if (!CommandLine.startsWith(QLatin1String("PROPERTY ")))
+		return CommandLine;
+
+	const int NameEnd = CommandLine.indexOf(QLatin1Char(' '), 9);
+	const int Type = NameEnd < 0 ? -1 : swGetInstructionsPropertyNames().indexOf(CommandLine.mid(9, NameEnd - 9));
+
+	if (Type < 0 || CreateDefaultProperties()[Type].Value.userType() != QMetaType::QString)
+		return CommandLine;
+
+	const QString Value = CommandLine.mid(NameEnd + 1);
+	const QString File = RelativeFile(Value);
+
+	return CommandLine.left(NameEnd + 1) + (File != Value ? File : CodeText(Value));
 }
 
 bool swInstructions::ApplyTemplate(const QString& FileName)

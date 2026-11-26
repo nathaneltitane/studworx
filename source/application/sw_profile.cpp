@@ -323,6 +323,7 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Instructions", "ElementAnchorColor", SW_RGBA(214, 51, 160, 255)),          // SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR #d633a0ff
 	swProfileEntry("Instructions", "RulerPointerColor", SW_RGBA(230, 40, 40, 255)),            // SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR #e62828ff
 	swProfileEntry("Instructions", "PageSpread", 0),                                           // SW_PROFILE_INSTRUCTIONS_PAGE_SPREAD
+	swProfileEntry("Instructions", "TemplateCodes", 1),                                        // SW_PROFILE_INSTRUCTIONS_TEMPLATE_CODES
 	swProfileEntry("Instructions", "ElementBoundaries", 0),                                    // SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_BOUNDARIES
 	swProfileEntry("Instructions", "ShowLayoutAreas", 0),                                      // SW_PROFILE_INSTRUCTIONS_SHOW_LAYOUT_AREAS
 	swProfileEntry("Instructions", "BoundaryEdgeColor", SW_RGBA(255, 85, 127, 255)),           // SW_PROFILE_INSTRUCTIONS_BOUNDARY_EDGE_COLOR #ff557fff

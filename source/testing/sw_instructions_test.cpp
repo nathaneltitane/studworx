@@ -472,6 +472,7 @@ void swTests::InstructionsTemplateKeepsNotices()
 	QFile Template(Folder.filePath("template.ldr"));
 	QVERIFY(Template.open(QIODevice::WriteOnly));
 	Template.write("0 Instructions Template\n0 Name: template.ldr\n");
+	Template.write("0\n0 // PUBLICATION VARIABLES - FILLED FROM EACH MODEL'S PROPERTIES:\n0\n0 // %title      MODEL TITLE\n0\n");
 	Template.write((Notices.join("\n") + "\n").toUtf8());
 
 	// drags saved for any model or for another one

@@ -328,13 +328,19 @@ swInstructionsPropertiesWidget::swInstructionsPropertiesWidget(QWidget* Parent, 
 	OptionsMenu->addSeparator();
 
 	// templates carry the look to other models
+	QAction* TemplateCodesAction = OptionsMenu->addAction(tr("Save Template with Codes"));
+	TemplateCodesAction->setToolTip(tr("Save Template turns the model's own title, author, web address and other details into codes like %title, and its image paths into paths from the model folder, so the template fits any model"));
+	TemplateCodesAction->setCheckable(true);
+	TemplateCodesAction->setChecked(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_TEMPLATE_CODES));
+	connect(TemplateCodesAction, &QAction::toggled, this, [](bool Checked) { swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_TEMPLATE_CODES, Checked); });
+
 	QAction* SaveTemplateAction = OptionsMenu->addAction(tr("Save Template..."));
 	SaveTemplateAction->setToolTip(tr("Save everything laid out in these instructions to a model file that any model can apply"));
 	connect(SaveTemplateAction, &QAction::triggered, this, [this]()
 	{
 		const QString FileName = QFileDialog::getSaveFileName(this, tr("Save Template"), QString(), tr("LDraw Files (*.ldr);;All Files (*)"));
 
-		if (!FileName.isEmpty() && !mInstructions->SaveTemplate(FileName))
+		if (!FileName.isEmpty() && !mInstructions->SaveTemplate(FileName, swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_TEMPLATE_CODES)))
 			QMessageBox::warning(this, tr("Save Template"), tr("Could not save the template '%1'.").arg(QDir::toNativeSeparators(FileName)));
 	});
 

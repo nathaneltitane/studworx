@@ -124,7 +124,7 @@
   - Site: the search fields have a ✕ button that clears the text and shows every group again
   - Instructions: a back cover closes the instructions, shown and blank by default, and the cover is now the Front Cover
   - Instructions: right click a cover to add a linked image, like a logo, on the front cover, the back cover or both, with its own placement, size and lock
-  - Instructions: Save Template and Apply Template in the Properties options carry the look, the steps per page and the cover images to any model, and Preferences > General > Default Instructions Template applies one under every model
+  - Instructions: Save Template and Apply Template in the Properties options carry the look, the steps per page and the cover images to any model, Save Template with Codes turns the model's own details into codes like %title, and Preferences > General > Default Instructions Template applies one under every model
   - Instructions: Use Document Font and Use Document Font Size work on their own, one gives all text the document typeface, the other its size, and older files keep both
   - Page Setup: Portrait or Landscape follows the width and height while they are typed
   - Instructions: the Placement buttons and Page Area now work on notices too, outer cells put a notice on the paper edge

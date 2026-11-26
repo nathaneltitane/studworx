@@ -889,7 +889,8 @@ public:
 	QString GetFilePath(const QString& FileName) const;
 
 	// Templates hold the document settings and images.
-	bool SaveTemplate(const QString& FileName) const;
+	bool SaveTemplate(const QString& FileName, bool UseCodes) const;
+	QString GetTemplateLine(const QString& CommandLine) const;
 	bool ApplyTemplate(const QString& FileName);
 	static QStringList ReadTemplateLines(const QString& FileName);
 
