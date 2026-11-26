@@ -597,6 +597,26 @@ QWidget* swInstructionsDialog::CreatePageBar()
 	for (QToolButton* Button : { SideBySideButton, StackedButton })
 		Button->setFixedSize(SpreadSize, SpreadSize);
 
+	// panels come back after closing
+
+	QToolButton* PanelsButton = new QToolButton(PageBar);
+	QMenu* PanelsMenu = new QMenu(PanelsButton);
+
+	PanelsButton->setText(tr("Pan&els"));
+	PanelsButton->setToolTip(tr("Show or hide the panels of the instructions window"));
+	PanelsButton->setWhatsThis(tr("<p><b>Panels</b></p><p>Show or hide the Pages, Properties, Placement, Grid, Editor and Print panels. Use it to bring back a panel you closed.</p>"));
+	PanelsButton->setPopupMode(QToolButton::InstantPopup);
+	PanelsButton->setMenu(PanelsMenu);
+	PageBarLayout->insertWidget(0, PanelsButton);
+
+	connect(PanelsMenu, &QMenu::aboutToShow, this, [this, PanelsMenu]()
+	{
+		PanelsMenu->clear();
+
+		for (QDockWidget* DockWidget : { static_cast<QDockWidget*>(mPageListWidget), static_cast<QDockWidget*>(mPropertiesWidget), static_cast<QDockWidget*>(mPlacementWidget), static_cast<QDockWidget*>(mGridWidget), static_cast<QDockWidget*>(mEditorWidget), static_cast<QDockWidget*>(mPrintWidget) })
+			PanelsMenu->addAction(DockWidget->toggleViewAction());
+	});
+
 	return PageBar;
 }
 
