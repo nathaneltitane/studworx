@@ -198,6 +198,30 @@ QByteArray Project::SerializeModelText(const swModel* Model, bool SelectedOnly, 
 	return Bytes;
 }
 
+// use to join blocks with nofile and blank lines
+static void swAppendDocumentBlock(QByteArray& Output, const QByteArray& Bytes, bool& OpenModel)
+{
+	const QByteArray LineEnding = Output.contains("\r\n") || Bytes.contains("\r\n") ? "\r\n" : "\n";
+	const bool Model = Bytes.startsWith("0 FILE");
+	const bool Ignore = Bytes.startsWith("0 NOFILE");
+
+	if (!Output.isEmpty() && !Output.endsWith('\n') && !Output.endsWith('\r'))
+		Output += LineEnding;
+
+	// close the previous model
+
+	if (OpenModel && !Ignore)
+		Output += "0 NOFILE" + LineEnding;
+
+	// blank line between blocks
+
+	if (!Ignore && !Bytes.isEmpty() && !Output.isEmpty() && !Output.endsWith("\n\n") && !Output.endsWith("\n\r\n"))
+		Output += LineEnding;
+
+	Output += Bytes;
+	OpenModel = Model;
+}
+
 QByteArray Project::SerializeStoredModel(const swModel* Model, const QString& Name, const DocumentBlock* Original, bool NeedsHeader, bool SelectedOnly, swStep LastStep)
 {
 	const QByteArray Current = SerializeModelText(Model, SelectedOnly, LastStep);
@@ -715,12 +739,10 @@ bool Project::Save(QTextStream& Stream) const
 	};
 
 	QByteArray Output;
-	const auto Append = [&Output](const QByteArray& Bytes, bool NewBlock)
+	bool OpenModel = false;
+	const auto Append = [&Output, &OpenModel](const QByteArray& Bytes)
 	{
-		if (NewBlock && !Output.isEmpty() && !Output.endsWith('\n') && !Output.endsWith('\r'))
-			Output += "\n";
-
-		Output += Bytes;
+		swAppendDocumentBlock(Output, Bytes, OpenModel);
 	};
 
 	size_t NextModel = 0;
@@ -735,22 +757,22 @@ bool Project::Save(QTextStream& Stream) const
 			if (Block.DuplicateModel)
 			{
 				if (WrittenModels.find(Block.Model) != WrittenModels.end() && Block.Model->GetFileName().compare(Block.OriginalName, Qt::CaseInsensitive) == 0)
-					Append(Block.Raw, true);
+					Append(Block.Raw);
 
 				continue;
 			}
 
 			const swModel* Model = Reordered ? mModels[NextModel++].get() : Block.Model;
-			Append(SerializeStoredModel(Model, Model->GetFileName(), OriginalFor(Model), mModels.size() > 1, false, 0), true);
+			Append(SerializeStoredModel(Model, Model->GetFileName(), OriginalFor(Model), mModels.size() > 1, false, 0));
 			WrittenModels.insert(Model);
 		}
 		else if (Block.Data)
 		{
-			Append(Block.Raw, true);
+			Append(Block.Raw);
 			WrittenData.insert(Block.Data.get());
 		}
 		else
-			Append(Block.Raw, false);
+			Append(Block.Raw);
 	}
 
 	for (const std::unique_ptr<swModel>& Model : mModels)
@@ -758,12 +780,16 @@ bool Project::Save(QTextStream& Stream) const
 		if (WrittenModels.find(Model.get()) != WrittenModels.end())
 			continue;
 
-		Append(SerializeStoredModel(Model.get(), Model->GetFileName(), OriginalFor(Model.get()), MPD || !mDocumentBlocks.empty(), false, 0), true);
+		Append(SerializeStoredModel(Model.get(), Model->GetFileName(), OriginalFor(Model.get()), MPD || !mDocumentBlocks.empty(), false, 0));
 	}
 
 	for (const std::shared_ptr<const swEmbeddedData>& Data : mEmbeddedData)
 		if (WrittenData.find(Data.get()) == WrittenData.end())
-			Append(Data->RawBlock, true);
+			Append(Data->RawBlock);
+
+	// last model ends with nofile too
+
+	swAppendDocumentBlock(Output, QByteArray(), OpenModel);
 
 	return WriteRaw(Stream, Output);
 }
@@ -893,12 +919,10 @@ swResult<QByteArray> Project::SerializeModel(const swModel* Root, bool SelectedO
 
 	const bool MPD = Models.size() > 1 || !Assets.empty();
 	QByteArray Output;
-	const auto Append = [&Output](const QByteArray& Bytes)
+	bool OpenModel = false;
+	const auto Append = [&Output, &OpenModel](const QByteArray& Bytes)
 	{
-		if (!Output.isEmpty() && !Output.endsWith('\n') && !Output.endsWith('\r'))
-			Output += "\n";
-
-		Output += Bytes;
+		swAppendDocumentBlock(Output, Bytes, OpenModel);
 	};
 
 	for (const ExportEntry& Entry : Models)
@@ -919,6 +943,8 @@ swResult<QByteArray> Project::SerializeModel(const swModel* Root, bool SelectedO
 
 	for (const std::shared_ptr<const swEmbeddedData>& Data : Assets)
 		Append(Data->RawBlock);
+
+	swAppendDocumentBlock(Output, QByteArray(), OpenModel);
 
 	if (SelectedOnly)
 		Output.prepend("0 !SW PROJECT CLIPBOARD " + mClipboardIdentity.toString().toUtf8() + "\n");

@@ -60,14 +60,23 @@ void swModelProperties::SaveLDraw(QTextStream& Stream) const
 	const QLatin1String LineEnding("\n");
 
 	Stream << QLatin1String("0 ") << mDescription << LineEnding;
-	Stream << QLatin1String("0 Name: ") << mModelName << LineEnding;
-	Stream << QLatin1String("0 Author: ") << mAuthor << LineEnding;
 
-	if (!mCopyright.isEmpty())
-		Stream << QLatin1String("0 !LICENSE ") << mCopyright << LineEnding;
+	// separator after the title
+
+	if (!mDescription.trimmed().isEmpty())
+		Stream << QLatin1String("0") << LineEnding;
+
+	Stream << QLatin1String("0 Name: ") << mModelName << LineEnding;
+
+	if (!mAuthor.isEmpty())
+		Stream << QLatin1String("0 Author: ") << mAuthor << LineEnding;
 
 	// separator ends the header
+
 	Stream << QLatin1String("0") << LineEnding;
+
+	if (!mCopyright.isEmpty())
+		Stream << QLatin1String("0 !LICENSE ") << mCopyright << LineEnding << QLatin1String("0") << LineEnding;
 
 	for (const auto& Text : gModelTexts)
 		if (!(this->*Text.Member).isEmpty())
@@ -554,12 +563,10 @@ void swModel::LoadLDraw(QIODevice& Device, Project* Project)
 				break;
 			}
 
-			// separator is rewritten on save
+			// header separators are rewritten on save
+
 			if (ReadingHeader && !FirstLine && Line.trimmed() == QLatin1String("0"))
-			{
-				ReadingHeader = false;
 				continue;
-			}
 
 			// instructions separator too
 

@@ -4817,16 +4817,16 @@
         <translation>Duplicitní model &apos;%1&apos; byl ignorován; názvy modelů nerozlišují malá a velká písmena.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="372"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="381"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="396"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="405"/>
         <source>Could not read file &apos;%1&apos;:
 %2</source>
         <translation>Soubor &apos;%1&apos; se nepodařilo přečíst:
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="362"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="471"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="386"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="495"/>
         <source>Could not open file &apos;%1&apos;:
 The file format is not recognized.</source>
         <translation>Nelze otevřít soubor &apos;%1&apos;:
@@ -4855,8 +4855,8 @@ Formát souboru není rozpoznán.</translation>
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="574"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="676"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="598"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="700"/>
         <source>Could not write all model data.</source>
         <translation>Nelze zapsat všechna data modelu.</translation>
     </message>
@@ -4931,10 +4931,10 @@ Formát souboru není rozpoznán.</translation>
         <translation>Díl s názvem &apos;%1&apos; v tomto modelu již existuje.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="362"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="372"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="381"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="471"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="386"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="396"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="405"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="495"/>
         <source>Load Model</source>
         <translation>Načíst model</translation>
     </message>
@@ -4960,17 +4960,17 @@ Formát souboru není rozpoznán.</translation>
         <translation>Nelze rezervovat název podmodelu &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="793"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="819"/>
         <source>Cannot export different submodels named &apos;%1&apos;.</source>
         <translation>Nelze exportovat různé podmodely s názvem &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="843"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="869"/>
         <source>Could not serialize all model data.</source>
         <translation>Nepodařilo se serializovat všechna data modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="881"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="907"/>
         <source>Cannot export different embedded data named &apos;%1&apos;.</source>
         <translation>Nelze exportovat různá vložená data s názvem &apos;%1&apos;.</translation>
     </message>
@@ -5046,12 +5046,12 @@ Formát souboru není rozpoznán.</translation>
         <location filename="../../source/core/sw_project_export_html.cpp" line="678"/>
         <location filename="../../source/core/sw_project_export_html.cpp" line="714"/>
         <location filename="../../source/core/sw_project_export_html.cpp" line="747"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="558"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="574"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="585"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="663"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="676"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="680"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="582"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="598"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="609"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="687"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="700"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="704"/>
         <source>Could not write file &apos;%1&apos;:
 %2</source>
         <translation>Soubor &apos;%1&apos; se nepodařilo zapsat:
@@ -22121,12 +22121,12 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Rozložená kopie potřebuje jiný název, než má otevřený soubor.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="821"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="828"/>
         <source>Model &apos;%1&apos;: reference to &apos;%2&apos; was ignored because it would create a circular reference.</source>
         <translation>Model &apos;%1&apos;: odkaz na &apos;%2&apos; byl ignorován, protože by vytvořil kruhový odkaz.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="1110"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="1117"/>
         <location filename="../../source/core/sw_model_group.cpp" line="65"/>
         <source>Group </source>
         <translation>Skupina </translation>

@@ -4792,16 +4792,16 @@
         <translation>Дубльована модель &apos;%1&apos; була проігнорована; назви моделей нечутливі до регістру.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="372"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="381"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="396"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="405"/>
         <source>Could not read file &apos;%1&apos;:
 %2</source>
         <translation>Не вдалося прочитати файл &apos;%1&apos;:
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="362"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="471"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="386"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="495"/>
         <source>Could not open file &apos;%1&apos;:
 The file format is not recognized.</source>
         <translation>Не вдалося відкрити файл &apos;%1&apos;:
@@ -4830,8 +4830,8 @@ File format is not recognized.</source>
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="574"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="676"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="598"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="700"/>
         <source>Could not write all model data.</source>
         <translation>Не вдалося записати всі дані моделі.</translation>
     </message>
@@ -4906,10 +4906,10 @@ File format is not recognized.</source>
         <translation>Деталь з назвою &apos;%1&apos; уже існує в цій моделі.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="362"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="372"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="381"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="471"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="386"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="396"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="405"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="495"/>
         <source>Load Model</source>
         <translation>Завантажити модель</translation>
     </message>
@@ -4935,17 +4935,17 @@ File format is not recognized.</source>
         <translation>Не вдалося зарезервувати назву підмоделі &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="793"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="819"/>
         <source>Cannot export different submodels named &apos;%1&apos;.</source>
         <translation>Неможливо експортувати різні підмоделі з назвою &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="843"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="869"/>
         <source>Could not serialize all model data.</source>
         <translation>Не вдалося серіалізувати всі дані моделі.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="881"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="907"/>
         <source>Cannot export different embedded data named &apos;%1&apos;.</source>
         <translation>Неможливо експортувати різні вбудовані дані під назвою &apos;%1&apos;.</translation>
     </message>
@@ -5021,12 +5021,12 @@ File format is not recognized.</source>
         <location filename="../../source/core/sw_project_export_html.cpp" line="678"/>
         <location filename="../../source/core/sw_project_export_html.cpp" line="714"/>
         <location filename="../../source/core/sw_project_export_html.cpp" line="747"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="558"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="574"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="585"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="663"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="676"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="680"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="582"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="598"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="609"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="687"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="700"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="704"/>
         <source>Could not write file &apos;%1&apos;:
 %2</source>
         <translation>Не вдалося записати файл &apos;%1&apos;:
@@ -22005,12 +22005,12 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Для розсунутої копії потрібна назва, відмінна від назви відкритого файлу.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="821"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="828"/>
         <source>Model &apos;%1&apos;: reference to &apos;%2&apos; was ignored because it would create a circular reference.</source>
         <translation>Модель &apos;%1&apos;: посилання на &apos;%2&apos; було проігноровано, оскільки це створило б циклічне посилання.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="1110"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="1117"/>
         <location filename="../../source/core/sw_model_group.cpp" line="65"/>
         <source>Group </source>
         <translation>Група </translation>

@@ -240,6 +240,15 @@ void swTests::InstructionsLayoutIsAlwaysWritten()
 	QVERIFY(LastInstruction != -1 && LastInstruction + 1 < OnceLines.size() && OnceLines.at(LastInstruction + 1) == "0");
 	QCOMPARE(Twice, Once);
 
+	// header and file block layout
+
+	const QByteArray Layout = SaveText("layout", "0 FILE main.ldr\n0 Main\n0 Name: main.ldr\n0 Author: A\n0 !LICENSE L\n0 !SW PROPERTY INSTRUCTION COVER SHOW_BACK TRUE\n1 16 0 0 0 1 0 0 0 1 0 0 0 1 sub.ldr\n0 FILE sub.ldr\n0\n0 Name: sub.ldr\n1 16 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\n");
+
+	QVERIFY(Layout.startsWith("0 FILE main.ldr\n0 Main\n0\n0 Name: main.ldr\n0 Author: A\n0\n0 !LICENSE L\n0\n0 !SW "));
+	QVERIFY(Layout.contains("sub.ldr\n0 NOFILE\n\n0 FILE sub.ldr\n"));
+	QVERIFY(Layout.endsWith("3001.dat\n0 NOFILE\n"));
+	QCOMPARE(SaveText("layouttwice", Layout), Layout);
+
 	QVERIFY(!Old.isEmpty() && !Fresh.isEmpty());
 
 	// old files keep the earlier cells

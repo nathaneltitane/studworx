@@ -4802,32 +4802,32 @@ Le format du fichier n&apos;est pas reconnu.</translation>
         <translation>Le modèle en double &apos;%1&apos; a été ignoré&#xa0;; les noms de modèles ne sont pas sensibles à la casse.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="362"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="372"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="381"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="471"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="386"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="396"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="405"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="495"/>
         <source>Load Model</source>
         <translation>Charger le modèle</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="372"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="381"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="396"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="405"/>
         <source>Could not read file &apos;%1&apos;:
 %2</source>
         <translation>Impossible de lire le fichier « %1 »&#xa0;:
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="362"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="471"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="386"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="495"/>
         <source>Could not open file &apos;%1&apos;:
 The file format is not recognized.</source>
         <translation>Impossible d’ouvrir le fichier « %1 »&#xa0;:
 Le format de fichier n’est pas reconnu.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="574"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="676"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="598"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="700"/>
         <source>Could not write all model data.</source>
         <translation>Impossible d&apos;écrire toutes les données du modèle.</translation>
     </message>
@@ -4895,17 +4895,17 @@ Le format de fichier n’est pas reconnu.</translation>
         <translation>Impossible de réserver le nom de sous-modèle &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="793"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="819"/>
         <source>Cannot export different submodels named &apos;%1&apos;.</source>
         <translation>Impossible d&apos;exporter différents sous-modèles nommés &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="843"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="869"/>
         <source>Could not serialize all model data.</source>
         <translation>Impossible de sérialiser toutes les données du modèle.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="881"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="907"/>
         <source>Cannot export different embedded data named &apos;%1&apos;.</source>
         <translation>Impossible d&apos;exporter différentes données intégrées nommées &apos;%1&apos;.</translation>
     </message>
@@ -4982,12 +4982,12 @@ Le format de fichier n’est pas reconnu.</translation>
         <location filename="../../source/core/sw_project_export_html.cpp" line="678"/>
         <location filename="../../source/core/sw_project_export_html.cpp" line="714"/>
         <location filename="../../source/core/sw_project_export_html.cpp" line="747"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="558"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="574"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="585"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="663"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="676"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="680"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="582"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="598"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="609"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="687"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="700"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="704"/>
         <source>Could not write file &apos;%1&apos;:
 %2</source>
         <translation>Impossible d’écrire le fichier « %1 »&#xa0;:
@@ -22041,12 +22041,12 @@ Choisir où l’enregistrer et télécharger le dernier %3 maintenant ?</transla
         <translation>La copie éclatée doit avoir un nom différent de celui du fichier ouvert.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="821"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="828"/>
         <source>Model &apos;%1&apos;: reference to &apos;%2&apos; was ignored because it would create a circular reference.</source>
         <translation>Modèle &apos;%1&apos;&#xa0;: la référence à &apos;%2&apos; a été ignorée car elle créerait une référence circulaire.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="1110"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="1117"/>
         <location filename="../../source/core/sw_model_group.cpp" line="65"/>
         <source>Group </source>
         <translation>Groupe </translation>

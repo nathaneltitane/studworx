@@ -2386,6 +2386,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<ul>
 					<li><a href="#instructions">Instructions</a>: moved elements and notices keep the edge nearest their side, so they stay put when their content changes</li>
 					<li>Instructions: page units are written as PX, MM, CM or IN in the model file</li>
+					<li><a href="#files">Files</a>: saved <a href="#models">models</a> space their header, license and instructions with empty 0 lines, write the author only when set, and end every submodel with 0 NOFILE and a blank line</li>
 					<li>Properties: the Summary tab has a Publication group with title, author, product ID, version, publication date, URL, contact, copyright and notice, saved in the model file</li>
 					<li><a href="#preferences">Preferences</a>: the Author group is gone, the author of a model lives in Model Properties &gt; Summary</li>
 					<li>Instructions: the front and back cover each have their own Title, Author, Product ID, Version, Publication Date, URL, Contact, Copyright, Notice, Comments, Measurements, Weight and Pieces, and Pieces is the part count of the whole model</li>
@@ -2400,7 +2401,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Instructions: the parts list sits centered beside the step number, and the pair keeps the same spacing in every step</li>
 					<li>Instructions: Copy, Paste and Duplicate for notices, images and pointers, with the main window keys and in the right-click menu, each copy one grid step away, a paste on another page lands in place</li>
 					<li>Instructions: Paste works from the page list too, and locked pages grey out Paste and Duplicate</li>
-					<li>Instructions: saved pages keep their layout, placements are always written so new defaults never move them, and older <a href="#files">files</a> keep their cover cells</li>
+					<li>Instructions: saved pages keep their layout, placements are always written so new defaults never move them, and older files keep their cover cells</li>
 					<li>Instructions: pages redraw at once after moving or editing texts, step pictures and parts lists are kept in memory until the model changes, closing Instructions frees all of its memory</li>
 					<li><a href="#panels">Panels</a> open at the full height of their rows, saved layouts no longer cut them</li>
 					<li>Instructions: each cover text starts on its own cell, the title above the author, so turning texts on never stacks them</li>
@@ -2469,7 +2470,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Instructions: the bill of materials has its own title, parts list, quantity and part count settings and boxes, so changing it no longer changes the step pages; older files start from the step values</li>
 					<li>Instructions: Show Final Model leaves out the separate final model page and adds no page after a full last page, the final model background takes the Page Background color, submodel pages included, until you pick your own</li>
 					<li>Instructions: two buttons beside the page number show two pages at once, side by side or one above the other, pages 1 and 2, 3 and 4 and so on, and clicking the other page edits it</li>
-					<li>Instructions: Assembly Background in the Page section colors the pages where two or more <a href="#models">models</a> come together, clear follows the page as before</li>
+					<li>Instructions: Assembly Background in the Page section colors the pages where two or more models come together, clear follows the page as before</li>
 					<li>Instructions: a main model step placing only a just finished submodel gets no page, its final model already shows it</li>
 					<li>Instructions: At Final Model in the Divider section leaves out the lines along the final model box</li>
 					<li>Instructions: the page of the finished main model is listed as Completion, and Completion Background in the Page section colors its own page, or only its box on a steps page, the Completion box in the Box section has its own margin, padding, border and background</li>
