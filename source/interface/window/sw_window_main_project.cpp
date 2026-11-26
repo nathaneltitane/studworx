@@ -443,6 +443,35 @@ bool swMainWindow::SaveProject(const QString& FileName)
 
 		swSetProfileString(SW_PROFILE_PROJECTS_PATH, QFileInfo(SaveFileName).absolutePath());
 	}
+	else if (Project->IsMultiPart())
+	{
+		// submodels belong in an mpd file
+
+		const QFileInfo SaveFileInfo(SaveFileName);
+		const QString Suffix = SaveFileInfo.suffix().toLower();
+
+		if (Suffix == QLatin1String("ldr") || Suffix == QLatin1String("dat"))
+		{
+			const QString MultiPartFileName = SaveFileInfo.absoluteDir().absoluteFilePath(SaveFileInfo.completeBaseName() + QLatin1String(".mpd"));
+			const QString Question = tr("'%1' holds submodels, which LDraw keeps in MPD files. Save it as '%2' instead?").arg(SaveFileInfo.fileName(), QFileInfo(MultiPartFileName).fileName());
+
+			switch (QMessageBox::question(this, tr("Save Model"), Question, QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel))
+			{
+			case QMessageBox::Yes:
+				if (QFileInfo::exists(MultiPartFileName) && QMessageBox::question(this, tr("Save Model"), tr("'%1' already exists. Replace it?").arg(QFileInfo(MultiPartFileName).fileName()), QMessageBox::Yes | QMessageBox::No) != QMessageBox::Yes)
+					return false;
+
+				SaveFileName = MultiPartFileName;
+				break;
+
+			case QMessageBox::No:
+				break;
+
+			default:
+				return false;
+			}
+		}
+	}
 
 	if (QFileInfo(SaveFileName).suffix().toLower() == QLatin1String("lcd"))
 	{
