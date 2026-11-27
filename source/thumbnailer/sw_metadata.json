@@ -1,0 +1,12 @@
+{
+	"Id": "studworxextractor",
+	"MimeTypes": {
+		"application/x-ldraw": {
+			"Version": "1.0"
+		},
+		"application/x-multi-part-ldraw": {
+			"Version": "1.0"
+		}
+	},
+	"Name": "LDraw Files"
+}

@@ -256,8 +256,10 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 				}
 			}
 		}
-		else if (Option == QLatin1String("--camera-angles"))
+		else if (Option == QLatin1String("--camera-angles") || Option == QLatin1String("--camera-orbit"))
 		{
+			Options.CameraOrbit = Option == QLatin1String("--camera-orbit");
+
 			if ((Options.SetCameraAngles = ParseFloatArray(2, Options.CameraLatLon.GetFloats(), true)) && (fabsf(Options.CameraLatLon[0]) > 360.0f || fabsf(Options.CameraLatLon[1]) > 360.0f))
 			{
 				Options.StdErr += tr("Invalid parameter values specified for the '%1' option: limits are +/- 360.\n").arg(Option);
@@ -607,6 +609,7 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.StdOut += tr("  -c, --camera <camera name>: Set the active camera.\n");
 			Options.StdOut += tr("  --viewpoint <viewpoint>: Set the view to one of the preset viewpoints (front, back, left, right, top, bottom, home).\n");
 			Options.StdOut += tr("  --camera-angles <latitude> <longitude>: Set the camera angles in degrees around the model.\n");
+			Options.StdOut += tr("  --camera-orbit <latitude> <longitude>: Set the camera angles in degrees around the model center, at a distance that fits the model from every angle.\n");
 			Options.StdOut += tr("  --camera-position <x> <y> <z> <tx> <ty> <tz> <ux> <uy> <uz>: Set the camera position, target and up vector.\n");
 			Options.StdOut += tr("  --camera-position-ldraw <x> <y> <z> <tx> <ty> <tz> <ux> <uy> <uz>: Set the camera position, target and up vector using LDraw coordinates.\n");
 			Options.StdOut += tr("  --projection <perspective|orthographic>: Render images with a perspective or an orthographic projection.\n");
@@ -723,6 +726,8 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.StdErr += Message.arg(QString("--edge-color-dark %1").arg(Options.DarkEdgeColor));
 	}
 
+	const QString CameraAnglesOption = Options.CameraOrbit ? QStringLiteral("--camera-orbit") : QStringLiteral("--camera-angles");
+
 	if (!Options.CameraName.isEmpty())
 	{
 		if (Options.Viewpoint != swViewpoint::Count)
@@ -732,7 +737,9 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.StdErr += tr("--projection is ignored when --camera is set.\n");
 
 		if (Options.SetCameraAngles)
-			Options.StdErr += tr("--camera-angles is ignored when --camera is set.\n");
+			Options.StdErr += tr("%1 is ignored when --camera is set.\n").arg(CameraAnglesOption);
+
+		Options.CameraOrbit = false;
 
 		if (Options.SetCameraPosition)
 			Options.StdErr += tr("--camera-position is ignored when --camera is set.\n");
@@ -740,7 +747,9 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 	else if (Options.Viewpoint != swViewpoint::Count)
 	{
 		if (Options.SetCameraAngles)
-			Options.StdErr += tr("--camera-angles is ignored when --viewpoint is set.\n");
+			Options.StdErr += tr("%1 is ignored when --viewpoint is set.\n").arg(CameraAnglesOption);
+
+		Options.CameraOrbit = false;
 
 		if (Options.SetCameraPosition)
 			Options.StdErr += tr("--camera-position is ignored when --viewpoint is set.\n");
@@ -748,7 +757,7 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 	else if (Options.SetCameraAngles)
 	{
 		if (Options.SetCameraPosition)
-			Options.StdErr += tr("--camera-position is ignored when --camera-angles is set.\n");
+			Options.StdErr += tr("--camera-position is ignored when %1 is set.\n").arg(CameraAnglesOption);
 	}
 
 	const bool SaveAndExit = Options.HasSaveAndExit();

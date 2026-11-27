@@ -61,7 +61,7 @@ Models are plain LDraw text files in LeoCAD's format, so they open in either pro
 - **HTML.** Export HTML turns the instructions into web pages, either one long page, saved at twice its size so it stays sharp on high density screens, or one page per step, in light or dark colors. You can restyle them without changing the model.
 - **Print.** File > Print prints the current model view through the system print dialog, with a Preview button where the dialog allows it.
 - **Missing and moved parts.** When a model uses parts the library can't find or has renumbered, StudWorx lists them and offers a replacement for each, swapped everywhere in one click and saved right away, unless you turn that off. Until then a missing part shows as a plain brick with a red outline, and the Steps panel paints it and its submodel red. Closed the list too soon? The File menu brings it back.
-- **Thumbnails.** Model thumbnails in file managers, from a KDE thumbnail plugin or the desktop thumbnailer.
+- **Thumbnails.** Model thumbnails in file managers, from a KDE thumbnail plugin or the desktop thumbnailer. In Dolphin, a model spins around when you hover it, or stays still if you choose so in Preferences, and the Information panel shows its title, author and how many parts, steps and models it has.
 - **Parts library.** Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded with File > Reload Library. An unofficial parts folder can be added beside it.
 - **Command line.** Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx. [L²CU](https://l2cu.app), the LDraw command line utility for Linux based systems, drives these renders and exports for whole folders of models.
 - **Exit.** File > Exit asks to save each changed model before StudWorx closes.
@@ -75,7 +75,7 @@ studworx model.ldr opens a model. The options below work without opening a windo
 | -l, --library, --unofficial-library, --shadow-library | Choose the parts, unofficial parts and LDCad shadow libraries |
 | -i, --image, -w, --width, --height | Save an image of the model at a size |
 | -f, --from <step>, -t, --to <step>, -s, --submodel | Save a range of steps, or one submodel |
-| -c, --camera, --viewpoint, --camera-angles, --camera-position, --camera-position-ldraw | Choose a camera, a viewpoint or an exact camera position |
+| -c, --camera, --viewpoint, --camera-angles, --camera-orbit, --camera-position, --camera-position-ldraw | Choose a camera, a viewpoint, an angle around the model, an orbit that keeps the model the same size from every angle, or an exact camera position |
 | --projection, --field-of-view, --clip-planes, --transparent | Projection, field of view, clipping planes and a transparent background |
 | --fade-steps, --no-fade-steps, --fade-color, --highlight, --no-highlight, --highlight-color | Fade previous steps and highlight new parts |
 | --shading, --lighting, --line-width, --antialiasing-samples | Shading mode, lighting style, edge line width and anti-aliasing |
@@ -140,7 +140,7 @@ Check Animated GIF to save one looping GIF. The preview plays it live with a pla
 | Hold Last | with Next Step on | used | used |
 | Duration | read only | read only | read only |
 
-- **Turntable.** The model spins around, either full circles that loop smoothly or a swing back and forth. Choose how many turns, how many pictures and how fast they play.
+- **Turntable.** The model spins around, either full circles that loop smoothly or a swing back and forth. Choose how many turns, how many pictures and how fast they play. The camera always circles the center at one distance, so the model never drifts or zooms while it turns.
 - **Steps.** Each chosen step becomes one frame, without turning, for short animated instructions. At 2 fps every step shows for half a second.
 - **Next Step.** The model keeps turning while the build moves on to the next step every few turns or seconds, and the loop ends on the finished model. It turns at the same speed however many steps there are.
 - **Joints.** Blends through the poses of the main model and back to the first, see Joints mode.
@@ -547,14 +547,14 @@ Packages are rebuilt from every change and carry the date version of the release
 
 - **Linux based systems.** The .deb and .rpm packages install to /opt/studworx. The AppImage runs from anywhere after chmod +x. Tested on Debian 12 and 13, Ubuntu 22.04 and 24.04, Rocky Linux 9, Fedora and openSUSE Tumbleweed.
 - **macOS.** The disk image is not notarized: on the first start, right click StudWorx and choose Open.
-- **Prepare.** To build, install a C++ compiler, Qt 5 (widgets, OpenGL, print support, network, xml and concurrent modules) and zlib development packages, listed below as build requirements. The optional packages add gamepad input, the terminal panel with KDE Frameworks KParts and a KDE Frameworks 5 Konsole, and the file manager thumbnails with KIO.
+- **Prepare.** To build, install a C++ compiler, Qt 5 (widgets, OpenGL, print support, network, xml and concurrent modules) and zlib development packages, listed below as build requirements. The optional packages add gamepad input, the terminal panel with KDE Frameworks KParts and a KDE Frameworks 5 Konsole, and the file manager thumbnails and model details with KIO and KFileMetaData.
 
 | System | Build requirements | Optional |
 | --- | --- | --- |
-| Debian, Ubuntu | g++ make qtbase5-dev qttools5-dev-tools libqt5opengl5-dev libqt5svg5 qt5-image-formats-plugins zlib1g-dev | libqt5gamepad5-dev libkf5parts-dev libkf5kio-dev |
-| Fedora, Rocky Linux, RHEL | gcc-c++ make qt5-qtbase-devel qt5-linguist qt5-qtsvg qt5-qtimageformats zlib-devel | qt5-qtgamepad-devel kf5-kparts-devel kf5-kio-devel |
-| openSUSE | gcc-c++ make libqt5-qtbase-devel libqt5-linguist libqt5-qtsvg libqt5-qtimageformats zlib-devel | kparts-devel kio-devel |
-| Arch Linux | base-devel qt5-base qt5-tools qt5-svg qt5-imageformats zlib | qt5-gamepad kparts5 kio5 |
+| Debian, Ubuntu | g++ make qtbase5-dev qttools5-dev-tools libqt5opengl5-dev libqt5svg5 qt5-image-formats-plugins zlib1g-dev | libqt5gamepad5-dev libkf5parts-dev libkf5kio-dev libkf5filemetadata-dev |
+| Fedora, Rocky Linux, RHEL | gcc-c++ make qt5-qtbase-devel qt5-linguist qt5-qtsvg qt5-qtimageformats zlib-devel | qt5-qtgamepad-devel kf5-kparts-devel kf5-kio-devel kf5-kfilemetadata-devel |
+| openSUSE | gcc-c++ make libqt5-qtbase-devel libqt5-linguist libqt5-qtsvg libqt5-qtimageformats zlib-devel | kparts-devel kio-devel kfilemetadata5-devel |
+| Arch Linux | base-devel qt5-base qt5-tools qt5-svg qt5-imageformats zlib | qt5-gamepad kparts5 kio5 kfilemetadata5 |
 
 ```
 git clone https://github.com/nathaneltitane/studworx

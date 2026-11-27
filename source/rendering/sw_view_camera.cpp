@@ -166,7 +166,7 @@ void swView::SetViewpoint(const swVector3& Position, const swVector3& Target, co
 	Redraw();
 }
 
-void swView::SetCameraAngles(float Latitude, float Longitude)
+void swView::SetCameraAngles(float Latitude, float Longitude, bool Orbit)
 {
 	if (!mCamera || !mCamera->IsSimple())
 	{
@@ -179,7 +179,7 @@ void swView::SetCameraAngles(float Latitude, float Longitude)
 	}
 
 	mCamera->SetAngles(Latitude, Longitude, 1.0f);
-	ZoomExtents(swGeometryBoundsMode::IncludeFallback, false);
+	ZoomExtents(swGeometryBoundsMode::IncludeFallback, false, Orbit);
 	Redraw();
 }
 
@@ -292,7 +292,7 @@ void swView::SetSize(int Width, int Height)
 	mHeight = Height;
 
 	if (Resized && mWidth > 1 && mHeight > 1 && IsFitted())
-		ZoomExtents(mZoomExtentsMode, mZoomExtentsFarPlane);
+		ZoomExtents(mZoomExtentsMode, mZoomExtentsFarPlane, mZoomExtentsOrbit);
 }
 
 // use to check the view is still fitted
@@ -301,18 +301,19 @@ bool swView::IsFitted() const
 	return mCamera && mCamera->IsSimple() && mCamera == mZoomExtentsCamera && mCamera->mWorldView == mZoomExtentsWorldView;
 }
 
-void swView::ZoomExtents(swGeometryBoundsMode Mode, bool AdjustFarPlane)
+void swView::ZoomExtents(swGeometryBoundsMode Mode, bool AdjustFarPlane, bool Orbit)
 {
 	swModel* ActiveModel = GetActiveModel();
 
 	mZoomExtentsMode = Mode;
 	mZoomExtentsFarPlane = AdjustFarPlane;
+	mZoomExtentsOrbit = Orbit;
 
 	if (ActiveModel)
 	{
 		const swMatrix44 WorldMatrix = mActiveSubmodelInstance ? mActiveSubmodelTransform : swMatrix44Identity();
 
-		ActiveModel->ZoomExtents(mCamera, (float)mWidth / (float)mHeight, WorldMatrix, Mode, AdjustFarPlane);
+		ActiveModel->ZoomExtents(mCamera, (float)mWidth / (float)mHeight, WorldMatrix, Mode, AdjustFarPlane, Orbit);
 	}
 
 	// remember the fitted camera
@@ -322,7 +323,7 @@ void swView::ZoomExtents(swGeometryBoundsMode Mode, bool AdjustFarPlane)
 		mZoomExtentsWorldView = mCamera->mWorldView;
 }
 
-void swView::ZoomExtentsAtStep(swStep Step, swGeometryBoundsMode Mode, bool AdjustFarPlane)
+void swView::ZoomExtentsAtStep(swStep Step, swGeometryBoundsMode Mode, bool AdjustFarPlane, bool Orbit)
 {
 	swModel* ActiveModel = GetActiveModel();
 
@@ -332,7 +333,7 @@ void swView::ZoomExtentsAtStep(swStep Step, swGeometryBoundsMode Mode, bool Adju
 	const swStep CurrentStep = ActiveModel->GetCurrentStep();
 
 	ActiveModel->SetTemporaryStep(Step);
-	ZoomExtents(Mode, AdjustFarPlane);
+	ZoomExtents(Mode, AdjustFarPlane, Orbit);
 	ActiveModel->SetTemporaryStep(CurrentStep);
 
 	if (!ActiveModel->IsActive())

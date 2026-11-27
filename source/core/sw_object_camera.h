@@ -202,7 +202,7 @@ public:
 	void CopyPosition(const swCamera* Camera);
 	void CopySettings(const swCamera* Camera);
 
-	void ZoomExtents(float AspectRatio, const swVector3& Center, const std::vector<swVector3>& Points, swStep Step, bool AddKey, bool AdjustFarPlane);
+	void ZoomExtents(float AspectRatio, const swVector3& Center, const std::vector<swVector3>& Points, swStep Step, bool AddKey, bool AdjustFarPlane, bool Orbit);
 	void ExpandFarPlane(const std::vector<swVector3>& Points);
 	void ZoomRegion(float AspectRatio, const swVector3& Position, const swVector3& TargetPosition, const swVector3* Corners, swStep Step, bool AddKey);
 	void Zoom(float Distance, swStep Step, bool AddKey);

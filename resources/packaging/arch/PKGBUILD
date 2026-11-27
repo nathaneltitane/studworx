@@ -16,6 +16,7 @@ optdepends=(
 	'qt5-gamepad: gamepad input'
 	'kparts5: terminal panel, with a KDE Frameworks 5 konsole'
 	'kio5: file manager thumbnails'
+	'kfilemetadata5: model details in file managers'
 )
 
 conflicts=()

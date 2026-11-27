@@ -17,6 +17,8 @@ sets an optional parts library). The same binary saves a Trans-Clear model on
 transparent and opaque backgrounds, with and without multisampling, to check
 that translucent pixels keep their color and opaque images keep the background
 (rendered offscreen, or on the running display with `SW_TEST_NATIVE_DISPLAY=1`).
+A long bar saved with `--camera-orbit` from the side and from the end must stay
+centered and keep its height, where `--camera-angles` zooms in on the end.
 It also exports a box hiding a smaller box to KMZ, to check the archive entries,
 the model named after the archive with spaces as underscores, fixed dates, and
 that `--kmz-geometry visible` drops the hidden box while `--kmz-geometry all` keeps it.

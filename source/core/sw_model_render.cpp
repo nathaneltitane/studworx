@@ -883,7 +883,8 @@ void swModel::SetImageCamera(swCamera* Camera, const swCamera* BaseCamera, const
 {
 	swStep FitStep = SW_STEP_MAXIMUM;
 
-	if (Framing.Fit == swImageFit::FitEachStep)
+	// a turntable through the steps keeps one orbit for the whole file
+	if (Framing.Fit == swImageFit::FitEachStep && !(Turntable.IsTurning() && Turntable.IsStepping()))
 		FitStep = Step;
 	else if (Framing.Scope == swImageFitScope::ShownSteps)
 		FitStep = LastStep;
@@ -933,7 +934,10 @@ void swModel::SetImageCamera(swCamera* Camera, const swCamera* BaseCamera, const
 
 	if (Framing.Fit == swImageFit::CurrentView || Points.empty())
 	{
-		Camera->SetViewpoint(Center + swMultiply(Position - Center, Rotation), Center + swMultiply(Target - Center, Rotation), swMultiply(Up, Rotation));
+		// turntables orbit the center from the current distance
+		const swVector3 FrameTarget = Turntable.IsTurning() ? Center : Center + swMultiply(Target - Center, Rotation);
+
+		Camera->SetViewpoint(Center + swMultiply(Position - Center, Rotation), FrameTarget, swMultiply(Up, Rotation));
 		return;
 	}
 

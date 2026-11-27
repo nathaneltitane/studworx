@@ -733,7 +733,7 @@ void swModel::MoveCamera(swCamera* Camera, const swVector3& Direction)
 	}
 }
 
-void swModel::ZoomExtents(swCamera* Camera, float Aspect, const swMatrix44& WorldMatrix, swGeometryBoundsMode Mode, bool AdjustFarPlane)
+void swModel::ZoomExtents(swCamera* Camera, float Aspect, const swMatrix44& WorldMatrix, swGeometryBoundsMode Mode, bool AdjustFarPlane, bool Orbit)
 {
 	std::vector<swVector3> Points = GetPartsBoundingBoxPoints(Mode);
 
@@ -758,7 +758,7 @@ void swModel::ZoomExtents(swCamera* Camera, float Aspect, const swMatrix44& Worl
 		BeginEditHistory();
 	}
 
-	Camera->ZoomExtents(Aspect, Center, Points, mCurrentStep, gMainWindow ? gMainWindow->GetAddKeys() : false, AdjustFarPlane);
+	Camera->ZoomExtents(Aspect, Center, Points, mCurrentStep, gMainWindow ? gMainWindow->GetAddKeys() : false, AdjustFarPlane, Orbit);
 
 	if (!mIsPreview && gMainWindow)
 		gMainWindow->UpdateSelectedObjects(false);

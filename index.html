@@ -269,14 +269,14 @@
 				<li><b>Missing and moved parts.</b> When a model uses parts the library can&#x27;t find or has renumbered, StudWorx lists them and offers a replacement for each, swapped everywhere in one click and saved right away, unless you turn that off. Until then a missing part shows as a plain brick with a red outline, and the <a href="#steps">Steps</a> panel paints it and its submodel red. Closed the list too soon? The File menu brings it back.</li>
 				<li><b>Command line.</b> Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx. <a href="https://l2cu.app">L²CU</a>, the LDraw command line utility for Linux based systems, drives these renders and exports for whole folders of models.</li>
 				<li><b>LDraw models.</b> StudWorx opens and saves the standard LDraw files, .ldr, .mpd and .dat, as the LDraw specification describes them, keeping their line endings, and reloads a model changed in another program. Bundled samples cover every feature, from cutaways and flexible parts to joints, lights and train track.</li>
+				<li><b>Thumbnails.</b> Model thumbnails in file managers, from a KDE thumbnail plugin or the desktop thumbnailer. In Dolphin, a model spins around when you hover it, or stays still if you choose so in <a href="#preferences">Preferences</a>, and the Information panel shows its title, author and how many parts, steps and models it has.</li>
 				<li><b>Export.</b> Send a model to other 3D programs, POV-Ray or the web, or turn its parts into a BrickLink wanted list or a CSV parts list. BrickLink exports translate part numbers and colors through a bundled mapping of over 55,000 parts, and parts you set by hand are remembered.</li>
 				<li><b>HTML.</b> Export HTML turns the <a href="#instructions">instructions</a> into web pages, either one long page, saved at twice its size so it stays sharp on high density screens, or one page per step, in light or dark colors. You can restyle them without changing the model.</li>
-				<li><b>LeoCAD models.</b> Models saved by LeoCAD open as they are, and their LeoCAD <a href="#meta">meta</a> commands are migrated to StudWorx ones, automatically when you choose so in <a href="#preferences">Preferences</a>. Older LeoCAD projects (.lcd) open and merge too, and save as LDraw.</li>
+				<li><b>LeoCAD models.</b> Models saved by LeoCAD open as they are, and their LeoCAD <a href="#meta">meta</a> commands are migrated to StudWorx ones, automatically when you choose so in Preferences. Older LeoCAD projects (.lcd) open and merge too, and save as LDraw.</li>
 				<li><b>Parts library.</b> Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded with File &gt; Reload Library. An unofficial parts folder can be added beside it.</li>
 				<li><b>Import.</b> Open LEGO® Digital Designer models like any other file, or bring in an official set by its name or number from Rebrickable, with your own free API key.</li>
 				<li><b>Print.</b> File &gt; Print prints the current model view through the system print dialog, with a Preview button <a href="#where">where</a> the dialog allows it.</li>
 				<li><b>KMZ.</b> Google Earth and SketchUp models, with the visible surfaces only or every part&#x27;s geometry, set in Preferences.</li>
-				<li><b>Thumbnails.</b> Model thumbnails in file managers, from a KDE thumbnail plugin or the desktop thumbnailer.</li>
 				<li><b>COLLADA.</b> Translucent colors can be marked as transparent materials for programs that read them.</li>
 				<li><b>Startup.</b> StudWorx can reopen your last model, with its tabs and <a href="#views">views</a>, when it starts.</li>
 				<li><b>Exit.</b> File &gt; Exit asks to save each changed model before StudWorx closes.</li>
@@ -295,7 +295,7 @@
 						<tr><td>-l, --library, --unofficial-library, --shadow-library</td><td>Choose the parts, unofficial parts and LDCad shadow libraries</td></tr>
 						<tr><td>-i, --image, -w, --width, --height</td><td>Save an <a href="#image">image</a> of the model at a size</td></tr>
 						<tr><td>-f, --from &lt;step&gt;, -t, --to &lt;step&gt;, -s, --submodel</td><td>Save a range of steps, or one submodel</td></tr>
-						<tr><td>-c, --camera, --viewpoint, --camera-angles, --camera-position, --camera-position-ldraw</td><td>Choose a camera, a viewpoint or an exact camera position</td></tr>
+						<tr><td>-c, --camera, --viewpoint, --camera-angles, --camera-orbit, --camera-position, --camera-position-ldraw</td><td>Choose a camera, a viewpoint, an angle around the model, an orbit that keeps the model the same size from every angle, or an exact camera position</td></tr>
 						<tr><td>--projection, --field-of-view, --clip-planes, --transparent</td><td>Projection, field of view, clipping planes and a transparent background</td></tr>
 						<tr><td>--fade-steps, --no-fade-steps, --fade-color, --highlight, --no-highlight, --highlight-color</td><td>Fade previous steps and highlight new parts</td></tr>
 						<tr><td>--shading, --lighting, --line-width, --antialiasing-samples</td><td>Shading mode, lighting style, edge line width and anti-aliasing</td></tr>
@@ -452,8 +452,8 @@
 
 			<ul class="points">
 				<li><b>Duration.</b> Shows how long one loop plays: turns × frames ÷ frame rate for a turntable, steps ÷ frame rate + hold for steps, the frames of every step ÷ frame rate + hold with Next Step, and poses × frames ÷ frame rate + hold for joints. For example, six steps of one turn each, at 24 frames per turn and 12 frames per second with a one second hold, make 144 frames that play for 13 seconds.</li>
+				<li><b>Turntable.</b> The model spins around, either full circles that loop smoothly or a swing back and forth. Choose how many turns, how many pictures and how fast they play. The camera always circles the center at one distance, so the model never drifts or zooms while it turns.</li>
 				<li><b>Next Step.</b> The model keeps turning while the build moves on to the next step every few turns or seconds, and the loop ends on the finished model. It turns at the same speed however many steps there are.</li>
-				<li><b>Turntable.</b> The model spins around, either full circles that loop smoothly or a swing back and forth. Choose how many turns, how many pictures and how fast they play.</li>
 				<li><b>Steps.</b> Each chosen step becomes one frame, without turning, for short animated <a href="#instructions">instructions</a>. At 2 fps every step shows for half a second.</li>
 				<li><b>Hold Last.</b> Keeps the finished model on screen for 0 to 10 seconds before a loop through the steps or poses restarts.</li>
 				<li><b>Joints.</b> Blends through the poses of the main model and back to the first, see Joints mode.</li>
@@ -1777,7 +1777,7 @@
 						</thead>
 
 						<tbody>
-							<tr><td>Template</td><td>Read</td><td>a model file holding every <code>INSTRUCTION</code> line of the instructions it was saved from, image and notice <a href="#files">files</a> as the model wrote them, so relative files stay relative to each model, written by Save Template; Apply Template copies them into the model, and the Default Template of the <a href="#preferences">preferences</a> applies them under every model, whose own lines win; lines naming a submodel apply <a href="#where">where</a> that submodel exists</td></tr>
+							<tr><td>Template</td><td>Read</td><td>a model file holding every <code>INSTRUCTION</code> line of the instructions it was saved from, image and notice <a href="#files">files</a> as the model wrote them, so relative files stay relative to each model, written by Save Template under comment lines listing the publication codes; with Save Template with Codes on, the default, the model&#x27;s own title, author and other details in texts become their codes and files inside the model folder become relative; Apply Template copies them into the model, and the Default Template of the <a href="#preferences">preferences</a> applies them under every model, whose own lines win; lines naming a submodel apply <a href="#where">where</a> that submodel exists</td></tr>
 							<tr><td><code>0 !SW PROPERTY INSTRUCTION &lt;name&gt; &lt;value&gt;</code></td><td>Read, Write</td><td>document property, the scope words first and then the element and field, such as <code>STEP NUMBER_BORDER_WIDTH 3</code> or <code>COVER FRONT TITLE_TEXT MODEL // TITLE</code>; the scopes are <code>COVER FRONT</code>, <code>COVER BACK</code>, <code>STEP</code>, <code>PAGE</code>, <code>BILL_OF_MATERIALS</code>, <code>BAND &lt;HEADER|FOOTER|LEFT|RIGHT&gt;</code>, <code>DOCUMENT</code>, <code>NOTICE</code>, <code>IMAGE</code>, <code>WATERMARK</code>, <code>POINTER</code> and <code>PART_COUNT</code>, the old unscoped names are not read, the full list of old and new names is under Property Names; each cover has its own <code>&lt;element&gt;_&lt;field&gt;</code> set for <code>TITLE</code>, <code>AUTHOR</code>, <code>PRODUCT_ID</code>, <code>VERSION</code>, <code>PUBLICATION_DATE</code>, <code>URL</code>, <code>CONTACT</code>, <code>COPYRIGHT</code>, <code>NOTICE</code>, <code>COMMENTS</code>, <code>MEASUREMENTS</code>, <code>WEIGHT</code> and <code>PIECES</code>, the fields being <code>TEXT</code>, <code>FONT</code>, <code>COLOR</code>, <code>PLACEMENT</code>, <code>ALIGNMENT</code>, <code>VERTICAL_ALIGNMENT</code>, <code>MARGIN</code>, <code>PADDING</code>, <code>BORDER_WIDTH</code>, <code>BORDER_COLOR</code>, <code>BACKGROUND_COLOR</code> and <code>CORNER_RADIUS</code>, and <code>SHOW_&lt;element&gt;</code> shows it, only the front title and author show by default; empty texts show the model field, the author always shows the model author, <code>PIECES</code> the part count of the whole model, and <code>BILL_OF_MATERIALS TITLE_TEXT</code> takes <code>TITLE_FILE</code> too, the file wins over the text and is relative to the model file; <code>%size</code>, <code>%weight</code> and <code>%comments</code> fill in the measurements, weight and comments</td></tr>
 							<tr><td><code>0 !SW PROPERTY INSTRUCTION DOCUMENT USE_FONT &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>give all text the typeface of <code>DOCUMENT FONT</code>, each text keeps its own size, default <code>FALSE</code>; <code>DOCUMENT USE_FONT_SIZE</code> gives all text the size of <code>DOCUMENT FONT</code> and each text keeps its typeface. A file with <code>DOCUMENT USE_FONT TRUE</code> and no <code>DOCUMENT USE_FONT_SIZE</code> line uses both</td></tr>
 							<tr><td><code>0 !SW PROPERTY INSTRUCTION COVER FRONT SHOW_PIECES &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>show the part count of the whole model on the front cover, default <code>FALSE</code>, <code>COVER BACK SHOW_PIECES</code> on the back cover; <code>BILL_OF_MATERIALS SHOW_PART_COUNT</code> shows it under the bill of materials title and <code>PAGE SHOW_PART_COUNT</code> shows the new parts of the steps on each step page</td></tr>
@@ -2284,7 +2284,7 @@
 				<h2>WHERE IS IT? // EVERY COMMAND AND ITS MENU</h2>
 			</header>
 
-			<p class="lead">Where to find each of the 412 commands: the menu bar, the <a href="#toolbars">toolbars</a>, the panel gear buttons and every right click menu, with its shortcut. Type part of a command name to find it.</p>
+			<p class="lead">Where to find each of the 417 commands: the menu bar, the <a href="#toolbars">toolbars</a>, the panel gear buttons and every right click menu, with its shortcut. Type part of a command name to find it.</p>
 
 			<div class="search-tools">
 				<input id="menus-search" class="search" type="search" placeholder="Search commands" aria-label="Search commands">
@@ -2299,7 +2299,7 @@
 				<h2>HELP // EVERY &quot;WHAT&#x27;S THIS?&quot; ENTRY</h2>
 			</header>
 
-			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 487 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
+			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 488 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
 			<div class="search-tools">
 				<input id="search" type="search" placeholder="Search help" aria-label="Search help">
@@ -2336,7 +2336,7 @@
 			<p class="more"><a href="https://github.com/nathaneltitane/studworx/releases/latest">Download the latest release ›</a></p>
 
 			<ul class="points">
-				<li><b>Prepare.</b> To build, install a C++ compiler, Qt 5 (widgets, OpenGL, print support, network, xml and concurrent modules) and zlib development packages, listed below as build requirements. The optional packages add gamepad input, the terminal panel with KDE Frameworks KParts and a KDE Frameworks 5 Konsole, and the file manager thumbnails with KIO.</li>
+				<li><b>Prepare.</b> To build, install a C++ compiler, Qt 5 (widgets, OpenGL, print support, network, xml and concurrent modules) and zlib development packages, listed below as build requirements. The optional packages add gamepad input, the terminal panel with KDE Frameworks KParts and a KDE Frameworks 5 Konsole, and the file manager thumbnails and model details with KIO and KFileMetaData.</li>
 				<li><b>Linux based systems.</b> The .deb and .rpm packages install to /opt/studworx. The AppImage runs from anywhere after chmod +x. Tested on Debian 12 and 13, Ubuntu 22.04 and 24.04, Rocky Linux 9, Fedora and openSUSE Tumbleweed.</li>
 				<li><b>macOS.</b> The disk <a href="#image">image</a> is not notarized: on the first start, right click StudWorx and choose Open.</li>
 			</ul>
@@ -2348,10 +2348,10 @@
 					</thead>
 
 					<tbody>
-						<tr><td>Debian, Ubuntu</td><td>g++ make qtbase5-dev qttools5-dev-tools libqt5opengl5-dev libqt5svg5 qt5-image-formats-plugins zlib1g-dev</td><td>libqt5gamepad5-dev libkf5parts-dev libkf5kio-dev</td></tr>
-						<tr><td>Fedora, Rocky Linux, RHEL</td><td>gcc-c++ make qt5-qtbase-devel qt5-linguist qt5-qtsvg qt5-qtimageformats zlib-devel</td><td>qt5-qtgamepad-devel kf5-kparts-devel kf5-kio-devel</td></tr>
-						<tr><td>openSUSE</td><td>gcc-c++ make libqt5-qtbase-devel libqt5-linguist libqt5-qtsvg libqt5-qtimageformats zlib-devel</td><td>kparts-devel kio-devel</td></tr>
-						<tr><td>Arch Linux</td><td>base-devel qt5-base qt5-tools qt5-svg qt5-imageformats zlib</td><td>qt5-gamepad kparts5 kio5</td></tr>
+						<tr><td>Debian, Ubuntu</td><td>g++ make qtbase5-dev qttools5-dev-tools libqt5opengl5-dev libqt5svg5 qt5-image-formats-plugins zlib1g-dev</td><td>libqt5gamepad5-dev libkf5parts-dev libkf5kio-dev libkf5filemetadata-dev</td></tr>
+						<tr><td>Fedora, Rocky Linux, RHEL</td><td>gcc-c++ make qt5-qtbase-devel qt5-linguist qt5-qtsvg qt5-qtimageformats zlib-devel</td><td>qt5-qtgamepad-devel kf5-kparts-devel kf5-kio-devel kf5-kfilemetadata-devel</td></tr>
+						<tr><td>openSUSE</td><td>gcc-c++ make libqt5-qtbase-devel libqt5-linguist libqt5-qtsvg libqt5-qtimageformats zlib-devel</td><td>kparts-devel kio-devel kfilemetadata5-devel</td></tr>
+						<tr><td>Arch Linux</td><td>base-devel qt5-base qt5-tools qt5-svg qt5-imageformats zlib</td><td>qt5-gamepad kparts5 kio5 kfilemetadata5</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -2386,6 +2386,9 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<ul>
 					<li><a href="#instructions">Instructions</a>: images linked with ./ are found next to the model file, or from the folder StudWorx was started in</li>
 					<li>Properties: a Case row on the Summary tab turns every publication field UPPERCASE, lowercase, Sentence case or Title Case</li>
+					<li>File managers: hovering a model in Dolphin spins it around in 5 degree <a href="#steps">steps</a>, and the Information panel shows its title, author and how many parts, steps and <a href="#models">models</a> it has; <a href="#preferences">Preferences</a> &gt; <a href="#files">Files</a> &gt; File Manager Previews keeps it still instead</li>
+					<li>Command line: <code>--camera-orbit</code> sets the camera angles around the model center at one distance, so pictures at every angle keep the same center and size</li>
+					<li>Animated GIF: turntables always circle the center at one distance, also with Current View and Next Step, so the model never drifts or zooms</li>
 				</ul>
 			</details>
 
@@ -2395,9 +2398,9 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<ul>
 					<li>Instructions: moved elements and notices keep the edge nearest their side, so they stay put when their content changes</li>
 					<li>Instructions: page units are written as PX, MM, CM or IN in the model file</li>
-					<li><a href="#files">Files</a>: saved <a href="#models">models</a> space their header, license and instructions with empty 0 lines, write the author only when set, and end every submodel with 0 NOFILE and a blank line</li>
+					<li>Files: saved models space their header, license and instructions with empty 0 lines, write the author only when set, and end every submodel with 0 NOFILE and a blank line</li>
 					<li>Properties: the Summary tab has a Publication group with title, author, product ID, version, publication date, URL, contact, copyright and notice, saved in the model file</li>
-					<li><a href="#preferences">Preferences</a>: the Author group is gone, the author of a model lives in Model Properties &gt; Summary</li>
+					<li>Preferences: the Author group is gone, the author of a model lives in Model Properties &gt; Summary</li>
 					<li>Instructions: the front and back cover each have their own Title, Author, Product ID, Version, Publication Date, URL, Contact, Copyright, Notice, Comments, Measurements, Weight and Pieces, and Pieces is the part count of the whole model</li>
 					<li>Instructions: texts fill in %title, %author, %id, %version, %date, %url, %contact, %copyright, %notice, %size, %weight and %comments from the model</li>
 					<li>Instructions: placed cover texts stay put when others are shown or hidden, and the placement tool places every element, pointer tips too</li>
@@ -2451,7 +2454,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Instructions: images grow to 500 percent of the page width and can run past the paper edge</li>
 					<li>Instructions: pointers can be a line, an L, Z or U shape with rounded bends, or a callout wedge, end in an arrow, a dot or a hollow dot, and their bend and reach are dragged on the page</li>
 					<li>Instructions: titles, part counts, step and page numbers and notices line up left, centered or right and top, middle or bottom in a box sized with Edit Size</li>
-					<li>Instructions: Show Final Model Page closes the main model <a href="#steps">steps</a> with a page showing the finished model, on by default</li>
+					<li>Instructions: Show Final Model Page closes the main model steps with a page showing the finished model, on by default</li>
 					<li>Instructions: the Pages panel names each page after its submodel and marks the assembly pages</li>
 					<li>Instructions: arrow keys move the selection by one grid division, Shift by a whole grid unit, and Reset Position puts a dragged element back on its placement</li>
 					<li>Instructions: a click only selects, an element moves and the pointer changes only once the mouse moves with the button held</li>
@@ -2510,7 +2513,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Site: the search fields have a ✕ button that clears the text and shows every group again</li>
 					<li>Instructions: a back cover closes the instructions, shown and blank by default, and the cover is now the Front Cover</li>
 					<li>Instructions: right click a cover to add a linked image, like a logo, on the front cover, the back cover or both, with its own placement, size and lock</li>
-					<li>Instructions: Save Template and Apply Template in the Properties options carry the look, the steps per page and the cover images to any model, and Preferences &gt; General &gt; Default Instructions Template applies one under every model</li>
+					<li>Instructions: Save Template and Apply Template in the Properties options carry the look, the steps per page and the cover images to any model, Save Template with Codes turns the model&#x27;s own details into codes like %title, and Preferences &gt; General &gt; Default Instructions Template applies one under every model</li>
 					<li>Instructions: Use Document Font and Use Document Font Size work on their own, one gives all text the document typeface, the other its size, and older files keep both</li>
 					<li>Page Setup: Portrait or Landscape follows the width and height while they are typed</li>
 					<li>Instructions: the Placement buttons and Page Area now work on notices too, outer cells put a notice on the paper edge</li>
@@ -2694,11 +2697,12 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Save Model Image","title":"Size","paragraphs":["Set the saved image width and height in pixels. Each value must be between 1 and 32768. Larger images use more memory and may exceed the graphics hardware limits.","Ratio links width and height so changing one updates the other. View uses the shape of the current view and Free unlinks them. Landscape and Portrait turn the image on its side."]},
 				{"group":"Save Model Image","title":"Steps","paragraphs":["Choose Current Step, All Steps, or Range. The range fields are used only for Range. Both ends are included, and they may be equal to save just one step."]},
 				{"group":"Save Model Image","title":"Animation","paragraphs":["Animated GIF saves an animation that loops forever.","Turntable turns the model around one axis through the Framing center, starting from the current view. Full Turn makes seamless revolutions. Angle swings between two angles from the current view and back again. Turns sets how many revolutions or swings make up the loop, so complex builds can be shown from every side more than once.","Next Step moves through the steps chosen in the Steps group while the model turns, one step every few turns or seconds. The loop ends on the last step and starts again.","Steps plays the chosen steps one per frame, for short animated instructions.","Joints blends through the poses of the main model saved in the Poses panel, in order and back to the first. Frames sets how many images go between two poses.","Frames sets how many images make up one turn and Frame Rate how many play each second. Hold Last keeps the finished model on screen before a loop through the steps restarts. Duration shows how long one loop plays."]},
-				{"group":"Save Model Image","title":"Framing","paragraphs":["Current View saves exactly what the view shows. Fit Model aims at the model and moves the camera back until every part fits inside the image at every turntable angle and every pose, so animations turn in place without zooming and Joints animations hold still. Fit Each Step fits every step on its own parts. Fitted stills are centered on the model.","Center sets the point the turntable turns around and the camera aims at. World Origin is the 0, 0, 0 point of the scene, Model Origin is the middle of the model base and Model Center is the middle of the model.","Margin keeps empty space around the model. Bounds measures the fit on the whole model, so every step lines up, or only on the steps being saved."]},
+				{"group":"Save Model Image","title":"Framing","paragraphs":["Current View saves exactly what the view shows. Fit Model aims at the model and moves the camera back until every part fits inside the image at every turntable angle and every pose, so animations turn in place without zooming and Joints animations hold still. Fit Each Step fits every step on its own parts. Fitted stills are centered on the model.","Turntables always orbit the center at one fixed distance, so the model never drifts or zooms while it turns, also with Current View and when the turntable goes through the steps.","Center sets the point the turntable turns around and the camera aims at. World Origin is the 0, 0, 0 point of the scene, Model Origin is the middle of the model base and Model Center is the middle of the model.","Margin keeps empty space around the model. Bounds measures the fit on the whole model, so every step lines up, or only on the steps being saved."]},
 				{"group":"Save Model Image","title":"Background","paragraphs":["View Color fills the background with the view background. Transparent leaves it empty so the model can be placed over other images.","Only PNG and GIF files keep transparency. GIF edges are hard, without smoothing."]},
 				{"group":"Instructions","title":"Page Bar","paragraphs":["Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The First, Previous, Next and Last step shortcuts turn the pages too while the page or the Pages panel has focus."]},
 				{"group":"Instructions","title":"Undo and Redo","paragraphs":["Undo takes back your last change to the instructions, Redo puts it back. Quick changes to the same setting count as one change. The main window Undo and Redo shortcuts work here too."]},
 				{"group":"Instructions","title":"Two Pages","paragraphs":["Show two pages at once, pages 1 and 2, 3 and 4 and so on, side by side or one above the other. Only one of the two can be on, click it again for a single page. You edit the current page, click the other page to edit it."]},
+				{"group":"Instructions","title":"Panels","paragraphs":["Show or hide the Pages, Properties, Placement, Grid, Editor and Print panels. Use it to bring back a panel you closed."]},
 				{"group":"Instructions","title":"Editor","paragraphs":["The text of the model file as it is saved, its parts, steps and instructions. Edit it and apply to load the model from the text, the change is unsaved until the model is saved."]},
 				{"group":"Instructions","title":"Pages","paragraphs":["Select a page to show it. Right-click a page to insert or remove blank pages around it.","Click the lock beside a page to keep its elements where they are. A locked page can't be removed.","Click the snowflake to freeze a page. It keeps its own copy of the settings, so changes for all pages skip it. Unfreeze it to follow the other pages again."]},
 				{"group":"Instructions","title":"Placement","paragraphs":["Select an element on the page to place, move or lock it. Place the selected page element on a predefined area: the step model, step number, parts list, cover model, cover title, cover author, part counts, submodel preview or bill of materials. Step elements are placed in the part of the page their step gets from the split, or outside the other step element. Placements apply to all pages.","The submodel preview count and the parts list quantities go around their picture: inner buttons put them on it, outer buttons beside it.","Every element can also be dragged on the page, it keeps its distance from its placement. A locked element keeps its position whatever its placement and is not dragged."]},
@@ -3112,7 +3116,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"command":"Open","shortcut":"Ctrl+O","paths":["File","Standard toolbar"]},
 				{"command":"Save","shortcut":"Ctrl+S","paths":["File","Standard toolbar"]},
 				{"command":"Save As","shortcut":"Alt+S","paths":["File"]},
-				{"command":"Print","shortcut":"Ctrl+P","paths":["File"]},
+				{"command":"Print","shortcut":"Ctrl+P","paths":["File","Instructions window >  > Show or hide the panels of the instructions window"]},
 				{"command":"Merge","shortcut":"Ctrl+M","paths":["File"]},
 				{"command":"LEGO® Digital Designer","shortcut":"","paths":["File > Import"]},
 				{"command":"Set Inventory","shortcut":"","paths":["File > Import"]},
@@ -3126,7 +3130,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"command":"Reload","shortcut":"","paths":["File"]},
 				{"command":"Reload Library","shortcut":"","paths":["File"]},
 				{"command":"Missing and Moved Parts","shortcut":"","paths":["File"]},
-				{"command":"Properties","shortcut":"","paths":["File"]},
+				{"command":"Properties","shortcut":"","paths":["File","Instructions window >  > Show or hide the panels of the instructions window"]},
 				{"command":"Image","shortcut":"Alt+Shift+I","paths":["File"]},
 				{"command":"Instructions","shortcut":"Alt+Shift+U","paths":["File"]},
 				{"command":"Blender Render","shortcut":"Alt+Shift+B","paths":["File > Render"]},
@@ -3397,9 +3401,14 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"command":"Inches","shortcut":"","paths":["Instructions window > Properties panel > Properties Options > Document Units","Instructions window > Unit button beside a value"]},
 				{"command":"Expand All Sections","shortcut":"","paths":["Instructions window > Properties panel > Properties Options"]},
 				{"command":"Collapse All Sections","shortcut":"","paths":["Instructions window > Properties panel > Properties Options"]},
+				{"command":"Save Template with Codes","shortcut":"","paths":["Instructions window > Properties panel > Properties Options"]},
 				{"command":"Save Template","shortcut":"","paths":["Instructions window > Properties panel > Properties Options"]},
 				{"command":"Apply Template","shortcut":"","paths":["Instructions window > Properties panel > Properties Options"]},
 				{"command":"Reset Properties","shortcut":"","paths":["Instructions window > Properties panel > Properties Options"]},
+				{"command":"Pages","shortcut":"","paths":["Instructions window >  > Show or hide the panels of the instructions window"]},
+				{"command":"Placement","shortcut":"","paths":["Instructions window >  > Show or hide the panels of the instructions window"]},
+				{"command":"Grid","shortcut":"","paths":["Instructions window >  > Show or hide the panels of the instructions window"]},
+				{"command":"Editor","shortcut":"Ctrl+Shift+E","paths":["Instructions window >  > Show or hide the panels of the instructions window"]},
 				{"command":"Syntax Highlighting","shortcut":"","paths":["Instructions window > Editor panel > Editor Options"]},
 				{"command":"Line Numbers","shortcut":"","paths":["Instructions window > Editor panel > Editor Options"]},
 				{"command":"Wrap Lines","shortcut":"","paths":["Instructions window > Editor panel > Editor Options"]},

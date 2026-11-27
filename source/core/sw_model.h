@@ -761,7 +761,7 @@ public:
 	void ZoomRegionToolClicked(swView* View, float AspectRatio, const swVector3& Position, const swVector3& TargetPosition, const swVector3* Corners);
 	void LookAt(swCamera* Camera);
 	void MoveCamera(swCamera* Camera, const swVector3& Direction);
-	void ZoomExtents(swCamera* Camera, float Aspect, const swMatrix44& WorldMatrix, swGeometryBoundsMode Mode, bool AdjustFarPlane);
+	void ZoomExtents(swCamera* Camera, float Aspect, const swMatrix44& WorldMatrix, swGeometryBoundsMode Mode, bool AdjustFarPlane, bool Orbit);
 	void Zoom(swCamera* Camera, float Amount);
 
 	void MoveSelectedObjects(const swVector3& Distance, swModelTransformFlags Flags, swModelHistoryEditMerge ModelHistoryEditMerge)

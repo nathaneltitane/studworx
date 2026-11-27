@@ -1,5 +1,6 @@
 {
 	"CacheThumbnail": true,
+	"HandleSequences": true,
 	"KPlugin": {
 		"Id": "studworxthumbnail",
 		"MimeTypes": [

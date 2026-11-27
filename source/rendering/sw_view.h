@@ -353,7 +353,7 @@ public:
 	void ApplyStepView();
 	void ApplyStepView(swStep Step);
 	swVector3 GetStepViewAngles(swStepViewMode Mode) const;
-	void SetCameraAngles(float Latitude, float Longitude);
+	void SetCameraAngles(float Latitude, float Longitude, bool Orbit);
 	void SetCamera(swCamera* Camera, bool ForceCopy);
 	void SetCamera(const QString& CameraName);
 	void SetCameraIndex(size_t CameraIndex);
@@ -362,9 +362,9 @@ public:
 	void LookAt();
 	void MoveCamera(const swVector3& Direction);
 	void Zoom(float Amount);
-	void ZoomExtents(swGeometryBoundsMode Mode, bool AdjustFarPlane);
+	void ZoomExtents(swGeometryBoundsMode Mode, bool AdjustFarPlane, bool Orbit = false);
 	bool IsFitted() const;
-	void ZoomExtentsAtStep(swStep Step, swGeometryBoundsMode Mode, bool AdjustFarPlane);
+	void ZoomExtentsAtStep(swStep Step, swGeometryBoundsMode Mode, bool AdjustFarPlane, bool Orbit = false);
 
 	void RemoveCamera();
 	void ShowContextMenu(bool AllEntries = false) const;
@@ -452,6 +452,7 @@ protected:
 	swMatrix44 mZoomExtentsWorldView;
 	swGeometryBoundsMode mZoomExtentsMode = {};
 	bool mZoomExtentsFarPlane = false;
+	bool mZoomExtentsOrbit = false;
 	swViewType mViewType;
 
 	int mMouseX = 0;

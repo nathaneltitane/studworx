@@ -32,6 +32,7 @@ private slots:
 	void POVRayRendersExport();
 	void TranslucentImagesKeepColor_data();
 	void TranslucentImagesKeepColor();
+	void CameraOrbitKeepsModelInPlace();
 	void KMZKeepsVisibleSurfaces_data();
 	void KMZKeepsVisibleSurfaces();
 	void BrickLinkUsesBundledMapping();

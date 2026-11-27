@@ -41,13 +41,21 @@ IFS="|"
 text_bundled="${list_bundled[*]}"
 unset IFS
 
-# the kde thumbnail plugin is defined only when built since rpm refuses empty macros
+# the kde plugins are defined only when built since rpm refuses empty macros
 file_thumbnailer="$(find "${directory_package}" -name studworxthumbnail.so -printf "/%P\n" -quit)"
 list_defines=()
 
 if [ -n "${file_thumbnailer}" ]
 then
 	list_defines+=(--define "sw_thumbnailer ${file_thumbnailer}")
+fi
+
+# the kde metadata plugin, built only with kfilemetadata
+file_metadata="$(find "${directory_package}" -name kfilemetadata_studworxextractor.so -printf "/%P\n" -quit)"
+
+if [ -n "${file_metadata}" ]
+then
+	list_defines+=(--define "sw_metadata ${file_metadata}")
 fi
 
 # rpm versions take no hyphens

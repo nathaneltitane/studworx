@@ -516,7 +516,7 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 				if (Options.Viewpoint != swViewpoint::Count)
 					ActiveView->SetViewpoint(Options.Viewpoint);
 				else if (Options.SetCameraAngles)
-					ActiveView->SetCameraAngles(Options.CameraLatLon[0], Options.CameraLatLon[1]);
+					ActiveView->SetCameraAngles(Options.CameraLatLon[0], Options.CameraLatLon[1], Options.CameraOrbit);
 				else if (Options.SetCameraPosition)
 					ActiveView->SetViewpoint(Options.CameraPosition[0], Options.CameraPosition[1], Options.CameraPosition[2]);
 			}
@@ -639,7 +639,7 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 			{
 				const swStep FitStep = Options.ImageStart == Options.ImageEnd ? Options.ImageStart : ActiveModel->GetLastStep();
 
-				ActiveView->ZoomExtentsAtStep(FitStep, swGeometryBoundsMode::AvailableOnly, !Options.SetZPlanes);
+				ActiveView->ZoomExtentsAtStep(FitStep, swGeometryBoundsMode::AvailableOnly, !Options.SetZPlanes, Options.CameraOrbit);
 			}
 
 			auto ProgressCallback = [&StdOut](const QString& FileName)
@@ -673,7 +673,7 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 			const bool UsesCameraPosition = Options.SetCameraPosition && Options.Viewpoint == swViewpoint::Count && !Options.SetCameraAngles;
 
 			if (Options.CameraName.isEmpty() && !UsesCameraPosition)
-				ActiveView->ZoomExtentsAtStep(ActiveModel->GetCurrentStep(), swGeometryBoundsMode::AvailableOnly, !Options.SetZPlanes);
+				ActiveView->ZoomExtentsAtStep(ActiveModel->GetCurrentStep(), swGeometryBoundsMode::AvailableOnly, !Options.SetZPlanes, Options.CameraOrbit);
 
 			swResult<void> ExportResult = mProject->ExportPOVRay(FileName, ActiveView->GetCamera());
 
@@ -727,7 +727,7 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 				const bool UsesCameraPosition = Options.SetCameraPosition && Options.Viewpoint == swViewpoint::Count && !Options.SetCameraAngles;
 
 				if (Options.CameraName.isEmpty() && !UsesCameraPosition)
-					ActiveView->ZoomExtentsAtStep(ActiveModel->GetCurrentStep(), swGeometryBoundsMode::AvailableOnly, !Options.SetZPlanes);
+					ActiveView->ZoomExtentsAtStep(ActiveModel->GetCurrentStep(), swGeometryBoundsMode::AvailableOnly, !Options.SetZPlanes, Options.CameraOrbit);
 
 				swResult<void> ExportResult = mProject->ExportPOVRay(SceneName, ActiveView->GetCamera(), SW_STEP_MAXIMUM, Options.TransparentImage);
 

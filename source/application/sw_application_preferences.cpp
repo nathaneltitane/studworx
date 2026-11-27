@@ -104,6 +104,7 @@ void swPreferences::LoadDefaults()
 	mWarnPartsLoadFailure = swGetProfileInteger(SW_PROFILE_WARN_PARTS_LOAD_FAILURE);
 	mSaveAfterReplacingParts = swGetProfileInteger(SW_PROFILE_SAVE_AFTER_REPLACING_PARTS);
 	mMigrateMetaCommands = static_cast<swMigrateMetaCommandsMode>(qBound(0, swGetProfileInteger(SW_PROFILE_MIGRATE_META_COMMANDS), static_cast<int>(swMigrateMetaCommandsMode::Keep)));
+	mFileManagerTurntable = swGetProfileInteger(SW_PROFILE_FILE_MANAGER_TURNTABLE);
 	mMarkColladaTransparency = swGetProfileInteger(SW_PROFILE_MARK_COLLADA_TRANSPARENCY);
 	mKMZVisibleSurfaces = swGetProfileInteger(SW_PROFILE_KMZ_VISIBLE_SURFACES);
 	mColorTheme = swGetProfileColorTheme();
@@ -241,6 +242,7 @@ void swPreferences::SaveDefaults()
 	swSetProfileInteger(SW_PROFILE_WARN_PARTS_LOAD_FAILURE, mWarnPartsLoadFailure);
 	swSetProfileInteger(SW_PROFILE_SAVE_AFTER_REPLACING_PARTS, mSaveAfterReplacingParts);
 	swSetProfileInteger(SW_PROFILE_MIGRATE_META_COMMANDS, static_cast<int>(mMigrateMetaCommands));
+	swSetProfileInteger(SW_PROFILE_FILE_MANAGER_TURNTABLE, mFileManagerTurntable);
 	swSetProfileInteger(SW_PROFILE_MARK_COLLADA_TRANSPARENCY, mMarkColladaTransparency);
 	swSetProfileInteger(SW_PROFILE_KMZ_VISIBLE_SURFACES, mKMZVisibleSurfaces);
 	swSetProfileColorTheme(mColorTheme);

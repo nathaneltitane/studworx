@@ -129,7 +129,7 @@ void swView::UpdateFittedViews()
 		if (!View->IsFitted())
 			continue;
 
-		View->ZoomExtents(View->mZoomExtentsMode, View->mZoomExtentsFarPlane);
+		View->ZoomExtents(View->mZoomExtentsMode, View->mZoomExtentsFarPlane, View->mZoomExtentsOrbit);
 		View->Redraw();
 	}
 }

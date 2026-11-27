@@ -287,6 +287,7 @@ public:
 	bool mWarnPartsLoadFailure;
 	bool mSaveAfterReplacingParts;
 	swMigrateMetaCommandsMode mMigrateMetaCommands;
+	bool mFileManagerTurntable;
 	bool mMarkColladaTransparency;
 	bool mKMZVisibleSurfaces;
 	swColorTheme mColorTheme;
@@ -353,6 +354,7 @@ struct swCommandLineOptions
 	bool SavePOVRay = false;
 	bool RenderPOVRay = false;
 	bool SetCameraAngles = false;
+	bool CameraOrbit = false;
 	bool SetCameraPosition = false;
 	bool Orthographic = false;
 	bool SetProjection = false;

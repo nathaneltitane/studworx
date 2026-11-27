@@ -550,6 +550,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->WarnPartsLoadFailure->setChecked(mOptions->Preferences.mWarnPartsLoadFailure);
 	ui->SaveAfterReplacingParts->setChecked(mOptions->Preferences.mSaveAfterReplacingParts);
 	ui->MigrateMetaCommands->setCurrentIndex(static_cast<int>(mOptions->Preferences.mMigrateMetaCommands));
+	ui->FileManagerTurntable->setCurrentIndex(mOptions->Preferences.mFileManagerTurntable ? 0 : 1);
 	ui->MarkColladaTransparency->setChecked(mOptions->Preferences.mMarkColladaTransparency);
 	ui->KMZGeometry->setCurrentIndex(mOptions->Preferences.mKMZVisibleSurfaces ? 0 : 1);
 	ui->AutomateEdgeColor->setChecked(mOptions->Preferences.mAutomateEdgeColor);
@@ -982,6 +983,7 @@ void swPreferencesDialog::accept()
 	mOptions->Preferences.mWarnPartsLoadFailure = ui->WarnPartsLoadFailure->isChecked();
 	mOptions->Preferences.mSaveAfterReplacingParts = ui->SaveAfterReplacingParts->isChecked();
 	mOptions->Preferences.mMigrateMetaCommands = static_cast<swMigrateMetaCommandsMode>(ui->MigrateMetaCommands->currentIndex());
+	mOptions->Preferences.mFileManagerTurntable = ui->FileManagerTurntable->currentIndex() == 0;
 	mOptions->Preferences.mMarkColladaTransparency = ui->MarkColladaTransparency->isChecked();
 	mOptions->Preferences.mKMZVisibleSurfaces = ui->KMZGeometry->currentIndex() == 0;
 

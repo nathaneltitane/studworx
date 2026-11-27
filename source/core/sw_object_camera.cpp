@@ -1093,11 +1093,30 @@ void swCamera::ExpandFarPlane(const std::vector<swVector3>& Points)
 		m_zFar = ceilf(FarDistance * 1.1f / 10000.0f) * 10000.0f;
 }
 
-void swCamera::ZoomExtents(float AspectRatio, const swVector3& Center, const std::vector<swVector3>& Points, swStep Step, bool AddKey, bool AdjustFarPlane)
+void swCamera::ZoomExtents(float AspectRatio, const swVector3& Center, const std::vector<swVector3>& Points, swStep Step, bool AddKey, bool AdjustFarPlane, bool Orbit)
 {
 	swVector3 Position, TargetPosition;
 
-	if (GetProjection() == swCameraProjection::Orthographic)
+	if (Orbit)
+	{
+		// fit the bounding sphere so every angle keeps the same center and size
+		float Radius = 0.0f;
+
+		for (const swVector3& Point : Points)
+			Radius = swMaximum(Radius, swLength(Point - Center));
+
+		const float HalfHeight = tanf(m_fovy * SW_DEGREES_TO_RADIANS / 2.0f);
+		const float HalfAngle = atanf(HalfHeight * swMinimum(AspectRatio, 1.0f));
+		float Distance = Radius / sinf(HalfAngle);
+
+		// orthographic views show a height of distance times the field of view
+		if (GetProjection() == swCameraProjection::Orthographic)
+			Distance = 2.0f * Radius / (m_fovy * SW_DEGREES_TO_RADIANS * swMinimum(AspectRatio, 1.0f));
+
+		TargetPosition = Center;
+		Position = TargetPosition - swNormalize(mTargetPosition - mPosition) * Distance;
+	}
+	else if (GetProjection() == swCameraProjection::Orthographic)
 	{
 		float MinX = FLT_MAX, MaxX = -FLT_MAX, MinY = FLT_MAX, MaxY = -FLT_MAX;
 

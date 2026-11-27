@@ -7,7 +7,7 @@
 %global __provides_exclude_from ^/opt/studworx/.*$
 %global __requires_exclude ^(%{sw_bundled})
 
-# the kde thumbnail plugin only loads where kde already provides its frameworks
+# the kde thumbnail and metadata plugins only load where kde already provides its frameworks
 %global __requires_exclude_from ^%{_libdir}/qt5/plugins/kf5/.*$
 
 Name: studworx
@@ -36,6 +36,7 @@ cp -a %{sw_root}/. %{buildroot}/
 %{_datadir}/metainfo/io.github.nathaneltitane.StudWorx.appdata.xml
 %{_datadir}/thumbnailers/studworx.thumbnailer
 %{?sw_thumbnailer}
+%{?sw_metadata}
 %{_datadir}/doc/studworx
 %{_datadir}/studworx/samples
 %{_mandir}/man1/studworx.1*
