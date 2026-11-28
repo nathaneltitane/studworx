@@ -1,6 +1,13 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-27</summary>
+
+  - File managers: model previews in Dolphin stay sharp at large icon sizes
+
+  </details>
+
+  <details>
   <summary>2026-11-26</summary>
 
   - Instructions: images linked with ./ are found next to the model file, or from the folder StudWorx was started in

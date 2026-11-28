@@ -50,7 +50,7 @@
 					"description": "StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library.",
 					"applicationCategory": "DesignApplication",
 					"operatingSystem": "Linux, Windows, macOS",
-					"softwareVersion": "2026-11-26",
+					"softwareVersion": "2026-11-27",
 					"license": "https://www.gnu.org/licenses/gpl-3.0.html",
 					"downloadUrl": "https://github.com/nathaneltitane/studworx/releases/latest",
 					"image": "https://studworx.app/resources/social/social.png",
@@ -2324,11 +2324,11 @@
 					</thead>
 
 					<tbody>
-						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-26_amd64.deb / arm64.deb</td></tr>
-						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-26-x86_64.rpm / aarch64.rpm</td></tr>
-						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-26-x86_64.appimage / aarch64.appimage</td></tr>
-						<tr><td>Windows</td><td>studworx-windows-2026-11-26-x64.exe</td></tr>
-						<tr><td>macOS</td><td>studworx-macos-2026-11-26-universal.dmg</td></tr>
+						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-27_amd64.deb / arm64.deb</td></tr>
+						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-27-x86_64.rpm / aarch64.rpm</td></tr>
+						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-27-x86_64.appimage / aarch64.appimage</td></tr>
+						<tr><td>Windows</td><td>studworx-windows-2026-11-27-x64.exe</td></tr>
+						<tr><td>macOS</td><td>studworx-macos-2026-11-27-universal.dmg</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -2381,12 +2381,20 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
+				<summary>2026-11-27</summary>
+
+				<ul>
+					<li>File managers: model previews in Dolphin stay sharp at large icon sizes</li>
+				</ul>
+			</details>
+
+			<details>
 				<summary>2026-11-26</summary>
 
 				<ul>
 					<li><a href="#instructions">Instructions</a>: images linked with ./ are found next to the model file, or from the folder StudWorx was started in</li>
 					<li>Properties: a Case row on the Summary tab turns every publication field UPPERCASE, lowercase, Sentence case or Title Case</li>
-					<li>File managers: hovering a model in Dolphin spins it around in 5 degree <a href="#steps">steps</a>, and the Information panel shows its title, author and how many parts, steps and <a href="#models">models</a> it has; <a href="#preferences">Preferences</a> &gt; <a href="#files">Files</a> &gt; File Manager Previews keeps it still instead</li>
+					<li>File managers: hovering a model in Dolphin spins it around in 5 degree <a href="#steps">steps</a>, sharp even at the largest icon size, and the Information panel shows its title, author and how many parts, steps and <a href="#models">models</a> it has; <a href="#preferences">Preferences</a> &gt; <a href="#files">Files</a> &gt; File Manager Previews keeps it still instead</li>
 					<li>Command line: <code>--camera-orbit</code> sets the camera angles around the model center at one distance, so pictures at every angle keep the same center and size</li>
 					<li>Animated GIF: turntables always circle the center at one distance, also with Current View and Next Step, so the model never drifts or zooms</li>
 				</ul>
@@ -2506,30 +2514,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				</ul>
 			</details>
 
-			<details>
-				<summary>2026-11-21</summary>
-
-				<ul>
-					<li>Site: the search fields have a ✕ button that clears the text and shows every group again</li>
-					<li>Instructions: a back cover closes the instructions, shown and blank by default, and the cover is now the Front Cover</li>
-					<li>Instructions: right click a cover to add a linked image, like a logo, on the front cover, the back cover or both, with its own placement, size and lock</li>
-					<li>Instructions: Save Template and Apply Template in the Properties options carry the look, the steps per page and the cover images to any model, Save Template with Codes turns the model&#x27;s own details into codes like %title, and Preferences &gt; General &gt; Default Instructions Template applies one under every model</li>
-					<li>Instructions: Use Document Font and Use Document Font Size work on their own, one gives all text the document typeface, the other its size, and older files keep both</li>
-					<li>Page Setup: Portrait or Landscape follows the width and height while they are typed</li>
-					<li>Instructions: the Placement buttons and Page Area now work on notices too, outer cells put a notice on the paper edge</li>
-					<li>Instructions: the font window opens at a quarter of the screen, centered</li>
-					<li>Instructions: the save key saves the model from the Instructions window too, and its title shows * while there are unsaved changes</li>
-					<li>Instructions: Apply to All Pages on a submodel page keeps the submodel background instead of going back to the default</li>
-					<li>Instructions: header, footer and side bands repeat their text and images on every step page, a watermark sits behind the page content, %page and %title fill in the page number and title</li>
-					<li>Instructions: the cover, the bill of materials and the step pages can show how many parts they take, as &quot;119 PIECES&quot; or your own text</li>
-					<li>Instructions: the cover title, author and part count start at the same size as the Parts List title, and the parts list count sits at its top right</li>
-					<li>Instructions: Show Submodel Preview puts the finished submodel and its part count on the first page of each submodel</li>
-					<li>Instructions: the outer Placement buttons put cover texts, part counts, the submodel preview and page numbers against the paper edge</li>
-					<li>Instructions: the page grid and margin colors start dark red, lilac and navy</li>
-					<li>Instructions: the submodel preview count and the parts list quantities are their own elements, placed anywhere around their picture</li>
-				</ul>
-			</details>
-
 			<p class="more"><a href="https://github.com/nathaneltitane/studworx/blob/main/NOTICE.md">Read every notice ›</a></p>
 		</section>
 
@@ -2540,7 +2524,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p>LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.</p>
 			<div class="authorship">
 				<a class="avatar" href="https://nathaneltitane.com" aria-label="N Λ T H Λ N E L"><img src="resources/avatar/avatar-bird.png" alt="" width="64" height="64"></a>
-				<p>Version // 2026-11-26<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://www.linkedin.com/in/nathaneltitane">LinkedIn</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
+				<p>Version // 2026-11-27<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://www.linkedin.com/in/nathaneltitane">LinkedIn</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
 			</div>
 		</div>
 
