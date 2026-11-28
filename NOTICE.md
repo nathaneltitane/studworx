@@ -5,7 +5,7 @@
 
   - Instructions: images linked with ./ are found next to the model file, or from the folder StudWorx was started in
   - Properties: a Case row on the Summary tab turns every publication field UPPERCASE, lowercase, Sentence case or Title Case
-  - File managers: hovering a model in Dolphin spins it around in 5 degree steps, and the Information panel shows its title, author and how many parts, steps and models it has; Preferences > Files > File Manager Previews keeps it still instead
+  - File managers: hovering a model in Dolphin spins it around in 5 degree steps, sharp even at the largest icon size, and the Information panel shows its title, author and how many parts, steps and models it has; Preferences > Files > File Manager Previews keeps it still instead
   - Command line: '--camera-orbit' sets the camera angles around the model center at one distance, so pictures at every angle keep the same center and size
   - Animated GIF: turntables always circle the center at one distance, also with Current View and Next Step, so the model never drifts or zooms
 

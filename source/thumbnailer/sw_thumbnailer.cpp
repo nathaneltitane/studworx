@@ -18,6 +18,9 @@ static const float gTurntableStep = 5.0f;
 static const float gTurntableStart = 45.0f;
 static const float gTurntableLatitude = 30.0f;
 
+// frames render at least this large so big icons stay sharp, dolphin scales them down
+static const int gThumbnailSizeMinimum = 256;
+
 class swThumbnailFactory : public KPluginFactory
 {
 	Q_OBJECT
@@ -50,7 +53,8 @@ KIO::ThumbnailResult swThumbnailCreator::create(const KIO::ThumbnailRequest& Req
 		return KIO::ThumbnailResult::fail();
 
 	const QString ImageName = Directory.filePath(QStringLiteral("thumbnail.png"));
-	const QSize Size = Request.targetSize().expandedTo(QSize(1, 1));
+	const QSize SizeTarget = Request.targetSize().expandedTo(QSize(1, 1));
+	const QSize Size = SizeTarget.width() >= gThumbnailSizeMinimum && SizeTarget.height() >= gThumbnailSizeMinimum ? SizeTarget : SizeTarget.scaled(gThumbnailSizeMinimum, gThumbnailSizeMinimum, Qt::KeepAspectRatioByExpanding);
 
 	// files preference picks turntable or still
 	const bool Turntable = QSettings(QStringLiteral("StudWorx"), QStringLiteral("StudWorx")).value(QStringLiteral("Settings/FileManagerTurntable"), true).toBool();
